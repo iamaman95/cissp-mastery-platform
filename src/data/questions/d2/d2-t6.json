@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t6-a1",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP for Email Exfiltration",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Employees keep emailing spreadsheets of customer account numbers to external addresses. Which control BEST detects and blocks this exfiltration path?",
+    "options": [
+      { "text": "Network DLP inspecting outbound email for sensitive-data patterns", "correct": true, "rationale": "Network DLP inspects data in transit at egress (like outbound email) and can block messages containing account-number patterns." },
+      { "text": "Full-disk encryption on the mail server", "correct": false, "rationale": "FDE protects stored data if the disk is stolen; it does nothing to stop sensitive data being emailed out." },
+      { "text": "A louder email notification sound", "correct": false, "rationale": "Notification sounds have no effect on preventing data exfiltration." },
+      { "text": "Increasing mailbox storage quotas", "correct": false, "rationale": "Larger mailboxes do not detect or prevent sensitive data leaving via email." }
+    ]
+  },
+  {
+    "id": "d2-t6-a2",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Endpoint DLP for USB",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Staff copy sensitive files onto personal USB drives. Which control MOST directly prevents this?",
+    "options": [
+      { "text": "Endpoint DLP that blocks copying flagged data to removable media", "correct": true, "rationale": "Endpoint DLP agents control data in use on the device and can block copying sensitive files to USB drives." },
+      { "text": "Network DLP at the internet gateway", "correct": false, "rationale": "Network DLP inspects data crossing the network, not local copies to USB on the endpoint." },
+      { "text": "A firewall rule on the perimeter", "correct": false, "rationale": "Perimeter firewalls filter network traffic; they cannot stop local USB copying." },
+      { "text": "A stronger Wi-Fi password", "correct": false, "rationale": "Wi-Fi credentials are unrelated to blocking local removable-media copying." }
+    ]
+  },
+  {
+    "id": "d2-t6-a3",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DRM/IRM Usage Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company shares confidential contracts with partners but wants recipients to be unable to forward, copy, or print them, with access expiring after 30 days. Which control BEST achieves this?",
+    "options": [
+      { "text": "Digital/Information Rights Management (DRM/IRM)", "correct": true, "rationale": "DRM/IRM enforces persistent usage rights (no forward/copy/print, expiration) on content even after it leaves the sender's environment." },
+      { "text": "Network DLP", "correct": false, "rationale": "DLP prevents unauthorized movement but cannot enforce view/copy/print restrictions on a document already legitimately shared with a partner." },
+      { "text": "Full-disk encryption on the sender's laptop", "correct": false, "rationale": "FDE protects the sender's stored data, not the usage rights of a document once shared." },
+      { "text": "A stronger email password", "correct": false, "rationale": "Password strength does not control what recipients can do with a received document." }
+    ]
+  },
+  {
+    "id": "d2-t6-a4",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Masking for Display",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Customer-service agents should see only the last four digits of account numbers on screen. Which control MOST directly accomplishes this?",
+    "options": [
+      { "text": "Data masking", "correct": true, "rationale": "Masking obscures most of a value (showing only the last four digits) so agents are not exposed to the full sensitive number." },
+      { "text": "Disabling the agents' accounts", "correct": false, "rationale": "Disabling accounts blocks the agents from working, not a masking control." },
+      { "text": "Encrypting the office Wi-Fi", "correct": false, "rationale": "Wi-Fi encryption protects transmission, not what is displayed on screen." },
+      { "text": "Increasing screen resolution", "correct": false, "rationale": "Resolution has no effect on obscuring sensitive values." }
+    ]
+  },
+  {
+    "id": "d2-t6-a5",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Tokenization vs Masking",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A payment system replaces card numbers with surrogate values that map back to the originals via a secure vault, keeping real numbers out of most systems. This technique is MOST accurately called what?",
+    "options": [
+      { "text": "Tokenization", "correct": true, "rationale": "Tokenization substitutes a sensitive value with a token mapped to the original in a secure vault, removing real data from downstream systems." },
+      { "text": "Irreversible masking", "correct": false, "rationale": "Masking obscures values and is typically not reversible via a vault mapping; tokenization is specifically designed to be reversible through the vault." },
+      { "text": "Hashing for confidentiality", "correct": false, "rationale": "Hashing is one-way and used for integrity/verification, not for reversible substitution mapped in a vault." },
+      { "text": "Compression", "correct": false, "rationale": "Compression reduces size; it does not substitute sensitive values with tokens." }
+    ]
+  },
+  {
+    "id": "d2-t6-a6",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Data Loss Prevention (DLP) technology is primarily designed to do which of the following?",
+    "options": [
+      { "text": "Detect and prevent unauthorized transfer or exposure of sensitive data", "correct": true, "rationale": "DLP identifies sensitive data and blocks or alerts on its unauthorized movement or exposure." },
+      { "text": "Accelerate network throughput", "correct": false, "rationale": "DLP is a data-protection control, not a performance tool." },
+      { "text": "Back up data to tape", "correct": false, "rationale": "Backups are a separate function; DLP prevents unauthorized data loss/leakage." },
+      { "text": "Generate marketing reports", "correct": false, "rationale": "DLP has nothing to do with marketing reporting." }
+    ]
+  },
+  {
+    "id": "d2-t6-a7",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP Requires Identification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A newly deployed DLP tool misses much sensitive data and flags harmless files. Which underlying issue is MOST likely?",
+    "options": [
+      { "text": "Sensitive data is not accurately identified (poor classification, patterns, or fingerprinting)", "correct": true, "rationale": "DLP effectiveness depends on accurately identifying sensitive content; weak classification/patterns cause both false negatives and false positives." },
+      { "text": "The network is too fast for any DLP to work", "correct": false, "rationale": "DLP operates at network speeds routinely; identification accuracy, not speed, is the described issue." },
+      { "text": "DLP inherently cannot inspect any data", "correct": false, "rationale": "DLP is designed to inspect data; the problem is inaccurate identification rules, not an inability to inspect." },
+      { "text": "Encryption makes DLP unnecessary", "correct": false, "rationale": "This does not explain the false positives/negatives and is not the root cause of poor identification." }
+    ]
+  },
+  {
+    "id": "d2-t6-a8",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Storage/Discovery DLP",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company suspects sensitive files are scattered in unknown locations across its file shares. Which DLP capability BEST helps find them?",
+    "options": [
+      { "text": "Storage/discovery DLP that scans data at rest in repositories", "correct": true, "rationale": "Discovery (data-at-rest) DLP scans repositories/file shares to locate misplaced sensitive data." },
+      { "text": "Endpoint DLP blocking USB writes", "correct": false, "rationale": "Endpoint USB controls do not scan file shares to discover where sensitive data resides." },
+      { "text": "A network firewall", "correct": false, "rationale": "Firewalls filter traffic; they do not discover sensitive data at rest in repositories." },
+      { "text": "An email spam filter", "correct": false, "rationale": "Spam filtering targets unwanted email, not discovery of stored sensitive data." }
+    ]
+  },
+  {
+    "id": "d2-t6-a9",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "CASB for Cloud",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization wants to enforce data-security policy (including DLP) as users interact with sanctioned and unsanctioned cloud apps. Which control is MOST appropriate?",
+    "options": [
+      { "text": "A Cloud Access Security Broker (CASB)", "correct": true, "rationale": "A CASB sits between users and cloud services to enforce security policies, including DLP and access controls, across cloud usage." },
+      { "text": "A local printer driver", "correct": false, "rationale": "Printer drivers are unrelated to enforcing cloud data-security policy." },
+      { "text": "A desktop screensaver", "correct": false, "rationale": "Screensavers do not enforce cloud policy." },
+      { "text": "A brighter monitor", "correct": false, "rationale": "Display hardware is irrelevant to cloud policy enforcement." }
+    ]
+  },
+  {
+    "id": "d2-t6-a10",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Baseline and Tailoring",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization applies a standard set of controls to all systems, then adds or removes specific controls based on each system's data sensitivity. This approach is MOST accurately described as what?",
+    "options": [
+      { "text": "Applying a baseline and then scoping/tailoring controls to the specific risk", "correct": true, "rationale": "Starting from a baseline and tailoring/scoping controls to each system's sensitivity is the standard risk-based control-selection approach." },
+      { "text": "Applying random controls with no baseline", "correct": false, "rationale": "Random control selection lacks the consistency a baseline provides." },
+      { "text": "Using identical controls everywhere with no tailoring", "correct": false, "rationale": "The scenario explicitly describes tailoring per sensitivity, which uniform controls would not do." },
+      { "text": "Removing all controls to reduce cost", "correct": false, "rationale": "Removing all controls abandons protection, the opposite of tailored baselines." }
+    ]
+  },
+  {
+    "id": "d2-t6-b1",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP vs DRM Distinction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A manager asks how DLP and DRM/IRM differ. Which statement is MOST accurate?",
+    "options": [
+      { "text": "DLP prevents unauthorized movement of data; DRM/IRM enforces usage rights on content after it is shared", "correct": true, "rationale": "DLP stops data from leaving improperly, while DRM/IRM controls what recipients can do (view/copy/print/expire) with content once shared." },
+      { "text": "They are identical technologies with different names", "correct": false, "rationale": "They serve distinct purposes — movement prevention vs post-share usage control." },
+      { "text": "DRM prevents data movement and DLP controls printing rights", "correct": false, "rationale": "This reverses their roles; DLP handles movement, DRM handles usage rights." },
+      { "text": "Both only apply to physical paper documents", "correct": false, "rationale": "Both are primarily digital data-security controls, not limited to paper." }
+    ]
+  },
+  {
+    "id": "d2-t6-b2",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP Fingerprinting",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To catch leaks of a specific confidential document even if partially copied, which DLP technique is BEST?",
+    "options": [
+      { "text": "Exact data matching / document fingerprinting", "correct": true, "rationale": "Fingerprinting/exact data matching recognizes specific known sensitive content (even partial excerpts), improving detection accuracy over broad patterns alone." },
+      { "text": "Blocking all email entirely", "correct": false, "rationale": "Blocking all email is disproportionate and disrupts business; fingerprinting targets the specific content." },
+      { "text": "Disabling the DLP tool", "correct": false, "rationale": "Disabling DLP removes protection rather than improving detection." },
+      { "text": "Increasing font size in documents", "correct": false, "rationale": "Font changes do not help DLP detect leaked content." }
+    ]
+  },
+  {
+    "id": "d2-t6-b3",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Tokenization Benefit",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A retailer tokenizes card numbers so downstream systems never store real PANs. What is the MOST significant security benefit?",
+    "options": [
+      { "text": "Downstream systems fall out of scope for handling real card data, reducing breach impact and compliance scope", "correct": true, "rationale": "By keeping real card data out of most systems (only tokens present), the breach impact and PCI scope of those systems are reduced." },
+      { "text": "It makes the card numbers load faster", "correct": false, "rationale": "Performance is not the security benefit of tokenization." },
+      { "text": "It publishes card numbers safely", "correct": false, "rationale": "Tokenization keeps real data out of systems; it does not make publishing card numbers safe." },
+      { "text": "It eliminates the need for any access control", "correct": false, "rationale": "Access controls remain necessary, especially over the token vault." }
+    ]
+  },
+  {
+    "id": "d2-t6-b4",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP Type Selection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Sensitive data is leaking through employees uploading files to personal cloud storage via their browsers. Which DLP capability MOST directly addresses this vector?",
+    "options": [
+      { "text": "Network DLP (or a CASB) inspecting outbound web/cloud uploads", "correct": true, "rationale": "Web uploads are data in transit; network DLP or a CASB inspects and controls outbound cloud uploads to block sensitive data." },
+      { "text": "Physical shredding of paper", "correct": false, "rationale": "Shredding addresses paper disposal, not browser-based cloud uploads." },
+      { "text": "A backup rotation policy", "correct": false, "rationale": "Backups do not prevent sensitive uploads to personal cloud storage." },
+      { "text": "A password expiration rule", "correct": false, "rationale": "Password expiry does not detect or block sensitive data uploads." }
+    ]
+  },
+  {
+    "id": "d2-t6-b5",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DRM Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Digital Rights Management (DRM) is best described as which of the following?",
+    "options": [
+      { "text": "Controls that enforce usage rights (view/copy/print/expire) on content after distribution", "correct": true, "rationale": "DRM persistently enforces what recipients may do with content even after it leaves the owner's environment." },
+      { "text": "A method to speed up file downloads", "correct": false, "rationale": "DRM controls usage rights, not download speed." },
+      { "text": "A type of network cable", "correct": false, "rationale": "DRM is a data-control technology, not hardware cabling." },
+      { "text": "A backup scheduling tool", "correct": false, "rationale": "DRM is unrelated to backup scheduling." }
+    ]
+  },
+  {
+    "id": "d2-t6-b6",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "DLP False Positives",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A DLP deployment blocks so many legitimate emails (false positives) that staff seek workarounds. What is the BEST response?",
+    "options": [
+      { "text": "Tune the DLP rules/classification to improve accuracy and reduce false positives while maintaining protection", "correct": true, "rationale": "Tuning detection rules and classification reduces false positives so the control protects data without driving staff to unsafe workarounds." },
+      { "text": "Disable DLP entirely", "correct": false, "rationale": "Disabling DLP removes protection; the fix is tuning, not abandonment." },
+      { "text": "Ignore the workarounds and change nothing", "correct": false, "rationale": "Ignoring workarounds lets sensitive data leak through unmonitored channels." },
+      { "text": "Block all email permanently", "correct": false, "rationale": "Blocking all email is disproportionate and harms the business." }
+    ]
+  },
+  {
+    "id": "d2-t6-b7",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Masking in Non-Production",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Developers need realistic-looking data in a test environment but must not handle real customer PII. What is the BEST approach?",
+    "options": [
+      { "text": "Use masked/obfuscated (or synthetic) data that preserves format without exposing real values", "correct": true, "rationale": "Masking or synthetic data lets developers work with realistic formats while keeping real PII out of lower environments." },
+      { "text": "Copy full production PII into the test environment", "correct": false, "rationale": "Copying real PII into less-protected test environments greatly increases breach risk." },
+      { "text": "Give developers direct production access instead", "correct": false, "rationale": "Direct production access expands exposure of real data rather than protecting it." },
+      { "text": "Post the data publicly for convenience", "correct": false, "rationale": "Public exposure of PII is a direct breach." }
+    ]
+  },
+  {
+    "id": "d2-t6-b8",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Layered Data Controls",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A security architect notes that no single data-security control stops all leakage. Which strategy MOST appropriately reflects this?",
+    "options": [
+      { "text": "Layer complementary controls (DLP, DRM, encryption, access control) as defense in depth", "correct": true, "rationale": "Because each control has gaps, layering complementary data-security controls provides defense in depth against varied leakage paths." },
+      { "text": "Rely solely on DLP as a complete solution", "correct": false, "rationale": "DLP alone has gaps; relying on one control contradicts the stated reality." },
+      { "text": "Remove all controls since none is perfect", "correct": false, "rationale": "Imperfection is not a reason to remove protection; layering compensates for individual gaps." },
+      { "text": "Use only physical security", "correct": false, "rationale": "Physical security alone does not address digital data leakage paths like email or cloud uploads." }
+    ]
+  },
+  {
+    "id": "d2-t6-b9",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "IRM Revocation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After sharing an IRM-protected document with a partner whose contract is terminated, the company wants to cut off their continued access. Which IRM capability MOST directly enables this?",
+    "options": [
+      { "text": "Revoking the recipient's access rights so the protected document can no longer be opened", "correct": true, "rationale": "IRM can revoke or expire access, preventing the former partner from opening the protected document even though they still hold the file." },
+      { "text": "Emailing them a polite request to delete it", "correct": false, "rationale": "A request relies on voluntary compliance and does not technically cut off access." },
+      { "text": "Changing the company's Wi-Fi password", "correct": false, "rationale": "Wi-Fi credentials do not affect a document already in the partner's possession." },
+      { "text": "Deleting the sender's copy only", "correct": false, "rationale": "Deleting the sender's copy does not revoke the recipient's access to their copy." }
+    ]
+  },
+  {
+    "id": "d2-t6-b10",
+    "domainId": "d2",
+    "topicId": "d2-t6",
+    "subtopicTag": "Control Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant as a data-security control for preventing sensitive-data leakage?",
+    "options": [
+      { "text": "The brand of coffee in the break room", "correct": true, "rationale": "Break-room coffee has no bearing on preventing sensitive-data leakage, making it least relevant." },
+      { "text": "Data Loss Prevention (DLP)", "correct": false, "rationale": "DLP is a core control against data leakage." },
+      { "text": "Encryption of sensitive data", "correct": false, "rationale": "Encryption is a fundamental data-protection control." },
+      { "text": "Digital Rights Management (DRM/IRM)", "correct": false, "rationale": "DRM/IRM controls usage of shared sensitive content, relevant to leakage prevention." }
+    ]
+  }
+]

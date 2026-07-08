@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d6-t3-a1",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Backup Recoverability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A nightly backup job reports 'completed successfully' every day. What MOST still needs to be verified before trusting recoverability?",
+    "options": [
+      { "text": "That the backups can actually be restored via periodic restore tests", "correct": true, "rationale": "A completed backup is not proven usable until a restore test confirms the data can actually be recovered." },
+      { "text": "That the backup job has a colorful log", "correct": false, "rationale": "Log appearance is irrelevant to whether data can be restored." },
+      { "text": "That the server has a fast CPU", "correct": false, "rationale": "CPU speed does not confirm restorability of backups." },
+      { "text": "Nothing further; completion proves recoverability", "correct": false, "rationale": "Completion alone does not prove the backup is restorable; corruption or media faults can still prevent recovery." }
+    ]
+  },
+  {
+    "id": "d6-t3-a2",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Orphaned Account Data",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which security process data source BEST reveals orphaned or dormant accounts?",
+    "options": [
+      { "text": "Account management and access review data", "correct": true, "rationale": "Account/access review data reconciled against HR reveals accounts of departed users (orphaned) and unused (dormant) accounts." },
+      { "text": "The office thermostat log", "correct": false, "rationale": "Climate logs have nothing to do with account status." },
+      { "text": "The company lunch menu", "correct": false, "rationale": "This is irrelevant to account management." },
+      { "text": "The marketing campaign calendar", "correct": false, "rationale": "Marketing schedules do not reveal orphaned accounts." }
+    ]
+  },
+  {
+    "id": "d6-t3-a3",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Metrics Must Be Reviewed",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company diligently collects extensive security metrics but no one reviews or acts on them. What is the MOST accurate assessment?",
+    "options": [
+      { "text": "Collecting metrics provides little value unless they are reviewed by management and drive action", "correct": true, "rationale": "Metrics support decisions only when reviewed and acted upon; unreviewed data yields no improvement." },
+      { "text": "The metrics automatically fix the issues they measure", "correct": false, "rationale": "Metrics measure; they do not remediate on their own." },
+      { "text": "Collection alone guarantees compliance", "correct": false, "rationale": "Collection without review/action does not ensure compliance or improvement." },
+      { "text": "Unreviewed metrics are the ideal end state", "correct": false, "rationale": "Unreviewed metrics waste effort; review and action are the point." }
+    ]
+  },
+  {
+    "id": "d6-t3-a4",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "KPI vs KRI",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A rising rate of failed logins that may signal an emerging attack is MOST accurately which type of metric?",
+    "options": [
+      { "text": "A Key Risk Indicator (KRI)", "correct": true, "rationale": "A KRI signals changing risk levels; a climbing failed-login rate is an early warning of elevated risk." },
+      { "text": "A Key Performance Indicator (KPI) of marketing", "correct": false, "rationale": "This is a risk signal, not a marketing performance metric." },
+      { "text": "A backup completion metric", "correct": false, "rationale": "Failed logins are unrelated to backup completion." },
+      { "text": "A physical badge count", "correct": false, "rationale": "Badge counts do not indicate login-based attack risk." }
+    ]
+  },
+  {
+    "id": "d6-t3-a5",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Awareness Metrics",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which data BEST measures the effectiveness of a security awareness program over time?",
+    "options": [
+      { "text": "Trends in phishing-simulation click-rates and training completion", "correct": true, "rationale": "Declining click-rates and high completion, tracked over time, objectively indicate awareness-program effectiveness." },
+      { "text": "The number of posters printed", "correct": false, "rationale": "Producing materials is an output, not evidence of behavior change." },
+      { "text": "The cafeteria's daily specials", "correct": false, "rationale": "This is unrelated to awareness effectiveness." },
+      { "text": "The color of the training slides", "correct": false, "rationale": "Slide color does not measure effectiveness." }
+    ]
+  },
+  {
+    "id": "d6-t3-a6",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Metric Quality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which characteristic MOST defines a useful security metric?",
+    "options": [
+      { "text": "It is objective, relevant to objectives, and tracked over time", "correct": true, "rationale": "Good metrics are measurable/objective, tied to goals, and trended so change is visible." },
+      { "text": "It is subjective and changes definition each month", "correct": false, "rationale": "Subjective, inconsistent metrics cannot be compared or trended reliably." },
+      { "text": "It is collected once and never repeated", "correct": false, "rationale": "One-off metrics reveal no trend and limited insight." },
+      { "text": "It is unrelated to any security objective", "correct": false, "rationale": "Metrics disconnected from objectives provide little value." }
+    ]
+  },
+  {
+    "id": "d6-t3-a7",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Patch Compliance Data",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Tracking the percentage of systems patched within policy timelines MOST directly measures which process?",
+    "options": [
+      { "text": "Patch/vulnerability management effectiveness", "correct": true, "rationale": "Patch-compliance rate shows how promptly systems are remediated, measuring the patch-management process." },
+      { "text": "Physical door security", "correct": false, "rationale": "Patch compliance is unrelated to physical doors." },
+      { "text": "Marketing reach", "correct": false, "rationale": "Patch metrics do not measure marketing." },
+      { "text": "Cafeteria throughput", "correct": false, "rationale": "This is irrelevant to patch management." }
+    ]
+  },
+  {
+    "id": "d6-t3-a8",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "DR Exercise Data",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which collected data BEST indicates the organization's readiness to recover from a disaster?",
+    "options": [
+      { "text": "Results and lessons learned from DR/BC exercises", "correct": true, "rationale": "DR/BC exercise outcomes reveal whether recovery plans actually work and where gaps remain." },
+      { "text": "The number of coffee cups used during the test", "correct": false, "rationale": "This trivia does not indicate recovery readiness." },
+      { "text": "The color of the DR runbook cover", "correct": false, "rationale": "Runbook aesthetics do not measure readiness." },
+      { "text": "The CEO's travel schedule", "correct": false, "rationale": "Executive travel is unrelated to DR readiness data." }
+    ]
+  },
+  {
+    "id": "d6-t3-a9",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Incident Metrics",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Mean Time To Detect (MTTD) and Mean Time To Respond (MTTR) are process data that MOST directly measure what?",
+    "options": [
+      { "text": "The effectiveness of detection and incident response", "correct": true, "rationale": "MTTD/MTTR quantify how quickly incidents are detected and handled, measuring detection/response performance." },
+      { "text": "The speed of the office elevator", "correct": false, "rationale": "These metrics concern incident handling, not facilities." },
+      { "text": "The size of the marketing budget", "correct": false, "rationale": "Incident metrics are unrelated to marketing budgets." },
+      { "text": "The number of parking spaces", "correct": false, "rationale": "Parking is irrelevant to incident response metrics." }
+    ]
+  },
+  {
+    "id": "d6-t3-a10",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Process Data Purpose",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY purpose of collecting security process data?",
+    "options": [
+      { "text": "To provide objective evidence supporting management review, audit, and continuous improvement", "correct": true, "rationale": "Process data enables informed oversight, demonstrates control effectiveness to auditors, and drives improvement." },
+      { "text": "To fill storage with unused logs", "correct": false, "rationale": "Accumulating unused data is not the purpose; usable insight is." },
+      { "text": "To replace all security controls", "correct": false, "rationale": "Data measures controls; it does not replace them." },
+      { "text": "To eliminate the need for management", "correct": false, "rationale": "Data supports management decisions rather than removing management." }
+    ]
+  },
+  {
+    "id": "d6-t3-b1",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Restore Test First",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To gain assurance that backups are usable, what should the team do FIRST beyond confirming job completion?",
+    "options": [
+      { "text": "Perform periodic test restores of the backed-up data", "correct": true, "rationale": "Test restores verify the backup is actually recoverable, the essential validation beyond a completion status." },
+      { "text": "Delete the backups to free space", "correct": false, "rationale": "Deleting backups destroys the recovery capability being validated." },
+      { "text": "Assume completion equals recoverability", "correct": false, "rationale": "Completion does not guarantee a successful restore." },
+      { "text": "Stop backing up entirely", "correct": false, "rationale": "Stopping backups removes recovery capability." }
+    ]
+  },
+  {
+    "id": "d6-t3-b2",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Access Review Cadence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To keep account entitlement data accurate for oversight, what practice is BEST?",
+    "options": [
+      { "text": "Conduct periodic access reviews and reconcile accounts with the HR authoritative source", "correct": true, "rationale": "Regular reviews reconciled to HR keep entitlement data current and surface anomalies like orphaned accounts." },
+      { "text": "Never review accounts once created", "correct": false, "rationale": "Unreviewed accounts drift and hide orphaned/excess access." },
+      { "text": "Let each user edit their own entitlements freely", "correct": false, "rationale": "Self-editing undermines oversight and least privilege." },
+      { "text": "Delete all account records to simplify", "correct": false, "rationale": "Deleting records removes the data needed for oversight." }
+    ]
+  },
+  {
+    "id": "d6-t3-b3",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "KPI Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A Key Performance Indicator (KPI) in security primarily measures which of the following?",
+    "options": [
+      { "text": "How well a security process is performing against its objectives", "correct": true, "rationale": "A KPI gauges performance of a process relative to defined objectives." },
+      { "text": "The color scheme of dashboards", "correct": false, "rationale": "Dashboard color is not a KPI." },
+      { "text": "The number of office plants", "correct": false, "rationale": "This is unrelated to security process performance." },
+      { "text": "The CEO's calendar density", "correct": false, "rationale": "Executive scheduling is not a security KPI." }
+    ]
+  },
+  {
+    "id": "d6-t3-b4",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Trending Over Time",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is tracking a security metric over time MOST valuable compared with a single snapshot?",
+    "options": [
+      { "text": "Trends reveal whether the process is improving or degrading, informing action", "correct": true, "rationale": "Time-series data shows direction of change, enabling proactive decisions that a single number cannot." },
+      { "text": "A single number is always more actionable than a trend", "correct": false, "rationale": "A lone value lacks context; trends provide far more insight." },
+      { "text": "Trends make the data less accurate", "correct": false, "rationale": "Trending does not reduce accuracy; it adds context." },
+      { "text": "Snapshots eliminate the need for any metrics", "correct": false, "rationale": "Snapshots do not replace the value of ongoing measurement." }
+    ]
+  },
+  {
+    "id": "d6-t3-b5",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Management Review Role",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Presenting a security scorecard to leadership for decisions MOST directly supports which activity?",
+    "options": [
+      { "text": "Management review of security posture", "correct": true, "rationale": "A scorecard informs management review, enabling leadership to steer priorities and resources." },
+      { "text": "Fuzzing an application", "correct": false, "rationale": "Fuzzing is a testing technique, not a management review activity." },
+      { "text": "Physically shredding documents", "correct": false, "rationale": "Shredding is a disposal control, unrelated to management review of metrics." },
+      { "text": "Encrypting a hard drive", "correct": false, "rationale": "Disk encryption is a control, not the management-review activity." }
+    ]
+  },
+  {
+    "id": "d6-t3-b6",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Automation of Collection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Manual metric gathering is inconsistent and slow. What is the BEST improvement?",
+    "options": [
+      { "text": "Automate collection via SIEM/GRC dashboards for consistent, timely data", "correct": true, "rationale": "Automated tooling collects metrics consistently and promptly, reducing manual error and lag." },
+      { "text": "Stop collecting metrics entirely", "correct": false, "rationale": "Abandoning metrics removes oversight capability." },
+      { "text": "Collect metrics only once every few years", "correct": false, "rationale": "Rare collection provides no timely insight or trending." },
+      { "text": "Let each team invent its own untracked numbers", "correct": false, "rationale": "Inconsistent, untracked figures cannot be compared or trended." }
+    ]
+  },
+  {
+    "id": "d6-t3-b7",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Continuous Improvement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Using collected security data to iteratively refine controls in a plan-do-check-act manner MOST directly reflects which concept?",
+    "options": [
+      { "text": "Continuous improvement", "correct": true, "rationale": "Feeding measurement back into refining controls is the essence of continuous improvement (PDCA)." },
+      { "text": "Security through obscurity", "correct": false, "rationale": "Obscurity is unrelated to data-driven iterative improvement." },
+      { "text": "A denial-of-service attack", "correct": false, "rationale": "DoS is an attack, not an improvement process." },
+      { "text": "Key escrow", "correct": false, "rationale": "Key escrow is a key-management concept, unrelated to metric-driven improvement." }
+    ]
+  },
+  {
+    "id": "d6-t3-b8",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Data Integrity of Metrics",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "If security metrics can be silently edited by the teams they measure, what is the MOST significant concern?",
+    "options": [
+      { "text": "The integrity of the metrics is compromised, making them unreliable for oversight", "correct": true, "rationale": "Metrics that measured parties can alter cannot be trusted; integrity/segregation is needed for them to be meaningful evidence." },
+      { "text": "The metrics automatically become more accurate", "correct": false, "rationale": "Editable-by-the-measured metrics become less, not more, trustworthy." },
+      { "text": "It improves accountability", "correct": false, "rationale": "Self-editing reduces accountability and reliability." },
+      { "text": "There is no concern at all", "correct": false, "rationale": "Tamperable metrics are a serious integrity concern." }
+    ]
+  },
+  {
+    "id": "d6-t3-b9",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Dormant Account Signal",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An account with no login activity for 12 months is flagged in the account data. This MOST likely indicates what?",
+    "options": [
+      { "text": "A dormant account that should be reviewed and possibly disabled", "correct": true, "rationale": "Long-unused accounts are dormant and increase risk; they should be reviewed and disabled if no longer needed." },
+      { "text": "A high-performing, well-used account", "correct": false, "rationale": "No activity for a year indicates disuse, not high use." },
+      { "text": "Proof of strong security", "correct": false, "rationale": "A lingering unused account is a risk, not evidence of strong security." },
+      { "text": "An account that must be given more privileges", "correct": false, "rationale": "Dormant accounts warrant review/disabling, not privilege increases." }
+    ]
+  },
+  {
+    "id": "d6-t3-b10",
+    "domainId": "d6",
+    "topicId": "d6-t3",
+    "subtopicTag": "Data Source Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST useful as security process data?",
+    "options": [
+      { "text": "The brand of snacks in the vending machine", "correct": true, "rationale": "Vending-machine snacks provide no insight into security process performance, making it least useful." },
+      { "text": "Backup restore test results", "correct": false, "rationale": "Restore results are highly relevant to recoverability assurance." },
+      { "text": "Phishing-simulation click-rate trends", "correct": false, "rationale": "Click-rate trends measure awareness effectiveness." },
+      { "text": "Patch compliance rates", "correct": false, "rationale": "Patch rates measure remediation timeliness, useful process data." }
+    ]
+  }
+]

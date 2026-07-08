@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d4-t3-a1",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "ESP for Confidentiality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A sensitive data feed must be encrypted in transit using IPsec. Which IPsec protocol MOST directly provides the required confidentiality?",
+    "options": [
+      { "text": "ESP (Encapsulating Security Payload)", "correct": true, "rationale": "ESP provides encryption (confidentiality) along with integrity/authentication, meeting the requirement to encrypt the data." },
+      { "text": "AH (Authentication Header)", "correct": false, "rationale": "AH provides integrity and authentication but does NOT encrypt, so it cannot provide confidentiality." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is an insecure cleartext protocol, not part of IPsec." },
+      { "text": "SNMPv1", "correct": false, "rationale": "SNMPv1 is a management protocol without strong security, unrelated to IPsec encryption." }
+    ]
+  },
+  {
+    "id": "d4-t3-a2",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "AH No Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A developer proposes using IPsec AH to keep a data stream confidential. What is the MOST accurate correction?",
+    "options": [
+      { "text": "AH does not encrypt; use ESP if confidentiality is required", "correct": true, "rationale": "AH provides only integrity and authentication, not encryption, so ESP must be used for confidentiality." },
+      { "text": "AH already encrypts everything", "correct": false, "rationale": "AH does not encrypt data; this is a common misconception the exam tests." },
+      { "text": "Confidentiality is impossible with IPsec", "correct": false, "rationale": "IPsec can provide confidentiality via ESP; it is possible." },
+      { "text": "Only Telnet can provide confidentiality", "correct": false, "rationale": "Telnet is insecure and cleartext; it provides no confidentiality." }
+    ]
+  },
+  {
+    "id": "d4-t3-a3",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Tunnel Mode for Site-to-Site",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company wants to securely connect its headquarters and branch office networks over the internet via their gateways. Which IPsec mode is BEST?",
+    "options": [
+      { "text": "Tunnel mode (encrypts the entire packet and adds a new header)", "correct": true, "rationale": "Tunnel mode encrypts the whole original packet between gateways, which is the standard for site-to-site VPNs." },
+      { "text": "Transport mode", "correct": false, "rationale": "Transport mode encrypts only the payload and is intended for host-to-host, not gateway-to-gateway site links." },
+      { "text": "Cleartext mode", "correct": false, "rationale": "There is no secure 'cleartext mode'; unencrypted traffic is not a secure VPN." },
+      { "text": "Telnet mode", "correct": false, "rationale": "Telnet is not an IPsec mode and is insecure." }
+    ]
+  },
+  {
+    "id": "d4-t3-a4",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "TLS Replaces SSL",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An application still negotiates SSL 3.0 for its secure connections. What is the MOST appropriate guidance?",
+    "options": [
+      { "text": "Disable SSL and use current TLS, since SSL is deprecated and insecure", "correct": true, "rationale": "SSL (including 3.0) is deprecated and vulnerable; modern TLS should be used instead." },
+      { "text": "Keep SSL 3.0 because it is the newest protocol", "correct": false, "rationale": "SSL 3.0 is old and insecure, not the newest; TLS supersedes it." },
+      { "text": "Replace SSL with plain HTTP", "correct": false, "rationale": "Plain HTTP has no encryption; that is less secure, not more." },
+      { "text": "Use Telnet instead of SSL", "correct": false, "rationale": "Telnet is insecure cleartext; it is not a secure replacement." }
+    ]
+  },
+  {
+    "id": "d4-t3-a5",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "SSH Replaces Telnet",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Administrators currently manage servers over Telnet, sending credentials in cleartext. Which protocol BEST replaces it?",
+    "options": [
+      { "text": "SSH (Secure Shell)", "correct": true, "rationale": "SSH encrypts remote administration sessions and credentials, replacing insecure cleartext Telnet." },
+      { "text": "FTP", "correct": false, "rationale": "FTP is an insecure cleartext file-transfer protocol, not a secure Telnet replacement." },
+      { "text": "HTTP", "correct": false, "rationale": "HTTP is unencrypted and not a remote-administration replacement for Telnet." },
+      { "text": "SNMPv1", "correct": false, "rationale": "SNMPv1 lacks strong security and is not a Telnet replacement." }
+    ]
+  },
+  {
+    "id": "d4-t3-a6",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "IPsec Layer",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "At which OSI layer does IPsec primarily operate?",
+    "options": [
+      { "text": "The network layer (Layer 3)", "correct": true, "rationale": "IPsec secures IP traffic at the network layer (Layer 3)." },
+      { "text": "The physical layer (Layer 1)", "correct": false, "rationale": "Layer 1 concerns physical transmission, not IPsec." },
+      { "text": "The application layer (Layer 7)", "correct": false, "rationale": "TLS/application protocols operate higher; IPsec is at Layer 3." },
+      { "text": "The data link layer (Layer 2)", "correct": false, "rationale": "IPsec operates at Layer 3, not Layer 2." }
+    ]
+  },
+  {
+    "id": "d4-t3-a7",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Remote-Access VPN",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A remote employee needs to securely reach internal applications from home. Which solution is BEST?",
+    "options": [
+      { "text": "A remote-access VPN authenticating the user and encrypting their traffic to the corporate network", "correct": true, "rationale": "A remote-access VPN establishes an encrypted, authenticated tunnel from the individual user to the corporate network." },
+      { "text": "Exposing all internal apps directly to the internet with no VPN", "correct": false, "rationale": "Direct internet exposure of internal apps greatly increases attack surface." },
+      { "text": "Emailing screenshots of the app to the employee", "correct": false, "rationale": "This does not provide secure interactive access and is impractical." },
+      { "text": "Sharing the employee's password publicly", "correct": false, "rationale": "Publicizing credentials is a severe security failure." }
+    ]
+  },
+  {
+    "id": "d4-t3-a8",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Secure File Transfer",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Sensitive files are being transferred with plain FTP. Which is the BEST secure replacement?",
+    "options": [
+      { "text": "SFTP or FTPS (encrypted file transfer)", "correct": true, "rationale": "SFTP (over SSH) or FTPS (FTP over TLS) encrypt the transfer, replacing insecure cleartext FTP." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is an insecure remote-terminal protocol, not a secure file-transfer method." },
+      { "text": "Plain HTTP upload", "correct": false, "rationale": "Plain HTTP is unencrypted, offering no confidentiality improvement." },
+      { "text": "Keep using FTP but rename the files", "correct": false, "rationale": "Renaming files does not encrypt the transfer; FTP remains cleartext." }
+    ]
+  },
+  {
+    "id": "d4-t3-a9",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "TLS Services",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When a browser connects via HTTPS, which combination of security services does TLS MOST completely provide?",
+    "options": [
+      { "text": "Confidentiality, integrity, and server authentication (optionally mutual)", "correct": true, "rationale": "TLS encrypts the session (confidentiality), detects tampering (integrity), and authenticates the server via its certificate (and optionally the client)." },
+      { "text": "Availability and redundancy only", "correct": false, "rationale": "TLS does not provide availability/redundancy; it secures the channel." },
+      { "text": "Physical security of the server", "correct": false, "rationale": "TLS is a logical channel control, not physical security." },
+      { "text": "Nothing; TLS is just for speed", "correct": false, "rationale": "TLS provides real security services, not performance." }
+    ]
+  },
+  {
+    "id": "d4-t3-a10",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "IKE Key Exchange",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In an IPsec VPN, which component is MOST responsible for negotiating and establishing the shared keys?",
+    "options": [
+      { "text": "IKE (Internet Key Exchange)", "correct": true, "rationale": "IKE negotiates security associations and establishes the shared keys used by IPsec (AH/ESP)." },
+      { "text": "AH", "correct": false, "rationale": "AH provides integrity/authentication of packets, not key negotiation." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is unrelated to IPsec key exchange." },
+      { "text": "DHCP", "correct": false, "rationale": "DHCP assigns IP addresses; it does not negotiate IPsec keys." }
+    ]
+  },
+  {
+    "id": "d4-t3-b1",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Transport vs Tunnel Mode",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Two individual hosts want to protect traffic between themselves while keeping the original IP header. Which IPsec mode is MOST appropriate?",
+    "options": [
+      { "text": "Transport mode (encrypts the payload, retains the original header)", "correct": true, "rationale": "Transport mode protects the payload between end hosts while leaving the original IP header, fitting host-to-host protection." },
+      { "text": "Tunnel mode", "correct": false, "rationale": "Tunnel mode encapsulates the whole packet with a new header, used for gateway-to-gateway, not this host-to-host case." },
+      { "text": "Cleartext mode", "correct": false, "rationale": "There is no secure cleartext mode; that provides no protection." },
+      { "text": "FTP mode", "correct": false, "rationale": "FTP is not an IPsec mode." }
+    ]
+  },
+  {
+    "id": "d4-t3-b2",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "AH vs ESP Services",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which statement MOST correctly contrasts IPsec AH and ESP?",
+    "options": [
+      { "text": "AH gives integrity/authentication without encryption; ESP gives encryption plus integrity/authentication", "correct": true, "rationale": "This is the core distinction: AH does not encrypt, while ESP provides confidentiality along with integrity." },
+      { "text": "AH encrypts data while ESP does not", "correct": false, "rationale": "This reverses reality; ESP encrypts and AH does not." },
+      { "text": "Both AH and ESP only provide availability", "correct": false, "rationale": "Neither provides availability; they provide integrity/authentication and (for ESP) confidentiality." },
+      { "text": "Neither provides any security service", "correct": false, "rationale": "Both provide real security services; this is false." }
+    ]
+  },
+  {
+    "id": "d4-t3-b3",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "HTTPS",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A website currently serves login pages over plain HTTP. What is the BEST fix to protect credentials in transit?",
+    "options": [
+      { "text": "Serve the site over HTTPS (HTTP over TLS)", "correct": true, "rationale": "HTTPS encrypts the connection with TLS, protecting credentials from interception in transit." },
+      { "text": "Keep HTTP but use a longer URL", "correct": false, "rationale": "URL length does not encrypt traffic; HTTP remains cleartext." },
+      { "text": "Switch to Telnet", "correct": false, "rationale": "Telnet is insecure cleartext and not a web protocol." },
+      { "text": "Disable the login page entirely", "correct": false, "rationale": "Removing login functionality is not a fix for securing it." }
+    ]
+  },
+  {
+    "id": "d4-t3-b4",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "VPN Purpose",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY purpose of a VPN?",
+    "options": [
+      { "text": "To create a secure, encrypted tunnel for private traffic over an untrusted network", "correct": true, "rationale": "A VPN tunnels private traffic securely across public/untrusted networks, protecting it in transit." },
+      { "text": "To speed up the local printer", "correct": false, "rationale": "VPNs secure network traffic; they are not printer accelerators." },
+      { "text": "To physically lock server rooms", "correct": false, "rationale": "A VPN is a logical network control, not physical security." },
+      { "text": "To replace the need for passwords", "correct": false, "rationale": "VPNs do not eliminate authentication; users still authenticate." }
+    ]
+  },
+  {
+    "id": "d4-t3-b5",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Secure Email",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A firm wants to encrypt and digitally sign email messages between employees. Which standard is BEST suited?",
+    "options": [
+      { "text": "S/MIME (or PGP)", "correct": true, "rationale": "S/MIME and PGP provide email encryption and digital signatures for confidentiality, integrity, and authenticity." },
+      { "text": "Plain SMTP without TLS", "correct": false, "rationale": "Plain SMTP sends mail in cleartext with no encryption or signing." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is a remote-terminal protocol, not an email security standard." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is a broken wireless standard, unrelated to email." }
+    ]
+  },
+  {
+    "id": "d4-t3-b6",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Split vs Full Tunnel",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A VPN is configured so only corporate-bound traffic goes through the tunnel while other traffic uses the local internet directly. This is MOST accurately called what, and what is a key risk?",
+    "options": [
+      { "text": "Split tunneling, which can bypass corporate inspection for non-tunneled traffic", "correct": true, "rationale": "Split tunneling routes only some traffic through the VPN; the rest avoids corporate security controls, a noted risk." },
+      { "text": "Full tunneling, which sends all traffic through the VPN", "correct": false, "rationale": "The scenario describes only some traffic tunneled, which is split, not full, tunneling." },
+      { "text": "Telnet tunneling with no risk", "correct": false, "rationale": "This is not Telnet, and split tunneling does carry inspection-bypass risk." },
+      { "text": "A site-to-site tunnel with no endpoints", "correct": false, "rationale": "This describes a remote-access split-tunnel configuration, not a site-to-site link." }
+    ]
+  },
+  {
+    "id": "d4-t3-b7",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Protocol Replacement Mapping",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which insecure-to-secure protocol replacement is MOST correct?",
+    "options": [
+      { "text": "Telnet should be replaced with SSH", "correct": true, "rationale": "SSH is the encrypted replacement for cleartext Telnet, a standard secure-protocol mapping." },
+      { "text": "HTTPS should be replaced with HTTP", "correct": false, "rationale": "This reverses security; HTTP is the insecure one and HTTPS is the secure replacement." },
+      { "text": "SSH should be replaced with Telnet", "correct": false, "rationale": "This downgrades security; Telnet is insecure and SSH is the secure option." },
+      { "text": "SFTP should be replaced with plain FTP", "correct": false, "rationale": "Plain FTP is insecure; SFTP is the secure choice, so this is backwards." }
+    ]
+  },
+  {
+    "id": "d4-t3-b8",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "VPN Endpoint Security",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A manager believes that because remote workers use a VPN, their home laptops are automatically secure. Which statement is MOST accurate?",
+    "options": [
+      { "text": "A VPN protects data in transit but does not secure a compromised endpoint device", "correct": true, "rationale": "A VPN encrypts the channel; if the endpoint is infected, it can still introduce threats or leak data, so endpoint security is still required." },
+      { "text": "A VPN makes the endpoint immune to all malware", "correct": false, "rationale": "VPNs do not protect endpoints from malware; they secure the transit channel." },
+      { "text": "A VPN eliminates the need for endpoint patching", "correct": false, "rationale": "Endpoints still require patching regardless of VPN use." },
+      { "text": "A VPN physically secures the laptop", "correct": false, "rationale": "A VPN is a logical control, not physical protection for the device." }
+    ]
+  },
+  {
+    "id": "d4-t3-b9",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "SSL Deprecated Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which protocol is the modern, secure successor to SSL?",
+    "options": [
+      { "text": "TLS", "correct": true, "rationale": "TLS (Transport Layer Security) is the successor to the deprecated SSL." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is an insecure remote-terminal protocol, not an SSL successor." },
+      { "text": "FTP", "correct": false, "rationale": "FTP is an insecure file-transfer protocol, unrelated to SSL/TLS." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is a broken wireless protocol, not a successor to SSL." }
+    ]
+  },
+  {
+    "id": "d4-t3-b10",
+    "domainId": "d4",
+    "topicId": "d4-t3",
+    "subtopicTag": "Channel Choice Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when selecting a secure communication protocol for sensitive data?",
+    "options": [
+      { "text": "The favorite color of the network administrator", "correct": true, "rationale": "The admin's color preference has no bearing on protocol security, making it least relevant." },
+      { "text": "Whether the protocol provides encryption in transit", "correct": false, "rationale": "In-transit encryption is central to protecting sensitive data." },
+      { "text": "Whether the protocol is deprecated (e.g., SSL) or current (TLS)", "correct": false, "rationale": "Using current, non-deprecated protocols is highly relevant to security." },
+      { "text": "Whether it provides integrity and authentication", "correct": false, "rationale": "Integrity and authentication are important security services to consider." }
+    ]
+  }
+]

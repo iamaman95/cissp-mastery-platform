@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d6-t5-a1",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "SOC 2 Type II for Security",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company wants assurance that a SaaS provider's security controls operate effectively over time. Which report should it BEST request?",
+    "options": [
+      { "text": "A SOC 2 Type II report", "correct": true, "rationale": "SOC 2 covers the security-focused Trust Services Criteria, and Type II attests to operating effectiveness over a period — the strongest fit." },
+      { "text": "A SOC 1 Type I report", "correct": false, "rationale": "SOC 1 addresses financial reporting, not security, and Type I only covers point-in-time design." },
+      { "text": "The provider's marketing brochure", "correct": false, "rationale": "Marketing material is not independent assurance of control effectiveness." },
+      { "text": "The provider's stock price chart", "correct": false, "rationale": "Financial performance does not evidence security control effectiveness." }
+    ]
+  },
+  {
+    "id": "d6-t5-a2",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "SOC 1 Financial",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A SOC 1 report is MOST focused on which of the following?",
+    "options": [
+      { "text": "Controls relevant to the user organization's financial reporting", "correct": true, "rationale": "SOC 1 addresses a service organization's controls that affect its clients' financial reporting." },
+      { "text": "The Trust Services Criteria for security", "correct": false, "rationale": "That is SOC 2's focus, not SOC 1's." },
+      { "text": "Public marketing of the provider", "correct": false, "rationale": "SOC 1 is a controls report, not marketing." },
+      { "text": "Physical building blueprints", "correct": false, "rationale": "SOC 1 concerns financial-reporting controls, not blueprints." }
+    ]
+  },
+  {
+    "id": "d6-t5-a3",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "SOC 3 Public",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which SOC report is intended as a general-use, public summary suitable for posting on a website?",
+    "options": [
+      { "text": "SOC 3", "correct": true, "rationale": "SOC 3 is a public, general-use summary of a SOC 2, appropriate for broad distribution." },
+      { "text": "SOC 2 Type II (full detail)", "correct": false, "rationale": "The detailed SOC 2 Type II is typically shared under NDA, not posted publicly." },
+      { "text": "SOC 1 Type I", "correct": false, "rationale": "SOC 1 concerns financial reporting and is not the public summary; SOC 3 is." },
+      { "text": "A penetration test report", "correct": false, "rationale": "A pen-test report is highly confidential, not a public SOC summary." }
+    ]
+  },
+  {
+    "id": "d6-t5-a4",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Type I vs Type II",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "What MOST distinguishes a Type II report from a Type I report?",
+    "options": [
+      { "text": "Type II evaluates operating effectiveness over a period; Type I evaluates design at a point in time", "correct": true, "rationale": "Type II tests whether controls actually operated effectively across a review period, giving stronger assurance than Type I's point-in-time design review." },
+      { "text": "Type I is always stronger than Type II", "correct": false, "rationale": "Type II provides stronger assurance because it covers effectiveness over time." },
+      { "text": "Type II only covers financial data", "correct": false, "rationale": "The Type distinction is about time/effectiveness, not financial scope." },
+      { "text": "They are identical", "correct": false, "rationale": "They differ meaningfully in what and when they assess." }
+    ]
+  },
+  {
+    "id": "d6-t5-a5",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Auditor Independence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An engineer is asked to audit the very controls they personally designed and operate. What is the MOST significant concern?",
+    "options": [
+      { "text": "Lack of auditor independence/objectivity — one should not audit their own work", "correct": true, "rationale": "Auditing one's own work compromises objectivity; independence is essential for credible audit results." },
+      { "text": "The audit will be too fast", "correct": false, "rationale": "Speed is not the core issue; the conflict of interest is." },
+      { "text": "The engineer knows the system too well to find anything", "correct": false, "rationale": "The concern is objectivity/independence, not familiarity per se." },
+      { "text": "There is no concern", "correct": false, "rationale": "Self-auditing is a clear independence conflict, a real concern." }
+    ]
+  },
+  {
+    "id": "d6-t5-a6",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Third-Party Credibility",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To provide external stakeholders the MOST credible assurance about its controls, which audit is BEST?",
+    "options": [
+      { "text": "An independent third-party audit", "correct": true, "rationale": "Independent third-party audits carry the greatest external credibility because the auditor has no stake in the outcome." },
+      { "text": "A self-assessment by the team being audited", "correct": false, "rationale": "Self-assessment lacks independence and external credibility." },
+      { "text": "A verbal claim from the CEO", "correct": false, "rationale": "An unverified claim is not credible independent assurance." },
+      { "text": "A marketing press release", "correct": false, "rationale": "Marketing is not an independent audit." }
+    ]
+  },
+  {
+    "id": "d6-t5-a7",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit vs Test",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "What MOST distinguishes a formal security audit from an informal security test?",
+    "options": [
+      { "text": "An audit is a formal, evidence-based evaluation against defined criteria, emphasizing independence", "correct": true, "rationale": "Audits are structured, criteria-driven, evidence-based, and independent, unlike informal ad hoc testing." },
+      { "text": "An audit never uses any evidence", "correct": false, "rationale": "Audits are fundamentally evidence-based; this is the opposite of true." },
+      { "text": "A test always uses defined criteria and independence, but an audit does not", "correct": false, "rationale": "This reverses the distinction; audits emphasize criteria and independence." },
+      { "text": "There is no difference", "correct": false, "rationale": "Audits are more formal and independent than informal tests." }
+    ]
+  },
+  {
+    "id": "d6-t5-a8",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit Scope First",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When initiating a security audit, what should be established FIRST?",
+    "options": [
+      { "text": "The audit scope and criteria/standards against which controls will be evaluated", "correct": true, "rationale": "Defining scope and the criteria/standard first ensures the audit evaluates the right things against a clear benchmark." },
+      { "text": "The auditor's parking spot", "correct": false, "rationale": "Logistics like parking are irrelevant to establishing the audit." },
+      { "text": "The color of the final report", "correct": false, "rationale": "Report aesthetics are not the first audit-planning concern." },
+      { "text": "The company holiday schedule", "correct": false, "rationale": "This is unrelated to defining audit scope and criteria." }
+    ]
+  },
+  {
+    "id": "d6-t5-a9",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Trust Services Criteria",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which set of criteria does a SOC 2 report evaluate?",
+    "options": [
+      { "text": "The Trust Services Criteria (security, availability, processing integrity, confidentiality, privacy)", "correct": true, "rationale": "SOC 2 assesses a service organization against the Trust Services Criteria, with security as the core category." },
+      { "text": "Only financial statement accuracy", "correct": false, "rationale": "Financial reporting is SOC 1's focus, not SOC 2's Trust Services Criteria." },
+      { "text": "Only physical building codes", "correct": false, "rationale": "Building codes are not the SOC 2 criteria." },
+      { "text": "Only marketing effectiveness", "correct": false, "rationale": "Marketing is not part of the Trust Services Criteria." }
+    ]
+  },
+  {
+    "id": "d6-t5-a10",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit Follow-Up",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After an audit reports control deficiencies, what is the BEST next step?",
+    "options": [
+      { "text": "Track and remediate the deficiencies and verify closure in follow-up", "correct": true, "rationale": "Audit value is realized when findings are remediated and verified, not merely reported." },
+      { "text": "File the report and take no action", "correct": false, "rationale": "Ignoring deficiencies leaves controls weak." },
+      { "text": "Dispute all findings without review", "correct": false, "rationale": "Reflexively rejecting findings avoids necessary remediation." },
+      { "text": "Delete the audit report", "correct": false, "rationale": "Destroying the report loses the record and accountability." }
+    ]
+  },
+  {
+    "id": "d6-t5-b1",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "SOC Report Matrix",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which mapping of SOC reports is MOST correct?",
+    "options": [
+      { "text": "SOC 1 = financial reporting; SOC 2 = security/Trust Services; SOC 3 = public summary", "correct": true, "rationale": "This correctly matches each SOC report to its focus and audience." },
+      { "text": "SOC 1 = security; SOC 2 = financial; SOC 3 = internal only", "correct": false, "rationale": "This swaps SOC 1 and SOC 2 focus and mislabels SOC 3." },
+      { "text": "All three cover only physical security", "correct": false, "rationale": "The SOC reports cover financial, trust-services, and summary scopes, not just physical security." },
+      { "text": "SOC 3 is the most detailed confidential report", "correct": false, "rationale": "SOC 3 is the public summary; the detailed report is SOC 2." }
+    ]
+  },
+  {
+    "id": "d6-t5-b2",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Point-in-Time Limitation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A vendor offers only a SOC 2 Type I. Regarding assurance of ongoing effectiveness, what is the MOST accurate limitation?",
+    "options": [
+      { "text": "Type I only confirms control design at a point in time, not that controls operated effectively over a period", "correct": true, "rationale": "Type I attests to design at one moment; it does not demonstrate sustained operating effectiveness like Type II." },
+      { "text": "Type I proves effectiveness over a full year", "correct": false, "rationale": "That describes Type II; Type I is point-in-time design only." },
+      { "text": "Type I is stronger than Type II", "correct": false, "rationale": "Type II provides stronger, longer-term assurance." },
+      { "text": "Type I covers financial statements only", "correct": false, "rationale": "The Type distinction is about time, not financial scope." }
+    ]
+  },
+  {
+    "id": "d6-t5-b3",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Internal Audit Value",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the MOST accurate characterization of an internal (first-party) audit?",
+    "options": [
+      { "text": "Useful for self-improvement but less independent than a third-party audit", "correct": true, "rationale": "Internal audits help the organization improve but lack the independence external stakeholders value in third-party audits." },
+      { "text": "The most credible form of external assurance", "correct": false, "rationale": "Third-party audits, not internal ones, carry the most external credibility." },
+      { "text": "Illegal in all circumstances", "correct": false, "rationale": "Internal audits are legitimate and common." },
+      { "text": "Identical in independence to a third-party audit", "correct": false, "rationale": "Internal audits are inherently less independent than third-party ones." }
+    ]
+  },
+  {
+    "id": "d6-t5-b4",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "NDA for SOC 2",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is a detailed SOC 2 report typically shared under a non-disclosure agreement rather than posted publicly?",
+    "options": [
+      { "text": "It contains sensitive detail about the organization's controls and environment", "correct": true, "rationale": "The detailed SOC 2 exposes control specifics that could aid attackers, so it is shared under NDA; SOC 3 is the public summary." },
+      { "text": "Because it is a marketing document", "correct": false, "rationale": "SOC 2 is an assurance report, not marketing, and its detail is sensitive." },
+      { "text": "Because public law forbids any audit sharing", "correct": false, "rationale": "Audit reports can be shared appropriately; the NDA protects sensitive detail." },
+      { "text": "Because it has no useful content", "correct": false, "rationale": "SOC 2 contains valuable detail, which is precisely why it is protected." }
+    ]
+  },
+  {
+    "id": "d6-t5-b5",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Second-Party Audit",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A customer sends its own auditors to evaluate a supplier's controls under their contract. This is MOST accurately which kind of audit?",
+    "options": [
+      { "text": "A second-party (external, related-party) audit", "correct": true, "rationale": "An audit by a related party such as a customer auditing a supplier is a second-party audit." },
+      { "text": "A first-party internal audit", "correct": false, "rationale": "The auditors are from the customer, not the supplier's own internal function." },
+      { "text": "A fully independent third-party audit", "correct": false, "rationale": "The customer has a business interest, so it is second-party, not an independent third party." },
+      { "text": "A penetration test", "correct": false, "rationale": "This is an audit of controls, not an exploitation test." }
+    ]
+  },
+  {
+    "id": "d6-t5-b6",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit Evidence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What MOST underpins the conclusions of a credible security audit?",
+    "options": [
+      { "text": "Objective evidence evaluated against defined criteria", "correct": true, "rationale": "Audit conclusions rest on gathered evidence measured against clear criteria/standards." },
+      { "text": "The auditor's personal opinion with no evidence", "correct": false, "rationale": "Unsupported opinion is not the basis of a credible audit." },
+      { "text": "Marketing claims from the audited party", "correct": false, "rationale": "Self-serving claims are not audit evidence." },
+      { "text": "The color of the audited office", "correct": false, "rationale": "Office aesthetics are irrelevant to audit conclusions." }
+    ]
+  },
+  {
+    "id": "d6-t5-b7",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Choosing SOC for Vendor Due Diligence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "For genuine security due diligence on a critical SaaS vendor, which artifact is BEST, over relying on the public summary?",
+    "options": [
+      { "text": "The detailed SOC 2 Type II report (under NDA)", "correct": true, "rationale": "The detailed SOC 2 Type II provides the depth and operating-effectiveness evidence needed for real due diligence, unlike the public SOC 3 summary." },
+      { "text": "Only the public SOC 3 marketing summary", "correct": false, "rationale": "SOC 3 lacks the detail needed for thorough due diligence." },
+      { "text": "The vendor's homepage tagline", "correct": false, "rationale": "A tagline offers no assurance detail." },
+      { "text": "A verbal assurance from a salesperson", "correct": false, "rationale": "Sales assurances are not evidence-based due diligence." }
+    ]
+  },
+  {
+    "id": "d6-t5-b8",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Report Type Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which report type assesses whether controls operated effectively over a period of time?",
+    "options": [
+      { "text": "Type II", "correct": true, "rationale": "Type II evaluates operating effectiveness across a review period." },
+      { "text": "Type I", "correct": false, "rationale": "Type I assesses design at a single point in time, not effectiveness over a period." },
+      { "text": "Type Zero", "correct": false, "rationale": "There is no 'Type Zero' SOC report." },
+      { "text": "Type X", "correct": false, "rationale": "There is no 'Type X' SOC report." }
+    ]
+  },
+  {
+    "id": "d6-t5-b9",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit Independence Structure",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To preserve internal audit independence, to whom should the internal audit function BEST report?",
+    "options": [
+      { "text": "To the board/audit committee, independent of the operations it audits", "correct": true, "rationale": "Reporting to the board/audit committee keeps internal audit independent from the management it evaluates." },
+      { "text": "To the manager whose area it audits", "correct": false, "rationale": "Reporting to the audited manager creates a conflict of interest." },
+      { "text": "To the newest intern", "correct": false, "rationale": "An intern lacks the authority to preserve audit independence." },
+      { "text": "To an external customer", "correct": false, "rationale": "Internal audit should report within governance, not to a customer." }
+    ]
+  },
+  {
+    "id": "d6-t5-b10",
+    "domainId": "d6",
+    "topicId": "d6-t5",
+    "subtopicTag": "Audit Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant to the quality of a security audit?",
+    "options": [
+      { "text": "The auditor's preferred brand of pen", "correct": true, "rationale": "The auditor's pen brand has no bearing on audit quality, making it least relevant." },
+      { "text": "Auditor independence and objectivity", "correct": false, "rationale": "Independence is central to a credible audit." },
+      { "text": "Clear criteria and sufficient evidence", "correct": false, "rationale": "Defined criteria and evidence are fundamental to audit quality." },
+      { "text": "Appropriate scope definition", "correct": false, "rationale": "Proper scoping is essential to a meaningful audit." }
+    ]
+  }
+]

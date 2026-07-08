@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t10-a1",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Differential vs Incremental Backup",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An administrator performs a full backup on Sunday and incremental backups each night after. To restore data lost Thursday morning, which sets are needed?",
+    "options": [
+      { "text": "The Sunday full plus every incremental from Monday through Wednesday", "correct": true, "rationale": "Incremental restore requires the last full plus every subsequent incremental in order, since each captures only changes since the prior backup." },
+      { "text": "Only Wednesday's incremental", "correct": false, "rationale": "A single incremental holds only that day's changes, not the full data set; restoring it alone is insufficient." },
+      { "text": "Only the Sunday full", "correct": false, "rationale": "The full alone misses all changes made Monday through Wednesday." },
+      { "text": "The Sunday full plus only Wednesday's incremental", "correct": false, "rationale": "Skipping Monday and Tuesday incrementals would omit changes those days captured." }
+    ]
+  },
+  {
+    "id": "d7-t10-a2",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Differential Backup Restore",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A full backup runs Sunday and differential backups run each night. To restore Thursday morning, which sets are needed?",
+    "options": [
+      { "text": "The Sunday full plus only Wednesday night's differential", "correct": true, "rationale": "Differential restore needs just the last full plus the most recent single differential, which contains all changes since the full." },
+      { "text": "The Sunday full plus every differential from Monday to Wednesday", "correct": false, "rationale": "Differentials are cumulative since the full, so only the latest one is needed, not all of them." },
+      { "text": "Only Wednesday's differential", "correct": false, "rationale": "The differential alone lacks the baseline data in the full backup." },
+      { "text": "Only the Sunday full", "correct": false, "rationale": "The full alone misses all changes since Sunday captured by the differential." }
+    ]
+  },
+  {
+    "id": "d7-t10-a3",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Backup Speed Trade-off",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A team wants the fastest possible nightly backup window and accepts a more complex restore. Which backup type is MOST appropriate?",
+    "options": [
+      { "text": "Incremental, because it copies only changes since the last backup", "correct": true, "rationale": "Incrementals are the smallest and fastest to create, at the cost of a longer, more complex multi-set restore." },
+      { "text": "Full, because it is simplest to restore", "correct": false, "rationale": "Full backups are the slowest and largest to create, contradicting the fastest-window requirement." },
+      { "text": "Differential, because it never grows", "correct": false, "rationale": "Differentials grow each day until the next full and take longer to create than incrementals." },
+      { "text": "No backup at all", "correct": false, "rationale": "Skipping backups leaves no recovery capability and is never appropriate." }
+    ]
+  },
+  {
+    "id": "d7-t10-a4",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Hot Site",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A critical system must resume within a couple of hours of a disaster with minimal data loss. Which alternate site strategy BEST meets this?",
+    "options": [
+      { "text": "A hot site, fully equipped and continuously updated", "correct": true, "rationale": "A hot site enables recovery in minutes to hours with current data, matching a tight RTO and low RPO." },
+      { "text": "A cold site", "correct": false, "rationale": "A cold site takes weeks to become operational, far exceeding a two-hour RTO." },
+      { "text": "A reciprocal agreement with a partner firm", "correct": false, "rationale": "Reciprocal agreements are cheap but often lack the capacity and guaranteed readiness for a tight RTO on a critical system." },
+      { "text": "No alternate site at all", "correct": false, "rationale": "Without an alternate site, a facility loss would prevent recovery within the required window." }
+    ]
+  },
+  {
+    "id": "d7-t10-a5",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Cold Site",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A low-priority system can tolerate weeks of downtime, and cost is the main constraint. Which alternate site is BEST suited?",
+    "options": [
+      { "text": "A cold site with only space, power, and cooling", "correct": true, "rationale": "A cold site is the cheapest option and its weeks-long readiness is acceptable for a system that tolerates long downtime." },
+      { "text": "A hot site", "correct": false, "rationale": "A hot site is the most expensive and unnecessary for a system that tolerates weeks of downtime." },
+      { "text": "A fully staffed duplicate data center", "correct": false, "rationale": "A duplicate staffed center is the costliest approach, contrary to the cost constraint." },
+      { "text": "Continuous real-time replication to two hot sites", "correct": false, "rationale": "Dual hot-site replication is far more expensive than needed for a low-priority system." }
+    ]
+  },
+  {
+    "id": "d7-t10-a6",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "RAID Is Not Backup",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A team believes its RAID 5 array is its backup. A user accidentally deletes a critical folder and it is gone from the array. What does this MOST clearly demonstrate?",
+    "options": [
+      { "text": "RAID provides fault tolerance against disk failure but is not a backup and does not protect against deletion or corruption", "correct": true, "rationale": "RAID keeps a system running through a drive failure but immediately reflects deletions and corruption, so it cannot substitute for backups." },
+      { "text": "RAID automatically restores deleted files", "correct": false, "rationale": "RAID does not version or retain deleted data; the deletion propagates across the array." },
+      { "text": "RAID protects against ransomware and site loss", "correct": false, "rationale": "RAID offers no protection against corruption, ransomware, or destruction of the whole site." },
+      { "text": "RAID makes offsite backups unnecessary", "correct": false, "rationale": "Because RAID is not backup, offsite backups remain essential." }
+    ]
+  },
+  {
+    "id": "d7-t10-a7",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Remote Journaling vs Electronic Vaulting",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A database must be recoverable with only seconds to minutes of potential data loss. Which data-protection method BEST achieves this fine-grained recovery point?",
+    "options": [
+      { "text": "Remote journaling that continuously transmits transaction logs offsite", "correct": true, "rationale": "Streaming transaction logs continuously yields a much better RPO than periodic batch backups, enabling near-real-time recovery." },
+      { "text": "Nightly electronic vaulting of full backups", "correct": false, "rationale": "Batch nightly vaulting can lose up to a day of data, far exceeding a seconds-to-minutes RPO." },
+      { "text": "Weekly full backups to tape", "correct": false, "rationale": "Weekly tape backups could lose up to a week of transactions, grossly exceeding the requirement." },
+      { "text": "Manual monthly exports", "correct": false, "rationale": "Monthly manual exports provide an extremely poor RPO, unacceptable here." }
+    ]
+  },
+  {
+    "id": "d7-t10-a8",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Reciprocal Agreement",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which is the LEAST reliable characteristic of a reciprocal (mutual aid) agreement for disaster recovery?",
+    "options": [
+      { "text": "Its dependability, because the partner may lack spare capacity and the arrangement is hard to enforce", "correct": true, "rationale": "Reciprocal agreements are cheap but often unreliable due to capacity, confidentiality, and enforceability concerns." },
+      { "text": "Its low cost", "correct": false, "rationale": "Low cost is actually the main advantage of reciprocal agreements, not their weakness." },
+      { "text": "Its informal familiarity between partners", "correct": false, "rationale": "Familiarity is a minor benefit, not the least reliable characteristic." },
+      { "text": "Its avoidance of new facility leases", "correct": false, "rationale": "Avoiding new leases is a cost benefit, not the reliability weakness." }
+    ]
+  },
+  {
+    "id": "d7-t10-a9",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Full Backup",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which backup type copies all selected data every time and is simplest to restore from a single set?",
+    "options": [
+      { "text": "Full backup", "correct": true, "rationale": "A full backup copies everything each run, so restoration uses just that one set." },
+      { "text": "Incremental backup", "correct": false, "rationale": "An incremental copies only recent changes and requires multiple sets to restore." },
+      { "text": "Differential backup", "correct": false, "rationale": "A differential copies changes since the last full and needs the full plus itself to restore." },
+      { "text": "Snapshot-only backup", "correct": false, "rationale": "A point-in-time snapshot is not the described full-copy scheme and often depends on the underlying volume." }
+    ]
+  },
+  {
+    "id": "d7-t10-a10",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Strategy to RTO/RPO",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What PRIMARILY determines which recovery strategy an organization should select for a given system?",
+    "options": [
+      { "text": "The system's required RTO and RPO, balanced against cost", "correct": true, "rationale": "Recovery strategies are chosen to meet the defined recovery time and recovery point objectives at acceptable cost." },
+      { "text": "The brand of the server hardware", "correct": false, "rationale": "Hardware branding does not drive recovery strategy selection." },
+      { "text": "The number of employees who like the system", "correct": false, "rationale": "Popularity is irrelevant to recovery objectives." },
+      { "text": "The color of the data center walls", "correct": false, "rationale": "This is unrelated to recovery strategy decisions." }
+    ]
+  },
+  {
+    "id": "d7-t10-b1",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Differential vs Incremental Backup",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization prioritizes the fastest and simplest restore process even if nightly backups take longer. Between incremental and differential, which is MOST appropriate?",
+    "options": [
+      { "text": "Differential, because restore needs only the last full plus one differential", "correct": true, "rationale": "Differential backups restore from just two sets, giving a faster, simpler restore than incrementals' many-set chain." },
+      { "text": "Incremental, because restore is simplest", "correct": false, "rationale": "Incremental restore is the most complex, needing the full plus every increment in sequence." },
+      { "text": "Incremental, because it uses only one set to restore", "correct": false, "rationale": "Incremental restore requires multiple sets, not one." },
+      { "text": "Neither can be restored", "correct": false, "rationale": "Both can be restored; the question is which restore is faster and simpler." }
+    ]
+  },
+  {
+    "id": "d7-t10-b2",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Archive Bit",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement BEST describes how the archive bit behaves for incremental versus differential backups?",
+    "options": [
+      { "text": "Incremental clears the archive bit; differential does not clear it", "correct": true, "rationale": "Incrementals clear the bit so only new changes are captured next time; differentials leave it set so they accumulate changes since the last full." },
+      { "text": "Both clear the archive bit", "correct": false, "rationale": "Only incremental clears it; differential leaves it set, which is why differentials grow." },
+      { "text": "Neither interacts with the archive bit", "correct": false, "rationale": "Both backup types are defined in part by their handling of the archive bit." },
+      { "text": "Differential clears the archive bit; incremental does not", "correct": false, "rationale": "This reverses the correct behavior." }
+    ]
+  },
+  {
+    "id": "d7-t10-b3",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Warm Site",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A system can tolerate a day or two of downtime, and the organization wants a middle ground between cost and recovery speed. Which alternate site BEST fits?",
+    "options": [
+      { "text": "A warm site with hardware and connectivity but not current data", "correct": true, "rationale": "A warm site balances cost and recovery time, coming online in hours to days, which fits the tolerance." },
+      { "text": "A hot site that is fully current at all times", "correct": false, "rationale": "A hot site exceeds the need and cost for a system tolerating a day or two of downtime." },
+      { "text": "A cold site taking weeks to activate", "correct": false, "rationale": "A cold site's weeks-long readiness exceeds the one-to-two-day tolerance." },
+      { "text": "No recovery site of any kind", "correct": false, "rationale": "Having no site risks exceeding the tolerated downtime entirely." }
+    ]
+  },
+  {
+    "id": "d7-t10-b4",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Site Ranking",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which ordering correctly ranks alternate sites from fastest/most expensive to slowest/cheapest recovery?",
+    "options": [
+      { "text": "Hot, warm, cold", "correct": true, "rationale": "Hot sites recover fastest at highest cost, warm sites are intermediate, and cold sites are slowest and cheapest." },
+      { "text": "Cold, warm, hot", "correct": false, "rationale": "This reverses the order; cold is slowest and cheapest, not fastest." },
+      { "text": "Warm, hot, cold", "correct": false, "rationale": "Hot, not warm, is the fastest and most expensive." },
+      { "text": "Cold, hot, warm", "correct": false, "rationale": "This ordering is incorrect for both speed and cost." }
+    ]
+  },
+  {
+    "id": "d7-t10-b5",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "RAID Is Not Backup",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which statement BEST captures the role of RAID in a recovery strategy?",
+    "options": [
+      { "text": "RAID provides fault tolerance so a system survives a disk failure, but it is not a substitute for backups", "correct": true, "rationale": "RAID mitigates drive failure but does not protect against deletion, corruption, or site loss, so backups remain necessary." },
+      { "text": "RAID replaces the need for any backups", "correct": false, "rationale": "RAID is not backup and does not protect against many data-loss scenarios." },
+      { "text": "RAID protects data from ransomware corruption", "correct": false, "rationale": "RAID reflects corrupted writes across the array; it does not protect against ransomware." },
+      { "text": "RAID recovers data after the entire site is destroyed", "correct": false, "rationale": "RAID is local; it offers no protection if the whole site is lost." }
+    ]
+  },
+  {
+    "id": "d7-t10-b6",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Electronic Vaulting",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization wants to automatically send its batched backups to a remote facility on a schedule for offsite protection. Which method BEST describes this?",
+    "options": [
+      { "text": "Electronic vaulting", "correct": true, "rationale": "Electronic vaulting transmits batched backup data to a remote location on a scheduled basis." },
+      { "text": "Remote journaling", "correct": false, "rationale": "Remote journaling continuously streams transaction logs, not scheduled batch backups." },
+      { "text": "RAID striping", "correct": false, "rationale": "RAID striping distributes data across local disks and is not offsite transmission." },
+      { "text": "Degaussing", "correct": false, "rationale": "Degaussing erases magnetic media and is unrelated to offsite backup transmission." }
+    ]
+  },
+  {
+    "id": "d7-t10-b7",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Mobile Site",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A utility needs a self-contained, transportable processing facility that can be moved to a disaster area. Which option BEST describes this?",
+    "options": [
+      { "text": "A mobile site", "correct": true, "rationale": "A mobile site is a transportable, self-contained facility that can be relocated to where it is needed." },
+      { "text": "A cold site", "correct": false, "rationale": "A cold site is fixed, empty space, not a transportable unit." },
+      { "text": "A reciprocal agreement", "correct": false, "rationale": "A reciprocal agreement is a mutual-hosting arrangement, not a physical transportable facility." },
+      { "text": "A RAID array", "correct": false, "rationale": "A RAID array is disk fault tolerance, not a processing facility." }
+    ]
+  },
+  {
+    "id": "d7-t10-b8",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Backup Restore Chain",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which backup scheme, all else equal, is LEAST convenient when the priority is a quick, low-complexity restore?",
+    "options": [
+      { "text": "Incremental backups", "correct": true, "rationale": "Incremental restore requires the last full plus every subsequent increment in order, making it the most complex and least convenient to restore." },
+      { "text": "Full backups", "correct": false, "rationale": "Full backups restore from a single set, the most convenient restore." },
+      { "text": "Differential backups", "correct": false, "rationale": "Differential restore needs only the full plus one differential, more convenient than incrementals." },
+      { "text": "A full backup followed by a single differential", "correct": false, "rationale": "This two-set restore is convenient, not the least convenient option." }
+    ]
+  },
+  {
+    "id": "d7-t10-b9",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Matching Strategy to RPO",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A system's RPO allows up to 24 hours of data loss and its RTO allows a full day of downtime. Which recovery approach is BEST aligned to these relaxed objectives at lower cost?",
+    "options": [
+      { "text": "Nightly backups with electronic vaulting to a warm or cold arrangement", "correct": true, "rationale": "Relaxed 24-hour objectives are satisfied by nightly offsite backups at lower cost than continuous replication and hot sites." },
+      { "text": "Continuous synchronous replication to a hot site", "correct": false, "rationale": "Continuous replication and a hot site are overbuilt and costly for objectives that tolerate a day of loss and downtime." },
+      { "text": "Sub-second failover clustering", "correct": false, "rationale": "Sub-second failover far exceeds and overspends for a 24-hour RPO/RTO." },
+      { "text": "No backup strategy at all", "correct": false, "rationale": "No strategy means potentially unlimited data loss, failing even relaxed objectives." }
+    ]
+  },
+  {
+    "id": "d7-t10-b10",
+    "domainId": "d7",
+    "topicId": "d7-t10",
+    "subtopicTag": "Full plus Incremental Window",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why might an organization choose weekly full backups combined with daily incrementals rather than daily full backups?",
+    "options": [
+      { "text": "To minimize daily backup time and storage while accepting a longer restore chain", "correct": true, "rationale": "Full-plus-incremental reduces the size and duration of daily backups, trading off a more complex restore for efficiency." },
+      { "text": "To make each daily backup as large as possible", "correct": false, "rationale": "Incrementals are chosen precisely to keep daily backups small, not large." },
+      { "text": "To eliminate the need for any full backup", "correct": false, "rationale": "A periodic full backup is still required as the base of the restore chain." },
+      { "text": "To guarantee zero data loss with no backups", "correct": false, "rationale": "This is contradictory; backups are what enable recovery, and the scheme still has an RPO." }
+    ]
+  }
+]

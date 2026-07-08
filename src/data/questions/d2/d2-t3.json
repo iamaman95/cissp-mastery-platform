@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t3-a1",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Secure Baseline Provisioning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company provisions new servers by cloning a hardened, approved image. What is the BEST security benefit of this approach?",
+    "options": [
+      { "text": "Consistent secure baselines are applied to every new system, reducing misconfiguration", "correct": true, "rationale": "Provisioning from a hardened baseline image ensures each system starts in a known-secure, consistent configuration, minimizing drift and misconfiguration." },
+      { "text": "Each server ends up uniquely and unpredictably configured", "correct": false, "rationale": "Unpredictable, inconsistent configuration is what baselines are meant to prevent." },
+      { "text": "Security patches become unnecessary", "correct": false, "rationale": "Baselines still require ongoing patching; they do not eliminate that need." },
+      { "text": "Servers no longer need access controls", "correct": false, "rationale": "A secure baseline includes, not replaces, access controls." }
+    ]
+  },
+  {
+    "id": "d2-t3-a2",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Asset Tracking at Provisioning",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When a new laptop is issued to an employee, what should be done FIRST to maintain accountability for the asset?",
+    "options": [
+      { "text": "Record the asset in the inventory and assign ownership/custodianship", "correct": true, "rationale": "Recording the asset and assigning responsibility at issuance establishes accountability and enables tracking through its lifecycle." },
+      { "text": "Let the employee take it with no record", "correct": false, "rationale": "Issuing assets without records destroys accountability and tracking." },
+      { "text": "Disable all security features to speed setup", "correct": false, "rationale": "Disabling security during provisioning leaves the asset exposed." },
+      { "text": "Publicly post the device's serial number", "correct": false, "rationale": "Public disclosure of asset details is unnecessary and potentially risky." }
+    ]
+  },
+  {
+    "id": "d2-t3-a3",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Least Functionality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "During provisioning, an administrator disables unused services, removes default apps, and closes unneeded ports. This MOST directly applies which principle?",
+    "options": [
+      { "text": "Least functionality (reduce the attack surface)", "correct": true, "rationale": "Configuring a system to provide only necessary functions/services is the least-functionality principle, which shrinks the attack surface." },
+      { "text": "Maximum functionality for flexibility", "correct": false, "rationale": "Enabling everything increases attack surface, the opposite of the goal here." },
+      { "text": "Fail-open networking", "correct": false, "rationale": "Fail-open concerns failure behavior, not reducing enabled services." },
+      { "text": "Security through obscurity", "correct": false, "rationale": "Disabling real functionality is a concrete hardening measure, not mere obscurity." }
+    ]
+  },
+  {
+    "id": "d2-t3-a4",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Default Credentials",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A new network appliance ships with a well-known default administrator password. During secure provisioning, what should be done FIRST?",
+    "options": [
+      { "text": "Change the default credentials to a strong, unique password", "correct": true, "rationale": "Default credentials are publicly known and a top attack vector; changing them is a critical first hardening step." },
+      { "text": "Leave the default so support can access it easily", "correct": false, "rationale": "Leaving known default credentials is a severe, easily exploited weakness." },
+      { "text": "Publish the default password on the intranet", "correct": false, "rationale": "Publishing credentials broadens exposure and is grossly insecure." },
+      { "text": "Disable logging to reduce noise", "correct": false, "rationale": "Disabling logging harms detection and does not address the default-credential risk." }
+    ]
+  },
+  {
+    "id": "d2-t3-a5",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Cloud Resource Provisioning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A team repeatedly spins up cloud resources with inconsistent, sometimes insecure settings. What is the BEST way to provision securely and repeatably?",
+    "options": [
+      { "text": "Use infrastructure-as-code with reviewed, hardened templates", "correct": true, "rationale": "IaC with vetted, hardened templates makes provisioning consistent, repeatable, reviewable, and secure by default." },
+      { "text": "Manually click through the console each time differently", "correct": false, "rationale": "Manual, inconsistent provisioning is exactly what causes the insecure drift described." },
+      { "text": "Grant every resource public internet access by default", "correct": false, "rationale": "Defaulting to public access dramatically increases exposure." },
+      { "text": "Skip all configuration review to move faster", "correct": false, "rationale": "Skipping review lets insecure configurations proliferate." }
+    ]
+  },
+  {
+    "id": "d2-t3-a6",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Configuration Baseline Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A security configuration baseline is best defined as which of the following?",
+    "options": [
+      { "text": "A documented, approved standard secure configuration for a type of system", "correct": true, "rationale": "A baseline is the approved minimum secure configuration standard from which systems are provisioned and against which drift is measured." },
+      { "text": "The maximum number of users a system can have", "correct": false, "rationale": "That describes a capacity limit, not a security baseline." },
+      { "text": "A list of the company's holidays", "correct": false, "rationale": "This is unrelated to configuration baselines." },
+      { "text": "The price paid for the hardware", "correct": false, "rationale": "Cost has nothing to do with a configuration baseline." }
+    ]
+  },
+  {
+    "id": "d2-t3-a7",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Least Privilege",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When provisioning access for a new service account, which approach MOST reduces risk?",
+    "options": [
+      { "text": "Grant only the specific permissions the service requires (least privilege)", "correct": true, "rationale": "Provisioning service accounts with only necessary permissions limits damage if the account is compromised." },
+      { "text": "Grant domain administrator rights for convenience", "correct": false, "rationale": "Over-privileged service accounts are a major risk if compromised." },
+      { "text": "Reuse a shared admin account for all services", "correct": false, "rationale": "Shared privileged accounts destroy accountability and expand exposure." },
+      { "text": "Give it access to everything just in case", "correct": false, "rationale": "Blanket access violates least privilege and increases blast radius." }
+    ]
+  },
+  {
+    "id": "d2-t3-a8",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Media Provisioning Sanitization",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Refurbished drives from a retired project are being provisioned into new systems. What must occur FIRST?",
+    "options": [
+      { "text": "Sanitize the drives to remove any residual data before reuse", "correct": true, "rationale": "Reused media may hold residual data (remanence); sanitizing first prevents old sensitive data from leaking into the new environment." },
+      { "text": "Deploy them immediately with old data intact", "correct": false, "rationale": "Deploying with residual data risks exposing prior sensitive information." },
+      { "text": "Assume the drives are already clean", "correct": false, "rationale": "Unverified assumptions about clean media invite remanence exposure." },
+      { "text": "Only relabel the drives", "correct": false, "rationale": "Relabeling does not remove residual data." }
+    ]
+  },
+  {
+    "id": "d2-t3-a9",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Golden Image Maintenance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization's hardened 'golden image' has not been updated in a year and now lacks recent patches. What is the BEST practice?",
+    "options": [
+      { "text": "Regularly update and re-harden the baseline image so new systems inherit current patches", "correct": true, "rationale": "Baseline images must be kept current so every newly provisioned system starts patched and hardened, not with year-old vulnerabilities." },
+      { "text": "Keep using the stale image indefinitely", "correct": false, "rationale": "A stale image provisions systems with known, unpatched vulnerabilities." },
+      { "text": "Stop using images and configure each system randomly", "correct": false, "rationale": "Abandoning baselines reintroduces inconsistency and misconfiguration." },
+      { "text": "Delete the image and provision nothing", "correct": false, "rationale": "This blocks provisioning entirely rather than maintaining the baseline." }
+    ]
+  },
+  {
+    "id": "d2-t3-a10",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Approval",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To prevent unauthorized systems from appearing on the network, provisioning MOST importantly should include which control?",
+    "options": [
+      { "text": "An authorization/approval step tied to inventory before a system goes live", "correct": true, "rationale": "Requiring approval and inventory registration before go-live prevents unauthorized 'shadow' systems from entering the environment untracked." },
+      { "text": "Allowing anyone to attach any device freely", "correct": false, "rationale": "Unrestricted device attachment is exactly what enables unauthorized systems." },
+      { "text": "Skipping inventory to save time", "correct": false, "rationale": "Skipping inventory removes the ability to detect unauthorized systems." },
+      { "text": "Disabling network monitoring", "correct": false, "rationale": "Disabling monitoring reduces the chance of detecting rogue systems." }
+    ]
+  },
+  {
+    "id": "d2-t3-b1",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Hardening Standards",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A team wants an authoritative reference for hardening operating systems during provisioning. Which is the BEST source?",
+    "options": [
+      { "text": "Recognized hardening guides/benchmarks (e.g., CIS Benchmarks, vendor security guides)", "correct": true, "rationale": "Established benchmarks like CIS provide vetted, authoritative hardening configurations to base secure provisioning on." },
+      { "text": "A random blog post with no sourcing", "correct": false, "rationale": "Unvetted sources may give incomplete or incorrect hardening advice." },
+      { "text": "Whatever settings look nice", "correct": false, "rationale": "Aesthetic preference is not a basis for security hardening." },
+      { "text": "The default out-of-box configuration only", "correct": false, "rationale": "Defaults are typically not hardened and often include insecure settings." }
+    ]
+  },
+  {
+    "id": "d2-t3-b2",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning vs Configuration Drift",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Systems provisioned securely gradually diverge from the baseline as ad hoc changes accumulate. This problem is MOST accurately called what?",
+    "options": [
+      { "text": "Configuration drift", "correct": true, "rationale": "The gradual divergence of systems from their approved baseline over time is configuration drift, which must be detected and corrected." },
+      { "text": "Data remanence", "correct": false, "rationale": "Remanence is residual data on media, not configuration divergence." },
+      { "text": "Privilege escalation", "correct": false, "rationale": "Privilege escalation is gaining higher rights, not configuration divergence." },
+      { "text": "Load balancing", "correct": false, "rationale": "Load balancing distributes traffic and is unrelated to configuration divergence." }
+    ]
+  },
+  {
+    "id": "d2-t3-b3",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Secure Default Configuration",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To reduce risk from human error during setup, systems should be provisioned so that the default state is which of the following?",
+    "options": [
+      { "text": "Secure by default (restrictive), with access opened only as needed", "correct": true, "rationale": "Secure-by-default provisioning starts restrictive and grants access deliberately, minimizing accidental exposure." },
+      { "text": "Fully open by default, locked down later if remembered", "correct": false, "rationale": "Open-by-default relies on someone remembering to secure it, which frequently fails." },
+      { "text": "Randomized so no one can predict it", "correct": false, "rationale": "Randomized configuration is inconsistent and unmanageable, not secure by design." },
+      { "text": "Identical to the vendor default with no changes", "correct": false, "rationale": "Vendor defaults are often insecure and should be hardened, not left as-is." }
+    ]
+  },
+  {
+    "id": "d2-t3-b4",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Automation Benefit",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security advantage of automating resource provisioning with tested templates?",
+    "options": [
+      { "text": "Consistent, repeatable, secure configurations that reduce human error", "correct": true, "rationale": "Automation applies the same vetted secure configuration every time, cutting the manual mistakes that cause insecure setups." },
+      { "text": "It removes the need to ever patch systems", "correct": false, "rationale": "Automation does not eliminate patching responsibilities." },
+      { "text": "It makes all data automatically public", "correct": false, "rationale": "Secure provisioning restricts access; it does not make data public." },
+      { "text": "It eliminates the need for any access control", "correct": false, "rationale": "Access controls remain essential and are part of secure provisioning." }
+    ]
+  },
+  {
+    "id": "d2-t3-b5",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In asset security, 'secure provisioning' most directly refers to which of the following?",
+    "options": [
+      { "text": "Deploying resources configured to meet security requirements from the start", "correct": true, "rationale": "Secure provisioning means setting up systems/resources with required security configurations built in from deployment." },
+      { "text": "Discarding all hardware upon purchase", "correct": false, "rationale": "That describes disposal, not provisioning." },
+      { "text": "Selling assets to third parties", "correct": false, "rationale": "Selling assets is unrelated to secure provisioning." },
+      { "text": "Ignoring configuration until an audit", "correct": false, "rationale": "Deferring configuration is the opposite of secure provisioning." }
+    ]
+  },
+  {
+    "id": "d2-t3-b6",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Endpoints Securely",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company issues hundreds of employee laptops. Which BEST ensures each is provisioned with required security controls?",
+    "options": [
+      { "text": "Use centralized device management (MDM/endpoint management) to enforce a standard secure configuration", "correct": true, "rationale": "Centralized endpoint/MDM management enforces consistent security configuration, encryption, and policy across all issued devices at scale." },
+      { "text": "Let each user configure their own laptop however they like", "correct": false, "rationale": "User-configured devices produce inconsistent and often insecure setups." },
+      { "text": "Ship laptops with no security software", "correct": false, "rationale": "Shipping unprotected devices leaves endpoints vulnerable from day one." },
+      { "text": "Disable encryption to improve performance", "correct": false, "rationale": "Disabling encryption removes a key protection for data at rest." }
+    ]
+  },
+  {
+    "id": "d2-t3-b7",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Change Control on Baselines",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An administrator wants to update the approved hardened baseline for all future systems. What is the BEST process to follow?",
+    "options": [
+      { "text": "Route the baseline change through change management for review and approval before adoption", "correct": true, "rationale": "Baseline changes affect all future systems and should go through change control so they are reviewed, tested, and approved before adoption." },
+      { "text": "Silently change the baseline with no review", "correct": false, "rationale": "Unreviewed baseline changes can introduce weaknesses across every new system." },
+      { "text": "Let each admin keep a personal baseline", "correct": false, "rationale": "Personal baselines reintroduce inconsistency and undermine standardization." },
+      { "text": "Never update the baseline", "correct": false, "rationale": "Baselines must evolve with new patches/threats; freezing them causes stale insecurity." }
+    ]
+  },
+  {
+    "id": "d2-t3-b8",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning and Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "For laptops that will store sensitive data, which control is MOST important to enable during provisioning?",
+    "options": [
+      { "text": "Full-disk encryption", "correct": true, "rationale": "Enabling FDE at provisioning ensures data at rest is protected before any sensitive data is stored on the device." },
+      { "text": "A screensaver slideshow", "correct": false, "rationale": "A screensaver does not protect stored data." },
+      { "text": "Extra desktop shortcuts", "correct": false, "rationale": "Shortcuts have no security relevance." },
+      { "text": "A brighter keyboard backlight", "correct": false, "rationale": "Backlighting is irrelevant to data protection." }
+    ]
+  },
+  {
+    "id": "d2-t3-b9",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Verification",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After provisioning a system from a baseline, what should be done FIRST to confirm it meets requirements before go-live?",
+    "options": [
+      { "text": "Validate the configuration against the baseline (e.g., a compliance scan/checklist)", "correct": true, "rationale": "Verifying the provisioned system against the baseline confirms controls are correctly applied before it goes into production." },
+      { "text": "Immediately expose it to the internet untested", "correct": false, "rationale": "Exposing an unverified system risks deploying misconfigurations to production." },
+      { "text": "Delete the baseline documentation", "correct": false, "rationale": "Deleting documentation removes the reference needed for verification." },
+      { "text": "Grant all users admin rights", "correct": false, "rationale": "Blanket admin rights violate least privilege and are not a verification step." }
+    ]
+  },
+  {
+    "id": "d2-t3-b10",
+    "domainId": "d2",
+    "topicId": "d2-t3",
+    "subtopicTag": "Provisioning Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to securely provisioning a new server?",
+    "options": [
+      { "text": "The color of the server rack door", "correct": true, "rationale": "Rack door color has no bearing on secure provisioning of the server, making it least relevant." },
+      { "text": "Applying a hardened baseline configuration", "correct": false, "rationale": "Hardened baselines are central to secure provisioning." },
+      { "text": "Changing default credentials", "correct": false, "rationale": "Changing defaults is a critical provisioning hardening step." },
+      { "text": "Registering the server in the asset inventory", "correct": false, "rationale": "Inventory registration is important for accountability and tracking." }
+    ]
+  }
+]

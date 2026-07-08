@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t4-a1",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Data Lifecycle Stages",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following best represents the typical stages of the data lifecycle?",
+    "options": [
+      { "text": "Create, store, use, share, archive, destroy", "correct": true, "rationale": "The data lifecycle commonly spans creation, storage, use, sharing, archival, and destruction — each stage needing appropriate controls." },
+      { "text": "Boot, run, sleep, shutdown", "correct": false, "rationale": "Those are system power states, not data lifecycle stages." },
+      { "text": "Buy, sell, trade, lease", "correct": false, "rationale": "These are commercial transactions, unrelated to the data lifecycle." },
+      { "text": "Encrypt, decrypt, re-encrypt", "correct": false, "rationale": "These are cryptographic operations, not lifecycle stages." }
+    ]
+  },
+  {
+    "id": "d2-t4-a2",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Controls Vary by Stage",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization applies different controls when data is stored versus when it is shared externally. This MOST directly reflects which lifecycle concept?",
+    "options": [
+      { "text": "Security controls should be tailored to each stage of the data lifecycle", "correct": true, "rationale": "Different lifecycle stages present different risks, so controls (e.g., at-rest encryption vs sharing agreements) are tailored per stage." },
+      { "text": "All lifecycle stages require identical controls", "correct": false, "rationale": "Uniform controls ignore the differing risks at each stage." },
+      { "text": "Data has no lifecycle", "correct": false, "rationale": "Data clearly moves through lifecycle stages, each with distinct handling needs." },
+      { "text": "Only destruction needs any controls", "correct": false, "rationale": "Every stage — creation through destruction — requires appropriate controls." }
+    ]
+  },
+  {
+    "id": "d2-t4-a3",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Classification at Creation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "At which point in the data lifecycle should classification ideally FIRST occur?",
+    "options": [
+      { "text": "At creation, so appropriate controls apply from the start", "correct": true, "rationale": "Classifying data at creation ensures the correct handling and protection controls are applied throughout its entire lifecycle." },
+      { "text": "Only at destruction", "correct": false, "rationale": "Classifying only at destruction leaves the data unprotected for its entire useful life." },
+      { "text": "Never; classification is optional", "correct": false, "rationale": "Classification drives protection and is not optional for sensitive data." },
+      { "text": "Only after a breach", "correct": false, "rationale": "Waiting until a breach means the data was unclassified and under-protected when it mattered." }
+    ]
+  },
+  {
+    "id": "d2-t4-a4",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Archival Stage",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Data no longer used daily but required for compliance is moved to long-term storage. During this archival stage, what is BEST maintained?",
+    "options": [
+      { "text": "Protection appropriate to its classification, plus retrievability for its required retention period", "correct": true, "rationale": "Archived data must remain protected per its sensitivity and retrievable for as long as retention/compliance requires." },
+      { "text": "Immediate deletion regardless of retention rules", "correct": false, "rationale": "Deleting data still under a retention requirement could violate legal/compliance obligations." },
+      { "text": "Public exposure to save storage costs", "correct": false, "rationale": "Exposing archived sensitive data publicly is a serious confidentiality failure." },
+      { "text": "Removal of all encryption to speed access", "correct": false, "rationale": "Stripping protection from archived sensitive data increases risk." }
+    ]
+  },
+  {
+    "id": "d2-t4-a5",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "End-of-Life Destruction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When data reaches the end of its lifecycle and is no longer needed or required to be retained, what is the MOST appropriate action?",
+    "options": [
+      { "text": "Securely destroy it using a method appropriate to its sensitivity and media type", "correct": true, "rationale": "End-of-life data should be securely destroyed (per its sensitivity/media) to prevent later unauthorized recovery, once no retention obligation remains." },
+      { "text": "Keep it forever just in case", "correct": false, "rationale": "Indefinite retention of unneeded data increases risk and storage/compliance burden." },
+      { "text": "Leave it on decommissioned drives in a closet", "correct": false, "rationale": "Retaining sensitive data on forgotten media is a common breach source." },
+      { "text": "Sell the media without sanitization", "correct": false, "rationale": "Selling media with recoverable data causes data leakage." }
+    ]
+  },
+  {
+    "id": "d2-t4-a6",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Data Minimization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company collects far more personal data than it uses, increasing breach exposure. Which lifecycle principle BEST addresses this?",
+    "options": [
+      { "text": "Data minimization — collect and retain only what is necessary", "correct": true, "rationale": "Minimization reduces the amount of data held, shrinking breach impact and compliance scope across the lifecycle." },
+      { "text": "Collect as much data as possible for future use", "correct": false, "rationale": "Maximizing collection increases exposure and contradicts minimization." },
+      { "text": "Never delete any data", "correct": false, "rationale": "Retaining everything indefinitely enlarges the attack surface and violates minimization." },
+      { "text": "Duplicate all data across many systems", "correct": false, "rationale": "Widespread duplication increases exposure rather than minimizing it." }
+    ]
+  },
+  {
+    "id": "d2-t4-a7",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Sharing Controls",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During the 'share' stage, sensitive data is sent to an external partner. Which control is MOST important?",
+    "options": [
+      { "text": "Ensure a data-sharing agreement and secure transmission govern the exchange", "correct": true, "rationale": "Sharing sensitive data externally requires both contractual governance (agreement) and secure transmission to protect it." },
+      { "text": "Send it over an unencrypted public channel", "correct": false, "rationale": "Unencrypted external transmission exposes the data to interception." },
+      { "text": "Share without recording who received it", "correct": false, "rationale": "Failing to track recipients removes accountability and traceability." },
+      { "text": "Post it publicly for convenience", "correct": false, "rationale": "Public posting of sensitive data is a direct confidentiality breach." }
+    ]
+  },
+  {
+    "id": "d2-t4-a8",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Backups in the Lifecycle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization securely deletes production copies of sensitive data but forgets that backups still contain it. What lifecycle lesson does this MOST clearly illustrate?",
+    "options": [
+      { "text": "Lifecycle controls (including destruction) must account for all copies, including backups and archives", "correct": true, "rationale": "Effective destruction and retention management must cover every copy of data — including backups — or sensitive data persists unmanaged." },
+      { "text": "Backups are irrelevant to data lifecycle", "correct": false, "rationale": "Backups are copies of the data and are very much part of its lifecycle and destruction scope." },
+      { "text": "Only production data ever matters", "correct": false, "rationale": "Backups hold the same sensitive data and must be governed too." },
+      { "text": "Deletion of one copy destroys all copies", "correct": false, "rationale": "Deleting one copy does not affect independent backup copies, which is the point of the failure." }
+    ]
+  },
+  {
+    "id": "d2-t4-a9",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Ownership Through Lifecycle",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure data is properly protected at every lifecycle stage, what is BEST established?",
+    "options": [
+      { "text": "Clear ownership and accountability for the data throughout its lifecycle", "correct": true, "rationale": "Assigning ongoing ownership ensures someone is accountable for correct handling at each lifecycle stage." },
+      { "text": "No owner, so responsibility is shared by no one", "correct": false, "rationale": "Without an owner, no one ensures proper handling and gaps appear." },
+      { "text": "Ownership only during creation, then abandonment", "correct": false, "rationale": "Data needs governance across its whole life, not just at creation." },
+      { "text": "Transfer ownership to unrelated third parties randomly", "correct": false, "rationale": "Random transfer of ownership breaks accountability." }
+    ]
+  },
+  {
+    "id": "d2-t4-a10",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Storage Stage Protection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "During the storage stage of the lifecycle, which control MOST directly protects sensitive data confidentiality?",
+    "options": [
+      { "text": "Encryption of the data at rest", "correct": true, "rationale": "At-rest encryption protects the confidentiality of stored data during the storage lifecycle stage." },
+      { "text": "A faster network switch", "correct": false, "rationale": "Network speed does not protect stored data confidentiality." },
+      { "text": "A brighter monitor", "correct": false, "rationale": "Display settings are irrelevant to protecting stored data." },
+      { "text": "More frequent office cleaning", "correct": false, "rationale": "Cleaning has no bearing on data-at-rest confidentiality." }
+    ]
+  },
+  {
+    "id": "d2-t4-b1",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Lifecycle-Driven Retention",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company keeps all data indefinitely because 'deleting is scary.' What is the BEST lifecycle-aligned correction?",
+    "options": [
+      { "text": "Define and enforce retention schedules so data is kept only as long as needed, then securely destroyed", "correct": true, "rationale": "Retention schedules operationalize the lifecycle's end, retaining data only as required and destroying it thereafter to reduce risk." },
+      { "text": "Continue keeping everything forever", "correct": false, "rationale": "Indefinite retention increases breach exposure and compliance burden." },
+      { "text": "Delete everything immediately without schedules", "correct": false, "rationale": "Indiscriminate deletion could violate legal retention requirements." },
+      { "text": "Randomly delete data with no policy", "correct": false, "rationale": "Random deletion risks losing records needed for compliance or operations." }
+    ]
+  },
+  {
+    "id": "d2-t4-b2",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Use Stage Access Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During the 'use' stage, which control MOST directly ensures only authorized personnel access the data?",
+    "options": [
+      { "text": "Access controls enforcing least privilege and need-to-know", "correct": true, "rationale": "Access controls governing who can use the data enforce least privilege/need-to-know during active use." },
+      { "text": "Deleting the data before anyone can use it", "correct": false, "rationale": "Deleting data needed for use defeats its purpose and is not an access control." },
+      { "text": "Publishing the data to everyone", "correct": false, "rationale": "Public exposure is the opposite of restricting access to authorized users." },
+      { "text": "Disabling all authentication", "correct": false, "rationale": "Removing authentication lets anyone access the data, defeating access control." }
+    ]
+  },
+  {
+    "id": "d2-t4-b3",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Data Provenance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An analytics team needs to know where a data set originated and how it was transformed. Tracking this lineage across the lifecycle is BEST described as what?",
+    "options": [
+      { "text": "Data provenance/lineage", "correct": true, "rationale": "Data provenance/lineage records a data set's origin and transformations, supporting integrity and trust across the lifecycle." },
+      { "text": "Data remanence", "correct": false, "rationale": "Remanence is residual data on media, not a record of origin/transformation." },
+      { "text": "Data classification", "correct": false, "rationale": "Classification labels sensitivity; it does not track origin and transformations." },
+      { "text": "Data encryption", "correct": false, "rationale": "Encryption protects confidentiality; it is not a lineage record." }
+    ]
+  },
+  {
+    "id": "d2-t4-b4",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Destruction Verification",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After a vendor destroys end-of-life media containing sensitive data, what should the organization obtain FIRST for assurance?",
+    "options": [
+      { "text": "A certificate of destruction documenting what was destroyed and how", "correct": true, "rationale": "A certificate of destruction provides documented assurance that the specific media was destroyed by an appropriate method." },
+      { "text": "A verbal 'it's done' with no record", "correct": false, "rationale": "Unrecorded verbal assurance is not verifiable evidence of destruction." },
+      { "text": "Nothing; assume it happened", "correct": false, "rationale": "Unverified assumptions leave the organization exposed and non-compliant." },
+      { "text": "A marketing flyer from the vendor", "correct": false, "rationale": "Marketing material is not evidence that specific media was destroyed." }
+    ]
+  },
+  {
+    "id": "d2-t4-b5",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Lifecycle Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Data lifecycle management is best described as which of the following?",
+    "options": [
+      { "text": "Governing data with appropriate controls from creation through destruction", "correct": true, "rationale": "Lifecycle management applies suitable controls at every stage of data's existence, from creation to secure destruction." },
+      { "text": "Only encrypting data once, at creation", "correct": false, "rationale": "It spans all stages, not a single one-time action." },
+      { "text": "Deleting data as soon as it is created", "correct": false, "rationale": "Immediate deletion is not lifecycle management and would destroy needed data." },
+      { "text": "Ignoring data after it is stored", "correct": false, "rationale": "Lifecycle management continues through use, sharing, archival, and destruction." }
+    ]
+  },
+  {
+    "id": "d2-t4-b6",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Cloud Data Lifecycle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When sensitive data is stored with a cloud provider, which lifecycle concern is MOST important to clarify contractually?",
+    "options": [
+      { "text": "How data is protected, retained, and securely destroyed/returned at end of service", "correct": true, "rationale": "In the cloud, the customer must ensure the provider protects, retains, and securely destroys or returns data appropriately across the lifecycle." },
+      { "text": "The provider's office decor", "correct": false, "rationale": "Decor is irrelevant to data lifecycle governance." },
+      { "text": "The color of the provider's logo", "correct": false, "rationale": "Branding has no lifecycle relevance." },
+      { "text": "The provider's cafeteria menu", "correct": false, "rationale": "This is unrelated to protecting and disposing of data." }
+    ]
+  },
+  {
+    "id": "d2-t4-b7",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Reclassification in Lifecycle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "As data ages, its sensitivity sometimes decreases (or increases). How should the lifecycle process MOST appropriately handle this?",
+    "options": [
+      { "text": "Periodically review and reclassify data so controls match current sensitivity", "correct": true, "rationale": "Reclassification during the lifecycle keeps controls aligned with the data's current sensitivity, avoiding over- or under-protection." },
+      { "text": "Freeze the original classification forever", "correct": false, "rationale": "Static classification drifts out of alignment with changing sensitivity." },
+      { "text": "Delete data whenever its sensitivity changes", "correct": false, "rationale": "Sensitivity change calls for reclassification, not automatic destruction of possibly-needed data." },
+      { "text": "Ignore sensitivity changes entirely", "correct": false, "rationale": "Ignoring changes leads to mismatched controls." }
+    ]
+  },
+  {
+    "id": "d2-t4-b8",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Creation Stage Integrity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "At the creation stage, ensuring data is accurate and captured correctly BEST protects which property later in the lifecycle?",
+    "options": [
+      { "text": "Integrity — accurate data at creation prevents propagating errors downstream", "correct": true, "rationale": "Getting data right at creation preserves integrity throughout the lifecycle, since errors introduced early propagate through use and sharing." },
+      { "text": "Availability only", "correct": false, "rationale": "Accuracy at creation primarily concerns integrity, not availability." },
+      { "text": "Physical door security", "correct": false, "rationale": "Data-creation accuracy is unrelated to physical door controls." },
+      { "text": "Network bandwidth", "correct": false, "rationale": "Bandwidth is unrelated to data accuracy/integrity at creation." }
+    ]
+  },
+  {
+    "id": "d2-t4-b9",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Lifecycle Governance Ownership",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Who holds PRIMARY accountability for ensuring a data set is managed appropriately across its lifecycle?",
+    "options": [
+      { "text": "The data owner", "correct": true, "rationale": "The data owner is accountable for the data's proper handling and protection across its entire lifecycle." },
+      { "text": "The night-shift janitor", "correct": false, "rationale": "This role has no accountability for data governance." },
+      { "text": "An anonymous end user", "correct": false, "rationale": "End users use data within granted rights but do not own lifecycle accountability." },
+      { "text": "A random external party", "correct": false, "rationale": "External parties do not hold accountability for the organization's data lifecycle." }
+    ]
+  },
+  {
+    "id": "d2-t4-b10",
+    "domainId": "d2",
+    "topicId": "d2-t4",
+    "subtopicTag": "Lifecycle Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to managing the data lifecycle?",
+    "options": [
+      { "text": "The brand of the employee's office chair", "correct": true, "rationale": "Office furniture branding has no bearing on how data is created, protected, retained, or destroyed, making it least relevant." },
+      { "text": "Retention and destruction schedules", "correct": false, "rationale": "Retention/destruction schedules are core lifecycle elements." },
+      { "text": "Stage-appropriate protection controls", "correct": false, "rationale": "Applying controls per stage is central to lifecycle management." },
+      { "text": "Classification at creation", "correct": false, "rationale": "Classifying at creation drives lifecycle protection and is highly relevant." }
+    ]
+  }
+]

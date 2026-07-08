@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d6-t2-a1",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Vuln Assessment vs Pen Test",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A scan produces a list of missing patches but does not attempt to break in. To determine whether those weaknesses can actually be exploited, what is MOST appropriate next?",
+    "options": [
+      { "text": "A penetration test that actively attempts to exploit the weaknesses", "correct": true, "rationale": "A pen test exploits identified weaknesses to demonstrate real-world impact, going beyond the vulnerability assessment's cataloging." },
+      { "text": "Another identical vulnerability scan", "correct": false, "rationale": "Re-scanning re-lists weaknesses but still does not test exploitability." },
+      { "text": "Deleting the scan results", "correct": false, "rationale": "Discarding results abandons the findings rather than validating exploitability." },
+      { "text": "Ignoring the findings", "correct": false, "rationale": "Ignoring known weaknesses leaves them unaddressed and unvalidated." }
+    ]
+  },
+  {
+    "id": "d6-t2-a2",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Authorization Before Testing",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Before a penetration test begins, what MUST happen FIRST?",
+    "options": [
+      { "text": "Obtain written authorization and agree on rules of engagement/scope", "correct": true, "rationale": "Written authorization and defined rules of engagement are mandatory before testing; testing without them can be illegal." },
+      { "text": "Immediately start exploiting systems to save time", "correct": false, "rationale": "Exploiting systems without authorization is unauthorized access and potentially illegal." },
+      { "text": "Publicly announce the target's vulnerabilities", "correct": false, "rationale": "Publicizing vulnerabilities is harmful and not a pre-test step." },
+      { "text": "Disable the target's logging without permission", "correct": false, "rationale": "Tampering with the target without authorization is improper and out of scope." }
+    ]
+  },
+  {
+    "id": "d6-t2-a3",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "White Box Thoroughness",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A test in which the tester is given full knowledge including source code and architecture is MOST accurately which type, and what is its main advantage?",
+    "options": [
+      { "text": "White box testing — the most thorough coverage due to full knowledge", "correct": true, "rationale": "White box testing leverages complete knowledge/source access to achieve the most thorough coverage of the target." },
+      { "text": "Black box testing — no knowledge, most thorough", "correct": false, "rationale": "Black box has no prior knowledge and is less thorough than white box, not more." },
+      { "text": "Gray box testing — full knowledge", "correct": false, "rationale": "Gray box has partial, not full, knowledge." },
+      { "text": "Blind testing that ignores the code", "correct": false, "rationale": "White box specifically uses the code; ignoring it contradicts the definition." }
+    ]
+  },
+  {
+    "id": "d6-t2-a4",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Black Box Simulation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To most realistically simulate an external attacker with no inside information, which testing approach is BEST?",
+    "options": [
+      { "text": "Black box testing (no prior knowledge)", "correct": true, "rationale": "Black box testing gives the tester no prior knowledge, closely simulating an outside attacker's starting position." },
+      { "text": "White box testing with full source access", "correct": false, "rationale": "Full knowledge does not simulate an external attacker with no information." },
+      { "text": "Skipping testing entirely", "correct": false, "rationale": "Not testing provides no simulation at all." },
+      { "text": "Giving the tester admin credentials up front", "correct": false, "rationale": "Providing credentials contradicts the no-knowledge external-attacker simulation." }
+    ]
+  },
+  {
+    "id": "d6-t2-a5",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Red Team Purpose",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization wants to know whether its SOC can detect and respond to a stealthy, realistic intrusion over time. Which exercise is MOST appropriate?",
+    "options": [
+      { "text": "A red team exercise (adversary simulation testing detection and response)", "correct": true, "rationale": "Red teaming stealthily emulates a real adversary to test the organization's detection and response, not just vulnerability presence." },
+      { "text": "A one-time automated vulnerability scan", "correct": false, "rationale": "A scan lists weaknesses but does not evaluate detection/response over time." },
+      { "text": "A code style review", "correct": false, "rationale": "Style review checks code formatting, unrelated to testing SOC response." },
+      { "text": "A backup restoration test", "correct": false, "rationale": "Restore testing validates recovery, not intrusion detection/response." }
+    ]
+  },
+  {
+    "id": "d6-t2-a6",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Fuzzing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To find input-handling flaws by sending malformed and unexpected data to an application, which technique is BEST?",
+    "options": [
+      { "text": "Fuzzing", "correct": true, "rationale": "Fuzzing feeds malformed/random input to trigger crashes and reveal input-handling vulnerabilities." },
+      { "text": "A user satisfaction survey", "correct": false, "rationale": "Surveys gather opinions, not input-handling defects." },
+      { "text": "A backup rotation review", "correct": false, "rationale": "Backup review is unrelated to input-handling testing." },
+      { "text": "A physical security audit", "correct": false, "rationale": "Physical audits do not exercise application input handling." }
+    ]
+  },
+  {
+    "id": "d6-t2-a7",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Synthetic Transactions",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A team runs scripted transactions against a web app around the clock to detect availability and performance problems before users do. This technique is MOST accurately called what?",
+    "options": [
+      { "text": "Synthetic transactions (synthetic monitoring)", "correct": true, "rationale": "Synthetic transactions are scripted, simulated user actions run continuously to monitor availability/performance proactively." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing exploits weaknesses; it is not scripted availability monitoring." },
+      { "text": "Fuzzing", "correct": false, "rationale": "Fuzzing sends malformed input to find crashes, not to monitor availability with valid transactions." },
+      { "text": "Static code analysis", "correct": false, "rationale": "Static analysis inspects source code, not live transaction availability." }
+    ]
+  },
+  {
+    "id": "d6-t2-a8",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Code Review Static",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To find security defects in source code without executing the program, which technique is BEST?",
+    "options": [
+      { "text": "Static code review/analysis (SAST)", "correct": true, "rationale": "Static analysis/code review inspects source code without running it, catching defects early." },
+      { "text": "Running the app and fuzzing only", "correct": false, "rationale": "Fuzzing tests the running app; it does not inspect source code statically." },
+      { "text": "A network availability ping test", "correct": false, "rationale": "Ping tests connectivity, not source-code defects." },
+      { "text": "A physical badge audit", "correct": false, "rationale": "Physical audits do not examine source code." }
+    ]
+  },
+  {
+    "id": "d6-t2-a9",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Scope Creep in Testing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "During a pen test, the tester discovers an out-of-scope system that looks vulnerable. What is the MOST appropriate action?",
+    "options": [
+      { "text": "Do not test it; document it and consult the client to amend scope if desired", "correct": true, "rationale": "Testers must stay within the authorized scope; exploiting out-of-scope systems is unauthorized. The finding is reported and scope can be formally amended." },
+      { "text": "Immediately exploit it since it looks vulnerable", "correct": false, "rationale": "Exploiting out-of-scope systems exceeds authorization and may be illegal." },
+      { "text": "Delete the system to be safe", "correct": false, "rationale": "Destroying systems is never an appropriate testing action." },
+      { "text": "Ignore it and mention nothing", "correct": false, "rationale": "Silently ignoring a discovered risk fails to inform the client; it should be documented." }
+    ]
+  },
+  {
+    "id": "d6-t2-a10",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Assessment Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A vulnerability assessment primarily produces which of the following?",
+    "options": [
+      { "text": "A catalog of identified weaknesses without exploiting them", "correct": true, "rationale": "A vulnerability assessment identifies and lists weaknesses; exploitation is the pen test's role." },
+      { "text": "Proof that each weakness was successfully exploited", "correct": false, "rationale": "Demonstrating exploitation is what a penetration test does, not a vulnerability assessment." },
+      { "text": "A new marketing plan", "correct": false, "rationale": "Marketing plans are unrelated to vulnerability assessment output." },
+      { "text": "A backup schedule", "correct": false, "rationale": "Backup scheduling is not a vulnerability assessment deliverable." }
+    ]
+  },
+  {
+    "id": "d6-t2-b1",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Pen Test Phases",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After authorization is obtained, which pen-test phase generally comes FIRST?",
+    "options": [
+      { "text": "Reconnaissance/information gathering about the target", "correct": true, "rationale": "Following planning/authorization, testers gather information (reconnaissance) before scanning and exploitation." },
+      { "text": "Writing the final report", "correct": false, "rationale": "Reporting is the last phase, not the first after authorization." },
+      { "text": "Post-exploitation cleanup", "correct": false, "rationale": "Post-exploitation occurs after successful exploitation, not first." },
+      { "text": "Exploiting systems before any recon", "correct": false, "rationale": "Exploitation follows reconnaissance and scanning, not precedes them." }
+    ]
+  },
+  {
+    "id": "d6-t2-b2",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Gray Box Balance",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A client gives testers limited internal information to make testing more efficient while retaining some realism. This is MOST accurately which approach?",
+    "options": [
+      { "text": "Gray box testing (partial knowledge)", "correct": true, "rationale": "Gray box provides partial knowledge, balancing external-attacker realism with the efficiency of some inside information." },
+      { "text": "Black box testing (no knowledge)", "correct": false, "rationale": "Black box provides no prior information, which the scenario contradicts." },
+      { "text": "White box testing (full knowledge)", "correct": false, "rationale": "White box provides full knowledge/source, more than the 'limited' information described." },
+      { "text": "No-scope testing", "correct": false, "rationale": "There is no such standard category; the described partial knowledge is gray box." }
+    ]
+  },
+  {
+    "id": "d6-t2-b3",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Illegality Without Authorization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A well-meaning employee runs an exploitation tool against company servers without any written approval. What is the MOST accurate concern?",
+    "options": [
+      { "text": "Unauthorized testing may violate policy and law, even if intentions are good", "correct": true, "rationale": "Exploiting systems without written authorization can breach policy and computer-crime law regardless of intent." },
+      { "text": "It automatically makes the systems more secure", "correct": false, "rationale": "Unauthorized testing does not inherently improve security and creates legal risk." },
+      { "text": "There is no concern because they are an employee", "correct": false, "rationale": "Employment does not authorize unapproved exploitation of systems." },
+      { "text": "It replaces the need for a formal test", "correct": false, "rationale": "Ad hoc unauthorized activity is not a substitute for a scoped, authorized test." }
+    ]
+  },
+  {
+    "id": "d6-t2-b4",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Misuse Case Testing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team wants to test how an application behaves when someone deliberately abuses a feature (e.g., manipulating a price field). Which testing approach is BEST?",
+    "options": [
+      { "text": "Misuse/abuse case testing", "correct": true, "rationale": "Misuse/abuse case testing deliberately exercises how the app handles malicious or unintended use of features." },
+      { "text": "A user satisfaction survey", "correct": false, "rationale": "Surveys measure satisfaction, not adversarial feature abuse." },
+      { "text": "A backup restoration test", "correct": false, "rationale": "Restore testing validates recovery, not feature abuse handling." },
+      { "text": "A physical lock inspection", "correct": false, "rationale": "Physical inspection is unrelated to application misuse testing." }
+    ]
+  },
+  {
+    "id": "d6-t2-b5",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Scanner Limitations",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Relying solely on automated vulnerability scanners has which MOST notable limitation?",
+    "options": [
+      { "text": "They can produce false positives/negatives and miss complex logic flaws that manual testing catches", "correct": true, "rationale": "Automated scanners are efficient but can misreport and miss business-logic or chained vulnerabilities that require human analysis." },
+      { "text": "They are always 100% accurate with no errors", "correct": false, "rationale": "Scanners commonly produce false positives and negatives, contradicting this claim." },
+      { "text": "They can never find any vulnerabilities", "correct": false, "rationale": "Scanners do find many vulnerabilities; the limitation is coverage of complex flaws, not total inability." },
+      { "text": "They physically repair vulnerabilities automatically", "correct": false, "rationale": "Scanners identify, not automatically fix, vulnerabilities." }
+    ]
+  },
+  {
+    "id": "d6-t2-b6",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Dynamic Testing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Testing a running application from the outside by sending requests and observing responses is MOST accurately which approach?",
+    "options": [
+      { "text": "Dynamic testing (DAST)", "correct": true, "rationale": "Dynamic testing exercises the running application externally, observing behavior, unlike static source analysis." },
+      { "text": "Static analysis of source code", "correct": false, "rationale": "Static analysis inspects code without running it, the opposite of dynamic testing." },
+      { "text": "A backup schedule review", "correct": false, "rationale": "This is unrelated to application testing." },
+      { "text": "A physical guard patrol", "correct": false, "rationale": "Physical patrols do not test running applications." }
+    ]
+  },
+  {
+    "id": "d6-t2-b7",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Rules of Engagement Content",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which element is MOST important to define in the rules of engagement for a penetration test?",
+    "options": [
+      { "text": "The authorized scope, timing, and constraints of the test", "correct": true, "rationale": "ROE define what may be tested, when, and how, keeping the test authorized and controlled." },
+      { "text": "The tester's favorite music playlist", "correct": false, "rationale": "Personal preferences are irrelevant to ROE." },
+      { "text": "The color of the report cover", "correct": false, "rationale": "Report aesthetics are not a rules-of-engagement concern." },
+      { "text": "The office lunch menu", "correct": false, "rationale": "This has no bearing on test scope or constraints." }
+    ]
+  },
+  {
+    "id": "d6-t2-b8",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Manual vs Automated",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To achieve both broad coverage and depth on business-logic flaws, what is the BEST testing strategy?",
+    "options": [
+      { "text": "Combine automated scanning for breadth with manual testing for depth on complex logic", "correct": true, "rationale": "Automation covers many checks quickly while skilled manual testing finds nuanced logic flaws scanners miss — together they maximize coverage and depth." },
+      { "text": "Use automated scanning only and skip manual testing", "correct": false, "rationale": "Automation alone misses complex logic flaws." },
+      { "text": "Use manual testing only for everything, at any scale", "correct": false, "rationale": "Manual-only testing does not scale for breadth across large environments." },
+      { "text": "Skip testing to save time", "correct": false, "rationale": "Skipping testing provides no assurance at all." }
+    ]
+  },
+  {
+    "id": "d6-t2-b9",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Real User Monitoring",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team analyzes actual production users' interactions to understand real experience and detect issues. This is MOST accurately called what?",
+    "options": [
+      { "text": "Real user monitoring (passive monitoring of actual traffic)", "correct": true, "rationale": "Real user monitoring observes genuine user interactions in production, complementing synthetic transactions." },
+      { "text": "Fuzzing", "correct": false, "rationale": "Fuzzing sends malformed input, not observation of real users." },
+      { "text": "Static code analysis", "correct": false, "rationale": "Static analysis inspects code, not live user traffic." },
+      { "text": "A penetration test", "correct": false, "rationale": "A pen test exploits weaknesses; it is not passive monitoring of real users." }
+    ]
+  },
+  {
+    "id": "d6-t2-b10",
+    "domainId": "d6",
+    "topicId": "d6-t2",
+    "subtopicTag": "Technique Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant as a security control testing technique?",
+    "options": [
+      { "text": "Choosing the office paint color", "correct": true, "rationale": "Paint color has no role in testing whether security controls work, making it least relevant." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing is a core control-testing technique." },
+      { "text": "Vulnerability assessment", "correct": false, "rationale": "Vulnerability assessment is a fundamental testing technique." },
+      { "text": "Code review", "correct": false, "rationale": "Code review is a relevant technique for finding source defects." }
+    ]
+  }
+]

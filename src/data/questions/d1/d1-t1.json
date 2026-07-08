@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t1-a1",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon priority ordering",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A CISSP-certified engineer discovers a critical, easily exploitable flaw in her employer's product that could expose customer financial data. Her director orders her to keep quiet until a release eight months away and not to log the defect. Applying the (ISC)² Code of Ethics, what should she do FIRST?",
+    "options": [
+      { "text": "Formally document the risk and escalate through internal risk/compliance channels", "correct": true, "rationale": "Canon I (protect society/public trust) and Canon II (act honorably and legally) outrank Canon III (duty to employer); the expected first step is legitimate internal escalation with the risk documented, not silent compliance." },
+      { "text": "Comply with the director's instruction because Canon III requires diligent service to her employer", "correct": false, "rationale": "Canon III is the third-priority canon; it yields to Canons I and II when public safety and honesty are at stake, so silent compliance is wrong." },
+      { "text": "Immediately email the vulnerability details to a technology news outlet", "correct": false, "rationale": "Going straight to the media before exhausting legitimate internal and lawful channels is a classic overcorrection and can itself violate Canon II and disclosure laws." },
+      { "text": "Resign that day without reporting the issue to anyone", "correct": false, "rationale": "Resigning without escalating leaves the public risk unaddressed and does not satisfy the higher-priority canons that require protective action." }
+    ]
+  },
+  {
+    "id": "d1-t1-a2",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Four canons order",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In the (ISC)² Code of Ethics, which canon has the HIGHEST priority when canons conflict?",
+    "options": [
+      { "text": "Protect society, the common good, necessary public trust and confidence, and the infrastructure", "correct": true, "rationale": "This is Canon I, the first-listed and highest-priority canon; conflicts are resolved in favor of it." },
+      { "text": "Act honorably, honestly, justly, responsibly, and legally", "correct": false, "rationale": "This is Canon II, second in priority behind protecting society." },
+      { "text": "Provide diligent and competent service to principals", "correct": false, "rationale": "This is Canon III, which yields to Canons I and II." },
+      { "text": "Advance and protect the profession", "correct": false, "rationale": "This is Canon IV, the lowest-priority canon." }
+    ]
+  },
+  {
+    "id": "d1-t1-a3",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Ethics vs law",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A consultant realizes that selling anonymized customer browsing data to advertisers is fully legal in his jurisdiction, but customers were led to believe their data would never be shared. Which statement BEST reflects the (ISC)² ethical view of this situation?",
+    "options": [
+      { "text": "Because the sale is legal, it is automatically ethical and no further consideration is needed", "correct": false, "rationale": "Legality and ethicality are distinct; the Code expects professionals to meet an ethical standard even where the law is silent or permissive." },
+      { "text": "An action can be legal yet still violate the ethical duty of honesty and the public trust the profession relies on", "correct": true, "rationale": "The Code recognizes ethics-versus-law as separate; misleading customers can breach Canon II (honesty) and Canon I (public trust) even when technically lawful." },
+      { "text": "Ethics only applies to actions that are also illegal, so this is out of scope", "correct": false, "rationale": "The Code applies to professional conduct broadly, not only to illegal acts, so this understates its reach." },
+      { "text": "The consultant should report the company to (ISC)² before raising any internal concern", "correct": false, "rationale": "Legitimate internal escalation generally comes first; jumping straight to (ISC)² reporting is premature for a company practice not yet raised internally." }
+    ]
+  },
+  {
+    "id": "d1-t1-a4",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon III conflict",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employer instructs a CISSP to configure logging so that certain executive actions are deliberately excluded, specifically to frustrate a future lawful audit. Following the employer's order would MOST directly conflict with which canon?",
+    "options": [
+      { "text": "Canon II – act honorably, honestly, justly, responsibly, and legally", "correct": true, "rationale": "Deliberately undermining a lawful audit is dishonest and potentially unlawful, directly conflicting with Canon II." },
+      { "text": "Canon IV – advance and protect the profession", "correct": false, "rationale": "While the profession's reputation is indirectly affected, the immediate and most direct conflict is with the duty to act honestly and legally under Canon II." },
+      { "text": "Canon III – provide diligent and competent service to principals", "correct": false, "rationale": "Following the order would satisfy the employer's wish, not conflict with Canon III; the conflict is with the higher honesty/legality duty." },
+      { "text": "None – obeying an employer instruction never creates an ethics conflict", "correct": false, "rationale": "Employer instructions can and do conflict with the Code, which is precisely why canon priority ordering exists." }
+    ]
+  },
+  {
+    "id": "d1-t1-a5",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Reporting obligation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A CISSP becomes aware that a colleague, also CISSP-certified, fabricated penetration test results that were delivered to a client. What is the BEST characterization of the CISSP's obligation regarding (ISC)²?",
+    "options": [
+      { "text": "Reporting a known, credible ethics violation to (ISC)² is an expected professional obligation, not optional", "correct": true, "rationale": "The Code treats reporting credible ethics violations by other certified professionals as an obligation supporting the integrity of the profession (Canon IV) and honesty (Canon II)." },
+      { "text": "There is no obligation to report because it involves a colleague's personal choice", "correct": false, "rationale": "Fabricating client deliverables is professional misconduct, not a private matter, and reporting is expected." },
+      { "text": "The CISSP must first obtain the colleague's written permission before reporting", "correct": false, "rationale": "No such permission requirement exists; reporting a credible violation does not depend on the offender's consent." },
+      { "text": "Reporting is prohibited unless a court has already convicted the colleague", "correct": false, "rationale": "Ethics reporting to (ISC)² is independent of and does not require a prior criminal conviction." }
+    ]
+  },
+  {
+    "id": "d1-t1-a6",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Code of ethics vs code of conduct",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employee uses the company email system for a personal side business, violating the firm's acceptable use policy but breaking no law and harming no client. This is MOST accurately described as a violation of what?",
+    "options": [
+      { "text": "The organization's code of conduct / acceptable use policy", "correct": true, "rationale": "Acceptable use policies are organizational codes of conduct enforced through HR discipline; misusing company email violates that policy specifically." },
+      { "text": "The (ISC)² Code of Ethics Canon I", "correct": false, "rationale": "Canon I concerns protecting society and public trust; a minor internal policy breach with no public harm does not rise to a Canon I violation." },
+      { "text": "A criminal statute carrying imprisonment", "correct": false, "rationale": "The scenario states no law was broken, so criminal liability does not apply." },
+      { "text": "Nothing – personal use of company email is never a policy matter", "correct": false, "rationale": "It clearly violates the stated acceptable use policy, so 'nothing' is incorrect." }
+    ]
+  },
+  {
+    "id": "d1-t1-a7",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Escalation not overcorrection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After internally escalating a serious public-safety vulnerability through risk and compliance channels, a CISSP is met with total inaction and continued concealment by leadership. The risk to the public remains severe. What is the BEST next step?",
+    "options": [
+      { "text": "Pursue further legitimate escalation, such as legal counsel or a lawful regulatory disclosure obligation", "correct": true, "rationale": "When legitimate internal channels are exhausted and serious public risk remains, escalating through lawful external avenues (legal, regulatory) honors Canon I while staying within Canon II." },
+      { "text": "Drop the matter entirely since internal escalation was already attempted", "correct": false, "rationale": "Abandoning a still-severe public-safety risk fails Canon I's duty to protect society." },
+      { "text": "Publicly dump full exploit code and customer data online to force action", "correct": false, "rationale": "Releasing customer data and weaponized exploits is unlawful and reckless, violating Canon II even though the intent is to protect the public." },
+      { "text": "Quietly sabotage the vulnerable system so it cannot be exploited", "correct": false, "rationale": "Unauthorized sabotage is itself illegal and dishonorable, breaching Canon II regardless of motive." }
+    ]
+  },
+  {
+    "id": "d1-t1-a8",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon IV profession",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which canon most directly addresses avoiding conduct that would bring the security profession into disrepute?",
+    "options": [
+      { "text": "Canon IV – advance and protect the profession", "correct": true, "rationale": "Canon IV explicitly concerns advancing and protecting the profession, including not discrediting it." },
+      { "text": "Canon I – protect society and the infrastructure", "correct": false, "rationale": "Canon I is about protecting the public and infrastructure, not specifically the profession's reputation." },
+      { "text": "Canon II – act honorably and legally", "correct": false, "rationale": "Canon II governs personal honesty and legality, distinct from protecting the profession's standing." },
+      { "text": "Canon III – diligent service to principals", "correct": false, "rationale": "Canon III concerns duty to employers/clients, not the profession's reputation." }
+    ]
+  },
+  {
+    "id": "d1-t1-a9",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Scope of the code",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A CISSP moonlights on weekends running an online forum where, unrelated to their profession, they post rude but lawful opinions about a sports team. A rival reports this to (ISC)² as an ethics violation. Which statement is MOST accurate?",
+    "options": [
+      { "text": "The Code focuses on professional conduct; unrelated lawful personal opinions generally fall outside its enforcement scope", "correct": true, "rationale": "The (ISC)² Code targets conduct in one's professional capacity; lawful, unrelated personal speech is generally not an enforceable ethics violation." },
+      { "text": "Any rude behavior anywhere automatically violates Canon II and warrants revocation", "correct": false, "rationale": "The Code does not police all personal behavior; lawful, unrelated opinions do not automatically breach Canon II." },
+      { "text": "The CISSP violated Canon III by not serving the sports team diligently", "correct": false, "rationale": "The sports team is not a principal/employer; Canon III is irrelevant to a personal hobby forum." },
+      { "text": "Posting any opinion online is prohibited for CISSPs under Canon IV", "correct": false, "rationale": "There is no such blanket prohibition; Canon IV concerns not discrediting the profession, not silencing all personal expression." }
+    ]
+  },
+  {
+    "id": "d1-t1-a10",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon conflict resolution",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A government client lawfully directs a CISSP to implement a surveillance feature the CISSP believes could endanger the safety and trust of the general public. The directive is legal. What is the PRIMARY ethical tension the CISSP must resolve?",
+    "options": [
+      { "text": "Canon I duty to protect society/public trust weighed against Canon III duty to the client", "correct": true, "rationale": "The core tension is protecting the public (Canon I, highest priority) versus serving the client (Canon III); Canon I governs when they truly conflict." },
+      { "text": "Canon IV versus Canon II, since only the profession's reputation is at stake", "correct": false, "rationale": "The scenario centers on public safety versus client duty, not primarily the profession's reputation or personal honesty." },
+      { "text": "There is no tension because a legal directive always overrides ethics", "correct": false, "rationale": "Legality does not eliminate ethical duties; an action can be legal yet ethically fraught, which is why canon ordering exists." },
+      { "text": "Canon III always wins because the client pays for the work", "correct": false, "rationale": "Payment does not elevate Canon III above Canon I; protecting society outranks client duty in a genuine conflict." }
+    ]
+  },
+  {
+    "id": "d1-t1-b1",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon priority ordering",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A CISSP contractor is told by the client's project manager to omit a known safety-critical defect from the final report so the launch stays on schedule. The defect could physically harm end users. What is the BEST response?",
+    "options": [
+      { "text": "Include the defect in the report and escalate the safety risk through appropriate channels", "correct": true, "rationale": "Public safety (Canon I) and honesty (Canon II) outrank the client's scheduling preference (Canon III); the defect must be reported and escalated." },
+      { "text": "Omit the defect as instructed to preserve the client relationship", "correct": false, "rationale": "Concealing a safety-critical defect violates Canons I and II, which take precedence over client accommodation." },
+      { "text": "Include the defect but water down its severity to appease the project manager", "correct": false, "rationale": "Deliberately understating a known safety risk is dishonest and breaches Canon II." },
+      { "text": "Walk off the project immediately without informing anyone of the defect", "correct": false, "rationale": "Leaving without communicating the safety risk fails the duty to protect the public under Canon I." }
+    ]
+  },
+  {
+    "id": "d1-t1-b2",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Four canons order",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which of the following correctly lists the (ISC)² canons from highest to lowest priority?",
+    "options": [
+      { "text": "Protect society → Act honorably/legally → Serve principals → Advance the profession", "correct": true, "rationale": "This matches the mandatory canon order: Canon I, II, III, IV." },
+      { "text": "Serve principals → Protect society → Advance the profession → Act honorably", "correct": false, "rationale": "Duty to principals is Canon III, not first; protecting society (Canon I) leads." },
+      { "text": "Advance the profession → Act honorably → Protect society → Serve principals", "correct": false, "rationale": "Advancing the profession is the lowest priority (Canon IV), not the highest." },
+      { "text": "Act honorably → Serve principals → Protect society → Advance the profession", "correct": false, "rationale": "Protecting society (Canon I) must come first; this ordering is scrambled." }
+    ]
+  },
+  {
+    "id": "d1-t1-b3",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Ethics vs law",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In a jurisdiction with no breach-notification law, a company suffers a breach exposing customer passwords and chooses not to tell affected customers because it is not legally required. From the (ISC)² perspective, this decision is MOST accurately described as which of the following?",
+    "options": [
+      { "text": "Potentially legal but ethically questionable, since customers face real harm they cannot mitigate", "correct": true, "rationale": "The Code separates law from ethics; withholding notice that leaves customers exposed can breach the honesty and public-trust duties even where no statute compels disclosure." },
+      { "text": "Fully ethical because absence of a law means there is no duty at all", "correct": false, "rationale": "The Code imposes ethical duties independent of statute; 'no law' does not equal 'no ethical duty.'" },
+      { "text": "A Canon IV violation only, with no bearing on customers", "correct": false, "rationale": "The primary concern is honesty and public trust toward affected customers (Canons I/II), not merely the profession's image." },
+      { "text": "Irrelevant to CISSP ethics because notification is purely a marketing choice", "correct": false, "rationale": "Protecting people harmed by a breach is squarely an ethics matter, not marketing." }
+    ]
+  },
+  {
+    "id": "d1-t1-b4",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon II legality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During an engagement, a CISSP is asked to access a competitor's systems without authorization to gather intelligence for their employer. Complying would MOST directly violate which canon?",
+    "options": [
+      { "text": "Canon II – act honorably, honestly, justly, responsibly, and legally", "correct": true, "rationale": "Unauthorized access is illegal and dishonorable, a direct Canon II violation regardless of the employer's request." },
+      { "text": "Canon III – provide diligent service to principals", "correct": false, "rationale": "Complying would serve the employer's wish, not conflict with Canon III; the conflict is with the legality/honesty duty of Canon II." },
+      { "text": "Canon I only, because society is not really affected", "correct": false, "rationale": "While infrastructure trust is a concern, the most direct violation is the illegal, dishonorable act itself under Canon II." },
+      { "text": "No canon, because gathering competitive intelligence is always acceptable", "correct": false, "rationale": "Unauthorized system access is unlawful; competitive intelligence must be gathered by legal means." }
+    ]
+  },
+  {
+    "id": "d1-t1-b5",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Reporting obligation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISSP suspects, but is not certain, that a certified peer misrepresented their credentials to win a contract. What should the CISSP do FIRST before considering an (ISC)² ethics complaint?",
+    "options": [
+      { "text": "Gather and verify credible facts to substantiate the concern rather than acting on suspicion alone", "correct": true, "rationale": "Ethics reporting should rest on credible, substantiated information; establishing the facts first is the responsible initial step consistent with Canon II's fairness duty." },
+      { "text": "Immediately file a formal (ISC)² complaint based purely on the suspicion", "correct": false, "rationale": "Filing on unverified suspicion is premature and could itself be unjust; credible substantiation should come first." },
+      { "text": "Publicly accuse the peer on social media to warn the industry", "correct": false, "rationale": "Public accusation without verified facts is dishonorable and potentially defamatory, breaching Canon II." },
+      { "text": "Do nothing, since ethics reporting is never appropriate between peers", "correct": false, "rationale": "Reporting credible violations is an expected obligation; 'never appropriate' is incorrect." }
+    ]
+  },
+  {
+    "id": "d1-t1-b6",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Code of ethics vs code of conduct",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization asks its security team to sign an internal 'code of conduct' covering dress, punctuality, and email etiquette. How does this BEST relate to the (ISC)² Code of Ethics?",
+    "options": [
+      { "text": "It is a separate organizational document enforced by HR, distinct from the certification-level (ISC)² Code of Ethics", "correct": true, "rationale": "An organizational code of conduct is employer policy enforced through HR discipline, distinct in source and enforcement from the (ISC)² Code of Ethics." },
+      { "text": "It replaces the (ISC)² Code of Ethics for certified staff", "correct": false, "rationale": "An employer document cannot supersede the certification body's Code of Ethics, which continues to bind certified professionals." },
+      { "text": "It is legally equivalent to a government regulation with criminal penalties", "correct": false, "rationale": "An internal conduct policy carries HR consequences, not criminal penalties, and is not a government regulation." },
+      { "text": "It is identical to the (ISC)² Code and enforced by (ISC)²", "correct": false, "rationale": "The two are different documents with different enforcers; (ISC)² does not enforce an employer's internal etiquette policy." }
+    ]
+  },
+  {
+    "id": "d1-t1-b7",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Escalation not overcorrection",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A CISSP wants to responsibly handle a serious internal ethical concern about concealed customer risk. Which of the following actions is LEAST consistent with the (ISC)² Code of Ethics?",
+    "options": [
+      { "text": "Anonymously leaking confidential customer records to the press to force a response", "correct": true, "rationale": "Leaking confidential customer data is illegal and dishonorable, breaching Canon II; it is the least consistent option even if intended to expose wrongdoing." },
+      { "text": "Documenting the concern in writing and raising it through internal risk channels", "correct": false, "rationale": "Formal internal escalation is exactly what the Code expects, so it is consistent, not the least consistent." },
+      { "text": "Consulting legal counsel about lawful disclosure obligations", "correct": false, "rationale": "Seeking lawful guidance is a legitimate, consistent step under the Code." },
+      { "text": "Escalating to a regulator if a lawful disclosure duty applies and internal channels fail", "correct": false, "rationale": "Lawful regulatory escalation after exhausting internal channels is a consistent way to honor Canon I." }
+    ]
+  },
+  {
+    "id": "d1-t1-b8",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Preamble purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the primary role of the Preamble in the (ISC)² Code of Ethics?",
+    "options": [
+      { "text": "It frames the underlying rationale and high ethical standards that the four canons then express", "correct": true, "rationale": "The Preamble states the 'why' — safety of the commonwealth and duty to principals and each other require high ethical standards — setting up the canons." },
+      { "text": "It lists the specific technical controls a CISSP must implement", "correct": false, "rationale": "The Preamble is a statement of principle, not a catalog of technical controls." },
+      { "text": "It defines the criminal penalties for ethics violations", "correct": false, "rationale": "The Code's enforcement is certification revocation by (ISC)², not criminal penalties defined in a preamble." },
+      { "text": "It replaces the need for any organizational code of conduct", "correct": false, "rationale": "The Preamble does not eliminate organizational conduct policies, which remain separate." }
+    ]
+  },
+  {
+    "id": "d1-t1-b9",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Canon conflict resolution",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A CISSP faces a genuine conflict: honoring a signed confidentiality obligation to their employer (Canon III) would require staying silent about a defect that endangers the general public (Canon I). Which principle MOST correctly guides the resolution?",
+    "options": [
+      { "text": "Resolve the conflict by applying canon priority order — Canon I outranks Canon III", "correct": true, "rationale": "When canons genuinely conflict, they are applied in priority order, so protecting the public (Canon I) prevails over the confidentiality duty (Canon III)." },
+      { "text": "Whichever obligation was agreed to in writing automatically wins", "correct": false, "rationale": "A written contract does not override the canon priority ordering when public safety is at stake." },
+      { "text": "The most recent obligation in time always takes precedence", "correct": false, "rationale": "Recency is not the tiebreaker; canon priority order is." },
+      { "text": "The CISSP should flip a coin since both duties are equal", "correct": false, "rationale": "The canons are explicitly not equal; they are ranked, so there is a principled resolution." }
+    ]
+  },
+  {
+    "id": "d1-t1-b10",
+    "domainId": "d1",
+    "topicId": "d1-t1",
+    "subtopicTag": "Ten Commandments of Computer Ethics",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The 'Ten Commandments of Computer Ethics,' referenced as background knowledge for CISSP, were published by which body?",
+    "options": [
+      { "text": "The Computer Ethics Institute", "correct": true, "rationale": "The Ten Commandments of Computer Ethics were published by the Computer Ethics Institute and are cited as supplementary ethics guidance." },
+      { "text": "The (ISC)² board of directors", "correct": false, "rationale": "(ISC)² publishes its own Code of Ethics (four canons), not the Ten Commandments of Computer Ethics." },
+      { "text": "The International Organization for Standardization (ISO)", "correct": false, "rationale": "ISO publishes standards like ISO 27001, not the Ten Commandments of Computer Ethics." },
+      { "text": "The U.S. Federal Trade Commission", "correct": false, "rationale": "The FTC is a regulator and did not author the Ten Commandments of Computer Ethics." }
+    ]
+  }
+]

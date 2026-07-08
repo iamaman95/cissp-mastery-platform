@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d8-t5-a1",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "SQL Injection Fix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A search feature builds SQL queries by concatenating user input, exposing it to SQL injection. What is the BEST fix?",
+    "options": [
+      { "text": "Use parameterized queries/prepared statements plus input validation", "correct": true, "rationale": "Parameterized queries separate code from data so input cannot alter the query structure, and input validation adds defense in depth — the standard SQL injection fix." },
+      { "text": "Concatenate the input more carefully with quotes", "correct": false, "rationale": "String concatenation, even with quoting, remains vulnerable; parameterization is required." },
+      { "text": "Hide the search box from most users", "correct": false, "rationale": "Hiding the UI does not remove the injectable endpoint." },
+      { "text": "Increase the database server's memory", "correct": false, "rationale": "Hardware resources do not prevent injection." }
+    ]
+  },
+  {
+    "id": "d8-t5-a2",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "XSS Fix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A comment field displays user-supplied text back on the page, allowing scripts to execute in other users' browsers (XSS). Which control is the BEST primary defense?",
+    "options": [
+      { "text": "Output encoding/escaping of user content (with input validation)", "correct": true, "rationale": "Encoding output so data cannot be interpreted as executable script is the primary defense against cross-site scripting." },
+      { "text": "Making the comment font larger", "correct": false, "rationale": "Font size has no security effect on XSS." },
+      { "text": "Storing comments in a faster database", "correct": false, "rationale": "Storage speed does not prevent script execution in browsers." },
+      { "text": "Disabling the site's logging", "correct": false, "rationale": "Disabling logging reduces detection and does nothing to prevent XSS." }
+    ]
+  },
+  {
+    "id": "d8-t5-a3",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Server-Side Access Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An app 'protects' an admin action by hiding the button in the UI, but the endpoint performs no authorization check. Why is this MOST inadequate?",
+    "options": [
+      { "text": "Client-side controls are bypassable; authorization must be enforced server-side", "correct": true, "rationale": "Attackers can call the endpoint directly regardless of the UI, so access control must be enforced on the server — this is broken access control otherwise." },
+      { "text": "Because the button color is wrong", "correct": false, "rationale": "Button appearance is irrelevant to the access-control flaw." },
+      { "text": "Because hiding buttons is fully sufficient security", "correct": false, "rationale": "Hiding UI elements does not stop direct requests; it is not sufficient." },
+      { "text": "Because the server is too fast", "correct": false, "rationale": "Server speed is unrelated to the missing authorization check." }
+    ]
+  },
+  {
+    "id": "d8-t5-a4",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Input Validation Allowlist",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "For validating user input, which approach is generally BEST?",
+    "options": [
+      { "text": "Allowlist validation — accept only known-good input matching the expected format", "correct": true, "rationale": "Allowlisting is more robust than blocklisting because it accepts only explicitly valid input, closing gaps attackers exploit in blocklists." },
+      { "text": "Blocklist a few known-bad characters and accept everything else", "correct": false, "rationale": "Blocklists routinely miss novel malicious inputs; allowlisting is preferred." },
+      { "text": "Accept all input without any validation", "correct": false, "rationale": "Trusting all input is the root cause of injection vulnerabilities." },
+      { "text": "Validate input only on the client side", "correct": false, "rationale": "Client-side validation is bypassable; server-side validation is required." }
+    ]
+  },
+  {
+    "id": "d8-t5-a5",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Do Not Roll Own Crypto",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A developer implements a custom homemade encryption routine for sensitive data. What is the MOST appropriate guidance?",
+    "options": [
+      { "text": "Replace it with a vetted, standard cryptographic library/algorithm", "correct": true, "rationale": "Custom cryptography is error-prone and likely weak; standardized, peer-reviewed algorithms should be used instead." },
+      { "text": "Keep the custom routine because obscurity makes it strong", "correct": false, "rationale": "Security through obscurity is not reliable; the custom routine likely has flaws." },
+      { "text": "Publish the custom algorithm to prove it is secure", "correct": false, "rationale": "Publishing a homemade cipher does not make it secure; vetted standards are preferred." },
+      { "text": "Encrypt twice with the same weak routine", "correct": false, "rationale": "Repeating a weak custom routine does not make it secure." }
+    ]
+  },
+  {
+    "id": "d8-t5-a6",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "OWASP Top 10 Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The OWASP Top 10 is best described as which of the following?",
+    "options": [
+      { "text": "A widely used list of the most critical web-application security risks", "correct": true, "rationale": "The OWASP Top 10 catalogs the most critical web-app risks and is a common secure-coding reference." },
+      { "text": "A list of the ten fastest programming languages", "correct": false, "rationale": "OWASP Top 10 is about security risks, not language speed." },
+      { "text": "A hardware benchmarking standard", "correct": false, "rationale": "It is a software-security list, not a hardware benchmark." },
+      { "text": "A backup rotation schedule", "correct": false, "rationale": "It has nothing to do with backups." }
+    ]
+  },
+  {
+    "id": "d8-t5-a7",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Fail Securely",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When an authorization check encounters an unexpected error, how should secure code MOST appropriately behave?",
+    "options": [
+      { "text": "Fail securely — deny access by default on error", "correct": true, "rationale": "Failing securely (deny by default) ensures errors do not accidentally grant access, a core secure-design principle." },
+      { "text": "Fail open — grant access so users are not inconvenienced", "correct": false, "rationale": "Failing open on an authorization error can grant unauthorized access, a serious flaw." },
+      { "text": "Crash the whole server to be safe", "correct": false, "rationale": "Crashing harms availability and is not the intended fail-secure behavior." },
+      { "text": "Log the user in as administrator", "correct": false, "rationale": "Escalating to admin on error is dangerous and wrong." }
+    ]
+  },
+  {
+    "id": "d8-t5-a8",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Least Privilege in Code",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An application connects to its database using an account with full administrative rights. What is the BEST secure-coding improvement?",
+    "options": [
+      { "text": "Use a least-privilege database account limited to the operations the app needs", "correct": true, "rationale": "A least-privilege service account limits damage if the app or its credentials are compromised." },
+      { "text": "Give the app account even more privileges for flexibility", "correct": false, "rationale": "Excess privileges increase the blast radius of a compromise." },
+      { "text": "Share the admin account across all applications", "correct": false, "rationale": "Shared admin accounts destroy accountability and over-grant access." },
+      { "text": "Hard-code the admin password in the source", "correct": false, "rationale": "Hard-coded credentials are easily extracted and should be avoided." }
+    ]
+  },
+  {
+    "id": "d8-t5-a9",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Command Injection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An app passes unsanitized user input directly into an operating-system shell command. This is MOST accurately which vulnerability class?",
+    "options": [
+      { "text": "Command injection (a form of injection)", "correct": true, "rationale": "Passing untrusted input into a shell command lets attackers execute arbitrary commands — command injection, an injection-class flaw." },
+      { "text": "Cross-site scripting", "correct": false, "rationale": "XSS involves injecting scripts into web pages, not OS shell commands." },
+      { "text": "A backup misconfiguration", "correct": false, "rationale": "This concerns unsafe command execution, not backups." },
+      { "text": "A physical security flaw", "correct": false, "rationale": "Command injection is a software flaw, not physical." }
+    ]
+  },
+  {
+    "id": "d8-t5-a10",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Secure Defaults",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To reduce risk from misconfiguration, how should an application's default settings BEST be configured?",
+    "options": [
+      { "text": "Secure by default — restrictive settings, features off unless explicitly needed", "correct": true, "rationale": "Secure defaults minimize exposure so that safe behavior does not depend on someone remembering to lock things down." },
+      { "text": "Everything enabled and open by default", "correct": false, "rationale": "Open defaults maximize attack surface and rely on manual hardening that is often skipped." },
+      { "text": "Debug mode on in production by default", "correct": false, "rationale": "Debug mode in production leaks sensitive information and should be off." },
+      { "text": "Default admin credentials left unchanged", "correct": false, "rationale": "Default credentials are a classic weakness and must be changed." }
+    ]
+  },
+  {
+    "id": "d8-t5-b1",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Injection Root Cause",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "What is the MOST fundamental root cause of injection vulnerabilities?",
+    "options": [
+      { "text": "Untrusted input being interpreted as code/commands rather than treated as data", "correct": true, "rationale": "Injection occurs when input crosses into the code/command context; keeping data separate from code (e.g., parameterization) prevents it." },
+      { "text": "Using too much memory", "correct": false, "rationale": "Memory usage is unrelated to injection root cause." },
+      { "text": "Slow network connections", "correct": false, "rationale": "Network speed does not cause injection." },
+      { "text": "Bright user-interface colors", "correct": false, "rationale": "UI colors have no relationship to injection." }
+    ]
+  },
+  {
+    "id": "d8-t5-b2",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Broken Access Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A user changes an 'id' parameter in a URL and views another user's private record. This flaw is MOST accurately which OWASP category?",
+    "options": [
+      { "text": "Broken access control (insecure direct object reference)", "correct": true, "rationale": "Accessing another user's data by manipulating a reference without authorization checks is broken access control." },
+      { "text": "Cryptographic failure", "correct": false, "rationale": "The issue is missing authorization, not weak encryption." },
+      { "text": "A backup failure", "correct": false, "rationale": "This is an access-control flaw, not a backup problem." },
+      { "text": "A denial-of-service attack", "correct": false, "rationale": "No availability disruption is described; it is unauthorized data access." }
+    ]
+  },
+  {
+    "id": "d8-t5-b3",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Parameterized Query Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Parameterized queries (prepared statements) primarily defend against which vulnerability?",
+    "options": [
+      { "text": "SQL injection", "correct": true, "rationale": "Prepared statements separate query structure from data, preventing SQL injection." },
+      { "text": "Physical theft of servers", "correct": false, "rationale": "Parameterized queries are a code defense, unrelated to physical theft." },
+      { "text": "Power outages", "correct": false, "rationale": "They have no bearing on power availability." },
+      { "text": "Wi-Fi eavesdropping", "correct": false, "rationale": "They protect against injection, not wireless interception." }
+    ]
+  },
+  {
+    "id": "d8-t5-b4",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Cryptographic Failures",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An app transmits passwords over plain HTTP and stores them unhashed. This MOST directly represents which OWASP category?",
+    "options": [
+      { "text": "Cryptographic failures (sensitive data inadequately protected)", "correct": true, "rationale": "Failing to encrypt data in transit and to hash stored passwords is a cryptographic-failures issue." },
+      { "text": "A logging failure", "correct": false, "rationale": "The problem is missing encryption/hashing, not logging." },
+      { "text": "A fire-suppression failure", "correct": false, "rationale": "This is a software cryptography issue, not physical." },
+      { "text": "A UI design flaw", "correct": false, "rationale": "The flaw is inadequate protection of sensitive data, not UI design." }
+    ]
+  },
+  {
+    "id": "d8-t5-b5",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "XSS Category",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Cross-site scripting (XSS) is MOST accurately categorized as which broader class of vulnerability?",
+    "options": [
+      { "text": "Injection", "correct": true, "rationale": "XSS is an injection flaw where untrusted input is injected as script into web pages viewed by others." },
+      { "text": "Physical security", "correct": false, "rationale": "XSS is a software injection issue, not physical." },
+      { "text": "Backup mismanagement", "correct": false, "rationale": "XSS is unrelated to backups." },
+      { "text": "Power management", "correct": false, "rationale": "XSS has nothing to do with power." }
+    ]
+  },
+  {
+    "id": "d8-t5-b6",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Hard-Coded Secrets",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A secure-coding review finds credentials embedded directly in the source. What is the BEST remediation?",
+    "options": [
+      { "text": "Remove the secrets from source and load them from a secrets vault at runtime", "correct": true, "rationale": "Secrets should be stored in a vault and injected at runtime, never hard-coded where anyone with code access can read them." },
+      { "text": "Leave them in the code but add a comment saying 'secret'", "correct": false, "rationale": "A comment does not protect the exposed credential." },
+      { "text": "Encode the secret in Base64 in the source", "correct": false, "rationale": "Base64 is trivially reversible and provides no protection." },
+      { "text": "Publish the secret in the documentation", "correct": false, "rationale": "Publishing the secret worsens the exposure." }
+    ]
+  },
+  {
+    "id": "d8-t5-b7",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Vulnerable Components",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An application uses an outdated library with known critical vulnerabilities. Which secure-coding practice BEST addresses this OWASP category?",
+    "options": [
+      { "text": "Keep dependencies patched and monitor them with SCA/SBOM", "correct": true, "rationale": "Tracking and updating components via SCA/SBOM addresses the 'vulnerable and outdated components' risk." },
+      { "text": "Ignore the library since it still runs", "correct": false, "rationale": "Running does not mean secure; known-vulnerable components must be updated." },
+      { "text": "Remove all logging around the library", "correct": false, "rationale": "Reducing logging hides problems and does not patch the component." },
+      { "text": "Assume the library is safe because it is popular", "correct": false, "rationale": "Popularity does not eliminate known vulnerabilities." }
+    ]
+  },
+  {
+    "id": "d8-t5-b8",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Complete Mediation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An app checks a user's authorization only at login and then trusts them for the whole session, even as they access new resources. Which secure-design principle is MOST violated?",
+    "options": [
+      { "text": "Complete mediation — every access should be authorized, not just the first", "correct": true, "rationale": "Complete mediation requires checking authorization on each access; trusting a single initial check enables privilege abuse." },
+      { "text": "Fail-open design is being followed correctly", "correct": false, "rationale": "This is a violation, not correct design; and fail-open is itself undesirable." },
+      { "text": "Least privilege is being maximized", "correct": false, "rationale": "The scenario is about repeated authorization checks, not privilege minimization, and it represents a violation." },
+      { "text": "Defense in depth is fully applied", "correct": false, "rationale": "Relying on one check is the opposite of layered mediation." }
+    ]
+  },
+  {
+    "id": "d8-t5-b9",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Logging and Monitoring",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An application records no security-relevant events, so intrusions go unnoticed. This MOST directly maps to which OWASP category?",
+    "options": [
+      { "text": "Security logging and monitoring failures", "correct": true, "rationale": "Lack of security logging/monitoring prevents timely detection and response, a distinct OWASP risk category." },
+      { "text": "SQL injection", "correct": false, "rationale": "The issue is missing logging, not query injection." },
+      { "text": "Cryptographic failure", "correct": false, "rationale": "The issue is detection capability, not encryption." },
+      { "text": "A physical fire hazard", "correct": false, "rationale": "This is a software logging issue, not physical safety." }
+    ]
+  },
+  {
+    "id": "d8-t5-b10",
+    "domainId": "d8",
+    "topicId": "d8-t5",
+    "subtopicTag": "Secure Coding Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which practice is LEAST relevant to secure coding?",
+    "options": [
+      { "text": "Choosing a visually pleasing variable-naming color in the editor", "correct": true, "rationale": "Editor color themes for variable names have no bearing on code security, making it least relevant." },
+      { "text": "Validating and sanitizing all input", "correct": false, "rationale": "Input validation is fundamental to secure coding." },
+      { "text": "Using parameterized queries", "correct": false, "rationale": "Parameterized queries prevent SQL injection, a core practice." },
+      { "text": "Enforcing authorization server-side", "correct": false, "rationale": "Server-side authorization is essential to prevent broken access control." }
+    ]
+  }
+]

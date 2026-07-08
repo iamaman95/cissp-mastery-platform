@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t12-a1",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Assessment Before Access",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company is about to integrate a new SaaS vendor that will access customer data. What should be done FIRST?",
+    "options": [
+      { "text": "Perform a vendor security assessment/due diligence before granting access", "correct": true, "rationale": "Assessing the vendor's security posture before granting access is the foundational SCRM step to avoid onboarding unacceptable risk." },
+      { "text": "Grant full API access immediately to speed the launch", "correct": false, "rationale": "Granting access before assessment is exactly the failure that leads to supply-chain breaches." },
+      { "text": "Announce the partnership publicly", "correct": false, "rationale": "Public announcements do nothing to manage the vendor's security risk and are not the first step." },
+      { "text": "Wait until an incident occurs to evaluate the vendor", "correct": false, "rationale": "Waiting for an incident is reactive and negligent; assessment must precede access." }
+    ]
+  },
+  {
+    "id": "d1-t12-a2",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Accountability of Outsourcing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An executive argues that outsourcing payroll to a third party means the company is no longer responsible for the security of that data. Which correction is MOST accurate?",
+    "options": [
+      { "text": "The company retains accountability for the data's protection even though the processing is outsourced", "correct": true, "rationale": "Outsourcing transfers the work but not the accountability; the organization remains responsible for the risk and often legally liable." },
+      { "text": "Responsibility fully transfers to the vendor once a contract is signed", "correct": false, "rationale": "A contract allocates duties but does not absolve the customer of accountability for its data." },
+      { "text": "No one is responsible once data leaves the company", "correct": false, "rationale": "Responsibility does not vanish; both parties have obligations and the customer remains accountable." },
+      { "text": "The data subjects become responsible for the vendor's security", "correct": false, "rationale": "Data subjects are the protected parties, never responsible for the processor's security." }
+    ]
+  },
+  {
+    "id": "d1-t12-a3",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Right-to-Audit",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company wants the contractual ability to verify a critical vendor's security controls firsthand. Which clause BEST provides this?",
+    "options": [
+      { "text": "A right-to-audit clause", "correct": true, "rationale": "A right-to-audit clause grants the customer contractual authority to examine the vendor's security controls." },
+      { "text": "A force majeure clause", "correct": false, "rationale": "Force majeure excuses performance during extraordinary events; it does not grant audit rights." },
+      { "text": "A non-compete clause", "correct": false, "rationale": "A non-compete restricts competitive activity, unrelated to auditing security." },
+      { "text": "An arbitration clause", "correct": false, "rationale": "Arbitration governs dispute resolution, not the ability to audit controls." }
+    ]
+  },
+  {
+    "id": "d1-t12-a4",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "SOC 2 Assurance",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A vendor cannot allow every customer to audit them directly but wants to provide independent assurance about its security controls. Which artifact MOST appropriately serves this need?",
+    "options": [
+      { "text": "A SOC 2 Type II report from an independent auditor", "correct": true, "rationale": "A SOC 2 Type II report provides independent, standardized assurance about the operating effectiveness of a service organization's controls over time." },
+      { "text": "The vendor's marketing brochure", "correct": false, "rationale": "Marketing material is self-produced and not independent assurance." },
+      { "text": "A screenshot of the vendor's antivirus", "correct": false, "rationale": "A single screenshot is not a comprehensive, independent attestation of controls." },
+      { "text": "The vendor's stock price chart", "correct": false, "rationale": "Financial performance is not evidence of security control effectiveness." }
+    ]
+  },
+  {
+    "id": "d1-t12-a5",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Nth-Party Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Your vetted vendor quietly subcontracts part of its service to another firm you never assessed. This exposure is MOST accurately described as what?",
+    "options": [
+      { "text": "Fourth-party / nth-party risk", "correct": true, "rationale": "Risk from your vendor's own subcontractors that you did not directly vet is fourth-/nth-party risk." },
+      { "text": "Insider threat", "correct": false, "rationale": "Insider threat involves your own personnel, not an unvetted downstream subcontractor." },
+      { "text": "Zero-day vulnerability", "correct": false, "rationale": "A zero-day is an unknown software flaw, unrelated to subcontractor visibility." },
+      { "text": "Denial of service", "correct": false, "rationale": "DoS is an availability attack, not a description of subcontractor risk." }
+    ]
+  },
+  {
+    "id": "d1-t12-a6",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "SBOM Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A Software Bill of Materials (SBOM) primarily helps an organization do which of the following?",
+    "options": [
+      { "text": "Identify the components/dependencies in software to assess vulnerabilities", "correct": true, "rationale": "An SBOM inventories software components so organizations can quickly determine exposure when a component vulnerability is disclosed." },
+      { "text": "Encrypt data at rest automatically", "correct": false, "rationale": "An SBOM is an inventory artifact; it does not perform encryption." },
+      { "text": "Serve as a firewall ruleset", "correct": false, "rationale": "An SBOM is unrelated to firewall configuration." },
+      { "text": "Replace the need for patching", "correct": false, "rationale": "An SBOM informs patching by revealing components; it does not replace patching." }
+    ]
+  },
+  {
+    "id": "d1-t12-a7",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Counterfeit Hardware",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To reduce the risk of counterfeit or tampered hardware entering its data center, which practice is BEST?",
+    "options": [
+      { "text": "Procure from authorized/trusted suppliers and validate integrity of received hardware", "correct": true, "rationale": "Sourcing from authorized suppliers and verifying hardware integrity on receipt reduces the chance of counterfeit or tampered components entering the supply chain." },
+      { "text": "Buy the cheapest hardware from unknown gray-market sellers", "correct": false, "rationale": "Gray-market/unknown sources dramatically increase counterfeit and tampering risk." },
+      { "text": "Skip receiving inspection to save time", "correct": false, "rationale": "Skipping inspection removes a key opportunity to detect tampered or counterfeit units." },
+      { "text": "Assume all hardware is genuine by default", "correct": false, "rationale": "Assuming authenticity without verification is exactly how counterfeit hardware slips in." }
+    ]
+  },
+  {
+    "id": "d1-t12-a8",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Contractual Security Requirements",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before a vendor begins handling regulated data, what should be established FIRST regarding security expectations?",
+    "options": [
+      { "text": "Documented contractual security requirements, including breach notification and data-handling obligations", "correct": true, "rationale": "Security expectations must be codified in the contract before engagement so obligations (e.g., breach notice, handling standards) are enforceable." },
+      { "text": "A verbal handshake agreement", "correct": false, "rationale": "Verbal agreements are unenforceable and leave critical obligations undefined." },
+      { "text": "Nothing; assume the vendor follows best practices", "correct": false, "rationale": "Assuming best practices without contractual requirements leaves the organization unprotected." },
+      { "text": "A social media endorsement of the vendor", "correct": false, "rationale": "Endorsements are irrelevant to establishing binding security requirements." }
+    ]
+  },
+  {
+    "id": "d1-t12-a9",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Vendor Offboarding",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A contract with a data-processing vendor is ending. What is the BEST practice regarding the data they hold?",
+    "options": [
+      { "text": "Ensure the data is returned or securely destroyed and obtain confirmation, per contract", "correct": true, "rationale": "Secure return/destruction of data with documented confirmation closes the offboarding risk that data lingers in the vendor's environment." },
+      { "text": "Let the vendor keep the data indefinitely for convenience", "correct": false, "rationale": "Leaving data with a former vendor is an ongoing, unmanaged exposure." },
+      { "text": "Assume deletion happened with no verification", "correct": false, "rationale": "Unverified assumptions of deletion leave the organization exposed and possibly non-compliant." },
+      { "text": "Publicly post the vendor's remaining access credentials", "correct": false, "rationale": "Publishing credentials is grossly insecure and unrelated to proper offboarding." }
+    ]
+  },
+  {
+    "id": "d1-t12-a10",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Software Supply Chain Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Attackers compromise a widely used software vendor and insert malicious code into a routine update that customers automatically install. This is MOST accurately an example of what?",
+    "options": [
+      { "text": "A software supply chain attack", "correct": true, "rationale": "Injecting malicious code upstream so it is distributed via trusted updates is a classic software supply chain attack." },
+      { "text": "A brute-force password attack", "correct": false, "rationale": "No credential guessing is described; the compromise rides a trusted update." },
+      { "text": "A physical theft of hardware", "correct": false, "rationale": "The attack is via software update distribution, not physical theft." },
+      { "text": "A social engineering phone scam", "correct": false, "rationale": "The vector is a compromised software update, not a phone-based con." }
+    ]
+  },
+  {
+    "id": "d1-t12-b1",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "SLA vs Security",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A vendor's SLA guarantees 99.9% uptime but says nothing about data protection. A manager assumes this SLA also assures security. Which statement is MOST accurate?",
+    "options": [
+      { "text": "An SLA defines service metrics like uptime; it does not assure security unless security terms are explicitly included", "correct": true, "rationale": "SLAs cover measurable service commitments; security assurance requires explicit security-relevant contractual terms, not just an uptime SLA." },
+      { "text": "An uptime SLA automatically guarantees strong security", "correct": false, "rationale": "Uptime and security are distinct; a high-availability SLA says nothing about data protection." },
+      { "text": "SLAs make security assessments unnecessary", "correct": false, "rationale": "An SLA does not replace independent security assessment of the vendor." },
+      { "text": "Security is never part of any vendor contract", "correct": false, "rationale": "Security terms can and should be included in vendor contracts." }
+    ]
+  },
+  {
+    "id": "d1-t12-b2",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Flow-Down Requirements",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A prime contractor must ensure its subcontractors meet the same security standards it agreed to with the customer. What is the BEST mechanism?",
+    "options": [
+      { "text": "Flow-down clauses requiring subcontractors to meet the same minimum security requirements", "correct": true, "rationale": "Flow-down (pass-through) contractual clauses propagate the required security obligations to subcontractors, managing nth-party risk." },
+      { "text": "Hoping subcontractors happen to be secure", "correct": false, "rationale": "Hope is not a control; requirements must be contractually enforced downstream." },
+      { "text": "Ignoring subcontractors since they are not the prime", "correct": false, "rationale": "Subcontractors are still part of the supply chain and their risk flows up to the customer." },
+      { "text": "Publicly listing all subcontractors' passwords", "correct": false, "rationale": "Exposing credentials is insecure and unrelated to enforcing standards." }
+    ]
+  },
+  {
+    "id": "d1-t12-b3",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Continuous Vendor Monitoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A vendor was assessed as secure two years ago and never reviewed since. What is the BEST corrective practice?",
+    "options": [
+      { "text": "Establish ongoing monitoring and periodic reassessment of the vendor", "correct": true, "rationale": "Vendor risk changes over time; continuous monitoring and periodic reassessment keep assurance current." },
+      { "text": "Treat the two-year-old assessment as valid forever", "correct": false, "rationale": "A stale assessment does not reflect the vendor's current posture or new risks." },
+      { "text": "Terminate the vendor solely for being old", "correct": false, "rationale": "Age of assessment alone does not justify termination; reassessment is the appropriate response." },
+      { "text": "Only reassess after the vendor is breached", "correct": false, "rationale": "Waiting for a breach is reactive; proactive periodic reassessment is best practice." }
+    ]
+  },
+  {
+    "id": "d1-t12-b4",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Due Diligence Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In vendor management, 'due diligence' most accurately refers to which of the following?",
+    "options": [
+      { "text": "Investigating a prospective vendor's security and reliability before engaging them", "correct": true, "rationale": "Vendor due diligence is the pre-engagement investigation of the vendor's posture and trustworthiness." },
+      { "text": "Signing the contract without any review", "correct": false, "rationale": "Signing without review is the opposite of due diligence." },
+      { "text": "Encrypting the vendor's website", "correct": false, "rationale": "This is unrelated to investigating a vendor's suitability." },
+      { "text": "Publishing the vendor's financials publicly", "correct": false, "rationale": "Publishing financials is not the meaning of due diligence." }
+    ]
+  },
+  {
+    "id": "d1-t12-b5",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Breach Notification Clause",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To ensure the company learns promptly if a vendor is breached, which contractual provision is MOST important?",
+    "options": [
+      { "text": "A breach-notification clause with defined timelines", "correct": true, "rationale": "A breach-notification clause obligates the vendor to inform the customer within set timeframes, enabling timely response and compliance." },
+      { "text": "A clause about office dress code", "correct": false, "rationale": "Dress code is irrelevant to breach awareness." },
+      { "text": "A clause specifying the vendor's logo colors", "correct": false, "rationale": "Branding terms have no bearing on breach notification." },
+      { "text": "A clause banning the vendor from using email", "correct": false, "rationale": "This is impractical and unrelated to being notified of breaches." }
+    ]
+  },
+  {
+    "id": "d1-t12-b6",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Concentration Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization relies on a single cloud provider for nearly all critical services. From an SCRM view, this is MOST accurately which concern?",
+    "options": [
+      { "text": "Concentration risk / single point of dependency", "correct": true, "rationale": "Heavy reliance on one provider creates concentration risk — a single failure or compromise could disrupt everything, warranting diversification or contingency planning." },
+      { "text": "Excellent risk diversification", "correct": false, "rationale": "Relying on one provider is the opposite of diversification." },
+      { "text": "A guarantee of zero downtime", "correct": false, "rationale": "Single-provider reliance does not guarantee uptime; it increases exposure to that provider's outages." },
+      { "text": "An insider threat", "correct": false, "rationale": "Insider threat concerns internal personnel, not provider concentration." }
+    ]
+  },
+  {
+    "id": "d1-t12-b7",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Open Source Component Risk",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A development team pulls many open-source libraries into its product. To manage supply-chain risk from these components, what is the BEST practice?",
+    "options": [
+      { "text": "Maintain an inventory (SBOM) and use software composition analysis to track and patch component vulnerabilities", "correct": true, "rationale": "Tracking components via an SBOM/SCA lets the team quickly identify and remediate vulnerable open-source dependencies." },
+      { "text": "Use libraries without tracking versions or vulnerabilities", "correct": false, "rationale": "Untracked dependencies leave the product exposed when component flaws are disclosed." },
+      { "text": "Assume open-source code is always secure", "correct": false, "rationale": "Open-source components can and do contain vulnerabilities; blind trust is unsafe." },
+      { "text": "Remove all documentation of dependencies", "correct": false, "rationale": "Removing dependency records eliminates the visibility needed to manage component risk." }
+    ]
+  },
+  {
+    "id": "d1-t12-b8",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Vendor Access Least Privilege",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A vendor needs limited integration access to one system. What access-provisioning approach is BEST?",
+    "options": [
+      { "text": "Grant only the minimum access required for the integration (least privilege), scoped and time-limited", "correct": true, "rationale": "Least-privilege, scoped, time-bound access limits the blast radius if the vendor is compromised." },
+      { "text": "Grant domain administrator rights for convenience", "correct": false, "rationale": "Excessive privilege to a vendor greatly increases risk if the vendor is breached." },
+      { "text": "Share a generic admin account among all vendors", "correct": false, "rationale": "Shared privileged accounts destroy accountability and expand exposure." },
+      { "text": "Give indefinite access with no expiration", "correct": false, "rationale": "Perpetual access increases the window of exposure and should be avoided." }
+    ]
+  },
+  {
+    "id": "d1-t12-b9",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "Assurance Evidence Selection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A customer wants evidence that a vendor's controls not only exist but operated effectively over a period. Which is MOST appropriate?",
+    "options": [
+      { "text": "A SOC 2 Type II report", "correct": true, "rationale": "SOC 2 Type II attests to the operating effectiveness of controls over a period, unlike Type I which is a point-in-time design assessment." },
+      { "text": "A SOC 2 Type I report", "correct": false, "rationale": "Type I only evaluates control design at a point in time, not effectiveness over a period." },
+      { "text": "A vendor self-declaration with no audit", "correct": false, "rationale": "Self-declaration lacks independent verification of effectiveness." },
+      { "text": "A product advertisement", "correct": false, "rationale": "Advertising is not evidence of control effectiveness." }
+    ]
+  },
+  {
+    "id": "d1-t12-b10",
+    "domainId": "d1",
+    "topicId": "d1-t12",
+    "subtopicTag": "SCRM Program Scope",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to a supply chain risk management program?",
+    "options": [
+      { "text": "Choosing the color scheme of the company's lobby", "correct": true, "rationale": "Lobby décor has no bearing on supply-chain security and is least relevant to SCRM." },
+      { "text": "Assessing suppliers' security posture", "correct": false, "rationale": "Supplier security assessment is a core SCRM activity, highly relevant." },
+      { "text": "Including security terms in vendor contracts", "correct": false, "rationale": "Contractual security terms are central to SCRM." },
+      { "text": "Validating integrity of received hardware", "correct": false, "rationale": "Hardware integrity validation is a relevant SCRM control against counterfeiting/tampering." }
+    ]
+  }
+]

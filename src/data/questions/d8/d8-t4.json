@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d8-t4-a1",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Source Code Escrow",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company depends on a critical COTS product from a small vendor and worries the vendor could go out of business. Which contractual protection BEST addresses this?",
+    "options": [
+      { "text": "A source-code escrow arrangement releasing the code if the vendor fails", "correct": true, "rationale": "Source-code escrow lets the customer obtain and maintain the code if the vendor ceases operations or support, protecting business continuity." },
+      { "text": "A louder software startup sound", "correct": false, "rationale": "This has no bearing on vendor-failure risk." },
+      { "text": "A brighter application logo", "correct": false, "rationale": "Branding does not protect against vendor failure." },
+      { "text": "Ignoring the risk entirely", "correct": false, "rationale": "Ignoring a single-vendor dependency leaves the company exposed if the vendor fails." }
+    ]
+  },
+  {
+    "id": "d8-t4-a2",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Accountability Not Outsourced",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An executive claims that because a critical application was purchased from a vendor, the vendor bears all responsibility for its security. Which correction is MOST accurate?",
+    "options": [
+      { "text": "The organization deploying the software remains accountable for the risk it introduces", "correct": true, "rationale": "Acquiring software does not transfer accountability; the deploying organization must still assess, harden, patch, and monitor it." },
+      { "text": "All responsibility fully transfers to the vendor on purchase", "correct": false, "rationale": "Purchase does not absolve the customer of securing what it deploys." },
+      { "text": "No one is responsible for acquired software", "correct": false, "rationale": "The customer retains accountability for its deployed software." },
+      { "text": "Only end users are responsible", "correct": false, "rationale": "End users are not accountable for the organization's software risk decisions." }
+    ]
+  },
+  {
+    "id": "d8-t4-a3",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Open Source Not Auto-Secure",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A developer argues that an open-source library must be secure because 'many eyes' can review the code. Which statement is MOST accurate?",
+    "options": [
+      { "text": "Public visibility does not guarantee security; the project's health and known vulnerabilities must be evaluated", "correct": true, "rationale": "Open-source code can still harbor unreviewed vulnerabilities; maintenance activity, community, and known CVEs must be assessed rather than assumed safe." },
+      { "text": "Open source is always more secure than commercial software", "correct": false, "rationale": "Security depends on the specific project, not merely on being open source." },
+      { "text": "Open source never contains vulnerabilities", "correct": false, "rationale": "Open-source components frequently contain vulnerabilities." },
+      { "text": "'Many eyes' guarantees all bugs are found", "correct": false, "rationale": "Many projects are under-reviewed; the 'many eyes' assumption is not a guarantee." }
+    ]
+  },
+  {
+    "id": "d8-t4-a4",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Pre-Acquisition Assessment",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before acquiring a third-party application that will handle sensitive data, what should be done FIRST?",
+    "options": [
+      { "text": "Assess the vendor's security posture and the software's known vulnerabilities/dependencies", "correct": true, "rationale": "Due diligence on the vendor and the product's security should precede acquisition to avoid importing unacceptable risk." },
+      { "text": "Deploy it directly to production immediately", "correct": false, "rationale": "Deploying unassessed software to production is risky and premature." },
+      { "text": "Grant it full admin access before evaluation", "correct": false, "rationale": "Granting broad access before assessment increases risk." },
+      { "text": "Publicly announce the purchase first", "correct": false, "rationale": "Announcements do not assess or reduce the software's risk." }
+    ]
+  },
+  {
+    "id": "d8-t4-a5",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Harden Before Production",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A newly acquired product ships with default admin credentials and many enabled features. Before production, what is the BEST practice?",
+    "options": [
+      { "text": "Test and harden it — change defaults, disable unneeded features, apply least privilege", "correct": true, "rationale": "Acquired software should be hardened (default credentials changed, unused features disabled) and integrated with least privilege before production use." },
+      { "text": "Deploy it as-is with defaults to save time", "correct": false, "rationale": "Default credentials and unnecessary features are classic weaknesses." },
+      { "text": "Expose it directly to the internet untested", "correct": false, "rationale": "Exposing unhardened acquired software greatly increases risk." },
+      { "text": "Grant every user administrator rights", "correct": false, "rationale": "Broad admin rights violate least privilege." }
+    ]
+  },
+  {
+    "id": "d8-t4-a6",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "COTS Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "COTS software refers to which of the following?",
+    "options": [
+      { "text": "Commercial off-the-shelf software purchased from a vendor", "correct": true, "rationale": "COTS is ready-made commercial software bought from a vendor rather than custom-built." },
+      { "text": "Custom software written entirely in-house", "correct": false, "rationale": "In-house custom software is not COTS." },
+      { "text": "A type of network cable", "correct": false, "rationale": "COTS is a software-acquisition term, not hardware." },
+      { "text": "A cryptographic algorithm", "correct": false, "rationale": "COTS is not an algorithm." }
+    ]
+  },
+  {
+    "id": "d8-t4-a7",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Support and EOL",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When evaluating COTS software for a long-lived system, which support consideration is MOST important?",
+    "options": [
+      { "text": "Whether the vendor will provide security patches for the software's intended lifespan", "correct": true, "rationale": "Software that will not receive patches becomes an unpatched liability; ongoing security support is critical for long-lived systems." },
+      { "text": "Whether the installer has a nice animation", "correct": false, "rationale": "Installer aesthetics are irrelevant to security support." },
+      { "text": "The color of the product box", "correct": false, "rationale": "Packaging color is irrelevant to patch support." },
+      { "text": "The vendor's office location decor", "correct": false, "rationale": "Office decor has no bearing on security patching." }
+    ]
+  },
+  {
+    "id": "d8-t4-a8",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "SaaS Shared Responsibility",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When acquiring a SaaS application, which model MOST directly governs how security duties are divided?",
+    "options": [
+      { "text": "The shared responsibility model between provider and customer", "correct": true, "rationale": "SaaS security is shared: the provider secures the platform while the customer secures its data, access, and configuration." },
+      { "text": "The provider is responsible for absolutely everything", "correct": false, "rationale": "The customer retains responsibility for its data and configuration under shared responsibility." },
+      { "text": "The customer has no responsibilities at all", "correct": false, "rationale": "Customers retain meaningful security responsibilities in SaaS." },
+      { "text": "No one is responsible for SaaS security", "correct": false, "rationale": "Both parties share defined responsibilities." }
+    ]
+  },
+  {
+    "id": "d8-t4-a9",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Vendor Due Diligence Evidence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which artifact BEST provides independent assurance of a SaaS vendor's security controls during due diligence?",
+    "options": [
+      { "text": "A SOC 2 Type II report", "correct": true, "rationale": "A SOC 2 Type II gives independent, standardized assurance of the vendor's security control effectiveness over time." },
+      { "text": "The vendor's homepage tagline", "correct": false, "rationale": "A tagline provides no assurance detail." },
+      { "text": "A salesperson's verbal promise", "correct": false, "rationale": "Verbal assurances are not independent evidence." },
+      { "text": "The vendor's social media follower count", "correct": false, "rationale": "Follower count does not evidence security controls." }
+    ]
+  },
+  {
+    "id": "d8-t4-a10",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Dependency Visibility",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To understand what third-party components are inside an acquired product so vulnerabilities can be tracked, what is MOST useful to request from the vendor?",
+    "options": [
+      { "text": "A Software Bill of Materials (SBOM)", "correct": true, "rationale": "An SBOM lists the product's components/dependencies, enabling the customer to track and respond to component vulnerabilities." },
+      { "text": "The vendor's lunch menu", "correct": false, "rationale": "This provides no component information." },
+      { "text": "The vendor's holiday schedule", "correct": false, "rationale": "Scheduling data is irrelevant to component visibility." },
+      { "text": "A marketing slide deck", "correct": false, "rationale": "Marketing decks do not enumerate software dependencies." }
+    ]
+  },
+  {
+    "id": "d8-t4-b1",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Right-to-Audit",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A customer wants the contractual ability to verify a critical software vendor's security controls firsthand. Which clause BEST provides this?",
+    "options": [
+      { "text": "A right-to-audit clause", "correct": true, "rationale": "A right-to-audit clause grants the customer authority to assess the vendor's security controls." },
+      { "text": "A non-compete clause", "correct": false, "rationale": "Non-compete clauses restrict competition, not enable auditing." },
+      { "text": "A force majeure clause", "correct": false, "rationale": "Force majeure excuses performance during extraordinary events; it does not grant audit rights." },
+      { "text": "An arbitration clause", "correct": false, "rationale": "Arbitration governs dispute resolution, not the right to audit." }
+    ]
+  },
+  {
+    "id": "d8-t4-b2",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Test Environment Evaluation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Before rolling out newly acquired software organization-wide, where should it FIRST be evaluated?",
+    "options": [
+      { "text": "In an isolated test environment to assess security and behavior", "correct": true, "rationale": "Testing acquired software in an isolated environment first reveals issues before it can affect production." },
+      { "text": "Directly in production during peak hours", "correct": false, "rationale": "Deploying untested software to production risks outages and security incidents." },
+      { "text": "On the CEO's personal device only", "correct": false, "rationale": "A single personal device is not a proper evaluation environment." },
+      { "text": "Nowhere; skip evaluation to move faster", "correct": false, "rationale": "Skipping evaluation invites deploying vulnerable software." }
+    ]
+  },
+  {
+    "id": "d8-t4-b3",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Open Source License Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Beyond vulnerabilities, which additional risk is MOST important to evaluate when adopting open-source components?",
+    "options": [
+      { "text": "License terms and compliance obligations", "correct": true, "rationale": "Open-source licenses impose obligations (e.g., copyleft) that can create legal/compliance risk if ignored, in addition to security concerns." },
+      { "text": "The font of the project's README", "correct": false, "rationale": "README formatting is irrelevant to adoption risk." },
+      { "text": "The color of the project logo", "correct": false, "rationale": "Logo color has no bearing on legal or security risk." },
+      { "text": "The maintainers' favorite editor", "correct": false, "rationale": "Editor preferences are irrelevant to adoption risk." }
+    ]
+  },
+  {
+    "id": "d8-t4-b4",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Outsourced Dev Quality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When outsourcing custom software development, which vendor consideration is MOST important for security?",
+    "options": [
+      { "text": "The maturity of the vendor's secure development lifecycle and code-quality practices", "correct": true, "rationale": "The security of delivered custom software depends heavily on the vendor's secure-SDLC and quality practices." },
+      { "text": "The vendor's office square footage", "correct": false, "rationale": "Office size does not determine code security." },
+      { "text": "The vendor's parking availability", "correct": false, "rationale": "Parking is irrelevant to software security." },
+      { "text": "The vendor's coffee brand", "correct": false, "rationale": "Coffee choice has no bearing on secure development." }
+    ]
+  },
+  {
+    "id": "d8-t4-b5",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Ongoing Patch Duty",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After deploying acquired software, which ongoing responsibility MOST clearly remains with the organization?",
+    "options": [
+      { "text": "Patching and monitoring the software like any other component", "correct": true, "rationale": "The organization must keep acquired software patched and monitored; acquisition does not remove ongoing operational security duties." },
+      { "text": "Nothing further is ever required after install", "correct": false, "rationale": "Acquired software still needs patching, monitoring, and maintenance." },
+      { "text": "Deleting all logs to reduce noise", "correct": false, "rationale": "Removing logs harms monitoring and detection." },
+      { "text": "Assuming the vendor silently fixes everything on your systems", "correct": false, "rationale": "Vendors issue patches, but applying and monitoring them is the customer's responsibility." }
+    ]
+  },
+  {
+    "id": "d8-t4-b6",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Escrow Purpose Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Source-code escrow primarily protects the customer in which situation?",
+    "options": [
+      { "text": "The vendor goes out of business or stops supporting the product", "correct": true, "rationale": "Escrow releases the source to the customer if the vendor fails or ceases support, preserving the customer's ability to maintain the software." },
+      { "text": "The customer forgets their password", "correct": false, "rationale": "Escrow is about vendor failure, not password recovery." },
+      { "text": "The office loses power", "correct": false, "rationale": "Power loss is unrelated to source-code escrow." },
+      { "text": "A user dislikes the UI", "correct": false, "rationale": "UI preferences are not what escrow addresses." }
+    ]
+  },
+  {
+    "id": "d8-t4-b7",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Breach Notification Clause",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To ensure the organization learns promptly if an acquired-software vendor is breached, which contractual term is MOST important?",
+    "options": [
+      { "text": "A breach-notification clause with defined timelines", "correct": true, "rationale": "A breach-notification clause obligates the vendor to inform the customer within set timeframes, enabling timely response." },
+      { "text": "A clause specifying the vendor's dress code", "correct": false, "rationale": "Dress code is irrelevant to breach awareness." },
+      { "text": "A clause about the vendor's logo colors", "correct": false, "rationale": "Branding terms have no bearing on breach notification." },
+      { "text": "A clause banning the vendor from using computers", "correct": false, "rationale": "This is impractical and unrelated to notification." }
+    ]
+  },
+  {
+    "id": "d8-t4-b8",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Hidden Vulnerabilities COTS",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is assessing acquired COTS software for vulnerabilities MOST challenging compared with in-house code?",
+    "options": [
+      { "text": "The customer often cannot inspect the closed source, so it relies on vendor disclosures and external testing", "correct": true, "rationale": "Without source access, customers depend on vendor transparency, SBOMs, and black-box testing to understand COTS risk." },
+      { "text": "COTS software is always open source and fully visible", "correct": false, "rationale": "Much COTS software is closed source, limiting inspection." },
+      { "text": "In-house code can never be inspected", "correct": false, "rationale": "In-house code is typically fully inspectable, unlike closed COTS." },
+      { "text": "COTS software has no vulnerabilities", "correct": false, "rationale": "COTS software can and does contain vulnerabilities." }
+    ]
+  },
+  {
+    "id": "d8-t4-b9",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Least Privilege Integration",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "When integrating acquired software with existing systems, which principle BEST limits the impact if the software is compromised?",
+    "options": [
+      { "text": "Grant the software only the least privilege it needs to function", "correct": true, "rationale": "Least-privilege integration limits what a compromised acquired component can reach, containing potential damage." },
+      { "text": "Give the software full administrative access to everything", "correct": false, "rationale": "Broad access maximizes blast radius if the software is compromised." },
+      { "text": "Connect it to all systems without restriction", "correct": false, "rationale": "Unrestricted connectivity increases exposure." },
+      { "text": "Disable all monitoring of the software", "correct": false, "rationale": "Removing monitoring reduces detection of compromise." }
+    ]
+  },
+  {
+    "id": "d8-t4-b10",
+    "domainId": "d8",
+    "topicId": "d8-t4",
+    "subtopicTag": "Acquisition Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when assessing the security impact of acquired software?",
+    "options": [
+      { "text": "The vendor's company mascot", "correct": true, "rationale": "A company mascot has no bearing on the security risk of the software, making it least relevant." },
+      { "text": "The vendor's patch cadence and vulnerability history", "correct": false, "rationale": "Patch history is directly relevant to acquired-software risk." },
+      { "text": "Contractual protections like right-to-audit and escrow", "correct": false, "rationale": "Contractual protections materially affect acquired-software risk management." },
+      { "text": "Known vulnerabilities in the software's dependencies", "correct": false, "rationale": "Dependency vulnerabilities are central to assessing acquired-software risk." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t4-a1",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "RBAC by Job Function",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A hospital grants permissions based on job roles like 'Nurse' and 'Physician,' so new hires inherit their role's access. Which access control model is MOST in use?",
+    "options": [
+      { "text": "Role-Based Access Control (RBAC)", "correct": true, "rationale": "Assigning permissions to roles and granting them via role membership is RBAC, which scales well in organizations." },
+      { "text": "Discretionary Access Control (DAC)", "correct": false, "rationale": "DAC has owners grant access at their discretion, not permissions tied to defined job roles." },
+      { "text": "Mandatory Access Control (MAC)", "correct": false, "rationale": "MAC enforces access via labels/clearances, not job roles." },
+      { "text": "No access control", "correct": false, "rationale": "The scenario clearly uses a role-based model, not the absence of control." }
+    ]
+  },
+  {
+    "id": "d5-t4-a2",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "MAC Labels",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In a classified system, access is enforced by the operating system comparing a user's clearance to a document's classification label, and owners cannot override it. This is MOST accurately which model?",
+    "options": [
+      { "text": "Mandatory Access Control (MAC)", "correct": true, "rationale": "System-enforced access based on clearances and classification labels, not overridable by owners, is MAC." },
+      { "text": "Discretionary Access Control (DAC)", "correct": false, "rationale": "DAC lets owners decide access, which contradicts the non-overridable label enforcement described." },
+      { "text": "Role-Based Access Control (RBAC)", "correct": false, "rationale": "RBAC uses job roles, not clearance/classification labels enforced by the system." },
+      { "text": "Attribute-Based Access Control (ABAC)", "correct": false, "rationale": "While ABAC uses attributes, the specific clearance-vs-label enforcement described is the defining feature of MAC." }
+    ]
+  },
+  {
+    "id": "d5-t4-a3",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "DAC Owner Discretion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "On a standard file server, the creator of a document decides which colleagues may read or edit it by setting permissions. This is MOST accurately which model?",
+    "options": [
+      { "text": "Discretionary Access Control (DAC)", "correct": true, "rationale": "The owner deciding access at their discretion (via file permissions/ACLs) is DAC — the model of standard OS file permissions." },
+      { "text": "Mandatory Access Control (MAC)", "correct": false, "rationale": "MAC is system-enforced via labels, not owner discretion." },
+      { "text": "Role-Based Access Control (RBAC)", "correct": false, "rationale": "RBAC assigns access via roles, not individual owner discretion per file." },
+      { "text": "Attribute-Based Access Control (ABAC)", "correct": false, "rationale": "ABAC evaluates attribute policies, not simple owner-set file permissions." }
+    ]
+  },
+  {
+    "id": "d5-t4-a4",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "ABAC Context Policy",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A policy states: 'Allow access if role=Physician AND device is managed AND time is within shift hours AND record belongs to the user's department.' This granular, context-aware policy MOST reflects which model?",
+    "options": [
+      { "text": "Attribute-Based Access Control (ABAC)", "correct": true, "rationale": "Evaluating multiple attributes of subject, object, action, and environment is ABAC — the most granular, dynamic model." },
+      { "text": "Discretionary Access Control (DAC)", "correct": false, "rationale": "DAC is owner-driven ACLs, not multi-attribute contextual policy." },
+      { "text": "Mandatory Access Control (MAC)", "correct": false, "rationale": "MAC uses clearance/label dominance, not this multi-attribute contextual rule set." },
+      { "text": "Role-Based Access Control (RBAC)", "correct": false, "rationale": "RBAC alone uses role membership; the added device, time, and department conditions make this ABAC." }
+    ]
+  },
+  {
+    "id": "d5-t4-a5",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "RBAC Scalability",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company with thousands of employees wants to simplify access administration so that changing one job function's permissions updates all its members at once. Which model BEST achieves this?",
+    "options": [
+      { "text": "RBAC — modify the role and all members inherit the change", "correct": true, "rationale": "RBAC centralizes permissions in roles, so a single role change propagates to all users in that role, easing large-scale administration." },
+      { "text": "DAC — have each owner update every file individually", "correct": false, "rationale": "Per-file owner updates do not scale and would be enormous manual effort." },
+      { "text": "MAC — reclassify every document by hand", "correct": false, "rationale": "MAC label management does not map to simplifying job-function permission changes at scale." },
+      { "text": "No model — let users set their own permissions", "correct": false, "rationale": "Uncontrolled self-service access is insecure and unmanageable." }
+    ]
+  },
+  {
+    "id": "d5-t4-a6",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Model Definitions",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which access control model is characterized by the data owner deciding who may access their resources?",
+    "options": [
+      { "text": "Discretionary Access Control (DAC)", "correct": true, "rationale": "DAC is defined by owner discretion over access to their objects." },
+      { "text": "Mandatory Access Control (MAC)", "correct": false, "rationale": "MAC is system-enforced via labels, not owner discretion." },
+      { "text": "Role-Based Access Control (RBAC)", "correct": false, "rationale": "RBAC assigns access via roles, not individual owner discretion." },
+      { "text": "Rule-Based routing", "correct": false, "rationale": "This is not an access control model in this context." }
+    ]
+  },
+  {
+    "id": "d5-t4-a7",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "MAC Rigidity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which model is MOST appropriate when a strict, non-overridable, system-enforced policy is required, even at the cost of flexibility?",
+    "options": [
+      { "text": "MAC", "correct": true, "rationale": "MAC provides rigid, system-enforced access that owners cannot override, ideal for the highest-security environments." },
+      { "text": "DAC", "correct": false, "rationale": "DAC is the most flexible but owner-overridable, unsuitable when a non-overridable policy is required." },
+      { "text": "RBAC", "correct": false, "rationale": "RBAC organizes by roles but is not defined by non-overridable label enforcement like MAC." },
+      { "text": "No access control", "correct": false, "rationale": "Absence of control is the opposite of a strict enforced policy." }
+    ]
+  },
+  {
+    "id": "d5-t4-a8",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "RBAC vs Rule-Based Trap",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A firewall permits or denies traffic based on global rules regardless of user identity. This is MOST accurately which type of access control, and how does it differ from RBAC?",
+    "options": [
+      { "text": "Rule-based access control, which applies global rules — distinct from RBAC's role-based permissions", "correct": true, "rationale": "Rule-based control (like firewall ACLs) enforces global conditions, whereas RBAC grants access by user role; the exam tests this naming distinction." },
+      { "text": "It is RBAC because 'rule' and 'role' are the same", "correct": false, "rationale": "Rule-based and role-based are different concepts despite similar abbreviations." },
+      { "text": "It is MAC using clearances", "correct": false, "rationale": "The firewall applies global rules, not clearance/label dominance as in MAC." },
+      { "text": "It is DAC set by each user", "correct": false, "rationale": "Global firewall rules are not per-user owner discretion (DAC)." }
+    ]
+  },
+  {
+    "id": "d5-t4-a9",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "DAC Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which is the MOST significant security drawback of DAC compared with MAC?",
+    "options": [
+      { "text": "Owners can grant access at their discretion, increasing the risk of over-sharing or mistakes", "correct": true, "rationale": "DAC's reliance on owner discretion makes it flexible but prone to inconsistent or excessive access grants." },
+      { "text": "DAC cannot control access at all", "correct": false, "rationale": "DAC does control access; the drawback is discretion-based inconsistency, not lack of control." },
+      { "text": "DAC always requires military clearances", "correct": false, "rationale": "Clearances are a MAC feature, not DAC." },
+      { "text": "DAC encrypts nothing", "correct": false, "rationale": "Encryption is a separate control; this is not the defining DAC drawback versus MAC." }
+    ]
+  },
+  {
+    "id": "d5-t4-a10",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Least Privilege Support",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Regardless of model, what is the BEST guiding principle when assigning access rights to subjects?",
+    "options": [
+      { "text": "Grant only the minimum access needed to perform the job (least privilege)", "correct": true, "rationale": "Least privilege minimizes the access each subject holds, reducing risk if the account is misused or compromised, across all models." },
+      { "text": "Grant everyone administrator rights for convenience", "correct": false, "rationale": "Broad admin rights violate least privilege and greatly increase risk." },
+      { "text": "Give the same access to all users", "correct": false, "rationale": "Uniform access ignores differing needs and over-privileges many users." },
+      { "text": "Grant access based on seniority alone", "correct": false, "rationale": "Access should map to need/function, not seniority for its own sake." }
+    ]
+  },
+  {
+    "id": "d5-t4-b1",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Model Matching Military",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A defense agency needs access strictly governed by data classification and personnel clearance, enforced by the system. Which model is BEST?",
+    "options": [
+      { "text": "MAC", "correct": true, "rationale": "MAC's clearance-and-classification enforcement is designed for exactly these high-security government/military environments." },
+      { "text": "DAC", "correct": false, "rationale": "DAC's owner discretion is too flexible for strict classified enforcement." },
+      { "text": "RBAC alone", "correct": false, "rationale": "RBAC organizes by role but does not inherently enforce clearance/classification like MAC." },
+      { "text": "No access control", "correct": false, "rationale": "The requirement is strict enforcement, not the absence of control." }
+    ]
+  },
+  {
+    "id": "d5-t4-b2",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "ABAC Granularity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which model MOST naturally supports fine-grained, context-aware decisions such as time of day, device posture, and location?",
+    "options": [
+      { "text": "ABAC", "correct": true, "rationale": "ABAC evaluates rich attributes (subject, resource, action, environment), enabling the most granular, context-aware access decisions." },
+      { "text": "DAC", "correct": false, "rationale": "DAC is owner-set ACLs and does not natively evaluate contextual attributes like time/device." },
+      { "text": "MAC", "correct": false, "rationale": "MAC keys on clearance/label dominance, not arbitrary contextual attributes." },
+      { "text": "Basic RBAC", "correct": false, "rationale": "Basic RBAC keys on role membership alone, lacking the contextual attribute evaluation of ABAC." }
+    ]
+  },
+  {
+    "id": "d5-t4-b3",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "OS Permissions Are DAC",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Standard file permissions on a typical operating system, where the file owner sets who can read/write, are an example of which model?",
+    "options": [
+      { "text": "DAC", "correct": true, "rationale": "Owner-set file permissions are the canonical example of Discretionary Access Control." },
+      { "text": "MAC", "correct": false, "rationale": "MAC is label/clearance-enforced, not owner-set file permissions." },
+      { "text": "RBAC", "correct": false, "rationale": "RBAC is role-based; standard owner-set file permissions are DAC." },
+      { "text": "ABAC", "correct": false, "rationale": "ABAC uses attribute policies, not simple owner-set file permissions." }
+    ]
+  },
+  {
+    "id": "d5-t4-b4",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Role Explosion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An RBAC deployment creates hundreds of narrowly-defined, overlapping roles that become hard to manage. This problem is MOST accurately called what?",
+    "options": [
+      { "text": "Role explosion", "correct": true, "rationale": "Proliferation of overly specific, overlapping roles is 'role explosion,' a known RBAC design pitfall to avoid." },
+      { "text": "Privilege escalation", "correct": false, "rationale": "Privilege escalation is gaining higher rights via a flaw, not a proliferation of roles." },
+      { "text": "Label creep", "correct": false, "rationale": "This is not a standard term for the RBAC role-proliferation problem." },
+      { "text": "Clearance dominance", "correct": false, "rationale": "Clearance dominance is a MAC concept, unrelated to too many roles." }
+    ]
+  },
+  {
+    "id": "d5-t4-b5",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Flexibility vs Security",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST accurately compares DAC and MAC on the flexibility-vs-security spectrum?",
+    "options": [
+      { "text": "DAC is more flexible but riskier; MAC is more rigid but more secure", "correct": true, "rationale": "DAC's owner discretion is flexible but error-prone, while MAC's system-enforced labels are rigid but provide stronger control." },
+      { "text": "MAC is more flexible than DAC", "correct": false, "rationale": "MAC is more rigid, not more flexible, than DAC." },
+      { "text": "DAC is non-overridable by owners", "correct": false, "rationale": "DAC is overridable by owners; MAC is the non-overridable model." },
+      { "text": "Both are identical in flexibility and security", "correct": false, "rationale": "They differ significantly; DAC favors flexibility, MAC favors control." }
+    ]
+  },
+  {
+    "id": "d5-t4-b6",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "RBAC Onboarding",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Under RBAC, when a new accountant is hired, what should happen FIRST to grant appropriate access?",
+    "options": [
+      { "text": "Assign the user to the predefined 'Accountant' role", "correct": true, "rationale": "In RBAC, placing the user in the appropriate role grants the role's predefined permissions, the standard onboarding step." },
+      { "text": "Manually set permissions on every file individually", "correct": false, "rationale": "Per-file manual permissioning defeats RBAC's purpose and does not scale." },
+      { "text": "Give the user domain admin rights", "correct": false, "rationale": "Domain admin rights violate least privilege for an accountant role." },
+      { "text": "Grant access to all classified labels", "correct": false, "rationale": "Broad classified access is inappropriate and unrelated to the accountant role." }
+    ]
+  },
+  {
+    "id": "d5-t4-b7",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "MAC Need to Know",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In a MAC system, a user has Top Secret clearance but is still denied a specific Top Secret document. Which additional MAC requirement MOST likely explains this?",
+    "options": [
+      { "text": "Need-to-know — clearance is necessary but not sufficient without a demonstrated need", "correct": true, "rationale": "MAC requires both adequate clearance and need-to-know; lacking need-to-know denies access even at the correct clearance level." },
+      { "text": "The user's password was too short", "correct": false, "rationale": "Password length is unrelated to MAC need-to-know enforcement." },
+      { "text": "DAC owner discretion", "correct": false, "rationale": "MAC does not rely on owner discretion; the factor here is need-to-know." },
+      { "text": "The document was in ABAC", "correct": false, "rationale": "The scenario is MAC; need-to-know, not an ABAC policy, is the explanation." }
+    ]
+  },
+  {
+    "id": "d5-t4-b8",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Choosing ABAC",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization needs access decisions that adapt in real time to changing risk signals (device health, geolocation, sensitivity of the resource). Which model is BEST suited?",
+    "options": [
+      { "text": "ABAC, which evaluates dynamic attributes and context at decision time", "correct": true, "rationale": "ABAC's policy engine can weigh dynamic attributes/context per request, matching adaptive, risk-aware access needs." },
+      { "text": "Basic DAC ACLs", "correct": false, "rationale": "Static owner-set ACLs cannot adapt to dynamic risk signals." },
+      { "text": "MAC labels only", "correct": false, "rationale": "MAC's fixed clearance/label model is not designed for dynamic contextual signals." },
+      { "text": "No access control", "correct": false, "rationale": "Removing control does not provide adaptive, risk-aware decisions." }
+    ]
+  },
+  {
+    "id": "d5-t4-b9",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Model Purpose Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which model assigns permissions to roles rather than directly to individual users?",
+    "options": [
+      { "text": "RBAC", "correct": true, "rationale": "RBAC assigns permissions to roles; users receive them through role membership." },
+      { "text": "DAC", "correct": false, "rationale": "DAC assigns access at the owner's discretion per object, not via roles." },
+      { "text": "MAC", "correct": false, "rationale": "MAC uses clearance/label enforcement, not role assignment." },
+      { "text": "Rule-based firewall filtering", "correct": false, "rationale": "Firewall rule-based control uses global rules, not user roles." }
+    ]
+  },
+  {
+    "id": "d5-t4-b10",
+    "domainId": "d5",
+    "topicId": "d5-t4",
+    "subtopicTag": "Model Selection Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when choosing an access control model for an organization?",
+    "options": [
+      { "text": "The brand of coffee in the break room", "correct": true, "rationale": "Break-room coffee has no bearing on which access control model fits the organization's needs, making it least relevant." },
+      { "text": "The sensitivity of the data and regulatory requirements", "correct": false, "rationale": "Data sensitivity and regulation strongly influence the model choice (e.g., MAC for classified)." },
+      { "text": "The scale of the organization and administrative burden", "correct": false, "rationale": "Scale affects whether RBAC/ABAC is preferable, a relevant factor." },
+      { "text": "The need for dynamic, context-aware decisions", "correct": false, "rationale": "Context needs point toward ABAC, a relevant selection factor." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t15-a1",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Life Safety First",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security lockdown procedure would seal exits to contain an intruder, but this could trap employees during a simultaneous fire. What is the MOST correct priority?",
+    "options": [
+      { "text": "Preserve life safety — occupants must be able to evacuate", "correct": true, "rationale": "Human life safety is the top priority, above containing an intruder or protecting assets; exits must remain usable." },
+      { "text": "Protect assets even if people are trapped", "correct": false, "rationale": "Sacrificing people to protect property inverts the fundamental life-safety principle." },
+      { "text": "Seal exits regardless of occupants", "correct": false, "rationale": "Trapping occupants during a fire endangers life and is unacceptable." },
+      { "text": "Prioritize the building over the people", "correct": false, "rationale": "People always take precedence over the facility." }
+    ]
+  },
+  {
+    "id": "d7-t15-a2",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Duress Code",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A receptionist could be forced by an intruder to grant access. Which control BEST lets them covertly summon help while appearing to comply?",
+    "options": [
+      { "text": "A duress code or silent panic button that alerts security discreetly", "correct": true, "rationale": "A duress signal (alternate PIN or hidden button) covertly alerts security that the person is coerced, without alerting the aggressor." },
+      { "text": "A loud verbal announcement to the intruder", "correct": false, "rationale": "Openly confronting the aggressor could escalate danger to the employee." },
+      { "text": "A brighter desk lamp", "correct": false, "rationale": "Lighting does not signal duress or summon help." },
+      { "text": "A sticky note asking for help", "correct": false, "rationale": "A visible note could be seen by the aggressor and endanger the employee." }
+    ]
+  },
+  {
+    "id": "d7-t15-a3",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Roll Call",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After a building evacuation, which step MOST directly confirms that everyone got out safely?",
+    "options": [
+      { "text": "A roll call/headcount at the designated assembly point", "correct": true, "rationale": "Accounting for personnel via roll call at the assembly point confirms no one is left inside and directs rescue if someone is missing." },
+      { "text": "Checking the server backup status", "correct": false, "rationale": "Backups concern data, not confirming people evacuated." },
+      { "text": "Reviewing the marketing calendar", "correct": false, "rationale": "This is irrelevant to accounting for evacuees." },
+      { "text": "Counting the parked cars", "correct": false, "rationale": "Car counts do not reliably confirm which people are safe." }
+    ]
+  },
+  {
+    "id": "d7-t15-a4",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Travel Security Briefing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employee will travel to a higher-risk region with sensitive company data. What is the BEST personnel-security preparation?",
+    "options": [
+      { "text": "Provide a pre-travel security briefing and minimize the sensitive data they carry", "correct": true, "rationale": "Briefings raise threat awareness and carrying minimal data (e.g., loaner devices) reduces exposure if devices are lost, seized, or stolen." },
+      { "text": "Have them carry all company data for convenience", "correct": false, "rationale": "Carrying maximal sensitive data increases exposure if the device is compromised abroad." },
+      { "text": "Publicly post their itinerary online", "correct": false, "rationale": "Publicizing travel details increases targeting risk to the employee." },
+      { "text": "Give no guidance at all", "correct": false, "rationale": "Sending staff to higher-risk areas unprepared elevates personal and data risk." }
+    ]
+  },
+  {
+    "id": "d7-t15-a5",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Evacuation Drills",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure staff can evacuate quickly and safely in a real emergency, what is BEST?",
+    "options": [
+      { "text": "Conduct periodic evacuation drills with marked routes and assembly points", "correct": true, "rationale": "Regular drills build muscle memory so staff evacuate efficiently and know routes and assembly points when it matters." },
+      { "text": "Assume everyone will figure it out during the emergency", "correct": false, "rationale": "Unpracticed evacuation leads to confusion and danger during real events." },
+      { "text": "Keep evacuation routes secret", "correct": false, "rationale": "Staff must know routes to evacuate safely; secrecy is counterproductive." },
+      { "text": "Block exits to control the crowd", "correct": false, "rationale": "Blocking exits endangers people and violates life-safety principles." }
+    ]
+  },
+  {
+    "id": "d7-t15-a6",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Priority Ranking",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "When physical security and safety goals conflict, what is the PRIMARY consideration?",
+    "options": [
+      { "text": "The safety of human life", "correct": true, "rationale": "Life safety is the top priority, taking precedence over assets, data, and facilities." },
+      { "text": "Protecting hardware at any cost", "correct": false, "rationale": "Hardware protection cannot outweigh human safety." },
+      { "text": "Minimizing signage expense", "correct": false, "rationale": "Cost minimization is secondary to life safety." },
+      { "text": "Maximizing building aesthetics", "correct": false, "rationale": "Aesthetics are far below safety in priority." }
+    ]
+  },
+  {
+    "id": "d7-t15-a7",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Hostile Termination",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A potentially volatile employee is being terminated. Which practice BEST protects personnel safety during the process?",
+    "options": [
+      { "text": "Plan the termination with HR/security present and revoke access promptly and discreetly", "correct": true, "rationale": "Coordinated, respectful handling with HR/security support and prompt access revocation reduces the risk of a hostile reaction endangering staff." },
+      { "text": "Terminate them publicly to make an example", "correct": false, "rationale": "Public humiliation can provoke hostility and endanger people." },
+      { "text": "Leave their access active for weeks", "correct": false, "rationale": "Leaving a volatile terminee's access active is a safety and security risk." },
+      { "text": "Provide no support or planning", "correct": false, "rationale": "Unplanned terminations of volatile individuals raise the risk of workplace violence." }
+    ]
+  },
+  {
+    "id": "d7-t15-a8",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Fail-Safe for Life",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Electronically controlled exit doors are being configured. To protect occupants, how should they MOST appropriately behave on power loss or fire alarm?",
+    "options": [
+      { "text": "Fail safe (unlock) to permit egress", "correct": true, "rationale": "For life safety, egress doors must fail safe so occupants can escape during power loss or fire." },
+      { "text": "Fail secure and lock everyone inside", "correct": false, "rationale": "Locking occupants inside during an emergency endangers life." },
+      { "text": "Remain locked to protect assets", "correct": false, "rationale": "Asset protection cannot override safe egress." },
+      { "text": "Alternate locking and unlocking randomly", "correct": false, "rationale": "Unpredictable behavior does not ensure safe egress." }
+    ]
+  },
+  {
+    "id": "d7-t15-a9",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Duress Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A 'duress code' is used for which purpose?",
+    "options": [
+      { "text": "To covertly signal that a person is being coerced while appearing to comply", "correct": true, "rationale": "A duress code discreetly alerts security to coercion without tipping off the aggressor." },
+      { "text": "To encrypt network traffic", "correct": false, "rationale": "A duress code is a safety signal, not an encryption function." },
+      { "text": "To speed up the elevator", "correct": false, "rationale": "It has no relation to elevators." },
+      { "text": "To back up data automatically", "correct": false, "rationale": "It is unrelated to backups." }
+    ]
+  },
+  {
+    "id": "d7-t15-a10",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Awareness for Safety",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which measure MOST ensures employees know how to respond during an emergency (evacuation routes, duress signals)?",
+    "options": [
+      { "text": "Regular safety awareness training and drills", "correct": true, "rationale": "Training and drills teach staff evacuation routes, duress procedures, and emergency response so they act correctly under stress." },
+      { "text": "Keeping all procedures secret from staff", "correct": false, "rationale": "Staff cannot respond correctly to procedures they do not know." },
+      { "text": "Assuming instinct will suffice", "correct": false, "rationale": "Untrained instinct leads to confusion and danger in emergencies." },
+      { "text": "Posting nothing and testing nothing", "correct": false, "rationale": "No guidance or practice leaves staff unprepared." }
+    ]
+  },
+  {
+    "id": "d7-t15-b1",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "People Over Property",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During a fire, an employee hesitates to evacuate because they want to grab an expensive laptop. What guidance is MOST correct?",
+    "options": [
+      { "text": "Evacuate immediately; human life takes precedence over equipment", "correct": true, "rationale": "Life safety outranks assets; staff should evacuate rather than risk their lives for replaceable equipment." },
+      { "text": "Stay and protect the laptop at all costs", "correct": false, "rationale": "Risking life for equipment violates the life-safety priority." },
+      { "text": "Block the exit to guard the laptop", "correct": false, "rationale": "Blocking exits endangers everyone." },
+      { "text": "Prioritize the laptop over personal safety", "correct": false, "rationale": "Assets never outrank human safety." }
+    ]
+  },
+  {
+    "id": "d7-t15-b2",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Assembly Point",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is a designated outdoor assembly point BEST included in evacuation planning?",
+    "options": [
+      { "text": "It provides a safe gathering location where personnel can be accounted for via roll call", "correct": true, "rationale": "A known assembly point moves people to safety and enables headcount to confirm everyone evacuated." },
+      { "text": "It stores backup tapes for the data center", "correct": false, "rationale": "An assembly point is for people, not data storage." },
+      { "text": "It serves as extra parking", "correct": false, "rationale": "Its purpose is personnel accountability and safety, not parking." },
+      { "text": "It replaces the need to evacuate", "correct": false, "rationale": "The assembly point is where evacuees gather, not an alternative to evacuating." }
+    ]
+  },
+  {
+    "id": "d7-t15-b3",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Travel Device Minimization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To reduce data exposure if an employee's device is seized or stolen during high-risk travel, which practice is MOST effective?",
+    "options": [
+      { "text": "Issue a clean loaner device carrying minimal data, with remote wipe capability", "correct": true, "rationale": "A minimal-data loaner limits what is exposed if the device is compromised, and remote wipe further reduces risk." },
+      { "text": "Load the loaner with the full company file share", "correct": false, "rationale": "Loading extensive data onto the travel device increases exposure." },
+      { "text": "Store the encryption keys on a sticky note with the device", "correct": false, "rationale": "Keeping keys with the device defeats encryption entirely." },
+      { "text": "Disable the device's screen lock", "correct": false, "rationale": "Disabling the screen lock makes the device trivially accessible if lost." }
+    ]
+  },
+  {
+    "id": "d7-t15-b4",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Lone Worker Safety",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An employee often works alone at night in a remote facility. Which measure BEST supports their safety?",
+    "options": [
+      { "text": "A check-in procedure and a means to summon help (e.g., panic button/phone)", "correct": true, "rationale": "Regular check-ins and a way to call for help ensure a lone worker in trouble can be detected and assisted quickly." },
+      { "text": "No contact procedures at all", "correct": false, "rationale": "Without check-ins, a lone worker in distress may go unnoticed." },
+      { "text": "Removing all communication devices", "correct": false, "rationale": "Removing communication leaves the worker unable to summon help." },
+      { "text": "Locking them inside with no exit", "correct": false, "rationale": "Trapping a worker is a severe safety hazard." }
+    ]
+  },
+  {
+    "id": "d7-t15-b5",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Priority Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In security operations, what is always the highest priority?",
+    "options": [
+      { "text": "The safety of human life", "correct": true, "rationale": "Protecting people is the paramount priority, above assets, data, and facilities." },
+      { "text": "Protecting hardware", "correct": false, "rationale": "Hardware is replaceable and ranks below human life." },
+      { "text": "Preserving building aesthetics", "correct": false, "rationale": "Aesthetics are a low priority relative to safety." },
+      { "text": "Maximizing badge issuance speed", "correct": false, "rationale": "Operational convenience does not outrank life safety." }
+    ]
+  },
+  {
+    "id": "d7-t15-b6",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Panic Button Placement",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Where is it BEST to place a silent panic button for front-desk staff?",
+    "options": [
+      { "text": "Within discreet reach at the workstation, hidden from visitors", "correct": true, "rationale": "A concealed, easily reachable panic button lets staff signal duress without alerting an aggressor." },
+      { "text": "On a sign facing the visitor", "correct": false, "rationale": "A visible button tips off an aggressor and defeats the covert purpose." },
+      { "text": "In a locked closet down the hall", "correct": false, "rationale": "A distant, inaccessible button cannot be used during an incident." },
+      { "text": "Only in the CEO's office", "correct": false, "rationale": "The button must be where at-risk staff can reach it, not in an unrelated office." }
+    ]
+  },
+  {
+    "id": "d7-t15-b7",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Workplace Violence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To reduce the risk and impact of workplace violence, which program element is BEST?",
+    "options": [
+      { "text": "A workplace-violence prevention program with reporting channels, training, and response procedures", "correct": true, "rationale": "Prevention programs enable early reporting of threats, train staff to recognize warning signs, and define response, reducing risk and harm." },
+      { "text": "Ignoring reported threats to avoid drama", "correct": false, "rationale": "Ignoring threats allows situations to escalate dangerously." },
+      { "text": "Publicly shaming employees who report concerns", "correct": false, "rationale": "Discouraging reporting removes early warning of violence." },
+      { "text": "Removing all security staff to cut costs", "correct": false, "rationale": "Reducing security capacity weakens the ability to prevent and respond to violence." }
+    ]
+  },
+  {
+    "id": "d7-t15-b8",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Egress Never Blocked",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which action is LEAST acceptable when implementing physical security around occupied spaces?",
+    "options": [
+      { "text": "Chaining emergency exits shut to prevent theft", "correct": true, "rationale": "Blocking emergency exits endangers occupants and violates life-safety codes, making it the least acceptable action." },
+      { "text": "Installing badge readers on entry doors", "correct": false, "rationale": "Entry access control is acceptable and common." },
+      { "text": "Adding CCTV in hallways", "correct": false, "rationale": "Surveillance is an acceptable monitoring control." },
+      { "text": "Using fail-safe locks on egress doors", "correct": false, "rationale": "Fail-safe egress is required for life safety and is fully acceptable." }
+    ]
+  },
+  {
+    "id": "d7-t15-b9",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Emergency Communication",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During an emergency, which capability MOST helps keep personnel safe and coordinated?",
+    "options": [
+      { "text": "A mass notification/emergency communication system to alert and direct staff", "correct": true, "rationale": "Rapidly alerting and directing personnel (e.g., evacuate, shelter) is central to protecting them during emergencies." },
+      { "text": "Silence, so no one is alarmed", "correct": false, "rationale": "Withholding emergency information endangers people who need to act." },
+      { "text": "A quarterly newsletter", "correct": false, "rationale": "A slow periodic newsletter cannot direct staff during a live emergency." },
+      { "text": "Turning off all phones", "correct": false, "rationale": "Disabling communication hampers coordination and safety." }
+    ]
+  },
+  {
+    "id": "d7-t15-b10",
+    "domainId": "d7",
+    "topicId": "d7-t15",
+    "subtopicTag": "Personnel Safety Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to personnel safety and security?",
+    "options": [
+      { "text": "The brand of snacks stocked in the vending machine", "correct": true, "rationale": "Vending-machine snack brands have no bearing on protecting people's safety, making it least relevant." },
+      { "text": "Evacuation routes and drills", "correct": false, "rationale": "Evacuation planning is core to personnel safety." },
+      { "text": "Duress codes and panic buttons", "correct": false, "rationale": "Duress signaling directly protects at-risk staff." },
+      { "text": "Travel security briefings", "correct": false, "rationale": "Travel briefings protect employees in higher-risk situations." }
+    ]
+  }
+]

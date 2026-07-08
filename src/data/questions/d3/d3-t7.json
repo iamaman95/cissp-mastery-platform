@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t7-a1",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Encrypting With Recipient Public Key",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Alice wants to send Bob a message that only Bob can read. Using asymmetric cryptography, which key should Alice use to encrypt the message so that BEST achieves this confidentiality goal?",
+    "options": [
+      { "text": "Bob's public key", "correct": true, "rationale": "Encrypting with the recipient's public key ensures that only the matching private key — held solely by Bob — can decrypt it, which is exactly how asymmetric confidentiality works." },
+      { "text": "Alice's private key", "correct": false, "rationale": "Encrypting with the sender's private key provides a signature (anyone with Alice's public key could decrypt it), so it does not keep the content confidential." },
+      { "text": "Alice's public key", "correct": false, "rationale": "Only Alice's private key could decrypt this, so Bob would be unable to read it — this does not achieve the goal." },
+      { "text": "Bob's private key", "correct": false, "rationale": "Alice does not have and must never have Bob's private key; a private key is never shared, so this is impossible." }
+    ]
+  },
+  {
+    "id": "d3-t7-a2",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Signing With Private Key",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A developer needs recipients to be able to prove that a firmware update genuinely came from their company and was not altered in transit. Which key is used to create the digital signature, and what is the PRIMARY reason?",
+    "options": [
+      { "text": "The company's private key, because only the holder of that private key could have produced a signature verifiable by the corresponding public key", "correct": true, "rationale": "Signing with the private key gives non-repudiation and origin authentication: anyone can verify with the public key, but only the private-key holder could have signed." },
+      { "text": "The recipient's public key, because that provides authentication of the sender", "correct": false, "rationale": "Encrypting/signing with the recipient's public key provides confidentiality to that recipient, not proof of the sender's identity." },
+      { "text": "A shared symmetric key, because it is faster than asymmetric signing", "correct": false, "rationale": "A shared symmetric key cannot provide non-repudiation since both parties hold the same key, so origin cannot be uniquely proven." },
+      { "text": "The recipient's private key, because the recipient must validate the update", "correct": false, "rationale": "The sender does not possess the recipient's private key, and signing is performed by the originator, not the recipient." }
+    ]
+  },
+  {
+    "id": "d3-t7-a3",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Diffie-Hellman Key Exchange",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two servers that share no prior secret must agree on a symmetric session key over an untrusted network without ever transmitting the key itself. Which mechanism MOST directly accomplishes this?",
+    "options": [
+      { "text": "Diffie-Hellman key agreement", "correct": true, "rationale": "Diffie-Hellman lets both parties independently derive the same shared secret from exchanged public values without the secret ever crossing the wire." },
+      { "text": "AES in CBC mode", "correct": false, "rationale": "AES is a symmetric cipher that requires the parties to already share a key; it does not solve the initial key establishment problem." },
+      { "text": "SHA-256 hashing of a nonce", "correct": false, "rationale": "Hashing produces a digest and provides no mechanism for two parties to independently arrive at the same secret from public exchanges." },
+      { "text": "RSA signature verification", "correct": false, "rationale": "Signature verification authenticates data but does not by itself establish a shared symmetric secret between the parties." }
+    ]
+  },
+  {
+    "id": "d3-t7-a4",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "ECC Key Size Efficiency",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team is selecting an asymmetric algorithm for low-power IoT sensors with limited compute and battery. Which choice BEST fits, and why?",
+    "options": [
+      { "text": "ECC, because it provides equivalent security to RSA at a much smaller key size, reducing computation and power use", "correct": true, "rationale": "A 256-bit ECC key offers strength comparable to a 3072-bit RSA key, so ECC delivers the same security with far less computation — ideal for constrained devices." },
+      { "text": "RSA with a 4096-bit key, because larger keys are always more efficient", "correct": false, "rationale": "Large RSA keys are computationally expensive, which is the opposite of what constrained IoT devices need." },
+      { "text": "3DES, because it is lightweight and asymmetric", "correct": false, "rationale": "3DES is a symmetric block cipher, not asymmetric, and it is slow and deprecated." },
+      { "text": "One-time pad, because it is unbreakable and efficient on small devices", "correct": false, "rationale": "A one-time pad requires a truly random key as long as the message and is impractical for key distribution on IoT sensors." }
+    ]
+  },
+  {
+    "id": "d3-t7-a5",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "RSA Factorization Problem",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The security of the RSA algorithm rests on the computational difficulty of which mathematical problem?",
+    "options": [
+      { "text": "Factoring the product of two large prime numbers", "correct": true, "rationale": "RSA's trapdoor is integer factorization: multiplying two large primes is easy, but factoring their product back is computationally infeasible." },
+      { "text": "The elliptic curve discrete logarithm problem", "correct": false, "rationale": "That is the basis of ECC, not RSA." },
+      { "text": "Finding collisions in a hash function", "correct": false, "rationale": "Hash collision resistance underlies hashing security, not the RSA asymmetric algorithm." },
+      { "text": "Reversing a substitution-permutation network", "correct": false, "rationale": "Substitution-permutation networks describe symmetric block ciphers like AES, not RSA." }
+    ]
+  },
+  {
+    "id": "d3-t7-a6",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Hybrid Cryptosystem",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An engineer must encrypt large volumes of streaming data efficiently while still allowing two parties with no shared secret to communicate securely. Which design BEST balances these needs?",
+    "options": [
+      { "text": "Use asymmetric cryptography to exchange a symmetric session key, then encrypt the bulk data with the fast symmetric key", "correct": true, "rationale": "This hybrid model uses slow asymmetric crypto only for key establishment and fast symmetric crypto (e.g., AES) for the data, which is how TLS and PGP work." },
+      { "text": "Encrypt all of the streaming data directly with RSA", "correct": false, "rationale": "RSA is far too slow for bulk data and has strict size limits per operation, making direct bulk encryption impractical." },
+      { "text": "Use a single shared symmetric key manually pre-installed on every possible peer", "correct": false, "rationale": "Pre-sharing symmetric keys with parties who have no prior relationship reintroduces the key distribution problem asymmetric crypto solves." },
+      { "text": "Hash the data with SHA-256 and send the digest instead of the data", "correct": false, "rationale": "A hash is one-way and cannot be reversed to recover the data, so it cannot serve as encryption of the stream." }
+    ]
+  },
+  {
+    "id": "d3-t7-a7",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Perfect Forward Secrecy",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization is concerned that if its long-term server private key is ever stolen, an attacker who has been recording encrypted traffic could decrypt years of past sessions. Which measure MOST directly prevents this retroactive decryption?",
+    "options": [
+      { "text": "Use ephemeral Diffie-Hellman (DHE/ECDHE) to negotiate a fresh, discarded key for each session", "correct": true, "rationale": "Ephemeral key exchange provides perfect forward secrecy: each session key is derived from temporary values and discarded, so a stolen long-term key cannot decrypt past recorded sessions." },
+      { "text": "Increase the RSA key size from 2048 to 4096 bits", "correct": false, "rationale": "A larger static RSA key still allows retroactive decryption of recorded traffic once that key is compromised; size does not provide forward secrecy." },
+      { "text": "Rotate the TLS certificate annually", "correct": false, "rationale": "Rotating certificates helps limit exposure going forward but does not protect already-recorded sessions encrypted under the compromised key." },
+      { "text": "Enable static RSA key transport for all sessions", "correct": false, "rationale": "Static RSA key transport is precisely the non-forward-secret mode that leaves recorded traffic vulnerable if the private key is later stolen." }
+    ]
+  },
+  {
+    "id": "d3-t7-a8",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "MITM on Unauthenticated DH",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two peers perform a plain, unauthenticated Diffie-Hellman exchange over the internet. An attacker positioned between them intercepts and relays the exchange. What is the PRIMARY weakness being exploited?",
+    "options": [
+      { "text": "Diffie-Hellman provides no authentication, so the attacker can establish separate shared secrets with each party (man-in-the-middle)", "correct": true, "rationale": "Plain DH agrees on a secret but does not verify identity; an interposed attacker can negotiate one secret with each side and relay traffic, reading everything." },
+      { "text": "Diffie-Hellman transmits the shared secret in cleartext, letting the attacker copy it", "correct": false, "rationale": "DH never transmits the shared secret; it is derived independently by each party, so this is not the weakness." },
+      { "text": "The discrete logarithm problem is trivially solvable", "correct": false, "rationale": "The discrete logarithm problem remains computationally hard; the attack exploits missing authentication, not broken math." },
+      { "text": "Diffie-Hellman keys are too short to resist brute force", "correct": false, "rationale": "The MITM works regardless of key length because authentication, not key strength, is the missing property." }
+    ]
+  },
+  {
+    "id": "d3-t7-a9",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Key Scaling",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement MOST accurately describes how key counts scale as the number of users grows in symmetric versus asymmetric systems?",
+    "options": [
+      { "text": "Symmetric requires n(n-1)/2 keys, while asymmetric requires only 2n keys (one pair per user)", "correct": true, "rationale": "Symmetric pairwise keys grow quadratically, whereas asymmetric needs just one key pair per user, which is why asymmetric scales far better for large populations." },
+      { "text": "Both scale identically at n keys total", "correct": false, "rationale": "They do not scale identically; symmetric pairwise key counts grow much faster than asymmetric." },
+      { "text": "Asymmetric requires n(n-1)/2 keys and symmetric requires 2n", "correct": false, "rationale": "This reverses the correct formulas; symmetric is the one with quadratic pairwise growth." },
+      { "text": "Symmetric requires only one key regardless of user count", "correct": false, "rationale": "A single shared key across all users would eliminate any per-pair confidentiality; secure symmetric use requires distinct pairwise keys." }
+    ]
+  },
+  {
+    "id": "d3-t7-a10",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "ElGamal Properties",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which of the following correctly describes the ElGamal cryptosystem?",
+    "options": [
+      { "text": "It is an asymmetric algorithm based on the discrete logarithm problem and produces ciphertext roughly twice the size of the plaintext", "correct": true, "rationale": "ElGamal is built on the same discrete logarithm foundation as Diffie-Hellman and is known for ciphertext expansion to about double the plaintext size." },
+      { "text": "It is a symmetric stream cipher used for bulk encryption", "correct": false, "rationale": "ElGamal is asymmetric, not a symmetric stream cipher." },
+      { "text": "It relies on the difficulty of integer factorization, like RSA", "correct": false, "rationale": "ElGamal relies on the discrete logarithm problem; integer factorization is RSA's basis." },
+      { "text": "It is a hash function producing a fixed 256-bit digest", "correct": false, "rationale": "ElGamal is an encryption/signature scheme, not a hash function." }
+    ]
+  },
+  {
+    "id": "d3-t7-b1",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Signing With Private Key",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A vendor publishes a signed software package. A customer wants to confirm the package truly came from the vendor. Which key does the customer use, and for what operation, to BEST verify origin?",
+    "options": [
+      { "text": "The vendor's public key, to verify the signature the vendor created with its private key", "correct": true, "rationale": "Verification uses the signer's public key; a valid result proves the signature was made with the corresponding private key held only by the vendor." },
+      { "text": "The customer's private key, to decrypt the signature", "correct": false, "rationale": "The customer's private key is unrelated to the vendor's signature and cannot verify the vendor's origin." },
+      { "text": "The vendor's private key, to re-sign and compare", "correct": false, "rationale": "The customer does not and must not possess the vendor's private key, so this is impossible." },
+      { "text": "A shared symmetric key, to compute a MAC", "correct": false, "rationale": "A symmetric MAC does not provide non-repudiation of the vendor's origin because both parties would share the key." }
+    ]
+  },
+  {
+    "id": "d3-t7-b2",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Encrypting With Recipient Public Key",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A user encrypts a document so that only the intended recipient can open it, but mistakenly encrypts it with their OWN public key. What is the MOST likely outcome?",
+    "options": [
+      { "text": "Only the sender can decrypt it, because it requires the sender's private key — the recipient cannot open it", "correct": true, "rationale": "Data encrypted with a public key is decryptable only by the matching private key; encrypting with one's own public key locks the recipient out." },
+      { "text": "The recipient can open it normally because public keys are interchangeable", "correct": false, "rationale": "Public keys are not interchangeable; each is bound to one specific private key, so the recipient's private key cannot decrypt it." },
+      { "text": "Both parties can decrypt it because it was public-key encrypted", "correct": false, "rationale": "Public-key encryption restricts decryption to the single matching private key, not to anyone." },
+      { "text": "The document is signed, not encrypted", "correct": false, "rationale": "Encrypting with a public key produces confidentiality-oriented ciphertext, not a signature." }
+    ]
+  },
+  {
+    "id": "d3-t7-b3",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Diffie-Hellman Key Exchange",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which statement BEST characterizes what Diffie-Hellman actually provides?",
+    "options": [
+      { "text": "Key agreement — two parties derive a shared secret without transmitting it", "correct": true, "rationale": "Diffie-Hellman is fundamentally a key agreement protocol; the shared secret is computed independently by each side and never sent." },
+      { "text": "Bulk data encryption of large files", "correct": false, "rationale": "DH does not encrypt data; it only establishes a shared secret that another algorithm then uses." },
+      { "text": "Authentication of both parties' identities", "correct": false, "rationale": "Plain DH provides no authentication, which is why it must be combined with signatures or certificates." },
+      { "text": "A one-way hash of the session", "correct": false, "rationale": "DH is a key agreement mechanism, not a hashing function." }
+    ]
+  },
+  {
+    "id": "d3-t7-b4",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Asymmetric Speed Limitation",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During a design review, an engineer proposes encrypting every 2 GB video file end-to-end directly with the recipient's RSA public key. What is the PRIMARY problem with this approach?",
+    "options": [
+      { "text": "Asymmetric encryption is far too slow and size-limited for bulk data; a symmetric session key should encrypt the file instead", "correct": true, "rationale": "RSA is orders of magnitude slower than symmetric ciphers and can only encrypt small blocks, so bulk data must be encrypted with a symmetric key exchanged via asymmetric crypto." },
+      { "text": "RSA cannot provide any confidentiality", "correct": false, "rationale": "RSA can provide confidentiality; the issue is performance and block-size limits for large data, not a lack of confidentiality." },
+      { "text": "Public keys must be kept secret, so distributing them breaks security", "correct": false, "rationale": "Public keys are meant to be shared openly; secrecy applies only to private keys." },
+      { "text": "The recipient would need the sender's private key to decrypt", "correct": false, "rationale": "The recipient decrypts with their own private key that matches the public key used; the sender's private key is not involved." }
+    ]
+  },
+  {
+    "id": "d3-t7-b5",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "ECC vs RSA Strength",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which comparison MOST accurately reflects the relationship between ECC and RSA key sizes at comparable security strength?",
+    "options": [
+      { "text": "A 256-bit ECC key provides security roughly comparable to a 3072-bit RSA key", "correct": true, "rationale": "ECC's underlying problem is harder per bit, so it reaches RSA-equivalent strength with far smaller keys — about 256-bit ECC ≈ 3072-bit RSA." },
+      { "text": "A 256-bit ECC key is far weaker than any RSA key because it is shorter", "correct": false, "rationale": "Key length cannot be compared across different algorithms directly; ECC achieves strong security with shorter keys." },
+      { "text": "ECC and RSA require identical key sizes for the same strength", "correct": false, "rationale": "They do not; ECC requires substantially smaller keys than RSA for equivalent strength." },
+      { "text": "A 3072-bit ECC key is needed to match a 256-bit RSA key", "correct": false, "rationale": "This reverses the relationship; RSA needs the larger key, not ECC." }
+    ]
+  },
+  {
+    "id": "d3-t7-b6",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Confidentiality Plus Non-repudiation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Alice must send Bob a message that only Bob can read AND that Bob can prove came from Alice. Using asymmetric cryptography, which combination of keys BEST satisfies both requirements?",
+    "options": [
+      { "text": "Encrypt with Bob's public key for confidentiality, and sign with Alice's private key for origin proof", "correct": true, "rationale": "Bob's public key restricts reading to Bob's private key (confidentiality), while Alice's private-key signature lets Bob verify origin with Alice's public key (non-repudiation)." },
+      { "text": "Encrypt with Alice's public key and sign with Bob's private key", "correct": false, "rationale": "Encrypting with Alice's public key would let only Alice read it, and Alice cannot sign with Bob's private key — both roles are reversed." },
+      { "text": "Encrypt with Bob's private key and sign with Alice's public key", "correct": false, "rationale": "Neither party can use the other's private key or their own public key for these operations; both assignments are invalid." },
+      { "text": "Encrypt and sign both using a single shared symmetric key", "correct": false, "rationale": "A shared symmetric key cannot provide non-repudiation because both parties hold the same key." }
+    ]
+  },
+  {
+    "id": "d3-t7-b7",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Discrete Logarithm Problem",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "The security of both Diffie-Hellman and ElGamal is based on the difficulty of which problem?",
+    "options": [
+      { "text": "The discrete logarithm problem", "correct": true, "rationale": "Both Diffie-Hellman and ElGamal derive their security from the computational hardness of the discrete logarithm problem." },
+      { "text": "Integer factorization", "correct": false, "rationale": "Integer factorization is the basis of RSA, not Diffie-Hellman or ElGamal." },
+      { "text": "Hash collision resistance", "correct": false, "rationale": "Collision resistance is a property of hash functions, not of these asymmetric key algorithms." },
+      { "text": "The knapsack subset-sum problem", "correct": false, "rationale": "The knapsack problem underlies some historical (broken) cryptosystems, not Diffie-Hellman or ElGamal." }
+    ]
+  },
+  {
+    "id": "d3-t7-b8",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Ephemeral Key Exchange",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A security architect wants each TLS session to use a unique key that is discarded afterward, so that no single stolen key can expose multiple sessions. Which cipher suite property BEST delivers this?",
+    "options": [
+      { "text": "Ephemeral key exchange such as ECDHE, which generates and discards a fresh key per session", "correct": true, "rationale": "Ephemeral (E) key exchange creates temporary per-session keys that are discarded, giving forward secrecy so one compromised key does not affect other sessions." },
+      { "text": "Static RSA key transport reused across all sessions", "correct": false, "rationale": "Reusing static key transport means one stolen key exposes many recorded sessions — the opposite of the goal." },
+      { "text": "A longer symmetric key used for every session", "correct": false, "rationale": "Reusing the same long key across sessions still exposes all of them if that key is compromised." },
+      { "text": "Disabling key exchange entirely and pre-sharing one key", "correct": false, "rationale": "A single pre-shared key used for every session provides no per-session isolation or forward secrecy." }
+    ]
+  },
+  {
+    "id": "d3-t7-b9",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "Non-repudiation Requires Asymmetric",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A dispute arises over whether a specific user approved a transaction. Management wants cryptographic assurance that the user, and only the user, could have authorized it. What is the PRIMARY reason a symmetric-key MAC would be insufficient here?",
+    "options": [
+      { "text": "Both parties share the symmetric key, so either could have produced the MAC, defeating non-repudiation", "correct": true, "rationale": "Non-repudiation requires a secret uniquely held by one party; because a symmetric key is shared, the MAC cannot prove which party created it." },
+      { "text": "Symmetric MACs cannot detect any tampering", "correct": false, "rationale": "MACs do detect tampering; the limitation is proving unique authorship, not integrity." },
+      { "text": "Symmetric algorithms are too slow to compute a MAC", "correct": false, "rationale": "Symmetric algorithms are fast; speed is not the reason a MAC fails for non-repudiation." },
+      { "text": "MACs require a public key infrastructure to function", "correct": false, "rationale": "MACs use a shared symmetric key and do not require PKI; the issue is shared-key ambiguity." }
+    ]
+  },
+  {
+    "id": "d3-t7-b10",
+    "domainId": "d3",
+    "topicId": "d3-t7",
+    "subtopicTag": "RSA Key Sizes",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which of the following is MOST representative of currently recommended RSA key sizes for general-purpose security?",
+    "options": [
+      { "text": "2048-bit or 3072-bit", "correct": true, "rationale": "2048-bit is the common baseline and 3072-bit is recommended for longer-term security in modern RSA deployments." },
+      { "text": "56-bit or 64-bit", "correct": false, "rationale": "These are symmetric-cipher-scale sizes (e.g., old DES) and are far too small for RSA, which needs thousands of bits." },
+      { "text": "128-bit or 256-bit", "correct": false, "rationale": "128/256-bit are typical symmetric (AES) or ECC key sizes; RSA requires much larger keys for equivalent strength." },
+      { "text": "16-bit or 32-bit", "correct": false, "rationale": "Such tiny keys would be trivially factored and are never used for RSA." }
+    ]
+  }
+]

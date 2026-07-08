@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t9-a1",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "CA Role",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In a PKI, what is the PRIMARY role of a Certificate Authority (CA)?",
+    "options": [
+      { "text": "To issue and digitally sign certificates that bind public keys to identities", "correct": true, "rationale": "The CA is the trusted issuer that signs certificates, vouching that a public key belongs to the named identity." },
+      { "text": "To store users' private keys for them", "correct": false, "rationale": "CAs do not hold subscribers' private keys; private keys stay with their owners." },
+      { "text": "To encrypt all network traffic directly", "correct": false, "rationale": "The CA issues certificates; it does not itself encrypt users' traffic." },
+      { "text": "To act as a firewall", "correct": false, "rationale": "A CA is a certificate-issuing authority, not a network firewall." }
+    ]
+  },
+  {
+    "id": "d3-t9-a2",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "RA Role",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before a CA issues a certificate, an entity verifies the requestor's identity. Which PKI component MOST directly performs this?",
+    "options": [
+      { "text": "The Registration Authority (RA)", "correct": true, "rationale": "The RA verifies the identity of certificate requestors on the CA's behalf before issuance." },
+      { "text": "The Certificate Revocation List (CRL)", "correct": false, "rationale": "The CRL lists revoked certificates; it does not verify requestor identity." },
+      { "text": "The end user's browser", "correct": false, "rationale": "The browser validates certificates during connections; it does not perform issuance-time identity vetting." },
+      { "text": "The OCSP responder", "correct": false, "rationale": "OCSP reports revocation status; it does not verify identity for issuance." }
+    ]
+  },
+  {
+    "id": "d3-t9-a3",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Chain of Trust",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A browser trusts a website's certificate. What MOST directly enables that trust?",
+    "options": [
+      { "text": "The certificate chains up to a root CA already trusted in the browser's trust store", "correct": true, "rationale": "Trust flows through the chain: the browser trusts the root CA, which (directly or via subordinates) signed the site's certificate." },
+      { "text": "The certificate simply contains a public key", "correct": false, "rationale": "A public key alone proves nothing; trust comes from a trusted CA's signature and chain, not the key's mere presence." },
+      { "text": "The website asked the browser to trust it", "correct": false, "rationale": "A site's request does not create trust; validation against a trusted CA chain does." },
+      { "text": "The certificate is self-signed", "correct": false, "rationale": "A self-signed certificate not chained to a trusted root would trigger a warning, not automatic trust." }
+    ]
+  },
+  {
+    "id": "d3-t9-a4",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "CRL vs OCSP",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A system needs to check in real time whether a specific certificate has been revoked, avoiding a potentially stale list. Which mechanism is BEST?",
+    "options": [
+      { "text": "OCSP (Online Certificate Status Protocol)", "correct": true, "rationale": "OCSP provides a real-time, per-certificate revocation status query, avoiding the staleness of a periodically published list." },
+      { "text": "A downloaded CRL that updates once a day", "correct": false, "rationale": "A CRL can be stale between publications, so it does not meet the real-time requirement as well as OCSP." },
+      { "text": "Ignoring revocation entirely", "correct": false, "rationale": "Skipping revocation checks risks trusting a revoked (possibly compromised) certificate." },
+      { "text": "Checking the certificate's expiration date only", "correct": false, "rationale": "Expiration does not reveal early revocation; a valid-dated certificate can still be revoked." }
+    ]
+  },
+  {
+    "id": "d3-t9-a5",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "X.509 Standard",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which standard defines the common format for public key certificates used in PKI?",
+    "options": [
+      { "text": "X.509", "correct": true, "rationale": "X.509 is the standard format for public key certificates in PKI." },
+      { "text": "802.11", "correct": false, "rationale": "802.11 is a wireless networking standard, not a certificate format." },
+      { "text": "RFC 1918", "correct": false, "rationale": "RFC 1918 defines private IP address ranges, unrelated to certificates." },
+      { "text": "AES", "correct": false, "rationale": "AES is a symmetric cipher, not a certificate format standard." }
+    ]
+  },
+  {
+    "id": "d3-t9-a6",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Root CA Compromise",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker steals a hierarchical PKI's root CA private key. What is the MOST severe consequence?",
+    "options": [
+      { "text": "The attacker can forge trusted certificates, undermining trust in the entire hierarchy beneath the root", "correct": true, "rationale": "Compromise of the root private key lets an attacker issue certificates that everything below the root trusts, collapsing the whole PKI's trust." },
+      { "text": "Only a single certificate is affected", "correct": false, "rationale": "The root anchors all trust; its compromise affects every certificate in the hierarchy, not just one." },
+      { "text": "Nothing, because roots are not important", "correct": false, "rationale": "The root is the most critical trust anchor; its compromise is catastrophic." },
+      { "text": "Only availability is impacted", "correct": false, "rationale": "The impact is a trust/authenticity catastrophe (forgeable certs), not merely availability." }
+    ]
+  },
+  {
+    "id": "d3-t9-a7",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Certificate Binding",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What does a digital certificate MOST fundamentally bind together?",
+    "options": [
+      { "text": "A public key and an identity, attested by the CA's signature", "correct": true, "rationale": "A certificate binds a public key to an identity and is signed by the CA to make that binding trustworthy." },
+      { "text": "A private key and a password", "correct": false, "rationale": "Certificates contain the public key, not the private key, and do not bind a password." },
+      { "text": "Two symmetric session keys", "correct": false, "rationale": "Certificates concern asymmetric public keys and identity, not symmetric session keys." },
+      { "text": "An IP address and a MAC address", "correct": false, "rationale": "Certificates bind identity to a public key, not network-layer addresses." }
+    ]
+  },
+  {
+    "id": "d3-t9-a8",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Web of Trust",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "PGP users validate each other's keys by personally vouching for them, with no central authority. This trust model is MOST accurately called what?",
+    "options": [
+      { "text": "Web of trust", "correct": true, "rationale": "PGP uses a decentralized web of trust where users sign/vouch for each other's keys without a central CA." },
+      { "text": "Hierarchical CA model", "correct": false, "rationale": "A hierarchical model has a central root CA, the opposite of PGP's decentralized approach." },
+      { "text": "Bridge CA model", "correct": false, "rationale": "A bridge CA links separate hierarchies; it is still CA-based, unlike the web of trust." },
+      { "text": "Kerberos realm model", "correct": false, "rationale": "Kerberos is an authentication protocol with a KDC, not the PGP web of trust." }
+    ]
+  },
+  {
+    "id": "d3-t9-a9",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Certificate Validation Steps",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When validating a server certificate, which check is LEAST relevant to establishing trust?",
+    "options": [
+      { "text": "The color scheme of the website's homepage", "correct": true, "rationale": "Website styling has no bearing on certificate validity; it is least relevant to trust validation." },
+      { "text": "Whether it is signed by a trusted CA (chain of trust)", "correct": false, "rationale": "CA signature/chain validation is central to trusting a certificate." },
+      { "text": "Whether it is within its validity period", "correct": false, "rationale": "Expiration checking is a standard, relevant validation step." },
+      { "text": "Whether it has been revoked (CRL/OCSP)", "correct": false, "rationale": "Revocation checking is an important part of certificate validation." }
+    ]
+  },
+  {
+    "id": "d3-t9-a10",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Bridge CA",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two large organizations each have their own PKI hierarchy and want to trust each other's certificates without merging hierarchies. Which approach MOST directly enables this?",
+    "options": [
+      { "text": "A bridge CA that links the two separate hierarchies", "correct": true, "rationale": "A bridge CA connects otherwise-separate PKI hierarchies so each can trust the other's certificates without a common root." },
+      { "text": "Deleting both root CAs", "correct": false, "rationale": "Removing the roots would destroy trust within each organization, not connect them." },
+      { "text": "Sharing all private keys between organizations", "correct": false, "rationale": "Sharing private keys is a severe security violation and not how cross-organization trust is established." },
+      { "text": "Turning off certificate validation", "correct": false, "rationale": "Disabling validation removes trust assurance entirely rather than enabling cross-trust." }
+    ]
+  },
+  {
+    "id": "d3-t9-b1",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Revocation Reason",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An administrator learns a server's private key was exposed. Regarding the server's certificate, what should be done FIRST?",
+    "options": [
+      { "text": "Revoke the certificate so relying parties stop trusting the compromised key", "correct": true, "rationale": "A compromised private key means the certificate must be revoked promptly so clients (via CRL/OCSP) no longer trust it." },
+      { "text": "Wait for the certificate to expire naturally", "correct": false, "rationale": "Waiting leaves the compromised key trusted until expiry, an unacceptable exposure window." },
+      { "text": "Email users asking them to ignore the site", "correct": false, "rationale": "Informal requests do not technically stop trust in the certificate; revocation does." },
+      { "text": "Do nothing since the public key is still valid-looking", "correct": false, "rationale": "The matching private key is compromised, so the certificate must be revoked regardless of appearance." }
+    ]
+  },
+  {
+    "id": "d3-t9-b2",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "CRL Staleness",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A client relies only on a CRL that updates every 24 hours. What is the MOST significant limitation?",
+    "options": [
+      { "text": "A certificate revoked within the last day may still appear valid until the next CRL update", "correct": true, "rationale": "Because CRLs are periodically published, recently revoked certificates can be trusted until the list refreshes, creating a window of risk that OCSP would reduce." },
+      { "text": "CRLs cannot list any revoked certificates", "correct": false, "rationale": "CRLs specifically list revoked certificates; the limitation is freshness, not capability." },
+      { "text": "CRLs verify identity at issuance", "correct": false, "rationale": "Identity verification is the RA's job; CRLs only report revocation status." },
+      { "text": "CRLs encrypt web traffic", "correct": false, "rationale": "CRLs do not encrypt traffic; they list revoked certificates." }
+    ]
+  },
+  {
+    "id": "d3-t9-b3",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Hierarchical Model",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In a hierarchical PKI trust model, what sits at the top as the ultimate trust anchor?",
+    "options": [
+      { "text": "The root CA", "correct": true, "rationale": "The root CA is the top trust anchor; its self-signed certificate underpins the chain of trust." },
+      { "text": "The end user's certificate", "correct": false, "rationale": "End-entity certificates are at the bottom of the chain, not the trust anchor." },
+      { "text": "The CRL", "correct": false, "rationale": "The CRL lists revoked certificates; it is not the trust anchor." },
+      { "text": "The firewall", "correct": false, "rationale": "A firewall is a network control, unrelated to being a PKI trust anchor." }
+    ]
+  },
+  {
+    "id": "d3-t9-b4",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Certificate Contents",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is a certificate MOST expected to contain?",
+    "options": [
+      { "text": "The subject's public key, identity, validity period, and the CA's signature", "correct": true, "rationale": "An X.509 certificate contains the public key, subject identity, validity dates, issuer, and the CA's digital signature." },
+      { "text": "The subject's private key", "correct": false, "rationale": "Certificates never contain the private key; that stays secret with the owner." },
+      { "text": "The user's plaintext password", "correct": false, "rationale": "Passwords are not part of a certificate." },
+      { "text": "A full copy of the CA's database", "correct": false, "rationale": "A certificate does not embed the CA's database; it is a single signed identity-key binding." }
+    ]
+  },
+  {
+    "id": "d3-t9-b5",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Mesh Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Several CAs cross-certify each other as peers with no single root. This is MOST accurately which trust model?",
+    "options": [
+      { "text": "Mesh (cross-certification) model", "correct": true, "rationale": "In a mesh model, CAs certify each other peer-to-peer without a single hierarchical root." },
+      { "text": "Strict hierarchical model", "correct": false, "rationale": "A hierarchical model has a single root at the top, unlike a peer mesh." },
+      { "text": "Web of trust", "correct": false, "rationale": "Web of trust is user-to-user vouching without CAs; the scenario describes CAs cross-certifying." },
+      { "text": "Single-CA model", "correct": false, "rationale": "The scenario has multiple CAs certifying each other, not a single CA." }
+    ]
+  },
+  {
+    "id": "d3-t9-b6",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Self-Signed Certificate",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A public website presents a self-signed certificate. Why do browsers MOST likely warn users?",
+    "options": [
+      { "text": "It is not chained to a CA in the browser's trust store, so its identity claim is unverified by a trusted third party", "correct": true, "rationale": "Self-signed certificates lack a trusted CA's endorsement, so the browser cannot verify the identity and warns the user." },
+      { "text": "Self-signed certificates cannot contain a public key", "correct": false, "rationale": "Self-signed certificates do contain a public key; the issue is lack of trusted-CA endorsement." },
+      { "text": "Browsers dislike encryption", "correct": false, "rationale": "Browsers support encryption; they warn because trust cannot be established, not due to opposing encryption." },
+      { "text": "Self-signed certificates are always expired", "correct": false, "rationale": "Self-signed certificates are not inherently expired; the warning is about untrusted issuance." }
+    ]
+  },
+  {
+    "id": "d3-t9-b7",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "OCSP Stapling",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To reduce per-client OCSP lookups and latency while still proving a certificate is not revoked, a server attaches a recent signed OCSP response to its TLS handshake. This technique is BEST known as what?",
+    "options": [
+      { "text": "OCSP stapling", "correct": true, "rationale": "OCSP stapling has the server include a time-stamped, CA-signed OCSP response in the handshake, so clients get revocation status without querying the responder themselves." },
+      { "text": "Certificate pinning", "correct": false, "rationale": "Pinning ties a host to specific certificates/keys; it is not the stapling of an OCSP response." },
+      { "text": "Key escrow", "correct": false, "rationale": "Key escrow is about storing keys for recovery, unrelated to revocation stapling." },
+      { "text": "Session resumption", "correct": false, "rationale": "Session resumption speeds reconnections; it does not convey revocation status." }
+    ]
+  },
+  {
+    "id": "d3-t9-b8",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Trust Anchor Distribution",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "For clients to validate certificates in a hierarchical PKI, what MOST fundamentally must be distributed to them in advance?",
+    "options": [
+      { "text": "The trusted root CA certificate(s) placed in their trust store", "correct": true, "rationale": "Clients need the root CA's certificate pre-installed as a trust anchor so they can validate chains leading up to it." },
+      { "text": "Every end user's private key", "correct": false, "rationale": "Private keys are never distributed; clients only need the trusted root certificate." },
+      { "text": "The CA's full private key", "correct": false, "rationale": "Distributing the CA's private key would destroy the PKI's security." },
+      { "text": "A list of all future certificates", "correct": false, "rationale": "Clients cannot receive all future certificates in advance; they validate dynamically via the trusted root." }
+    ]
+  },
+  {
+    "id": "d3-t9-b9",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "RA vs CA Distinction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which statement MOST correctly distinguishes the RA from the CA?",
+    "options": [
+      { "text": "The RA verifies identities; the CA issues and signs the certificates", "correct": true, "rationale": "The RA handles identity verification, while the CA performs issuance and signing — distinct roles the exam tests." },
+      { "text": "The RA signs certificates; the CA verifies identities", "correct": false, "rationale": "This reverses their roles; the CA signs and the RA verifies identity." },
+      { "text": "Both roles store users' private keys", "correct": false, "rationale": "Neither role stores subscribers' private keys as a core function." },
+      { "text": "The RA and CA are the same as a firewall", "correct": false, "rationale": "Neither is a firewall; they are PKI roles." }
+    ]
+  },
+  {
+    "id": "d3-t9-b10",
+    "domainId": "d3",
+    "topicId": "d3-t9",
+    "subtopicTag": "Certificate Pinning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A mobile app wants to accept only a specific known certificate/public key for its backend, resisting a fraudulently issued certificate from any CA. Which technique BEST achieves this?",
+    "options": [
+      { "text": "Certificate (or public key) pinning", "correct": true, "rationale": "Pinning hard-codes the expected certificate/key so the app rejects even validly-chained but unexpected certificates, defeating mis-issuance/MITM." },
+      { "text": "Trusting all CAs equally with no pinning", "correct": false, "rationale": "Trusting any CA-issued certificate is exactly what pinning is designed to constrain." },
+      { "text": "Disabling TLS", "correct": false, "rationale": "Disabling TLS removes protection entirely, the opposite of hardening trust." },
+      { "text": "Using a self-signed certificate with no validation", "correct": false, "rationale": "Skipping validation weakens security; pinning specifically strengthens it against mis-issuance." }
+    ]
+  }
+]

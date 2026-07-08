@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t13-a1",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Mantrap Defeats Tailgating",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Unauthorized people keep following badged employees through a secure door (tailgating). Which control BEST prevents this?",
+    "options": [
+      { "text": "A mantrap / access-control vestibule that admits one person at a time", "correct": true, "rationale": "A mantrap (access-control vestibule) uses interlocking doors to allow only one person through at a time, directly defeating tailgating/piggybacking." },
+      { "text": "A brighter hallway light", "correct": false, "rationale": "Lighting improves visibility but does not physically prevent someone from following through the door." },
+      { "text": "A taller ceiling", "correct": false, "rationale": "Ceiling height has no effect on tailgating." },
+      { "text": "A louder door chime", "correct": false, "rationale": "A chime does not stop an unauthorized person from entering behind an employee." }
+    ]
+  },
+  {
+    "id": "d3-t13-a2",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Clean Agent for Computer Room",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A data center needs fire suppression that will not destroy its electronics. Which suppression type is BEST?",
+    "options": [
+      { "text": "A clean-agent/gas system (e.g., FM-200 or inert gas)", "correct": true, "rationale": "Clean-agent gas systems suppress fire without water damage to electronics, making them ideal for computer rooms (Halon is banned; FM-200/inert gases replace it)." },
+      { "text": "A standard wet-pipe water sprinkler directly over the servers", "correct": false, "rationale": "Water would damage the electronics; it is not preferred for computer rooms." },
+      { "text": "A Halon system", "correct": false, "rationale": "Halon is banned due to ozone depletion; modern clean agents replace it." },
+      { "text": "No suppression at all", "correct": false, "rationale": "Omitting suppression leaves a fire unchecked, endangering people and equipment." }
+    ]
+  },
+  {
+    "id": "d3-t13-a3",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Fire Class C Electrical",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An electrical fire ignites in a server rack. This is MOST accurately which fire class, and what agent is appropriate?",
+    "options": [
+      { "text": "Class C — use a non-conductive agent (e.g., CO2 or clean agent), not water", "correct": true, "rationale": "Electrical fires are Class C and require a non-conductive suppression agent to avoid electrocution and equipment damage." },
+      { "text": "Class A — douse with water", "correct": false, "rationale": "Class A is ordinary combustibles; using water on an energized electrical fire is dangerous." },
+      { "text": "Class K — use wet chemical", "correct": false, "rationale": "Class K is for cooking oils, not electrical equipment." },
+      { "text": "Class D — use dry metal powder", "correct": false, "rationale": "Class D is combustible metals, not electrical equipment." }
+    ]
+  },
+  {
+    "id": "d3-t13-a4",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "UPS vs Generator",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A facility must ride through both brief power blips and multi-hour outages. Which combination MOST appropriately addresses both?",
+    "options": [
+      { "text": "A UPS for short outages/clean power plus a generator for extended outages", "correct": true, "rationale": "A UPS covers brief interruptions and conditions power, while a generator sustains operations through long outages beyond battery runtime." },
+      { "text": "A UPS alone for all multi-hour outages", "correct": false, "rationale": "UPS batteries are for short durations; extended outages require a generator." },
+      { "text": "A generator alone with no UPS", "correct": false, "rationale": "Generators take time to start; a UPS is needed to bridge that gap and clean the power." },
+      { "text": "A brighter emergency light only", "correct": false, "rationale": "Emergency lighting does not power the facility's equipment." }
+    ]
+  },
+  {
+    "id": "d3-t13-a5",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Brownout Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In power terminology, a 'brownout' refers to which of the following?",
+    "options": [
+      { "text": "A prolonged drop in voltage", "correct": true, "rationale": "A brownout is a sustained reduction in voltage, distinct from a momentary sag or a full blackout." },
+      { "text": "A momentary spike in voltage", "correct": false, "rationale": "That describes a spike/surge, not a brownout." },
+      { "text": "A complete prolonged loss of power", "correct": false, "rationale": "That is a blackout, not a brownout." },
+      { "text": "A momentary complete loss of power", "correct": false, "rationale": "That is a fault, not a brownout." }
+    ]
+  },
+  {
+    "id": "d3-t13-a6",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "HVAC Positive Pressure",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why is positive air pressure MOST desirable in a sensitive equipment room?",
+    "options": [
+      { "text": "Air flows outward, keeping smoke, dust, and contaminants from entering when doors open", "correct": true, "rationale": "Positive pressure pushes air out, preventing contaminants and smoke from being drawn into the protected space." },
+      { "text": "It pulls outside air and contaminants inward", "correct": false, "rationale": "That describes negative pressure, which would draw contaminants in — the opposite of the goal." },
+      { "text": "It makes the room colder than absolute zero", "correct": false, "rationale": "This is physically nonsensical and unrelated to pressure's purpose." },
+      { "text": "It increases humidity to cause condensation", "correct": false, "rationale": "Condensation is undesirable; positive pressure is about keeping contaminants out, not raising humidity." }
+    ]
+  },
+  {
+    "id": "d3-t13-a7",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Humidity Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A server room's humidity is far too low. What is the MOST likely resulting risk?",
+    "options": [
+      { "text": "Static electricity discharge that can damage electronic components", "correct": true, "rationale": "Low humidity increases static buildup, and electrostatic discharge can harm sensitive electronics." },
+      { "text": "Excessive condensation on equipment", "correct": false, "rationale": "Condensation results from high humidity, not low humidity." },
+      { "text": "Improved cooling with no downside", "correct": false, "rationale": "Overly dry air introduces static risk; it is not a benign condition." },
+      { "text": "Automatic fire suppression activation", "correct": false, "rationale": "Low humidity does not trigger fire suppression." }
+    ]
+  },
+  {
+    "id": "d3-t13-a8",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Bollards",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To prevent a vehicle from ramming through a building entrance, which control is BEST?",
+    "options": [
+      { "text": "Bollards (sturdy vehicle barriers) at the entrance", "correct": true, "rationale": "Bollards are designed to stop vehicles from ramming a building or protected area." },
+      { "text": "A welcome mat", "correct": false, "rationale": "A mat provides no vehicle-stopping protection." },
+      { "text": "A brighter sign", "correct": false, "rationale": "Signage may warn but does not physically stop a vehicle." },
+      { "text": "A taller flagpole", "correct": false, "rationale": "A flagpole is not a vehicle barrier." }
+    ]
+  },
+  {
+    "id": "d3-t13-a9",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Preaction Sprinkler",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A computer area wants a water-based system that reduces accidental discharge risk by requiring both a detector and a sprinkler head to activate before water flows. Which system is BEST?",
+    "options": [
+      { "text": "A preaction sprinkler system", "correct": true, "rationale": "Preaction systems keep pipes dry and require both detection and head activation before releasing water, reducing accidental water damage risk in sensitive areas." },
+      { "text": "A wet-pipe system always full of water", "correct": false, "rationale": "Wet-pipe pipes are always charged, increasing accidental-discharge risk near electronics." },
+      { "text": "A deluge system that opens all heads at once", "correct": false, "rationale": "Deluge floods the whole area immediately, unsuitable for reducing accidental discharge in a computer room." },
+      { "text": "No system, relying on luck", "correct": false, "rationale": "Omitting suppression is unsafe; a preaction system meets the stated goal." }
+    ]
+  },
+  {
+    "id": "d3-t13-a10",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Life Safety in Suppression",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Before a gas-based suppression system discharges in an occupied room, what should FIRST occur to protect people?",
+    "options": [
+      { "text": "An alarm/pre-discharge warning with time for occupants to evacuate safely", "correct": true, "rationale": "Occupants must be alerted and given time to evacuate before a gas agent discharges, since life safety takes precedence over equipment protection." },
+      { "text": "Immediate discharge with no warning", "correct": false, "rationale": "Discharging without warning could endanger occupants, violating life-safety priority." },
+      { "text": "Locking occupants in to contain the agent", "correct": false, "rationale": "Trapping people endangers life and is never acceptable." },
+      { "text": "Turning off all exits", "correct": false, "rationale": "Blocking exits prevents safe evacuation, violating life safety." }
+    ]
+  },
+  {
+    "id": "d3-t13-b1",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Halon Banned",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A legacy computer room still uses a Halon fire-suppression system. What is the MOST accurate concern?",
+    "options": [
+      { "text": "Halon is banned as an ozone-depleting substance and should be replaced with a modern clean agent", "correct": true, "rationale": "Halon production is banned due to ozone depletion; replacements like FM-200 or inert gases are used instead." },
+      { "text": "Halon is the safest and most modern option available", "correct": false, "rationale": "Halon is outdated and banned; it is not the modern option." },
+      { "text": "Halon is a water-based system", "correct": false, "rationale": "Halon is a gaseous agent, not water-based." },
+      { "text": "Halon must be sprayed directly on people", "correct": false, "rationale": "Suppression agents are not applied to people, and this misrepresents the concern (which is the ozone ban)." }
+    ]
+  },
+  {
+    "id": "d3-t13-b2",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Fire Class Matching",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A kitchen grease fire ignites. This is MOST accurately which fire class?",
+    "options": [
+      { "text": "Class K (cooking oils/fats)", "correct": true, "rationale": "Cooking oil/grease fires are Class K, requiring wet chemical suppression designed for kitchens." },
+      { "text": "Class C (electrical)", "correct": false, "rationale": "Class C is electrical fires, not cooking oils." },
+      { "text": "Class A (ordinary combustibles)", "correct": false, "rationale": "Grease fires are Class K, not ordinary combustibles." },
+      { "text": "Class D (metals)", "correct": false, "rationale": "Class D is combustible metals, not cooking oils." }
+    ]
+  },
+  {
+    "id": "d3-t13-b3",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Fence Height",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To deter determined intruders at a perimeter, which fence specification is MOST appropriate?",
+    "options": [
+      { "text": "An ~8-foot fence topped with barbed/razor wire", "correct": true, "rationale": "Roughly 8 feet with barbed wire is guidance for deterring determined intruders, versus lower fences that only deter casual trespass." },
+      { "text": "A 2-foot decorative fence", "correct": false, "rationale": "A very low fence deters only casual entry, not determined intruders." },
+      { "text": "No fence at all", "correct": false, "rationale": "No perimeter barrier offers no deterrence or delay." },
+      { "text": "A painted line on the ground", "correct": false, "rationale": "A painted line provides no physical barrier." }
+    ]
+  },
+  {
+    "id": "d3-t13-b4",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Water on Electronics",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which suppression choice is LEAST appropriate directly over energized computer equipment?",
+    "options": [
+      { "text": "A wet-pipe water sprinkler discharging onto the equipment", "correct": true, "rationale": "Water on energized electronics risks equipment damage and shock, making it the least appropriate direct choice for a computer room." },
+      { "text": "A clean-agent gas system", "correct": false, "rationale": "Clean agents suppress fire without water damage, appropriate for electronics." },
+      { "text": "A CO2 system (with life-safety precautions)", "correct": false, "rationale": "CO2 is non-conductive and can be appropriate for electrical fires with proper safety measures." },
+      { "text": "A preaction system reducing accidental discharge", "correct": false, "rationale": "Preaction reduces accidental water release, more appropriate than a wet-pipe system in sensitive areas." }
+    ]
+  },
+  {
+    "id": "d3-t13-b5",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "UPS Function",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY function of a UPS in a facility?",
+    "options": [
+      { "text": "To provide immediate battery-backed, conditioned power during brief outages and voltage disturbances", "correct": true, "rationale": "A UPS supplies clean, uninterrupted power for short outages and smooths voltage fluctuations, bridging to a generator if needed." },
+      { "text": "To permanently power the facility for weeks", "correct": false, "rationale": "UPS batteries are short-duration; extended power needs a generator." },
+      { "text": "To encrypt network traffic", "correct": false, "rationale": "A UPS is a power device, not an encryption tool." },
+      { "text": "To suppress fires", "correct": false, "rationale": "A UPS provides power, not fire suppression." }
+    ]
+  },
+  {
+    "id": "d3-t13-b6",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Lock Vulnerability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Relying solely on standard pin-tumbler locks for a high-security area is risky MOST because of which weakness?",
+    "options": [
+      { "text": "They can be picked or bumped, so they should be layered with other controls", "correct": true, "rationale": "Mechanical locks are vulnerable to picking/bumping; high-security areas need layered controls (guards, access systems, monitoring)." },
+      { "text": "They require electricity to function", "correct": false, "rationale": "Standard mechanical locks do not require electricity; the concern is picking/bumping." },
+      { "text": "They automatically unlock at night", "correct": false, "rationale": "Standard locks do not auto-unlock; that is not their inherent weakness." },
+      { "text": "They encrypt the door", "correct": false, "rationale": "Locks do not encrypt; the weakness is mechanical bypass." }
+    ]
+  },
+  {
+    "id": "d3-t13-b7",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "CCTV Purpose",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Installing monitored CCTV throughout a facility MOST directly supports which combination of objectives?",
+    "options": [
+      { "text": "Detection and deterrence (and evidence for response)", "correct": true, "rationale": "Visible CCTV deters, and monitored/recorded footage detects incidents and supports investigation/response." },
+      { "text": "Fire suppression", "correct": false, "rationale": "CCTV monitors; it does not suppress fires." },
+      { "text": "Power conditioning", "correct": false, "rationale": "CCTV is unrelated to power conditioning." },
+      { "text": "Data encryption at rest", "correct": false, "rationale": "CCTV is a physical monitoring control, not a data-encryption mechanism." }
+    ]
+  },
+  {
+    "id": "d3-t13-b8",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Surge Protection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To protect equipment from momentary high-voltage spikes, which control is BEST?",
+    "options": [
+      { "text": "Surge protection / line conditioning (often built into a UPS)", "correct": true, "rationale": "Surge protectors and line conditioners absorb voltage spikes to protect equipment; UPS units commonly include this." },
+      { "text": "A fire extinguisher", "correct": false, "rationale": "Fire extinguishers address fire, not electrical spikes." },
+      { "text": "A brighter light bulb", "correct": false, "rationale": "Lighting does not protect against voltage spikes." },
+      { "text": "A louder alarm", "correct": false, "rationale": "An alarm does not condition or protect against power spikes." }
+    ]
+  },
+  {
+    "id": "d3-t13-b9",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Guard Advantage",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Compared with purely automated controls, what is the MOST distinctive advantage of using human security guards?",
+    "options": [
+      { "text": "Discretionary judgment to assess unusual situations and respond flexibly", "correct": true, "rationale": "Guards can exercise judgment and adapt to novel or ambiguous situations in ways fixed automated controls cannot." },
+      { "text": "They never need training or rest", "correct": false, "rationale": "Guards require training and rest; this is a limitation, not an advantage." },
+      { "text": "They are always cheaper than any technology", "correct": false, "rationale": "Guards are often more costly than automation; cost is not their distinctive advantage." },
+      { "text": "They encrypt data automatically", "correct": false, "rationale": "Guards are a physical control and do not encrypt data." }
+    ]
+  },
+  {
+    "id": "d3-t13-b10",
+    "domainId": "d3",
+    "topicId": "d3-t13",
+    "subtopicTag": "Control Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to protecting a data center's physical environment?",
+    "options": [
+      { "text": "The brand of the office wall clock", "correct": true, "rationale": "A wall clock's brand has no bearing on physical environmental protection, making it least relevant." },
+      { "text": "Fire detection and suppression", "correct": false, "rationale": "Fire controls are essential to environmental protection." },
+      { "text": "Power conditioning and backup", "correct": false, "rationale": "UPS/generator power protection is critical to a data center." },
+      { "text": "HVAC temperature and humidity control", "correct": false, "rationale": "HVAC control protects equipment and is highly relevant." }
+    ]
+  }
+]

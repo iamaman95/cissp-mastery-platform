@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t1-a1",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Need-to-Know vs Clearance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An analyst holding a Secret clearance requests access to a Secret-classified dataset belonging to a program she is not assigned to, citing professional interest. Her clearance level matches the data's classification. What is the BEST response?",
+    "options": [
+      { "text": "Grant access, because her clearance level is sufficient for Secret data", "correct": false, "rationale": "Clearance sets the maximum sensitivity a subject may access but does not by itself authorize any particular dataset; need-to-know must also be satisfied." },
+      { "text": "Deny access, because she has no need-to-know for that program's data", "correct": true, "rationale": "Need-to-know is a task-based gate independent of clearance; because the dataset is unrelated to her current assignment, access is denied despite adequate clearance." },
+      { "text": "Grant access after she signs an additional non-disclosure agreement", "correct": false, "rationale": "An NDA addresses confidentiality obligations but does not create a need-to-know; without a task requirement, access remains unjustified." },
+      { "text": "Deny access, because Secret data can never be shared across programs", "correct": false, "rationale": "Cross-program sharing is permissible when a genuine need-to-know exists; the denial here is due to the absence of need-to-know, not a blanket prohibition." }
+    ]
+  },
+  {
+    "id": "d5-t1-a2",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A new help-desk technician is given full domain administrator rights so that any future ticket can be handled without waiting for elevated access. Which principle is MOST directly violated?",
+    "options": [
+      { "text": "Separation of duties", "correct": false, "rationale": "Separation of duties concerns splitting a single sensitive task among people; the issue here is one person holding excessive standing rights, which is least privilege." },
+      { "text": "Least privilege", "correct": true, "rationale": "Granting rights far beyond what the current role requires, for hypothetical future convenience, is the textbook violation of least privilege." },
+      { "text": "Defense in depth", "correct": false, "rationale": "Defense in depth concerns layering diverse controls; it is not the principle broken by over-provisioning a single account." },
+      { "text": "Need-to-know", "correct": false, "rationale": "Need-to-know restricts access to specific data for a task; the scenario is about excessive administrative permissions rather than access to particular information." }
+    ]
+  },
+  {
+    "id": "d5-t1-a3",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Physical vs Logical Access",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A database server is protected by a hardened firewall, strong account permissions, and encrypted network traffic, but it sits on an unencrypted disk in an unlocked wiring closet accessible to any employee. Which weakness MOST undermines the logical controls already in place?",
+    "options": [
+      { "text": "The firewall ruleset is likely misconfigured", "correct": false, "rationale": "Nothing indicates a firewall misconfiguration; the described exposure is physical, not a flaw in the network control." },
+      { "text": "The lack of physical access control lets someone bypass logical controls at the console or by removing the disk", "correct": true, "rationale": "Physical access to the hardware allows an attacker to boot from external media, remove the unencrypted disk, or use the console, defeating the logical controls entirely." },
+      { "text": "The network traffic encryption is unnecessary for a database", "correct": false, "rationale": "Encrypting traffic is a valid control; removing it would weaken, not strengthen, the posture and does not address the physical gap." },
+      { "text": "Account permissions should be replaced with a single shared admin login", "correct": false, "rationale": "Shared admin logins reduce accountability and least privilege; this would worsen security, not fix the physical exposure." }
+    ]
+  },
+  {
+    "id": "d5-t1-a4",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Categories",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A data center installs a two-door vestibule where the inner door will not open until the outer door closes and a single person is verified. Which control category BEST describes this vestibule with respect to unauthorized tailgating?",
+    "options": [
+      { "text": "Detective", "correct": false, "rationale": "A detective control identifies an incident after it occurs (like CCTV); the vestibule stops the entry attempt, which is preventive." },
+      { "text": "Preventive", "correct": true, "rationale": "An access control vestibule (mantrap) physically prevents tailgating by allowing only one verified person through at a time, stopping the incident before it happens." },
+      { "text": "Corrective", "correct": false, "rationale": "A corrective control restores state after an incident; the vestibule prevents the unauthorized entry rather than remediating it afterward." },
+      { "text": "Compensating", "correct": false, "rationale": "A compensating control substitutes for an infeasible primary control; the vestibule is the primary preventive control here, not a substitute." }
+    ]
+  },
+  {
+    "id": "d5-t1-a5",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Compensating Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A legacy application cannot support multi-factor authentication, which policy requires for administrative access. The app is business-critical and cannot be replaced this year. Which action BEST satisfies the intent of the policy?",
+    "options": [
+      { "text": "Grant an exception and take no further action until the app is replaced", "correct": false, "rationale": "An unmitigated exception leaves the risk fully open; the intent of the MFA requirement is not addressed by simply waiving it." },
+      { "text": "Implement compensating controls such as jump-host access, IP allow-listing, and enhanced session logging with alerting", "correct": true, "rationale": "When a required control is infeasible, compensating controls that provide comparable protection (restricted access path plus stronger monitoring) satisfy the policy's risk-reduction intent." },
+      { "text": "Disable all administrative access to the application permanently", "correct": false, "rationale": "Disabling admin access to a business-critical app is impractical and would break operations; the goal is to protect access, not eliminate it." },
+      { "text": "Lower the password complexity so administrators can log in faster", "correct": false, "rationale": "Weakening authentication increases risk and directly contradicts the objective of the MFA requirement." }
+    ]
+  },
+  {
+    "id": "d5-t1-a6",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In an accounts-payable system, one clerk can create a new vendor, approve invoices for that vendor, and release payment, all without a second reviewer. Which control would MOST directly reduce the fraud risk this creates?",
+    "options": [
+      { "text": "Enforcing separation of duties so vendor creation, approval, and payment require different individuals", "correct": true, "rationale": "Splitting the sensitive steps among different people prevents any single person from completing a fraudulent payment alone, which is the defining purpose of separation of duties." },
+      { "text": "Requiring the clerk to use a longer password", "correct": false, "rationale": "Password strength addresses authentication, not the collusion-of-one problem created by concentrating incompatible duties in one role." },
+      { "text": "Encrypting the accounts-payable database at rest", "correct": false, "rationale": "Encryption protects confidentiality of stored data but does nothing to stop an authorized clerk from abusing legitimate permissions." },
+      { "text": "Installing CCTV over the clerk's workstation", "correct": false, "rationale": "CCTV is a detective/deterrent control that does not prevent the clerk from performing all three incompatible actions." }
+    ]
+  },
+  {
+    "id": "d5-t1-a7",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Categories",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A prominent sign reading 'This area is monitored and trespassers will be prosecuted' is posted at a facility perimeter. Which control category BEST describes the sign itself?",
+    "options": [
+      { "text": "Preventive", "correct": false, "rationale": "The sign does not physically or technically block entry, so it is not preventive." },
+      { "text": "Deterrent", "correct": true, "rationale": "A warning sign is designed to discourage a would-be violator from attempting the act, which is the definition of a deterrent control." },
+      { "text": "Corrective", "correct": false, "rationale": "Corrective controls restore state after an incident; a sign does no remediation." },
+      { "text": "Detective", "correct": false, "rationale": "A detective control identifies that an incident occurred; the sign itself detects nothing, though the referenced monitoring might." }
+    ]
+  },
+  {
+    "id": "d5-t1-a8",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Nature",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A written policy requiring quarterly access reviews and mandatory security awareness training is an example of which control nature?",
+    "options": [
+      { "text": "Technical (logical) control", "correct": false, "rationale": "Technical controls are enforced by hardware or software; a written policy is not a system-enforced mechanism." },
+      { "text": "Physical control", "correct": false, "rationale": "Physical controls govern tangible access such as doors and cabinets, not policies and procedures." },
+      { "text": "Administrative control", "correct": true, "rationale": "Policies, procedures, training, and reviews are administrative (managerial) controls that direct human behavior and governance." },
+      { "text": "Compensating control", "correct": false, "rationale": "Compensating describes a control's role as a substitute, not its nature; a policy's nature is administrative." }
+    ]
+  },
+  {
+    "id": "d5-t1-a9",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After a reorganization, an audit finds many employees still hold permissions from prior roles in addition to their current ones. To realign accounts with least privilege, what should the team do FIRST?",
+    "options": [
+      { "text": "Delete all accounts and re-create them from scratch", "correct": false, "rationale": "Mass deletion is disruptive and risky; it destroys legitimate current access and is not the disciplined first step." },
+      { "text": "Review each role's required access and compare it against the permissions actually held to identify excess entitlements", "correct": true, "rationale": "Establishing what each role legitimately needs and comparing it to current grants (an entitlement review) is the necessary first step before safely removing excess access." },
+      { "text": "Grant everyone administrator rights to simplify future changes", "correct": false, "rationale": "This grossly violates least privilege and is the opposite of the goal." },
+      { "text": "Enable multi-factor authentication for all users", "correct": false, "rationale": "MFA strengthens authentication but does nothing to remove accumulated excess permissions (privilege creep)." }
+    ]
+  },
+  {
+    "id": "d5-t1-a10",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Defense in Depth",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security architect protects a records room with a badge reader, a separate PIN pad, locked cabinets inside, and audited logging of all entries. This layering of diverse, independent controls BEST illustrates which principle?",
+    "options": [
+      { "text": "Single point of failure", "correct": false, "rationale": "The design deliberately avoids a single point of failure by layering controls, so this is the opposite of what it illustrates." },
+      { "text": "Defense in depth", "correct": true, "rationale": "Layering multiple diverse and independent controls so that bypassing one does not expose the asset is the definition of defense in depth." },
+      { "text": "Security through obscurity", "correct": false, "rationale": "Obscurity relies on hiding design details; here the controls are explicit and layered, not hidden." },
+      { "text": "Fail-open design", "correct": false, "rationale": "Fail-open describes what happens when a control fails, not the layering of multiple controls described here." }
+    ]
+  },
+  {
+    "id": "d5-t1-b1",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Need-to-Know vs Clearance",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A manager with Top Secret clearance asks to browse a Top Secret intelligence file simply to stay informed, though no assignment requires it. Denying this request PRIMARILY enforces which concept?",
+    "options": [
+      { "text": "Need-to-know", "correct": true, "rationale": "Even with sufficient clearance, access is limited to information required for the subject's current duties; absent a task requirement, need-to-know bars the access." },
+      { "text": "Separation of duties", "correct": false, "rationale": "Separation of duties splits a sensitive task among people; it is unrelated to gating information by task relevance." },
+      { "text": "Availability", "correct": false, "rationale": "Availability concerns authorized users' access to systems, not the restriction of unnecessary access by task relevance." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Non-repudiation concerns proving an action occurred and is unrelated to gating read access to a file." }
+    ]
+  },
+  {
+    "id": "d5-t1-b2",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A service account used by a nightly report job has been granted write access to every database in the environment, though it only reads from one reporting replica. What change BEST applies least privilege?",
+    "options": [
+      { "text": "Restrict the account to read-only access on the single reporting replica it actually uses", "correct": true, "rationale": "Reducing the account to exactly the read access it needs on the one resource it uses is the direct application of least privilege." },
+      { "text": "Leave the permissions broad but rotate the account password monthly", "correct": false, "rationale": "Password rotation does not reduce the excessive scope of the account's permissions, which is the actual problem." },
+      { "text": "Convert the service account into an interactive administrator account", "correct": false, "rationale": "This expands privileges and interactivity, worsening the least-privilege posture rather than improving it." },
+      { "text": "Share the account with the analytics team for convenience", "correct": false, "rationale": "Sharing reduces accountability and does nothing to trim the account's over-broad permissions." }
+    ]
+  },
+  {
+    "id": "d5-t1-b3",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Physical vs Logical Access",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Executives push to allow unescorted vendor access to the server room to speed up maintenance, arguing that all servers require domain logins anyway. Which risk should the security team raise as MOST significant?",
+    "options": [
+      { "text": "Vendors might find the room temperature uncomfortable", "correct": false, "rationale": "This is not a security risk and is irrelevant to access control." },
+      { "text": "Physical access enables console access, hardware tampering, or removal of storage media, bypassing the logical login controls entirely", "correct": true, "rationale": "Unescorted physical access allows attacks (console boot, disk removal, hardware implants) that circumvent domain authentication, so logical controls alone do not compensate for the physical exposure." },
+      { "text": "Domain logins would need to be reset after each vendor visit", "correct": false, "rationale": "Routine visits do not require login resets, and this does not capture the core physical-bypass risk." },
+      { "text": "The vendors could not be billed accurately for their time", "correct": false, "rationale": "Billing is an administrative concern, not the security risk of unescorted physical access." }
+    ]
+  },
+  {
+    "id": "d5-t1-b4",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Categories",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A SIEM correlates authentication logs and alerts analysts when a badge is used to enter a facility while the same user's VPN session is active from another country. This control BEST fits which category?",
+    "options": [
+      { "text": "Preventive", "correct": false, "rationale": "The alert fires after the anomalous events occur; it identifies rather than blocks the situation." },
+      { "text": "Detective", "correct": true, "rationale": "Correlating logs to raise an alert about a suspicious condition that has already occurred is a detective control." },
+      { "text": "Deterrent", "correct": false, "rationale": "A deterrent discourages violators in advance; a back-end correlation alert does not visibly discourage the act." },
+      { "text": "Corrective", "correct": false, "rationale": "The control detects and reports the anomaly but does not itself restore or remediate systems, so it is not corrective." }
+    ]
+  },
+  {
+    "id": "d5-t1-b5",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Compensating Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A remote site cannot install an electronic badge system due to lack of network cabling, but policy requires logged, controlled entry to the equipment room. Which compensating control BEST meets the policy's intent?",
+    "options": [
+      { "text": "Leave the door unlocked but post a sign asking people to be careful", "correct": false, "rationale": "This provides neither controlled entry nor a log and fails the policy's intent entirely." },
+      { "text": "Use a physical key issued to named individuals plus a manual entry logbook that a supervisor reviews", "correct": true, "rationale": "A controlled key issuance combined with a reviewed manual log provides comparable controlled, logged entry when the electronic system is infeasible, satisfying the policy's intent as a compensating control." },
+      { "text": "Rely solely on the existing perimeter fence around the site", "correct": false, "rationale": "A perimeter fence does not control or log entry to the specific equipment room and does not meet the requirement." },
+      { "text": "Require staff to email the manager before entering", "correct": false, "rationale": "Advance emails do not enforce controlled entry or produce a reliable access record, and are easily bypassed." }
+    ]
+  },
+  {
+    "id": "d5-t1-b6",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A developer with production deployment rights also administers the audit logging system and can edit or delete log entries. Beyond least privilege, which additional principle is MOST clearly at risk?",
+    "options": [
+      { "text": "Separation of duties, because the same person can both make changes and alter the record of those changes", "correct": true, "rationale": "Combining the ability to act in production with control over the audit trail lets one person conceal their actions, which is exactly the collusion-of-one risk separation of duties is meant to prevent." },
+      { "text": "Data-at-rest encryption", "correct": false, "rationale": "Encryption protects confidentiality of stored data and does not address the conflict of one person controlling both actions and their audit record." },
+      { "text": "Availability of the deployment pipeline", "correct": false, "rationale": "The concern is integrity and accountability of the audit trail, not the uptime of the pipeline." },
+      { "text": "Network segmentation", "correct": false, "rationale": "Segmentation limits network reachability and does not resolve the duty-conflict of one person managing both deployments and logs." }
+    ]
+  },
+  {
+    "id": "d5-t1-b7",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Nature",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which of the following is BEST classified as a technical (logical) control?",
+    "options": [
+      { "text": "A locked server cabinet", "correct": false, "rationale": "A physical lock on hardware is a physical control, not a technical one." },
+      { "text": "An access control list on a file server enforced by the operating system", "correct": true, "rationale": "An OS-enforced ACL is implemented in software and enforced by the system, which is the definition of a technical/logical control." },
+      { "text": "A signed acceptable-use policy", "correct": false, "rationale": "A policy is an administrative control governing behavior, not a system-enforced technical mechanism." },
+      { "text": "A security guard checking badges", "correct": false, "rationale": "A guard is a physical/operational control, not a technical one." }
+    ]
+  },
+  {
+    "id": "d5-t1-b8",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Over several years, a long-tenured employee has accumulated permissions from every department she has rotated through, far exceeding her current role. What is the PRIMARY term for this condition?",
+    "options": [
+      { "text": "Privilege creep (aggregation)", "correct": true, "rationale": "The gradual accumulation of unneeded permissions across role changes is privilege creep, a direct erosion of least privilege." },
+      { "text": "Separation of duties", "correct": false, "rationale": "Separation of duties is a control that splits tasks; it names a safeguard, not the condition of accumulated excess access." },
+      { "text": "Defense in depth", "correct": false, "rationale": "Defense in depth is a layering strategy, not the name for accumulated excess permissions." },
+      { "text": "Dual control", "correct": false, "rationale": "Dual control requires two people to perform an action; it is unrelated to one person accumulating permissions." }
+    ]
+  },
+  {
+    "id": "d5-t1-b9",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Subject and Object",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In access control terminology, when a user process attempts to read a document, which pairing BEST identifies the subject and object?",
+    "options": [
+      { "text": "The user process is the object; the document is the subject", "correct": false, "rationale": "This reverses the definitions; the active requester is the subject and the passive resource is the object." },
+      { "text": "The user process is the subject; the document is the object", "correct": true, "rationale": "The active entity requesting access (the user process) is the subject, and the passive resource being accessed (the document) is the object." },
+      { "text": "Both the user process and the document are subjects", "correct": false, "rationale": "The document is a passive resource, making it an object, not a subject." },
+      { "text": "Both the user process and the document are objects", "correct": false, "rationale": "The user process is the active requester and is therefore the subject, not an object." }
+    ]
+  },
+  {
+    "id": "d5-t1-b10",
+    "domainId": "d5",
+    "topicId": "d5-t1",
+    "subtopicTag": "Control Categories",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After a laptop theft, an organization deploys full-disk encryption so that any future stolen device's data remains unreadable. With respect to the data on a future stolen laptop, this control is BEST categorized as which type?",
+    "options": [
+      { "text": "Detective", "correct": false, "rationale": "Encryption does not detect the theft; it protects the data's confidentiality when the loss occurs." },
+      { "text": "Preventive", "correct": true, "rationale": "Full-disk encryption prevents unauthorized disclosure of data on a lost or stolen device, stopping the confidentiality breach before it can happen." },
+      { "text": "Corrective", "correct": false, "rationale": "A corrective control restores systems after an incident; encryption does not recover or restore anything." },
+      { "text": "Deterrent", "correct": false, "rationale": "Encryption does not visibly discourage a thief from taking the device; it protects the data regardless of the theft attempt." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t3-a1",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance vs technical fix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A fintech firm has a strong SOC, EDR, and awareness program, yet no one at a board review can state the acceptable level of risk for a customer data breach, and the CISO reports three levels below the CEO. What BEST addresses the underlying problem?",
+    "options": [
+      { "text": "Establish a governance structure: a board-approved risk appetite statement and an elevated CISO reporting line", "correct": true, "rationale": "The gap is governance — accountability, direction, and risk appetite — not tooling; the fix is board-level oversight and a defined risk appetite, and elevating the CISO so security risk is represented where business decisions are made." },
+      { "text": "Purchase a more advanced SOC platform and additional EDR licenses", "correct": false, "rationale": "The firm already has strong tooling; adding more technology does not resolve a missing accountability and risk-appetite gap." },
+      { "text": "Hire additional SOC analysts to monitor alerts around the clock", "correct": false, "rationale": "More staffing addresses operations, not the absence of governance direction and executive accountability." },
+      { "text": "Run a penetration test to find technical vulnerabilities", "correct": false, "rationale": "A pen test finds technical weaknesses but does nothing about the undefined risk appetite and weak reporting line, which are governance issues." }
+    ]
+  },
+  {
+    "id": "d1-t3-a2",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Documentation hierarchy",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In the security documentation hierarchy, which document type is the high-level, mandatory statement of management intent from which the others cascade?",
+    "options": [
+      { "text": "Policy", "correct": true, "rationale": "A policy is the top of the hierarchy: high-level, mandatory management intent from which standards, procedures, and guidelines derive." },
+      { "text": "Guideline", "correct": false, "rationale": "A guideline is a recommended, non-mandatory practice at the bottom of the hierarchy, not the top-level intent statement." },
+      { "text": "Procedure", "correct": false, "rationale": "A procedure is a step-by-step instruction set that implements a policy/standard, not the high-level intent." },
+      { "text": "Standard", "correct": false, "rationale": "A standard is a mandatory specific requirement that supports a policy, not the top-level intent statement itself." }
+    ]
+  },
+  {
+    "id": "d1-t3-a3",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Risk appetite ownership",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A new CISO wants to formally define how much risk the organization is willing to accept in pursuit of its objectives. Who is MOST appropriate to approve this risk appetite?",
+    "options": [
+      { "text": "The board of directors / senior executive leadership", "correct": true, "rationale": "Risk appetite is a governance decision set and approved by the board or senior leadership, who own strategic direction and accountability." },
+      { "text": "The SOC shift lead", "correct": false, "rationale": "Operational staff execute within risk appetite; they do not set or approve it." },
+      { "text": "The firewall administration team", "correct": false, "rationale": "Firewall admins implement controls but have no authority to define organizational risk appetite." },
+      { "text": "The external penetration testing vendor", "correct": false, "rationale": "A vendor may inform risk understanding but cannot approve the organization's risk appetite." }
+    ]
+  },
+  {
+    "id": "d1-t3-a4",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "COSO vs COBIT",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization needs a framework specifically for IT governance that maps IT control objectives to business goals. Which framework BEST fits this need?",
+    "options": [
+      { "text": "COBIT", "correct": true, "rationale": "COBIT (from ISACA) is the IT-governance-specific framework that links IT control objectives to business goals and requirements." },
+      { "text": "COSO", "correct": false, "rationale": "COSO is the broader internal-control and enterprise risk management framework, oriented to financial/operational governance, not IT-governance specifics." },
+      { "text": "GDPR", "correct": false, "rationale": "GDPR is a data protection regulation, not an IT governance framework." },
+      { "text": "PCI DSS", "correct": false, "rationale": "PCI DSS is a payment card security standard, not an IT governance framework." }
+    ]
+  },
+  {
+    "id": "d1-t3-a5",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance vs management",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A consultant summarizes governance as answering 'are we doing the right things?' and management as answering 'are we doing things right?' Which activity is MOST clearly a governance activity under this framing?",
+    "options": [
+      { "text": "Setting the organization's risk appetite and approving security policy", "correct": true, "rationale": "Defining direction, risk appetite, and policy is governance — deciding the right things to do at the strategic/board level." },
+      { "text": "Configuring the SIEM correlation rules for a new log source", "correct": false, "rationale": "Tuning SIEM rules is day-to-day operational management execution, not governance." },
+      { "text": "Applying this month's security patches to servers", "correct": false, "rationale": "Patching is operational execution ('doing things right'), a management activity." },
+      { "text": "Resetting a user's expired password", "correct": false, "rationale": "A password reset is a routine operational task, not a strategic governance decision." }
+    ]
+  },
+  {
+    "id": "d1-t3-a6",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Standard vs guideline",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Leadership wants to mandate that all laptops use AES-256 full-disk encryption, with no exceptions. Which document type BEST captures this requirement?",
+    "options": [
+      { "text": "A standard", "correct": true, "rationale": "A standard is a mandatory, specific requirement supporting a policy; 'all laptops must use AES-256 full-disk encryption' is a textbook standard." },
+      { "text": "A guideline", "correct": false, "rationale": "A guideline is non-mandatory; the requirement is stated as mandatory with no exceptions, so a guideline is wrong." },
+      { "text": "A procedure", "correct": false, "rationale": "A procedure gives step-by-step instructions (e.g., how to enable BitLocker), not the mandatory requirement itself." },
+      { "text": "A guideline appended to the acceptable use policy", "correct": false, "rationale": "Framing a mandatory control as an appended guideline mischaracterizes its mandatory nature." }
+    ]
+  },
+  {
+    "id": "d1-t3-a7",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance failure recognition",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two engineering leads independently make conflicting decisions about how customer data is retained, because no organization-wide direction exists. This situation is MOST accurately characterized as which kind of failure?",
+    "options": [
+      { "text": "A governance failure — absent policy and unclear accountability for direction", "correct": true, "rationale": "Conflicting ad hoc decisions from a lack of organization-wide policy and ownership is a governance failure, not a purely technical one." },
+      { "text": "A cryptographic failure in the data-at-rest controls", "correct": false, "rationale": "Nothing indicates a crypto weakness; the problem is missing direction and accountability." },
+      { "text": "A network segmentation failure", "correct": false, "rationale": "The issue is inconsistent decision-making authority, not network design." },
+      { "text": "A physical security failure at the data center", "correct": false, "rationale": "No physical access issue is described; the failure is governance-level." }
+    ]
+  },
+  {
+    "id": "d1-t3-a8",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Security steering committee",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization forms a cross-functional security steering committee with business, IT, legal, and risk representatives. What is the PRIMARY purpose of such a committee?",
+    "options": [
+      { "text": "To align security strategy and priorities with business objectives and provide oversight", "correct": true, "rationale": "A security steering committee provides governance alignment and oversight, ensuring security direction supports business objectives across functions." },
+      { "text": "To personally configure and patch production servers", "correct": false, "rationale": "Hands-on server configuration is operational work, not the strategic alignment role of a steering committee." },
+      { "text": "To respond to individual help-desk tickets", "correct": false, "rationale": "Ticket handling is day-to-day operations, unrelated to a governance steering committee's purpose." },
+      { "text": "To write low-level firewall rules for each application", "correct": false, "rationale": "Writing firewall rules is an operational task, not a strategic governance function." }
+    ]
+  },
+  {
+    "id": "d1-t3-a9",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Top-down governance",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Effective security governance is generally described as flowing in which direction within an organization?",
+    "options": [
+      { "text": "Top-down, with the board/executives setting direction and risk appetite", "correct": true, "rationale": "Governance flows top-down: senior leadership sets strategic direction and risk appetite, which cascades into policy, standards, and procedures." },
+      { "text": "Bottom-up, with individual analysts setting enterprise risk appetite", "correct": false, "rationale": "Analysts execute within direction; they do not set enterprise risk appetite, so bottom-up is incorrect for governance direction." },
+      { "text": "Peer-to-peer among unrelated business units with no central direction", "correct": false, "rationale": "Uncoordinated peer decisions describe a governance failure, not effective governance." },
+      { "text": "Vendor-driven, with external suppliers dictating internal risk appetite", "correct": false, "rationale": "Vendors do not own an organization's risk appetite; governance direction originates internally at the top." }
+    ]
+  },
+  {
+    "id": "d1-t3-a10",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "COSO focus",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "COSO is most commonly associated with which focus area?",
+    "options": [
+      { "text": "Internal control and enterprise risk management, often linked to SOX financial reporting", "correct": true, "rationale": "COSO provides an internal-control and ERM framework widely used for financial/operational governance, commonly cited in SOX compliance." },
+      { "text": "IT-specific control objectives mapping IT to business goals", "correct": false, "rationale": "That description fits COBIT, not COSO." },
+      { "text": "Cardholder data protection requirements", "correct": false, "rationale": "Cardholder data protection is PCI DSS, not COSO." },
+      { "text": "EU data subject rights and breach notification", "correct": false, "rationale": "Those are GDPR concepts, not COSO." }
+    ]
+  },
+  {
+    "id": "d1-t3-b1",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance vs technical fix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An enterprise keeps suffering repeat incidents rooted in inconsistent decisions and no clear owner for security outcomes, despite significant spending on security products. A consultant is asked for the single BEST first improvement. What should it be?",
+    "options": [
+      { "text": "Establish accountable governance — assign ownership and a board-endorsed policy framework", "correct": true, "rationale": "Recurring inconsistency with no owner is a governance gap; assigning accountability and a policy framework endorsed at the top addresses the root cause better than more products." },
+      { "text": "Buy an additional next-generation firewall for each site", "correct": false, "rationale": "The organization already over-invests in products; more hardware does not fix missing accountability." },
+      { "text": "Increase the frequency of vulnerability scans", "correct": false, "rationale": "More scanning is operational and does not resolve the absence of governance ownership." },
+      { "text": "Deploy a new endpoint agent across all laptops", "correct": false, "rationale": "Another agent is tooling, not the governance/accountability structure the scenario lacks." }
+    ]
+  },
+  {
+    "id": "d1-t3-b2",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Documentation hierarchy",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which document type in the hierarchy is recommended rather than mandatory?",
+    "options": [
+      { "text": "Guideline", "correct": true, "rationale": "Guidelines are recommended best practices offering flexibility; they are the only non-mandatory type in the hierarchy." },
+      { "text": "Policy", "correct": false, "rationale": "Policies are mandatory statements of management intent." },
+      { "text": "Standard", "correct": false, "rationale": "Standards are mandatory specific requirements." },
+      { "text": "Procedure", "correct": false, "rationale": "Procedures are mandatory step-by-step instructions for implementing policies/standards." }
+    ]
+  },
+  {
+    "id": "d1-t3-b3",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance vs management",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is MOST clearly a management (not governance) responsibility?",
+    "options": [
+      { "text": "Executing daily operations and following approved procedures", "correct": true, "rationale": "Management executes day-to-day operations within the direction governance sets; this is 'doing things right,' a management responsibility." },
+      { "text": "Defining the organization's acceptable risk appetite", "correct": false, "rationale": "Defining risk appetite is a governance/board responsibility, not management execution." },
+      { "text": "Approving the enterprise security policy at the board level", "correct": false, "rationale": "Board-level policy approval is governance, not day-to-day management." },
+      { "text": "Setting the CISO's reporting line to the board", "correct": false, "rationale": "Structuring accountability and reporting lines is a governance decision, not routine management." }
+    ]
+  },
+  {
+    "id": "d1-t3-b4",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "COSO vs COBIT",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CFO needs a framework for internal control over financial reporting to support SOX compliance. Which framework BEST fits this requirement?",
+    "options": [
+      { "text": "COSO", "correct": true, "rationale": "COSO's internal-control/ERM framework is the standard reference for internal control over financial reporting and SOX compliance." },
+      { "text": "COBIT", "correct": false, "rationale": "COBIT is IT-governance-focused; while useful for IT controls, COSO is the framework specifically associated with financial-reporting internal control and SOX." },
+      { "text": "ISO 27001", "correct": false, "rationale": "ISO 27001 is an information security management standard, not the financial-reporting internal-control framework SOX references." },
+      { "text": "NIST SP 800-53", "correct": false, "rationale": "NIST 800-53 is a security/privacy controls catalog, not the financial-reporting internal-control framework." }
+    ]
+  },
+  {
+    "id": "d1-t3-b5",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Policy vs procedure",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A document titled 'Steps to enable BitLocker on a Windows 11 laptop' lists exact click-by-click actions. Which document type does this BEST represent?",
+    "options": [
+      { "text": "Procedure", "correct": true, "rationale": "Detailed step-by-step instructions for carrying out a control are a procedure by definition." },
+      { "text": "Policy", "correct": false, "rationale": "A policy states high-level mandatory intent, not click-by-click steps." },
+      { "text": "Standard", "correct": false, "rationale": "A standard states the mandatory requirement (e.g., 'use AES-256 FDE'), not the detailed steps to achieve it." },
+      { "text": "Guideline", "correct": false, "rationale": "A guideline is a flexible recommendation, not a precise mandatory step-by-step instruction set." }
+    ]
+  },
+  {
+    "id": "d1-t3-b6",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "CISO reporting line",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A board is concerned that security risk is not surfacing in strategic decisions. Elevating the CISO's reporting line to (or near) the board PRIMARILY improves what?",
+    "options": [
+      { "text": "Representation of security risk at the level where business risk decisions are made", "correct": true, "rationale": "A higher reporting line ensures security risk is voiced where strategic/business risk decisions occur, closing a governance representation gap." },
+      { "text": "The raw throughput of the SOC's log ingestion pipeline", "correct": false, "rationale": "Reporting-line placement is an accountability/governance change, not a technical performance improvement." },
+      { "text": "The encryption strength of laptops in the field", "correct": false, "rationale": "Encryption strength is a technical control unaffected by where the CISO reports." },
+      { "text": "The speed of password resets at the help desk", "correct": false, "rationale": "Help-desk operations are unrelated to the CISO's governance reporting line." }
+    ]
+  },
+  {
+    "id": "d1-t3-b7",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Governance failure recognition",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A breach post-mortem finds that leadership never defined a risk appetite, no one owned the decision to accept a known risk, and security had no voice at the executive table. This is MOST accurately a failure of what?",
+    "options": [
+      { "text": "Security governance", "correct": true, "rationale": "Undefined risk appetite, no accountable owner, and no executive voice are hallmark governance failures, not technical or operational ones." },
+      { "text": "Patch management operations", "correct": false, "rationale": "Nothing in the findings points to a missed patch; the failures are about direction and accountability." },
+      { "text": "Endpoint detection tuning", "correct": false, "rationale": "The described gaps are governance-level, not EDR configuration problems." },
+      { "text": "Network firewall configuration", "correct": false, "rationale": "The root causes are accountability and direction, not firewall rules." }
+    ]
+  },
+  {
+    "id": "d1-t3-b8",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Business alignment",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISO reframes the security program so its objectives explicitly trace back to the organization's business objectives. What is the PRIMARY governance benefit of this alignment?",
+    "options": [
+      { "text": "Security supports and enables business objectives rather than existing as a disconnected technical function", "correct": true, "rationale": "Aligning security strategy to business strategy is a core governance principle, ensuring security enables the business rather than operating in isolation." },
+      { "text": "It guarantees zero security incidents will ever occur", "correct": false, "rationale": "Alignment improves relevance and support but cannot guarantee zero incidents." },
+      { "text": "It removes the need for any security policies", "correct": false, "rationale": "Alignment does not eliminate policy; policy remains a core governance output." },
+      { "text": "It transfers all risk to the IT department", "correct": false, "rationale": "Business alignment shares accountability appropriately; it does not dump all risk onto IT." }
+    ]
+  },
+  {
+    "id": "d1-t3-b9",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "COBIT origin",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "COBIT, the IT-governance framework, was developed by which organization?",
+    "options": [
+      { "text": "ISACA", "correct": true, "rationale": "COBIT is an ISACA framework for IT governance and management." },
+      { "text": "The Treadway Commission sponsoring organizations (COSO)", "correct": false, "rationale": "COSO sponsors the COSO framework, not COBIT." },
+      { "text": "The PCI Security Standards Council", "correct": false, "rationale": "The PCI SSC maintains PCI DSS, not COBIT." },
+      { "text": "The European Data Protection Board", "correct": false, "rationale": "The EDPB relates to GDPR enforcement, not COBIT." }
+    ]
+  },
+  {
+    "id": "d1-t3-b10",
+    "domainId": "d1",
+    "topicId": "d1-t3",
+    "subtopicTag": "Disguised governance question",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team repeatedly deploys strong technical controls that are later undermined because business units bypass them, and no authority exists to enforce consistency. Which BEST resolves the recurring bypass problem?",
+    "options": [
+      { "text": "Establish and enforce a mandatory, board-backed security policy that all units must follow", "correct": true, "rationale": "The bypass problem is a governance/authority gap; a mandatory board-backed policy establishes the authority and consistency needed, rather than more controls." },
+      { "text": "Add stronger encryption to the controls that are being bypassed", "correct": false, "rationale": "Strengthening controls that are bypassed does not address the missing authority to enforce them." },
+      { "text": "Deploy an additional intrusion prevention system", "correct": false, "rationale": "Another technical control does not solve the organizational authority gap enabling the bypass." },
+      { "text": "Increase the logging verbosity on affected systems", "correct": false, "rationale": "More logging may reveal bypasses but does not create the governance authority to prevent them." }
+    ]
+  }
+]

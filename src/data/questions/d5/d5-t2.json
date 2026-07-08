@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t2-a1",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "MFA Different Factors",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A login requires a password plus an answer to a security question. Is this multi-factor authentication, and why?",
+    "options": [
+      { "text": "No — both are 'something you know,' so it is single-factor despite two prompts", "correct": true, "rationale": "MFA requires factors of different categories; a password and a security question are both knowledge factors, so this is single-factor." },
+      { "text": "Yes — any two prompts constitute MFA", "correct": false, "rationale": "MFA requires different factor types, not merely two prompts of the same type." },
+      { "text": "Yes — a security question is 'something you have'", "correct": false, "rationale": "A security question is knowledge (something you know), not a possession factor." },
+      { "text": "No — passwords can never be part of MFA", "correct": false, "rationale": "Passwords can be one factor in MFA when combined with a different factor type; the issue here is that both are knowledge factors." }
+    ]
+  },
+  {
+    "id": "d5-t2-a2",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Genuine MFA Example",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which combination BEST represents true multi-factor authentication?",
+    "options": [
+      { "text": "A password plus a one-time code from a hardware token", "correct": true, "rationale": "This combines something you know (password) with something you have (token) — two different factor types, which is genuine MFA." },
+      { "text": "A password plus a PIN", "correct": false, "rationale": "Both a password and a PIN are 'something you know,' so this is single-factor." },
+      { "text": "A fingerprint plus a retina scan", "correct": false, "rationale": "Both are biometrics ('something you are'), so this is one factor type, not multi-factor." },
+      { "text": "Two different passwords", "correct": false, "rationale": "Two passwords are both knowledge factors, i.e., single-factor." }
+    ]
+  },
+  {
+    "id": "d5-t2-a3",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "FAR Type II",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "For a biometric protecting a high-security vault, which error type is MOST security-critical to minimize?",
+    "options": [
+      { "text": "False Acceptance Rate (FAR, Type II) — impostors wrongly admitted", "correct": true, "rationale": "Accepting an impostor (FAR/Type II) is the more dangerous error for security, as it grants unauthorized access." },
+      { "text": "False Rejection Rate (FRR, Type I) — legitimate users denied", "correct": false, "rationale": "FRR is a usability/frustration problem, less security-critical than admitting impostors." },
+      { "text": "The device's screen brightness", "correct": false, "rationale": "Brightness is irrelevant to biometric error security." },
+      { "text": "The color of the reader", "correct": false, "rationale": "Reader color has no security relevance." }
+    ]
+  },
+  {
+    "id": "d5-t2-a4",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "CER Interpretation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Comparing three fingerprint readers, which Crossover Error Rate (CER) indicates the MOST accurate device?",
+    "options": [
+      { "text": "The lowest CER", "correct": true, "rationale": "A lower CER (where FRR equals FAR) indicates a more accurate biometric system." },
+      { "text": "The highest CER", "correct": false, "rationale": "A higher CER means more errors overall, i.e., a less accurate system." },
+      { "text": "A CER of exactly 100%", "correct": false, "rationale": "A 100% error crossover would mean the system is useless, not accurate." },
+      { "text": "CER is irrelevant to accuracy", "correct": false, "rationale": "CER is a primary accuracy metric for biometrics." }
+    ]
+  },
+  {
+    "id": "d5-t2-a5",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "IAAA Order",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A user types their username and then provides a password. The username step MOST accurately represents which part of access control?",
+    "options": [
+      { "text": "Identification (a claim of identity)", "correct": true, "rationale": "Entering a username is identification — a claim of who you are — which authentication then proves." },
+      { "text": "Authentication", "correct": false, "rationale": "Authentication is proving the claim (the password step), not making the username claim." },
+      { "text": "Authorization", "correct": false, "rationale": "Authorization determines permissions after authentication, not the username claim." },
+      { "text": "Accountability", "correct": false, "rationale": "Accountability ties actions to identity via logs, not the initial username claim." }
+    ]
+  },
+  {
+    "id": "d5-t2-a6",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Factor Categories",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A smart card is an example of which authentication factor?",
+    "options": [
+      { "text": "Something you have", "correct": true, "rationale": "A smart card is a possession factor — something you have." },
+      { "text": "Something you know", "correct": false, "rationale": "Knowledge factors are passwords/PINs, not physical cards." },
+      { "text": "Something you are", "correct": false, "rationale": "Inherence factors are biometrics, not a card you carry." },
+      { "text": "Somewhere you are", "correct": false, "rationale": "That is a location factor, not a smart card." }
+    ]
+  },
+  {
+    "id": "d5-t2-a7",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "FRR Usability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Employees complain the new fingerprint reader frequently rejects their valid fingerprints, forcing repeated attempts. This is MOST directly which error?",
+    "options": [
+      { "text": "A high False Rejection Rate (FRR, Type I error)", "correct": true, "rationale": "Legitimate users being wrongly rejected is a high FRR (Type I), a usability problem." },
+      { "text": "A high False Acceptance Rate (FAR, Type II error)", "correct": false, "rationale": "FAR is about impostors being accepted, not legitimate users rejected." },
+      { "text": "A low Crossover Error Rate", "correct": false, "rationale": "A low CER indicates accuracy; frequent false rejections indicate poor performance, not a low CER." },
+      { "text": "A denial-of-service attack", "correct": false, "rationale": "This is a biometric accuracy issue, not a DoS attack." }
+    ]
+  },
+  {
+    "id": "d5-t2-a8",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Device Authentication",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company wants only company-issued devices (not just users) to connect to an API. Which approach BEST authenticates the device itself?",
+    "options": [
+      { "text": "Issue each device a client certificate and require mutual TLS", "correct": true, "rationale": "Device (client) certificates with mutual TLS authenticate the device's identity to the service, beyond just the user." },
+      { "text": "Ask the user to type the device's color", "correct": false, "rationale": "Device color is not a cryptographic device identity and is trivially guessable." },
+      { "text": "Trust any device that connects", "correct": false, "rationale": "Trusting all devices provides no device authentication." },
+      { "text": "Use a shared password printed on every device", "correct": false, "rationale": "A shared static password does not uniquely authenticate devices and is easily leaked." }
+    ]
+  },
+  {
+    "id": "d5-t2-a9",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Something You Are",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An iris scan used for login MOST accurately falls into which factor category?",
+    "options": [
+      { "text": "Something you are (biometric/inherence)", "correct": true, "rationale": "An iris scan is a biometric — something you are." },
+      { "text": "Something you have", "correct": false, "rationale": "Possession factors are physical tokens, not biometric traits." },
+      { "text": "Something you know", "correct": false, "rationale": "Knowledge factors are passwords/PINs, not biometrics." },
+      { "text": "Somewhere you are", "correct": false, "rationale": "Location is a separate factor; an iris is an inherence factor." }
+    ]
+  },
+  {
+    "id": "d5-t2-a10",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Authentication vs Identification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement MOST accurately distinguishes authentication from identification?",
+    "options": [
+      { "text": "Identification claims an identity; authentication proves it", "correct": true, "rationale": "Identification is the claim (username); authentication is the proof (password/token/biometric)." },
+      { "text": "They are identical steps", "correct": false, "rationale": "They are distinct: one claims, the other proves." },
+      { "text": "Authentication happens before identification", "correct": false, "rationale": "Identification (the claim) comes first, then authentication proves it." },
+      { "text": "Identification determines permissions", "correct": false, "rationale": "Determining permissions is authorization, not identification." }
+    ]
+  },
+  {
+    "id": "d5-t2-b1",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Type I vs Type II",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which mapping of biometric error terms is MOST correct?",
+    "options": [
+      { "text": "Type I = False Rejection (legit denied); Type II = False Acceptance (impostor admitted)", "correct": true, "rationale": "Type I is FRR (false reject of a legitimate user); Type II is FAR (false accept of an impostor)." },
+      { "text": "Type I = False Acceptance; Type II = False Rejection", "correct": false, "rationale": "This reverses the definitions; Type I is false rejection, Type II is false acceptance." },
+      { "text": "Both types describe impostor acceptance", "correct": false, "rationale": "Only Type II (FAR) describes impostor acceptance; Type I is false rejection." },
+      { "text": "Neither type relates to biometrics", "correct": false, "rationale": "Both are standard biometric error types." }
+    ]
+  },
+  {
+    "id": "d5-t2-b2",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "MFA Value",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security benefit of requiring MFA instead of a password alone?",
+    "options": [
+      { "text": "A stolen password alone is insufficient, since an additional different factor is still required", "correct": true, "rationale": "MFA means compromising one factor (e.g., the password) is not enough; the attacker also needs the other factor type." },
+      { "text": "It makes passwords unnecessary to protect", "correct": false, "rationale": "Passwords still matter; MFA adds a layer rather than removing password hygiene." },
+      { "text": "It guarantees no account is ever compromised", "correct": false, "rationale": "MFA greatly reduces but does not absolutely eliminate compromise risk." },
+      { "text": "It speeds up the login process", "correct": false, "rationale": "MFA adds a step; its value is security, not speed." }
+    ]
+  },
+  {
+    "id": "d5-t2-b3",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Tuning Sensitivity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A biometric system is tuned to be very strict to reduce impostor acceptance. What is the MOST likely side effect?",
+    "options": [
+      { "text": "The False Rejection Rate rises, denying some legitimate users", "correct": true, "rationale": "Tightening to reduce FAR typically increases FRR, so more legitimate users are wrongly rejected — the FAR/FRR trade-off." },
+      { "text": "Both FAR and FRR drop to zero", "correct": false, "rationale": "The two rates trade off; you cannot generally drive both to zero simultaneously." },
+      { "text": "The device stops needing enrollment", "correct": false, "rationale": "Enrollment is still required regardless of sensitivity tuning." },
+      { "text": "The device becomes a token (something you have)", "correct": false, "rationale": "Tuning sensitivity does not change a biometric into a possession factor." }
+    ]
+  },
+  {
+    "id": "d5-t2-b4",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Knowledge Factor",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A passphrase is an example of which authentication factor?",
+    "options": [
+      { "text": "Something you know", "correct": true, "rationale": "A passphrase is a knowledge factor — something you know." },
+      { "text": "Something you have", "correct": false, "rationale": "Possession factors are physical items, not memorized phrases." },
+      { "text": "Something you are", "correct": false, "rationale": "Inherence factors are biometrics, not passphrases." },
+      { "text": "Somewhere you are", "correct": false, "rationale": "Location is a separate factor; a passphrase is knowledge." }
+    ]
+  },
+  {
+    "id": "d5-t2-b5",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Accountability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Tying every action in a system back to the specific user who performed it MOST directly supports which principle?",
+    "options": [
+      { "text": "Accountability (via logging tied to authenticated identity)", "correct": true, "rationale": "Accountability links actions to authenticated identities through logging, enabling attribution." },
+      { "text": "Identification only", "correct": false, "rationale": "Identification is just the initial claim; accountability requires tying actions to it via logs." },
+      { "text": "Encryption", "correct": false, "rationale": "Encryption protects confidentiality, not action attribution." },
+      { "text": "Availability", "correct": false, "rationale": "Availability concerns access to systems, not attributing actions." }
+    ]
+  },
+  {
+    "id": "d5-t2-b6",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Token Factor",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A time-based one-time password app on a phone that a user must possess is MOST accurately which factor?",
+    "options": [
+      { "text": "Something you have", "correct": true, "rationale": "The phone/app generating the code is a possession factor — something you have." },
+      { "text": "Something you know", "correct": false, "rationale": "The generated code is possessed via the device, not memorized knowledge like a password." },
+      { "text": "Something you are", "correct": false, "rationale": "It is not a biometric trait." },
+      { "text": "Something you do", "correct": false, "rationale": "It is possession-based, not a behavioral factor." }
+    ]
+  },
+  {
+    "id": "d5-t2-b7",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Biometric Enrollment",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Before users can authenticate with a new biometric system, what must happen FIRST?",
+    "options": [
+      { "text": "Enrollment — capturing and storing each user's reference biometric template", "correct": true, "rationale": "Users must enroll (register their biometric template) before the system can match future scans against it." },
+      { "text": "Users must be denied all access permanently", "correct": false, "rationale": "Denying access is not enrollment and defeats the purpose." },
+      { "text": "The system must delete all templates", "correct": false, "rationale": "Deleting templates would leave nothing to match against." },
+      { "text": "Users must share their passwords publicly", "correct": false, "rationale": "This is unrelated to biometric enrollment and is insecure." }
+    ]
+  },
+  {
+    "id": "d5-t2-b8",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Same-Type Trap",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which combination is LEAST likely to qualify as multi-factor authentication?",
+    "options": [
+      { "text": "A password and a security question", "correct": true, "rationale": "Both are knowledge factors ('something you know'), so this is single-factor and least likely to qualify as MFA." },
+      { "text": "A password and a hardware token", "correct": false, "rationale": "Knowledge + possession is valid MFA." },
+      { "text": "A fingerprint and a smart card", "correct": false, "rationale": "Inherence + possession is valid MFA." },
+      { "text": "A PIN and a phone push approval", "correct": false, "rationale": "Knowledge (PIN) + possession (phone) is valid MFA." }
+    ]
+  },
+  {
+    "id": "d5-t2-b9",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Service Authentication",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A microservice must authenticate to another service without a human present. What is the BEST practice?",
+    "options": [
+      { "text": "Use a managed service identity/credential (e.g., certificate or scoped token) with least privilege", "correct": true, "rationale": "Machine-to-machine authentication should use a securely managed service credential/identity with least-privilege scope, not human passwords." },
+      { "text": "Hard-code a shared admin password in the code", "correct": false, "rationale": "Hard-coded shared admin credentials are easily leaked and over-privileged." },
+      { "text": "Disable authentication between services", "correct": false, "rationale": "Removing authentication lets any caller impersonate the service." },
+      { "text": "Reuse an employee's personal login", "correct": false, "rationale": "Using a human's personal login for a service destroys accountability and is poor practice." }
+    ]
+  },
+  {
+    "id": "d5-t2-b10",
+    "domainId": "d5",
+    "topicId": "d5-t2",
+    "subtopicTag": "Metric Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when evaluating the accuracy of a biometric authentication system?",
+    "options": [
+      { "text": "The color of the device casing", "correct": true, "rationale": "The casing color has no bearing on biometric accuracy, making it least relevant." },
+      { "text": "The False Acceptance Rate", "correct": false, "rationale": "FAR is a key accuracy/security metric." },
+      { "text": "The False Rejection Rate", "correct": false, "rationale": "FRR is a key usability/accuracy metric." },
+      { "text": "The Crossover Error Rate", "correct": false, "rationale": "CER is a central overall accuracy indicator." }
+    ]
+  }
+]

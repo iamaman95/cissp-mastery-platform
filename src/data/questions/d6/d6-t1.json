@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d6-t1-a1",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Assessment vs Audit",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A prospective enterprise customer will not sign a contract until your SaaS company provides independent evidence that its security controls were designed appropriately and operated effectively over the past year. Which artifact BEST satisfies this request?",
+    "options": [
+      { "text": "A SOC 2 Type II report issued by an independent CPA firm", "correct": true, "rationale": "A SOC 2 Type II report is an independent attestation that controls were both suitably designed and operating effectively over a period of time — exactly the third-party assurance a customer needs for contractual reliance." },
+      { "text": "The most recent internal vulnerability scan report", "correct": false, "rationale": "A vulnerability scan is a point-in-time internal technical check; it is not an independent attestation of control operation over time." },
+      { "text": "A summary of the internal red team's last penetration test", "correct": false, "rationale": "An internal pen test demonstrates technical validation but is not independent third-party assurance suitable for contractual reliance." },
+      { "text": "A copy of the company's information security policy", "correct": false, "rationale": "A policy states intent but provides no evidence that controls actually operated effectively." }
+    ]
+  },
+  {
+    "id": "d6-t1-a2",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Authorization to Test",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A newly hired penetration tester is eager to demonstrate value and proposes scanning the production environment on their first day. Before any testing begins, what must the tester obtain FIRST?",
+    "options": [
+      { "text": "Signed, written authorization defining scope from management", "correct": true, "rationale": "Documented, signed authorization (with a defined scope) is a mandatory prerequisite; without it, offensive testing may constitute an actual computer-fraud offense and exposes the tester to liability." },
+      { "text": "A list of every IP address on the corporate network", "correct": false, "rationale": "Target details matter, but they are gathered under an authorized, scoped engagement — not before authorization exists." },
+      { "text": "The latest vulnerability scan results", "correct": false, "rationale": "Prior scan data can inform testing, but it is not the prerequisite that legally permits testing to begin." },
+      { "text": "Access to the SIEM to watch for detections", "correct": false, "rationale": "Monitoring visibility is an execution detail, not the legal precondition for testing." }
+    ]
+  },
+  {
+    "id": "d6-t1-a3",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Audit Independence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization's internal audit team, which reviews the effectiveness of IT security controls, currently reports directly to the CIO whose systems it audits. Which concern does this reporting line MOST directly create?",
+    "options": [
+      { "text": "Loss of audit independence, because the auditor reports to the function it audits", "correct": true, "rationale": "Internal audit must retain organizational independence from the function under review; reporting to the CIO whose systems are audited undermines objectivity and is a classic reporting-line trap." },
+      { "text": "Reduced availability of the audited systems during testing", "correct": false, "rationale": "Reporting lines do not affect system availability; the issue is objectivity, not uptime." },
+      { "text": "A confidentiality breach of audit findings", "correct": false, "rationale": "The problem is impaired independence, not unauthorized disclosure of findings." },
+      { "text": "Excessive audit frequency", "correct": false, "rationale": "The reporting structure does not dictate cadence; the concern is independence." }
+    ]
+  },
+  {
+    "id": "d6-t1-a4",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Risk-Based Testing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "With a limited testing budget, a security manager must decide how to allocate assessment effort across the organization's systems. Which approach BEST reflects sound test strategy design?",
+    "options": [
+      { "text": "Prioritize testing of the highest-risk, highest-value assets first", "correct": true, "rationale": "Test strategy should be risk-based, concentrating limited resources on the assets whose compromise would cause the greatest harm." },
+      { "text": "Test every system equally to be fair to all business units", "correct": false, "rationale": "Treating all assets as equal priority ignores risk and is the classic distractor; it wastes resources on low-value targets." },
+      { "text": "Test only the systems that failed last year's audit", "correct": false, "rationale": "Limiting scope to prior failures ignores newly deployed or high-value systems and is not a comprehensive risk-based strategy." },
+      { "text": "Test whichever systems the business units request first", "correct": false, "rationale": "Request order is not a proxy for risk; strategy must be driven by asset criticality and threat exposure." }
+    ]
+  },
+  {
+    "id": "d6-t1-a5",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Rules of Engagement",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before a third-party penetration test, both parties sign a document specifying authorized targets, permitted testing windows, prohibited techniques, and emergency contacts. What is the PRIMARY purpose of this document?",
+    "options": [
+      { "text": "To define the rules of engagement so testing stays within agreed, authorized boundaries", "correct": true, "rationale": "Rules of engagement establish scope, timing, methods, authorized targets, and limits, keeping the test lawful and controlled." },
+      { "text": "To guarantee that no vulnerabilities will be found", "correct": false, "rationale": "RoE governs how testing is conducted; it makes no promise about outcomes." },
+      { "text": "To transfer all legal liability to the client", "correct": false, "rationale": "RoE clarifies authorization and boundaries but is not a blanket liability transfer instrument." },
+      { "text": "To replace the need for a signed authorization", "correct": false, "rationale": "RoE complements, and typically accompanies, signed authorization; it does not remove the need for it." }
+    ]
+  },
+  {
+    "id": "d6-t1-a6",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "SOC 2 Type I vs Type II",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A startup provides a report attesting that its controls were suitably designed as of a single date, but a customer insists on evidence that those controls actually operated effectively across the full year. Which report type would MOST directly meet the customer's requirement?",
+    "options": [
+      { "text": "SOC 2 Type II", "correct": true, "rationale": "A Type II report covers the operating effectiveness of controls over a period of time, not just their design at a point in time." },
+      { "text": "SOC 2 Type I", "correct": false, "rationale": "A Type I report only attests to the suitability of control design at a single point in time, which is what the startup already provided and the customer found insufficient." },
+      { "text": "SOC 3 general-use report", "correct": false, "rationale": "SOC 3 is a summarized, public-facing report lacking the detailed period-of-time control testing evidence the customer needs." },
+      { "text": "A penetration test report", "correct": false, "rationale": "A pen test evaluates technical exploitability, not the operating effectiveness of the full control set over a period." }
+    ]
+  },
+  {
+    "id": "d6-t1-a7",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Scope Definition",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A CISO is initiating the annual assessment program. Before selecting tools or scheduling testers, what should be defined FIRST?",
+    "options": [
+      { "text": "The scope: which systems, data, and processes are in and out of bounds", "correct": true, "rationale": "Scope must be defined before tools, cadence, or performers are chosen; it drives every subsequent decision in the strategy." },
+      { "text": "The specific scanning tool licenses to purchase", "correct": false, "rationale": "Tool selection follows from scope and requirements, not the other way around." },
+      { "text": "The names of individual testers to assign", "correct": false, "rationale": "Staffing is a later planning detail that depends on the defined scope." },
+      { "text": "The color scheme of the final report template", "correct": false, "rationale": "Report formatting is irrelevant to strategy design and is a distractor." }
+    ]
+  },
+  {
+    "id": "d6-t1-a8",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Remediation Validation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After a penetration test, the development team reports that all critical findings have been fixed. What should the test strategy require BEST to confirm the risk is actually closed?",
+    "options": [
+      { "text": "Retesting (validation) of the specific findings to confirm remediation", "correct": true, "rationale": "The test lifecycle includes remediation validation — retesting the fixed findings verifies the fixes are effective rather than relying on self-reported status." },
+      { "text": "Accepting the team's status update and closing the findings", "correct": false, "rationale": "Self-reported closure without verification can leave residual risk; validation is required." },
+      { "text": "Scheduling the next annual test twelve months later", "correct": false, "rationale": "Waiting a year does not confirm the current fixes worked; timely retesting is needed." },
+      { "text": "Deleting the original findings from the tracker", "correct": false, "rationale": "Removing records destroys traceability and does not verify remediation." }
+    ]
+  },
+  {
+    "id": "d6-t1-a9",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Continuous Monitoring",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which term describes an ongoing, near-real-time strategy of assessing security controls and posture rather than testing only at fixed intervals?",
+    "options": [
+      { "text": "Continuous monitoring", "correct": true, "rationale": "Continuous monitoring is the ongoing, automated or semi-automated assessment of controls and posture in near real time." },
+      { "text": "Point-in-time audit", "correct": false, "rationale": "A point-in-time audit is a fixed-interval evaluation, the opposite of continuous monitoring." },
+      { "text": "Black-box testing", "correct": false, "rationale": "Black-box testing describes tester knowledge level, not assessment cadence." },
+      { "text": "Attestation", "correct": false, "rationale": "Attestation is a formal opinion issued after examination, not an ongoing monitoring approach." }
+    ]
+  },
+  {
+    "id": "d6-t1-a10",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Assessment vs Audit",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes a security assessment from a security audit?",
+    "options": [
+      { "text": "An assessment is improvement-oriented to find weaknesses; an audit is an evidence-based examination of compliance against a defined standard", "correct": true, "rationale": "Assessments help find and fix weaknesses, while audits formally verify controls against a standard and often produce an attestation." },
+      { "text": "An assessment must always be independent; an audit never is", "correct": false, "rationale": "This reverses reality — independence is typically an audit requirement, not an assessment one." },
+      { "text": "An assessment produces a formal opinion; an audit only produces recommendations", "correct": false, "rationale": "This inverts the outputs — audits produce formal opinions/attestations, assessments produce findings and recommendations." },
+      { "text": "There is no meaningful difference; the terms are interchangeable", "correct": false, "rationale": "CISSP tests these as distinct concepts; treating them as synonyms is the trap." }
+    ]
+  },
+  {
+    "id": "d6-t1-b1",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Third-Party Assurance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A regulator requires your bank to demonstrate that a defined set of security controls meets an established compliance standard, with findings reported to the regulator. Which activity BEST fits this requirement?",
+    "options": [
+      { "text": "A formal audit against the defined standard", "correct": true, "rationale": "An audit is an evidence-based examination of whether controls meet a defined standard, with results reported to a governance body or regulator — exactly what is described." },
+      { "text": "An ad hoc internal vulnerability assessment", "correct": false, "rationale": "A vulnerability assessment finds technical weaknesses to fix; it is not a compliance examination against a standard for a regulator." },
+      { "text": "A red team exercise simulating an attacker", "correct": false, "rationale": "A red team tests detection and response realism, not formal compliance against a defined standard." },
+      { "text": "A tabletop incident response drill", "correct": false, "rationale": "A tabletop exercise validates response procedures, not control compliance against a regulatory standard." }
+    ]
+  },
+  {
+    "id": "d6-t1-b2",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Authorization to Test",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A well-meaning system administrator runs an exploitation tool against a partner company's server without any written agreement, intending only to prove a point about weak security. Which statement MOST accurately describes this action?",
+    "options": [
+      { "text": "It is improper regardless of intent, because testing began without signed authorization", "correct": true, "rationale": "Good intentions do not substitute for authorization; unauthorized offensive testing can be a computer-fraud offense and must be flagged as improper." },
+      { "text": "It is acceptable because the goal was to improve security", "correct": false, "rationale": "Intent to help does not legalize unauthorized testing against another party's systems." },
+      { "text": "It is acceptable as long as no data was exfiltrated", "correct": false, "rationale": "The absence of exfiltration does not cure the lack of authorization for the testing activity." },
+      { "text": "It is acceptable because the admin has legitimate access to his own network", "correct": false, "rationale": "Access to one's own network does not authorize testing a partner's server." }
+    ]
+  },
+  {
+    "id": "d6-t1-b3",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Internal vs External Audit",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The board's audit committee wants ongoing assurance about the effectiveness of internal risk management, reported to management rather than to external customers. Which type of audit BEST meets this need?",
+    "options": [
+      { "text": "An internal audit performed by the organization's own audit function", "correct": true, "rationale": "Internal audit provides management and the board ongoing governance and risk assurance while remaining independent of the audited function." },
+      { "text": "An external SOC 2 audit by a CPA firm", "correct": false, "rationale": "External audits primarily serve customers, regulators, and partners, and are usually contractual or regulatory, not internal governance assurance." },
+      { "text": "A customer-commissioned third-party audit", "correct": false, "rationale": "A customer-driven audit serves the customer's assurance needs, not the board's ongoing internal governance." },
+      { "text": "A vendor security questionnaire", "correct": false, "rationale": "A questionnaire is a self-report, not an audit providing independent assurance to the board." }
+    ]
+  },
+  {
+    "id": "d6-t1-b4",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Risk-Based Testing",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A test strategy is being reviewed for soundness. Which proposed principle is LEAST consistent with good assessment strategy design?",
+    "options": [
+      { "text": "Allocate identical testing depth to every asset regardless of its criticality", "correct": true, "rationale": "Uniform effort ignores risk; strategy should concentrate depth on high-risk, high-value assets, so this principle is the least sound." },
+      { "text": "Prioritize testing based on asset criticality and threat exposure", "correct": false, "rationale": "This is a core tenet of risk-based testing and is sound." },
+      { "text": "Require signed authorization before offensive testing", "correct": false, "rationale": "This is a mandatory and sound element of strategy design." },
+      { "text": "Include retesting to validate remediation", "correct": false, "rationale": "Remediation validation is part of a sound test lifecycle." }
+    ]
+  },
+  {
+    "id": "d6-t1-b5",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Scope Definition",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During planning, the business insists that the production payment system must not be actively tested during month-end processing due to load sensitivity. How should the strategy BEST handle this?",
+    "options": [
+      { "text": "Document it as an explicit scope exclusion/constraint in the scope statement and rules of engagement", "correct": true, "rationale": "Explicit in-bounds and out-of-bounds definitions (including timing constraints) belong in the scope statement and RoE so testing stays controlled and authorized." },
+      { "text": "Ignore the request and test everything for completeness", "correct": false, "rationale": "Overriding a legitimate business constraint risks an outage and violates agreed boundaries." },
+      { "text": "Cancel the entire assessment because one system is constrained", "correct": false, "rationale": "A single timing constraint does not require abandoning the whole assessment; it is a scoping detail." },
+      { "text": "Test the payment system anyway but only at night without informing anyone", "correct": false, "rationale": "Testing outside agreed constraints without authorization violates the rules of engagement." }
+    ]
+  },
+  {
+    "id": "d6-t1-b6",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "SOC 2 Type I vs Type II",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the key difference between a SOC 2 Type I and a SOC 2 Type II report?",
+    "options": [
+      { "text": "Type I attests to control design at a point in time; Type II attests to operating effectiveness over a period", "correct": true, "rationale": "This is the defining distinction: Type I is design at a moment, Type II is operating effectiveness across a period." },
+      { "text": "Type I is for the public; Type II is confidential", "correct": false, "rationale": "Audience distribution is the SOC 2 vs SOC 3 distinction, not Type I vs Type II." },
+      { "text": "Type I covers financial reporting; Type II covers security only", "correct": false, "rationale": "Financial-reporting focus describes SOC 1 versus SOC 2, not Type I versus Type II." },
+      { "text": "Type I is performed internally; Type II is performed externally", "correct": false, "rationale": "Both SOC 2 report types are issued by an independent CPA firm; the difference is design versus operating effectiveness over time." }
+    ]
+  },
+  {
+    "id": "d6-t1-b7",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Test Lifecycle",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization is formalizing its recurring assessment lifecycle. Which phase comes FIRST in a well-designed test cycle?",
+    "options": [
+      { "text": "Pre-engagement planning, including scope and authorization", "correct": true, "rationale": "Planning — defining scope, rules of engagement, and obtaining authorization — precedes execution, analysis, and remediation validation." },
+      { "text": "Execution of scans and exploitation attempts", "correct": false, "rationale": "Execution follows planning; running tests before scope and authorization are set is improper." },
+      { "text": "Reporting and lessons-learned integration", "correct": false, "rationale": "Reporting occurs after execution and analysis, near the end of the cycle." },
+      { "text": "Remediation validation retesting", "correct": false, "rationale": "Retesting happens after findings are produced and fixes are attempted, not at the start." }
+    ]
+  },
+  {
+    "id": "d6-t1-b8",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Assessment vs Audit",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A CISO wants an improvement-oriented activity that identifies weaknesses in a new application so the team can fix them before launch, without producing a formal compliance opinion. Which activity is MOST appropriate?",
+    "options": [
+      { "text": "A security assessment such as a vulnerability assessment or control assessment", "correct": true, "rationale": "An assessment is improvement-focused, aimed at finding and remediating weaknesses, and does not issue a formal compliance opinion." },
+      { "text": "An external attestation audit", "correct": false, "rationale": "An attestation audit produces a formal opinion against a standard, which is not what the improvement-focused goal calls for." },
+      { "text": "A regulatory compliance certification", "correct": false, "rationale": "Certification is a formal compliance outcome, not an internal pre-launch improvement activity." },
+      { "text": "A board-level governance review", "correct": false, "rationale": "A governance review is oversight, not a technical activity to find and fix application weaknesses." }
+    ]
+  },
+  {
+    "id": "d6-t1-b9",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Audit Independence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To preserve objectivity, to whom should an internal audit function ideally report?",
+    "options": [
+      { "text": "The audit committee of the board, independent of the functions it audits", "correct": true, "rationale": "Reporting to the audit committee preserves independence from operational management whose controls are being examined." },
+      { "text": "The CIO responsible for the audited IT systems", "correct": false, "rationale": "Reporting to the CIO whose systems are audited compromises independence." },
+      { "text": "The head of the department currently under review", "correct": false, "rationale": "Reporting to the audited department destroys objectivity." },
+      { "text": "The external customers requesting assurance", "correct": false, "rationale": "Internal audit serves management and the board; customers receive assurance through external audits, not by controlling internal audit's reporting line." }
+    ]
+  },
+  {
+    "id": "d6-t1-b10",
+    "domainId": "d6",
+    "topicId": "d6-t1",
+    "subtopicTag": "Strategy Governance",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "The exam frames test-strategy design as a governance activity. What is the PRIMARY driver that should shape which systems get assessed and how often?",
+    "options": [
+      { "text": "Business risk, regulatory obligation, and asset criticality", "correct": true, "rationale": "Strategy is risk- and obligation-driven; cadence and scope follow from the criticality of assets and the compliance environment." },
+      { "text": "Whichever tools the security team already owns", "correct": false, "rationale": "Available tooling is a constraint, not the strategic driver of what to assess." },
+      { "text": "The personal preferences of individual testers", "correct": false, "rationale": "Individual preference is not a legitimate basis for a governance-driven strategy." },
+      { "text": "The alphabetical order of system names", "correct": false, "rationale": "This is an arbitrary distractor unrelated to risk-based governance." }
+    ]
+  }
+]

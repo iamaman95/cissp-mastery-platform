@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d6-t4-a1",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Risk-Based Prioritization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A scan flags a 'critical' CVSS finding on an isolated lab machine and a 'medium' finding on the internet-facing payment portal. How should remediation BEST be prioritized?",
+    "options": [
+      { "text": "By overall risk to the business, weighing exposure and asset value, which may rank the portal finding higher", "correct": true, "rationale": "Prioritization should consider business context (exposure, asset criticality), so a medium finding on a critical internet-facing asset can outrank a critical one on an isolated box." },
+      { "text": "Strictly by the raw CVSS number, always fixing the 'critical' first", "correct": false, "rationale": "Raw score alone ignores exposure and business impact; context can change the true priority." },
+      { "text": "Randomly, since all findings are equal", "correct": false, "rationale": "Findings are not equal; risk-based ranking is required." },
+      { "text": "By which is easiest to fix regardless of risk", "correct": false, "rationale": "Ease of fixing is secondary to actual risk when prioritizing." }
+    ]
+  },
+  {
+    "id": "d6-t4-a2",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Validate False Positives",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before reporting scanner findings to stakeholders, what should the analyst do FIRST?",
+    "options": [
+      { "text": "Validate the findings to filter out false positives", "correct": true, "rationale": "Validating findings removes false positives so stakeholders act on real issues, preserving report credibility." },
+      { "text": "Publish every raw finding without review", "correct": false, "rationale": "Unvalidated findings include false positives that waste effort and erode trust." },
+      { "text": "Delete all findings to avoid alarm", "correct": false, "rationale": "Discarding findings hides real risks." },
+      { "text": "Exploit each finding in production without approval", "correct": false, "rationale": "Unauthorized exploitation is improper and not part of validating a report." }
+    ]
+  },
+  {
+    "id": "d6-t4-a3",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Executive Summary",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What content is BEST for the executive-summary section of a security test report?",
+    "options": [
+      { "text": "A concise, business-focused overview of risk posture and top prioritized recommendations", "correct": true, "rationale": "Executives need a short, risk-oriented summary highlighting business impact and priorities, not deep technical detail." },
+      { "text": "Raw packet captures and exploit code", "correct": false, "rationale": "Low-level technical detail belongs in the technical section, not the executive summary." },
+      { "text": "A list of the testers' favorite tools only", "correct": false, "rationale": "Tool preferences are not the point of an executive summary." },
+      { "text": "Nothing; executives do not need a summary", "correct": false, "rationale": "Executives specifically benefit from a concise risk summary to make decisions." }
+    ]
+  },
+  {
+    "id": "d6-t4-a4",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Report Confidentiality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why must a penetration-test report be handled as highly confidential?",
+    "options": [
+      { "text": "It documents exploitable weaknesses that would aid an attacker if disclosed", "correct": true, "rationale": "A test report is essentially a roadmap of how to breach the organization, so it must be protected and shared only with authorized parties." },
+      { "text": "Because it contains the testers' vacation plans", "correct": false, "rationale": "Personal schedules are not why the report is sensitive." },
+      { "text": "Because reports are legally required to be public", "correct": false, "rationale": "Security test reports are sensitive and are not required to be public." },
+      { "text": "Because it has a colorful cover", "correct": false, "rationale": "Aesthetics are irrelevant to the confidentiality concern." }
+    ]
+  },
+  {
+    "id": "d6-t4-a5",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Retesting After Fix",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team claims it fixed a reported vulnerability. What should be done FIRST to confirm closure?",
+    "options": [
+      { "text": "Retest the specific finding to verify the fix is effective", "correct": true, "rationale": "Retesting confirms the vulnerability is actually remediated before the finding is closed." },
+      { "text": "Close the finding based solely on the team's claim", "correct": false, "rationale": "Unverified claims may leave the issue unfixed; retesting is needed." },
+      { "text": "Delete the finding from the report", "correct": false, "rationale": "Deleting the record loses tracking and does not verify the fix." },
+      { "text": "Ignore it since it was reported once", "correct": false, "rationale": "Reporting is not remediation; verification is required." }
+    ]
+  },
+  {
+    "id": "d6-t4-a6",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "False Negative",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A 'false negative' in security testing refers to which of the following?",
+    "options": [
+      { "text": "A real vulnerability that the test failed to detect", "correct": true, "rationale": "A false negative is a genuine weakness missed by the test — dangerous because it goes unaddressed." },
+      { "text": "A reported issue that is not actually a vulnerability", "correct": false, "rationale": "That describes a false positive, not a false negative." },
+      { "text": "A successfully patched vulnerability", "correct": false, "rationale": "A patched issue is not a false negative; a false negative is an undetected real flaw." },
+      { "text": "A duplicate finding", "correct": false, "rationale": "Duplication is not the definition of a false negative." }
+    ]
+  },
+  {
+    "id": "d6-t4-a7",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Remediation Tracking",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure findings are actually resolved rather than forgotten, what is BEST?",
+    "options": [
+      { "text": "Track each finding to closure with owners and due dates (e.g., a POA&M)", "correct": true, "rationale": "A remediation tracker / plan of action and milestones assigns accountability and deadlines so findings are driven to closure." },
+      { "text": "List findings once and never follow up", "correct": false, "rationale": "Without follow-up, findings linger unremediated." },
+      { "text": "Assume developers will remember", "correct": false, "rationale": "Relying on memory leads to unresolved findings." },
+      { "text": "Delete findings after the report is delivered", "correct": false, "rationale": "Deleting findings removes the ability to track remediation." }
+    ]
+  },
+  {
+    "id": "d6-t4-a8",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Technical Report Detail",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What should the technical section of the report MOST include for the engineering team?",
+    "options": [
+      { "text": "Detailed findings with evidence, affected assets, and specific remediation steps", "correct": true, "rationale": "Engineers need reproducible detail and clear remediation guidance to fix the issues effectively." },
+      { "text": "Only a one-line business summary", "correct": false, "rationale": "A one-line summary lacks the detail engineers need to remediate." },
+      { "text": "The testers' lunch receipts", "correct": false, "rationale": "Irrelevant administrative items do not help remediation." },
+      { "text": "No remediation guidance at all", "correct": false, "rationale": "Omitting remediation steps leaves engineers without direction." }
+    ]
+  },
+  {
+    "id": "d6-t4-a9",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Root-Cause Analysis",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Similar vulnerabilities keep reappearing across releases. What analysis BEST prevents recurrence?",
+    "options": [
+      { "text": "Root-cause analysis to fix the underlying process/coding cause, not just individual instances", "correct": true, "rationale": "Addressing the root cause (e.g., missing secure-coding training or a flawed template) prevents the class of issue from recurring." },
+      { "text": "Fixing each instance repeatedly with no deeper analysis", "correct": false, "rationale": "Treating symptoms alone lets the underlying cause keep generating new instances." },
+      { "text": "Ignoring the pattern", "correct": false, "rationale": "Ignoring recurrence guarantees the problem persists." },
+      { "text": "Hiding the recurring findings", "correct": false, "rationale": "Concealment does not prevent recurrence and undermines trust." }
+    ]
+  },
+  {
+    "id": "d6-t4-a10",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "CVSS Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "CVSS is primarily used for which of the following?",
+    "options": [
+      { "text": "Providing a standardized severity score for vulnerabilities", "correct": true, "rationale": "CVSS gives a standardized 0–10 severity rating to help compare and prioritize vulnerabilities." },
+      { "text": "Encrypting network traffic", "correct": false, "rationale": "CVSS is a scoring system, not an encryption method." },
+      { "text": "Backing up databases", "correct": false, "rationale": "CVSS has nothing to do with backups." },
+      { "text": "Assigning office seating", "correct": false, "rationale": "CVSS is unrelated to facilities." }
+    ]
+  },
+  {
+    "id": "d6-t4-b1",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Context Over Raw Score",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Two findings share the same CVSS score, but one is on an internet-facing system holding regulated data and the other on an internal test box. Which should MOST likely be remediated first?",
+    "options": [
+      { "text": "The internet-facing regulated-data system, due to greater exposure and impact", "correct": true, "rationale": "Equal raw scores are differentiated by business context; the exposed, high-value asset carries greater real risk." },
+      { "text": "The internal test box, because test systems always come first", "correct": false, "rationale": "A low-exposure test box generally poses less real risk than an exposed regulated system." },
+      { "text": "Neither, since scores are equal", "correct": false, "rationale": "Equal scores do not mean equal risk; context breaks the tie." },
+      { "text": "Whichever is alphabetically first", "correct": false, "rationale": "Alphabetical order is not a risk-based prioritization method." }
+    ]
+  },
+  {
+    "id": "d6-t4-b2",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Audience Tailoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A single report is written in deep technical jargon and handed to the board of directors, who find it unusable. What is the BEST fix?",
+    "options": [
+      { "text": "Provide an executive summary in business terms alongside the technical detail for engineers", "correct": true, "rationale": "Tailoring content — a business-risk summary for the board plus technical detail for engineers — makes the report useful to each audience." },
+      { "text": "Remove all findings so the board is not confused", "correct": false, "rationale": "Removing findings hides risk rather than communicating it appropriately." },
+      { "text": "Make it even more technical", "correct": false, "rationale": "More jargon further alienates the board audience." },
+      { "text": "Give the board no report at all", "correct": false, "rationale": "The board needs a suitable summary to fulfill oversight duties." }
+    ]
+  },
+  {
+    "id": "d6-t4-b3",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "False Positive Impact",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "If a report is full of unvalidated false positives, what is the MOST likely consequence?",
+    "options": [
+      { "text": "Wasted remediation effort and eroded trust in future reports", "correct": true, "rationale": "False positives consume resources on non-issues and undermine confidence, causing teams to discount real findings." },
+      { "text": "Perfectly efficient remediation", "correct": false, "rationale": "False positives reduce efficiency, not improve it." },
+      { "text": "Automatic fixing of all real issues", "correct": false, "rationale": "False positives do not fix real issues; they distract from them." },
+      { "text": "No effect whatsoever", "correct": false, "rationale": "Unvalidated false positives clearly waste effort and reduce credibility." }
+    ]
+  },
+  {
+    "id": "d6-t4-b4",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Report Distribution Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "How should a completed penetration-test report BEST be distributed?",
+    "options": [
+      { "text": "Only to authorized recipients through secure channels, with access controlled", "correct": true, "rationale": "Because the report reveals exploitable weaknesses, it must be shared securely and restricted to authorized parties." },
+      { "text": "Posted publicly on the company website", "correct": false, "rationale": "Public posting hands attackers a breach roadmap." },
+      { "text": "Emailed unencrypted to a large distribution list", "correct": false, "rationale": "Broad, unencrypted distribution risks exposure of sensitive findings." },
+      { "text": "Printed and left in the public lobby", "correct": false, "rationale": "Leaving it in public exposes the sensitive findings." }
+    ]
+  },
+  {
+    "id": "d6-t4-b5",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Trend Analysis",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Comparing findings across multiple test reports over a year MOST directly supports what?",
+    "options": [
+      { "text": "Trend analysis to see whether the security posture is improving or worsening", "correct": true, "rationale": "Cross-report trend analysis reveals directional change in posture, informing strategy and continuous improvement." },
+      { "text": "Nothing; each report stands entirely alone", "correct": false, "rationale": "Comparing reports over time yields valuable trend insight." },
+      { "text": "Choosing office furniture", "correct": false, "rationale": "This is unrelated to test-result trends." },
+      { "text": "Encrypting the reports", "correct": false, "rationale": "Encryption protects the reports but is not what trend analysis provides." }
+    ]
+  },
+  {
+    "id": "d6-t4-b6",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Finding Not Fixed",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A manager says 'we reported the vulnerability, so we're covered.' Which correction is MOST accurate?",
+    "options": [
+      { "text": "Reporting is not remediation; the finding must be fixed and retested to reduce risk", "correct": true, "rationale": "Documenting a finding does not reduce risk; remediation and verification do." },
+      { "text": "Reporting alone fully resolves the risk", "correct": false, "rationale": "A reported-but-unfixed vulnerability remains exploitable." },
+      { "text": "The vulnerability disappears once written down", "correct": false, "rationale": "Documentation does not remove the vulnerability." },
+      { "text": "No further action is ever needed after reporting", "correct": false, "rationale": "Remediation and retesting are required after reporting." }
+    ]
+  },
+  {
+    "id": "d6-t4-b7",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Prioritization Inputs",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which combination of inputs MOST appropriately drives remediation prioritization?",
+    "options": [
+      { "text": "Severity, likelihood of exploitation, and business impact/asset value", "correct": true, "rationale": "Sound prioritization blends technical severity with exploit likelihood and the business value/exposure of the affected asset." },
+      { "text": "Only the alphabetical order of asset names", "correct": false, "rationale": "Alphabetical order is not a risk factor." },
+      { "text": "Only the tester's personal preference", "correct": false, "rationale": "Preference is not an objective prioritization basis." },
+      { "text": "Only the length of the finding's description", "correct": false, "rationale": "Description length does not indicate risk." }
+    ]
+  },
+  {
+    "id": "d6-t4-b8",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "False Positive Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A false positive in a scan report is best described as which of the following?",
+    "options": [
+      { "text": "A reported finding that is not actually a real vulnerability", "correct": true, "rationale": "A false positive is flagged as a problem but is not genuinely exploitable/real." },
+      { "text": "A real vulnerability that went undetected", "correct": false, "rationale": "That is a false negative, not a false positive." },
+      { "text": "A vulnerability that was successfully patched", "correct": false, "rationale": "A patched issue is not a false positive." },
+      { "text": "A duplicate asset entry", "correct": false, "rationale": "Duplication is not the definition of a false positive." }
+    ]
+  },
+  {
+    "id": "d6-t4-b9",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Actionable Findings",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What makes a reported finding MOST actionable for the team responsible for fixing it?",
+    "options": [
+      { "text": "Clear description, evidence, affected assets, risk rating, and specific remediation steps", "correct": true, "rationale": "Actionable findings tell the team what/where the issue is, how severe, and exactly how to fix it." },
+      { "text": "A vague statement that 'something is wrong somewhere'", "correct": false, "rationale": "Vague findings cannot be acted upon effectively." },
+      { "text": "Only a severity number with no details", "correct": false, "rationale": "A number without context or remediation guidance is not actionable." },
+      { "text": "The tester's signature and nothing else", "correct": false, "rationale": "A signature provides no remediation information." }
+    ]
+  },
+  {
+    "id": "d6-t4-b10",
+    "domainId": "d6",
+    "topicId": "d6-t4",
+    "subtopicTag": "Reporting Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which element is LEAST relevant to an effective security test report?",
+    "options": [
+      { "text": "The favorite color of the report's author", "correct": true, "rationale": "The author's color preference has no bearing on report quality or usefulness, making it least relevant." },
+      { "text": "Risk-ranked findings", "correct": false, "rationale": "Risk-ranked findings are core to an effective report." },
+      { "text": "Remediation guidance", "correct": false, "rationale": "Actionable remediation steps are essential." },
+      { "text": "An executive summary", "correct": false, "rationale": "An executive summary helps leadership act on the results." }
+    ]
+  }
+]

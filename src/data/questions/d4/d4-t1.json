@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d4-t1-a1",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI Layer Identification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An attacker floods a switch with a large volume of frames bearing forged source MAC addresses, overflowing its CAM table so it begins flooding all traffic out every port like a hub. At which OSI layer is this attack MOST directly operating?",
+    "options": [
+      { "text": "Layer 2 (Data Link)", "correct": true, "rationale": "MAC addresses and switch CAM/MAC tables are Layer 2 constructs; a MAC flooding (CAM overflow) attack manipulates Layer 2 forwarding behavior." },
+      { "text": "Layer 3 (Network)", "correct": false, "rationale": "Layer 3 concerns IP addressing and routing; the attack targets the switch's MAC table, not IP routing." },
+      { "text": "Layer 1 (Physical)", "correct": false, "rationale": "Layer 1 concerns cabling and signaling; the attack uses valid frames, not physical-layer manipulation." },
+      { "text": "Layer 4 (Transport)", "correct": false, "rationale": "Layer 4 concerns TCP/UDP end-to-end transport; the attack does not target ports or session state." }
+    ]
+  },
+  {
+    "id": "d4-t1-a2",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Device to OSI Layer Mapping",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A network engineer needs a device that forwards traffic between two different IP subnets based on destination IP address. Which device operating at which OSI layer BEST fits this requirement?",
+    "options": [
+      { "text": "A router operating at Layer 3", "correct": true, "rationale": "Routing between IP subnets based on destination IP address is a Layer 3 (Network) function, which is the router's native layer." },
+      { "text": "A switch operating at Layer 2", "correct": false, "rationale": "A standard switch forwards frames within a broadcast domain based on MAC address at Layer 2; it does not route between IP subnets." },
+      { "text": "A hub operating at Layer 1", "correct": false, "rationale": "A hub simply repeats electrical signals at Layer 1 and has no addressing awareness at all." },
+      { "text": "A bridge operating at Layer 2", "correct": false, "rationale": "A bridge connects segments at Layer 2 using MAC addresses; it cannot forward based on IP subnet." }
+    ]
+  },
+  {
+    "id": "d4-t1-a3",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "TCP vs UDP Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An architect is choosing a transport protocol for a real-time voice application where minimizing latency matters more than retransmitting a lost packet. Which transport protocol is the BEST fit and why?",
+    "options": [
+      { "text": "UDP, because its connectionless, best-effort design avoids retransmission delay and handshake overhead", "correct": true, "rationale": "Real-time voice tolerates occasional lost packets better than the delay caused by TCP retransmission; UDP's low-overhead, connectionless design (used by RTP) is the standard choice." },
+      { "text": "TCP, because guaranteed delivery ensures no voice packet is ever lost", "correct": false, "rationale": "TCP retransmission introduces latency and jitter that degrade real-time voice; a late packet is useless for live audio, making guaranteed delivery counterproductive here." },
+      { "text": "TCP, because the three-way handshake reduces jitter", "correct": false, "rationale": "The handshake and flow control add overhead and latency; they do not reduce jitter for real-time media." },
+      { "text": "ICMP, because it is the lightest-weight protocol available", "correct": false, "rationale": "ICMP is a Layer 3 control/diagnostic protocol, not a transport protocol for carrying application media streams." }
+    ]
+  },
+  {
+    "id": "d4-t1-a4",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Encapsulation and PDUs",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In the OSI model, what is the correct name for the protocol data unit (PDU) at the Network layer (Layer 3)?",
+    "options": [
+      { "text": "Packet", "correct": true, "rationale": "The Layer 3 (Network) PDU is the packet; segment is Layer 4, frame is Layer 2, and bits are Layer 1." },
+      { "text": "Frame", "correct": false, "rationale": "A frame is the Layer 2 (Data Link) PDU, not the Layer 3 PDU." },
+      { "text": "Segment", "correct": false, "rationale": "A segment is the Layer 4 (Transport) PDU for TCP; the Layer 3 PDU is the packet." },
+      { "text": "Bit", "correct": false, "rationale": "Bits are the Layer 1 (Physical) PDU, not the Layer 3 PDU." }
+    ]
+  },
+  {
+    "id": "d4-t1-a5",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Network Segmentation",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company runs finance, guest Wi-Fi, and IoT building sensors on one flat Layer 2 network. A compromised guest device is able to reach the finance file server directly. What is the PRIMARY architectural control that would have contained this lateral movement?",
+    "options": [
+      { "text": "VLAN segmentation with inter-VLAN traffic filtered by a Layer 3 firewall", "correct": true, "rationale": "Segmenting functions into separate VLANs and enforcing least-access rules on inter-VLAN routing at a Layer 3 firewall is the primary control that prevents a compromised guest device from reaching finance systems." },
+      { "text": "Stronger Wi-Fi passphrase complexity requirements", "correct": false, "rationale": "A stronger passphrase does not prevent an already-connected, compromised device from moving laterally across a flat network." },
+      { "text": "Full-disk encryption on the finance file server", "correct": false, "rationale": "Disk encryption protects data at rest if the disk is stolen; it does nothing to stop network-level lateral movement to a running server." },
+      { "text": "Enabling a screen-lock timeout on finance workstations", "correct": false, "rationale": "Screen locks address unattended physical access, not network lateral movement between unsegmented zones." }
+    ]
+  },
+  {
+    "id": "d4-t1-a6",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI vs TCP/IP Model",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The TCP/IP model's Internet layer corresponds MOST directly to which OSI layer?",
+    "options": [
+      { "text": "The Network layer (Layer 3)", "correct": true, "rationale": "The TCP/IP Internet layer, home to IP and ICMP and routing, maps directly to the OSI Network layer (Layer 3)." },
+      { "text": "The Transport layer (Layer 4)", "correct": false, "rationale": "The OSI Transport layer maps to the TCP/IP Transport layer, not the Internet layer." },
+      { "text": "The Data Link layer (Layer 2)", "correct": false, "rationale": "Layer 2 maps to the TCP/IP Link (Network Access) layer, not the Internet layer." },
+      { "text": "The Application layer (Layer 7)", "correct": false, "rationale": "OSI Layers 5-7 collapse into the single TCP/IP Application layer, unrelated to the Internet layer." }
+    ]
+  },
+  {
+    "id": "d4-t1-a7",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI Layer of Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A CISSP exam item describes a protocol responsible for data translation, formatting, and encryption/decryption of the application data before it is handed to the session layer. Which OSI layer is MOST associated with this function?",
+    "options": [
+      { "text": "Presentation layer (Layer 6)", "correct": true, "rationale": "The Presentation layer (Layer 6) is responsible for translation, formatting, and encryption/decryption of data; SSL/TLS is often taught as operating here in OSI terms." },
+      { "text": "Application layer (Layer 7)", "correct": false, "rationale": "Layer 7 provides the interface to applications and network services; data formatting and encryption are the Presentation layer's role in OSI terms." },
+      { "text": "Session layer (Layer 5)", "correct": false, "rationale": "The Session layer manages establishment and teardown of sessions, not data formatting or encryption." },
+      { "text": "Transport layer (Layer 4)", "correct": false, "rationale": "Layer 4 handles end-to-end delivery via TCP/UDP; encryption/formatting is attributed to the Presentation layer in OSI teaching." }
+    ]
+  },
+  {
+    "id": "d4-t1-a8",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "ARP and Layer 2 Attacks",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker on the same LAN sends forged ARP replies associating their own MAC address with the default gateway's IP, so victim traffic is routed through the attacker. At which OSI layer does ARP operate, and what is the attack called?",
+    "options": [
+      { "text": "ARP operates at Layer 2, and this is ARP spoofing (cache poisoning) enabling a man-in-the-middle", "correct": true, "rationale": "ARP resolves IP to MAC and functions at the Data Link layer (Layer 2); forging ARP replies to redirect traffic is ARP spoofing/cache poisoning, a classic on-path (MITM) technique." },
+      { "text": "ARP operates at Layer 3, and this is IP spoofing", "correct": false, "rationale": "ARP is a Layer 2 protocol mapping IP to MAC; the attack manipulates MAC-to-IP mappings, not IP source addresses." },
+      { "text": "ARP operates at Layer 4, and this is a SYN flood", "correct": false, "rationale": "ARP is not a transport-layer protocol, and a SYN flood is an unrelated TCP resource-exhaustion attack." },
+      { "text": "ARP operates at Layer 7, and this is DNS poisoning", "correct": false, "rationale": "ARP is not an application-layer protocol, and DNS poisoning targets name resolution, not ARP caches." }
+    ]
+  },
+  {
+    "id": "d4-t1-a9",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Defense in Depth Across Layers",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A security architect argues that a Layer 2 port ACL, a Layer 3 firewall rule, and a Layer 7 application gateway are 'not redundant.' Which statement BEST supports this claim?",
+    "options": [
+      { "text": "Each control inspects a different attack surface, so a threat that evades one layer may still be caught by another", "correct": true, "rationale": "Defense-in-depth across layers is not redundancy: a Layer 2 ACL limits MAC-level access, a Layer 3 firewall filters IP/port, and a Layer 7 gateway inspects application content, each addressing threats the others cannot see." },
+      { "text": "They are redundant, but redundancy is always desirable for availability", "correct": false, "rationale": "The claim is specifically that they are NOT redundant; this option contradicts the premise and misstates why layered controls matter." },
+      { "text": "Layer 7 controls fully supersede lower-layer controls, making the others unnecessary", "correct": false, "rationale": "A Layer 7 gateway cannot see or stop a Layer 2 MAC-flooding or ARP attack; lower-layer controls remain necessary." },
+      { "text": "All three controls inspect the same packet fields, just at different speeds", "correct": false, "rationale": "They inspect fundamentally different fields (MAC, IP/port, application payload), which is precisely why they are complementary rather than redundant." }
+    ]
+  },
+  {
+    "id": "d4-t1-a10",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "TCP Three-Way Handshake",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which sequence correctly describes the TCP three-way handshake used to establish a connection?",
+    "options": [
+      { "text": "SYN, SYN-ACK, ACK", "correct": true, "rationale": "The client sends SYN, the server replies SYN-ACK, and the client responds ACK to establish a reliable connection-oriented session at Layer 4." },
+      { "text": "ACK, SYN, FIN", "correct": false, "rationale": "This is not the handshake order; FIN is used to gracefully close a connection, not open one." },
+      { "text": "SYN, ACK, RST", "correct": false, "rationale": "RST abruptly resets a connection and is not part of the normal establishment handshake." },
+      { "text": "PSH, URG, FIN", "correct": false, "rationale": "These are TCP flags used during or to end data transfer, not the connection-establishment sequence." }
+    ]
+  },
+  {
+    "id": "d4-t1-b1",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI Layer Identification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A frame arrives at a host with a failed cyclic redundancy check (CRC) in its trailer, indicating the frame was corrupted in transit. Which OSI layer is MOST responsible for detecting this error?",
+    "options": [
+      { "text": "Layer 2 (Data Link)", "correct": true, "rationale": "The Data Link layer frames data and uses the frame check sequence/CRC in the trailer to detect bit-level transmission errors within a link." },
+      { "text": "Layer 4 (Transport)", "correct": false, "rationale": "Layer 4 uses its own checksum for end-to-end integrity, but the frame's CRC and the frame construct itself belong to Layer 2." },
+      { "text": "Layer 3 (Network)", "correct": false, "rationale": "Layer 3 deals with packets and IP routing; the CRC in a frame trailer is a Layer 2 mechanism." },
+      { "text": "Layer 1 (Physical)", "correct": false, "rationale": "Layer 1 transmits raw bits and has no framing or CRC error-detection logic." }
+    ]
+  },
+  {
+    "id": "d4-t1-b2",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Device to OSI Layer Mapping",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A legacy device repeats every incoming electrical signal out all other ports without examining any address, creating one large collision domain. Which device and OSI layer does this BEST describe?",
+    "options": [
+      { "text": "A hub at Layer 1", "correct": true, "rationale": "A hub is a Layer 1 device that blindly repeats signals out all ports with no addressing awareness, forming a single collision domain." },
+      { "text": "A switch at Layer 2", "correct": false, "rationale": "A switch examines MAC addresses and forwards frames selectively, creating separate collision domains per port, unlike the described behavior." },
+      { "text": "A router at Layer 3", "correct": false, "rationale": "A router forwards based on IP addresses between subnets; it does not blindly repeat signals." },
+      { "text": "A firewall at Layer 4", "correct": false, "rationale": "A firewall filters traffic by state/port; it does not blindly repeat all signals like a hub." }
+    ]
+  },
+  {
+    "id": "d4-t1-b3",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "TCP vs UDP Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A financial application must transfer transaction files where every byte must arrive intact and in order, and a missing segment must be retransmitted. Which transport protocol BEST meets this requirement?",
+    "options": [
+      { "text": "TCP, because it provides connection-oriented, reliable, ordered delivery with retransmission", "correct": true, "rationale": "File transfers requiring guaranteed, in-order delivery are the canonical use case for TCP's reliability, sequencing, and retransmission." },
+      { "text": "UDP, because it is faster and cannot lose packets", "correct": false, "rationale": "UDP is best-effort and offers no delivery guarantee, sequencing, or retransmission, making it unsuitable when every byte must arrive intact." },
+      { "text": "UDP, because connectionless transfer guarantees ordering", "correct": false, "rationale": "UDP does not guarantee ordering; it is connectionless with no sequencing." },
+      { "text": "ICMP, because it confirms host reachability during the transfer", "correct": false, "rationale": "ICMP is a diagnostic/control protocol and cannot carry application file data reliably." }
+    ]
+  },
+  {
+    "id": "d4-t1-b4",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Encapsulation and PDUs",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "As data moves DOWN the OSI stack from the sender's application, what is the correct order of encapsulation PDUs?",
+    "options": [
+      { "text": "Data, Segment, Packet, Frame, Bits", "correct": true, "rationale": "Going down the stack, application data becomes a segment (L4), then a packet (L3), then a frame (L2), then bits (L1)." },
+      { "text": "Bits, Frame, Packet, Segment, Data", "correct": false, "rationale": "This is the decapsulation order going UP the stack at the receiver, not the encapsulation order going down." },
+      { "text": "Packet, Segment, Data, Frame, Bits", "correct": false, "rationale": "The order is scrambled; segment precedes packet going down, and data is the starting point, not in the middle." },
+      { "text": "Frame, Packet, Segment, Bits, Data", "correct": false, "rationale": "This order does not follow the fixed top-to-bottom encapsulation sequence." }
+    ]
+  },
+  {
+    "id": "d4-t1-b5",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Network Segmentation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A hospital wants its internet-facing web servers reachable from the internet while keeping internal clinical systems isolated from direct external access. Which network design element MOST directly achieves this separation?",
+    "options": [
+      { "text": "Placing the web servers in a DMZ (screened subnet) between two firewall boundaries", "correct": true, "rationale": "A DMZ/screened subnet isolates internet-facing hosts in a semi-trusted zone so that a compromise there does not grant direct access to internal clinical systems." },
+      { "text": "Assigning all servers to the same VLAN for easier management", "correct": false, "rationale": "Putting internal and external servers on the same VLAN removes the isolation the hospital needs and increases lateral-movement risk." },
+      { "text": "Disabling the three-way handshake on external connections", "correct": false, "rationale": "Disabling the TCP handshake would break normal connectivity and does nothing to segment external from internal systems." },
+      { "text": "Using UDP instead of TCP for all web traffic", "correct": false, "rationale": "Transport protocol choice does not create a security zone between external and internal systems." }
+    ]
+  },
+  {
+    "id": "d4-t1-b6",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI vs TCP/IP Model",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which OSI layers are collapsed together into the single Application layer of the four-layer TCP/IP model?",
+    "options": [
+      { "text": "Layers 5, 6, and 7 (Session, Presentation, Application)", "correct": true, "rationale": "The TCP/IP model merges the OSI Session, Presentation, and Application layers into one Application layer." },
+      { "text": "Layers 1 and 2 (Physical and Data Link)", "correct": false, "rationale": "Those map to the TCP/IP Link (Network Access) layer, not the Application layer." },
+      { "text": "Layers 3 and 4 (Network and Transport)", "correct": false, "rationale": "Those map to the TCP/IP Internet and Transport layers respectively, not the Application layer." },
+      { "text": "Layers 2, 3, and 4 (Data Link, Network, Transport)", "correct": false, "rationale": "These span three different TCP/IP layers and are not merged into the Application layer." }
+    ]
+  },
+  {
+    "id": "d4-t1-b7",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "OSI Layer of Encryption",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In TCP/IP-model framing (rather than strict OSI teaching), TLS is most commonly described as operating in which position relative to the transport protocol?",
+    "options": [
+      { "text": "Just above the Transport layer, securing the payload of a TCP session before it reaches the application", "correct": true, "rationale": "In TCP/IP terms, TLS is commonly described as sitting just above TCP (Transport), encrypting the session data for the application; in strict OSI teaching it is placed at Presentation. CISSP expects familiarity with both framings." },
+      { "text": "Below the Network layer, encrypting individual IP routing decisions", "correct": false, "rationale": "TLS does not operate below IP or encrypt routing decisions; that would describe link-layer or IPsec-style network protection, not TLS." },
+      { "text": "At the Physical layer, encrypting raw electrical signals", "correct": false, "rationale": "TLS is a software protocol operating on session data, not on raw physical signaling." },
+      { "text": "Inside the Data Link frame trailer, replacing the CRC", "correct": false, "rationale": "TLS does not reside in the Layer 2 frame trailer or replace the frame check sequence." }
+    ]
+  },
+  {
+    "id": "d4-t1-b8",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "ARP and Layer 2 Attacks",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A VLAN-hopping attack lets a host on one VLAN send frames that reach a device on a different VLAN it should not be able to access. This attack MOST directly abuses a mechanism at which OSI layer?",
+    "options": [
+      { "text": "Layer 2 (Data Link), by manipulating VLAN tagging/trunking behavior", "correct": true, "rationale": "VLANs and 802.1Q tagging/trunking are Layer 2 constructs; VLAN hopping abuses double-tagging or switch trunk negotiation at the Data Link layer." },
+      { "text": "Layer 3 (Network), by rewriting IP routing tables", "correct": false, "rationale": "VLAN hopping manipulates Layer 2 tagging, not Layer 3 IP routing tables." },
+      { "text": "Layer 4 (Transport), by forging TCP sequence numbers", "correct": false, "rationale": "TCP sequence manipulation is a transport-layer attack unrelated to crossing VLAN boundaries at Layer 2." },
+      { "text": "Layer 7 (Application), by injecting malicious HTTP headers", "correct": false, "rationale": "Application-layer injection has nothing to do with VLAN tag manipulation that enables VLAN hopping." }
+    ]
+  },
+  {
+    "id": "d4-t1-b9",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "Defense in Depth Across Layers",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization relies solely on a strong perimeter firewall and treats its internal network as fully trusted and flat. What is the PRIMARY weakness of this 'hard shell, soft center' design?",
+    "options": [
+      { "text": "Once the perimeter is breached, an attacker can move laterally without further internal controls to stop them", "correct": true, "rationale": "A flat, fully trusted internal network provides no internal segmentation or choke points, so a single perimeter breach exposes the entire environment to lateral movement." },
+      { "text": "The perimeter firewall will inevitably fail open during a power outage", "correct": false, "rationale": "Fail-open behavior is a specific device configuration issue, not the primary design weakness of a flat trusted interior." },
+      { "text": "Strong perimeter firewalls always introduce unacceptable latency", "correct": false, "rationale": "Latency is not the core weakness described; the design flaw is the absence of internal defenses once the perimeter is passed." },
+      { "text": "Perimeter firewalls cannot inspect encrypted traffic at all", "correct": false, "rationale": "Some firewalls can perform TLS inspection; regardless, the design's primary weakness is the soft, unsegmented interior." }
+    ]
+  },
+  {
+    "id": "d4-t1-b10",
+    "domainId": "d4",
+    "topicId": "d4-t1",
+    "subtopicTag": "TCP Three-Way Handshake",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An attacker sends a flood of SYN packets to a server but never completes the handshake, exhausting the server's table of half-open connections. Which characteristic of TCP does this attack MOST directly exploit?",
+    "options": [
+      { "text": "The server reserves resources for each half-open connection while awaiting the final ACK of the three-way handshake", "correct": true, "rationale": "A SYN flood exploits the fact that TCP allocates state for each SYN it receives and waits for the completing ACK; flooding SYNs exhausts the half-open connection table." },
+      { "text": "UDP's lack of a handshake lets the attacker bypass connection limits", "correct": false, "rationale": "A SYN flood is a TCP attack that specifically abuses the TCP handshake; UDP has no handshake and is not what is exploited here." },
+      { "text": "The Presentation layer's failure to encrypt the SYN packets", "correct": false, "rationale": "Encryption at Layer 6 is irrelevant to the resource-exhaustion mechanism of a SYN flood." },
+      { "text": "The router's inability to route packets larger than the MTU", "correct": false, "rationale": "MTU/fragmentation is unrelated; the SYN flood exploits half-open connection state at the transport layer." }
+    ]
+  }
+]

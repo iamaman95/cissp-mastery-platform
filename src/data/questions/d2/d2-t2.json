@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t2-a1",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Marking and Labeling",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Confidential backup tapes are shipped offsite unmarked, and a courier stores them with public materials. What handling control would BEST have prevented mishandling?",
+    "options": [
+      { "text": "Clearly marking/labeling the media with its classification so handlers apply correct controls", "correct": true, "rationale": "Proper marking communicates required handling to everyone who touches the media, preventing sensitive tapes from being treated as public." },
+      { "text": "Shipping more tapes at once", "correct": false, "rationale": "Volume does not address the lack of classification marking that caused mishandling." },
+      { "text": "Using a faster courier", "correct": false, "rationale": "Speed does not ensure proper handling of unmarked sensitive media." },
+      { "text": "Removing all labels to avoid drawing attention", "correct": false, "rationale": "Unlabeled media is exactly what caused the mishandling; hiding classification prevents correct handling." }
+    ]
+  },
+  {
+    "id": "d2-t2-a2",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Data States",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Data being transmitted across a network from a client to a server is MOST accurately in which state, and which control best protects it?",
+    "options": [
+      { "text": "Data in transit, protected by transport encryption such as TLS", "correct": true, "rationale": "Moving data is 'in transit,' and TLS (transport encryption) is the standard control to protect its confidentiality/integrity during transmission." },
+      { "text": "Data at rest, protected by full-disk encryption", "correct": false, "rationale": "Data at rest is stored, not moving; FDE protects storage, not network transmission." },
+      { "text": "Data in use, protected by CPU throttling", "correct": false, "rationale": "Data in use is being actively processed in memory; CPU throttling is not a data-protection control." },
+      { "text": "Data archived, protected by shredding", "correct": false, "rationale": "Shredding destroys media and is unrelated to protecting active transmission." }
+    ]
+  },
+  {
+    "id": "d2-t2-a3",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Data at Rest",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A laptop containing confidential files is at risk of theft. Which control BEST protects the data at rest if the device is stolen?",
+    "options": [
+      { "text": "Full-disk encryption", "correct": true, "rationale": "Full-disk encryption renders stored data unreadable without the key, protecting it if the physical device is stolen." },
+      { "text": "A louder startup sound", "correct": false, "rationale": "Audio has no effect on protecting stored data from a thief." },
+      { "text": "TLS on the web browser", "correct": false, "rationale": "TLS protects data in transit, not the files stored on the stolen disk." },
+      { "text": "A brighter screen", "correct": false, "rationale": "Display brightness does not protect data at rest." }
+    ]
+  },
+  {
+    "id": "d2-t2-a4",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Data in Use",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization wants to keep sensitive data encrypted even while it is being processed in memory. Which emerging technology MOST directly addresses protecting data in use?",
+    "options": [
+      { "text": "Confidential computing / trusted execution environments (or homomorphic encryption)", "correct": true, "rationale": "Confidential computing (TEEs) and techniques like homomorphic encryption aim to keep data protected while in use/processing, the hardest state to secure." },
+      { "text": "Standard full-disk encryption alone", "correct": false, "rationale": "FDE protects data at rest; it does not keep data protected while decrypted in memory for processing." },
+      { "text": "TLS alone", "correct": false, "rationale": "TLS protects data in transit, not while it is being processed in memory." },
+      { "text": "Paper shredding", "correct": false, "rationale": "Shredding destroys physical media and is unrelated to protecting in-memory data." }
+    ]
+  },
+  {
+    "id": "d2-t2-a5",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Handling by Classification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization defines stricter storage, transmission, and destruction rules for Confidential data than for Public data. This practice MOST directly reflects which principle?",
+    "options": [
+      { "text": "Handling requirements should be proportional to classification level", "correct": true, "rationale": "Handling controls (storage, transit, destruction) scale with classification so higher-sensitivity data gets stronger protection." },
+      { "text": "All data must be handled identically", "correct": false, "rationale": "Uniform handling ignores differing sensitivity and wastes or under-applies controls." },
+      { "text": "Public data needs the strongest controls", "correct": false, "rationale": "Public data is the least sensitive and needs the fewest controls, not the strongest." },
+      { "text": "Classification has no effect on handling", "correct": false, "rationale": "Classification exists precisely to drive differentiated handling." }
+    ]
+  },
+  {
+    "id": "d2-t2-a6",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Data States Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The three commonly cited states of data are which of the following?",
+    "options": [
+      { "text": "At rest, in transit, and in use", "correct": true, "rationale": "Data is described as being at rest (stored), in transit (moving), or in use (being processed)." },
+      { "text": "Hot, warm, and cold", "correct": false, "rationale": "Hot/warm/cold describe recovery-site types, not data states." },
+      { "text": "Public, private, and secret", "correct": false, "rationale": "Those are classification levels, not data states." },
+      { "text": "Raw, cooked, and archived", "correct": false, "rationale": "These are not recognized data-state terms." }
+    ]
+  },
+  {
+    "id": "d2-t2-a7",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Secure Transport of Media",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Confidential backup media must be moved to an offsite facility. What is the BEST handling practice during transport?",
+    "options": [
+      { "text": "Encrypt the media and use a tracked, authorized chain-of-custody courier", "correct": true, "rationale": "Encrypting media plus tracked, authorized transport with custody records protects the data even if the shipment is lost or intercepted." },
+      { "text": "Send unencrypted media via ordinary untracked mail", "correct": false, "rationale": "Unencrypted, untracked shipment exposes confidential data to loss or interception." },
+      { "text": "Leave the media on a public bench for pickup", "correct": false, "rationale": "Unattended public handoff is grossly insecure." },
+      { "text": "Email the data to a personal account instead", "correct": false, "rationale": "Routing confidential data through personal email bypasses controls and violates handling policy." }
+    ]
+  },
+  {
+    "id": "d2-t2-a8",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Need to Know in Handling",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A confidential report is emailed to an entire department when only three people require it. Which handling principle was MOST violated?",
+    "options": [
+      { "text": "Need to know / least privilege in data distribution", "correct": true, "rationale": "Distributing sensitive data beyond those who require it violates need-to-know, widening exposure unnecessarily." },
+      { "text": "Data availability", "correct": false, "rationale": "The data was over-shared, not made unavailable; availability was not the issue." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Non-repudiation concerns proving actions, not limiting distribution." },
+      { "text": "Fault tolerance", "correct": false, "rationale": "Fault tolerance is a resilience concept unrelated to over-distribution of data." }
+    ]
+  },
+  {
+    "id": "d2-t2-a9",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Media Reuse",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Before reassigning a hard drive that held Confidential data to a lower-classification project, what must happen FIRST?",
+    "options": [
+      { "text": "Sanitize the media to remove the Confidential data to an appropriate level", "correct": true, "rationale": "Media must be sanitized to remove residual sensitive data before reuse at a lower classification, preventing data remanence exposure." },
+      { "text": "Immediately copy new lower-classification data over part of it", "correct": false, "rationale": "Partial overwrite may leave recoverable Confidential remnants; proper sanitization is required first." },
+      { "text": "Give it to a new user with the old data intact", "correct": false, "rationale": "Handing over intact Confidential data violates handling requirements and risks disclosure." },
+      { "text": "Change only the drive's label", "correct": false, "rationale": "Relabeling does not remove the residual data on the media." }
+    ]
+  },
+  {
+    "id": "d2-t2-a10",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Clean Desk / Physical Handling",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Sensitive printouts are frequently left on desks overnight. Which handling policy BEST addresses this?",
+    "options": [
+      { "text": "A clean-desk policy requiring sensitive materials be secured when unattended", "correct": true, "rationale": "A clean-desk policy ensures sensitive documents are locked away when unattended, reducing unauthorized viewing or theft." },
+      { "text": "A policy to print more copies", "correct": false, "rationale": "More copies increase, not reduce, the exposure of sensitive printouts." },
+      { "text": "Leaving documents out for convenience", "correct": false, "rationale": "This is the very behavior causing the exposure." },
+      { "text": "Turning off the office lights only", "correct": false, "rationale": "Darkness does not secure documents from anyone with physical access." }
+    ]
+  },
+  {
+    "id": "d2-t2-b1",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Encryption for Data in Transit",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A web application transmits login credentials over plain HTTP. Which handling improvement MOST directly protects this data in transit?",
+    "options": [
+      { "text": "Enforce HTTPS/TLS so the data is encrypted during transmission", "correct": true, "rationale": "Switching to HTTPS/TLS encrypts the credentials in transit, preventing interception on the network." },
+      { "text": "Store the credentials on a faster disk", "correct": false, "rationale": "Disk speed addresses storage performance, not protection of data crossing the network." },
+      { "text": "Increase the server's RAM", "correct": false, "rationale": "Memory capacity does not protect transmitted data." },
+      { "text": "Change the website's font", "correct": false, "rationale": "Presentation changes have no security effect on transmitted credentials." }
+    ]
+  },
+  {
+    "id": "d2-t2-b2",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Handling Matrix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Staff are unsure exactly how to store, transmit, and destroy data at each classification level. What is the BEST tool to give them?",
+    "options": [
+      { "text": "A documented handling matrix specifying controls for each classification level", "correct": true, "rationale": "A handling matrix maps each classification to concrete storage, transmission, and destruction requirements, removing ambiguity." },
+      { "text": "A verbal briefing given once years ago", "correct": false, "rationale": "An unrecorded one-time briefing is easily forgotten and inconsistent." },
+      { "text": "No guidance, letting staff improvise", "correct": false, "rationale": "Improvisation leads to inconsistent, error-prone handling." },
+      { "text": "A list of the company's competitors", "correct": false, "rationale": "Competitor information is irrelevant to data handling." }
+    ]
+  },
+  {
+    "id": "d2-t2-b3",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Protecting Data in Use",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is data 'in use' generally considered the MOST difficult state to protect?",
+    "options": [
+      { "text": "It is typically decrypted in memory so it can be processed, exposing it while active", "correct": true, "rationale": "To be processed, data usually must be decrypted in memory, making it harder to protect than encrypted at-rest or in-transit data." },
+      { "text": "It is always stored on removable media", "correct": false, "rationale": "In-use data is being processed in memory, not defined by removable media." },
+      { "text": "It can never be encrypted under any circumstances", "correct": false, "rationale": "Emerging techniques (confidential computing) can protect in-use data; the challenge is that it is typically exposed during processing." },
+      { "text": "It only exists on paper", "correct": false, "rationale": "Data in use is actively processed by systems, not limited to paper." }
+    ]
+  },
+  {
+    "id": "d2-t2-b4",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Watermarking",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company wants to deter and trace leaks of sensitive documents by embedding identifying marks. Which handling control BEST supports this?",
+    "options": [
+      { "text": "Watermarking documents with identifying/traceable marks", "correct": true, "rationale": "Watermarks deter leaks and help trace the source of a leaked document back to a recipient." },
+      { "text": "Removing all identifying information from documents", "correct": false, "rationale": "Removing identifiers eliminates the ability to trace a leak's source." },
+      { "text": "Printing documents in a larger font", "correct": false, "rationale": "Font size does not deter or trace leaks." },
+      { "text": "Emailing documents to everyone", "correct": false, "rationale": "Broad distribution increases leak risk and does not aid tracing." }
+    ]
+  },
+  {
+    "id": "d2-t2-b5",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "At Rest Control",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which control is most directly associated with protecting data at rest?",
+    "options": [
+      { "text": "Encryption of stored data (e.g., disk/database encryption)", "correct": true, "rationale": "Encrypting stored data is the primary control for protecting data at rest against unauthorized access." },
+      { "text": "TLS session negotiation", "correct": false, "rationale": "TLS protects data in transit, not stored data at rest." },
+      { "text": "Network packet routing", "correct": false, "rationale": "Routing concerns data movement, not protection of stored data." },
+      { "text": "CPU cache tuning", "correct": false, "rationale": "Cache tuning affects processing performance, not at-rest protection." }
+    ]
+  },
+  {
+    "id": "d2-t2-b6",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Transmission of Classified Data",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An employee must email a Confidential file to an approved external partner. What should they ensure FIRST?",
+    "options": [
+      { "text": "That the data is encrypted/sent through an approved secure channel per handling policy", "correct": true, "rationale": "Confidential data in transit must be protected via encryption/an approved secure channel before it is sent externally." },
+      { "text": "That the email uses a colorful signature", "correct": false, "rationale": "Cosmetic email formatting has no bearing on protecting the data." },
+      { "text": "That the file is renamed to look boring", "correct": false, "rationale": "Renaming does not protect the content in transit." },
+      { "text": "That as many recipients as possible are CC'd", "correct": false, "rationale": "Adding recipients widens exposure and violates need-to-know." }
+    ]
+  },
+  {
+    "id": "d2-t2-b7",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Physical Media Storage",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Confidential backup tapes are stored in an unlocked closet accessible to all staff. What is the BEST handling improvement?",
+    "options": [
+      { "text": "Store the media in a secured, access-controlled location appropriate to its classification", "correct": true, "rationale": "Sensitive media requires physically secured, access-controlled storage matching its classification to prevent unauthorized access." },
+      { "text": "Move the tapes to an even more accessible open shelf", "correct": false, "rationale": "Increasing accessibility worsens the exposure." },
+      { "text": "Label the closet 'Public' to reduce suspicion", "correct": false, "rationale": "Mislabeling does not secure the media and misrepresents its sensitivity." },
+      { "text": "Leave the door open for ventilation", "correct": false, "rationale": "An open door removes what little access control existed." }
+    ]
+  },
+  {
+    "id": "d2-t2-b8",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "End-to-End vs Link Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A security architect wants message content to remain encrypted the entire path between sender and recipient, with no intermediary able to read it. Which approach MOST directly achieves this?",
+    "options": [
+      { "text": "End-to-end encryption", "correct": true, "rationale": "End-to-end encryption keeps content encrypted from sender to recipient so intermediaries cannot read it, unlike link encryption which decrypts at each hop." },
+      { "text": "Link encryption only", "correct": false, "rationale": "Link encryption decrypts and re-encrypts at each hop, exposing plaintext at intermediary nodes." },
+      { "text": "No encryption but faster links", "correct": false, "rationale": "Faster links without encryption leave content readable in transit." },
+      { "text": "Disabling encryption to simplify routing", "correct": false, "rationale": "Disabling encryption directly contradicts the goal of protecting content end to end." }
+    ]
+  },
+  {
+    "id": "d2-t2-b9",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Handling Non-Digital Assets",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Handling requirements apply to sensitive information regardless of form. Which example MOST clearly extends handling controls beyond digital data?",
+    "options": [
+      { "text": "Securing and shredding printed Confidential reports", "correct": true, "rationale": "Handling controls cover all forms of sensitive information, including securing and properly destroying paper documents." },
+      { "text": "Only encrypting a database and ignoring printouts", "correct": false, "rationale": "Ignoring paper leaves a real handling gap; controls must span all forms." },
+      { "text": "Assuming paper cannot leak information", "correct": false, "rationale": "Paper documents are a common leakage vector and require handling controls." },
+      { "text": "Protecting digital data but leaving whiteboards with sensitive notes exposed", "correct": false, "rationale": "Leaving sensitive information exposed on whiteboards is a handling failure, not a proper extension of controls." }
+    ]
+  },
+  {
+    "id": "d2-t2-b10",
+    "domainId": "d2",
+    "topicId": "d2-t2",
+    "subtopicTag": "Handling Control Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to protecting the confidentiality of data across its states?",
+    "options": [
+      { "text": "The employee's preferred desktop wallpaper", "correct": true, "rationale": "Desktop wallpaper choice has no effect on protecting data at rest, in transit, or in use, making it least relevant." },
+      { "text": "Encryption of data at rest", "correct": false, "rationale": "At-rest encryption is a key confidentiality control." },
+      { "text": "TLS for data in transit", "correct": false, "rationale": "TLS is a core control for protecting data in transit." },
+      { "text": "Access restrictions while data is in use", "correct": false, "rationale": "Limiting who can process/view active data is relevant to protecting data in use." }
+    ]
+  }
+]

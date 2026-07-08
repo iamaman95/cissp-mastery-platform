@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t2-a1",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Event Correlation / SIEM",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An analyst can see failed logins on a domain controller, a privilege change on a file server, and a large outbound transfer on the firewall, but each is in a separate console. Which capability would BEST allow these to be seen as a single attack pattern?",
+    "options": [
+      { "text": "A SIEM that centrally collects and correlates events across the sources", "correct": true, "rationale": "Cross-source correlation is exactly what a SIEM provides, turning isolated events into a detectable multi-step attack." },
+      { "text": "A longer log retention period on each individual host", "correct": false, "rationale": "Retention preserves data but does nothing to correlate events scattered across separate consoles." },
+      { "text": "Enabling more verbose logging on each device", "correct": false, "rationale": "More detail per device does not connect events across devices; without correlation the pattern remains invisible." },
+      { "text": "A faster network link between the sites", "correct": false, "rationale": "Bandwidth is irrelevant to correlating and analyzing security events." }
+    ]
+  },
+  {
+    "id": "d7-t2-a2",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Time Synchronization / NTP",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During an investigation, logs from three servers cannot be reliably sequenced because their timestamps disagree by minutes. To fix this going forward, what should be implemented FIRST?",
+    "options": [
+      { "text": "Synchronize all system clocks using NTP", "correct": true, "rationale": "Accurate correlation depends on synchronized clocks; NTP is the foundational fix that makes timestamps comparable across systems." },
+      { "text": "Increase the log verbosity on all three servers", "correct": false, "rationale": "More detail does not resolve mismatched timestamps that prevent sequencing." },
+      { "text": "Store logs in a single spreadsheet", "correct": false, "rationale": "Aggregating into a spreadsheet does not correct inconsistent time sources and is not sound log management." },
+      { "text": "Encrypt the log files at rest", "correct": false, "rationale": "Encryption protects confidentiality but has no effect on timestamp accuracy or sequencing." }
+    ]
+  },
+  {
+    "id": "d7-t2-a3",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Log Integrity / Centralization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After compromising a server, an attacker cleared its local security logs to hide their tracks. Which control would BEST prevent this from destroying the evidence next time?",
+    "options": [
+      { "text": "Forward logs in near-real-time to a protected, centralized (write-once) log server", "correct": true, "rationale": "Centralized, tamper-resistant remote logging means a compromised host cannot erase the copies already sent off-box." },
+      { "text": "Store logs only on the local host but with stricter file permissions", "correct": false, "rationale": "An attacker with administrative control of the host can override local permissions and still clear the logs." },
+      { "text": "Reduce the amount of logging to make logs harder to find", "correct": false, "rationale": "Logging less weakens detection and does nothing to protect the logs from a privileged attacker." },
+      { "text": "Rotate the local logs more frequently", "correct": false, "rationale": "Frequent rotation on the same compromised host does not protect logs from deletion and may even purge evidence sooner." }
+    ]
+  },
+  {
+    "id": "d7-t2-a4",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "UEBA",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization wants to detect when a legitimate user's account begins behaving abnormally — accessing systems it never touches and downloading unusually large volumes. Which technology is BEST suited to this?",
+    "options": [
+      { "text": "User and Entity Behavior Analytics (UEBA)", "correct": true, "rationale": "UEBA baselines normal behavior per user/entity and flags deviations, which is ideal for detecting compromised or misused accounts." },
+      { "text": "A signature-based antivirus scanner", "correct": false, "rationale": "Signature AV detects known malware files, not anomalous account behavior with legitimate credentials." },
+      { "text": "A stateful packet-filtering firewall", "correct": false, "rationale": "A firewall enforces traffic rules but does not baseline user behavior to spot anomalies." },
+      { "text": "A vulnerability scanner", "correct": false, "rationale": "Vulnerability scanners find weaknesses in systems, not abnormal user activity." }
+    ]
+  },
+  {
+    "id": "d7-t2-a5",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Egress Monitoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security team is most concerned about sensitive data being smuggled out of the network. Which monitoring approach BEST targets this risk?",
+    "options": [
+      { "text": "Egress monitoring combined with DLP inspection of outbound traffic", "correct": true, "rationale": "Egress monitoring/DLP inspects data leaving the network, directly addressing exfiltration and C2 concerns." },
+      { "text": "Reviewing inbound firewall deny logs", "correct": false, "rationale": "Inbound deny logs show blocked incoming traffic, not sensitive data leaving the organization." },
+      { "text": "Hardening host baselines", "correct": false, "rationale": "Baseline hardening reduces attack surface but does not monitor for data leaving the network." },
+      { "text": "Increasing password complexity requirements", "correct": false, "rationale": "Stronger passwords help authentication but do not detect outbound data exfiltration." }
+    ]
+  },
+  {
+    "id": "d7-t2-a6",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Alert Tuning / Clipping Levels",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Analysts are overwhelmed by thousands of low-value SIEM alerts per day and are beginning to ignore them, risking missed true positives. What is the MOST appropriate response?",
+    "options": [
+      { "text": "Tune the correlation rules and set clipping levels/thresholds to suppress routine noise", "correct": true, "rationale": "Tuning and thresholds reduce false positives and alert fatigue so analysts can focus on meaningful alerts, the core remedy for alert overload." },
+      { "text": "Disable the SIEM until analysts have more time", "correct": false, "rationale": "Disabling detection eliminates visibility entirely and is far worse than tuning the noise." },
+      { "text": "Hire enough analysts to read every single alert", "correct": false, "rationale": "Staffing to read unfiltered noise is inefficient and unsustainable; the root problem is untuned rules, not headcount." },
+      { "text": "Route all alerts straight to executive email", "correct": false, "rationale": "Forwarding unfiltered noise elsewhere spreads alert fatigue rather than solving it." }
+    ]
+  },
+  {
+    "id": "d7-t2-a7",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Continuous Monitoring",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement BEST describes continuous monitoring?",
+    "options": [
+      { "text": "Ongoing, largely automated assessment of security controls and configurations against a defined baseline", "correct": true, "rationale": "Continuous monitoring provides near-real-time posture assessment rather than relying on periodic, point-in-time audits." },
+      { "text": "An annual manual audit performed by external assessors", "correct": false, "rationale": "An annual point-in-time audit is the opposite of the ongoing, automated nature of continuous monitoring." },
+      { "text": "Encrypting all data in transit and at rest", "correct": false, "rationale": "Encryption is a protective control, not a monitoring activity that assesses control state over time." },
+      { "text": "Blocking all outbound traffic by default", "correct": false, "rationale": "Default-deny egress is a network control, not the practice of continuously assessing posture." }
+    ]
+  },
+  {
+    "id": "d7-t2-a8",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Log Review vs Collection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An auditor finds a company generates comprehensive logs but has no process to review them. From a detection standpoint, what is the MOST significant weakness?",
+    "options": [
+      { "text": "The logs provide little detection value because no monitoring/review occurs", "correct": true, "rationale": "Logging realizes security value only through active review or correlation; unread logs rarely lead to timely detection." },
+      { "text": "The logs are too detailed and should be reduced", "correct": false, "rationale": "Detail is not the core issue; the absence of any review is, and reducing detail would not add detection." },
+      { "text": "The logs consume too much storage", "correct": false, "rationale": "Storage cost is a secondary concern next to the fact that no one is monitoring the logs at all." },
+      { "text": "The logs should be printed to paper for safekeeping", "correct": false, "rationale": "Printing is impractical and still would not create a review/monitoring process." }
+    ]
+  },
+  {
+    "id": "d7-t2-a9",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "SIEM Normalization",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "What does a SIEM do when it normalizes log data?",
+    "options": [
+      { "text": "Converts logs from many formats into a consistent structure so they can be compared and correlated", "correct": true, "rationale": "Normalization standardizes disparate log formats into a common schema, enabling correlation across sources." },
+      { "text": "Deletes duplicate logs to save storage space", "correct": false, "rationale": "Deduplication is a separate function; normalization is about standardizing format, not removing duplicates." },
+      { "text": "Encrypts logs before they are stored", "correct": false, "rationale": "Encryption is a protection step, not what normalization means." },
+      { "text": "Compresses logs to reduce bandwidth", "correct": false, "rationale": "Compression reduces size but is not the definition of normalization." }
+    ]
+  },
+  {
+    "id": "d7-t2-a10",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Insider Threat Detection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A database administrator with legitimate access begins querying customer records at 3 a.m. and exporting far more than usual over several nights. Which monitoring capability would BEST have flagged this insider activity?",
+    "options": [
+      { "text": "UEBA detecting deviation from the DBA's established behavioral baseline", "correct": true, "rationale": "Because the access is authorized, only behavior-based analytics that baseline normal activity would flag the off-hours, high-volume anomaly." },
+      { "text": "An access control list denying the DBA access", "correct": false, "rationale": "The DBA has legitimate access needed for the job; denying it would break operations and is not a monitoring capability." },
+      { "text": "A signature-based IDS matching known exploit patterns", "correct": false, "rationale": "No exploit signature is triggered; the activity uses valid credentials and normal queries, defeating signature matching." },
+      { "text": "A spam filter on the email gateway", "correct": false, "rationale": "Email filtering is unrelated to detecting anomalous database access by an insider." }
+    ]
+  },
+  {
+    "id": "d7-t2-b1",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Log Integrity / Centralization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISO wants assurance that logs remain trustworthy even if an endpoint is fully compromised. Which design BEST achieves this?",
+    "options": [
+      { "text": "Stream logs off the host immediately to a central, append-only log repository", "correct": true, "rationale": "Getting logs off the endpoint to append-only central storage protects them from deletion by an attacker who owns the host." },
+      { "text": "Rely on local log files with audit-only file permissions", "correct": false, "rationale": "A privileged attacker on the host can bypass local permissions and delete or alter the logs." },
+      { "text": "Keep logs only in volatile memory for speed", "correct": false, "rationale": "Memory-only logs are lost on reboot or compromise and provide no durable, tamper-resistant record." },
+      { "text": "Disable logging during incidents to avoid tampering", "correct": false, "rationale": "Disabling logging during an incident removes exactly the evidence needed to investigate it." }
+    ]
+  },
+  {
+    "id": "d7-t2-b2",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Egress Monitoring",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Malware on an internal host is beaconing to an external command-and-control server and slowly uploading stolen files. Which monitoring focus is MOST likely to catch this?",
+    "options": [
+      { "text": "Egress (outbound) traffic monitoring", "correct": true, "rationale": "C2 beaconing and data uploads are outbound behaviors, so inspecting egress traffic is the most direct way to detect them." },
+      { "text": "Inbound intrusion prevention on the perimeter", "correct": false, "rationale": "Inbound IPS focuses on incoming attacks and is less effective at spotting established outbound C2 and exfiltration." },
+      { "text": "Physical access logs at the data center", "correct": false, "rationale": "Physical access records are unrelated to detecting network-based C2 and exfiltration." },
+      { "text": "Password vault access reports", "correct": false, "rationale": "Vault access reports track credential retrieval, not outbound malicious traffic." }
+    ]
+  },
+  {
+    "id": "d7-t2-b3",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "UEBA",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A user's credentials are used to log in from two countries within ten minutes ('impossible travel'). Which tool is BEST positioned to raise this as an anomaly automatically?",
+    "options": [
+      { "text": "UEBA analyzing login patterns against the user's behavioral baseline", "correct": true, "rationale": "Impossible-travel detection is a classic UEBA anomaly derived from baselining a user's normal login geography and timing." },
+      { "text": "A host-based antivirus agent", "correct": false, "rationale": "AV scans for malware on the endpoint and does not analyze cross-location login patterns." },
+      { "text": "A network switch's port security", "correct": false, "rationale": "Port security binds MAC addresses to ports locally and cannot reason about geographic login anomalies." },
+      { "text": "A patch management dashboard", "correct": false, "rationale": "Patch dashboards track update status, not anomalous authentication behavior." }
+    ]
+  },
+  {
+    "id": "d7-t2-b4",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Time Synchronization / NTP",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is NTP synchronization considered a PRIMARY prerequisite for effective log correlation across an enterprise?",
+    "options": [
+      { "text": "Because correlating events across systems requires timestamps that are consistent and comparable", "correct": true, "rationale": "If clocks disagree, events cannot be reliably ordered or matched, breaking cross-system correlation and investigations." },
+      { "text": "Because NTP encrypts the log data in transit", "correct": false, "rationale": "NTP synchronizes time; it does not encrypt logs, so this is not why it matters for correlation." },
+      { "text": "Because NTP compresses logs to save space", "correct": false, "rationale": "NTP has nothing to do with compression or storage efficiency." },
+      { "text": "Because NTP authenticates users to the SIEM", "correct": false, "rationale": "NTP does not perform user authentication; that is unrelated to its timekeeping role." }
+    ]
+  },
+  {
+    "id": "d7-t2-b5",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Alert Tuning / False Positives",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A newly deployed SIEM rule fires hundreds of times a day, almost all for benign administrator activity. What is the MOST appropriate action?",
+    "options": [
+      { "text": "Refine the rule with thresholds/exclusions so it alerts only on genuinely suspicious activity", "correct": true, "rationale": "Tuning the rule to exclude known-benign behavior reduces false positives while preserving detection of true anomalies." },
+      { "text": "Delete the rule entirely", "correct": false, "rationale": "Deleting the rule removes the detection capability instead of improving its precision." },
+      { "text": "Ignore the alerts since most are benign", "correct": false, "rationale": "Blanket ignoring trains analysts to overlook the rule and risks missing the rare true positive." },
+      { "text": "Lower the SIEM's log ingestion so fewer events arrive", "correct": false, "rationale": "Reducing ingestion blinds the SIEM broadly rather than precisely fixing one noisy rule." }
+    ]
+  },
+  {
+    "id": "d7-t2-b6",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Log Retention",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization must decide how long to keep its security logs. Which factor BEST determines the required retention period?",
+    "options": [
+      { "text": "Legal, regulatory, and organizational policy requirements", "correct": true, "rationale": "Retention periods are driven by applicable laws, regulations, and internal policy, which set minimum and sometimes maximum durations." },
+      { "text": "The amount of free disk space currently available", "correct": false, "rationale": "Available storage is an implementation constraint, not the authority that determines required retention." },
+      { "text": "The preference of the newest analyst on the team", "correct": false, "rationale": "Individual preference is not a legitimate basis for a compliance-driven retention decision." },
+      { "text": "The color scheme of the SIEM dashboard", "correct": false, "rationale": "This is irrelevant to retention requirements and is a distractor." }
+    ]
+  },
+  {
+    "id": "d7-t2-b7",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Continuous Monitoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Leadership wants to know, at any given moment, whether critical systems still meet their secure configuration baseline rather than waiting for the annual audit. Which practice BEST meets this need?",
+    "options": [
+      { "text": "Continuous monitoring of configurations against the baseline", "correct": true, "rationale": "Continuous monitoring provides near-real-time visibility into configuration drift and control state, exactly what is requested." },
+      { "text": "A one-time penetration test", "correct": false, "rationale": "A point-in-time pen test does not provide ongoing, moment-to-moment posture visibility." },
+      { "text": "Quarterly awareness training", "correct": false, "rationale": "Training addresses human behavior, not real-time configuration compliance." },
+      { "text": "An annual policy review", "correct": false, "rationale": "An annual review is periodic, the opposite of continuous, and cannot show current state at any moment." }
+    ]
+  },
+  {
+    "id": "d7-t2-b8",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Clipping Level",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In monitoring, what is a 'clipping level'?",
+    "options": [
+      { "text": "A threshold below which routine events are treated as noise and not alerted", "correct": true, "rationale": "A clipping level suppresses alerts until activity exceeds a baseline count, reducing false positives from normal behavior." },
+      { "text": "The maximum size a log file may reach before rotation", "correct": false, "rationale": "That describes a log rotation size limit, not a clipping level for alerting." },
+      { "text": "The encryption strength applied to stored logs", "correct": false, "rationale": "Encryption strength is unrelated to the alerting threshold concept of a clipping level." },
+      { "text": "The number of days logs are retained", "correct": false, "rationale": "That is a retention period, not a clipping level." }
+    ]
+  },
+  {
+    "id": "d7-t2-b9",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "SIEM vs Point Tools",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team wants to detect an attack that unfolds as several small, individually unremarkable steps across different systems. Which approach is LEAST likely to detect it?",
+    "options": [
+      { "text": "Reviewing each system's logs independently in isolation", "correct": true, "rationale": "Individually unremarkable events only reveal the attack when correlated; reviewing systems in isolation is precisely what misses the pattern." },
+      { "text": "Correlating events across systems in a SIEM", "correct": false, "rationale": "Cross-system correlation is well suited to surface multi-step attacks, so it is likely to detect, not miss, the pattern." },
+      { "text": "Applying UEBA to spot behavioral anomalies", "correct": false, "rationale": "Behavioral analytics can flag anomalous steps even when each looks benign in isolation, aiding detection." },
+      { "text": "Using a SIEM rule that links failed logins to later privilege changes", "correct": false, "rationale": "A correlation rule chaining related steps is designed to catch exactly this kind of multi-step activity." }
+    ]
+  },
+  {
+    "id": "d7-t2-b10",
+    "domainId": "d7",
+    "topicId": "d7-t2",
+    "subtopicTag": "Monitoring Value",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company invests heavily in log collection infrastructure but assigns no one to analyze the data. What is the PRIMARY reason this investment yields little security benefit?",
+    "options": [
+      { "text": "Detection requires active monitoring and analysis, which is absent here", "correct": true, "rationale": "Logs are only an enabler; without analysis or correlation they do not translate into detection or response." },
+      { "text": "The logs are being collected too quickly", "correct": false, "rationale": "Collection speed is not the problem; the absence of any analysis is." },
+      { "text": "Log collection inherently degrades system performance to uselessness", "correct": false, "rationale": "Well-designed logging has manageable overhead; performance is not why the benefit is lost." },
+      { "text": "Collecting logs automatically prevents all attacks", "correct": false, "rationale": "This is false; collection alone prevents nothing, which is precisely the point of the scenario." }
+    ]
+  }
+]

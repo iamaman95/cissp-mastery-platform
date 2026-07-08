@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t7-a1",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "IDS vs IPS",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team wants a device that not only detects known exploit traffic but can also block it inline before it reaches servers. Which control BEST fits?",
+    "options": [
+      { "text": "An intrusion prevention system (IPS)", "correct": true, "rationale": "An IPS sits inline and can actively block malicious traffic, making it a preventive control, unlike a passive IDS." },
+      { "text": "An intrusion detection system (IDS)", "correct": false, "rationale": "An IDS is passive and only alerts; it does not block traffic inline." },
+      { "text": "A honeypot", "correct": false, "rationale": "A honeypot is a decoy for detection and study, not an inline blocking mechanism." },
+      { "text": "A SIEM", "correct": false, "rationale": "A SIEM correlates and alerts on log data but does not block traffic inline." }
+    ]
+  },
+  {
+    "id": "d7-t7-a2",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Control Classification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A login page displays a banner stating that unauthorized access is prohibited and monitored. This control is BEST classified as which type?",
+    "options": [
+      { "text": "Deterrent", "correct": true, "rationale": "A warning banner discourages a would-be attacker before acting, which is the definition of a deterrent control." },
+      { "text": "Preventive", "correct": false, "rationale": "A banner does not technically stop access; it only discourages, so it is deterrent rather than preventive." },
+      { "text": "Corrective", "correct": false, "rationale": "A banner does not remediate or restore after an event, so it is not corrective." },
+      { "text": "Detective", "correct": false, "rationale": "A banner does not identify that an event occurred; it discourages beforehand." }
+    ]
+  },
+  {
+    "id": "d7-t7-a3",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Allowlisting vs Blocklisting",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization wants to prevent unknown, never-before-seen malware from executing on endpoints. Which approach is BEST suited to this goal?",
+    "options": [
+      { "text": "Application allowlisting that permits only approved software and denies everything else", "correct": true, "rationale": "Deny-by-default allowlisting blocks any unapproved binary, including unknown malware, without needing a prior signature." },
+      { "text": "Blocklisting that blocks only known-bad files", "correct": false, "rationale": "Blocklisting permits by default and cannot block malware it has never seen, leaving unknown threats able to run." },
+      { "text": "Relying solely on user awareness training", "correct": false, "rationale": "Training helps but does not technically prevent unknown malware from executing." },
+      { "text": "Disabling the endpoint firewall", "correct": false, "rationale": "Disabling a firewall reduces protection and does nothing to prevent malware execution." }
+    ]
+  },
+  {
+    "id": "d7-t7-a4",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Honeypot",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security team deploys a decoy server in a segmented network with no legitimate business purpose. What is the PRIMARY function of this system?",
+    "options": [
+      { "text": "To detect and study attacker activity, since any interaction with it is inherently suspicious", "correct": true, "rationale": "A honeypot attracts and observes attackers; because no legitimate use exists, interactions are high-fidelity detective signals." },
+      { "text": "To block all inbound attacks at the perimeter", "correct": false, "rationale": "A honeypot does not block traffic; it lures and observes rather than prevents." },
+      { "text": "To serve production traffic for real users", "correct": false, "rationale": "A honeypot has no legitimate business role; it is purely a decoy." },
+      { "text": "To back up critical data", "correct": false, "rationale": "A honeypot is not a backup mechanism; that is a corrective/recovery control." }
+    ]
+  },
+  {
+    "id": "d7-t7-a5",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Sandboxing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before delivering email attachments to users, a company wants to safely observe how suspicious files behave. Which technique BEST accomplishes this?",
+    "options": [
+      { "text": "Detonating the files in an isolated sandbox to observe behavior", "correct": true, "rationale": "Sandboxing runs suspicious code in isolation so its behavior can be analyzed without endangering production systems." },
+      { "text": "Opening the attachments directly on a user's workstation", "correct": false, "rationale": "Opening on a real workstation risks infecting production systems, the opposite of safe analysis." },
+      { "text": "Deleting all attachments without inspection", "correct": false, "rationale": "Blanket deletion prevents legitimate business email and does not analyze behavior." },
+      { "text": "Forwarding attachments to all users to crowdsource review", "correct": false, "rationale": "Distributing suspicious files broadly increases risk rather than safely analyzing them." }
+    ]
+  },
+  {
+    "id": "d7-t7-a6",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Corrective Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "After a ransomware attack encrypts files, the team restores the data from clean backups. Restoring from backup is BEST classified as which type of control?",
+    "options": [
+      { "text": "Corrective", "correct": true, "rationale": "Restoring systems/data after an incident remediates the damage, which is a corrective (recovery) control." },
+      { "text": "Deterrent", "correct": false, "rationale": "A deterrent discourages an attack beforehand; restoring backups happens after the event." },
+      { "text": "Detective", "correct": false, "rationale": "Detective controls identify an event; restoring data does not detect, it repairs." },
+      { "text": "Preventive", "correct": false, "rationale": "Preventive controls stop an action; restoring backups occurs after the damage is done." }
+    ]
+  },
+  {
+    "id": "d7-t7-a7",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Signature vs Anomaly Detection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An IDS must catch novel attacks that have no existing signature. Which detection method is BEST suited to identifying previously unseen threats?",
+    "options": [
+      { "text": "Anomaly/behavior-based detection that flags deviations from a normal baseline", "correct": true, "rationale": "Anomaly detection can flag never-before-seen activity by comparing against normal behavior, unlike signature matching." },
+      { "text": "Signature-based detection matching known patterns", "correct": false, "rationale": "Signature-based detection can only catch attacks that match existing signatures, missing truly novel threats." },
+      { "text": "A static deny list of known bad IP addresses", "correct": false, "rationale": "A static block list only stops known-bad sources, not novel attack behaviors." },
+      { "text": "Disabling detection to reduce false positives", "correct": false, "rationale": "Disabling detection removes the capability entirely and detects nothing." }
+    ]
+  },
+  {
+    "id": "d7-t7-a8",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Firewall Function",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A firewall that blocks traffic to unauthorized ports is primarily which type of control?",
+    "options": [
+      { "text": "Preventive", "correct": true, "rationale": "By stopping unwanted traffic from reaching a system, a firewall prevents the unwanted action, making it preventive." },
+      { "text": "Corrective", "correct": false, "rationale": "A firewall stops traffic beforehand; it does not remediate after an event." },
+      { "text": "Detective", "correct": false, "rationale": "While firewalls log, their primary blocking function is preventive, not merely detective." },
+      { "text": "Deterrent", "correct": false, "rationale": "A firewall actively blocks rather than merely discouraging, so its primary function is preventive." }
+    ]
+  },
+  {
+    "id": "d7-t7-a9",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Threat Intelligence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A SOC subscribes to a feed of current adversary indicators to keep its detection rules and IPS signatures up to date. This feed is BEST described as what?",
+    "options": [
+      { "text": "Threat intelligence used to enrich and tune detective and preventive controls", "correct": true, "rationale": "Threat intelligence supplies current indicators and tactics that keep detection and prevention controls effective against active threats." },
+      { "text": "A backup and recovery service", "correct": false, "rationale": "A threat feed provides adversary knowledge, not data backup or recovery." },
+      { "text": "A physical access control", "correct": false, "rationale": "Threat intelligence is informational; it is unrelated to physical entry control." },
+      { "text": "A user provisioning workflow", "correct": false, "rationale": "Threat feeds do not manage account provisioning." }
+    ]
+  },
+  {
+    "id": "d7-t7-a10",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Defense in Depth",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An architect layers a firewall, allowlisting, an IDS, and backups so that failure of one control is caught or mitigated by another. This design MOST directly reflects which principle?",
+    "options": [
+      { "text": "Defense in depth (layered controls)", "correct": true, "rationale": "Layering preventive, detective, and corrective controls so no single failure is catastrophic is the essence of defense in depth." },
+      { "text": "Single point of control", "correct": false, "rationale": "This is the opposite; relying on one control is what defense in depth avoids." },
+      { "text": "Security through obscurity", "correct": false, "rationale": "Obscurity is hiding details, not layering functional controls." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege limits access rights; it does not describe layering multiple control functions." }
+    ]
+  },
+  {
+    "id": "d7-t7-b1",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "IDS vs IPS",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A device is connected to a monitoring span port and generates alerts on suspicious traffic but cannot stop it. This device is MOST accurately which of the following?",
+    "options": [
+      { "text": "A passive intrusion detection system (IDS)", "correct": true, "rationale": "Being on a span port and only alerting, without the ability to block, describes a passive, detective IDS." },
+      { "text": "An inline intrusion prevention system (IPS)", "correct": false, "rationale": "An IPS is inline and can block; a span-port, alert-only device is not an IPS." },
+      { "text": "A stateful firewall", "correct": false, "rationale": "A firewall enforces access rules inline; the described device only monitors and alerts." },
+      { "text": "A load balancer", "correct": false, "rationale": "A load balancer distributes traffic and is unrelated to intrusion detection." }
+    ]
+  },
+  {
+    "id": "d7-t7-b2",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Control Classification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An IDS alert notifies analysts that a suspicious scan occurred on the network. Detecting and alerting on this activity is BEST classified as which control type?",
+    "options": [
+      { "text": "Detective", "correct": true, "rationale": "Identifying and signaling that an event occurred is the defining role of a detective control." },
+      { "text": "Preventive", "correct": false, "rationale": "The IDS did not stop the scan; it only detected it, so it is detective, not preventive." },
+      { "text": "Deterrent", "correct": false, "rationale": "A deterrent discourages beforehand; the IDS reports after activity happens." },
+      { "text": "Corrective", "correct": false, "rationale": "The IDS does not remediate the event; it detects it." }
+    ]
+  },
+  {
+    "id": "d7-t7-b3",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Allowlisting vs Blocklisting",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST accurately compares application allowlisting and blocklisting?",
+    "options": [
+      { "text": "Allowlisting denies by default and permits only approved software; blocklisting permits by default and blocks known-bad", "correct": true, "rationale": "Allowlisting's deny-by-default stance blocks unknown threats, whereas blocklisting only stops previously identified bad items." },
+      { "text": "Blocklisting is always more secure than allowlisting", "correct": false, "rationale": "Blocklisting cannot stop unknown malware, so it is generally weaker against novel threats than allowlisting." },
+      { "text": "Allowlisting permits everything except known-bad files", "correct": false, "rationale": "That description is blocklisting; allowlisting permits only what is explicitly approved." },
+      { "text": "The two approaches are functionally identical", "correct": false, "rationale": "They take opposite default postures (deny vs. permit), so they are not identical." }
+    ]
+  },
+  {
+    "id": "d7-t7-b4",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Honeypot",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why do interactions with a properly deployed honeypot generate high-confidence alerts?",
+    "options": [
+      { "text": "Because the honeypot has no legitimate use, so any access to it is inherently suspicious", "correct": true, "rationale": "Since no valid business traffic should touch a decoy, any interaction strongly indicates malicious or unauthorized activity." },
+      { "text": "Because honeypots block all attacks automatically", "correct": false, "rationale": "Honeypots detect and study; they do not block attacks." },
+      { "text": "Because honeypots are the organization's primary production servers", "correct": false, "rationale": "Honeypots are decoys, not production systems." },
+      { "text": "Because honeypots encrypt all network traffic", "correct": false, "rationale": "Encryption is not the purpose of a honeypot; detection through decoy interaction is." }
+    ]
+  },
+  {
+    "id": "d7-t7-b5",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Sandboxing",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY purpose of sandboxing a suspicious file?",
+    "options": [
+      { "text": "To run it in isolation and safely observe its behavior", "correct": true, "rationale": "Sandboxing executes code in a contained environment so analysts can study malicious behavior without harming production." },
+      { "text": "To permanently store the file for archival", "correct": false, "rationale": "Sandboxing analyzes behavior; it is not an archival storage method." },
+      { "text": "To distribute the file to all endpoints", "correct": false, "rationale": "Distributing a suspicious file spreads risk rather than isolating it for analysis." },
+      { "text": "To sign the file as trusted", "correct": false, "rationale": "Sandboxing observes behavior; it does not sign or vouch for a file's trustworthiness." }
+    ]
+  },
+  {
+    "id": "d7-t7-b6",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Deterrent vs Preventive",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A prominent 'Premises under 24-hour video surveillance' sign is posted at an entrance. Which control function does the sign itself BEST represent, separate from the cameras?",
+    "options": [
+      { "text": "Deterrent", "correct": true, "rationale": "The sign discourages would-be intruders before they act, which is a deterrent function distinct from the detective cameras." },
+      { "text": "Preventive", "correct": false, "rationale": "The sign does not physically stop entry; it only discourages, making it deterrent, not preventive." },
+      { "text": "Corrective", "correct": false, "rationale": "The sign does not remediate after an event." },
+      { "text": "Recovery", "correct": false, "rationale": "The sign does not restore operations; it discourages beforehand." }
+    ]
+  },
+  {
+    "id": "d7-t7-b7",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Compensating Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A legacy system cannot support the required multi-factor authentication. To satisfy the control objective, the team isolates it on a restricted segment with heavy monitoring. This alternative measure is BEST described as which type of control?",
+    "options": [
+      { "text": "A compensating control", "correct": true, "rationale": "When the primary control (MFA) is not feasible, an alternative that meets the objective by other means is a compensating control." },
+      { "text": "A deterrent control", "correct": false, "rationale": "Isolation and monitoring do more than discourage; they substitute for the infeasible control, which is compensating." },
+      { "text": "A corrective control", "correct": false, "rationale": "The measure is put in place proactively as a substitute, not to remediate after an event." },
+      { "text": "A recovery control", "correct": false, "rationale": "Recovery restores operations after an incident; this alternative substitutes for a missing preventive control." }
+    ]
+  },
+  {
+    "id": "d7-t7-b8",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Antivirus / EDR",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Endpoint software identifies a malicious executable and quarantines it. Which control functions does this software BEST combine?",
+    "options": [
+      { "text": "Detective (identifying the malware) and corrective (removing/quarantining it)", "correct": true, "rationale": "Antivirus/EDR detects malicious code and then remediates it by quarantine or removal, spanning detective and corrective functions." },
+      { "text": "Only deterrent, since it discourages malware", "correct": false, "rationale": "The software actively identifies and removes malware rather than merely discouraging it." },
+      { "text": "Only physical, since it protects hardware", "correct": false, "rationale": "Antivirus is a logical control on software, not a physical control." },
+      { "text": "Only recovery, since it restores files", "correct": false, "rationale": "Its core role is detecting and removing malware, not restoring data like a backup." }
+    ]
+  },
+  {
+    "id": "d7-t7-b9",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Signature vs Anomaly Detection",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which detection approach is LEAST likely to catch a brand-new zero-day attack for which no indicator exists yet?",
+    "options": [
+      { "text": "Signature-based detection", "correct": true, "rationale": "Signature-based detection relies on known patterns and cannot match an attack for which no signature exists yet, making it least effective against zero-days." },
+      { "text": "Behavior/anomaly-based detection", "correct": false, "rationale": "Anomaly detection can flag unusual behavior even without a known signature, so it is more capable against zero-days." },
+      { "text": "A honeypot generating alerts on any interaction", "correct": false, "rationale": "A honeypot detects based on illegitimate interaction, not signatures, so it can catch novel activity." },
+      { "text": "UEBA flagging deviation from normal user behavior", "correct": false, "rationale": "Behavioral analytics can detect anomalies from novel attacks without predefined signatures." }
+    ]
+  },
+  {
+    "id": "d7-t7-b10",
+    "domainId": "d7",
+    "topicId": "d7-t7",
+    "subtopicTag": "Matching Control to Goal",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Management's stated goal is to 'stop unauthorized code from ever running,' not merely to detect it after the fact. Which control BEST matches this preventive goal?",
+    "options": [
+      { "text": "Application allowlisting", "correct": true, "rationale": "Allowlisting prevents any unapproved code from executing at all, directly matching a preventive goal." },
+      { "text": "An intrusion detection system", "correct": false, "rationale": "An IDS detects and alerts after activity occurs; it does not prevent code from running." },
+      { "text": "A honeypot", "correct": false, "rationale": "A honeypot detects and studies attackers; it does not prevent code execution on production endpoints." },
+      { "text": "Log aggregation in a SIEM", "correct": false, "rationale": "A SIEM aggregates and correlates for detection, not prevention of code execution." }
+    ]
+  }
+]

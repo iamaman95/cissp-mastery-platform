@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t2-a1",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Bell-LaPadula Simple Security Property",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A subject cleared at 'Secret' attempts to read a 'Top Secret' file in a Bell-LaPadula system. Which property MOST directly forbids this, and what is it called?",
+    "options": [
+      { "text": "The Simple Security Property — 'no read up'", "correct": true, "rationale": "Bell-LaPadula's Simple Security Property prohibits reading data above one's clearance ('no read up') to protect confidentiality." },
+      { "text": "The *-Property — 'no write down'", "correct": false, "rationale": "The star property governs writing (no write down), not the read attempt described here." },
+      { "text": "The Simple Integrity Property", "correct": false, "rationale": "That belongs to the Biba integrity model, not Bell-LaPadula confidentiality." },
+      { "text": "The Strong Tranquility Principle", "correct": false, "rationale": "Tranquility concerns whether labels change during operation; it does not forbid this specific read." }
+    ]
+  },
+  {
+    "id": "d3-t2-a2",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Bell-LaPadula Star Property",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In Bell-LaPadula, a Top Secret user must be prevented from writing Top Secret content into a Confidential document. Which rule BEST enforces this?",
+    "options": [
+      { "text": "The *-Property (star property): 'no write down'", "correct": true, "rationale": "The star property forbids writing to a lower classification ('no write down'), preventing high-level data from leaking into lower-level objects." },
+      { "text": "The Simple Security Property: 'no read up'", "correct": false, "rationale": "Simple Security governs reading, not the downward write being prevented here." },
+      { "text": "The *-Integrity Property: 'no write up'", "correct": false, "rationale": "That is a Biba integrity rule, not Bell-LaPadula, and concerns writing up, not down." },
+      { "text": "Discretionary access via ACLs only", "correct": false, "rationale": "ACLs are discretionary; the mandatory confidentiality rule preventing write-down is the star property." }
+    ]
+  },
+  {
+    "id": "d3-t2-a3",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Bell-LaPadula Focus",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The Bell-LaPadula model is PRIMARILY concerned with protecting which security property?",
+    "options": [
+      { "text": "Confidentiality", "correct": true, "rationale": "Bell-LaPadula is a confidentiality model, designed to prevent unauthorized disclosure of classified information." },
+      { "text": "Integrity", "correct": false, "rationale": "Integrity is the focus of Biba and Clark-Wilson, not Bell-LaPadula." },
+      { "text": "Availability", "correct": false, "rationale": "Bell-LaPadula does not address availability." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Non-repudiation is not the concern of Bell-LaPadula." }
+    ]
+  },
+  {
+    "id": "d3-t2-a4",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Biba Simple Integrity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In the Biba model, a high-integrity process must be prevented from reading low-integrity (possibly corrupted) data. Which rule MOST directly applies?",
+    "options": [
+      { "text": "The Simple Integrity Property: 'no read down'", "correct": true, "rationale": "Biba's Simple Integrity Property forbids reading lower-integrity data ('no read down') to avoid contaminating a high-integrity subject." },
+      { "text": "The Simple Security Property: 'no read up'", "correct": false, "rationale": "'No read up' is a Bell-LaPadula confidentiality rule, not Biba integrity." },
+      { "text": "The *-Property: 'no write down'", "correct": false, "rationale": "That is Bell-LaPadula's confidentiality star property, unrelated to Biba reads." },
+      { "text": "The Discretionary Security Property", "correct": false, "rationale": "This does not describe the Biba read restriction in question." }
+    ]
+  },
+  {
+    "id": "d3-t2-a5",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Biba Star Integrity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Biba must prevent a low-integrity subject from writing into a high-integrity object. Which rule BEST enforces this?",
+    "options": [
+      { "text": "The *-Integrity Property: 'no write up'", "correct": true, "rationale": "Biba's star integrity property forbids writing to a higher integrity level ('no write up'), preventing corruption of trusted data by less-trusted subjects." },
+      { "text": "The *-Property: 'no write down'", "correct": false, "rationale": "'No write down' is Bell-LaPadula's confidentiality rule, not Biba's integrity rule." },
+      { "text": "The Simple Security Property: 'no read up'", "correct": false, "rationale": "That is a Bell-LaPadula read rule, not a Biba write rule." },
+      { "text": "The Simple Integrity Property: 'no read down'", "correct": false, "rationale": "This governs reads, not the upward write being prevented." }
+    ]
+  },
+  {
+    "id": "d3-t2-a6",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Model Focus Comparison",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which security model is focused on integrity rather than confidentiality?",
+    "options": [
+      { "text": "Biba", "correct": true, "rationale": "Biba is an integrity model; it prevents corruption of higher-integrity data." },
+      { "text": "Bell-LaPadula", "correct": false, "rationale": "Bell-LaPadula is a confidentiality model, not an integrity model." },
+      { "text": "The Diffie-Hellman model", "correct": false, "rationale": "Diffie-Hellman is a key-exchange algorithm, not an access-control integrity model." },
+      { "text": "The OSI model", "correct": false, "rationale": "OSI is a networking reference model, not an integrity access-control model." }
+    ]
+  },
+  {
+    "id": "d3-t2-a7",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Clark-Wilson Well-Formed Transactions",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A banking system requires that users can only modify data through certified programs, never directly, to preserve integrity. This MOST closely reflects which model's concept?",
+    "options": [
+      { "text": "Clark-Wilson (well-formed transactions and access via transformation procedures)", "correct": true, "rationale": "Clark-Wilson enforces integrity by requiring changes to occur only through certified 'well-formed transactions' (transformation procedures), not direct access." },
+      { "text": "Bell-LaPadula", "correct": false, "rationale": "Bell-LaPadula addresses confidentiality via read/write-level rules, not certified-transaction integrity." },
+      { "text": "Diffie-Hellman", "correct": false, "rationale": "Diffie-Hellman is a key-exchange method, not an integrity access model." },
+      { "text": "Take-Grant", "correct": false, "rationale": "Take-Grant models rights propagation, not the certified-transaction integrity described." }
+    ]
+  },
+  {
+    "id": "d3-t2-a8",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Clark-Wilson Separation of Duties",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Clark-Wilson also mandates that the person who certifies a transaction is different from the one who implements it. This requirement BEST embodies which principle?",
+    "options": [
+      { "text": "Separation of duties", "correct": true, "rationale": "Clark-Wilson enforces separation of duties so that certification and implementation are performed by different parties, protecting integrity." },
+      { "text": "No read up", "correct": false, "rationale": "'No read up' is a Bell-LaPadula confidentiality rule, unrelated to duty separation." },
+      { "text": "Perfect forward secrecy", "correct": false, "rationale": "PFS is a cryptographic property of key exchange, not an integrity-model principle." },
+      { "text": "Fail-open access", "correct": false, "rationale": "Fail-open concerns failure behavior, not separation of duties." }
+    ]
+  },
+  {
+    "id": "d3-t2-a9",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Brewer-Nash Chinese Wall",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A consulting firm must prevent a consultant who accessed Company A's data from also accessing competitor Company B's data, to avoid conflicts of interest. Which model MOST directly addresses this?",
+    "options": [
+      { "text": "Brewer-Nash (Chinese Wall) model", "correct": true, "rationale": "Brewer-Nash dynamically restricts access based on prior access to prevent conflicts of interest between competing datasets — exactly this scenario." },
+      { "text": "Bell-LaPadula", "correct": false, "rationale": "Bell-LaPadula enforces static classification levels, not dynamic conflict-of-interest walls." },
+      { "text": "Biba", "correct": false, "rationale": "Biba addresses integrity levels, not conflict-of-interest access separation." },
+      { "text": "RSA", "correct": false, "rationale": "RSA is an encryption algorithm, not an access-control model." }
+    ]
+  },
+  {
+    "id": "d3-t2-a10",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Brewer-Nash Dynamic Access",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "What BEST distinguishes the Brewer-Nash model from Bell-LaPadula?",
+    "options": [
+      { "text": "Brewer-Nash access permissions change dynamically based on a subject's prior actions/access", "correct": true, "rationale": "Brewer-Nash is dynamic — what you may access depends on what you have already accessed — unlike Bell-LaPadula's static level-based rules." },
+      { "text": "Brewer-Nash is purely about availability", "correct": false, "rationale": "Brewer-Nash addresses conflict-of-interest confidentiality, not availability." },
+      { "text": "Brewer-Nash uses only fixed labels that never change", "correct": false, "rationale": "Its defining feature is dynamic access change, not fixed labels." },
+      { "text": "Brewer-Nash is an encryption standard", "correct": false, "rationale": "It is an access-control model, not an encryption standard." }
+    ]
+  },
+  {
+    "id": "d3-t2-b1",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "No Read Up vs No Write Down",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which pairing MOST correctly matches Bell-LaPadula's two core rules?",
+    "options": [
+      { "text": "Simple Security = no read up; *-Property = no write down", "correct": true, "rationale": "Bell-LaPadula: Simple Security prevents reading up, and the star property prevents writing down — both protecting confidentiality." },
+      { "text": "Simple Security = no write up; *-Property = no read down", "correct": false, "rationale": "These describe Biba-style integrity direction, not Bell-LaPadula confidentiality rules." },
+      { "text": "Simple Security = no read down; *-Property = no write up", "correct": false, "rationale": "These are Biba's integrity rules, not Bell-LaPadula's." },
+      { "text": "Both rules are about writing only", "correct": false, "rationale": "Bell-LaPadula's Simple Security is a read rule, so 'both about writing' is incorrect." }
+    ]
+  },
+  {
+    "id": "d3-t2-b2",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Biba vs Bell-LaPadula Direction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A student notes that Biba's read/write directions are the 'mirror image' of Bell-LaPadula's. Which statement is MOST accurate?",
+    "options": [
+      { "text": "Bell-LaPadula is 'no read up / no write down' (confidentiality); Biba is 'no read down / no write up' (integrity)", "correct": true, "rationale": "The two models invert each other's directions because one protects confidentiality and the other integrity." },
+      { "text": "Both models use 'no read up / no write down'", "correct": false, "rationale": "Biba uses the opposite directions from Bell-LaPadula, so they are not identical." },
+      { "text": "Biba is 'no read up / no write down' like Bell-LaPadula", "correct": false, "rationale": "This assigns Bell-LaPadula's rules to Biba, which is incorrect." },
+      { "text": "Neither model restricts reads or writes", "correct": false, "rationale": "Both models define specific read and write restrictions." }
+    ]
+  },
+  {
+    "id": "d3-t2-b3",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Clark-Wilson Focus",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The Clark-Wilson model is PRIMARILY designed to protect which property in commercial systems?",
+    "options": [
+      { "text": "Integrity", "correct": true, "rationale": "Clark-Wilson is an integrity model tailored to commercial environments, using well-formed transactions and separation of duties." },
+      { "text": "Confidentiality", "correct": false, "rationale": "Confidentiality is the focus of Bell-LaPadula, not Clark-Wilson." },
+      { "text": "Availability", "correct": false, "rationale": "Clark-Wilson does not primarily address availability." },
+      { "text": "Anonymity", "correct": false, "rationale": "Anonymity is not the concern of Clark-Wilson." }
+    ]
+  },
+  {
+    "id": "d3-t2-b4",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Model Selection by Goal",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A military system's overriding requirement is to prevent disclosure of classified data across clearance levels. Which model is the BEST fit?",
+    "options": [
+      { "text": "Bell-LaPadula", "correct": true, "rationale": "Bell-LaPadula's mandatory read/write rules are purpose-built to prevent disclosure of classified data across levels." },
+      { "text": "Biba", "correct": false, "rationale": "Biba protects integrity, not the confidentiality-disclosure concern stated." },
+      { "text": "Clark-Wilson", "correct": false, "rationale": "Clark-Wilson focuses on transaction integrity in commercial systems, not classified disclosure prevention." },
+      { "text": "Brewer-Nash", "correct": false, "rationale": "Brewer-Nash addresses conflict-of-interest, not multi-level classification disclosure." }
+    ]
+  },
+  {
+    "id": "d3-t2-b5",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Take-Grant Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which model MOST directly analyzes how rights can be passed (taken or granted) between subjects to determine whether a system can reach an unsafe state?",
+    "options": [
+      { "text": "Take-Grant model", "correct": true, "rationale": "The Take-Grant model uses take/grant rules to reason about how access rights propagate and whether unsafe states are reachable." },
+      { "text": "Bell-LaPadula", "correct": false, "rationale": "Bell-LaPadula defines level-based read/write rules, not rights-propagation analysis." },
+      { "text": "Biba", "correct": false, "rationale": "Biba addresses integrity levels, not rights transfer analysis." },
+      { "text": "Brewer-Nash", "correct": false, "rationale": "Brewer-Nash addresses conflict-of-interest access, not general rights propagation." }
+    ]
+  },
+  {
+    "id": "d3-t2-b6",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Confidentiality vs Integrity Models",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which pair correctly groups the models by their primary goal?",
+    "options": [
+      { "text": "Bell-LaPadula (confidentiality); Biba and Clark-Wilson (integrity)", "correct": true, "rationale": "Bell-LaPadula targets confidentiality, while Biba and Clark-Wilson are integrity models." },
+      { "text": "Bell-LaPadula and Biba (availability)", "correct": false, "rationale": "Neither model targets availability; they address confidentiality and integrity respectively." },
+      { "text": "Clark-Wilson (confidentiality); Bell-LaPadula (integrity)", "correct": false, "rationale": "This reverses their goals; Bell-LaPadula is confidentiality and Clark-Wilson is integrity." },
+      { "text": "All three target non-repudiation", "correct": false, "rationale": "None of these models is a non-repudiation model." }
+    ]
+  },
+  {
+    "id": "d3-t2-b7",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Star Property Purpose",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why does Bell-LaPadula forbid 'write down' with its star property?",
+    "options": [
+      { "text": "To prevent a highly cleared subject from leaking high-classification data into a lower-classification object", "correct": true, "rationale": "Writing down could copy Top Secret content into a Confidential object where lower-cleared users could read it, so the star property forbids it to preserve confidentiality." },
+      { "text": "To improve system performance", "correct": false, "rationale": "The rule is about confidentiality, not performance." },
+      { "text": "To ensure data is always available", "correct": false, "rationale": "Bell-LaPadula does not address availability; the rule prevents disclosure." },
+      { "text": "To allow anyone to write anywhere", "correct": false, "rationale": "The rule restricts writing down; it does not permit unrestricted writes." }
+    ]
+  },
+  {
+    "id": "d3-t2-b8",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Biba No Write Up Purpose",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why does Biba forbid 'write up' with its star integrity property?",
+    "options": [
+      { "text": "To prevent lower-integrity (less trusted) subjects from corrupting higher-integrity data", "correct": true, "rationale": "Allowing a low-integrity subject to write up could inject untrusted/corrupt data into high-integrity objects, so Biba forbids it to preserve integrity." },
+      { "text": "To keep classified data secret", "correct": false, "rationale": "Secrecy is Bell-LaPadula's concern; Biba protects integrity." },
+      { "text": "To guarantee uptime", "correct": false, "rationale": "Biba does not address availability/uptime." },
+      { "text": "To allow untrusted code to overwrite trusted code freely", "correct": false, "rationale": "This is the opposite of the rule's purpose, which is to prevent such corruption." }
+    ]
+  },
+  {
+    "id": "d3-t2-b9",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "State Machine Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Bell-LaPadula and Biba are both examples of which broader class of formal model, in which the system is secure if it starts secure and every transition preserves security?",
+    "options": [
+      { "text": "State machine models", "correct": true, "rationale": "Both are state-machine (finite-state) models: security is maintained if the system begins in a secure state and all transitions keep it secure." },
+      { "text": "Symmetric cipher models", "correct": false, "rationale": "These are access-control models, not cipher constructions." },
+      { "text": "Network routing models", "correct": false, "rationale": "They are not routing models; they define access-control state security." },
+      { "text": "Compression models", "correct": false, "rationale": "Compression is unrelated to these formal security models." }
+    ]
+  },
+  {
+    "id": "d3-t2-b10",
+    "domainId": "d3",
+    "topicId": "d3-t2",
+    "subtopicTag": "Model Applicability",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which model would be LEAST appropriate to cite when the goal is strictly preventing unauthorized modification of data?",
+    "options": [
+      { "text": "Bell-LaPadula", "correct": true, "rationale": "Bell-LaPadula is a confidentiality model; it does not address preventing unauthorized modification, making it least appropriate for an integrity goal." },
+      { "text": "Biba", "correct": false, "rationale": "Biba is an integrity model and is appropriate for preventing unauthorized modification." },
+      { "text": "Clark-Wilson", "correct": false, "rationale": "Clark-Wilson is an integrity model well suited to protecting against unauthorized modification." },
+      { "text": "Clark-Wilson with separation of duties", "correct": false, "rationale": "This integrity approach is directly relevant to preventing improper modification, so it is appropriate, not least appropriate." }
+    ]
+  }
+]

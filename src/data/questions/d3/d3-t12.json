@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t12-a1",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Natural Access Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A campus funnels all visitors through a single monitored entrance using pathways and landscaping. This design MOST directly reflects which CPTED principle?",
+    "options": [
+      { "text": "Natural access control", "correct": true, "rationale": "Using layout, pathways, and entrances to guide and restrict movement is natural access control." },
+      { "text": "Natural surveillance", "correct": false, "rationale": "Surveillance concerns visibility of activity, not funneling movement through an entrance." },
+      { "text": "Territorial reinforcement", "correct": false, "rationale": "Territorial reinforcement signals ownership/boundaries, not the routing of visitors." },
+      { "text": "Data execution prevention", "correct": false, "rationale": "DEP is a memory-protection concept, unrelated to physical design." }
+    ]
+  },
+  {
+    "id": "d3-t12-a2",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Natural Surveillance",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Trimming shrubs, adding lighting, and placing windows so staff can see approaches MOST directly supports which CPTED principle?",
+    "options": [
+      { "text": "Natural surveillance", "correct": true, "rationale": "Improving visibility of activity through lighting and sightlines is natural surveillance, deterring wrongdoing." },
+      { "text": "Natural access control", "correct": false, "rationale": "Access control guides movement; the described measures improve visibility, not routing." },
+      { "text": "Territorial reinforcement", "correct": false, "rationale": "Territorial reinforcement marks ownership; visibility improvements are surveillance." },
+      { "text": "Polyinstantiation", "correct": false, "rationale": "Polyinstantiation is a database technique, unrelated to physical design." }
+    ]
+  },
+  {
+    "id": "d3-t12-a3",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Territorial Reinforcement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Installing fences, clear boundary signage, and defined property markers so intruders feel out of place MOST directly reflects which CPTED principle?",
+    "options": [
+      { "text": "Territorial reinforcement", "correct": true, "rationale": "Marking ownership and boundaries so intruders stand out is territorial reinforcement." },
+      { "text": "Natural surveillance", "correct": false, "rationale": "Surveillance is about visibility, not boundary/ownership signaling." },
+      { "text": "Natural access control", "correct": false, "rationale": "Access control funnels movement; this is about signaling territory." },
+      { "text": "Load balancing", "correct": false, "rationale": "Load balancing is a networking concept, unrelated to physical design." }
+    ]
+  },
+  {
+    "id": "d3-t12-a4",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Life Safety Priority",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A proposed design locks all exits during an intrusion to protect assets, but this would trap employees during a fire. What is the MOST correct guidance?",
+    "options": [
+      { "text": "Life safety takes precedence over asset protection; exits must allow safe emergency egress", "correct": true, "rationale": "CISSP holds that protecting human life outweighs protecting assets; designs must permit safe egress even at some cost to asset security." },
+      { "text": "Asset protection outweighs life safety", "correct": false, "rationale": "This inverts the fundamental principle; life safety comes first." },
+      { "text": "Trapping people is acceptable to stop theft", "correct": false, "rationale": "Endangering people to prevent theft is never acceptable." },
+      { "text": "Emergency egress is unnecessary in secure facilities", "correct": false, "rationale": "Safe egress is required by life-safety principles and codes in all facilities." }
+    ]
+  },
+  {
+    "id": "d3-t12-a5",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Defense in Depth Physical",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A data center uses a perimeter fence, then building access control, then a separately credentialed server hall. This layered approach is BEST described as what?",
+    "options": [
+      { "text": "Defense in depth (layered physical security)", "correct": true, "rationale": "Concentric layers from perimeter inward to the most sensitive assets is physical defense in depth." },
+      { "text": "A single point of failure", "correct": false, "rationale": "Multiple independent layers are the opposite of a single point of failure." },
+      { "text": "Security through obscurity only", "correct": false, "rationale": "The design uses real layered controls, not mere obscurity." },
+      { "text": "Fail-open design", "correct": false, "rationale": "Layered access control is not the same as failing open on error." }
+    ]
+  },
+  {
+    "id": "d3-t12-a6",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Site Selection Hazards",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When selecting a site for a critical data center, which factor is MOST important to evaluate?",
+    "options": [
+      { "text": "Proximity to natural/man-made hazards, crime rates, utility reliability, and emergency access", "correct": true, "rationale": "Site selection must weigh hazards (floods, faults, nearby chemical plants), crime, utilities, and emergency access to reduce environmental risk." },
+      { "text": "Whether the building has a trendy lobby design", "correct": false, "rationale": "Lobby aesthetics do not address site risk factors." },
+      { "text": "The nearest coffee shop's rating", "correct": false, "rationale": "Amenities are irrelevant to critical-facility site risk." },
+      { "text": "The color of neighboring buildings", "correct": false, "rationale": "Neighboring building colors have no bearing on site risk." }
+    ]
+  },
+  {
+    "id": "d3-t12-a7",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Facility Visibility",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why might designers choose to make a critical data center unmarked and unobtrusive?",
+    "options": [
+      { "text": "To avoid advertising a high-value target, reducing the likelihood of deliberate attack", "correct": true, "rationale": "An unmarked facility does not signal its valuable contents, lowering its attractiveness as a target." },
+      { "text": "Because signage is illegal for all buildings", "correct": false, "rationale": "Signage is not universally illegal; the choice is a deliberate risk-reduction measure." },
+      { "text": "To make it impossible for employees to find", "correct": false, "rationale": "Employees are still directed to it; the goal is to avoid advertising to attackers, not to hide it from staff." },
+      { "text": "To eliminate the need for any other controls", "correct": false, "rationale": "Obscurity supplements, not replaces, layered physical controls." }
+    ]
+  },
+  {
+    "id": "d3-t12-a8",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Deter-Delay-Detect-Respond",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Sturdy locks and reinforced barriers primarily serve which objective in the physical-security model?",
+    "options": [
+      { "text": "Delay — slowing the attacker to buy time for detection and response", "correct": true, "rationale": "Locks and barriers primarily delay attackers, extending the window for detection and response." },
+      { "text": "Detect — sensing that an intrusion occurred", "correct": false, "rationale": "Detection is provided by sensors/CCTV/guards; locks primarily delay." },
+      { "text": "Respond — reacting to the intrusion", "correct": false, "rationale": "Response is the reaction phase; locks primarily delay rather than respond." },
+      { "text": "Encrypt — protecting data confidentiality", "correct": false, "rationale": "Encryption is a logical control, not a physical delay objective." }
+    ]
+  },
+  {
+    "id": "d3-t12-a9",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Security Zones",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A building is organized into public lobby, staff work areas, and a restricted secure vault, each with increasing controls. This design BEST reflects what concept?",
+    "options": [
+      { "text": "Graduated security zones with increasing controls toward sensitive areas", "correct": true, "rationale": "Layering zones (public → operational → restricted) with progressively stronger controls concentrates protection where it is most needed." },
+      { "text": "A flat design with identical controls everywhere", "correct": false, "rationale": "The scenario describes graduated, not identical, controls." },
+      { "text": "Removing all controls for openness", "correct": false, "rationale": "The design adds controls toward sensitive areas, not removes them." },
+      { "text": "Randomly assigning controls to rooms", "correct": false, "rationale": "The zoning is deliberate and graduated, not random." }
+    ]
+  },
+  {
+    "id": "d3-t12-a10",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "CPTED Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "CPTED stands for which of the following?",
+    "options": [
+      { "text": "Crime Prevention Through Environmental Design", "correct": true, "rationale": "CPTED is Crime Prevention Through Environmental Design, using the physical environment to reduce crime." },
+      { "text": "Central Processing Through Encrypted Data", "correct": false, "rationale": "This is not what CPTED stands for." },
+      { "text": "Certified Physical Threat Evaluation Doctrine", "correct": false, "rationale": "This is a fabricated expansion, not the real acronym." },
+      { "text": "Continuous Patch Testing and Deployment", "correct": false, "rationale": "This relates to patching, not the CPTED physical-design concept." }
+    ]
+  },
+  {
+    "id": "d3-t12-b1",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "CPTED Element Matching",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A parking lot is redesigned with open sightlines and bright lighting so activity is easily seen. This MOST directly applies which CPTED element?",
+    "options": [
+      { "text": "Natural surveillance", "correct": true, "rationale": "Open sightlines and lighting maximize visibility of activity, which is natural surveillance." },
+      { "text": "Territorial reinforcement", "correct": false, "rationale": "That element signals ownership/boundaries, not visibility." },
+      { "text": "Natural access control", "correct": false, "rationale": "Access control guides movement; the described change improves visibility." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege is a logical access concept, not a physical-design element." }
+    ]
+  },
+  {
+    "id": "d3-t12-b2",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Layered Perimeter",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To protect a high-security server room, what is the BEST physical-design approach?",
+    "options": [
+      { "text": "Layer controls from the site perimeter inward, with the strongest controls closest to the server room", "correct": true, "rationale": "Defense in depth concentrates the strongest controls around the most sensitive area while providing outer layers to deter/delay." },
+      { "text": "Rely on a single locked door and nothing else", "correct": false, "rationale": "A single barrier is a single point of failure; layering is stronger." },
+      { "text": "Leave the perimeter open to reduce cost", "correct": false, "rationale": "An open perimeter removes an important protective layer." },
+      { "text": "Place the server room in the unlocked public lobby", "correct": false, "rationale": "Putting sensitive assets in a public area removes protection entirely." }
+    ]
+  },
+  {
+    "id": "d3-t12-b3",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Site Selection Utilities",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "For a facility requiring continuous operation, which site-selection factor is MOST critical regarding infrastructure?",
+    "options": [
+      { "text": "Reliable utility (power, water, connectivity) availability and redundancy", "correct": true, "rationale": "Continuous operation depends on dependable, ideally redundant, utility supply at the chosen site." },
+      { "text": "The number of nearby restaurants", "correct": false, "rationale": "Dining options do not affect operational continuity." },
+      { "text": "The building's paint color", "correct": false, "rationale": "Paint color is irrelevant to utility reliability." },
+      { "text": "The CEO's commute distance", "correct": false, "rationale": "Personal commute is not a critical infrastructure factor for the facility." }
+    ]
+  },
+  {
+    "id": "d3-t12-b4",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Emergency Egress",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A secure area uses electronically locked doors. To satisfy life-safety requirements, the doors MOST importantly must do what during a fire alarm or power loss?",
+    "options": [
+      { "text": "Fail safe — unlock to allow occupants to exit safely", "correct": true, "rationale": "For life safety, egress doors should fail safe (unlock) so people can escape during emergencies or power loss." },
+      { "text": "Fail secure by permanently locking people inside", "correct": false, "rationale": "Locking people inside during a fire endangers life, violating life-safety priority." },
+      { "text": "Stay locked to protect assets regardless of occupants", "correct": false, "rationale": "Asset protection cannot override human safety in an emergency." },
+      { "text": "Randomly lock and unlock", "correct": false, "rationale": "Unpredictable behavior does not ensure safe egress." }
+    ]
+  },
+  {
+    "id": "d3-t12-b5",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Physical Objective Mapping",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Prominent warning signage and visible cameras primarily serve which physical-security objective?",
+    "options": [
+      { "text": "Deter — discouraging potential intruders from attempting", "correct": true, "rationale": "Visible controls and signage primarily deter would-be intruders by signaling that attempts will be seen/opposed." },
+      { "text": "Delay — physically slowing an attacker", "correct": false, "rationale": "Signage and visible cameras discourage rather than physically delay; barriers/locks delay." },
+      { "text": "Encrypt — protecting data", "correct": false, "rationale": "Encryption is a logical control, not a physical deterrent objective." },
+      { "text": "Backup — copying data", "correct": false, "rationale": "Backups relate to data recovery, not physical deterrence." }
+    ]
+  },
+  {
+    "id": "d3-t12-b6",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Hazard Proximity",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which nearby feature would be LEAST concerning when selecting a site for a critical facility?",
+    "options": [
+      { "text": "A public library", "correct": true, "rationale": "A library poses little inherent hazard, making it the least concerning neighbor compared to hazardous facilities." },
+      { "text": "A chemical processing plant", "correct": false, "rationale": "A chemical plant is a significant hazard due to potential accidents/releases." },
+      { "text": "A flood plain", "correct": false, "rationale": "A flood plain poses a serious environmental risk to the facility." },
+      { "text": "A major earthquake fault line", "correct": false, "rationale": "Proximity to a fault line is a major hazard concern." }
+    ]
+  },
+  {
+    "id": "d3-t12-b7",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Detect Objective",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Motion sensors and CCTV that alert staff to an intrusion primarily serve which physical-security objective?",
+    "options": [
+      { "text": "Detect — sensing that an intrusion is occurring", "correct": true, "rationale": "Sensors and CCTV primarily detect intrusions, triggering assessment and response." },
+      { "text": "Delay — slowing the attacker physically", "correct": false, "rationale": "Sensors detect but do not physically slow an attacker; barriers delay." },
+      { "text": "Deter — discouraging attempts", "correct": false, "rationale": "While visible cameras can deter, the described sensing/alerting function is detection." },
+      { "text": "Encrypt — protecting confidentiality", "correct": false, "rationale": "Encryption is unrelated to physical intrusion detection." }
+    ]
+  },
+  {
+    "id": "d3-t12-b8",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Design Priority Order",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When physical-security design goals conflict, which consideration is the PRIMARY priority?",
+    "options": [
+      { "text": "Human life safety", "correct": true, "rationale": "Life safety is the top priority in physical security; it takes precedence over asset and information protection." },
+      { "text": "Protecting hardware at any cost", "correct": false, "rationale": "Hardware protection cannot outweigh human safety." },
+      { "text": "Minimizing signage expense", "correct": false, "rationale": "Cost minimization is not the primary priority over life safety." },
+      { "text": "Maximizing building aesthetics", "correct": false, "rationale": "Aesthetics are secondary to safety and security functions." }
+    ]
+  },
+  {
+    "id": "d3-t12-b9",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "CPTED Goal",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY goal of applying CPTED principles to a facility?",
+    "options": [
+      { "text": "To reduce the opportunity and likelihood of crime through environmental design", "correct": true, "rationale": "CPTED shapes the environment to discourage crime by improving surveillance, guiding access, and reinforcing territory." },
+      { "text": "To make the building as tall as possible", "correct": false, "rationale": "Height is not a CPTED goal." },
+      { "text": "To increase energy consumption", "correct": false, "rationale": "Energy use is unrelated to CPTED's crime-reduction goal." },
+      { "text": "To eliminate the need for any staff", "correct": false, "rationale": "CPTED complements, not replaces, security staffing." }
+    ]
+  },
+  {
+    "id": "d3-t12-b10",
+    "domainId": "d3",
+    "topicId": "d3-t12",
+    "subtopicTag": "Design Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant to secure site and facility design?",
+    "options": [
+      { "text": "The brand of coffee served in the break room", "correct": true, "rationale": "Break-room coffee has no bearing on facility security design, making it least relevant." },
+      { "text": "Layered defense from perimeter to sensitive areas", "correct": false, "rationale": "Layered defense is central to secure facility design." },
+      { "text": "CPTED principles", "correct": false, "rationale": "CPTED is a core facility-design consideration." },
+      { "text": "Emergency egress and life safety", "correct": false, "rationale": "Life safety and egress are essential design requirements." }
+    ]
+  }
+]

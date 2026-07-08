@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d8-t3-a1",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "SAST Source Analysis",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team wants to find insecure coding patterns in source code early, before the application is even runnable. Which technique is BEST?",
+    "options": [
+      { "text": "Static Application Security Testing (SAST)", "correct": true, "rationale": "SAST analyzes source/bytecode without executing it, catching coding flaws early and pinpointing the affected lines." },
+      { "text": "Dynamic Application Security Testing (DAST)", "correct": false, "rationale": "DAST requires a running, deployable application and cannot run before the app is runnable." },
+      { "text": "A user satisfaction survey", "correct": false, "rationale": "Surveys do not analyze code for security flaws." },
+      { "text": "A physical badge audit", "correct": false, "rationale": "Physical audits are unrelated to source-code analysis." }
+    ]
+  },
+  {
+    "id": "d8-t3-a2",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "DAST Running App",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To find runtime and configuration issues by attacking a deployed, running web application from the outside, which technique is BEST?",
+    "options": [
+      { "text": "Dynamic Application Security Testing (DAST)", "correct": true, "rationale": "DAST tests the running application externally, revealing runtime/config vulnerabilities and confirming exploitability." },
+      { "text": "Static Application Security Testing (SAST)", "correct": false, "rationale": "SAST inspects source without running it, so it cannot observe runtime/deployment behavior." },
+      { "text": "A backup restoration test", "correct": false, "rationale": "Restore testing validates recovery, not application runtime security." },
+      { "text": "A fire drill", "correct": false, "rationale": "Fire drills are physical safety exercises, unrelated to app testing." }
+    ]
+  },
+  {
+    "id": "d8-t3-a3",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "SAST vs DAST Distinction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement MOST correctly contrasts SAST and DAST?",
+    "options": [
+      { "text": "SAST analyzes source without running it (early); DAST tests the running app externally (later)", "correct": true, "rationale": "SAST is static/early/white-box; DAST is dynamic/later/black-box — the core distinction the exam tests." },
+      { "text": "SAST tests the running app; DAST analyzes source code", "correct": false, "rationale": "This reverses the two techniques." },
+      { "text": "Both require the application to be deployed and running", "correct": false, "rationale": "SAST does not require a running app; DAST does." },
+      { "text": "Neither finds any vulnerabilities", "correct": false, "rationale": "Both are effective at finding different classes of vulnerabilities." }
+    ]
+  },
+  {
+    "id": "d8-t3-a4",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "SAST False Positives",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A known limitation of SAST that teams must manage is MOST accurately which of the following?",
+    "options": [
+      { "text": "It tends to produce false positives that require triage", "correct": true, "rationale": "Static analysis commonly flags issues that are not truly exploitable, so results must be validated to avoid wasted effort." },
+      { "text": "It can only test a running, deployed application", "correct": false, "rationale": "That describes DAST; SAST works on source without running it." },
+      { "text": "It never reports any findings", "correct": false, "rationale": "SAST reports many findings; the challenge is filtering false positives." },
+      { "text": "It physically repairs vulnerabilities automatically", "correct": false, "rationale": "SAST identifies issues; it does not auto-fix them." }
+    ]
+  },
+  {
+    "id": "d8-t3-a5",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "IAST Instrumentation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A tool instruments the running application to correlate a live request with the exact vulnerable code path, improving accuracy. This is MOST accurately which technique?",
+    "options": [
+      { "text": "Interactive Application Security Testing (IAST)", "correct": true, "rationale": "IAST instruments the running app to combine inside code knowledge with runtime behavior, improving accuracy over SAST or DAST alone." },
+      { "text": "Pure black-box DAST", "correct": false, "rationale": "Pure DAST lacks the internal instrumentation that links runtime to specific code paths." },
+      { "text": "Pure SAST with no execution", "correct": false, "rationale": "SAST does not execute the app, so it cannot correlate live requests to code at runtime." },
+      { "text": "A backup schedule review", "correct": false, "rationale": "This is unrelated to application security testing." }
+    ]
+  },
+  {
+    "id": "d8-t3-a6",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Shift Left",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "'Shifting security left' in the SDLC MOST directly means which of the following?",
+    "options": [
+      { "text": "Performing security testing earlier in development to catch issues sooner and cheaper", "correct": true, "rationale": "Shift-left moves testing earlier so defects are found and fixed before they become costly in later stages." },
+      { "text": "Only testing after the product is retired", "correct": false, "rationale": "Testing at end-of-life is the opposite of shifting left." },
+      { "text": "Never testing at all", "correct": false, "rationale": "Shift-left increases early testing, not eliminates it." },
+      { "text": "Moving the code repository to a different server", "correct": false, "rationale": "Shift-left concerns timing of testing, not repo location." }
+    ]
+  },
+  {
+    "id": "d8-t3-a7",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "SCA Dependencies",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To identify known-vulnerable third-party libraries used by an application, which technique is BEST?",
+    "options": [
+      { "text": "Software Composition Analysis (SCA)", "correct": true, "rationale": "SCA specifically inventories and flags known vulnerabilities in third-party/open-source dependencies." },
+      { "text": "Fuzzing the login form", "correct": false, "rationale": "Fuzzing finds input-handling crashes, not known-vulnerable dependencies." },
+      { "text": "A physical security audit", "correct": false, "rationale": "Physical audits do not analyze software dependencies." },
+      { "text": "A user survey", "correct": false, "rationale": "Surveys do not identify vulnerable libraries." }
+    ]
+  },
+  {
+    "id": "d8-t3-a8",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Layering Techniques",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A manager wants the most complete application-security assurance. What is the BEST strategy?",
+    "options": [
+      { "text": "Layer multiple techniques (SAST, DAST, SCA, manual review) since none finds everything", "correct": true, "rationale": "Each method has blind spots; combining static, dynamic, dependency, and manual analysis provides the broadest coverage." },
+      { "text": "Rely solely on SAST and skip everything else", "correct": false, "rationale": "SAST alone misses runtime/config and dependency issues." },
+      { "text": "Rely solely on a single DAST scan", "correct": false, "rationale": "DAST alone misses source-level and dependency issues." },
+      { "text": "Do no testing to save time", "correct": false, "rationale": "Skipping testing provides no assurance." }
+    ]
+  },
+  {
+    "id": "d8-t3-a9",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Database Security Assessment",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Assessing an application's database security MOST importantly includes checking for which of the following?",
+    "options": [
+      { "text": "SQL injection exposure, excessive account privileges, and inference/aggregation risks", "correct": true, "rationale": "Database security assessment focuses on injection exposure, over-privileged accounts, and confidentiality risks like inference/aggregation." },
+      { "text": "The color of the database console", "correct": false, "rationale": "Console color is irrelevant to database security." },
+      { "text": "The database server's paint job", "correct": false, "rationale": "Physical aesthetics do not affect database security posture." },
+      { "text": "The DBA's favorite query", "correct": false, "rationale": "Personal preferences are not a security assessment criterion." }
+    ]
+  },
+  {
+    "id": "d8-t3-a10",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Fuzzing Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Fuzzing primarily helps find which type of software weakness?",
+    "options": [
+      { "text": "Input-handling flaws revealed by malformed or unexpected input", "correct": true, "rationale": "Fuzzing sends malformed/random input to trigger crashes and expose input-handling vulnerabilities." },
+      { "text": "Weak physical door locks", "correct": false, "rationale": "Fuzzing is a software technique, not a physical assessment." },
+      { "text": "Poor office lighting", "correct": false, "rationale": "Lighting is unrelated to fuzzing." },
+      { "text": "Slow elevator response", "correct": false, "rationale": "Elevators are unrelated to software fuzzing." }
+    ]
+  },
+  {
+    "id": "d8-t3-b1",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Technique Timing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which technique can generally be applied EARLIEST in the development process?",
+    "options": [
+      { "text": "SAST, because it analyzes source code without needing a running app", "correct": true, "rationale": "SAST works on source/bytecode before the app is runnable, so it fits earliest in the SDLC." },
+      { "text": "DAST, because it needs a deployed running app", "correct": false, "rationale": "DAST requires a deployable, running application, so it comes later than SAST." },
+      { "text": "Production penetration testing", "correct": false, "rationale": "Pen testing a live system occurs late, after deployment." },
+      { "text": "Real user monitoring in production", "correct": false, "rationale": "RUM requires live production users, the latest stage." }
+    ]
+  },
+  {
+    "id": "d8-t3-b2",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "DAST Runtime Finding",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A live application leaks stack traces via verbose error pages only when running. Which technique is MOST likely to catch this?",
+    "options": [
+      { "text": "DAST, which tests the running application and observes runtime responses", "correct": true, "rationale": "A runtime-only issue like verbose error output is best found by DAST probing the live app, not by static source analysis." },
+      { "text": "SAST, which never runs the app", "correct": false, "rationale": "SAST cannot observe runtime behavior like error-page output." },
+      { "text": "SCA, which checks dependencies", "correct": false, "rationale": "SCA finds vulnerable libraries, not runtime error-handling behavior." },
+      { "text": "A backup restore test", "correct": false, "rationale": "Restore testing is unrelated to application runtime behavior." }
+    ]
+  },
+  {
+    "id": "d8-t3-b3",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "SAST Source Line",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which technique MOST directly helps developers by pinpointing the exact line of vulnerable source code?",
+    "options": [
+      { "text": "SAST", "correct": true, "rationale": "Because SAST analyzes source, it can point developers to the specific line/file needing a fix." },
+      { "text": "Black-box DAST", "correct": false, "rationale": "DAST tests from outside and usually cannot identify the exact source line." },
+      { "text": "A physical guard patrol", "correct": false, "rationale": "Guard patrols are unrelated to source code." },
+      { "text": "A user survey", "correct": false, "rationale": "Surveys do not locate source-code flaws." }
+    ]
+  },
+  {
+    "id": "d8-t3-b4",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Manual Review Value",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "What can skilled manual code review find that automated scanners MOST often miss?",
+    "options": [
+      { "text": "Complex business-logic flaws that require human understanding of intent", "correct": true, "rationale": "Automated tools struggle with logic flaws that depend on business context; human reviewers can reason about intent." },
+      { "text": "Nothing; automation always finds more", "correct": false, "rationale": "Manual review catches logic flaws automation misses, so this is false." },
+      { "text": "Only spelling mistakes in comments", "correct": false, "rationale": "Manual security review targets logic/security flaws, not merely typos." },
+      { "text": "The server's power consumption", "correct": false, "rationale": "Power usage is unrelated to code review." }
+    ]
+  },
+  {
+    "id": "d8-t3-b5",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "IAST Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "IAST is best described as which of the following?",
+    "options": [
+      { "text": "A technique that instruments the running app to combine runtime testing with internal code visibility", "correct": true, "rationale": "IAST uses instrumentation inside the running application to blend dynamic testing with code-level insight for accuracy." },
+      { "text": "A purely static scan of source only", "correct": false, "rationale": "That is SAST; IAST involves the running, instrumented app." },
+      { "text": "A physical penetration of a building", "correct": false, "rationale": "IAST is software testing, not physical intrusion." },
+      { "text": "A backup verification method", "correct": false, "rationale": "IAST tests application security, not backups." }
+    ]
+  },
+  {
+    "id": "d8-t3-b6",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Cost of Late Fixes",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why does shifting security testing left MOST benefit the organization economically?",
+    "options": [
+      { "text": "Defects found earlier are cheaper to fix than those found in production", "correct": true, "rationale": "The cost to remediate rises sharply the later a defect is found, so early detection saves money and rework." },
+      { "text": "Early testing makes bugs more expensive to fix", "correct": false, "rationale": "Early detection lowers, not raises, remediation cost." },
+      { "text": "It eliminates the need to fix bugs at all", "correct": false, "rationale": "Bugs still require fixing; shifting left just finds them sooner." },
+      { "text": "It has no economic effect", "correct": false, "rationale": "Earlier detection has a clear cost benefit." }
+    ]
+  },
+  {
+    "id": "d8-t3-b7",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "DAST Deployment Need",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is a prerequisite MOST specific to running a DAST scan?",
+    "options": [
+      { "text": "A deployable, running instance of the application to test against", "correct": true, "rationale": "DAST exercises the live application, so it needs a running instance, unlike SAST which uses source." },
+      { "text": "Access to nothing at all", "correct": false, "rationale": "DAST needs a running target; it is not requirement-free." },
+      { "text": "The application to be permanently offline", "correct": false, "rationale": "An offline app cannot be dynamically tested." },
+      { "text": "The source code deleted first", "correct": false, "rationale": "Deleting source is irrelevant and harmful; DAST needs a running app, not source removal." }
+    ]
+  },
+  {
+    "id": "d8-t3-b8",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Confirming Exploitability",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A SAST tool flagged a possible injection, but the team wants to confirm whether it is actually exploitable in the running app. Which approach is BEST?",
+    "options": [
+      { "text": "Use DAST or a targeted penetration test against the running application", "correct": true, "rationale": "Dynamic testing/pen testing exercises the live app to confirm whether the flagged issue is truly exploitable." },
+      { "text": "Assume every SAST finding is automatically exploitable", "correct": false, "rationale": "SAST produces false positives; assuming all are exploitable wastes effort." },
+      { "text": "Delete the code without investigation", "correct": false, "rationale": "Blindly deleting code is not a validation method." },
+      { "text": "Ignore it entirely", "correct": false, "rationale": "Ignoring a flagged injection risks leaving a real vulnerability unaddressed." }
+    ]
+  },
+  {
+    "id": "d8-t3-b9",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Continuous Testing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To keep application security assurance current as code changes frequently, what is BEST?",
+    "options": [
+      { "text": "Integrate automated security testing (SAST/DAST/SCA) into the CI/CD pipeline to run on changes", "correct": true, "rationale": "Continuous, automated testing on each change keeps assurance current in fast-moving development." },
+      { "text": "Test only once at project kickoff", "correct": false, "rationale": "A single early test becomes stale as code evolves." },
+      { "text": "Never test after the first release", "correct": false, "rationale": "Ongoing changes reintroduce risk that requires continued testing." },
+      { "text": "Rely on users to report all vulnerabilities", "correct": false, "rationale": "Relying on users is reactive and misses many issues." }
+    ]
+  },
+  {
+    "id": "d8-t3-b10",
+    "domainId": "d8",
+    "topicId": "d8-t3",
+    "subtopicTag": "Assessment Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to assessing software security effectiveness?",
+    "options": [
+      { "text": "The font used in the application's source-code comments", "correct": true, "rationale": "Comment font has no bearing on whether the software's security controls are effective, making it least relevant." },
+      { "text": "SAST results on the source code", "correct": false, "rationale": "SAST findings directly inform software security assessment." },
+      { "text": "DAST results on the running app", "correct": false, "rationale": "DAST results reveal runtime security issues, highly relevant." },
+      { "text": "SCA results on dependencies", "correct": false, "rationale": "Dependency vulnerabilities are a key part of the assessment." }
+    ]
+  }
+]

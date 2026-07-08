@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t5-a1",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Data Remanence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A technician plans to 'delete the files and quick-format' hard drives that held confidential data before sending them offsite. Why is this approach inadequate?",
+    "options": [
+      { "text": "Deletion and quick-format leave data recoverable due to data remanence", "correct": true, "rationale": "Standard deletion and quick-format only remove pointers/file tables; the underlying data remains and can be recovered, which is the data remanence problem." },
+      { "text": "Quick-format encrypts the data too strongly to read", "correct": false, "rationale": "Quick-format does not encrypt anything; it merely clears the file allocation structures, leaving data intact." },
+      { "text": "The drives will be physically destroyed by formatting", "correct": false, "rationale": "Formatting does not physically destroy media or its data content." },
+      { "text": "It removes the data but takes too long", "correct": false, "rationale": "The issue is not time; it is that the data is not actually removed and remains recoverable." }
+    ]
+  },
+  {
+    "id": "d7-t5-a2",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "SSD Sanitization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A batch of solid-state drives (SSDs) that held sensitive data must be sanitized before disposal. Which method is BEST suited to SSDs?",
+    "options": [
+      { "text": "Cryptographic erase or physical destruction", "correct": true, "rationale": "SSDs are not reliably sanitized by degaussing or simple overwrite due to wear-leveling; crypto-erase (destroying keys) or destruction is appropriate." },
+      { "text": "Degaussing with a magnetic field", "correct": false, "rationale": "Degaussing works on magnetic media but is ineffective on flash-based SSDs, which store data electronically." },
+      { "text": "A single quick-format", "correct": false, "rationale": "Quick-format leaves data recoverable and does not address SSD remanence." },
+      { "text": "Deleting the partition table", "correct": false, "rationale": "Removing the partition table does not erase the underlying flash cells; data remains recoverable." }
+    ]
+  },
+  {
+    "id": "d7-t5-a3",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Purging vs Clearing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Magnetic drives holding confidential data are being returned to an external leasing vendor. Which sanitization level is the MOST appropriate minimum?",
+    "options": [
+      { "text": "Purging (e.g., degaussing) because the media is leaving the organization", "correct": true, "rationale": "When media is released outside organizational control, purging that resists laboratory recovery is the minimum appropriate level." },
+      { "text": "Clearing by a single overwrite is sufficient", "correct": false, "rationale": "Clearing blocks standard recovery but is generally reserved for media that stays inside the organization, not media released externally." },
+      { "text": "A quick-format only", "correct": false, "rationale": "Quick-format does not remove data and is far below the required level for external release." },
+      { "text": "No sanitization, since the vendor is trusted", "correct": false, "rationale": "Trust in a vendor does not justify releasing recoverable confidential data; sanitization is still required." }
+    ]
+  },
+  {
+    "id": "d7-t5-a4",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Destruction",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "For media that held the organization's most highly classified data and will never be reused, which sanitization approach provides the highest assurance?",
+    "options": [
+      { "text": "Physical destruction (shredding, incineration, or pulverizing)", "correct": true, "rationale": "Destroying the media provides the highest assurance that data cannot be recovered, appropriate for the most sensitive, non-reusable media." },
+      { "text": "A single-pass overwrite", "correct": false, "rationale": "A single overwrite (clearing) is a lower assurance level than destruction and inappropriate for the highest classification." },
+      { "text": "Moving the files to the recycle bin", "correct": false, "rationale": "The recycle bin does not remove data at all and offers no assurance." },
+      { "text": "Renaming the files to hide them", "correct": false, "rationale": "Renaming does nothing to remove or protect the underlying data." }
+    ]
+  },
+  {
+    "id": "d7-t5-a5",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Asset Inventory",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization wants to ensure every storage device is properly sanitized before disposal, but devices sometimes go missing. What must be in place FIRST to make this reliable?",
+    "options": [
+      { "text": "An accurate asset inventory tracking every device through its lifecycle", "correct": true, "rationale": "Without knowing what media exists and where it is, the organization cannot guarantee each device is accounted for and sanitized." },
+      { "text": "A faster shredder", "correct": false, "rationale": "A faster shredder does not help if devices are unaccounted for and never reach the shredder." },
+      { "text": "More cloud storage", "correct": false, "rationale": "Adding cloud storage does not solve tracking of physical media disposal." },
+      { "text": "A stronger firewall", "correct": false, "rationale": "A firewall protects network traffic, not the tracking and disposal of physical media." }
+    ]
+  },
+  {
+    "id": "d7-t5-a6",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Shared Responsibility Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company moves data to an IaaS cloud provider and assumes the provider now handles all security. Under the shared responsibility model, which statement is MOST accurate?",
+    "options": [
+      { "text": "The customer remains responsible for its data, access control, and configuration", "correct": true, "rationale": "Under shared responsibility, the provider secures the underlying infrastructure while the customer retains responsibility for data, access, and configuration." },
+      { "text": "The provider assumes full responsibility for the customer's data protection", "correct": false, "rationale": "This is the trap; the provider secures infrastructure but does not take over the customer's data and configuration duties." },
+      { "text": "Security responsibilities disappear once data is in the cloud", "correct": false, "rationale": "Responsibilities are shared, not eliminated; the customer still owns significant obligations." },
+      { "text": "The customer is only responsible for physical data center security", "correct": false, "rationale": "Physical data center security is the provider's responsibility; the customer handles data, access, and configuration." }
+    ]
+  },
+  {
+    "id": "d7-t5-a7",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Degaussing Limitation",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Degaussing is an effective sanitization method for which type of media?",
+    "options": [
+      { "text": "Magnetic media such as hard disk drives and tapes", "correct": true, "rationale": "Degaussing uses a strong magnetic field to erase magnetic media; it is effective on magnetic disks and tapes." },
+      { "text": "Solid-state drives (SSDs)", "correct": false, "rationale": "SSDs store data in flash cells electronically, so magnetic degaussing does not erase them." },
+      { "text": "Optical media such as DVDs", "correct": false, "rationale": "Optical discs are not magnetic; degaussing has no effect and destruction is used instead." },
+      { "text": "Paper documents", "correct": false, "rationale": "Paper is not magnetic media; shredding, not degaussing, is used for paper." }
+    ]
+  },
+  {
+    "id": "d7-t5-a8",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Software Protection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Employees are installing unapproved 'shadow' software on company systems, creating licensing and security risks. Which resource-protection practice BEST addresses this?",
+    "options": [
+      { "text": "Maintaining a software asset inventory and controlling/allowlisting approved software", "correct": true, "rationale": "Tracking installed software and restricting installation to approved applications curbs shadow IT and its licensing and security risks." },
+      { "text": "Encrypting all hard drives", "correct": false, "rationale": "Full-disk encryption protects data at rest but does not detect or prevent unauthorized software installation." },
+      { "text": "Adding more RAM to workstations", "correct": false, "rationale": "Hardware capacity is unrelated to controlling unapproved software." },
+      { "text": "Lengthening password expiration intervals", "correct": false, "rationale": "Password policy changes do not address shadow software installation." }
+    ]
+  },
+  {
+    "id": "d7-t5-a9",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Media Handling",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which practice BEST supports proper handling of removable media containing sensitive data?",
+    "options": [
+      { "text": "Labeling media by classification and controlling its storage and transport", "correct": true, "rationale": "Marking media by sensitivity and controlling how it is stored and moved ensures it is handled per its classification." },
+      { "text": "Leaving media unlabeled to avoid drawing attention", "correct": false, "rationale": "Unlabeled media leads to mishandling because handlers cannot know its sensitivity." },
+      { "text": "Storing sensitive media in unlocked common areas", "correct": false, "rationale": "Uncontrolled storage exposes sensitive media to theft or loss." },
+      { "text": "Allowing anyone to transport media without tracking", "correct": false, "rationale": "Untracked transport breaks accountability and risks loss of sensitive media." }
+    ]
+  },
+  {
+    "id": "d7-t5-a10",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Classification-Driven Protection",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What PRIMARILY determines how strictly a given asset or piece of media should be protected and sanitized?",
+    "options": [
+      { "text": "The classification/sensitivity of the data it holds", "correct": true, "rationale": "Protection and sanitization requirements scale with data sensitivity; classification drives the appropriate handling and disposal method." },
+      { "text": "The physical color of the device", "correct": false, "rationale": "The device's color has no bearing on protection requirements." },
+      { "text": "The brand of the manufacturer", "correct": false, "rationale": "Manufacturer branding does not determine required protection levels." },
+      { "text": "The age of the employee assigned to it", "correct": false, "rationale": "Employee age is irrelevant to how an asset must be protected." }
+    ]
+  },
+  {
+    "id": "d7-t5-b1",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Data Remanence",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is data remanence?",
+    "options": [
+      { "text": "Residual data that remains on media after ordinary deletion or formatting", "correct": true, "rationale": "Data remanence is leftover recoverable data that persists unless proper sanitization is applied." },
+      { "text": "Data that has been fully and irreversibly destroyed", "correct": false, "rationale": "Remanence is the opposite — data that survives and can be recovered, not data that is destroyed." },
+      { "text": "The maximum amount of data a drive can hold", "correct": false, "rationale": "That describes storage capacity, not remanence." },
+      { "text": "Encrypted data that cannot be decrypted", "correct": false, "rationale": "Remanence concerns recoverable residual data, not undecryptable ciphertext." }
+    ]
+  },
+  {
+    "id": "d7-t5-b2",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Cryptographic Erase",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A fleet of self-encrypting drives must be quickly sanitized so the data becomes unrecoverable. Which method BEST accomplishes this efficiently?",
+    "options": [
+      { "text": "Cryptographic erase — destroy the encryption keys so the ciphertext is unrecoverable", "correct": true, "rationale": "Destroying the keys on a self-encrypting drive renders all stored ciphertext unrecoverable quickly, a recognized purge method." },
+      { "text": "Overwriting the entire drive several times manually", "correct": false, "rationale": "Multi-pass overwrite is slower and, on SSDs, may miss wear-leveled cells; crypto-erase is the efficient, appropriate method here." },
+      { "text": "Degaussing the drives", "correct": false, "rationale": "Degaussing does not work on the flash storage of self-encrypting SSDs." },
+      { "text": "Deleting the encryption software", "correct": false, "rationale": "Removing software does not destroy the keys or the recoverable data; the ciphertext and keys may remain." }
+    ]
+  },
+  {
+    "id": "d7-t5-b3",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Clearing vs Purging",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A hard drive will be reassigned to another employee within the same secure department. Which sanitization level is generally the BEST fit?",
+    "options": [
+      { "text": "Clearing (overwriting) is acceptable because the media stays within the organization", "correct": true, "rationale": "Clearing blocks standard recovery and is appropriate when media remains under organizational control and is reused internally." },
+      { "text": "Physical destruction of the drive", "correct": false, "rationale": "Destroying a reusable drive intended for internal reassignment is unnecessary and wasteful when clearing suffices." },
+      { "text": "No sanitization at all", "correct": false, "rationale": "Even internal reassignment requires sanitization so the new user cannot access the prior user's data." },
+      { "text": "Only renaming the previous user's folders", "correct": false, "rationale": "Renaming does not remove the data and leaves it accessible to the next user." }
+    ]
+  },
+  {
+    "id": "d7-t5-b4",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Asset Management",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is an accurate hardware and software asset inventory considered a PRIMARY foundation of resource protection?",
+    "options": [
+      { "text": "Because you cannot protect, patch, or securely dispose of assets you do not know you have", "correct": true, "rationale": "An inventory is prerequisite knowledge; unknown assets cannot be protected, patched, classified, or sanitized." },
+      { "text": "Because inventories automatically encrypt all data", "correct": false, "rationale": "An inventory records assets; it does not perform encryption." },
+      { "text": "Because an inventory removes the need for access controls", "correct": false, "rationale": "Inventories complement, not replace, access controls." },
+      { "text": "Because inventories guarantee no asset will ever fail", "correct": false, "rationale": "Inventories track assets; they do not prevent hardware failure." }
+    ]
+  },
+  {
+    "id": "d7-t5-b5",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "SSD Sanitization",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which method is LEAST effective for sanitizing a solid-state drive that held sensitive data?",
+    "options": [
+      { "text": "Degaussing the drive", "correct": true, "rationale": "Degaussing relies on magnetism and has no effect on flash-based SSDs, making it the least effective method listed for an SSD." },
+      { "text": "Cryptographic erase of the drive's keys", "correct": false, "rationale": "Crypto-erase is an effective, recognized method for SSDs, so it is not the least effective." },
+      { "text": "Physical destruction of the drive", "correct": false, "rationale": "Destruction is highly effective for SSDs, providing the highest assurance." },
+      { "text": "Vendor-supported secure erase command", "correct": false, "rationale": "A proper secure-erase built for the SSD is effective, unlike degaussing." }
+    ]
+  },
+  {
+    "id": "d7-t5-b6",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Shared Responsibility Model",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In an IaaS deployment, which responsibility clearly remains with the customer rather than the cloud provider?",
+    "options": [
+      { "text": "Configuring access controls and protecting the customer's own data", "correct": true, "rationale": "Under the shared responsibility model, customers retain responsibility for their data, identity/access configuration, and application settings." },
+      { "text": "Physical security of the data center facility", "correct": false, "rationale": "Physical facility security is the provider's responsibility in IaaS." },
+      { "text": "Maintaining the hypervisor host hardware", "correct": false, "rationale": "The underlying host and hypervisor infrastructure are managed by the provider." },
+      { "text": "Powering and cooling the server racks", "correct": false, "rationale": "Environmental controls for the infrastructure are the provider's responsibility." }
+    ]
+  },
+  {
+    "id": "d7-t5-b7",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Destruction",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A stack of DVDs contains highly sensitive archived records that must be disposed of. Since optical media cannot be degaussed, which method is MOST appropriate?",
+    "options": [
+      { "text": "Physical destruction such as shredding or pulverizing the discs", "correct": true, "rationale": "Optical media is non-magnetic, so physical destruction is the appropriate and highest-assurance disposal method." },
+      { "text": "Degaussing the discs", "correct": false, "rationale": "Degaussing has no effect on non-magnetic optical media." },
+      { "text": "Deleting the files listed on the discs", "correct": false, "rationale": "Write-once optical media generally cannot be logically wiped, and deletion would not remove burned data anyway." },
+      { "text": "Storing them in a locked drawer indefinitely", "correct": false, "rationale": "Retention is not disposal; the sensitive data remains and the requirement to dispose is unmet." }
+    ]
+  },
+  {
+    "id": "d7-t5-b8",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Virtual Resource Decommissioning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team deletes a cloud virtual machine but leaves its attached storage volume and snapshots intact and accessible. From a resource-protection standpoint, what is the BEST corrective action?",
+    "options": [
+      { "text": "Securely delete or crypto-erase the associated volumes and snapshots as part of decommissioning", "correct": true, "rationale": "Decommissioning must include the data artifacts; leaving volumes and snapshots accessible risks exposure of residual sensitive data." },
+      { "text": "Leave the volumes and snapshots since the VM is gone", "correct": false, "rationale": "The VM's removal does not sanitize its residual storage; the data remains recoverable." },
+      { "text": "Rename the snapshots to obscure them", "correct": false, "rationale": "Renaming does not remove the data or the access risk." },
+      { "text": "Increase the VM's memory before deletion", "correct": false, "rationale": "Memory sizing is irrelevant to sanitizing residual cloud storage." }
+    ]
+  },
+  {
+    "id": "d7-t5-b9",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Sanitization Selection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which factors MOST directly determine the correct media sanitization method to choose?",
+    "options": [
+      { "text": "The data's sensitivity and whether the media will be reused, released externally, or destroyed", "correct": true, "rationale": "Sanitization selection hinges on classification and the media's fate (internal reuse, external release, or disposal), which map to clear/purge/destroy." },
+      { "text": "The color and shape of the media", "correct": false, "rationale": "Physical appearance is irrelevant to the required sanitization level." },
+      { "text": "The number of employees in the department", "correct": false, "rationale": "Headcount does not determine sanitization requirements." },
+      { "text": "The time of day the disposal occurs", "correct": false, "rationale": "Timing has no bearing on which sanitization method is appropriate." }
+    ]
+  },
+  {
+    "id": "d7-t5-b10",
+    "domainId": "d7",
+    "topicId": "d7-t5",
+    "subtopicTag": "Hardware Protection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company issues laptops that frequently leave the office. Which combination BEST protects the data if a device is lost or stolen?",
+    "options": [
+      { "text": "Full-disk encryption plus asset tracking so lost devices are known and their data protected", "correct": true, "rationale": "Encryption renders lost-device data unreadable, and asset tracking ensures the organization knows the device is missing and can respond." },
+      { "text": "Relying on a login password with an unencrypted disk", "correct": false, "rationale": "A login password can be bypassed by removing the drive; without encryption the data is exposed." },
+      { "text": "Placing a company sticker on each laptop", "correct": false, "rationale": "A sticker does not protect data if the device is stolen." },
+      { "text": "Disabling the laptop's Wi-Fi permanently", "correct": false, "rationale": "Disabling Wi-Fi does not protect the stored data from a thief with physical possession." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d8-t2-a1",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "CI/CD Pipeline Compromise",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why is compromise of the CI/CD build pipeline MOST dangerous in a software ecosystem?",
+    "options": [
+      { "text": "Malicious code can be injected into every build the pipeline produces", "correct": true, "rationale": "A compromised pipeline sits upstream of all builds, so attackers can poison every artifact it produces — a supply-chain catastrophe." },
+      { "text": "It only affects one developer's laptop", "correct": false, "rationale": "The pipeline builds for everyone; the impact is far broader than one laptop." },
+      { "text": "It makes builds run faster", "correct": false, "rationale": "Compromise is a security disaster, not a performance benefit." },
+      { "text": "It has no real impact", "correct": false, "rationale": "Pipeline compromise can distribute malware widely, a severe impact." }
+    ]
+  },
+  {
+    "id": "d8-t2-a2",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Dependency Risk SCA",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A product includes many open-source libraries. Which control BEST manages the risk of vulnerable dependencies?",
+    "options": [
+      { "text": "Software Composition Analysis (SCA) with an SBOM to track and patch components", "correct": true, "rationale": "SCA inventories dependencies and flags known vulnerabilities, and an SBOM enables rapid response when a component flaw is disclosed." },
+      { "text": "Assuming all open-source code is secure", "correct": false, "rationale": "Open-source components frequently contain vulnerabilities; blind trust is unsafe." },
+      { "text": "Removing all documentation of dependencies", "correct": false, "rationale": "Removing dependency records eliminates the visibility needed to manage them." },
+      { "text": "Using libraries without tracking versions", "correct": false, "rationale": "Untracked versions leave the product exposed when flaws are disclosed." }
+    ]
+  },
+  {
+    "id": "d8-t2-a3",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Secrets in Source",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A code review finds API keys hard-coded in the repository. What should be done FIRST?",
+    "options": [
+      { "text": "Rotate the exposed secrets and move them into a secrets vault", "correct": true, "rationale": "Exposed secrets must be rotated (they may already be compromised) and relocated to a vault rather than remaining in source." },
+      { "text": "Leave them in the code for convenience", "correct": false, "rationale": "Hard-coded secrets in a repo are easily extracted and must be removed." },
+      { "text": "Publish them in the README", "correct": false, "rationale": "Publishing secrets makes the exposure worse." },
+      { "text": "Ignore it since the repo is internal", "correct": false, "rationale": "Internal repos are still accessible to many and can be leaked; secrets must be secured." }
+    ]
+  },
+  {
+    "id": "d8-t2-a4",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Branch Protection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure no code reaches the main branch without peer review, which control is BEST?",
+    "options": [
+      { "text": "Branch protection requiring approved code review before merge", "correct": true, "rationale": "Branch protection with mandatory review prevents unreviewed (and potentially malicious or flawed) code from merging." },
+      { "text": "Allowing anyone to push directly to main", "correct": false, "rationale": "Unrestricted direct pushes bypass review entirely." },
+      { "text": "Disabling version control", "correct": false, "rationale": "Removing version control eliminates review and history." },
+      { "text": "Deleting the review history", "correct": false, "rationale": "Deleting history reduces accountability and does not enforce review." }
+    ]
+  },
+  {
+    "id": "d8-t2-a5",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Environment Separation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A test account with production database credentials is compromised, exposing live data. Which control MOST directly would have prevented this?",
+    "options": [
+      { "text": "Separating dev/test/prod environments with distinct least-privilege credentials", "correct": true, "rationale": "Proper environment separation ensures test credentials cannot access production data, containing the compromise." },
+      { "text": "Sharing one credential across all environments", "correct": false, "rationale": "Shared credentials are exactly what let the test compromise reach production." },
+      { "text": "Giving every environment full production access", "correct": false, "rationale": "Broad production access from non-prod environments increases risk." },
+      { "text": "Disabling all logging", "correct": false, "rationale": "Disabling logging reduces detection and does not separate environments." }
+    ]
+  },
+  {
+    "id": "d8-t2-a6",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Artifact Signing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To detect tampering with a build artifact between the build server and deployment, which control is BEST?",
+    "options": [
+      { "text": "Cryptographically sign artifacts and verify signatures before deployment", "correct": true, "rationale": "Signing build artifacts and verifying them at deploy time detects any tampering in transit or storage." },
+      { "text": "Rename the artifact to something random", "correct": false, "rationale": "Renaming does not detect content tampering." },
+      { "text": "Skip verification to deploy faster", "correct": false, "rationale": "Skipping verification allows tampered artifacts to be deployed." },
+      { "text": "Store the artifact on a public server", "correct": false, "rationale": "Public storage increases tampering exposure without detection." }
+    ]
+  },
+  {
+    "id": "d8-t2-a7",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Separation of Duties Dev",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A developer can write code and single-handedly approve and push it straight to production. Which control MOST directly addresses this risk?",
+    "options": [
+      { "text": "Separation of duties, so the author is not the sole approver of deployment", "correct": true, "rationale": "Separation of duties prevents a single person from both creating and releasing code, reducing the chance of unreviewed or malicious changes reaching production." },
+      { "text": "Giving the developer even more production access", "correct": false, "rationale": "More unilateral access worsens the problem." },
+      { "text": "Removing all approvals to speed delivery", "correct": false, "rationale": "Removing approvals eliminates the control that separation of duties provides." },
+      { "text": "Disabling code review", "correct": false, "rationale": "Disabling review removes oversight, increasing risk." }
+    ]
+  },
+  {
+    "id": "d8-t2-a8",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Pipeline Security Integration",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To catch security issues early and automatically in development, where is it BEST to integrate SAST, dependency scanning, and secrets scanning?",
+    "options": [
+      { "text": "Into the CI/CD pipeline so scans run automatically on each build", "correct": true, "rationale": "Integrating security tooling into the pipeline catches issues automatically and early, before code progresses." },
+      { "text": "Only manually, once a year", "correct": false, "rationale": "Annual manual scans miss most issues introduced between runs." },
+      { "text": "Never, to keep builds fast", "correct": false, "rationale": "Skipping scans trades security for speed and misses defects." },
+      { "text": "Only after a breach occurs", "correct": false, "rationale": "Reactive-only scanning leaves issues undetected until harm occurs." }
+    ]
+  },
+  {
+    "id": "d8-t2-a9",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "SBOM Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A Software Bill of Materials (SBOM) primarily helps an organization do which of the following?",
+    "options": [
+      { "text": "Know which components are in its software so it can assess and patch vulnerabilities", "correct": true, "rationale": "An SBOM inventories components/dependencies, enabling rapid identification of exposure when a component flaw is disclosed." },
+      { "text": "Encrypt all network traffic", "correct": false, "rationale": "An SBOM is an inventory, not an encryption mechanism." },
+      { "text": "Serve as a firewall", "correct": false, "rationale": "An SBOM has no traffic-filtering function." },
+      { "text": "Replace the need for testing", "correct": false, "rationale": "An SBOM informs but does not replace security testing." }
+    ]
+  },
+  {
+    "id": "d8-t2-a10",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Repo Access Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which practice MOST reduces the risk of unauthorized changes to source code?",
+    "options": [
+      { "text": "Enforce least-privilege access to the repository with authentication and audit logging", "correct": true, "rationale": "Restricting who can access/modify the repo and logging changes reduces and attributes unauthorized modifications." },
+      { "text": "Make the repository publicly writable by anyone", "correct": false, "rationale": "Public write access invites unauthorized and malicious changes." },
+      { "text": "Share one admin account among all developers", "correct": false, "rationale": "Shared admin accounts destroy accountability and over-grant access." },
+      { "text": "Disable all logging on the repository", "correct": false, "rationale": "Disabling logging removes the ability to detect and attribute changes." }
+    ]
+  },
+  {
+    "id": "d8-t2-b1",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Supply Chain Focus",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Modern attackers increasingly target the software supply chain. Which statement MOST accurately reflects the resulting defensive priority?",
+    "options": [
+      { "text": "Secure the entire build ecosystem (repos, pipeline, dependencies), not just the finished application", "correct": true, "rationale": "Because attacks target build systems and dependencies, defenses must cover the whole toolchain, not only the shipped app." },
+      { "text": "Only scan the final application and ignore the pipeline", "correct": false, "rationale": "Ignoring the pipeline/dependencies leaves the most-targeted areas unprotected." },
+      { "text": "Assume dependencies are always safe", "correct": false, "rationale": "Vulnerable/malicious dependencies are a primary supply-chain vector." },
+      { "text": "Security ends once code is written", "correct": false, "rationale": "Build, dependency, and deployment stages all require protection." }
+    ]
+  },
+  {
+    "id": "d8-t2-b2",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Secrets Vault",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Where is it BEST to store application credentials and API keys?",
+    "options": [
+      { "text": "In a dedicated secrets manager/vault, retrieved at runtime", "correct": true, "rationale": "A secrets vault keeps credentials out of source, controls access, and enables rotation." },
+      { "text": "Hard-coded in the source repository", "correct": false, "rationale": "Hard-coded secrets are easily extracted from the repo." },
+      { "text": "In a public config file", "correct": false, "rationale": "Public config exposes the secrets to anyone." },
+      { "text": "Printed on a sticky note on the monitor", "correct": false, "rationale": "Physical exposure of secrets is grossly insecure." }
+    ]
+  },
+  {
+    "id": "d8-t2-b3",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Pipeline Credential Protection",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which asset in the CI/CD ecosystem MOST warrants strong protection because its compromise enables signing malicious builds?",
+    "options": [
+      { "text": "The pipeline's code-signing keys and deployment credentials", "correct": true, "rationale": "Signing keys and deploy credentials let an attacker produce trusted malicious builds, so they must be strongly protected (e.g., in an HSM)." },
+      { "text": "The office Wi-Fi guest password", "correct": false, "rationale": "A guest Wi-Fi password does not enable signing builds." },
+      { "text": "The team's chat emoji set", "correct": false, "rationale": "Chat emojis are irrelevant to build integrity." },
+      { "text": "The cafeteria menu file", "correct": false, "rationale": "This has no bearing on build signing." }
+    ]
+  },
+  {
+    "id": "d8-t2-b4",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Least Privilege Build Agents",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Build agents currently run with broad administrative rights across many systems. What is the BEST hardening step?",
+    "options": [
+      { "text": "Restrict build agents to least-privilege access scoped to what each build needs", "correct": true, "rationale": "Scoping build agents to minimal necessary permissions limits damage if an agent or pipeline is compromised." },
+      { "text": "Grant build agents domain admin everywhere", "correct": false, "rationale": "Over-privileged build agents massively increase blast radius on compromise." },
+      { "text": "Run all builds as the same shared root account", "correct": false, "rationale": "Shared root accounts destroy accountability and over-grant access." },
+      { "text": "Disable authentication on build agents", "correct": false, "rationale": "Removing authentication lets anyone control the agents." }
+    ]
+  },
+  {
+    "id": "d8-t2-b5",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Version Control Value",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Beyond collaboration, version/configuration management MOST directly provides which security-relevant benefit?",
+    "options": [
+      { "text": "A record of what changed and the ability to roll back to a known-good state", "correct": true, "rationale": "Version/config management tracks changes and enables rollback, supporting integrity and recovery from bad or malicious changes." },
+      { "text": "Automatic encryption of user data", "correct": false, "rationale": "Version control does not inherently encrypt user data." },
+      { "text": "Faster internet speeds", "correct": false, "rationale": "It has no effect on network speed." },
+      { "text": "Elimination of the need for testing", "correct": false, "rationale": "Version control complements, not replaces, testing." }
+    ]
+  },
+  {
+    "id": "d8-t2-b6",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Dependency Confusion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An attacker publishes a malicious package with the same name as an internal one to a public registry, hoping the build pulls it. Which control MOST directly mitigates this 'dependency confusion' risk?",
+    "options": [
+      { "text": "Use trusted/private registries and pin/verify dependency sources and versions", "correct": true, "rationale": "Sourcing from controlled registries and pinning/verifying dependencies prevents the build from resolving to a malicious public package." },
+      { "text": "Always pull the newest package from any public source", "correct": false, "rationale": "Blindly pulling latest from public sources is exactly how dependency confusion succeeds." },
+      { "text": "Disable dependency management entirely", "correct": false, "rationale": "Removing dependency management is impractical and does not address source verification." },
+      { "text": "Ignore where packages come from", "correct": false, "rationale": "Not verifying package sources leaves the build vulnerable to substitution." }
+    ]
+  },
+  {
+    "id": "d8-t2-b7",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Code Review Benefit",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security benefit of mandatory peer code review before merging?",
+    "options": [
+      { "text": "A second set of eyes can catch security flaws and malicious changes before they merge", "correct": true, "rationale": "Peer review surfaces vulnerabilities and unauthorized changes early, improving code security and accountability." },
+      { "text": "It makes the code compile faster", "correct": false, "rationale": "Review affects quality/security, not compile speed." },
+      { "text": "It removes the need for testing", "correct": false, "rationale": "Review complements, not replaces, testing." },
+      { "text": "It encrypts the repository", "correct": false, "rationale": "Code review does not encrypt the repo." }
+    ]
+  },
+  {
+    "id": "d8-t2-b8",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Immutable Build Provenance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To prove a deployed artifact truly came from the authorized pipeline and code, which practice is BEST?",
+    "options": [
+      { "text": "Generate and verify signed provenance/attestation linking the artifact to its source and build", "correct": true, "rationale": "Signed build provenance/attestation cryptographically ties an artifact to its verified source and pipeline, defeating tampering and impersonation." },
+      { "text": "Trust any artifact that has a familiar file name", "correct": false, "rationale": "File names are trivially forged and prove nothing about origin." },
+      { "text": "Deploy whatever is on a shared drive", "correct": false, "rationale": "Unverified shared-drive artifacts could be tampered or malicious." },
+      { "text": "Skip verification to save time", "correct": false, "rationale": "Skipping verification defeats the goal of proving provenance." }
+    ]
+  },
+  {
+    "id": "d8-t2-b9",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Secrets Scanning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To prevent credentials from being committed to the repository in the first place, which control is BEST?",
+    "options": [
+      { "text": "Automated secrets scanning (e.g., pre-commit hooks / pipeline scans) that block committed secrets", "correct": true, "rationale": "Secrets scanning detects and blocks credentials before or as they are committed, preventing exposure." },
+      { "text": "Encouraging developers to remember not to commit secrets", "correct": false, "rationale": "Relying on memory alone is unreliable; automation enforces it." },
+      { "text": "Making the repo public so mistakes are obvious", "correct": false, "rationale": "Public exposure worsens the impact of any committed secret." },
+      { "text": "Disabling commit history", "correct": false, "rationale": "Removing history hinders review and does not prevent secret commits." }
+    ]
+  },
+  {
+    "id": "d8-t2-b10",
+    "domainId": "d8",
+    "topicId": "d8-t2",
+    "subtopicTag": "Ecosystem Control Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to securing a software development ecosystem?",
+    "options": [
+      { "text": "The desktop wallpaper on developers' machines", "correct": true, "rationale": "Wallpaper choice has no bearing on toolchain/pipeline/dependency security, making it least relevant." },
+      { "text": "Protecting CI/CD pipeline credentials", "correct": false, "rationale": "Pipeline credential protection is central to ecosystem security." },
+      { "text": "Managing dependency vulnerabilities with SCA", "correct": false, "rationale": "Dependency management is a core ecosystem control." },
+      { "text": "Enforcing code review and branch protection", "correct": false, "rationale": "Review/branch protection prevents unauthorized code changes, a key control." }
+    ]
+  }
+]

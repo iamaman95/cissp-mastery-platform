@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t9-a1",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Emergency Change",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "At 2 a.m. an actively exploited flaw must be patched on a public server before the weekly CAB meets. What is the BEST way to proceed?",
+    "options": [
+      { "text": "Use the emergency change process (ECAB/emergency approver), apply the fix with a rollback plan, and document with a post-implementation review", "correct": true, "rationale": "Emergency change expedites approval for urgent fixes while preserving rollback readiness and after-the-fact documentation and review." },
+      { "text": "Apply the patch and skip all documentation since it is an emergency", "correct": false, "rationale": "Emergency status expedites approval but never authorizes skipping documentation or the post-implementation review." },
+      { "text": "Wait for the regular weekly CAB regardless of active exploitation", "correct": false, "rationale": "Waiting leaves an actively exploited public server exposed; that is why the emergency path exists." },
+      { "text": "Let any engineer change production without any approval", "correct": false, "rationale": "Unapproved 'cowboy' changes bypass control entirely; emergencies still require expedited authorization." }
+    ]
+  },
+  {
+    "id": "d7-t9-a2",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "RFC",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "What is the purpose of a Request for Change (RFC)?",
+    "options": [
+      { "text": "To formally document a proposed change's justification, scope, risk, implementation, and rollback plan", "correct": true, "rationale": "The RFC initiates the change process by capturing the reason, scope, risk, and rollback plan for review." },
+      { "text": "To permanently disable change tracking", "correct": false, "rationale": "An RFC enables controlled change, not the disabling of tracking." },
+      { "text": "To assign blame after an outage", "correct": false, "rationale": "An RFC is a forward-looking change proposal, not a blame-assignment tool." },
+      { "text": "To purchase new hardware without approval", "correct": false, "rationale": "An RFC documents a change for approval; it is not a bypass for procurement." }
+    ]
+  },
+  {
+    "id": "d7-t9-a3",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Rollback Plan",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before a change is approved for implementation, which element must be confirmed to exist FIRST for the change to be considered ready?",
+    "options": [
+      { "text": "A documented rollback (back-out) plan to restore the prior known-good state", "correct": true, "rationale": "A change is not ready without a defined way to revert if it fails; the rollback plan must exist before implementation." },
+      { "text": "A press release announcing the change", "correct": false, "rationale": "Public announcements are not a readiness prerequisite for a change." },
+      { "text": "A guarantee the change will never fail", "correct": false, "rationale": "No change can be guaranteed never to fail; that is why a rollback plan is required." },
+      { "text": "Approval to skip testing", "correct": false, "rationale": "Skipping testing is not a readiness criterion; a rollback plan is." }
+    ]
+  },
+  {
+    "id": "d7-t9-a4",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "CAB Role",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team asks the Change Advisory Board (CAB) to perform the technical work of deploying a change. Why is this request misguided?",
+    "options": [
+      { "text": "The CAB reviews and approves or rejects changes; it does not implement them", "correct": true, "rationale": "The CAB is a governance body assessing risk and scheduling; execution is performed by the implementers, not the board." },
+      { "text": "The CAB is required to implement every change personally", "correct": false, "rationale": "This misstates the CAB's role; it governs rather than executes changes." },
+      { "text": "The CAB only handles hardware purchases", "correct": false, "rationale": "The CAB governs changes broadly, not just purchases, but it still does not implement them." },
+      { "text": "The CAB writes all application code", "correct": false, "rationale": "The CAB is not a development team; it reviews and approves changes." }
+    ]
+  },
+  {
+    "id": "d7-t9-a5",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Standard Change",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A low-risk, repeatable task like routine account provisioning follows an established, pre-approved procedure without per-instance CAB review. This is BEST described as which kind of change?",
+    "options": [
+      { "text": "A standard (pre-approved) change", "correct": true, "rationale": "Standard changes are low-risk, repeatable, and pre-authorized via an established procedure, avoiding per-instance CAB review." },
+      { "text": "An emergency change", "correct": false, "rationale": "Emergency changes address urgent incidents; routine provisioning is not an emergency." },
+      { "text": "An unapproved ad-hoc change", "correct": false, "rationale": "A standard change is approved in advance via procedure, unlike an unapproved ad-hoc change." },
+      { "text": "A normal change requiring full CAB review", "correct": false, "rationale": "The whole point of a standard change is that it does not require full per-instance CAB review." }
+    ]
+  },
+  {
+    "id": "d7-t9-a6",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Post-Implementation Review",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY purpose of a post-implementation review (PIR) after a change?",
+    "options": [
+      { "text": "To confirm the change achieved its goal, caused no adverse effects, and to capture lessons learned", "correct": true, "rationale": "The PIR validates outcomes and feeds improvements back into the process." },
+      { "text": "To immediately reverse every change made", "correct": false, "rationale": "A PIR reviews results; it does not automatically reverse successful changes." },
+      { "text": "To hide the change from auditors", "correct": false, "rationale": "A PIR is a documented review supporting accountability, not concealment." },
+      { "text": "To skip documentation entirely", "correct": false, "rationale": "The PIR is itself part of documentation, not a way to avoid it." }
+    ]
+  },
+  {
+    "id": "d7-t9-a7",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Change vs Configuration Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes change management from configuration management?",
+    "options": [
+      { "text": "Change management governs how modifications are approved; configuration management maintains the authoritative baseline of deployed state", "correct": true, "rationale": "The two are complementary but distinct: one controls the change process, the other maintains the record of what is deployed." },
+      { "text": "They are the same process under two names", "correct": false, "rationale": "They are related but distinct; conflating them is a common trap." },
+      { "text": "Change management only tracks hardware inventory", "correct": false, "rationale": "That inventory role belongs to configuration management, not change management." },
+      { "text": "Configuration management approves emergency changes", "correct": false, "rationale": "Approving changes is the change-management/CAB function, not configuration management." }
+    ]
+  },
+  {
+    "id": "d7-t9-a8",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Uncontrolled Change",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An engineer pushes an undocumented configuration change straight to production without approval, and an outage follows. This MOST clearly demonstrates the value of what?",
+    "options": [
+      { "text": "A formal change management process with approval, documentation, and rollback", "correct": true, "rationale": "Uncontrolled ad-hoc changes are a leading cause of outages; change management provides the control that prevents them." },
+      { "text": "Removing all approval steps to move faster", "correct": false, "rationale": "Removing approvals worsens the very problem that caused the outage." },
+      { "text": "Allowing anyone to change production at will", "correct": false, "rationale": "Unrestricted production changes are exactly the risk the scenario illustrates." },
+      { "text": "Deleting logs after changes", "correct": false, "rationale": "Deleting logs removes accountability and does not address uncontrolled change." }
+    ]
+  },
+  {
+    "id": "d7-t9-a9",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Maintenance Window",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Why are changes typically scheduled within a defined maintenance window?",
+    "options": [
+      { "text": "To minimize disruption to business operations during the change", "correct": true, "rationale": "A maintenance window is an agreed low-impact period chosen to reduce operational disruption from the change." },
+      { "text": "To ensure the maximum number of users are affected", "correct": false, "rationale": "The goal is the opposite: minimizing user impact." },
+      { "text": "To avoid documenting the change", "correct": false, "rationale": "Scheduling a window does not eliminate documentation requirements." },
+      { "text": "To bypass the approval process", "correct": false, "rationale": "A maintenance window is about timing, not skipping approvals." }
+    ]
+  },
+  {
+    "id": "d7-t9-a10",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Emergency Change Documentation",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which action is LEAST acceptable when handling an emergency change?",
+    "options": [
+      { "text": "Skipping all documentation and the post-implementation review because it was urgent", "correct": true, "rationale": "Emergencies expedite approval but never authorize skipping documentation or the after-the-fact review, so this is least acceptable." },
+      { "text": "Obtaining expedited approval from the ECAB or emergency approver", "correct": false, "rationale": "Expedited approval is the correct emergency path, not an unacceptable action." },
+      { "text": "Confirming a rollback point before applying the fix", "correct": false, "rationale": "Ensuring rollback readiness is proper practice even in emergencies." },
+      { "text": "Performing a post-implementation review after the fix", "correct": false, "rationale": "A PIR after an emergency change is required good practice, not unacceptable." }
+    ]
+  },
+  {
+    "id": "d7-t9-b1",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Rollback Plan",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A deployed change causes unexpected failures in production. What capability BEST allows the team to restore service quickly?",
+    "options": [
+      { "text": "Executing the predefined rollback (back-out) plan to the prior known-good state", "correct": true, "rationale": "A prepared rollback plan lets the team revert to the last stable state promptly when a change fails." },
+      { "text": "Improvising a fix with no prior plan", "correct": false, "rationale": "Improvising without a plan is slow and error-prone compared to a predefined rollback." },
+      { "text": "Deleting the change record", "correct": false, "rationale": "Deleting records does not restore service and harms accountability." },
+      { "text": "Waiting until the next maintenance window", "correct": false, "rationale": "Waiting prolongs the outage when an immediate rollback is available." }
+    ]
+  },
+  {
+    "id": "d7-t9-b2",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "CAB",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the primary role of a Change Advisory Board (CAB)?",
+    "options": [
+      { "text": "To review, prioritize, and approve or reject proposed changes based on risk and impact", "correct": true, "rationale": "The CAB is a cross-functional governance body that evaluates and authorizes changes." },
+      { "text": "To personally implement every production change", "correct": false, "rationale": "The CAB governs changes; it does not perform the technical implementation." },
+      { "text": "To write all software for the organization", "correct": false, "rationale": "Development is not the CAB's function." },
+      { "text": "To manage employee payroll", "correct": false, "rationale": "Payroll is unrelated to the CAB's change-governance role." }
+    ]
+  },
+  {
+    "id": "d7-t9-b3",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Emergency Change",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST accurately describes what 'emergency' compresses in the emergency change process?",
+    "options": [
+      { "text": "It compresses the approval timeline but not the requirements for documentation, rollback, and post-review", "correct": true, "rationale": "Emergency changes speed up authorization only; records, rollback readiness, and the PIR are still required." },
+      { "text": "It removes the need for any approval or record", "correct": false, "rationale": "Emergencies still require expedited approval and documentation; nothing eliminates them." },
+      { "text": "It allows permanent unapproved production access", "correct": false, "rationale": "Emergency change does not grant standing unapproved access." },
+      { "text": "It eliminates the rollback plan requirement", "correct": false, "rationale": "A rollback plan is still expected before applying an emergency change." }
+    ]
+  },
+  {
+    "id": "d7-t9-b4",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Standard vs Normal Change",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A moderate-risk change with uncertain impact needs assessment before it is allowed. Which change category BEST fits, and what does it require?",
+    "options": [
+      { "text": "A normal change requiring full CAB review and approval", "correct": true, "rationale": "Moderate-to-high risk changes needing assessment go through the full CAB process as normal changes." },
+      { "text": "A standard change needing no review", "correct": false, "rationale": "Standard changes are pre-approved and low-risk; an uncertain, moderate-risk change does not qualify." },
+      { "text": "An emergency change bypassing assessment", "correct": false, "rationale": "There is no emergency described, so the expedited emergency path is inappropriate." },
+      { "text": "An unapproved change requiring nothing", "correct": false, "rationale": "No legitimate change is 'unapproved requiring nothing'; controls always apply." }
+    ]
+  },
+  {
+    "id": "d7-t9-b5",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "RFC Contents",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A reviewer rejects an RFC because it omits one critical element that would allow safe reversal if the change fails. Which missing element is MOST likely the cause?",
+    "options": [
+      { "text": "The rollback (back-out) plan", "correct": true, "rationale": "An RFC lacking a rollback plan is not ready, since there would be no defined way to revert a failed change." },
+      { "text": "The color of the change ticket", "correct": false, "rationale": "Ticket color is irrelevant to change readiness." },
+      { "text": "The lunch schedule of the implementers", "correct": false, "rationale": "This is unrelated to safe reversal of a change." },
+      { "text": "A marketing plan for the change", "correct": false, "rationale": "Marketing is not a change-readiness element for reversal." }
+    ]
+  },
+  {
+    "id": "d7-t9-b6",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Change vs Configuration Management",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An auditor wants to know which process ensures every production modification is reviewed and authorized before it happens. This is MOST directly the responsibility of which process?",
+    "options": [
+      { "text": "Change management", "correct": true, "rationale": "Reviewing and authorizing modifications before they occur is the defining function of change management." },
+      { "text": "Configuration management", "correct": false, "rationale": "Configuration management maintains the baseline of deployed state; it does not itself authorize each modification." },
+      { "text": "Incident management", "correct": false, "rationale": "Incident management responds to adverse events, not the pre-authorization of planned changes." },
+      { "text": "Capacity management", "correct": false, "rationale": "Capacity management plans resources; it does not authorize production changes." }
+    ]
+  },
+  {
+    "id": "d7-t9-b7",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Reversibility",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "From a security standpoint, what is a PRIMARY reason change management insists every change be reversible and traceable?",
+    "options": [
+      { "text": "So a failed or harmful change can be undone and every change can be attributed and audited", "correct": true, "rationale": "Reversibility limits the impact of bad changes, and traceability supports accountability and auditing." },
+      { "text": "So changes can be hidden from auditors", "correct": false, "rationale": "Traceability supports auditing rather than hiding changes." },
+      { "text": "So no one is ever accountable for changes", "correct": false, "rationale": "Traceability increases accountability, not the reverse." },
+      { "text": "So changes can be made without any record", "correct": false, "rationale": "Change management requires records; recordless changes defeat its purpose." }
+    ]
+  },
+  {
+    "id": "d7-t9-b8",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "ECAB",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The full CAB cannot convene in time to authorize an urgent fix. Which body is BEST suited to provide rapid authorization?",
+    "options": [
+      { "text": "The Emergency Change Advisory Board (ECAB)", "correct": true, "rationale": "The ECAB is a reduced-quorum subset of the CAB that can rapidly authorize emergency changes." },
+      { "text": "The full marketing department", "correct": false, "rationale": "Marketing has no role in authorizing emergency technical changes." },
+      { "text": "No one; the change should proceed unapproved", "correct": false, "rationale": "Emergency changes still require expedited authorization, which the ECAB provides." },
+      { "text": "The external auditors", "correct": false, "rationale": "Auditors assess controls; they do not authorize operational emergency changes." }
+    ]
+  },
+  {
+    "id": "d7-t9-b9",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Post-Implementation Review",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After an emergency change is applied at night, when should the post-implementation review occur?",
+    "options": [
+      { "text": "After the fact, as part of documenting and reviewing the emergency change", "correct": true, "rationale": "Emergency changes still receive a PIR after the fact to confirm results and capture lessons learned." },
+      { "text": "Never, because emergencies are exempt from review", "correct": false, "rationale": "Emergencies are not exempt; the PIR is still required." },
+      { "text": "Only if the change failed", "correct": false, "rationale": "A PIR is performed regardless of success to confirm outcomes and capture improvements." },
+      { "text": "Before the change is applied", "correct": false, "rationale": "A post-implementation review, by definition, occurs after implementation." }
+    ]
+  },
+  {
+    "id": "d7-t9-b10",
+    "domainId": "d7",
+    "topicId": "d7-t9",
+    "subtopicTag": "Change Control Value",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why does CISSP treat change management as an operational security control rather than merely an IT convenience?",
+    "options": [
+      { "text": "Because uncontrolled changes are a leading cause of outages and can introduce vulnerabilities or break controls", "correct": true, "rationale": "Governing changes prevents modifications that reduce availability, weaken controls, or add vulnerabilities, making it a security control." },
+      { "text": "Because it speeds up changes by removing all oversight", "correct": false, "rationale": "Change management adds disciplined oversight; it does not remove it." },
+      { "text": "Because it eliminates the need for any testing", "correct": false, "rationale": "Change management includes testing; it does not eliminate it." },
+      { "text": "Because it guarantees no change will ever fail", "correct": false, "rationale": "It reduces and manages risk but cannot guarantee zero failures, which is why rollback exists." }
+    ]
+  }
+]

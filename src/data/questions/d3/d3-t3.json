@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t3-a1",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Certification vs Accreditation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After a system passes its technical security evaluation, a senior manager formally accepts the residual risk and approves it for production. This management action is BEST described as what?",
+    "options": [
+      { "text": "Accreditation (authorization to operate)", "correct": true, "rationale": "Accreditation is management's formal acceptance of residual risk and authorization to operate, following the technical certification." },
+      { "text": "Certification", "correct": false, "rationale": "Certification is the technical evaluation step; the described action is the management risk-acceptance step." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing is a technical assessment activity, not the formal authorization decision." },
+      { "text": "Threat modeling", "correct": false, "rationale": "Threat modeling identifies design-stage threats, not the authorization to operate." }
+    ]
+  },
+  {
+    "id": "d3-t3-a2",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "EAL Meaning",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A product is Common Criteria certified at EAL5. What does this MOST accurately indicate?",
+    "options": [
+      { "text": "The product's security claims were evaluated with a high degree of rigor", "correct": true, "rationale": "EAL reflects the depth/rigor of the evaluation, not that the product is inherently more secure than lower-EAL products evaluated to different requirements." },
+      { "text": "The product is guaranteed to be the most secure available", "correct": false, "rationale": "A high EAL is about evaluation rigor, not an absolute guarantee of superiority over other products." },
+      { "text": "The product cannot be hacked", "correct": false, "rationale": "No evaluation level makes a product unhackable." },
+      { "text": "The product needs no configuration to be secure", "correct": false, "rationale": "Secure configuration remains necessary regardless of EAL." }
+    ]
+  },
+  {
+    "id": "d3-t3-a3",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Protection Profile vs Security Target",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In Common Criteria, a customer's statement of the security requirements they need is MOST accurately called what?",
+    "options": [
+      { "text": "Protection Profile (PP)", "correct": true, "rationale": "The Protection Profile expresses the customer/community's required security needs against which products are evaluated." },
+      { "text": "Security Target (ST)", "correct": false, "rationale": "The Security Target is the vendor's claim of what the product does, not the customer's requirement." },
+      { "text": "Target of Evaluation (TOE)", "correct": false, "rationale": "The TOE is the product being evaluated, not the requirements document." },
+      { "text": "Evaluation Assurance Level (EAL)", "correct": false, "rationale": "The EAL is the assurance rating, not the requirements statement." }
+    ]
+  },
+  {
+    "id": "d3-t3-a4",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "TOE Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In Common Criteria terminology, the 'Target of Evaluation' (TOE) refers to which of the following?",
+    "options": [
+      { "text": "The product or system being evaluated", "correct": true, "rationale": "The TOE is the specific product/system undergoing Common Criteria evaluation." },
+      { "text": "The customer's list of requirements", "correct": false, "rationale": "That is the Protection Profile, not the TOE." },
+      { "text": "The assurance rating assigned", "correct": false, "rationale": "That is the EAL, not the TOE." },
+      { "text": "The evaluation laboratory", "correct": false, "rationale": "The lab performs the evaluation; the TOE is the product being evaluated." }
+    ]
+  },
+  {
+    "id": "d3-t3-a5",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Who Accepts Residual Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Who MOST appropriately accepts the residual risk of operating a system and grants the authorization to operate?",
+    "options": [
+      { "text": "The Authorizing Official (senior management)", "correct": true, "rationale": "Accepting residual risk and granting authorization to operate is a management responsibility held by the Authorizing Official." },
+      { "text": "The junior security tester", "correct": false, "rationale": "Testers assess controls but do not have authority to accept organizational risk." },
+      { "text": "The external Common Criteria lab", "correct": false, "rationale": "The lab evaluates products; it does not authorize the organization's systems to operate." },
+      { "text": "Any end user", "correct": false, "rationale": "End users lack authority to accept residual risk on the organization's behalf." }
+    ]
+  },
+  {
+    "id": "d3-t3-a6",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Control Selection by Requirements",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When selecting security controls for a new system, what should PRIMARILY drive the selection?",
+    "options": [
+      { "text": "The system's documented security requirements and its risk profile", "correct": true, "rationale": "Controls should be chosen to meet the documented requirements and the system's assessed risk, then tailored appropriately." },
+      { "text": "Whatever controls are cheapest regardless of need", "correct": false, "rationale": "Cost alone can leave real risks unaddressed; requirements and risk must drive selection." },
+      { "text": "Whatever the newest employee prefers", "correct": false, "rationale": "Personal preference is not a valid basis for control selection." },
+      { "text": "Copying a competitor's controls blindly", "correct": false, "rationale": "Blind copying ignores this system's specific requirements and risk." }
+    ]
+  },
+  {
+    "id": "d3-t3-a7",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Certification Nature",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Certification, as distinct from accreditation, is MOST accurately characterized as what?",
+    "options": [
+      { "text": "The technical evaluation of whether a system's controls meet the requirements", "correct": true, "rationale": "Certification is the technical assessment confirming controls satisfy the stated requirements, feeding the accreditation decision." },
+      { "text": "The management decision to accept residual risk", "correct": false, "rationale": "That is accreditation/authorization, not certification." },
+      { "text": "A marketing endorsement of the product", "correct": false, "rationale": "Certification is a technical evaluation, not marketing." },
+      { "text": "A guarantee the system will never fail", "correct": false, "rationale": "No certification guarantees a system will never fail." }
+    ]
+  },
+  {
+    "id": "d3-t3-a8",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Security Target Role",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A vendor documents exactly which security functions its product provides for evaluation. This document is MOST accurately called what?",
+    "options": [
+      { "text": "The Security Target (ST)", "correct": true, "rationale": "The Security Target is the vendor's statement of the security functionality the TOE provides, evaluated against the requirements." },
+      { "text": "The Protection Profile (PP)", "correct": false, "rationale": "The Protection Profile is the customer's requirements, not the vendor's claim." },
+      { "text": "The EAL", "correct": false, "rationale": "The EAL is the assurance rating, not the vendor's functional claim document." },
+      { "text": "The accreditation letter", "correct": false, "rationale": "An accreditation/ATO letter is management's authorization, not the vendor's functional claim." }
+    ]
+  },
+  {
+    "id": "d3-t3-a9",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Reauthorization Trigger",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A previously accredited system undergoes a major architectural change. What should happen FIRST regarding its authorization?",
+    "options": [
+      { "text": "Reassess the system and seek re-authorization, since the change may alter its risk posture", "correct": true, "rationale": "Significant changes can invalidate the basis of the original authorization, so the system should be reassessed and re-authorized." },
+      { "text": "Assume the original authorization still applies unchanged", "correct": false, "rationale": "Major changes may introduce new risk, so the prior authorization cannot be assumed valid." },
+      { "text": "Remove all controls to simplify the change", "correct": false, "rationale": "Removing controls increases risk and is not an authorization step." },
+      { "text": "Ignore authorization since it was done once", "correct": false, "rationale": "Authorization is not permanent through major changes; reassessment is required." }
+    ]
+  },
+  {
+    "id": "d3-t3-a10",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Evaluation Purpose",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY purpose of using a recognized evaluation standard like Common Criteria when selecting a product?",
+    "options": [
+      { "text": "To gain independent assurance that the product's security claims were rigorously evaluated", "correct": true, "rationale": "Common Criteria provides independent, standardized assurance about the evaluated security functionality of a product." },
+      { "text": "To guarantee the lowest purchase price", "correct": false, "rationale": "Evaluation standards address assurance, not price." },
+      { "text": "To avoid ever configuring the product", "correct": false, "rationale": "Configuration is still required; evaluation does not remove that need." },
+      { "text": "To make the product's source code public", "correct": false, "rationale": "Common Criteria evaluation does not require making source code public." }
+    ]
+  },
+  {
+    "id": "d3-t3-b1",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Accreditation Is Business Decision",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A technical team insists a system is 'certified and therefore automatically approved to operate.' Which correction is MOST accurate?",
+    "options": [
+      { "text": "Certification is technical; authorization to operate still requires management to formally accept residual risk (accreditation)", "correct": true, "rationale": "Passing technical certification does not by itself authorize operation; management must accept the residual risk and grant the ATO." },
+      { "text": "Certification automatically grants authorization with no management step", "correct": false, "rationale": "Authorization is a separate management decision, not automatic from certification." },
+      { "text": "Only end users authorize operation", "correct": false, "rationale": "End users do not hold authorization authority; the Authorizing Official does." },
+      { "text": "Authorization is purely a technical checkbox", "correct": false, "rationale": "Authorization is a management risk-acceptance decision, not merely technical." }
+    ]
+  },
+  {
+    "id": "d3-t3-b2",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "EAL Range",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Common Criteria Evaluation Assurance Levels range from which of the following?",
+    "options": [
+      { "text": "EAL1 (lowest) to EAL7 (highest)", "correct": true, "rationale": "EALs run from EAL1 to EAL7, with higher numbers indicating more rigorous evaluation." },
+      { "text": "EAL0 to EAL10", "correct": false, "rationale": "The scale is EAL1–EAL7, not 0–10." },
+      { "text": "Level A to Level D", "correct": false, "rationale": "A–D letter divisions belong to the older TCSEC (Orange Book), not Common Criteria EALs." },
+      { "text": "EAL1 to EAL3 only", "correct": false, "rationale": "The scale extends to EAL7, not stopping at EAL3." }
+    ]
+  },
+  {
+    "id": "d3-t3-b3",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Higher EAL Misconception",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which conclusion about a product certified at EAL6 is LEAST supportable?",
+    "options": [
+      { "text": "It is automatically more secure than any product certified at a lower EAL", "correct": true, "rationale": "This is the least supportable claim: EAL reflects evaluation rigor against specific requirements, not blanket superiority over lower-EAL products with different profiles." },
+      { "text": "Its security claims were evaluated with substantial rigor", "correct": false, "rationale": "This is supportable — a high EAL does indicate rigorous evaluation." },
+      { "text": "It still requires secure configuration in deployment", "correct": false, "rationale": "This is true and supportable regardless of EAL." },
+      { "text": "It was evaluated against a defined Security Target", "correct": false, "rationale": "This is accurate; evaluation is measured against the ST/PP." }
+    ]
+  },
+  {
+    "id": "d3-t3-b4",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Authorizing Official Role",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In a risk management framework, the Authorizing Official's MOST essential function is which of the following?",
+    "options": [
+      { "text": "To review residual risk and decide whether to grant the authorization to operate", "correct": true, "rationale": "The Authorizing Official weighs residual risk and makes the accountable decision to authorize (or not) the system's operation." },
+      { "text": "To write the application's source code", "correct": false, "rationale": "Coding is a developer task, not the Authorizing Official's role." },
+      { "text": "To perform the penetration test personally", "correct": false, "rationale": "Testing is a technical activity, not the authorization decision." },
+      { "text": "To manage the office facilities", "correct": false, "rationale": "Facilities management is unrelated to system authorization." }
+    ]
+  },
+  {
+    "id": "d3-t3-b5",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "PP as Requirements",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A government buyer wants to define, in a reusable way, the security requirements a class of firewalls must meet, independent of any specific vendor. Which Common Criteria artifact BEST serves this?",
+    "options": [
+      { "text": "A Protection Profile (PP)", "correct": true, "rationale": "A Protection Profile captures reusable, vendor-independent security requirements for a category of products." },
+      { "text": "A Security Target (ST)", "correct": false, "rationale": "An ST is vendor-specific, describing one product's claims, not vendor-independent requirements." },
+      { "text": "An EAL", "correct": false, "rationale": "The EAL is an assurance rating, not a requirements definition." },
+      { "text": "A purchase order", "correct": false, "rationale": "A purchase order is a procurement document, not a security requirements definition." }
+    ]
+  },
+  {
+    "id": "d3-t3-b6",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Control Tailoring",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After applying a baseline control set, a team removes some controls that do not apply and strengthens others for a high-risk system. This activity is MOST accurately called what?",
+    "options": [
+      { "text": "Tailoring (and scoping) the controls to the system's specific requirements and risk", "correct": true, "rationale": "Adjusting a baseline by scoping out inapplicable controls and enhancing others to fit the system's risk is control tailoring/scoping." },
+      { "text": "Ignoring requirements entirely", "correct": false, "rationale": "Tailoring is driven by requirements and risk, not ignoring them." },
+      { "text": "Randomly selecting controls", "correct": false, "rationale": "Tailoring is deliberate and risk-based, not random." },
+      { "text": "Removing all controls", "correct": false, "rationale": "Tailoring adjusts controls to fit; it does not strip all protection." }
+    ]
+  },
+  {
+    "id": "d3-t3-b7",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Certification Feeds Accreditation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In the certification-and-accreditation process, which step generally happens FIRST?",
+    "options": [
+      { "text": "Certification — the technical evaluation of the system's controls", "correct": true, "rationale": "The technical certification is performed first, and its results inform the subsequent management accreditation/authorization decision." },
+      { "text": "Accreditation — management's risk acceptance", "correct": false, "rationale": "Accreditation follows certification, relying on the technical assessment results." },
+      { "text": "Decommissioning the system", "correct": false, "rationale": "Decommissioning is an end-of-life activity, not part of initial authorization." },
+      { "text": "Publishing the ATO before any evaluation", "correct": false, "rationale": "An ATO should not be issued before the technical evaluation supports it." }
+    ]
+  },
+  {
+    "id": "d3-t3-b8",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Evaluation Independence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is independent third-party evaluation (as in Common Criteria) valuable when selecting security products?",
+    "options": [
+      { "text": "It provides objective assurance rather than relying solely on the vendor's own claims", "correct": true, "rationale": "Independent evaluation gives buyers objective confidence in a product's security functionality beyond marketing claims." },
+      { "text": "It guarantees the product is free at no cost", "correct": false, "rationale": "Evaluation concerns assurance, not price." },
+      { "text": "It removes the need to test the product in your environment", "correct": false, "rationale": "Organizations should still validate products in their own context; evaluation does not eliminate that." },
+      { "text": "It makes the vendor responsible for all your risk", "correct": false, "rationale": "The buyer retains accountability for its own risk decisions." }
+    ]
+  },
+  {
+    "id": "d3-t3-b9",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Residual Risk Concept",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During accreditation, the Authorizing Official is asked to accept the 'residual risk.' This MOST accurately refers to what?",
+    "options": [
+      { "text": "The risk remaining after the selected controls have been applied", "correct": true, "rationale": "Residual risk is what is left over after controls reduce the original risk; management must formally accept it to authorize operation." },
+      { "text": "The risk before any controls are applied", "correct": false, "rationale": "That is inherent/total risk, not residual risk." },
+      { "text": "The cost of the security controls", "correct": false, "rationale": "Control cost is not the same as residual risk." },
+      { "text": "The number of users on the system", "correct": false, "rationale": "User count is unrelated to the definition of residual risk." }
+    ]
+  },
+  {
+    "id": "d3-t3-b10",
+    "domainId": "d3",
+    "topicId": "d3-t3",
+    "subtopicTag": "Selection Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when selecting security controls for a system?",
+    "options": [
+      { "text": "The personal hobbies of the procurement officer", "correct": true, "rationale": "The procurement officer's hobbies have no bearing on which controls a system's requirements and risk demand, making it least relevant." },
+      { "text": "The system's documented security requirements", "correct": false, "rationale": "Documented requirements are a primary driver of control selection." },
+      { "text": "The system's assessed risk level", "correct": false, "rationale": "Risk level directly informs how strong controls should be." },
+      { "text": "Applicable regulatory obligations", "correct": false, "rationale": "Regulatory obligations are highly relevant to control selection." }
+    ]
+  }
+]

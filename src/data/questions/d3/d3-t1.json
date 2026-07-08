@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t1-a1",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Fail Secure vs Fail Safe",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An architect is designing the electronic lock behavior for a data center's badge-controlled server room. On a total power failure, which design BEST aligns with protecting the confidentiality of the systems inside, assuming a separate, code-compliant emergency egress path already exists for occupants?",
+    "options": [
+      { "text": "Fail secure: the lock defaults to locked so unauthorized entry is denied when the control is down", "correct": true, "rationale": "For a data asset with a separate life-safety egress already provided, failing secure (locked/denied) protects confidentiality and integrity of the systems when the access control fails." },
+      { "text": "Fail safe: the lock defaults to unlocked so anyone can enter during the outage", "correct": false, "rationale": "Fail safe (unlocked) prioritizes human egress/safety; here egress is already handled separately, so defaulting the data-room lock to open needlessly exposes the assets." },
+      { "text": "Fail open with logging, so entries are recorded and reviewed afterward", "correct": false, "rationale": "Logging after the fact does not prevent unauthorized entry during the failure; it violates the goal of protecting the assets at the moment of failure." },
+      { "text": "Fail indeterminate: leave the last known lock state until power returns", "correct": false, "rationale": "Leaving an indeterminate/last-known state is not a recognized secure-failure mode and could leave the door open depending on prior state." }
+    ]
+  },
+  {
+    "id": "d3-t1-a2",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Least Privilege vs Need-to-Know",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two analysts hold identical Top Secret clearances. Analyst A is assigned to Project Falcon; Analyst B is not. Both are technically permitted by their clearance to read Project Falcon files, but policy still blocks Analyst B. Which principle MOST directly explains why Analyst B is denied?",
+    "options": [
+      { "text": "Need-to-know, because access to specific information requires a demonstrated relevance to one's current task even at an equal clearance level", "correct": true, "rationale": "Need-to-know restricts access to specific information based on task relevance; equal clearance does not by itself grant access to every compartment/project." },
+      { "text": "Least privilege, because Analyst B's system permissions were set too high", "correct": false, "rationale": "Least privilege governs the breadth of system rights; here the distinction is about relevance of specific information, which is precisely need-to-know." },
+      { "text": "Separation of duties, because two analysts must not work the same project", "correct": false, "rationale": "Separation of duties splits a single sensitive process across people; it does not explain why one cleared analyst is denied a project file." },
+      { "text": "Complete mediation, because every access must be checked each time", "correct": false, "rationale": "Complete mediation describes checking every access; it does not explain the substantive basis (task relevance) for the denial." }
+    ]
+  },
+  {
+    "id": "d3-t1-a3",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A support engineer has read access to a production system for troubleshooting but was also able to push configuration changes to production with no second approver. Which principle was BEST NOT enforced?",
+    "options": [
+      { "text": "Separation of duties, since the ability to both diagnose and unilaterally change production concentrates too much power in one role", "correct": true, "rationale": "Allowing one person to both diagnose and change production without a second approver is a classic separation-of-duties gap." },
+      { "text": "Defense in depth, since only one layer of network control existed", "correct": false, "rationale": "The scenario is about role/authority concentration, not the number of independent protective layers." },
+      { "text": "Complete mediation, since access was cached", "correct": false, "rationale": "Nothing indicates stale/cached permission decisions; the issue is the concentration of duties." },
+      { "text": "Secure defaults, since the system shipped open", "correct": false, "rationale": "The issue is not default configuration state but the absence of a second approver for a sensitive change." }
+    ]
+  },
+  {
+    "id": "d3-t1-a4",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Complete Mediation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An application checks a user's authorization once at login and caches the result for the entire session. Midway through a long session, an administrator revokes the user's access, but the user continues performing privileged actions until logout. Which secure design principle was MOST violated?",
+    "options": [
+      { "text": "Complete mediation, because authorization was not re-checked on every access, allowing a stale permission decision to persist", "correct": true, "rationale": "Complete mediation requires each access to be validated against current authorization state; caching the login decision let a revoked user keep acting." },
+      { "text": "Least privilege, because the user had too many permissions", "correct": false, "rationale": "The problem is not the breadth of granted rights but that a revoked decision was not re-evaluated." },
+      { "text": "Fail secure, because the system failed open", "correct": false, "rationale": "No control failure/outage occurred; the design intentionally cached the decision, which is a mediation flaw." },
+      { "text": "Defense in depth, because only one layer existed", "correct": false, "rationale": "The issue is stale authorization caching, not the number of independent layers." }
+    ]
+  },
+  {
+    "id": "d3-t1-a5",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Zero Trust",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A vendor pitches a product claiming it delivers 'zero trust' by replacing the corporate VPN. Which statement BEST reflects a correct understanding of zero trust that a CISSP should apply when evaluating this pitch?",
+    "options": [
+      { "text": "Zero trust is an architecture of continuous authentication and authorization with no implicit trust from network location, not a single product or VPN swap", "correct": true, "rationale": "Zero trust removes implicit trust based on network position and continuously verifies each request; it is a philosophy, not one appliance." },
+      { "text": "Zero trust means blocking all external traffic and trusting internal traffic fully", "correct": false, "rationale": "This is perimeter-based trust, the opposite of zero trust, which does not trust internal location either." },
+      { "text": "Zero trust is achieved once MFA is enabled at the VPN", "correct": false, "rationale": "MFA at a VPN is one control; it does not by itself provide continuous, per-request verification across the environment." },
+      { "text": "Zero trust means encrypting all data at rest", "correct": false, "rationale": "Encryption at rest is unrelated to the trust model governing access requests." }
+    ]
+  },
+  {
+    "id": "d3-t1-a6",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Shared Responsibility Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company deploys workloads on an IaaS cloud provider. Which security task is MOST clearly the customer's responsibility under the shared responsibility model for IaaS?",
+    "options": [
+      { "text": "Patching the guest operating system and configuring application-level access controls", "correct": true, "rationale": "Under IaaS, the customer manages the OS upward (guest OS patching, apps, data, access controls); the provider handles physical and hypervisor layers." },
+      { "text": "Physical security of the data center facility", "correct": false, "rationale": "Physical facility security is the provider's responsibility in all cloud service models." },
+      { "text": "Patching the hypervisor host", "correct": false, "rationale": "The hypervisor is managed by the provider in IaaS." },
+      { "text": "Maintaining the underlying storage array firmware", "correct": false, "rationale": "Underlying hardware/firmware is the provider's responsibility in IaaS." }
+    ]
+  },
+  {
+    "id": "d3-t1-a7",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Secure Defaults",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A new SaaS product ships with all optional data-sharing and public-link features turned ON by default, requiring customers to disable what they don't want. Which secure design principle does this BEST violate?",
+    "options": [
+      { "text": "Secure defaults, because the out-of-the-box configuration should be the most restrictive, requiring deliberate action to enable riskier features", "correct": true, "rationale": "Secure defaults require the shipped configuration to be closed/restrictive; enabling risky sharing by default is the violation." },
+      { "text": "Complete mediation, because access checks were cached", "correct": false, "rationale": "Nothing here concerns caching of authorization decisions." },
+      { "text": "Separation of duties, because one team controls the feature", "correct": false, "rationale": "No division-of-duties concern is described." },
+      { "text": "Fail safe, because the product should fail open", "correct": false, "rationale": "Fail safe concerns behavior on control failure, not the shipping default state of features." }
+    ]
+  },
+  {
+    "id": "d3-t1-a8",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Defense in Depth",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security team deploys three brands of the same network firewall in series but has no host, application, or data-layer controls. Which critique MOST accurately reflects a defense-in-depth weakness?",
+    "options": [
+      { "text": "The layers are not independent in the dimension that matters; stacking similar network controls leaves other attack vectors (host, app, data) unprotected", "correct": true, "rationale": "Defense in depth requires layers addressing different vectors; redundant network filters do not cover host/app/data attack paths." },
+      { "text": "Three firewalls always provide complete protection", "correct": false, "rationale": "Redundant same-layer controls do not address other attack surfaces, so this is false." },
+      { "text": "Defense in depth means buying the most expensive product", "correct": false, "rationale": "Defense in depth is about independent, diverse layers, not cost." },
+      { "text": "The design is fine because all layers are at the network level", "correct": false, "rationale": "Concentrating all controls at one layer is precisely the weakness being critiqued." }
+    ]
+  },
+  {
+    "id": "d3-t1-a9",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "KISS / Economy of Mechanism",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The principle of 'economy of mechanism' (closely related to KISS) primarily argues for which of the following in secure design?",
+    "options": [
+      { "text": "Keeping designs as simple as possible so they are easier to verify and less likely to hide exploitable flaws", "correct": true, "rationale": "Economy of mechanism/KISS holds that simpler designs are more assurable because complexity hides defects." },
+      { "text": "Adding as many controls as possible regardless of complexity", "correct": false, "rationale": "This contradicts the principle, which warns that complexity undermines assurance." },
+      { "text": "Relying on secrecy of the design for security", "correct": false, "rationale": "That describes security through obscurity, a discouraged practice, not economy of mechanism." },
+      { "text": "Encrypting all data with the longest possible keys", "correct": false, "rationale": "Key length is unrelated to the simplicity-of-mechanism principle." }
+    ]
+  },
+  {
+    "id": "d3-t1-a10",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Privacy by Design / Threat Modeling",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team is beginning the requirements phase for a new system that will process biometric data. To align with 'security and privacy by design,' what should the team do FIRST?",
+    "options": [
+      { "text": "Perform threat modeling and privacy analysis during requirements so controls are designed in rather than bolted on later", "correct": true, "rationale": "Security/privacy by design pushes threat modeling and privacy assessment to the earliest SDLC phases, before implementation." },
+      { "text": "Finish building the system, then run a penetration test to find issues", "correct": false, "rationale": "Waiting until after build is the bolt-on approach that by-design principles explicitly reject." },
+      { "text": "Encrypt the database and consider the design complete", "correct": false, "rationale": "Encryption is one control; it does not substitute for early threat and privacy analysis of the whole design." },
+      { "text": "Wait for the first incident to reveal which controls are needed", "correct": false, "rationale": "Reactive design after an incident contradicts by-design principles." }
+    ]
+  },
+  {
+    "id": "d3-t1-b1",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Fail Secure vs Fail Safe",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During a building fire, the electronically controlled stairwell egress doors lose power. Which failure behavior BEST reflects the correct priority for this life-safety context?",
+    "options": [
+      { "text": "Fail safe: the doors unlock so occupants can evacuate", "correct": true, "rationale": "For life-safety egress, fail safe (unlocked/open) protects human life, which takes priority over asset protection." },
+      { "text": "Fail secure: the doors stay locked to prevent intruders", "correct": false, "rationale": "Failing secure (locked) during a fire would trap occupants, wrongly prioritizing assets over human life." },
+      { "text": "Fail secure with a 10-minute delay", "correct": false, "rationale": "A delayed lock still risks trapping occupants and is not the correct life-safety default." },
+      { "text": "Leave the doors in their last state", "correct": false, "rationale": "Last-state behavior is unpredictable and unsafe for an egress path during an emergency." }
+    ]
+  },
+  {
+    "id": "d3-t1-b2",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A junior developer was granted full production database administrator rights 'to make debugging easier' and later ran a destructive query by accident. Which single principle, if applied, would BEST have reduced this risk?",
+    "options": [
+      { "text": "Least privilege: grant only read-only production access by default, with time-boxed elevation for any write", "correct": true, "rationale": "Least privilege limits standing rights to the minimum needed; read-only-by-default with controlled elevation would have prevented the accidental destructive write." },
+      { "text": "Need-to-know: restrict which records the developer can see", "correct": false, "rationale": "The harm was excessive write capability, not exposure to specific information, so least privilege fits better than need-to-know here." },
+      { "text": "Defense in depth: add more firewalls", "correct": false, "rationale": "Network layering would not address an authorized user's over-broad database rights." },
+      { "text": "Non-repudiation: log who ran the query", "correct": false, "rationale": "Logging attributes the action after the fact but does not prevent the over-privileged destructive write." }
+    ]
+  },
+  {
+    "id": "d3-t1-b3",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security purpose of separation of duties?",
+    "options": [
+      { "text": "To ensure no single individual can complete a sensitive process alone, reducing fraud and error risk", "correct": true, "rationale": "Separation of duties divides a critical process so collusion would be required to abuse it, limiting unilateral fraud/error." },
+      { "text": "To ensure every access request is re-checked each time", "correct": false, "rationale": "That is complete mediation, not separation of duties." },
+      { "text": "To ensure systems ship in their most restrictive state", "correct": false, "rationale": "That is secure defaults, not separation of duties." },
+      { "text": "To ensure data is layered behind multiple network controls", "correct": false, "rationale": "That is defense in depth, not separation of duties." }
+    ]
+  },
+  {
+    "id": "d3-t1-b4",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Complete Mediation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A microservice validates a bearer token's permissions at the API gateway but downstream services trust the gateway and never re-validate. An attacker who bypasses the gateway can call downstream services directly. Which principle would BEST address this gap?",
+    "options": [
+      { "text": "Complete mediation: each service should independently verify authorization on every request rather than trusting a prior check", "correct": true, "rationale": "Complete mediation requires every access to be checked at the point of use; downstream services trusting the gateway is a stale/absent-mediation flaw." },
+      { "text": "Secure defaults: ship the gateway closed", "correct": false, "rationale": "The issue is downstream trust of a single upstream check, not the default state of the gateway." },
+      { "text": "Least privilege: reduce the token's scopes", "correct": false, "rationale": "Reducing scopes helps generally but does not fix downstream services skipping their own authorization check." },
+      { "text": "Fail safe: let downstream services fail open", "correct": false, "rationale": "Failing open would worsen the problem by granting access when checks are absent." }
+    ]
+  },
+  {
+    "id": "d3-t1-b5",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Zero Trust",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization moves to a zero trust architecture. Which change is MOST consistent with zero trust principles?",
+    "options": [
+      { "text": "Requiring per-request authentication and authorization with device posture checks regardless of whether the request comes from the corporate LAN or the internet", "correct": true, "rationale": "Zero trust eliminates implicit trust by network location and continuously verifies identity, device, and authorization per request." },
+      { "text": "Treating all traffic on the internal VLAN as trusted to reduce friction", "correct": false, "rationale": "Trusting internal traffic implicitly is exactly what zero trust rejects." },
+      { "text": "Opening internal east-west traffic fully once a user is on the VPN", "correct": false, "rationale": "Implicit trust after VPN connection contradicts zero trust's continuous per-request verification." },
+      { "text": "Removing MFA internally to speed up access", "correct": false, "rationale": "Weakening authentication inside the perimeter is contrary to zero trust." }
+    ]
+  },
+  {
+    "id": "d3-t1-b6",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Shared Responsibility Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A firm uses a SaaS email and productivity suite. A breach occurs because the firm never configured MFA or reviewed sharing permissions on documents. Under the SaaS shared responsibility model, who is MOST responsible for this failure?",
+    "options": [
+      { "text": "The customer, because data classification, access configuration, and user access controls remain the customer's responsibility even in SaaS", "correct": true, "rationale": "In SaaS, the provider secures the application and infrastructure, but the customer still owns identity/access configuration and data governance." },
+      { "text": "The provider, because in SaaS the provider owns all security", "correct": false, "rationale": "SaaS does not transfer all responsibility; the customer retains access configuration and data responsibilities." },
+      { "text": "Neither party, because SaaS has no shared responsibility", "correct": false, "rationale": "SaaS explicitly has a shared responsibility split; the customer retains meaningful obligations." },
+      { "text": "The provider, because MFA is always a provider control", "correct": false, "rationale": "The provider may offer MFA, but configuring/enforcing it for the tenant is the customer's responsibility." }
+    ]
+  },
+  {
+    "id": "d3-t1-b7",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Secure Defaults",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which statement best describes the principle of secure defaults?",
+    "options": [
+      { "text": "A system's default configuration should be its most restrictive/secure state, with risky features requiring deliberate activation", "correct": true, "rationale": "Secure defaults means shipping closed so that riskier capabilities must be intentionally enabled." },
+      { "text": "A system should enable all features on install for convenience", "correct": false, "rationale": "Enabling everything by default is the opposite of secure defaults." },
+      { "text": "A system should trust internal users implicitly", "correct": false, "rationale": "That relates (incorrectly) to trust models, not secure defaults." },
+      { "text": "A system should never log security events", "correct": false, "rationale": "This is unrelated to and contrary to good security practice." }
+    ]
+  },
+  {
+    "id": "d3-t1-b8",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Defense in Depth",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which set of controls BEST exemplifies genuine defense in depth for protecting a sensitive database?",
+    "options": [
+      { "text": "Network segmentation, host hardening, application input validation, database access controls, and encryption of the data at rest", "correct": true, "rationale": "These are independent controls across distinct layers (network, host, app, data), so bypassing one does not compromise the asset." },
+      { "text": "Three identical network firewalls in series", "correct": false, "rationale": "Redundant same-layer controls do not cover host, application, or data-layer attack vectors." },
+      { "text": "A single very strong administrator password", "correct": false, "rationale": "One control at one point is not layered defense." },
+      { "text": "Antivirus installed on every server only", "correct": false, "rationale": "A single control type at the host layer is not multi-layer defense in depth." }
+    ]
+  },
+  {
+    "id": "d3-t1-b9",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Trust but Verify vs Zero Trust",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An architect lists design assumptions for a zero trust rollout. Which assumption is LEAST compatible with zero trust and should be removed?",
+    "options": [
+      { "text": "'Requests originating from inside the corporate network can skip re-authentication.'", "correct": true, "rationale": "Granting implicit trust based on internal network origin is fundamentally incompatible with zero trust and must be removed." },
+      { "text": "'Every request must present a valid, current credential.'", "correct": false, "rationale": "Per-request valid credentials are fully consistent with zero trust." },
+      { "text": "'Device health/posture is evaluated on each access.'", "correct": false, "rationale": "Continuous device posture evaluation is a core zero trust practice." },
+      { "text": "'Authorization is enforced at each resource, not just at a gateway.'", "correct": false, "rationale": "Resource-level enforcement aligns with zero trust and complete mediation." }
+    ]
+  },
+  {
+    "id": "d3-t1-b10",
+    "domainId": "d3",
+    "topicId": "d3-t1",
+    "subtopicTag": "Security by Design",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISO argues that security requirements must be captured in the earliest SDLC phase rather than added before release. What is the PRIMARY benefit of this 'security by design' stance?",
+    "options": [
+      { "text": "Controls are integrated into the architecture, reducing costly rework and hidden gaps compared to bolting security on late", "correct": true, "rationale": "Designing security in from requirements avoids expensive retrofits and reduces the chance of unaddressed architectural weaknesses." },
+      { "text": "It eliminates the need for any testing later", "correct": false, "rationale": "Testing is still required; by-design does not remove verification." },
+      { "text": "It guarantees zero vulnerabilities", "correct": false, "rationale": "No approach guarantees zero vulnerabilities; the benefit is fewer and cheaper-to-fix issues." },
+      { "text": "It shifts all responsibility to the operations team", "correct": false, "rationale": "By-design spreads responsibility earlier; it does not shift everything to operations." }
+    ]
+  }
+]

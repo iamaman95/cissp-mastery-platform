@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t2-a1",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Availability",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A hospital's file server is encrypted by ransomware. No evidence exists that data was exfiltrated or altered, but clinicians cannot access patient records for six hours. Which element of the CIA triad was PRIMARILY violated?",
+    "options": [
+      { "text": "Confidentiality", "correct": false, "rationale": "No evidence indicates the data was viewed or copied by an unauthorized party, so confidentiality was not the primary loss here." },
+      { "text": "Integrity", "correct": false, "rationale": "Encryption by ransomware does not constitute unauthorized alteration of the meaningful content in the way an integrity violation implies (e.g., tampering with records); the data itself, once decrypted, is unchanged." },
+      { "text": "Availability", "correct": true, "rationale": "Authorized users were unable to access needed data during business-critical hours, which is the definition of an availability violation." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Non-repudiation concerns proving an action occurred and cannot be denied; it is not implicated by a ransomware denial-of-access event." }
+    ]
+  },
+  {
+    "id": "d1-t2-a2",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Confidentiality",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "An employee accidentally CC's a spreadsheet containing customer social security numbers to an external mailing list. What is the BEST description of the security principle violated?",
+    "options": [
+      { "text": "Availability, because the data is now available to more people", "correct": false, "rationale": "Availability refers to authorized users' access to systems/data, not the scope of who can see sensitive data — this is a distractor conflating a common word with the technical term." },
+      { "text": "Confidentiality, because sensitive data was disclosed to unauthorized recipients", "correct": true, "rationale": "Disclosure of sensitive data (SSNs) to parties not authorized to receive it is the textbook definition of a confidentiality violation, regardless of intent." },
+      { "text": "Integrity, because the spreadsheet was sent in an unapproved format", "correct": false, "rationale": "Integrity concerns unauthorized modification of data, not the channel or format used to transmit it." },
+      { "text": "Non-repudiation, because the employee can deny sending the email", "correct": false, "rationale": "Non-repudiation is unrelated; the email system logs would still show the employee sent it, and this isn't the issue described." }
+    ]
+  },
+  {
+    "id": "d1-t2-a3",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Integrity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A disgruntled database administrator modifies several financial transaction records to hide an embezzlement scheme, without alerting monitoring systems. Which CIA element was MOST directly compromised?",
+    "options": [
+      { "text": "Integrity", "correct": true, "rationale": "Unauthorized modification of records to misrepresent facts is a direct and classic integrity violation." },
+      { "text": "Availability", "correct": false, "rationale": "The records remained accessible; access was not denied to authorized users." },
+      { "text": "Confidentiality", "correct": false, "rationale": "No unauthorized disclosure of information to a third party occurred; the DBA already had legitimate access to the data." },
+      { "text": "Authenticity", "correct": false, "rationale": "Authenticity concerns verifying the origin of data/communications; the issue here is that the content itself was altered, which is integrity, not source verification." }
+    ]
+  },
+  {
+    "id": "d1-t2-a4",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "DAD Triad",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The 'DAD' triad, often taught alongside CIA, refers to which three concepts?",
+    "options": [
+      { "text": "Disclosure, Alteration, Destruction", "correct": true, "rationale": "DAD represents the negative outcomes that Confidentiality, Integrity, and Availability controls are respectively designed to prevent." },
+      { "text": "Detection, Analysis, Documentation", "correct": false, "rationale": "This describes incident response phases, not the DAD triad used alongside CIA." },
+      { "text": "Denial, Authorization, Deception", "correct": false, "rationale": "These are not the standard DAD triad terms used in CISSP materials." },
+      { "text": "Data, Access, Devices", "correct": false, "rationale": "This is a plausible-sounding but incorrect grouping; it is not a recognized security triad." }
+    ]
+  },
+  {
+    "id": "d1-t2-a5",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Availability",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A distributed denial-of-service (DDoS) attack begins flooding an e-commerce site during a peak sales event. Legitimate customers cannot check out. From a CIA-triad classification standpoint, what should the incident report FIRST identify as the impacted principle?",
+    "options": [
+      { "text": "Availability", "correct": true, "rationale": "A DDoS attack's defining impact is denying legitimate users access to a service, which is squarely an availability impact." },
+      { "text": "Confidentiality", "correct": false, "rationale": "No data disclosure is implied by a volumetric DDoS attack unless stated otherwise." },
+      { "text": "Integrity", "correct": false, "rationale": "No data alteration is implied by simply flooding the service with traffic." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Not relevant — no transaction-denial-of-action scenario is described." }
+    ]
+  },
+  {
+    "id": "d1-t2-a6",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Non-repudiation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company wants to ensure that once a manager digitally approves a wire transfer, they cannot later claim they did not authorize it. Which security concept BEST addresses this requirement?",
+    "options": [
+      { "text": "Confidentiality", "correct": false, "rationale": "Confidentiality protects data from unauthorized disclosure; it does nothing to bind an individual to an action they performed." },
+      { "text": "Non-repudiation", "correct": true, "rationale": "Non-repudiation, typically achieved via digital signatures tied to a private key under the signer's sole control, prevents a party from credibly denying they performed an authorized action." },
+      { "text": "Availability", "correct": false, "rationale": "Availability ensures access to systems, unrelated to proving who performed an action." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege limits what a user can do, but does not by itself provide proof that a specific approval action was performed by that user." }
+    ]
+  },
+  {
+    "id": "d1-t2-a7",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Confidentiality vs Availability trade-off",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A CISO mandates that all internal file shares require multi-factor authentication plus a 3-minute idle timeout, re-prompting for credentials frequently. Employees report significant productivity loss and begin writing down passwords to save time. This scenario is MOST clearly an example of which security dynamic?",
+    "options": [
+      { "text": "A confidentiality control being maximized at the expense of usability, which indirectly undermines both availability and confidentiality", "correct": true, "rationale": "Over-tightening confidentiality controls degraded usability (an availability-adjacent concern) so severely that it created a new confidentiality risk (written-down passwords) — CISSP frames this as evidence that security is a balance across CIA, not a maximization of one leg." },
+      { "text": "A pure availability improvement", "correct": false, "rationale": "The change reduced usability/access speed, so it did not improve availability; it also created new risk." },
+      { "text": "A non-repudiation enhancement", "correct": false, "rationale": "MFA re-prompting does not primarily serve non-repudiation in this scenario; the described harm is unrelated to proving an action occurred." },
+      { "text": "An integrity control with no side effects", "correct": false, "rationale": "The scenario explicitly describes a negative side effect (password writing), so 'no side effects' is factually contradicted by the stem." }
+    ]
+  },
+  {
+    "id": "d1-t2-a8",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Integrity",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which of the following controls would be LEAST effective at detecting an integrity violation of a critical configuration file?",
+    "options": [
+      { "text": "A file integrity monitoring (FIM) tool computing periodic hash comparisons", "correct": false, "rationale": "FIM tools are specifically designed to detect unauthorized changes via hash comparison, making this a strong (not weak) control for this purpose." },
+      { "text": "Full-disk encryption at rest", "correct": true, "rationale": "Full-disk encryption protects confidentiality of data if the disk is stolen, but does nothing to detect or prevent an authorized, logged-in process from altering a file's contents — it is the least relevant control for integrity detection." },
+      { "text": "Cryptographic hashing with a stored baseline digest", "correct": false, "rationale": "This directly detects integrity violations by comparing current hash to baseline, making it a strong control, not the least effective." },
+      { "text": "Version control with change auditing", "correct": false, "rationale": "Version control with auditing is effective at both detecting and attributing unauthorized changes." }
+    ]
+  },
+  {
+    "id": "d1-t2-a9",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Authenticity",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which term describes the assurance that a message genuinely originated from the claimed sender?",
+    "options": [
+      { "text": "Availability", "correct": false, "rationale": "Availability concerns access to systems/data, not verifying the origin of a message." },
+      { "text": "Authenticity", "correct": true, "rationale": "Authenticity is the assurance that data or communications genuinely come from the claimed source." },
+      { "text": "Confidentiality", "correct": false, "rationale": "Confidentiality concerns restricting disclosure, not verifying origin." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege is an access control principle unrelated to verifying message origin." }
+    ]
+  },
+  {
+    "id": "d1-t2-a10",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Availability",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization's primary data center loses power and fails over to a secondary site within 90 seconds with no data loss, per design. Which CIA principle does this failover capability BEST demonstrate is being protected?",
+    "options": [
+      { "text": "Availability", "correct": true, "rationale": "Automatic failover to maintain continuity of service during an outage is a direct availability control." },
+      { "text": "Confidentiality", "correct": false, "rationale": "Failover does not primarily address who can view the data; it addresses continued access." },
+      { "text": "Integrity", "correct": false, "rationale": "While no data loss occurred, the control being described (failover) is specifically an availability mechanism, not an integrity mechanism." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Not related to proving actions occurred; unrelated to this scenario." }
+    ]
+  },
+  {
+    "id": "d1-t2-b1",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Confidentiality",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A former employee's account was not disabled upon termination, and they used it two weeks later to download a competitor's proprietary pricing model that had been shared with your sales team. What is the BEST classification of the resulting harm?",
+    "options": [
+      { "text": "Confidentiality violation, due to unauthorized access and disclosure of sensitive business data", "correct": true, "rationale": "An unauthorized party (the terminated employee, no longer entitled to access) viewed and extracted sensitive data — a textbook confidentiality violation." },
+      { "text": "Availability violation, because the account should have been disabled", "correct": false, "rationale": "The failure to disable the account is a root-cause/process issue, but the resulting harm described (data taken) is a confidentiality impact, not an access-denial impact." },
+      { "text": "Integrity violation, because account records were not updated", "correct": false, "rationale": "No data was altered; the pricing model was read/copied, not modified." },
+      { "text": "Non-repudiation violation", "correct": false, "rationale": "Non-repudiation is unrelated; there's no dispute over who performed the action in this scenario." }
+    ]
+  },
+  {
+    "id": "d1-t2-b2",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Integrity",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During a routine audit, a security analyst discovers that a production database's audit logs show unexplained gaps, and several financial totals no longer reconcile with source transactions. What should the analyst FIRST suspect was compromised?",
+    "options": [
+      { "text": "Integrity of the data and/or logs", "correct": true, "rationale": "Unreconciled totals and log gaps are hallmark signs that data or logs were tampered with — an integrity compromise — and should be the first working hypothesis." },
+      { "text": "Availability of the reporting system", "correct": false, "rationale": "The system is producing reports (just incorrect ones); this is not primarily an access/uptime problem." },
+      { "text": "Confidentiality of customer PII", "correct": false, "rationale": "Nothing in the scenario indicates unauthorized disclosure of information; the issue is inconsistent/altered data." },
+      { "text": "Physical security of the data center", "correct": false, "rationale": "No physical access indicators are mentioned; the evidence points to logical data tampering." }
+    ]
+  },
+  {
+    "id": "d1-t2-b3",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "DAD Triad",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which DAD triad outcome does an 'availability' control most directly defend against?",
+    "options": [
+      { "text": "Disclosure", "correct": false, "rationale": "Disclosure is the negative outcome that confidentiality controls defend against, not availability controls." },
+      { "text": "Alteration", "correct": false, "rationale": "Alteration is the negative outcome that integrity controls defend against." },
+      { "text": "Destruction", "correct": true, "rationale": "Destruction (loss of access, deletion, or downtime) is the negative outcome that availability controls are designed to prevent or mitigate." },
+      { "text": "Deception", "correct": false, "rationale": "Deception is not one of the standard DAD triad terms." }
+    ]
+  },
+  {
+    "id": "d1-t2-b4",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Availability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A ransomware operator not only encrypts a company's backups and production servers, but also exfiltrates a copy of the customer database before encrypting it, then threatens to publish it unless paid ('double extortion'). Which statement MOST accurately classifies the CIA impact?",
+    "options": [
+      { "text": "Only availability was affected, since the primary attack mechanism was encryption", "correct": false, "rationale": "This ignores the explicitly stated data exfiltration, which is a separate and real confidentiality impact." },
+      { "text": "Both confidentiality (data exfiltrated) and availability (systems encrypted/inaccessible) were violated", "correct": true, "rationale": "The scenario explicitly describes both unauthorized data copying (confidentiality) and denial of access via encryption (availability) — double-extortion ransomware by design harms both." },
+      { "text": "Only confidentiality was affected, since encryption of backups doesn't count as an availability loss", "correct": false, "rationale": "Encrypting backups and production servers directly denies authorized users access to needed systems/data, which is an availability impact regardless of the exfiltration." },
+      { "text": "Only integrity was affected, since the data was encrypted", "correct": false, "rationale": "Encryption by the attacker (without authorization) for extortion purposes is best classified as an availability impact (denial of access) combined with confidentiality (exfiltration), not an integrity violation of the data's accuracy." }
+    ]
+  },
+  {
+    "id": "d1-t2-b5",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Non-repudiation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An online contract-signing platform wants to ensure that a signed contract can later be proven in court to have been signed by a specific individual, with tamper evidence if the document is altered after signing. Which combination of controls BEST satisfies this requirement?",
+    "options": [
+      { "text": "Symmetric encryption of the document at rest", "correct": false, "rationale": "Symmetric encryption at rest protects confidentiality but provides no proof of who signed the document or tamper evidence tied to an individual signer." },
+      { "text": "Digital signature using the signer's private key, combined with a hash of the document content", "correct": true, "rationale": "A digital signature binds the signer's identity (via their private key) to a hash of the document; any later alteration breaks the hash match, and the signature itself provides non-repudiation because only the signer holds the private key." },
+      { "text": "Role-based access control limiting who can open the document", "correct": false, "rationale": "RBAC controls access but provides no cryptographic proof of authorship or tamper evidence." },
+      { "text": "A shared password known only to the signer and the platform", "correct": false, "rationale": "A shared secret does not provide strong non-repudiation, since the platform also knows the password and could theoretically have produced the signature itself." }
+    ]
+  },
+  {
+    "id": "d1-t2-b6",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Confidentiality vs Availability trade-off",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An emergency room's clinical system enforces the same strict, infrequent-password-change and long-lockout policy used for back-office finance systems. During a mass casualty event, several clinicians are locked out after mistyped passwords under stress, delaying care. What does this scenario BEST illustrate?",
+    "options": [
+      { "text": "That security policies should be uniformly applied everywhere regardless of context", "correct": false, "rationale": "This is the opposite of the lesson; the scenario shows uniform policy application caused real harm because it ignored context-specific availability needs." },
+      { "text": "That risk-based, context-aware control tuning is necessary because a control appropriate for one system's risk profile can create disproportionate availability harm in another", "correct": true, "rationale": "CISSP emphasizes that security controls must be tailored to context and risk; applying a finance-appropriate lockout policy to a life-safety clinical system created an availability failure with real-world harm, illustrating why blanket policies are a trap." },
+      { "text": "That lockout policies are never appropriate in healthcare", "correct": false, "rationale": "This overstates the lesson — lockout policies can still be appropriate in healthcare, just tuned to the criticality and context of the specific system." },
+      { "text": "That confidentiality should always be prioritized over availability in healthcare", "correct": false, "rationale": "CISSP does not teach a fixed priority order across CIA; the correct approach is balancing based on risk and mission impact, which in emergency clinical care often favors availability." }
+    ]
+  },
+  {
+    "id": "d1-t2-b7",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Confidentiality",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which of the following is the BEST definition of confidentiality in the context of the CIA triad?",
+    "options": [
+      { "text": "Ensuring data is accurate and has not been altered", "correct": false, "rationale": "This describes integrity, not confidentiality." },
+      { "text": "Ensuring only authorized individuals, entities, or processes can access information", "correct": true, "rationale": "This is the standard CISSP definition of confidentiality." },
+      { "text": "Ensuring systems remain operational and accessible", "correct": false, "rationale": "This describes availability, not confidentiality." },
+      { "text": "Ensuring an action cannot later be denied by its performer", "correct": false, "rationale": "This describes non-repudiation, not confidentiality." }
+    ]
+  },
+  {
+    "id": "d1-t2-b8",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Integrity",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A payroll system needs assurance that submitted timesheet totals cannot be silently altered between submission and manager approval. Which control would be LEAST useful for this integrity requirement?",
+    "options": [
+      { "text": "A cryptographic checksum computed at submission and re-verified at approval time", "correct": false, "rationale": "This directly detects any alteration between submission and approval, making it a strong (not weak) fit." },
+      { "text": "An immutable audit log recording every change with timestamp and user ID", "correct": false, "rationale": "An audit trail is a strong integrity/accountability control for detecting and attributing changes." },
+      { "text": "Data loss prevention (DLP) scanning outbound email for payroll data", "correct": true, "rationale": "DLP is designed to prevent unauthorized disclosure (a confidentiality control) of sensitive data leaving the organization; it does nothing to detect or prevent silent alteration of timesheet totals between submission and approval, making it the least relevant control here." },
+      { "text": "Digital signing of the submitted timesheet record", "correct": false, "rationale": "Digital signatures provide strong tamper-evidence and are highly relevant to this integrity requirement." }
+    ]
+  },
+  {
+    "id": "d1-t2-b9",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Availability",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A misconfigured firewall rule accidentally blocks all inbound traffic to a company's public API for three hours, causing partner integrations to fail, though no data was lost or exposed. What was the PRIMARY security principle impacted?",
+    "options": [
+      { "text": "Availability", "correct": true, "rationale": "The misconfiguration prevented authorized access to a service that should have been reachable — a direct availability impact, even though it was self-inflicted rather than attacker-caused." },
+      { "text": "Confidentiality", "correct": false, "rationale": "No unauthorized disclosure occurred; the scenario explicitly states no data was exposed." },
+      { "text": "Integrity", "correct": false, "rationale": "No data was altered; the issue was purely one of access being blocked." },
+      { "text": "Authenticity", "correct": false, "rationale": "No question of verifying the origin of data or communications is raised by this scenario." }
+    ]
+  },
+  {
+    "id": "d1-t2-b10",
+    "domainId": "d1",
+    "topicId": "d1-t2",
+    "subtopicTag": "Authenticity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A finance team receives an email, apparently from the CFO, instructing an urgent wire transfer to a new vendor account. The email address is spoofed and the CFO never sent it. Which security concept, if properly implemented (e.g., via DKIM/DMARC and out-of-band verification), would have BEST prevented this outcome?",
+    "options": [
+      { "text": "Confidentiality controls, since the email content should have been encrypted", "correct": false, "rationale": "Encrypting the email content would not have prevented a spoofed sender address from being accepted and acted upon; the failure here is verifying origin, not protecting content secrecy." },
+      { "text": "Authenticity controls, verifying that the message genuinely originated from the claimed sender", "correct": true, "rationale": "This is a business email compromise (BEC) scenario; email authentication mechanisms (DKIM/DMARC/SPF) and out-of-band sender verification directly address authenticity — confirming the message truly came from the CFO." },
+      { "text": "Availability controls, ensuring the email system stayed online", "correct": false, "rationale": "System uptime is irrelevant to whether a fraudulent, spoofed message was trusted and acted upon." },
+      { "text": "Least privilege, limiting who can send email", "correct": false, "rationale": "Least privilege concerns authorization scope for legitimate users, not verifying the authenticity of an external, spoofed message." }
+    ]
+  }
+]

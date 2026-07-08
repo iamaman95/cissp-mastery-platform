@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t5-a1",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Immediate Termination Revocation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employee is being terminated for cause. Regarding their system access, what should happen FIRST?",
+    "options": [
+      { "text": "Revoke/disable their access immediately, coordinated with the termination", "correct": true, "rationale": "For-cause terminations require immediate access revocation to prevent retaliatory misuse of still-active accounts." },
+      { "text": "Leave access active for two weeks as a courtesy", "correct": false, "rationale": "Leaving a for-cause terminee's access active invites sabotage or data theft." },
+      { "text": "Wait for the next quarterly access review", "correct": false, "rationale": "Delaying revocation to a periodic review leaves a dangerous open window." },
+      { "text": "Announce the termination company-wide before revoking access", "correct": false, "rationale": "Publicizing before revoking gives the individual time and motive to misuse active accounts." }
+    ]
+  },
+  {
+    "id": "d5-t5-a2",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Privilege Creep",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An employee who changed departments three times retains access from every prior role. This accumulation is MOST accurately called what?",
+    "options": [
+      { "text": "Privilege creep", "correct": true, "rationale": "Retaining access across role changes accumulates unnecessary rights — privilege creep — violating least privilege." },
+      { "text": "Least privilege", "correct": false, "rationale": "This is the opposite of least privilege; the user holds excess access." },
+      { "text": "Separation of duties", "correct": false, "rationale": "Separation of duties splits tasks; it does not describe accumulated access." },
+      { "text": "Deprovisioning", "correct": false, "rationale": "Deprovisioning removes access; here access was never removed, causing creep." }
+    ]
+  },
+  {
+    "id": "d5-t5-a3",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Orphaned Account",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An audit finds an active account belonging to an employee who left the company six months ago. This is MOST accurately which risk?",
+    "options": [
+      { "text": "An orphaned account, a serious unmanaged access risk", "correct": true, "rationale": "An active account of a departed user is an orphaned account — a common breach vector that should have been deprovisioned." },
+      { "text": "A properly provisioned account", "correct": false, "rationale": "A departed user's active account is improperly retained, not properly provisioned." },
+      { "text": "A least-privilege success", "correct": false, "rationale": "Leaving a departed user's account active is a failure, not a least-privilege success." },
+      { "text": "A separation-of-duties control", "correct": false, "rationale": "This is unrelated to separation of duties." }
+    ]
+  },
+  {
+    "id": "d5-t5-a4",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Role Change Access Removal",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employee transfers from finance to HR. To uphold least privilege, what should happen FIRST regarding their access?",
+    "options": [
+      { "text": "Review and remove access no longer needed for the new role before/while granting new access", "correct": true, "rationale": "On a mover event, obsolete access should be reviewed and revoked to prevent privilege creep as new role access is provisioned." },
+      { "text": "Keep all finance access and add HR access", "correct": false, "rationale": "Retaining old access while adding new causes privilege creep." },
+      { "text": "Do nothing since they are still an employee", "correct": false, "rationale": "A role change requires an access review; inaction leaves inappropriate access." },
+      { "text": "Delete the account entirely and never restore access", "correct": false, "rationale": "The user still needs role-appropriate HR access; removing everything blocks their work." }
+    ]
+  },
+  {
+    "id": "d5-t5-a5",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Access Recertification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure users' entitlements remain appropriate over time, what ongoing control is BEST?",
+    "options": [
+      { "text": "Periodic access reviews/recertification with manager attestation", "correct": true, "rationale": "Recertification periodically re-validates that each user's access is still warranted, catching drift and stale entitlements." },
+      { "text": "Granting access once and never reviewing it", "correct": false, "rationale": "One-time provisioning without review lets entitlements drift out of alignment." },
+      { "text": "Letting users approve their own access", "correct": false, "rationale": "Self-approval undermines oversight and least privilege." },
+      { "text": "Removing all logging", "correct": false, "rationale": "Disabling logging reduces visibility and does not review entitlements." }
+    ]
+  },
+  {
+    "id": "d5-t5-a6",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Authoritative Source",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which system is MOST commonly the authoritative source that should trigger automated provisioning and deprovisioning?",
+    "options": [
+      { "text": "The HR system of record", "correct": true, "rationale": "HR typically records hires, transfers, and terminations, making it the authoritative trigger for identity lifecycle changes." },
+      { "text": "The office coffee machine", "correct": false, "rationale": "This has no role in identity provisioning." },
+      { "text": "The public marketing website", "correct": false, "rationale": "A marketing site does not record employment status changes." },
+      { "text": "An individual employee's personal calendar", "correct": false, "rationale": "A personal calendar is not an authoritative HR source." }
+    ]
+  },
+  {
+    "id": "d5-t5-a7",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Access Cloning Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To onboard a new hire quickly, an admin copies all permissions from an existing senior employee. What is the MOST significant risk?",
+    "options": [
+      { "text": "The new hire inherits excessive privileges, violating least privilege", "correct": true, "rationale": "Access cloning propagates the senior user's broad (possibly excessive) rights to the new hire, over-provisioning them." },
+      { "text": "The new hire gets too little access", "correct": false, "rationale": "Cloning a senior user typically over-grants, not under-grants, access." },
+      { "text": "It automatically enforces MAC labels", "correct": false, "rationale": "Cloning permissions does not implement MAC; it copies existing rights." },
+      { "text": "It improves least privilege", "correct": false, "rationale": "Cloning undermines least privilege by spreading excess access." }
+    ]
+  },
+  {
+    "id": "d5-t5-a8",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Automated Deprovisioning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company repeatedly forgets to disable accounts when employees leave. What is the BEST systemic fix?",
+    "options": [
+      { "text": "Automate deprovisioning by linking identity management to the HR system so departures trigger account disablement", "correct": true, "rationale": "Automated, HR-triggered deprovisioning removes reliance on manual memory, promptly disabling departed users' accounts." },
+      { "text": "Hope administrators remember next time", "correct": false, "rationale": "Relying on memory is what caused the recurring failure." },
+      { "text": "Leave all accounts active permanently", "correct": false, "rationale": "Never disabling accounts maximizes orphaned-account risk." },
+      { "text": "Delete the HR system", "correct": false, "rationale": "Removing the authoritative source would worsen, not fix, lifecycle management." }
+    ]
+  },
+  {
+    "id": "d5-t5-a9",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Provisioning Least Privilege",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When provisioning a new user, which approach BEST aligns with security best practice?",
+    "options": [
+      { "text": "Grant only the minimum role-appropriate access needed for the job", "correct": true, "rationale": "Least-privilege provisioning limits exposure if the account is compromised and avoids over-granting." },
+      { "text": "Grant broad access up front to avoid future requests", "correct": false, "rationale": "Pre-granting broad access violates least privilege and increases risk." },
+      { "text": "Give every new user administrator rights", "correct": false, "rationale": "Universal admin rights are a severe least-privilege violation." },
+      { "text": "Copy a random colleague's permissions", "correct": false, "rationale": "Access cloning spreads potentially excessive privileges." }
+    ]
+  },
+  {
+    "id": "d5-t5-a10",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "JML Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The 'Joiner–Mover–Leaver' model describes which of the following?",
+    "options": [
+      { "text": "The stages of the identity/access provisioning lifecycle", "correct": true, "rationale": "JML captures onboarding (joiner), role change (mover), and offboarding (leaver) in the access lifecycle." },
+      { "text": "A network routing protocol", "correct": false, "rationale": "JML is an identity lifecycle concept, not a routing protocol." },
+      { "text": "A fire suppression standard", "correct": false, "rationale": "JML has nothing to do with fire suppression." },
+      { "text": "An encryption algorithm", "correct": false, "rationale": "JML is not a cryptographic algorithm." }
+    ]
+  },
+  {
+    "id": "d5-t5-b1",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Mover Privilege Creep Fix",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An audit reveals widespread privilege creep from unremoved access after transfers. What is the BEST corrective control going forward?",
+    "options": [
+      { "text": "Enforce access review on every role change and periodic recertification to remove stale access", "correct": true, "rationale": "Reviewing/removing access at each mover event plus periodic recertification systematically prevents and cleans up privilege creep." },
+      { "text": "Grant even more access to simplify things", "correct": false, "rationale": "Adding access worsens privilege creep." },
+      { "text": "Never change anyone's role again", "correct": false, "rationale": "Freezing roles is impractical and does not address the process gap." },
+      { "text": "Disable all accounts permanently", "correct": false, "rationale": "Disabling all accounts halts the business and is not a targeted fix." }
+    ]
+  },
+  {
+    "id": "d5-t5-b2",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Voluntary Departure Timing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An employee gives two weeks' notice and departs on good terms. What is the BEST deprovisioning practice on their last day?",
+    "options": [
+      { "text": "Disable/revoke all their access and recover assets at the end of their final day per the offboarding process", "correct": true, "rationale": "Even amicable departures require prompt, complete access revocation and asset recovery at separation to avoid orphaned access." },
+      { "text": "Leave their accounts active indefinitely", "correct": false, "rationale": "Leaving accounts active creates orphaned-account risk." },
+      { "text": "Only remove their email and nothing else", "correct": false, "rationale": "Partial revocation leaves exploitable residual access." },
+      { "text": "Escalate their privileges as a farewell gift", "correct": false, "rationale": "Increasing a departing user's access is reckless." }
+    ]
+  },
+  {
+    "id": "d5-t5-b3",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Recertification Owner",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During access recertification, who is MOST appropriate to attest that a user's access is still needed?",
+    "options": [
+      { "text": "The user's manager (or resource/data owner)", "correct": true, "rationale": "Managers or data owners know the user's job needs and are appropriate attesters for whether access remains warranted." },
+      { "text": "A random unrelated employee", "correct": false, "rationale": "Someone without knowledge of the user's role cannot meaningfully attest." },
+      { "text": "The user themselves with no oversight", "correct": false, "rationale": "Self-attestation without oversight undermines the control." },
+      { "text": "An external customer", "correct": false, "rationale": "Customers have no basis to attest to internal access needs." }
+    ]
+  },
+  {
+    "id": "d5-t5-b4",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Orphaned Account Detection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which activity is BEST for detecting orphaned or inappropriate accounts?",
+    "options": [
+      { "text": "Periodic account/entitlement reviews reconciled against the HR authoritative source", "correct": true, "rationale": "Reconciling accounts against the HR record surfaces orphaned accounts and entitlements that no longer match employment status." },
+      { "text": "Assuming all accounts are valid forever", "correct": false, "rationale": "Assuming validity lets orphaned accounts persist undetected." },
+      { "text": "Deleting the audit logs", "correct": false, "rationale": "Removing logs reduces the ability to detect issues." },
+      { "text": "Granting all accounts admin rights", "correct": false, "rationale": "This increases risk and does nothing to detect orphaned accounts." }
+    ]
+  },
+  {
+    "id": "d5-t5-b5",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Provisioning Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In identity management, 'deprovisioning' refers to which of the following?",
+    "options": [
+      { "text": "Revoking access and disabling accounts when a user no longer needs them", "correct": true, "rationale": "Deprovisioning removes access/disables accounts at role change or departure." },
+      { "text": "Creating a brand-new account", "correct": false, "rationale": "That describes provisioning, not deprovisioning." },
+      { "text": "Encrypting the user's files", "correct": false, "rationale": "Encryption is a separate control, not deprovisioning." },
+      { "text": "Increasing a user's privileges", "correct": false, "rationale": "That is privilege escalation/expansion, the opposite of deprovisioning." }
+    ]
+  },
+  {
+    "id": "d5-t5-b6",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Shared Account Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team uses one shared login for a critical system. From a lifecycle/accountability view, what is the MOST significant problem?",
+    "options": [
+      { "text": "Actions cannot be attributed to individuals, and the account is hard to deprovision when one member leaves", "correct": true, "rationale": "Shared accounts destroy individual accountability and complicate the leaver process, since a departing member's access can't be cleanly removed without disrupting others." },
+      { "text": "It automatically enforces least privilege", "correct": false, "rationale": "Shared accounts typically over-grant and undermine least privilege." },
+      { "text": "It improves audit accuracy", "correct": false, "rationale": "Shared accounts reduce, not improve, audit attribution." },
+      { "text": "It has no downside", "correct": false, "rationale": "Shared accounts have clear accountability and lifecycle downsides." }
+    ]
+  },
+  {
+    "id": "d5-t5-b7",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Contractor Offboarding",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A contractor's engagement ends. Regarding their system access, what should happen FIRST?",
+    "options": [
+      { "text": "Revoke the contractor's access and disable their accounts at engagement end", "correct": true, "rationale": "Contractor access should be promptly revoked at the end of engagement, just like employee offboarding, to avoid lingering access." },
+      { "text": "Leave the contractor's credentials active for future convenience", "correct": false, "rationale": "Retaining former-contractor access is an unmanaged risk." },
+      { "text": "Promote the contractor to full admin", "correct": false, "rationale": "Elevating a departing contractor is reckless." },
+      { "text": "Do nothing since they were never an employee", "correct": false, "rationale": "Contractors still have access that must be revoked at engagement end." }
+    ]
+  },
+  {
+    "id": "d5-t5-b8",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Timeliness of Revocation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is the timeliness of deprovisioning MOST important from a security standpoint?",
+    "options": [
+      { "text": "Delays leave active credentials that departed or reassigned users (or attackers who obtain them) can misuse", "correct": true, "rationale": "The longer access remains after it is no longer warranted, the larger the window for misuse by the former holder or an attacker." },
+      { "text": "Faster deprovisioning improves network speed", "correct": false, "rationale": "Deprovisioning timeliness is about risk, not network performance." },
+      { "text": "It makes encryption stronger", "correct": false, "rationale": "Deprovisioning is unrelated to cryptographic strength." },
+      { "text": "It has no security impact", "correct": false, "rationale": "Timely revocation directly reduces the exposure window, a real security impact." }
+    ]
+  },
+  {
+    "id": "d5-t5-b9",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Privileged Account Lifecycle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "For highly privileged administrator accounts, which lifecycle practice is MOST important?",
+    "options": [
+      { "text": "Tighter provisioning, more frequent recertification, and prompt revocation given their elevated risk", "correct": true, "rationale": "Privileged accounts carry high risk, so they warrant stricter provisioning, more frequent review, and immediate revocation when no longer needed." },
+      { "text": "Looser controls since admins are trusted", "correct": false, "rationale": "Elevated privilege demands tighter, not looser, lifecycle controls." },
+      { "text": "Never reviewing them at all", "correct": false, "rationale": "High-risk accounts especially require regular review." },
+      { "text": "Sharing them broadly for convenience", "correct": false, "rationale": "Sharing privileged accounts destroys accountability and increases risk." }
+    ]
+  },
+  {
+    "id": "d5-t5-b10",
+    "domainId": "d5",
+    "topicId": "d5-t5",
+    "subtopicTag": "Lifecycle Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant to managing the access provisioning lifecycle?",
+    "options": [
+      { "text": "The employee's favorite lunch spot", "correct": true, "rationale": "An employee's lunch preference has no bearing on provisioning, review, or deprovisioning, making it least relevant." },
+      { "text": "Timely revocation upon departure", "correct": false, "rationale": "Prompt revocation is central to the lifecycle." },
+      { "text": "Removing old access on role change", "correct": false, "rationale": "Removing stale access prevents privilege creep, a key lifecycle activity." },
+      { "text": "Periodic access recertification", "correct": false, "rationale": "Recertification keeps entitlements appropriate over time." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t6-a1",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Contain Before Eradicate",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A workstation is confirmed to be infected and is actively scanning the internal network and beaconing outbound. What should the incident responder do FIRST?",
+    "options": [
+      { "text": "Contain the incident by isolating the workstation from the network", "correct": true, "rationale": "Containment comes first to stop lateral movement and exfiltration before eradication or recovery, per the response lifecycle." },
+      { "text": "Immediately reimage the workstation and return it to service", "correct": false, "rationale": "Reimaging first skips containment and evidence preservation and may leave the root cause unaddressed so the threat returns." },
+      { "text": "Write the lessons-learned report", "correct": false, "rationale": "Lessons learned is the final phase; it cannot precede containing an active infection." },
+      { "text": "Wait to see if the activity stops on its own", "correct": false, "rationale": "Passively waiting allows continued spread and data loss; active containment is required." }
+    ]
+  },
+  {
+    "id": "d7-t6-a2",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "IR Phase Order",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which sequence correctly reflects the incident response phase order?",
+    "options": [
+      { "text": "Detect, respond, contain, report, recover, remediate, lessons learned", "correct": true, "rationale": "This ordering places containment before recovery/remediation and ends with lessons learned, matching the standard lifecycle." },
+      { "text": "Recover, detect, contain, respond, report, remediate, lessons learned", "correct": false, "rationale": "Recovery cannot precede detection and containment; this ordering is out of sequence." },
+      { "text": "Lessons learned, detect, respond, recover, contain, report, remediate", "correct": false, "rationale": "Lessons learned is the final phase, not the first, and containment must precede recovery." },
+      { "text": "Detect, recover, respond, contain, remediate, report, lessons learned", "correct": false, "rationale": "Recovering immediately after detection skips response and containment, violating the correct order." }
+    ]
+  },
+  {
+    "id": "d7-t6-a3",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Evidence Preservation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A compromised server may become evidence in a potential prosecution. During containment, what is the BEST way to balance stopping the attack with preserving the investigation?",
+    "options": [
+      { "text": "Isolate the server from the network while capturing volatile data and imaging the disk before any cleanup", "correct": true, "rationale": "Network isolation halts spread without destroying the system, and capturing memory/disk images preserves evidence before eradication." },
+      { "text": "Power the server off immediately and wipe it", "correct": false, "rationale": "Powering off destroys volatile memory evidence and wiping erases forensic data needed for prosecution." },
+      { "text": "Leave it online so investigators can watch the attacker", "correct": false, "rationale": "Leaving it fully online risks continued damage and exfiltration; containment is still required." },
+      { "text": "Reinstall the operating system before collecting anything", "correct": false, "rationale": "Reinstalling overwrites evidence and eliminates the ability to investigate." }
+    ]
+  },
+  {
+    "id": "d7-t6-a4",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Event vs Incident",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes a security event from a security incident?",
+    "options": [
+      { "text": "An event is any observable occurrence; an incident is an event that harms or could harm security", "correct": true, "rationale": "Not every event is harmful; an incident is specifically an event with actual or potential negative security impact." },
+      { "text": "An event always causes damage; an incident never does", "correct": false, "rationale": "This reverses the relationship; incidents involve harm, and many events are benign." },
+      { "text": "They are identical terms", "correct": false, "rationale": "They are distinct: incidents are a harmful subset of events." },
+      { "text": "An incident is only a hardware failure", "correct": false, "rationale": "Incidents encompass many harmful occurrences, not just hardware failures." }
+    ]
+  },
+  {
+    "id": "d7-t6-a5",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Eradication",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An incident has been successfully contained and evidence has been preserved. According to the lifecycle, which action BEST represents the next phase?",
+    "options": [
+      { "text": "Eradicate the root cause by removing the malware and closing the exploited weakness", "correct": true, "rationale": "After containment, eradication removes the cause before systems are recovered to normal operation." },
+      { "text": "Skip straight to lessons learned", "correct": false, "rationale": "Lessons learned is the final phase; eradication and recovery must occur first." },
+      { "text": "Return systems to production without removing the malware", "correct": false, "rationale": "Recovering before eradication risks reinfection because the root cause remains." },
+      { "text": "Delete all logs to save space", "correct": false, "rationale": "Deleting logs destroys evidence and is never an appropriate next step." }
+    ]
+  },
+  {
+    "id": "d7-t6-a6",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Recovery Verification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Before returning an eradicated system to production, what is MOST important during the recovery phase?",
+    "options": [
+      { "text": "Verify the system is clean and functioning normally and monitor it closely for recurrence", "correct": true, "rationale": "Recovery requires validating that the threat is gone and the system operates correctly, with heightened monitoring to catch any reinfection." },
+      { "text": "Return it to production immediately without validation", "correct": false, "rationale": "Skipping validation risks reintroducing a still-compromised system." },
+      { "text": "Delete the incident record", "correct": false, "rationale": "Records support lessons learned and reporting; deleting them undermines the process." },
+      { "text": "Disable all monitoring to reduce alerts", "correct": false, "rationale": "Disabling monitoring during recovery removes the ability to detect recurrence." }
+    ]
+  },
+  {
+    "id": "d7-t6-a7",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Lessons Learned",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY purpose of the lessons-learned phase after an incident?",
+    "options": [
+      { "text": "To capture what happened and improve future preparation and response", "correct": true, "rationale": "Lessons learned feeds improvements back into preparation, making incident response a continuous improvement cycle." },
+      { "text": "To assign blame to individual staff", "correct": false, "rationale": "The phase focuses on process improvement, not fault-finding, which discourages honest reporting." },
+      { "text": "To immediately close the case with no documentation", "correct": false, "rationale": "The phase requires documentation of findings, not silent closure." },
+      { "text": "To recover the affected systems", "correct": false, "rationale": "Recovery is a separate, earlier phase; lessons learned is post-incident review." }
+    ]
+  },
+  {
+    "id": "d7-t6-a8",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Preparation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization has no incident response plan and no trained team when a breach occurs, leading to a chaotic response. Which phase, if done well, would MOST have improved every later phase?",
+    "options": [
+      { "text": "Preparation", "correct": true, "rationale": "Preparation — having a plan, a trained CSIRT, and ready tools — determines how effectively all later phases are executed." },
+      { "text": "Lessons learned", "correct": false, "rationale": "Lessons learned occurs after the incident and cannot help during an unprepared response already underway." },
+      { "text": "Recovery", "correct": false, "rationale": "Recovery is a later phase; without preparation, recovery itself would also suffer." },
+      { "text": "Eradication", "correct": false, "rationale": "Eradication is one phase; preparation improves the entire process, not just eradication." }
+    ]
+  },
+  {
+    "id": "d7-t6-a9",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Reporting / Notification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A breach exposes regulated customer data. Regarding reporting, what is the BEST practice?",
+    "options": [
+      { "text": "Notify the required parties (regulators/customers) within the legally mandated timelines", "correct": true, "rationale": "Reporting obligations often carry legal deadlines; timely, accurate notification to required parties is essential and non-optional." },
+      { "text": "Never disclose the breach to avoid reputational harm", "correct": false, "rationale": "Concealing a reportable breach can violate law and increase liability." },
+      { "text": "Wait until the annual report to mention it", "correct": false, "rationale": "Delaying beyond mandated timelines breaches legal notification requirements." },
+      { "text": "Report only internally regardless of regulatory requirements", "correct": false, "rationale": "When regulations require external notification, internal-only reporting is insufficient." }
+    ]
+  },
+  {
+    "id": "d7-t6-a10",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Contain Before Eradicate",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "During an active ransomware outbreak spreading across file shares, which action is LEAST appropriate as an immediate step?",
+    "options": [
+      { "text": "Restoring all encrypted files from backup before the spread is contained", "correct": true, "rationale": "Restoring before containment lets active ransomware re-encrypt the restored data; containment must come first." },
+      { "text": "Isolating affected hosts and network segments", "correct": false, "rationale": "Isolation is a proper containment action to stop the spread." },
+      { "text": "Disabling compromised accounts being used to spread the malware", "correct": false, "rationale": "Disabling abused accounts is a legitimate containment/eradication step." },
+      { "text": "Preserving evidence such as memory and logs", "correct": false, "rationale": "Preserving evidence is appropriate and supports investigation." }
+    ]
+  },
+  {
+    "id": "d7-t6-b1",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Contain Before Eradicate",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An intrusion detection system alerts that an attacker has an active foothold on a database server and is moving toward other systems. What is the FIRST priority?",
+    "options": [
+      { "text": "Contain the intrusion to prevent it from spreading further", "correct": true, "rationale": "Stopping lateral movement through containment takes priority before eradication or recovery." },
+      { "text": "Rebuild the server from scratch right away", "correct": false, "rationale": "Rebuilding first skips containment and evidence preservation and may not stop the spread to other systems." },
+      { "text": "Draft the post-incident improvement report", "correct": false, "rationale": "Post-incident review is the final phase and cannot precede stopping an active intrusion." },
+      { "text": "Ignore the alert until business hours", "correct": false, "rationale": "Delaying response to an active intrusion allows further compromise." }
+    ]
+  },
+  {
+    "id": "d7-t6-b2",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "IR Phase Order",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In the incident response lifecycle, eradication and recovery MOST correctly occur in what relationship to containment?",
+    "options": [
+      { "text": "After containment — you contain first, then eradicate the cause and recover systems", "correct": true, "rationale": "Containment precedes eradication and recovery so the threat is stopped before the root cause is removed and systems are restored." },
+      { "text": "Before containment, to save time", "correct": false, "rationale": "Eradicating or recovering before containment allows continued spread and can leave the root cause active." },
+      { "text": "Simultaneously with detection", "correct": false, "rationale": "Detection is an earlier phase; eradication and recovery come well after detection and containment." },
+      { "text": "Only during lessons learned", "correct": false, "rationale": "Lessons learned is post-incident; eradication and recovery are operational phases that occur before it." }
+    ]
+  },
+  {
+    "id": "d7-t6-b3",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Eradication vs Recovery",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team removed malware from an infected host but did not close the vulnerability that allowed it in, then returned the host to production. The host was reinfected within a day. What did the team BEST fail to do?",
+    "options": [
+      { "text": "Fully eradicate/remediate the root cause before recovering the system", "correct": true, "rationale": "Removing the malware without closing the exploited weakness leaves the root cause, causing reinfection; eradication/remediation must address the cause." },
+      { "text": "Detect the incident sooner", "correct": false, "rationale": "The reinfection stemmed from an unclosed vulnerability, not from a detection delay." },
+      { "text": "Write a longer incident report", "correct": false, "rationale": "Documentation length would not have prevented reinfection from an open vulnerability." },
+      { "text": "Contain the incident, which they never attempted", "correct": false, "rationale": "The scenario indicates they removed malware; the failure was leaving the root cause open, not the absence of containment." }
+    ]
+  },
+  {
+    "id": "d7-t6-b4",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Event vs Incident",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A monitoring tool records thousands of routine login events daily. One of them is a successful login from an attacker using stolen credentials. Which is MOST accurately the incident?",
+    "options": [
+      { "text": "The attacker's unauthorized login using stolen credentials", "correct": true, "rationale": "An incident is an event that harms or could harm security; the unauthorized access qualifies, while routine logins are benign events." },
+      { "text": "Every login event recorded that day", "correct": false, "rationale": "Most logins are benign events, not incidents; only the harmful occurrence is the incident." },
+      { "text": "The monitoring tool generating logs", "correct": false, "rationale": "Log generation is normal operation, not an incident." },
+      { "text": "The act of reviewing the logs", "correct": false, "rationale": "Log review is an analyst activity, not a security incident." }
+    ]
+  },
+  {
+    "id": "d7-t6-b5",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Evidence Preservation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An engineer's instinct during a confirmed breach is to immediately wipe and rebuild the affected servers to restore service quickly. From an incident-management view, what is the MOST significant risk of doing this too early?",
+    "options": [
+      { "text": "It destroys forensic evidence and may leave the root cause unaddressed", "correct": true, "rationale": "Premature wiping eliminates evidence needed for investigation and can rebuild systems onto the same unpatched weakness, risking recurrence." },
+      { "text": "It uses too much electricity", "correct": false, "rationale": "Power consumption is irrelevant to the security risks of premature rebuilding." },
+      { "text": "It improves evidence quality", "correct": false, "rationale": "Wiping degrades or destroys evidence rather than improving it." },
+      { "text": "It has no downside if done quickly", "correct": false, "rationale": "The downside is significant: lost evidence and potential reinfection." }
+    ]
+  },
+  {
+    "id": "d7-t6-b6",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "CSIRT",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the role of a CSIRT?",
+    "options": [
+      { "text": "A team responsible for coordinating and executing the incident response process", "correct": true, "rationale": "The Computer Security Incident Response Team leads detection, response, containment, and recovery activities." },
+      { "text": "A team that writes marketing materials", "correct": false, "rationale": "Marketing is unrelated to incident response coordination." },
+      { "text": "A group that manages payroll", "correct": false, "rationale": "Payroll management is an HR/finance function, not incident response." },
+      { "text": "A committee that approves software purchases", "correct": false, "rationale": "Procurement approval is not the CSIRT's function." }
+    ]
+  },
+  {
+    "id": "d7-t6-b7",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Containment Strategy",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A compromised laptop is spreading malware over the corporate wireless network. Which action BEST contains the incident with minimal collateral disruption?",
+    "options": [
+      { "text": "Isolate the specific laptop (e.g., quarantine it or block its network access)", "correct": true, "rationale": "Targeted isolation of the offending device stops the spread while minimizing disruption to unaffected systems." },
+      { "text": "Shut down the entire corporate network for everyone", "correct": false, "rationale": "A full shutdown is disproportionate collateral disruption when isolating one device suffices." },
+      { "text": "Do nothing and monitor the spread", "correct": false, "rationale": "Passive monitoring lets the malware spread further; containment is required." },
+      { "text": "Email all users asking them to avoid the network", "correct": false, "rationale": "A request to users does not technically contain an actively spreading device." }
+    ]
+  },
+  {
+    "id": "d7-t6-b8",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Lessons Learned",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After resolving an incident, the team skips the post-incident review to move on to other work. What is the MOST likely consequence?",
+    "options": [
+      { "text": "The same weaknesses go unaddressed and a similar incident is likely to recur", "correct": true, "rationale": "Skipping lessons learned means no improvements feed back into preparation, so the underlying gaps persist and recurrence is likely." },
+      { "text": "The incident is guaranteed never to happen again", "correct": false, "rationale": "Skipping review does the opposite; it leaves gaps that make recurrence more likely." },
+      { "text": "All future incidents are automatically prevented", "correct": false, "rationale": "No review cannot prevent future incidents; it removes the mechanism for improvement." },
+      { "text": "The organization's monitoring improves on its own", "correct": false, "rationale": "Improvement requires deliberate review and action, which was skipped." }
+    ]
+  },
+  {
+    "id": "d7-t6-b9",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Detection",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which incident response phase is concerned with FIRST recognizing that a security incident is occurring?",
+    "options": [
+      { "text": "Detection", "correct": true, "rationale": "Detection is the phase in which monitoring, alerts, or reports first identify that an incident is happening." },
+      { "text": "Recovery", "correct": false, "rationale": "Recovery restores systems and comes much later than recognizing the incident." },
+      { "text": "Remediation", "correct": false, "rationale": "Remediation fixes underlying weaknesses after recovery, not the initial recognition." },
+      { "text": "Lessons learned", "correct": false, "rationale": "Lessons learned is the final review phase, not the initial recognition of an incident." }
+    ]
+  },
+  {
+    "id": "d7-t6-b10",
+    "domainId": "d7",
+    "topicId": "d7-t6",
+    "subtopicTag": "Order of Response Actions",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A responder confirms an incident and must choose among these next actions. Following correct sequencing, which should be done FIRST?",
+    "options": [
+      { "text": "Limit the incident's spread to prevent further damage", "correct": true, "rationale": "Containment to stop further damage is the correct next action after confirming an incident, ahead of eradication, recovery, or review." },
+      { "text": "Patch every unaffected system in the environment", "correct": false, "rationale": "Broad remediation of unaffected systems is a later, root-cause activity, not the immediate first step against an active incident." },
+      { "text": "Restore all systems from last night's backup", "correct": false, "rationale": "Restoring before containment can reintroduce or re-expose systems to the still-active threat." },
+      { "text": "Hold the lessons-learned meeting", "correct": false, "rationale": "The post-incident review is the final phase and cannot precede containment of an active incident." }
+    ]
+  }
+]

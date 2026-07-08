@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t8-a1",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Risk-Based Prioritization",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A scan finds a CVSS 9.8 flaw on an internal-only tool reachable from a locked-down admin subnet, and a CVSS 7.5 flaw on an internet-facing portal that is being actively exploited in the wild. Which should be remediated FIRST?",
+    "options": [
+      { "text": "The internet-facing portal flaw, because it is actively exploited and directly exposed", "correct": true, "rationale": "Active exploitation plus internet exposure make this the greater real-world risk despite the lower CVSS, so it is prioritized." },
+      { "text": "The internal 9.8 flaw, because it has the higher CVSS score", "correct": false, "rationale": "Prioritizing by CVSS alone ignores exposure and exploitability; the internal tool is far less reachable and not being exploited." },
+      { "text": "Neither, until the next quarterly cycle", "correct": false, "rationale": "Delaying an actively exploited internet-facing flaw leaves a live, exploitable exposure." },
+      { "text": "Whichever is alphabetically first", "correct": false, "rationale": "Alphabetical order is not a risk-based criterion and is irrelevant to prioritization." }
+    ]
+  },
+  {
+    "id": "d7-t8-a2",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Patch Testing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An administrator wants to deploy a newly released patch to critical production servers. What is the BEST practice before production deployment?",
+    "options": [
+      { "text": "Test the patch in a non-production environment and deploy through change management with a rollback plan", "correct": true, "rationale": "Testing catches regressions, and deploying via change control with rollback balances risk reduction against stability." },
+      { "text": "Apply it directly to production immediately without testing", "correct": false, "rationale": "Untested patches can cause outages or regressions on critical systems." },
+      { "text": "Never apply the patch to avoid any change", "correct": false, "rationale": "Refusing to patch leaves the vulnerability exploitable indefinitely." },
+      { "text": "Apply it only after a year of waiting regardless of severity", "correct": false, "rationale": "A blanket long delay ignores severity and leaves critical flaws exposed too long." }
+    ]
+  },
+  {
+    "id": "d7-t8-a3",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Authenticated vs Unauthenticated Scan",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team's scans miss many installed-software vulnerabilities and produce false positives. Which change would BEST improve scan accuracy?",
+    "options": [
+      { "text": "Use authenticated (credentialed) scans that log into systems for deeper inspection", "correct": true, "rationale": "Credentialed scans inspect installed software and configuration directly, yielding higher accuracy and fewer false positives." },
+      { "text": "Reduce the scan frequency to once a year", "correct": false, "rationale": "Scanning less often reduces visibility and does not improve accuracy per scan." },
+      { "text": "Only scan from the public internet without credentials", "correct": false, "rationale": "Unauthenticated external scanning is less thorough and more prone to false positives for installed-software issues." },
+      { "text": "Disable scanning on servers to reduce noise", "correct": false, "rationale": "Disabling scanning removes visibility entirely rather than improving accuracy." }
+    ]
+  },
+  {
+    "id": "d7-t8-a4",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "CVSS vs Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why is a vulnerability's CVSS base score, by itself, MOST accurately described as insufficient for prioritization?",
+    "options": [
+      { "text": "Because it reflects technical severity but not exploitability, exposure, or asset criticality in the organization's context", "correct": true, "rationale": "Organizational risk depends on context — is it being exploited, how exposed and critical is the asset — which the base score does not capture alone." },
+      { "text": "Because CVSS scores are randomly assigned", "correct": false, "rationale": "CVSS scores follow a defined methodology; they are not random." },
+      { "text": "Because CVSS only applies to hardware", "correct": false, "rationale": "CVSS applies to software and other vulnerabilities broadly, not just hardware." },
+      { "text": "Because a high CVSS always means low risk", "correct": false, "rationale": "This is false; a high CVSS often signals significant severity, but context still determines actual risk." }
+    ]
+  },
+  {
+    "id": "d7-t8-a5",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Virtual Patching",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A critical vulnerability is announced, but no vendor patch is available yet and the affected system cannot be taken offline. Which interim measure BEST reduces risk?",
+    "options": [
+      { "text": "Deploy virtual patching (e.g., an IPS/WAF rule) or isolate the system to block exploitation", "correct": true, "rationale": "When a patch is unavailable, compensating mitigations like virtual patching or isolation reduce exposure until a real fix exists." },
+      { "text": "Do nothing until a patch is released", "correct": false, "rationale": "Doing nothing leaves the critical vulnerability exploitable during the exposure window." },
+      { "text": "Publicly document the exploit details for all users", "correct": false, "rationale": "Publicizing exploit details increases risk without reducing exposure." },
+      { "text": "Grant more users administrative access to monitor it", "correct": false, "rationale": "Expanding admin access increases attack surface and does not mitigate the vulnerability." }
+    ]
+  },
+  {
+    "id": "d7-t8-a6",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Asset Inventory Prerequisite",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A vulnerability program repeatedly misses systems during scans. What is the PRIMARY prerequisite the program likely lacks?",
+    "options": [
+      { "text": "An accurate asset inventory of all systems to be scanned and patched", "correct": true, "rationale": "You cannot scan or patch systems you do not know exist; a complete inventory is the foundation of the program." },
+      { "text": "A faster internet connection", "correct": false, "rationale": "Bandwidth does not determine whether unknown systems are included in scans." },
+      { "text": "More expensive antivirus licenses", "correct": false, "rationale": "Antivirus does not enumerate the asset inventory needed for complete scanning." },
+      { "text": "A longer password policy", "correct": false, "rationale": "Password length is unrelated to knowing which assets exist to scan." }
+    ]
+  },
+  {
+    "id": "d7-t8-a7",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Emergency Patch",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An actively exploited zero-day on a public-facing server needs patching immediately, but the weekly change board will not meet for days. What is the BEST course of action?",
+    "options": [
+      { "text": "Use the emergency change process to expedite approval, apply the patch with a rollback plan, and document it afterward", "correct": true, "rationale": "Emergency change expedites approval for urgent fixes while still preserving rollback readiness and documentation." },
+      { "text": "Wait for the regular change board regardless of active exploitation", "correct": false, "rationale": "Waiting leaves an actively exploited internet-facing flaw open, which is unacceptable risk." },
+      { "text": "Apply the patch and skip all documentation and rollback planning", "correct": false, "rationale": "Emergencies expedite approval but never authorize skipping documentation or rollback readiness." },
+      { "text": "Ignore the vulnerability because zero-days cannot be fixed", "correct": false, "rationale": "A vendor patch exists in this scenario; ignoring it leaves the flaw exploitable." }
+    ]
+  },
+  {
+    "id": "d7-t8-a8",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Scanning vs Remediation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization runs scans regularly but rarely fixes the findings, and its risk stays high. What does this MOST clearly illustrate?",
+    "options": [
+      { "text": "Detecting vulnerabilities is not the same as remediating them; risk drops only when findings are fixed and verified", "correct": true, "rationale": "Scanning identifies weaknesses, but without remediation and verification the vulnerabilities remain exploitable." },
+      { "text": "Scanning alone eliminates all risk", "correct": false, "rationale": "Scanning only discovers issues; it does not fix them or reduce risk by itself." },
+      { "text": "The scanner is broken", "correct": false, "rationale": "The scanner is working (it produces findings); the gap is the lack of remediation." },
+      { "text": "Findings should be deleted to lower the count", "correct": false, "rationale": "Deleting findings hides risk without addressing it, which is worse." }
+    ]
+  },
+  {
+    "id": "d7-t8-a9",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Vulnerability Management Cycle",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which best describes vulnerability management?",
+    "options": [
+      { "text": "A continuous cycle of discovering, assessing, prioritizing, remediating, and verifying weaknesses", "correct": true, "rationale": "Vulnerability management is an ongoing lifecycle, not a one-time project, that ends with verification and repeats." },
+      { "text": "A one-time project completed once and never revisited", "correct": false, "rationale": "Vulnerabilities emerge continuously, so the process must be ongoing, not one-time." },
+      { "text": "The act of encrypting all network traffic", "correct": false, "rationale": "Encryption is a protective control, not the vulnerability management lifecycle." },
+      { "text": "Physically destroying old hard drives", "correct": false, "rationale": "That is media sanitization, not vulnerability management." }
+    ]
+  },
+  {
+    "id": "d7-t8-a10",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Patch Balance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which approach to patch management is LEAST advisable?",
+    "options": [
+      { "text": "Pushing every patch directly to production untested the moment it is released", "correct": true, "rationale": "Deploying untested patches to production risks outages and regressions, the least advisable extreme." },
+      { "text": "Testing patches before deploying via change management", "correct": false, "rationale": "Testing before deployment is sound practice, not the least advisable." },
+      { "text": "Prioritizing critical, actively exploited patches for faster deployment", "correct": false, "rationale": "Prioritizing the most dangerous patches is good risk-based practice." },
+      { "text": "Maintaining a rollback plan for each patch", "correct": false, "rationale": "Having a rollback plan is a recommended safeguard, not a poor practice." }
+    ]
+  },
+  {
+    "id": "d7-t8-b1",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Risk-Based Prioritization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When deciding which vulnerabilities to remediate first, which combination of factors is MOST appropriate to weigh?",
+    "options": [
+      { "text": "Exploitability, asset criticality, and exposure alongside technical severity", "correct": true, "rationale": "Risk-based prioritization blends severity with whether a flaw is exploited, how critical and exposed the asset is." },
+      { "text": "Only the raw CVSS number", "correct": false, "rationale": "CVSS alone omits exploitability, exposure, and business context, so it is insufficient." },
+      { "text": "The alphabetical order of the affected hostnames", "correct": false, "rationale": "Hostname order is not a risk factor." },
+      { "text": "The vendor that discovered the flaw", "correct": false, "rationale": "The discovering vendor does not determine the organizational risk of a vulnerability." }
+    ]
+  },
+  {
+    "id": "d7-t8-b2",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Authenticated vs Unauthenticated Scan",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A security engineer wants to understand what an external attacker with no credentials could see and probe on a public server. Which scan type BEST simulates this perspective?",
+    "options": [
+      { "text": "An unauthenticated (external) scan", "correct": true, "rationale": "An unauthenticated scan views the system as an outside attacker would, without credentials, matching the external attacker perspective." },
+      { "text": "An authenticated scan using domain admin credentials", "correct": false, "rationale": "A credentialed scan inspects internals with login access, which does not represent an external, credential-less attacker." },
+      { "text": "A physical inspection of the server room", "correct": false, "rationale": "A physical inspection does not assess network-visible attack surface from the internet." },
+      { "text": "A review of the payroll database", "correct": false, "rationale": "Reviewing payroll data is unrelated to simulating an external scan." }
+    ]
+  },
+  {
+    "id": "d7-t8-b3",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Patch Testing",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY reason to test a patch in a non-production environment before deploying it widely?",
+    "options": [
+      { "text": "To catch instability, regressions, or incompatibilities before they affect production", "correct": true, "rationale": "Testing surfaces adverse effects early so a bad patch does not cause outages in production." },
+      { "text": "To make the patch download faster", "correct": false, "rationale": "Testing does not affect download speed." },
+      { "text": "To increase the CVSS score of the vulnerability", "correct": false, "rationale": "Testing does not change a vulnerability's score." },
+      { "text": "To avoid ever having to deploy the patch", "correct": false, "rationale": "Testing is a step toward deployment, not a way to avoid it." }
+    ]
+  },
+  {
+    "id": "d7-t8-b4",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "CVSS vs Risk",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Two flaws share the same CVSS score. One is on an isolated lab machine; the other is on a payment server processing live transactions. Which is BEST prioritized and why?",
+    "options": [
+      { "text": "The payment server, because its higher criticality and exposure make its real risk greater despite equal CVSS", "correct": true, "rationale": "Equal technical severity is broken by business context; the critical, exposed payment server carries higher real risk." },
+      { "text": "The lab machine, because lab systems are always more important", "correct": false, "rationale": "An isolated lab machine is typically less critical and exposed than a live payment server." },
+      { "text": "Neither, since equal CVSS means equal risk", "correct": false, "rationale": "Equal CVSS does not mean equal risk; context differentiates them." },
+      { "text": "Whichever was scanned most recently", "correct": false, "rationale": "Scan recency is not a valid basis for risk prioritization." }
+    ]
+  },
+  {
+    "id": "d7-t8-b5",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Zero-Day",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is a zero-day vulnerability?",
+    "options": [
+      { "text": "A vulnerability exploited before a vendor patch is available", "correct": true, "rationale": "A zero-day is exploited before a fix exists, requiring compensating mitigations until the vendor releases a patch." },
+      { "text": "A vulnerability that was patched years ago", "correct": false, "rationale": "A long-patched flaw is the opposite of a zero-day." },
+      { "text": "A vulnerability with a CVSS score of exactly zero", "correct": false, "rationale": "A zero-day refers to the absence of an available patch, not a score of zero." },
+      { "text": "A scanning schedule that runs at midnight", "correct": false, "rationale": "This is unrelated to the definition of a zero-day." }
+    ]
+  },
+  {
+    "id": "d7-t8-b6",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Compensating Mitigation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A vulnerable legacy application cannot be patched because the vendor no longer supports it, and replacement will take months. Which interim action BEST reduces exposure?",
+    "options": [
+      { "text": "Isolate the application on a restricted segment and place compensating controls (e.g., IPS/WAF) in front of it", "correct": true, "rationale": "When patching is impossible, network isolation and virtual patching reduce the exposure until replacement is complete." },
+      { "text": "Expose the application directly to the internet for convenience", "correct": false, "rationale": "Increasing exposure of an unpatchable app raises risk substantially." },
+      { "text": "Grant all users access to the application", "correct": false, "rationale": "Broadening access enlarges the attack surface rather than reducing exposure." },
+      { "text": "Ignore it because it cannot be patched", "correct": false, "rationale": "Inability to patch does not remove the risk; compensating controls are needed." }
+    ]
+  },
+  {
+    "id": "d7-t8-b7",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Verification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After deploying a patch intended to fix a critical vulnerability, what is MOST important to confirm the risk is actually reduced?",
+    "options": [
+      { "text": "Verify (e.g., re-scan) that the patch applied and the vulnerability is no longer present", "correct": true, "rationale": "Verification confirms the fix took effect; without it, a failed or partial patch could leave the flaw exploitable." },
+      { "text": "Assume the patch worked and close the ticket immediately", "correct": false, "rationale": "Assuming success without verification risks leaving an unremediated vulnerability open." },
+      { "text": "Delete the vulnerability record without checking", "correct": false, "rationale": "Deleting the record without verification hides unresolved risk." },
+      { "text": "Increase the CVSS score to reflect the effort", "correct": false, "rationale": "Adjusting the score does not verify remediation and is not meaningful." }
+    ]
+  },
+  {
+    "id": "d7-t8-b8",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Patch vs Change Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "How does patch deployment BEST relate to change management in a mature organization?",
+    "options": [
+      { "text": "Patches are deployed through the change-management process, with testing, scheduling, and rollback plans", "correct": true, "rationale": "Routing patches through change management ensures they are tested, scheduled, reversible, and documented rather than ad hoc." },
+      { "text": "Patches should bypass change management entirely for speed", "correct": false, "rationale": "Bypassing change management removes testing, scheduling, and rollback discipline, risking outages." },
+      { "text": "Change management forbids all patching", "correct": false, "rationale": "Change management governs, not forbids, patch deployment." },
+      { "text": "Patches and change management are unrelated", "correct": false, "rationale": "Patch deployment is a change and is governed by change management." }
+    ]
+  },
+  {
+    "id": "d7-t8-b9",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Program Metrics",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISO wants a metric that reflects how quickly the organization fixes discovered vulnerabilities. Which metric BEST serves this purpose?",
+    "options": [
+      { "text": "Mean time to remediate (MTTR)", "correct": true, "rationale": "Mean time to remediate measures how long it takes to fix vulnerabilities, directly reflecting remediation speed." },
+      { "text": "Total number of user accounts", "correct": false, "rationale": "Account count does not measure remediation speed." },
+      { "text": "The office's square footage", "correct": false, "rationale": "Physical space is irrelevant to vulnerability remediation timing." },
+      { "text": "The number of coffee machines per floor", "correct": false, "rationale": "This is unrelated to vulnerability management metrics." }
+    ]
+  },
+  {
+    "id": "d7-t8-b10",
+    "domainId": "d7",
+    "topicId": "d7-t8",
+    "subtopicTag": "Balancing Speed and Stability",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization historically delayed all patches for months to avoid outages, and was breached through a long-known, unpatched flaw. What lesson does this MOST clearly teach?",
+    "options": [
+      { "text": "Excessive patch delay leaves exploitable exposure; critical fixes must be deployed in a timely, risk-based manner", "correct": true, "rationale": "Over-delaying patches, especially for critical flaws, prolongs exposure; timely risk-based deployment is required, balanced with testing." },
+      { "text": "Patches should never be applied to avoid any risk of outage", "correct": false, "rationale": "This is the flawed behavior that led to the breach; never patching maximizes exposure." },
+      { "text": "Outage avoidance always outweighs security", "correct": false, "rationale": "The breach shows that indefinite delay for stability created greater harm; balance is required." },
+      { "text": "CVSS scores should be ignored entirely", "correct": false, "rationale": "CVSS still informs prioritization; the lesson is about timely deployment, not ignoring severity." }
+    ]
+  }
+]

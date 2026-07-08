@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t13-a1",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Awareness vs Training",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company puts up posters and sends monthly reminders so staff recognize phishing emails. This activity is BEST categorized as which of the following?",
+    "options": [
+      { "text": "Security awareness", "correct": true, "rationale": "Reminders and posters aimed at keeping threat recognition top-of-mind are awareness activities, not skill-building." },
+      { "text": "Security training", "correct": false, "rationale": "Training builds a specific skill; recognition reminders do not teach a hands-on competency." },
+      { "text": "Security education", "correct": false, "rationale": "Education is broad, long-term learning (e.g., a degree), not periodic reminder messaging." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing probes technical defenses; it is unrelated to staff awareness messaging." }
+    ]
+  },
+  {
+    "id": "d1-t13-a2",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Training Definition",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Developers attend a hands-on workshop teaching them how to perform secure code reviews. This is MOST accurately which type of activity?",
+    "options": [
+      { "text": "Security training", "correct": true, "rationale": "Teaching a specific job skill (how to do secure code reviews) is training, whose goal is competency." },
+      { "text": "Security awareness", "correct": false, "rationale": "Awareness reinforces recognition/attention, not a specific hands-on skill." },
+      { "text": "Security education", "correct": false, "rationale": "Education is broader long-term learning; a focused skills workshop is training." },
+      { "text": "Risk transfer", "correct": false, "rationale": "Risk transfer is a treatment option (e.g., insurance), unrelated to skill instruction." }
+    ]
+  },
+  {
+    "id": "d1-t13-a3",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Education Definition",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security analyst pursues a university degree in cybersecurity to deepen their broad understanding of the field. This is MOST accurately which type of activity?",
+    "options": [
+      { "text": "Security education", "correct": true, "rationale": "Broad, long-term learning that develops deep understanding and judgment is education." },
+      { "text": "Security awareness", "correct": false, "rationale": "Awareness is short, ongoing reinforcement of recognition, not a degree program." },
+      { "text": "Security training", "correct": false, "rationale": "Training targets a specific job skill; a degree is broader education." },
+      { "text": "Incident response", "correct": false, "rationale": "Incident response is an operational activity, not a learning category." }
+    ]
+  },
+  {
+    "id": "d1-t13-a4",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Role-Based Content",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization gives identical generic training to executives, developers, and help-desk staff, and it proves ineffective. What is the BEST improvement?",
+    "options": [
+      { "text": "Deliver role-based training tailored to each group's responsibilities and threats", "correct": true, "rationale": "Different roles face different risks; role-based content is more relevant and effective than one generic curriculum." },
+      { "text": "Remove training entirely to save money", "correct": false, "rationale": "Eliminating training worsens the human-risk problem it was meant to address." },
+      { "text": "Make the same generic training longer", "correct": false, "rationale": "Lengthening irrelevant generic content does not fix the relevance problem." },
+      { "text": "Train only the executives and skip everyone else", "correct": false, "rationale": "Every role handles risk; restricting training to executives leaves major gaps." }
+    ]
+  },
+  {
+    "id": "d1-t13-a5",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Program Effectiveness Metrics",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "How can an organization BEST demonstrate whether its security awareness program is working?",
+    "options": [
+      { "text": "Track measurable indicators such as simulated-phishing click-rate trends over time", "correct": true, "rationale": "Objective metrics like declining phishing click-rates demonstrate behavior change and program effectiveness." },
+      { "text": "Assume it works because posters were printed", "correct": false, "rationale": "Producing materials is an output, not evidence of behavior change." },
+      { "text": "Never measure and hope for the best", "correct": false, "rationale": "An unmeasured program cannot demonstrate value or guide improvement." },
+      { "text": "Count how many coffee cups the team used", "correct": false, "rationale": "Irrelevant operational trivia does not indicate program effectiveness." }
+    ]
+  },
+  {
+    "id": "d1-t13-a6",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Frequency of Training",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization provides security training only once, during onboarding. Which criticism is MOST valid?",
+    "options": [
+      { "text": "Training should be ongoing/recurring because threats evolve and knowledge fades", "correct": true, "rationale": "One-time onboarding training becomes stale; recurring reinforcement is needed as threats change and memory decays." },
+      { "text": "Onboarding training is always sufficient forever", "correct": false, "rationale": "This ignores threat evolution and knowledge decay, which is exactly the flaw." },
+      { "text": "Training should never be given at onboarding", "correct": false, "rationale": "Onboarding training is valuable; the issue is that it should not be the only instance." },
+      { "text": "Training must only be given after a breach", "correct": false, "rationale": "Reactive-only training leaves staff unprepared until harm occurs." }
+    ]
+  },
+  {
+    "id": "d1-t13-a7",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Management Responsibility",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Who bears PRIMARY responsibility for ensuring a security awareness program is funded and mandated across the organization?",
+    "options": [
+      { "text": "Senior management", "correct": true, "rationale": "Senior management is responsible for funding, mandating, and sponsoring the awareness program as part of governance." },
+      { "text": "Individual end users on their own initiative", "correct": false, "rationale": "Users participate but cannot mandate or fund an organization-wide program." },
+      { "text": "External customers", "correct": false, "rationale": "Customers have no role in mandating internal training." },
+      { "text": "The office cleaning staff", "correct": false, "rationale": "This group has no authority over security program governance." }
+    ]
+  },
+  {
+    "id": "d1-t13-a8",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Simulated Phishing Interpretation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A simulated phishing campaign shows the click-rate rose sharply this quarter. What is the BEST interpretation and action?",
+    "options": [
+      { "text": "The program needs strengthening; investigate causes and increase targeted awareness for affected groups", "correct": true, "rationale": "A rising click-rate signals declining resistance; the response is to improve and target training, not to stop measuring or blame users." },
+      { "text": "Abandon awareness training since it clearly does not work", "correct": false, "rationale": "A worsening metric is a reason to improve the program, not eliminate it." },
+      { "text": "Hide the results so leadership is not alarmed", "correct": false, "rationale": "Concealing metrics undermines governance and prevents improvement." },
+      { "text": "Fire everyone who clicked", "correct": false, "rationale": "Punitive firing destroys a healthy reporting culture and is disproportionate to a simulation result." }
+    ]
+  },
+  {
+    "id": "d1-t13-a9",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Security Culture",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Over time, employees begin reporting suspicious emails proactively and challenging tailgaters without being told to. This desired end-state is MOST accurately called what?",
+    "options": [
+      { "text": "A strong security culture", "correct": true, "rationale": "When secure behavior becomes the shared norm employees adopt voluntarily, the organization has developed a strong security culture." },
+      { "text": "A denial-of-service condition", "correct": false, "rationale": "DoS is an availability attack, unrelated to employee behavior norms." },
+      { "text": "A compliance audit finding", "correct": false, "rationale": "An audit finding is a documented gap, not a description of positive cultural behavior." },
+      { "text": "A single point of failure", "correct": false, "rationale": "This term describes a fragile dependency, not a healthy behavioral norm." }
+    ]
+  },
+  {
+    "id": "d1-t13-a10",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Social Engineering Defense",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which control BEST reduces the success of social engineering attacks that target employees directly?",
+    "options": [
+      { "text": "Ongoing security awareness that teaches staff to recognize and report manipulation attempts", "correct": true, "rationale": "Because social engineering targets people, an informed, alert workforce is the most effective defense against it." },
+      { "text": "A faster internet connection", "correct": false, "rationale": "Bandwidth has no effect on human susceptibility to manipulation." },
+      { "text": "Brighter office lighting", "correct": false, "rationale": "Lighting does not address social engineering of employees." },
+      { "text": "Disabling all logging", "correct": false, "rationale": "Disabling logging removes detection capability and does nothing to counter social engineering." }
+    ]
+  },
+  {
+    "id": "d1-t13-b1",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Matching Activity to Category",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "The finance team receives a session specifically teaching them the steps to verify wire-transfer requests out-of-band. This is MOST accurately which category?",
+    "options": [
+      { "text": "Training (a specific job skill)", "correct": true, "rationale": "Teaching a concrete procedure/skill for a role is training, whose goal is competency." },
+      { "text": "Awareness (recognition only)", "correct": false, "rationale": "This goes beyond keeping something top-of-mind; it teaches a specific verification skill, which is training." },
+      { "text": "Education (broad understanding)", "correct": false, "rationale": "Education is broad and long-term; a targeted procedural session is training." },
+      { "text": "Auditing", "correct": false, "rationale": "Auditing evaluates controls; it is not a learning activity." }
+    ]
+  },
+  {
+    "id": "d1-t13-b2",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Awareness Goal",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "The primary goal of security awareness is best described as which of the following?",
+    "options": [
+      { "text": "Keeping security top-of-mind so people recognize threats", "correct": true, "rationale": "Awareness aims at recognition and attention — keeping security salient in day-to-day behavior." },
+      { "text": "Teaching a specific technical skill in depth", "correct": false, "rationale": "That is the goal of training, not awareness." },
+      { "text": "Granting a professional degree", "correct": false, "rationale": "That describes education, not awareness." },
+      { "text": "Encrypting network traffic", "correct": false, "rationale": "Encryption is a technical control, unrelated to the goal of awareness." }
+    ]
+  },
+  {
+    "id": "d1-t13-b3",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Executive-Targeted Content",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Executives are frequent targets of whaling attacks. What is the BEST awareness approach for them?",
+    "options": [
+      { "text": "Tailored, role-based content addressing whaling/BEC threats relevant to executives", "correct": true, "rationale": "High-value targets need content specific to the threats they face, such as whaling and business email compromise." },
+      { "text": "No training, because executives are too busy", "correct": false, "rationale": "Their high-value status makes training more, not less, important." },
+      { "text": "Generic new-hire content only", "correct": false, "rationale": "Generic onboarding content does not address the specific executive-targeted threats." },
+      { "text": "Publicly posting executives' schedules", "correct": false, "rationale": "This increases exposure to targeting and is the opposite of a protective measure." }
+    ]
+  },
+  {
+    "id": "d1-t13-b4",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Training Records",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An auditor asks the organization to demonstrate that required security training was completed. What is the BEST evidence?",
+    "options": [
+      { "text": "Documented training completion records tracked per employee", "correct": true, "rationale": "Completion records provide verifiable evidence that mandated training occurred, supporting compliance." },
+      { "text": "The trainer's personal recollection", "correct": false, "rationale": "Unrecorded recollection is not verifiable audit evidence." },
+      { "text": "A marketing slogan about security", "correct": false, "rationale": "Slogans do not evidence training completion." },
+      { "text": "The number of coffee breaks taken during class", "correct": false, "rationale": "This is irrelevant to demonstrating training completion." }
+    ]
+  },
+  {
+    "id": "d1-t13-b5",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Continuous Reinforcement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is periodic reinforcement MOST important in a security awareness program?",
+    "options": [
+      { "text": "Because human vigilance fades and threats change, requiring ongoing refreshers", "correct": true, "rationale": "Knowledge decays and adversary tactics evolve, so recurring reinforcement keeps behavior current and effective." },
+      { "text": "Because it increases the training budget for its own sake", "correct": false, "rationale": "Spending is not the purpose; sustained behavior change is." },
+      { "text": "Because one exposure permanently immunizes employees", "correct": false, "rationale": "One exposure does not permanently change behavior; this contradicts the need for reinforcement." },
+      { "text": "Because regulators forbid annual training", "correct": false, "rationale": "Regulators typically require, not forbid, periodic training." }
+    ]
+  },
+  {
+    "id": "d1-t13-b6",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Positive Reporting Culture",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To maximize the number of suspicious emails employees report, what cultural approach is BEST?",
+    "options": [
+      { "text": "Encourage and reward reporting without punishing those who report their own mistakes", "correct": true, "rationale": "A blame-free, encouraging reporting culture increases the volume of early warnings, improving detection." },
+      { "text": "Publicly shame anyone who clicks a phishing link", "correct": false, "rationale": "Shaming suppresses reporting because people fear punishment, reducing valuable early warnings." },
+      { "text": "Forbid employees from reporting to avoid alarm", "correct": false, "rationale": "Suppressing reporting blinds the security team to active threats." },
+      { "text": "Only allow executives to report incidents", "correct": false, "rationale": "Restricting who can report drastically reduces useful detection coverage." }
+    ]
+  },
+  {
+    "id": "d1-t13-b7",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Awareness vs Policy",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company has strong written security policies but employees routinely violate them out of ignorance. Which measure MOST directly closes this gap?",
+    "options": [
+      { "text": "A security awareness and training program that communicates and reinforces the policies", "correct": true, "rationale": "Policies only work if people know and understand them; awareness/training bridges the gap between written policy and actual behavior." },
+      { "text": "Writing even more policies no one reads", "correct": false, "rationale": "Adding unread policies does not address the ignorance causing violations." },
+      { "text": "Encrypting the policy documents", "correct": false, "rationale": "Encryption does not help employees learn or follow the policies." },
+      { "text": "Deleting the policies entirely", "correct": false, "rationale": "Removing policies eliminates the standard rather than helping people follow it." }
+    ]
+  },
+  {
+    "id": "d1-t13-b8",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Education Goal",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Compared with awareness and training, security education is primarily aimed at which outcome?",
+    "options": [
+      { "text": "Developing broad, deep understanding and judgment ('the why')", "correct": true, "rationale": "Education builds long-term understanding and decision-making ability, going beyond recognition or a single skill." },
+      { "text": "Keeping a single message top-of-mind for a week", "correct": false, "rationale": "That short-term reinforcement describes awareness, not education." },
+      { "text": "Teaching one narrow procedure only", "correct": false, "rationale": "A single procedure is training; education is broader." },
+      { "text": "Encrypting stored data", "correct": false, "rationale": "This is a technical control, not a learning outcome." }
+    ]
+  },
+  {
+    "id": "d1-t13-b9",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Onboarding Awareness",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A new employee joins and will immediately handle sensitive data. Regarding security awareness, what should occur FIRST?",
+    "options": [
+      { "text": "Provide initial security awareness/orientation and policy acknowledgment during onboarding", "correct": true, "rationale": "New hires should receive baseline awareness and acknowledge policies at onboarding, before or as they begin handling sensitive data." },
+      { "text": "Wait a year before any security orientation", "correct": false, "rationale": "Delaying awareness leaves a new, uninformed employee handling sensitive data unprepared." },
+      { "text": "Never provide any orientation", "correct": false, "rationale": "No orientation guarantees policy ignorance from day one." },
+      { "text": "Only train them after their first mistake", "correct": false, "rationale": "Reactive-only training invites avoidable early incidents." }
+    ]
+  },
+  {
+    "id": "d1-t13-b10",
+    "domainId": "d1",
+    "topicId": "d1-t13",
+    "subtopicTag": "Program Component Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to building an effective security awareness program?",
+    "options": [
+      { "text": "The brand of chairs in the training room", "correct": true, "rationale": "Furniture branding has no bearing on awareness-program effectiveness, making it least relevant." },
+      { "text": "Role-based, relevant content", "correct": false, "rationale": "Tailoring content to roles is highly relevant to effectiveness." },
+      { "text": "Regular reinforcement and refreshers", "correct": false, "rationale": "Ongoing reinforcement is central to a lasting program." },
+      { "text": "Measuring effectiveness with metrics", "correct": false, "rationale": "Metrics are important for demonstrating and improving the program." }
+    ]
+  }
+]

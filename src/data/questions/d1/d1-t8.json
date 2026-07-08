@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t8-a1",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Business Impact Analysis Purpose",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization is beginning to build its business continuity program. Which activity should be performed FIRST to drive the rest of the plan?",
+    "options": [
+      { "text": "Conduct a Business Impact Analysis (BIA)", "correct": true, "rationale": "The BIA identifies critical functions and the impact of their disruption, providing the foundation (priorities, RTO/RPO) on which the rest of the BC program is built." },
+      { "text": "Purchase a hot site", "correct": false, "rationale": "Selecting recovery solutions comes after the BIA determines what needs protecting and how quickly." },
+      { "text": "Write the incident press release", "correct": false, "rationale": "Communications drafting is a downstream detail, not the foundational first step." },
+      { "text": "Run a full-interruption DR test", "correct": false, "rationale": "Testing occurs after plans and strategies exist, which themselves depend on the BIA." }
+    ]
+  },
+  {
+    "id": "d1-t8-a2",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "MTD Definition",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During a BIA, a team defines the longest time a critical function can be unavailable before the organization suffers unacceptable/irreparable harm. This value is BEST called what?",
+    "options": [
+      { "text": "Maximum Tolerable Downtime (MTD)", "correct": true, "rationale": "MTD is the maximum period a function can be down before causing unacceptable consequences to the organization." },
+      { "text": "Recovery Point Objective (RPO)", "correct": false, "rationale": "RPO measures acceptable data loss (time), not the total tolerable downtime of a function." },
+      { "text": "Mean Time Between Failures (MTBF)", "correct": false, "rationale": "MTBF is a reliability metric for how often equipment fails, not a downtime tolerance." },
+      { "text": "Service Level Agreement (SLA)", "correct": false, "rationale": "An SLA is a contractual commitment; it is not the definition of maximum tolerable downtime." }
+    ]
+  },
+  {
+    "id": "d1-t8-a3",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "BCP vs DRP Scope",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An executive confuses business continuity planning (BCP) and disaster recovery planning (DRP). Which statement MOST accurately distinguishes them?",
+    "options": [
+      { "text": "BCP is the broader effort to keep the whole business operating; DRP focuses on restoring IT systems and technology after a disruption", "correct": true, "rationale": "BCP is enterprise-wide sustainment of operations; DRP is the IT/technology-recovery subset within it." },
+      { "text": "DRP is broader than BCP and includes all business functions", "correct": false, "rationale": "This reverses the relationship; BCP is the broader program, DRP is a component." },
+      { "text": "They are identical terms with no difference", "correct": false, "rationale": "They differ in scope; conflating them is a common exam trap." },
+      { "text": "BCP only covers IT and DRP covers people", "correct": false, "rationale": "This is inverted and inaccurate; BCP spans the whole business while DRP centers on technology recovery." }
+    ]
+  },
+  {
+    "id": "d1-t8-a4",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Management Support",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY factor that determines whether a business continuity program will succeed?",
+    "options": [
+      { "text": "Visible senior management support and sponsorship", "correct": true, "rationale": "Senior management commitment provides authority, funding, and organizational priority — the primary success factor for any BC program." },
+      { "text": "The brand of backup software chosen", "correct": false, "rationale": "Tool selection is a detail; without leadership backing, even the best tools go unfunded and unmaintained." },
+      { "text": "The number of pages in the plan document", "correct": false, "rationale": "Document length is irrelevant to program effectiveness." },
+      { "text": "The color scheme of the reporting dashboards", "correct": false, "rationale": "Cosmetic factors have no bearing on program success." }
+    ]
+  },
+  {
+    "id": "d1-t8-a5",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Critical Function Identification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "During the BIA, two functions are both important, but one generates most revenue and legal obligations if halted. How should the BC team BEST use this information?",
+    "options": [
+      { "text": "Prioritize recovery resources and shorter RTOs toward the higher-impact critical function", "correct": true, "rationale": "The BIA's impact ranking directs limited recovery resources and tighter recovery objectives to the functions whose disruption hurts most." },
+      { "text": "Treat both functions identically regardless of impact", "correct": false, "rationale": "Ignoring impact differences wastes resources and under-protects the most critical function." },
+      { "text": "Recover the lower-impact function first because it is simpler", "correct": false, "rationale": "Recovery order should follow business impact, not ease; recovering the trivial function first delays critical recovery." },
+      { "text": "Eliminate the higher-impact function to reduce risk", "correct": false, "rationale": "Removing a revenue-critical function to 'reduce risk' harms the business more than any disruption would." }
+    ]
+  },
+  {
+    "id": "d1-t8-a6",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "RPO Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The Recovery Point Objective (RPO) primarily expresses which of the following?",
+    "options": [
+      { "text": "The maximum acceptable amount of data loss measured in time", "correct": true, "rationale": "RPO defines how much data (in time) an organization can afford to lose, driving backup frequency." },
+      { "text": "The maximum acceptable downtime for a system", "correct": false, "rationale": "That describes RTO/MTD, not RPO." },
+      { "text": "The average time to repair hardware", "correct": false, "rationale": "That is MTTR, a maintenance metric, not RPO." },
+      { "text": "The cost of the recovery site", "correct": false, "rationale": "RPO is a time-based data-loss target, not a cost figure." }
+    ]
+  },
+  {
+    "id": "d1-t8-a7",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Scope Definition",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A newly appointed BC coordinator must launch the program. Before analysis begins, what should be established FIRST?",
+    "options": [
+      { "text": "The project scope, objectives, and management-approved charter", "correct": true, "rationale": "Defining scope and obtaining an approved charter sets boundaries, resources, and authority before analysis work starts." },
+      { "text": "The exact brand of generator to buy for the data center", "correct": false, "rationale": "Procurement decisions come much later, after requirements are known." },
+      { "text": "A completed full-scale DR exercise", "correct": false, "rationale": "Exercises test existing plans; they cannot precede program scoping." },
+      { "text": "A signed cyber-insurance policy", "correct": false, "rationale": "Insurance is a risk-treatment decision made later, not the first scoping step." }
+    ]
+  },
+  {
+    "id": "d1-t8-a8",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Quantitative vs Qualitative Impact",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A BIA must capture both lost revenue figures and harder-to-measure reputational harm. Which approach MOST completely reflects impact?",
+    "options": [
+      { "text": "Combine quantitative measures (financial loss) with qualitative measures (reputation, morale)", "correct": true, "rationale": "A thorough BIA blends quantitative and qualitative impacts because some consequences (reputation, safety, morale) resist pure dollar measurement." },
+      { "text": "Use only quantitative financial figures and ignore reputation", "correct": false, "rationale": "Ignoring qualitative harm understates true impact of a disruption." },
+      { "text": "Use only qualitative opinions and ignore financials", "correct": false, "rationale": "Dropping quantitative data removes objective prioritization inputs." },
+      { "text": "Skip impact analysis and guess RTOs", "correct": false, "rationale": "Guessing objectives without analysis undermines the entire program's validity." }
+    ]
+  },
+  {
+    "id": "d1-t8-a9",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Interdependencies",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A critical order-processing function relies on an upstream authentication service and a third-party payment gateway. How should the BIA BEST treat these?",
+    "options": [
+      { "text": "Map the interdependencies so recovery plans account for supporting services and vendors", "correct": true, "rationale": "Critical functions inherit the recovery needs of everything they depend on; the BIA must map these interdependencies or recovery will stall on an overlooked component." },
+      { "text": "Ignore upstream/third-party services since they are 'someone else's problem'", "correct": false, "rationale": "A function cannot recover if its dependencies are down; ignoring them creates blind spots." },
+      { "text": "Assume all dependencies recover instantly", "correct": false, "rationale": "Assuming instant recovery of dependencies is unrealistic and produces unachievable RTOs." },
+      { "text": "Only document the primary function and nothing else", "correct": false, "rationale": "Documenting the function without its dependencies yields an incomplete, unworkable plan." }
+    ]
+  },
+  {
+    "id": "d1-t8-a10",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "BC Plan Maintenance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A BC plan was written three years ago and never updated despite major system and org changes. What is the BEST corrective action?",
+    "options": [
+      { "text": "Institute regular review/update cycles and update after significant changes", "correct": true, "rationale": "BC plans must be living documents, reviewed periodically and after major changes, to stay accurate and executable." },
+      { "text": "Leave it as-is since it was approved once", "correct": false, "rationale": "A stale plan referencing retired systems will fail during an actual disruption." },
+      { "text": "Delete it to avoid confusion", "correct": false, "rationale": "Deleting the plan leaves the organization with no continuity guidance at all." },
+      { "text": "Only update it after the next disaster", "correct": false, "rationale": "Waiting for a disaster to fix the plan defeats its preventive purpose." }
+    ]
+  },
+  {
+    "id": "d1-t8-b1",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "RTO vs MTD Relationship",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "For a critical function, the recovery time objective (RTO) is set at 8 hours while the maximum tolerable downtime (MTD) is 6 hours. Which statement is MOST accurate?",
+    "options": [
+      { "text": "The RTO is invalid because it must be less than or equal to the MTD", "correct": true, "rationale": "RTO must fit within MTD; an RTO exceeding MTD guarantees unacceptable harm and must be shortened (or capabilities improved)." },
+      { "text": "The configuration is fine because RTO can exceed MTD", "correct": false, "rationale": "An RTO longer than MTD means recovery finishes after unacceptable harm has occurred — it is not fine." },
+      { "text": "MTD is irrelevant once RTO is defined", "correct": false, "rationale": "MTD is the ceiling that constrains RTO; it remains highly relevant." },
+      { "text": "RPO must equal RTO in all cases", "correct": false, "rationale": "RPO (data loss) and RTO (downtime) are independent objectives and need not be equal." }
+    ]
+  },
+  {
+    "id": "d1-t8-b2",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "BIA Data Collection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To gather accurate impact and recovery requirements during a BIA, whom should the team BEST consult?",
+    "options": [
+      { "text": "The business process owners and subject-matter experts who run the functions", "correct": true, "rationale": "Process owners/SMEs know the real dependencies, timing, and impacts, making them the best source for BIA data." },
+      { "text": "Only the external auditors", "correct": false, "rationale": "Auditors assess controls but do not run the processes day to day; they are not the primary BIA data source." },
+      { "text": "Only the newest interns for a fresh perspective", "correct": false, "rationale": "Interns typically lack the operational depth needed for accurate impact data." },
+      { "text": "Randomly selected customers", "correct": false, "rationale": "Customers cannot detail internal process dependencies and recovery requirements." }
+    ]
+  },
+  {
+    "id": "d1-t8-b3",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "BCP as Governance Requirement",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "From a governance perspective, what is the PRIMARY reason organizations maintain business continuity requirements?",
+    "options": [
+      { "text": "To ensure the organization can continue delivering critical services and meet its obligations despite disruptions", "correct": true, "rationale": "BC exists to sustain critical operations and obligations (to customers, regulators, stakeholders) through disruptions — the core governance rationale." },
+      { "text": "To increase the complexity of IT systems", "correct": false, "rationale": "Added complexity is not a goal; resilience is." },
+      { "text": "To eliminate the need for insurance", "correct": false, "rationale": "BC complements, but does not replace, risk transfer such as insurance." },
+      { "text": "To guarantee no incident will ever occur", "correct": false, "rationale": "BC prepares for incidents; it cannot guarantee their absence." }
+    ]
+  },
+  {
+    "id": "d1-t8-b4",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Recovery Prioritization",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A regional outage takes down all systems. According to BC/BIA outputs, which systems should be restored FIRST?",
+    "options": [
+      { "text": "Those supporting the highest-impact critical business functions with the shortest MTD/RTO", "correct": true, "rationale": "Restoration order follows BIA priorities — functions with the greatest impact and least downtime tolerance come first." },
+      { "text": "The systems that are easiest to restart, regardless of importance", "correct": false, "rationale": "Ease of restart does not equal business priority; trivial systems first delays critical recovery." },
+      { "text": "The systems owned by the most senior executive personally", "correct": false, "rationale": "Ownership seniority is not a valid prioritization criterion; business impact is." },
+      { "text": "Whichever systems the on-call engineer prefers", "correct": false, "rationale": "Personal preference is not a defensible basis; documented BIA priorities govern order." }
+    ]
+  },
+  {
+    "id": "d1-t8-b5",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Continuity Roles",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To ensure the BC plan can actually be executed during a crisis, which practice is BEST?",
+    "options": [
+      { "text": "Assign clear roles/responsibilities with trained primary and backup personnel", "correct": true, "rationale": "Defined roles with trained primaries and alternates ensure the plan can be executed even if key people are unavailable during the crisis." },
+      { "text": "Keep the plan secret from staff so attackers can't see it", "correct": false, "rationale": "Staff who must execute the plan need to know their roles; hiding it guarantees failure at execution time." },
+      { "text": "Name only a single person responsible for everything", "correct": false, "rationale": "A single point of failure means the plan collapses if that person is unavailable." },
+      { "text": "Leave role assignment until the disaster happens", "correct": false, "rationale": "Assigning roles mid-crisis wastes critical time and causes confusion." }
+    ]
+  },
+  {
+    "id": "d1-t8-b6",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "BIA Output Usage",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is a primary output of a Business Impact Analysis?",
+    "options": [
+      { "text": "Recovery objectives (RTO/RPO) and prioritized critical functions", "correct": true, "rationale": "The BIA yields prioritized critical functions and their recovery objectives, which drive the continuity/recovery strategy." },
+      { "text": "The organization's marketing plan", "correct": false, "rationale": "Marketing plans are unrelated to BIA outputs." },
+      { "text": "A list of the CEO's travel dates", "correct": false, "rationale": "Executive travel schedules are not a BIA output." },
+      { "text": "The seating chart for the office", "correct": false, "rationale": "Office seating is unrelated to impact analysis outputs." }
+    ]
+  },
+  {
+    "id": "d1-t8-b7",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Risk Assessment vs BIA",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A planner asks how a BIA differs from a general risk assessment. Which distinction is MOST accurate?",
+    "options": [
+      { "text": "A BIA focuses on the impact of losing functions (regardless of cause), while a risk assessment focuses on threats, likelihoods, and vulnerabilities", "correct": true, "rationale": "The BIA is impact/consequence-centric (what happens if a function is lost), whereas a risk assessment is threat/likelihood-centric." },
+      { "text": "They are the same activity with different names", "correct": false, "rationale": "They have distinct focuses and outputs; conflating them is an exam trap." },
+      { "text": "A BIA only considers external attackers", "correct": false, "rationale": "A BIA is cause-agnostic; it cares about impact of loss, not the specific threat source." },
+      { "text": "A risk assessment ignores likelihood entirely", "correct": false, "rationale": "Likelihood is a core input of a risk assessment, not something it ignores." }
+    ]
+  },
+  {
+    "id": "d1-t8-b8",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Standards Alignment",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization wants to align its business continuity program with a recognized international standard. Which is the BEST fit?",
+    "options": [
+      { "text": "ISO 22301 (Business Continuity Management Systems)", "correct": true, "rationale": "ISO 22301 is the international standard specifically for business continuity management systems." },
+      { "text": "ISO 9001 (Quality Management)", "correct": false, "rationale": "ISO 9001 addresses quality management, not business continuity." },
+      { "text": "PCI-DSS", "correct": false, "rationale": "PCI-DSS governs cardholder data security, not continuity management." },
+      { "text": "ISO 14001 (Environmental Management)", "correct": false, "rationale": "ISO 14001 addresses environmental management, unrelated to BC." }
+    ]
+  },
+  {
+    "id": "d1-t8-b9",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Executive Communication",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To secure ongoing funding, how should the BC manager BEST present the program to executives?",
+    "options": [
+      { "text": "In business terms — impact to revenue, obligations, and reputation if critical functions fail", "correct": true, "rationale": "Framing BC in business-impact terms aligns with executive priorities and justifies investment far better than technical jargon." },
+      { "text": "As a purely technical backup-software discussion", "correct": false, "rationale": "Technical minutiae rarely resonate with executives making funding decisions." },
+      { "text": "By withholding cost information entirely", "correct": false, "rationale": "Executives need cost/benefit information to approve funding; withholding it undermines the case." },
+      { "text": "By claiming disasters are impossible", "correct": false, "rationale": "Downplaying risk removes the rationale for the program and is dishonest." }
+    ]
+  },
+  {
+    "id": "d1-t8-b10",
+    "domainId": "d1",
+    "topicId": "d1-t8",
+    "subtopicTag": "Plan Distribution",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A disaster knocks out the primary site, including the only copies of the BC/DR plan stored on internal file servers. What lesson is MOST clearly illustrated?",
+    "options": [
+      { "text": "Continuity plans must be accessible from offsite/alternate locations, not solely at the primary site", "correct": true, "rationale": "If the plan is only stored where the disaster strikes, it is unavailable when needed; copies must be kept offsite/redundantly and accessibly." },
+      { "text": "Plans should never be written down at all", "correct": false, "rationale": "Undocumented plans cannot be executed reliably; the fix is redundant offsite copies, not eliminating documentation." },
+      { "text": "Only executives should ever have the plan", "correct": false, "rationale": "Restricting access to executives who may be unreachable makes execution harder, not easier." },
+      { "text": "The plan should be printed once and locked in the affected building", "correct": false, "rationale": "Storing the sole copy in the affected building is precisely the failure described." }
+    ]
+  }
+]

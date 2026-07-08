@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t12-a1",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Parallel Test",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A hospital wants strong assurance its EHR recovery works but cannot risk any downtime of the live system. Which DR test is BEST suited?",
+    "options": [
+      { "text": "A parallel test that runs recovery systems alongside live production", "correct": true, "rationale": "A parallel test validates that recovery actually works while production keeps running, giving high assurance without downtime." },
+      { "text": "A full-interruption test that shuts down production", "correct": false, "rationale": "A full-interruption test takes production down, which is unacceptable when downtime cannot be risked." },
+      { "text": "A read-through checklist only", "correct": false, "rationale": "A checklist verifies plan completeness but does not prove recovery technically works." },
+      { "text": "No test, relying on the written plan", "correct": false, "rationale": "An untested plan provides no assurance that recovery will succeed." }
+    ]
+  },
+  {
+    "id": "d7-t12-a2",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Test Escalation Order",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which sequence correctly orders DR tests from least to most disruptive?",
+    "options": [
+      { "text": "Read-through/checklist, walkthrough/tabletop, simulation, parallel, full-interruption", "correct": true, "rationale": "This is the standard escalation from least disruptive (checklist) to most disruptive (full-interruption)." },
+      { "text": "Full-interruption, parallel, simulation, tabletop, checklist", "correct": false, "rationale": "This reverses the order; full-interruption is the most disruptive, not the least." },
+      { "text": "Parallel, checklist, full-interruption, tabletop, simulation", "correct": false, "rationale": "This ordering is scrambled and does not reflect increasing disruption." },
+      { "text": "Simulation, full-interruption, checklist, parallel, tabletop", "correct": false, "rationale": "This ordering is incorrect and mixes disruption levels arbitrarily." }
+    ]
+  },
+  {
+    "id": "d7-t12-a3",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Full-Interruption Test",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which DR test provides the MOST realistic validation but also carries the greatest operational risk?",
+    "options": [
+      { "text": "Full-interruption test", "correct": true, "rationale": "Failing fully over from shut-down production is the most realistic but riskiest test, since a failure can cause a real outage." },
+      { "text": "Read-through/checklist test", "correct": false, "rationale": "A checklist is the least disruptive and lowest-risk, not the most realistic." },
+      { "text": "Structured walkthrough", "correct": false, "rationale": "A tabletop discussion does not touch systems, so it is neither the most realistic nor the riskiest." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test is realistic but keeps production up, carrying less risk than full-interruption." }
+    ]
+  },
+  {
+    "id": "d7-t12-a4",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Checklist Test",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A team simply wants each member to individually review the DR plan to confirm it is complete and current, with no systems touched. Which test BEST describes this?",
+    "options": [
+      { "text": "Read-through/checklist test", "correct": true, "rationale": "Individually reviewing the plan for completeness and currency, without touching systems, is the checklist test." },
+      { "text": "Full-interruption test", "correct": false, "rationale": "A full-interruption test shuts down production, far beyond a document review." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test runs recovery systems alongside production, not a mere document review." },
+      { "text": "Simulation test", "correct": false, "rationale": "A simulation role-plays a disaster scenario, more involved than an individual plan review." }
+    ]
+  },
+  {
+    "id": "d7-t12-a5",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Tabletop Exercise",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The recovery team gathers in a conference room and talks through a simulated disaster scenario step by step to verify roles and dependencies, without touching any systems. Which test is this?",
+    "options": [
+      { "text": "Structured walkthrough / tabletop exercise", "correct": true, "rationale": "Discussing a scenario together to validate roles and interdependencies without touching systems is a tabletop/walkthrough." },
+      { "text": "Full-interruption test", "correct": false, "rationale": "No systems are touched, so this is not a full-interruption test." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test actually runs recovery systems; the scenario describes only discussion." },
+      { "text": "Read-through checklist", "correct": false, "rationale": "A checklist is individual review; the scenario describes a group discussion of a scenario." }
+    ]
+  },
+  {
+    "id": "d7-t12-a6",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Progressive Testing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization has never tested its DR plan and wants to build confidence responsibly. What is the BEST testing approach?",
+    "options": [
+      { "text": "Progressive testing that starts with less disruptive tests and escalates as confidence grows", "correct": true, "rationale": "Building up through the levels catches plan gaps cheaply before undertaking high-risk tests." },
+      { "text": "Begin immediately with a full-interruption test for maximum realism", "correct": false, "rationale": "Jumping to the riskiest test on an untested plan can cause a real outage from unaddressed gaps." },
+      { "text": "Only ever perform checklist reviews and nothing more", "correct": false, "rationale": "Checklists alone never validate that recovery technically works." },
+      { "text": "Skip testing and update the plan annually on paper", "correct": false, "rationale": "Paper updates without testing leave the plan unproven." }
+    ]
+  },
+  {
+    "id": "d7-t12-a7",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Parallel vs Full-Interruption",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes a parallel test from a full-interruption test?",
+    "options": [
+      { "text": "A parallel test keeps production running while recovery runs alongside; a full-interruption test shuts production down and fails fully over", "correct": true, "rationale": "The key difference is production status: it stays up in a parallel test and goes down in a full-interruption test." },
+      { "text": "Both tests shut down production", "correct": false, "rationale": "Only the full-interruption test shuts down production; the parallel test keeps it running." },
+      { "text": "A parallel test is riskier than a full-interruption test", "correct": false, "rationale": "The full-interruption test is riskier because it takes production offline." },
+      { "text": "Neither test touches any systems", "correct": false, "rationale": "Both actually run recovery systems; they are not document-only exercises." }
+    ]
+  },
+  {
+    "id": "d7-t12-a8",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Test Documentation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After completing a DR test that revealed several gaps, what is the MOST important follow-up action?",
+    "options": [
+      { "text": "Document the findings and update the DR plan to close the gaps", "correct": true, "rationale": "Feeding test results back to update the plan is how testing improves recovery capability over time." },
+      { "text": "Discard the results since the test is over", "correct": false, "rationale": "Discarding findings wastes the test and leaves the gaps unaddressed." },
+      { "text": "Hide the gaps from management", "correct": false, "rationale": "Concealing gaps prevents remediation and undermines the plan." },
+      { "text": "Never test again to avoid finding more gaps", "correct": false, "rationale": "Avoiding testing leaves the plan unverified and gaps hidden, not fixed." }
+    ]
+  },
+  {
+    "id": "d7-t12-a9",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Why Test",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY reason to test a disaster recovery plan?",
+    "options": [
+      { "text": "To validate that recovery procedures work and objectives are achievable before a real disaster", "correct": true, "rationale": "Testing proves the plan actually functions, that RTO/RPO are achievable, and that staff know their roles." },
+      { "text": "To increase the plan's page count", "correct": false, "rationale": "Document length is not a purpose of testing." },
+      { "text": "To eliminate the need for backups", "correct": false, "rationale": "Testing does not remove the need for backups, which are part of what is tested." },
+      { "text": "To satisfy curiosity only", "correct": false, "rationale": "Testing serves concrete validation goals, not idle curiosity." }
+    ]
+  },
+  {
+    "id": "d7-t12-a10",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Full-Interruption Risk",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "For a critical, always-on system that cannot afford unplanned downtime, which test is LEAST appropriate without careful authorization and mitigations?",
+    "options": [
+      { "text": "Full-interruption test", "correct": true, "rationale": "Shutting down an always-on critical system risks a real outage if the test fails, making it least appropriate without strong safeguards." },
+      { "text": "Read-through checklist", "correct": false, "rationale": "A checklist touches no systems and poses essentially no operational risk." },
+      { "text": "Tabletop walkthrough", "correct": false, "rationale": "A discussion-based walkthrough poses no risk to production." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test keeps production running and is relatively low risk." }
+    ]
+  },
+  {
+    "id": "d7-t12-b1",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Test Escalation Order",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Ranking by disruption, which DR test sits between a simulation and a full-interruption test?",
+    "options": [
+      { "text": "Parallel test", "correct": true, "rationale": "In the escalation order, the parallel test is more disruptive than a simulation but less than a full-interruption test." },
+      { "text": "Read-through checklist", "correct": false, "rationale": "The checklist is the least disruptive, at the bottom of the order, not between simulation and full-interruption." },
+      { "text": "Tabletop walkthrough", "correct": false, "rationale": "The tabletop is near the bottom of the order, below simulation." },
+      { "text": "Another full-interruption test", "correct": false, "rationale": "Full-interruption is the most disruptive endpoint, not a step between others." }
+    ]
+  },
+  {
+    "id": "d7-t12-b2",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Parallel Test",
+    "qualifier": "PRIMARY",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY characteristic of a parallel test?",
+    "options": [
+      { "text": "Recovery systems process real workloads alongside production, which remains operational", "correct": true, "rationale": "A parallel test runs recovery in parallel with a still-running production environment to validate recovery without downtime." },
+      { "text": "Production is completely shut down during the test", "correct": false, "rationale": "That describes a full-interruption test; production stays up in a parallel test." },
+      { "text": "No systems are used, only a discussion occurs", "correct": false, "rationale": "That describes a tabletop; a parallel test actually runs recovery systems." },
+      { "text": "Only individual document review is performed", "correct": false, "rationale": "That describes a checklist test, not a parallel test." }
+    ]
+  },
+  {
+    "id": "d7-t12-b3",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Test Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company must prove to a regulator that failover completely works, and it has an authorized maintenance window in which brief downtime is acceptable. Which test provides the highest-confidence proof?",
+    "options": [
+      { "text": "A full-interruption test conducted during the authorized window", "correct": true, "rationale": "When downtime is authorized and acceptable, a full-interruption test offers the most realistic, highest-confidence proof that failover works." },
+      { "text": "A read-through checklist", "correct": false, "rationale": "A checklist cannot prove failover technically works, so it is insufficient for the regulator's requirement." },
+      { "text": "A tabletop discussion", "correct": false, "rationale": "A discussion validates understanding but does not demonstrate actual failover." },
+      { "text": "No test, citing the maintenance window as proof", "correct": false, "rationale": "Having a window is not proof; an actual test must be performed." }
+    ]
+  },
+  {
+    "id": "d7-t12-b4",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Checklist vs Recovery Validation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A manager claims that passing a checklist review proves the organization can recover from a disaster. Why is this reasoning MOST flawed?",
+    "options": [
+      { "text": "A checklist only confirms the plan is complete and current; it does not demonstrate that recovery technically works", "correct": true, "rationale": "Document review validates plan currency but never exercises actual recovery, which requires parallel or full-interruption testing." },
+      { "text": "A checklist shuts down production, which is dangerous", "correct": false, "rationale": "A checklist touches no systems and does not shut down production." },
+      { "text": "A checklist is more disruptive than a full-interruption test", "correct": false, "rationale": "A checklist is the least disruptive test, not the most." },
+      { "text": "A checklist requires failing over to the alternate site", "correct": false, "rationale": "A checklist involves no failover; it is a document review." }
+    ]
+  },
+  {
+    "id": "d7-t12-b5",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Simulation Test",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A team role-plays a realistic disaster scenario, exercising some support functions and decision-making, but stops short of failing over production. Which test BEST describes this?",
+    "options": [
+      { "text": "Simulation test", "correct": true, "rationale": "A simulation role-plays a disaster and may exercise support functions while stopping short of a production failover." },
+      { "text": "Full-interruption test", "correct": false, "rationale": "The scenario explicitly stops short of failing over production, so it is not full-interruption." },
+      { "text": "Read-through checklist", "correct": false, "rationale": "A checklist is a passive document review, not an active role-played scenario." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test actually runs recovery systems on real workloads; the scenario stops short of failover." }
+    ]
+  },
+  {
+    "id": "d7-t12-b6",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Progressive Testing",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which approach to DR testing is LEAST advisable for an organization that has never exercised its plan?",
+    "options": [
+      { "text": "Immediately performing a full-interruption test on critical production systems", "correct": true, "rationale": "Starting with the riskiest test on an untested plan invites a real outage from undiscovered gaps; escalation should be gradual." },
+      { "text": "Starting with a checklist review", "correct": false, "rationale": "Beginning with the least disruptive test is sound, low-risk practice." },
+      { "text": "Following a checklist with a tabletop exercise", "correct": false, "rationale": "Escalating gradually to a tabletop is appropriate progressive testing." },
+      { "text": "Later conducting a parallel test", "correct": false, "rationale": "A parallel test after lower-level tests is a reasonable next step, not the least advisable." }
+    ]
+  },
+  {
+    "id": "d7-t12-b7",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Plan Currency",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A DR plan references servers and staff that no longer exist after a reorganization. Which testing benefit would BEST have caught this?",
+    "options": [
+      { "text": "Testing verifies plan currency, revealing that the plan no longer matches the environment", "correct": true, "rationale": "Even a low-level review test surfaces stale references, ensuring the plan reflects the current environment." },
+      { "text": "Testing increases the number of backups automatically", "correct": false, "rationale": "Testing validates the plan; it does not automatically create backups." },
+      { "text": "Testing encrypts the plan document", "correct": false, "rationale": "Encryption is unrelated to detecting stale plan content." },
+      { "text": "Testing eliminates the need to maintain the plan", "correct": false, "rationale": "Testing complements maintenance; it does not remove the need to keep the plan updated." }
+    ]
+  },
+  {
+    "id": "d7-t12-b8",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Least Disruptive Test",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which DR test is the LEAST disruptive to normal operations?",
+    "options": [
+      { "text": "Read-through/checklist test", "correct": true, "rationale": "An individual document review touches no systems and is the least disruptive test." },
+      { "text": "Full-interruption test", "correct": false, "rationale": "A full-interruption test shuts down production and is the most disruptive." },
+      { "text": "Parallel test", "correct": false, "rationale": "A parallel test runs recovery systems and is more disruptive than a checklist." },
+      { "text": "Simulation test", "correct": false, "rationale": "A simulation role-plays a scenario and is more involved than a checklist review." }
+    ]
+  },
+  {
+    "id": "d7-t12-b9",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Assurance vs Disruption",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team needs to actually confirm recovery works technically, but any production outage is unacceptable. Which single test BEST balances high assurance with zero production downtime?",
+    "options": [
+      { "text": "Parallel test", "correct": true, "rationale": "A parallel test exercises real recovery alongside running production, delivering strong assurance with no production downtime." },
+      { "text": "Full-interruption test", "correct": false, "rationale": "It would cause the unacceptable production outage the constraint forbids." },
+      { "text": "Checklist review", "correct": false, "rationale": "A checklist gives low assurance and does not confirm recovery technically works." },
+      { "text": "Tabletop exercise", "correct": false, "rationale": "A tabletop validates understanding but does not technically confirm recovery." }
+    ]
+  },
+  {
+    "id": "d7-t12-b10",
+    "domainId": "d7",
+    "topicId": "d7-t12",
+    "subtopicTag": "Test to Lessons Learned",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "How does DR testing PRIMARILY connect to the ongoing improvement of the recovery capability?",
+    "options": [
+      { "text": "Test findings feed back into updating the plan, forming a continuous improvement cycle", "correct": true, "rationale": "Documented test results drive plan updates and maintenance, keeping recovery capability effective over time." },
+      { "text": "Testing is a one-time event with no follow-up", "correct": false, "rationale": "Testing should be recurring, with findings feeding continuous improvement." },
+      { "text": "Testing replaces the need for a plan", "correct": false, "rationale": "Testing validates and improves the plan; it does not replace it." },
+      { "text": "Testing only matters for compliance paperwork", "correct": false, "rationale": "Testing provides real operational assurance and improvement, not just paperwork." }
+    ]
+  }
+]

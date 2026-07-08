@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t3-a1",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "OAuth Is Authorization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A developer says 'we use OAuth 2.0 to authenticate our users.' What is the MOST accurate correction?",
+    "options": [
+      { "text": "OAuth 2.0 provides delegated authorization; to authenticate users you need OpenID Connect on top of it", "correct": true, "rationale": "OAuth 2.0 grants delegated access (authorization) via tokens; authentication of the user is provided by OIDC, which layers on OAuth." },
+      { "text": "OAuth 2.0 is purely an authentication protocol", "correct": false, "rationale": "By itself OAuth is authorization/delegation, not authentication — a classic exam trap." },
+      { "text": "OAuth 2.0 is an encryption algorithm", "correct": false, "rationale": "OAuth is an authorization framework, not an encryption algorithm." },
+      { "text": "OAuth 2.0 is a physical token standard", "correct": false, "rationale": "OAuth is a software authorization framework, not a physical token spec." }
+    ]
+  },
+  {
+    "id": "d5-t3-a2",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "SAML Web SSO",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An enterprise wants employees to log in once and access multiple SaaS web apps via signed identity assertions. Which standard is BEST suited?",
+    "options": [
+      { "text": "SAML", "correct": true, "rationale": "SAML is the XML-based standard for exchanging signed authentication assertions between an IdP and service providers, ideal for enterprise web SSO." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is a broken wireless encryption standard, unrelated to web SSO." },
+      { "text": "SNMP", "correct": false, "rationale": "SNMP is a network management protocol, not an SSO assertion standard." },
+      { "text": "FTP", "correct": false, "rationale": "FTP is a file-transfer protocol, not an SSO mechanism." }
+    ]
+  },
+  {
+    "id": "d5-t3-a3",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Kerberos KDC",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In Kerberos, which component issues the initial Ticket-Granting Ticket after a user authenticates?",
+    "options": [
+      { "text": "The Key Distribution Center (KDC)", "correct": true, "rationale": "The KDC (via its authentication service) issues the TGT, which the user then uses to request service tickets." },
+      { "text": "The end user's web browser", "correct": false, "rationale": "The browser does not issue Kerberos tickets; the KDC does." },
+      { "text": "A public certificate authority", "correct": false, "rationale": "Kerberos uses a KDC with symmetric keys, not a public CA, for tickets." },
+      { "text": "The printer server", "correct": false, "rationale": "A print server is a service, not the ticket-issuing KDC." }
+    ]
+  },
+  {
+    "id": "d5-t3-a4",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Kerberos Time Sync",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Users in a Kerberos domain suddenly cannot obtain tickets after a workstation's clock drifted far from the server. Which requirement was MOST likely violated?",
+    "options": [
+      { "text": "Time synchronization between clients and the KDC", "correct": true, "rationale": "Kerberos relies on synchronized clocks to validate ticket timestamps; excessive skew causes authentication failures." },
+      { "text": "The screen resolution setting", "correct": false, "rationale": "Display resolution has no effect on Kerberos ticketing." },
+      { "text": "The desktop wallpaper", "correct": false, "rationale": "Wallpaper is irrelevant to Kerberos time requirements." },
+      { "text": "The printer driver version", "correct": false, "rationale": "Printer drivers do not affect Kerberos clock synchronization." }
+    ]
+  },
+  {
+    "id": "d5-t3-a5",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "SSO Single Compromise Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "What is the MOST significant security risk introduced by single sign-on?",
+    "options": [
+      { "text": "A single compromised credential can unlock many connected systems", "correct": true, "rationale": "SSO's convenience concentrates risk: one stolen credential grants access to all federated systems — the 'keys to the kingdom' problem, mitigated by MFA." },
+      { "text": "Users must remember dozens of separate passwords", "correct": false, "rationale": "SSO reduces password count; that is a benefit, not the risk." },
+      { "text": "It makes encryption impossible", "correct": false, "rationale": "SSO does not prevent encryption." },
+      { "text": "It eliminates all authentication", "correct": false, "rationale": "SSO still authenticates; it centralizes rather than removes authentication." }
+    ]
+  },
+  {
+    "id": "d5-t3-a6",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "OIDC Authentication",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "OpenID Connect (OIDC) is best described as which of the following?",
+    "options": [
+      { "text": "An authentication layer built on top of OAuth 2.0 that adds an identity (ID) token", "correct": true, "rationale": "OIDC extends OAuth 2.0 with an ID token to authenticate users, supplying identity information OAuth alone does not." },
+      { "text": "A symmetric encryption cipher", "correct": false, "rationale": "OIDC is an identity protocol, not a cipher." },
+      { "text": "A physical smart card standard", "correct": false, "rationale": "OIDC is a software identity layer, not a hardware token spec." },
+      { "text": "A file compression format", "correct": false, "rationale": "OIDC has nothing to do with compression." }
+    ]
+  },
+  {
+    "id": "d5-t3-a7",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "SSO with MFA",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To reduce the 'single compromised credential' risk of SSO, what is the BEST complementary control?",
+    "options": [
+      { "text": "Require multi-factor authentication at the identity provider", "correct": true, "rationale": "MFA at the IdP means a stolen password alone cannot unlock the federated systems, directly mitigating SSO's concentration risk." },
+      { "text": "Disable SSO and give users many separate passwords", "correct": false, "rationale": "Reverting to many passwords sacrifices SSO's benefits and often worsens password hygiene." },
+      { "text": "Publish all users' passwords for transparency", "correct": false, "rationale": "Publishing passwords is a catastrophic security failure." },
+      { "text": "Remove authentication entirely", "correct": false, "rationale": "Removing authentication eliminates all protection." }
+    ]
+  },
+  {
+    "id": "d5-t3-a8",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "IdP vs SP Roles",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In a SAML federation, which entity authenticates the user and issues the signed assertion?",
+    "options": [
+      { "text": "The Identity Provider (IdP)", "correct": true, "rationale": "The IdP authenticates the user and issues the signed SAML assertion that the Service Provider trusts." },
+      { "text": "The Service Provider (SP)", "correct": false, "rationale": "The SP consumes/trusts the assertion; it does not authenticate the user or issue it." },
+      { "text": "The end user's printer", "correct": false, "rationale": "A printer plays no role in SAML federation." },
+      { "text": "The DNS root server", "correct": false, "rationale": "DNS resolves names; it does not issue SAML assertions." }
+    ]
+  },
+  {
+    "id": "d5-t3-a9",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Federation Across Boundaries",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A partner company's employees need access to your web portal using their own company credentials, without you creating accounts for them. Which approach MOST directly enables this?",
+    "options": [
+      { "text": "Federated identity, trusting the partner's identity provider", "correct": true, "rationale": "Federation lets your portal trust the partner's IdP so their users authenticate with their own credentials — no separate accounts needed." },
+      { "text": "Manually creating a local account for every partner employee", "correct": false, "rationale": "Creating local accounts is exactly what federation avoids and is unscalable." },
+      { "text": "Sharing one generic login among all partners", "correct": false, "rationale": "A shared account destroys accountability and is insecure." },
+      { "text": "Emailing your admin password to the partner", "correct": false, "rationale": "Sharing admin credentials is a severe security violation." }
+    ]
+  },
+  {
+    "id": "d5-t3-a10",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Kerberos Crypto",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement about Kerberos cryptography is MOST accurate?",
+    "options": [
+      { "text": "It primarily uses symmetric-key cryptography with a trusted KDC", "correct": true, "rationale": "Kerberos relies on symmetric keys shared with the KDC to issue and validate tickets." },
+      { "text": "It is based entirely on public-key certificates like PKI", "correct": false, "rationale": "Core Kerberos is symmetric-key based via the KDC, not PKI-based (though extensions exist)." },
+      { "text": "It uses no cryptography at all", "correct": false, "rationale": "Kerberos fundamentally uses cryptography to protect tickets and authenticators." },
+      { "text": "It relies only on plaintext passwords sent over the network", "correct": false, "rationale": "Kerberos was designed specifically to avoid sending passwords over the network in the clear." }
+    ]
+  },
+  {
+    "id": "d5-t3-b1",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "OAuth vs OIDC Roles",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST correctly distinguishes OAuth 2.0 from OpenID Connect?",
+    "options": [
+      { "text": "OAuth 2.0 handles delegated authorization; OIDC adds authentication of the user", "correct": true, "rationale": "OAuth grants access via tokens (authorization), while OIDC builds on it to authenticate the user via an ID token." },
+      { "text": "OIDC handles authorization while OAuth handles authentication", "correct": false, "rationale": "This reverses their roles; OAuth is authorization, OIDC adds authentication." },
+      { "text": "Both are physical token hardware standards", "correct": false, "rationale": "Both are software protocols, not hardware token specs." },
+      { "text": "Neither relates to identity or access", "correct": false, "rationale": "Both are central to identity/access delegation and authentication." }
+    ]
+  },
+  {
+    "id": "d5-t3-b2",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "SSO Benefit",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY user-facing benefit of single sign-on?",
+    "options": [
+      { "text": "Authenticating once to access multiple systems without repeated logins", "correct": true, "rationale": "SSO lets users authenticate a single time and reach many systems, improving convenience and reducing password fatigue." },
+      { "text": "It forces users to memorize more passwords", "correct": false, "rationale": "SSO reduces the number of passwords users manage." },
+      { "text": "It disables all access controls", "correct": false, "rationale": "SSO centralizes authentication; it does not remove access controls." },
+      { "text": "It encrypts the user's hard drive", "correct": false, "rationale": "Disk encryption is unrelated to SSO's purpose." }
+    ]
+  },
+  {
+    "id": "d5-t3-b3",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "SAML Assertion Trust",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why can a SAML Service Provider trust an assertion it receives from an Identity Provider?",
+    "options": [
+      { "text": "Because the assertion is digitally signed by the trusted IdP, proving its origin and integrity", "correct": true, "rationale": "The IdP signs the SAML assertion; the SP validates the signature against the trusted IdP, ensuring authenticity and integrity." },
+      { "text": "Because assertions are always sent in plaintext with no verification", "correct": false, "rationale": "Trust comes from the signature/validation, not from unverified plaintext." },
+      { "text": "Because the user promised it is genuine", "correct": false, "rationale": "User assurance is not the basis of trust; the IdP's signature is." },
+      { "text": "Because SAML disables all security checks", "correct": false, "rationale": "SAML relies on signature validation, not disabling checks." }
+    ]
+  },
+  {
+    "id": "d5-t3-b4",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Kerberos Ticket Flow",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In a Kerberos logon, what does a user obtain FIRST before requesting access to individual services?",
+    "options": [
+      { "text": "A Ticket-Granting Ticket (TGT) from the KDC", "correct": true, "rationale": "After initial authentication, the user receives a TGT, which is then used to request service tickets for specific services." },
+      { "text": "A service ticket for every server at once", "correct": false, "rationale": "Service tickets are requested per service using the TGT, not all issued upfront before the TGT." },
+      { "text": "A public-key certificate from a CA", "correct": false, "rationale": "Core Kerberos issues a TGT via symmetric keys, not a CA-issued certificate." },
+      { "text": "A printed password list", "correct": false, "rationale": "Kerberos does not distribute printed password lists." }
+    ]
+  },
+  {
+    "id": "d5-t3-b5",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Protocol Purpose Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which protocol is primarily an authorization framework for delegated access rather than an authentication protocol?",
+    "options": [
+      { "text": "OAuth 2.0", "correct": true, "rationale": "OAuth 2.0 is fundamentally an authorization/delegation framework issuing access tokens, not an authentication protocol on its own." },
+      { "text": "OpenID Connect", "correct": false, "rationale": "OIDC adds authentication on top of OAuth; it is the authentication layer." },
+      { "text": "Kerberos", "correct": false, "rationale": "Kerberos is a network authentication protocol." },
+      { "text": "SAML", "correct": false, "rationale": "SAML conveys authentication (and authorization) assertions; it is not solely delegated authorization like OAuth." }
+    ]
+  },
+  {
+    "id": "d5-t3-b6",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Federation Trust Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When you federate with a partner's identity provider, which risk MOST directly requires attention?",
+    "options": [
+      { "text": "You inherit trust in the partner's authentication security; weak IdP practices there affect your access", "correct": true, "rationale": "Federation extends trust to the partner IdP, so their authentication weaknesses (e.g., no MFA) become your risk, warranting agreements/standards." },
+      { "text": "Your users must create new local accounts anyway", "correct": false, "rationale": "Federation avoids creating local accounts; that is not the inherited risk." },
+      { "text": "Federation makes encryption impossible", "correct": false, "rationale": "Federation does not prevent encryption." },
+      { "text": "It guarantees the partner can never be breached", "correct": false, "rationale": "Federation provides no such guarantee; the partner's security is a real dependency." }
+    ]
+  },
+  {
+    "id": "d5-t3-b7",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Just-in-Time Provisioning",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A SaaS app creates a local user record automatically the first time a federated user logs in via SAML, based on the assertion. This is MOST accurately called what?",
+    "options": [
+      { "text": "Just-in-time (JIT) provisioning", "correct": true, "rationale": "JIT provisioning creates/updates the account on first federated login using attributes from the assertion, avoiding pre-provisioning every user." },
+      { "text": "Manual account creation", "correct": false, "rationale": "The scenario is automated on first login, not manual." },
+      { "text": "Account deletion", "correct": false, "rationale": "An account is created, not deleted." },
+      { "text": "Password cracking", "correct": false, "rationale": "No password attack occurs; an account is provisioned from a trusted assertion." }
+    ]
+  },
+  {
+    "id": "d5-t3-b8",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Token Theft",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An attacker steals a valid OAuth access token. What is the MOST direct consequence, and a key mitigation?",
+    "options": [
+      { "text": "They can access resources the token permits until it expires; mitigate with short-lived tokens and secure storage", "correct": true, "rationale": "A stolen bearer token grants its scoped access until expiry, so short lifetimes, scoping, and protected storage limit the damage." },
+      { "text": "Nothing, because tokens cannot be misused", "correct": false, "rationale": "Bearer tokens can be replayed to access resources, so theft is consequential." },
+      { "text": "The attacker instantly becomes a domain admin", "correct": false, "rationale": "The token grants only its scoped permissions, not automatic admin rights." },
+      { "text": "The token encrypts the attacker's device", "correct": false, "rationale": "A token is a credential, not an encryption action against the attacker." }
+    ]
+  },
+  {
+    "id": "d5-t3-b9",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Kerberos SSO Scope",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Kerberos provides single sign-on MOST directly within which scope?",
+    "options": [
+      { "text": "Within a Kerberos realm/domain of trusting services and the KDC", "correct": true, "rationale": "Kerberos delivers SSO across services within a realm that trust the same KDC." },
+      { "text": "Across every website on the public internet automatically", "correct": false, "rationale": "Kerberos SSO is scoped to its realm, not the entire public internet." },
+      { "text": "Only to a single application, never more", "correct": false, "rationale": "Kerberos enables SSO across multiple services in the realm, not just one." },
+      { "text": "Only to physical door locks", "correct": false, "rationale": "Kerberos is a network authentication protocol, not a physical lock system." }
+    ]
+  },
+  {
+    "id": "d5-t3-b10",
+    "domainId": "d5",
+    "topicId": "d5-t3",
+    "subtopicTag": "Protocol Selection Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which consideration is LEAST relevant when choosing a federation protocol for web SSO?",
+    "options": [
+      { "text": "The favorite sports team of the IT director", "correct": true, "rationale": "Personal preferences like a sports team have no bearing on protocol selection, making it least relevant." },
+      { "text": "Whether the app ecosystem supports SAML or OIDC", "correct": false, "rationale": "Protocol support across the apps is central to the choice." },
+      { "text": "Whether authentication vs. delegated authorization is needed", "correct": false, "rationale": "Matching the protocol's purpose (authn vs authz) to the need is essential." },
+      { "text": "Security features like signing and token lifetime", "correct": false, "rationale": "Security capabilities directly affect a sound protocol choice." }
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t1-a1",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Order of Volatility",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A live production server is confirmed compromised and management intends to pursue criminal charges. A forensic examiner arrives while the system is still running. Which evidence should the examiner collect FIRST?",
+    "options": [
+      { "text": "The contents of volatile memory (RAM) and current network connections", "correct": true, "rationale": "The order of volatility dictates capturing the most perishable data first; RAM and live network state disappear on shutdown, so they must be collected before disk or archived logs." },
+      { "text": "A bit-for-bit forensic image of the primary hard disk", "correct": false, "rationale": "Disk data is far less volatile than memory and survives a reboot; capturing it before RAM would sacrifice transient evidence that is gone once power is lost." },
+      { "text": "Archived syslog data stored on a remote log server", "correct": false, "rationale": "Archived logs are the least volatile evidence and can be collected last; prioritizing them wastes the window to capture memory." },
+      { "text": "Printed configuration documentation from the change management system", "correct": false, "rationale": "Static documentation is not volatile at all and is not time-sensitive; it is not a first-priority collection item." }
+    ]
+  },
+  {
+    "id": "d7-t1-a2",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Preserve Before Analyze",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An administrator suspects malware on a workstation that may become evidence in a legal case. What should be done FIRST before any analysis?",
+    "options": [
+      { "text": "Run an antivirus scan to identify and remove the malware", "correct": false, "rationale": "Running AV alters the system, may delete the very artifacts needed as evidence, and changes timestamps, destroying evidentiary value." },
+      { "text": "Reboot the machine to clear any active malicious processes", "correct": false, "rationale": "A reboot wipes volatile memory containing live evidence and can trigger anti-forensic cleanup, which is exactly the wrong first move." },
+      { "text": "Preserve the system by capturing volatile data and imaging the disk, documenting chain of custody", "correct": true, "rationale": "Preservation before analysis is the core forensic principle; capturing and documenting first protects both the evidence and its admissibility." },
+      { "text": "Open suspicious files to determine what the malware does", "correct": false, "rationale": "Opening files changes access timestamps and can execute payloads, contaminating the original evidence before it is preserved." }
+    ]
+  },
+  {
+    "id": "d7-t1-a3",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Chain of Custody",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During a trial, opposing counsel argues that a seized hard drive could have been tampered with between seizure and analysis. Which practice BEST refutes this claim?",
+    "options": [
+      { "text": "A documented chain of custody recording every person who handled the drive and when", "correct": true, "rationale": "An unbroken chain of custody proves the evidence was continuously controlled and not altered or substituted, directly countering a tampering claim." },
+      { "text": "A signed statement from the analyst asserting the drive is genuine", "correct": false, "rationale": "A single unsupported assertion does not demonstrate continuous control and is weaker than documented custody plus hashing." },
+      { "text": "The fact that the drive was stored in a locked office", "correct": false, "rationale": "A locked location without documentation of who accessed it does not establish an unbroken, provable custody record." },
+      { "text": "A backup copy of the drive made after analysis", "correct": false, "rationale": "A post-analysis backup does not prove the evidence was untampered during the gap in question; it is not chain-of-custody evidence." }
+    ]
+  },
+  {
+    "id": "d7-t1-a4",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Standard of Proof",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which standard of proof applies to a criminal investigation?",
+    "options": [
+      { "text": "Preponderance of the evidence", "correct": false, "rationale": "Preponderance of the evidence ('more likely than not') is the civil standard, not the higher bar required for criminal cases." },
+      { "text": "Beyond a reasonable doubt", "correct": true, "rationale": "Criminal cases, which can result in loss of liberty, require the highest standard: beyond a reasonable doubt." },
+      { "text": "Clear organizational discretion", "correct": false, "rationale": "Organizational discretion characterizes administrative/internal investigations, not criminal ones." },
+      { "text": "Probable cause", "correct": false, "rationale": "Probable cause is the threshold to obtain a warrant or make an arrest, not the standard for a criminal conviction." }
+    ]
+  },
+  {
+    "id": "d7-t1-a5",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Working Copy vs Original",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A forensic examiner has seized a laptop and needs to analyze its contents. What is the BEST way to conduct the analysis while preserving admissibility?",
+    "options": [
+      { "text": "Analyze a hashed, bit-for-bit forensic image while the original is stored securely", "correct": true, "rationale": "Working from a verified image keeps the original pristine and lets the examiner prove, via matching hashes, that the analyzed copy is identical to the original." },
+      { "text": "Analyze the original drive directly to avoid copy errors", "correct": false, "rationale": "Working on the original risks altering it and destroys the ability to demonstrate the evidence is unchanged, undermining admissibility." },
+      { "text": "Make a simple file-copy of the user's documents and examine those", "correct": false, "rationale": "A logical file copy misses slack space, deleted files, and metadata, and is not a forensically sound, verifiable image." },
+      { "text": "Boot the laptop normally and browse the file system", "correct": false, "rationale": "Booting the original modifies numerous files and timestamps, contaminating the evidence." }
+    ]
+  },
+  {
+    "id": "d7-t1-a6",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Evidence Categories",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An analyst plans to introduce server log files at trial to show an intrusion occurred. Which category of evidence do the log files BEST represent?",
+    "options": [
+      { "text": "Documentary evidence", "correct": true, "rationale": "Logs are written/recorded information offered to prove a fact, which is the definition of documentary evidence." },
+      { "text": "Real (physical) evidence", "correct": false, "rationale": "Real evidence is a tangible object like the physical drive; the log content itself is documentary, not physical." },
+      { "text": "Testimonial evidence", "correct": false, "rationale": "Testimonial evidence is a witness's sworn statement; the logs are records, though an analyst may testify about them." },
+      { "text": "Demonstrative evidence", "correct": false, "rationale": "Demonstrative evidence is an illustrative aid such as a diagram; raw logs are the underlying records, not an aid explaining them." }
+    ]
+  },
+  {
+    "id": "d7-t1-a7",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Hearsay Exception",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Defense counsel objects that automatically generated firewall logs are inadmissible hearsay. Which argument BEST supports admitting them?",
+    "options": [
+      { "text": "They qualify under the business-records exception because they are routinely generated in the normal course of operations", "correct": true, "rationale": "Computer-generated records created routinely in the ordinary course of business commonly qualify under the business-records exception to the hearsay rule." },
+      { "text": "Logs are never considered hearsay under any circumstances", "correct": false, "rationale": "This overstates the rule; logs can raise hearsay concerns and rely on an exception, so a blanket claim is incorrect." },
+      { "text": "The analyst personally witnessed each logged event", "correct": false, "rationale": "Logs are generated automatically, not personally witnessed; this misstates how the evidence was produced." },
+      { "text": "Hearsay rules do not apply to digital evidence", "correct": false, "rationale": "Hearsay rules can apply to digital evidence; admissibility depends on exceptions like business records, not on a special exemption." }
+    ]
+  },
+  {
+    "id": "d7-t1-a8",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Investigation Types",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization is looking into whether an employee violated an internal acceptable-use policy, with potential discipline but no lawsuit or law enforcement involvement. This is MOST accurately classified as which type of investigation?",
+    "options": [
+      { "text": "Administrative investigation", "correct": true, "rationale": "An internal policy/HR matter with the lowest standard and organizational discretion is an administrative investigation." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "No violation of law or law enforcement is involved, so the criminal category and its high standard do not apply." },
+      { "text": "Civil investigation", "correct": false, "rationale": "A civil matter involves a dispute between parties seeking damages/relief, not an internal disciplinary review." },
+      { "text": "Regulatory investigation", "correct": false, "rationale": "A regulatory investigation involves an external industry regulator, which is not present in a purely internal policy review." }
+    ]
+  },
+  {
+    "id": "d7-t1-a9",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Locard's Exchange Principle",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which forensic principle holds that any contact between two entities leaves a trace that may be recovered?",
+    "options": [
+      { "text": "Locard's exchange principle", "correct": true, "rationale": "Locard's exchange principle states that every contact leaves a trace, underpinning the expectation that intruder artifacts can be recovered." },
+      { "text": "The best evidence rule", "correct": false, "rationale": "The best evidence rule concerns preferring originals over copies, not the transfer of trace artifacts." },
+      { "text": "The Daubert standard", "correct": false, "rationale": "The Daubert standard governs the admissibility of expert/scientific testimony, not the concept of trace exchange." },
+      { "text": "The chain of custody", "correct": false, "rationale": "Chain of custody is the documented handling record of evidence, not a principle about trace transfer." }
+    ]
+  },
+  {
+    "id": "d7-t1-a10",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Evidence Admissibility",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which factor is LEAST relevant to whether a piece of digital evidence will be deemed admissible?",
+    "options": [
+      { "text": "The dollar value of the storage device the evidence resides on", "correct": true, "rationale": "The monetary value of the media has no bearing on admissibility, which turns on relevance, reliability, and lawful collection." },
+      { "text": "Whether the evidence was collected lawfully", "correct": false, "rationale": "Lawful (permissible) collection is a core admissibility requirement; unlawfully obtained evidence may be excluded." },
+      { "text": "Whether the evidence is relevant to the matter at hand", "correct": false, "rationale": "Relevance is a fundamental admissibility criterion; irrelevant evidence is excluded." },
+      { "text": "Whether the evidence is reliable and authentic", "correct": false, "rationale": "Reliability/authenticity is essential to admissibility; evidence that cannot be authenticated may be rejected." }
+    ]
+  },
+  {
+    "id": "d7-t1-b1",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Preserve Before Analyze",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A help-desk technician discovers evidence of fraud on an employee's computer that may lead to prosecution. The technician wants to help the investigation. What should the technician be instructed to do FIRST?",
+    "options": [
+      { "text": "Stop touching the system and secure it so trained personnel can preserve evidence", "correct": true, "rationale": "Untrained interaction can destroy evidence and break chain of custody; securing the scene and escalating preserves both the evidence and its admissibility." },
+      { "text": "Copy the incriminating files to a USB drive for safekeeping", "correct": false, "rationale": "An ad-hoc copy by untrained staff alters timestamps, lacks forensic soundness, and breaks chain of custody." },
+      { "text": "Email the files to the security team as attachments", "correct": false, "rationale": "Emailing files is not forensically sound, changes metadata, and does not preserve the original evidence properly." },
+      { "text": "Delete the files to prevent the employee from destroying them", "correct": false, "rationale": "Deleting evidence is destruction of evidence and is never appropriate; it also removes what the case depends on." }
+    ]
+  },
+  {
+    "id": "d7-t1-b2",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Standard of Proof",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which standard of proof is used in most civil cases?",
+    "options": [
+      { "text": "Beyond a reasonable doubt", "correct": false, "rationale": "This is the higher criminal standard, not the civil standard." },
+      { "text": "Preponderance of the evidence", "correct": true, "rationale": "Civil cases are decided on a preponderance of the evidence — the claim is more likely true than not." },
+      { "text": "Absolute certainty", "correct": false, "rationale": "No legal proceeding requires absolute certainty; this is not a recognized standard." },
+      { "text": "Beyond a shadow of a doubt", "correct": false, "rationale": "This is a colloquial phrase, not a legal standard of proof." }
+    ]
+  },
+  {
+    "id": "d7-t1-b3",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Best Evidence Rule",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "When proving the contents of a signed contract in court, which item does the best evidence rule prefer be presented?",
+    "options": [
+      { "text": "The original signed contract document", "correct": true, "rationale": "The best evidence rule favors the original document over copies or descriptions when proving its contents." },
+      { "text": "A photocopy of the contract", "correct": false, "rationale": "A copy is disfavored when the original is available, per the best evidence rule." },
+      { "text": "A witness's recollection of what the contract said", "correct": false, "rationale": "A secondhand recollection is weaker than the original and may also raise hearsay concerns." },
+      { "text": "A summary memo describing the contract terms", "correct": false, "rationale": "A summary is not the original and does not satisfy the best evidence rule for proving contents." }
+    ]
+  },
+  {
+    "id": "d7-t1-b4",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Hashing / Image Integrity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After imaging a suspect drive, an examiner wants to prove months later that the working image is identical to the original at the time of seizure. Which practice BEST provides this assurance?",
+    "options": [
+      { "text": "Computing a cryptographic hash of the original at acquisition and re-hashing the image to confirm they match", "correct": true, "rationale": "Matching cryptographic hashes taken at acquisition and later demonstrate the image is a bit-for-bit, unaltered copy of the original." },
+      { "text": "Storing the original drive in an evidence locker only", "correct": false, "rationale": "Secure storage helps custody but does not itself prove the working image equals the original content." },
+      { "text": "Keeping detailed handwritten notes of the analysis steps", "correct": false, "rationale": "Notes document process but do not cryptographically verify that the image matches the original." },
+      { "text": "Password-protecting the image file", "correct": false, "rationale": "A password protects access but provides no proof the image content is unchanged or matches the original." }
+    ]
+  },
+  {
+    "id": "d7-t1-b5",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Investigation Types",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A financial regulator opens an inquiry into whether a bank failed to retain transaction records as required by law. This is MOST accurately classified as which type of investigation?",
+    "options": [
+      { "text": "Regulatory investigation", "correct": true, "rationale": "An inquiry driven by an external industry regulator enforcing legal/compliance requirements is a regulatory investigation." },
+      { "text": "Administrative investigation", "correct": false, "rationale": "Administrative investigations are internal policy/HR matters, not externally driven by a regulator." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "Absent a criminal charge and law enforcement, this is a regulatory rather than criminal matter." },
+      { "text": "Civil investigation", "correct": false, "rationale": "A civil investigation involves a private dispute between parties, not a regulator enforcing compliance." }
+    ]
+  },
+  {
+    "id": "d7-t1-b6",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Chain of Custody",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Evidence was genuine and properly collected, but the log of who handled it has a two-day gap with no record of custody. What is the MOST likely consequence?",
+    "options": [
+      { "text": "The evidence may be ruled inadmissible due to the broken chain of custody", "correct": true, "rationale": "A gap in custody undermines the ability to prove the evidence was not altered or substituted, which can render even genuine evidence inadmissible." },
+      { "text": "The evidence is automatically admissible because it is genuine", "correct": false, "rationale": "Genuineness alone does not overcome a custody gap; admissibility also requires demonstrable, unbroken handling." },
+      { "text": "The gap has no effect as long as the hash still matches", "correct": false, "rationale": "A matching hash helps integrity claims but does not fully cure an undocumented custody gap that opposing counsel can exploit." },
+      { "text": "The evidence must be recollected from the original scene", "correct": false, "rationale": "Recollection is usually impossible after the fact and is not the standard consequence; the immediate risk is inadmissibility." }
+    ]
+  },
+  {
+    "id": "d7-t1-b7",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Digital Forensics Process",
+    "qualifier": "FIRST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In the digital forensics process (identification, preservation, collection, examination, analysis, presentation), which phase comes FIRST after identifying relevant evidence?",
+    "options": [
+      { "text": "Preservation", "correct": true, "rationale": "Once evidence is identified, preservation comes next to protect it from alteration before it is collected and examined." },
+      { "text": "Analysis", "correct": false, "rationale": "Analysis occurs later, after evidence has been preserved, collected, and examined." },
+      { "text": "Presentation", "correct": false, "rationale": "Presentation is the final phase, delivering findings, not an early step." },
+      { "text": "Examination", "correct": false, "rationale": "Examination follows collection; it cannot precede preservation of the identified evidence." }
+    ]
+  },
+  {
+    "id": "d7-t1-b8",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Order of Volatility",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Following the order of volatility, which of the following data sources is the LEAST volatile and can be collected last?",
+    "options": [
+      { "text": "Archived backup tapes stored offsite", "correct": true, "rationale": "Backups/archives are the most stable, long-lived data and sit at the least-volatile end of the collection order." },
+      { "text": "CPU registers and cache", "correct": false, "rationale": "CPU registers and cache are the most volatile data and must be collected first, not last." },
+      { "text": "Contents of RAM", "correct": false, "rationale": "RAM is highly volatile and is lost on power-off, so it is collected early, not last." },
+      { "text": "Active network connections", "correct": false, "rationale": "Live network state is transient and disappears quickly, so it ranks near the top of the volatility order." }
+    ]
+  },
+  {
+    "id": "d7-t1-b9",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Evidence Categories",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An examiner prepares an animated timeline reconstructing the sequence of an attacker's actions to help the jury understand complex log data. This aid BEST fits which evidence category?",
+    "options": [
+      { "text": "Demonstrative evidence", "correct": true, "rationale": "An illustrative aid created to help explain other evidence to the trier of fact is demonstrative evidence." },
+      { "text": "Real evidence", "correct": false, "rationale": "Real evidence is a tangible object; a created timeline is an aid, not a physical item from the scene." },
+      { "text": "Documentary evidence", "correct": false, "rationale": "Documentary evidence is the underlying records (like the logs); the animation explaining them is demonstrative." },
+      { "text": "Testimonial evidence", "correct": false, "rationale": "Testimonial evidence is a witness's sworn statement, not a visual aid." }
+    ]
+  },
+  {
+    "id": "d7-t1-b10",
+    "domainId": "d7",
+    "topicId": "d7-t1",
+    "subtopicTag": "Preserve Volatile Evidence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A running server contains an in-memory malware payload that never writes itself to disk. Rebooting is being considered to restore service. From an evidence standpoint, what is the MOST important consideration?",
+    "options": [
+      { "text": "Capture a memory image before rebooting, because the payload exists only in RAM and will be lost on power cycle", "correct": true, "rationale": "Memory-resident-only malware is destroyed by a reboot; capturing volatile memory first is essential to preserve the sole copy of the evidence." },
+      { "text": "Reboot immediately since the malware will be captured in the next disk backup", "correct": false, "rationale": "A disk backup cannot capture memory-only malware that never touches disk; rebooting would destroy the evidence." },
+      { "text": "Run antivirus first to quarantine the payload as evidence", "correct": false, "rationale": "AV quarantine alters the system and may not preserve a forensically sound copy of the live memory state." },
+      { "text": "Nothing special is needed because disk evidence is equivalent to memory evidence", "correct": false, "rationale": "Disk and memory evidence are not equivalent; memory holds transient artifacts that disk does not, especially for fileless malware." }
+    ]
+  }
+]

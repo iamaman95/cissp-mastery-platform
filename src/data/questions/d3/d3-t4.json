@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t4-a1",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Reference Monitor Concept",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which concept describes the mechanism that mediates every access of subjects to objects and cannot be bypassed?",
+    "options": [
+      { "text": "The reference monitor", "correct": true, "rationale": "The reference monitor is the abstract mechanism that mediates all subject-object access; it must be non-bypassable, tamper-proof, and verifiable." },
+      { "text": "A firewall", "correct": false, "rationale": "A firewall filters network traffic; it does not mediate all subject-object access within a system." },
+      { "text": "A rainbow table", "correct": false, "rationale": "A rainbow table is a password-cracking tool, unrelated to access mediation." },
+      { "text": "A hash function", "correct": false, "rationale": "A hash provides integrity fingerprints, not subject-object access mediation." }
+    ]
+  },
+  {
+    "id": "d3-t4-a2",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Reference Monitor Properties",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which set of properties MOST correctly describes the requirements of a reference monitor?",
+    "options": [
+      { "text": "Tamper-proof, always invoked, and verifiable (small enough to analyze)", "correct": true, "rationale": "A reference monitor must be tamper-proof, always invoked (non-bypassable), and small/simple enough to be verified." },
+      { "text": "Fast, colorful, and cloud-hosted", "correct": false, "rationale": "These are not the defining properties of a reference monitor." },
+      { "text": "Optional, occasionally invoked, and complex", "correct": false, "rationale": "This contradicts the requirements; it must be always invoked and verifiable/simple, not optional or complex." },
+      { "text": "Public, shareable, and unencrypted", "correct": false, "rationale": "These attributes are irrelevant to and inconsistent with reference-monitor requirements." }
+    ]
+  },
+  {
+    "id": "d3-t4-a3",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Security Kernel vs Reference Monitor",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "How do the reference monitor and the security kernel MOST accurately relate?",
+    "options": [
+      { "text": "The security kernel is the concrete implementation of the abstract reference monitor concept", "correct": true, "rationale": "The reference monitor is the concept; the security kernel (hardware/software/firmware) implements it." },
+      { "text": "They are unrelated technologies", "correct": false, "rationale": "They are directly related — one implements the other." },
+      { "text": "The reference monitor implements the security kernel", "correct": false, "rationale": "This reverses the relationship; the kernel implements the reference monitor concept." },
+      { "text": "Both are encryption algorithms", "correct": false, "rationale": "Neither is an encryption algorithm; they are access-mediation concepts/components." }
+    ]
+  },
+  {
+    "id": "d3-t4-a4",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Trusted Computing Base",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The Trusted Computing Base (TCB) is MOST accurately defined as which of the following?",
+    "options": [
+      { "text": "The totality of protection mechanisms that together enforce the security policy", "correct": true, "rationale": "The TCB is the sum of all hardware, software, and firmware components responsible for enforcing security policy." },
+      { "text": "A single antivirus program", "correct": false, "rationale": "The TCB is far broader than one application; it is the collection of all trusted protection components." },
+      { "text": "The user's web browser", "correct": false, "rationale": "A browser is typically untrusted application code, not the TCB." },
+      { "text": "The company's marketing database", "correct": false, "rationale": "A business database is data, not the system's protection mechanisms." }
+    ]
+  },
+  {
+    "id": "d3-t4-a5",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Memory Isolation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An exploited browser process is unable to read a banking app's memory on the same machine. Which capability MOST directly provides this protection?",
+    "options": [
+      { "text": "Memory protection / process isolation (separate address spaces)", "correct": true, "rationale": "The OS gives each process an isolated address space, so one process cannot read or corrupt another's memory." },
+      { "text": "A stronger Wi-Fi password", "correct": false, "rationale": "Network credentials do not isolate process memory." },
+      { "text": "A brighter monitor", "correct": false, "rationale": "Display hardware has no effect on memory isolation." },
+      { "text": "A larger hard drive", "correct": false, "rationale": "Storage size does not provide inter-process memory isolation." }
+    ]
+  },
+  {
+    "id": "d3-t4-a6",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Protection Rings",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In a protection-ring architecture, which ring is MOST privileged?",
+    "options": [
+      { "text": "Ring 0 (the kernel)", "correct": true, "rationale": "Ring 0 is the most privileged level, running the kernel; higher-numbered rings are less privileged." },
+      { "text": "Ring 3 (user applications)", "correct": false, "rationale": "Ring 3 is typically the least privileged, running user applications." },
+      { "text": "The highest-numbered ring available", "correct": false, "rationale": "Higher ring numbers mean less privilege, not more." },
+      { "text": "All rings have equal privilege", "correct": false, "rationale": "The ring model exists precisely to differentiate privilege levels." }
+    ]
+  },
+  {
+    "id": "d3-t4-a7",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "TPM Function",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A laptop uses a hardware chip to securely store its full-disk-encryption key and verify boot integrity. This chip is MOST accurately called what?",
+    "options": [
+      { "text": "A Trusted Platform Module (TPM)", "correct": true, "rationale": "A TPM provides hardware-based secure key storage and integrity/measured-boot functions, commonly protecting FDE keys." },
+      { "text": "A network interface card", "correct": false, "rationale": "A NIC handles network connectivity, not key storage or boot integrity." },
+      { "text": "A graphics processing unit", "correct": false, "rationale": "A GPU accelerates graphics/compute, not cryptographic key storage." },
+      { "text": "A power supply unit", "correct": false, "rationale": "A PSU provides power, unrelated to key storage." }
+    ]
+  },
+  {
+    "id": "d3-t4-a8",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "DEP/NX",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To prevent injected code from executing in memory regions meant only for data, which system capability is BEST?",
+    "options": [
+      { "text": "Data Execution Prevention (DEP/NX) marking data pages non-executable", "correct": true, "rationale": "DEP/NX marks data memory as non-executable, blocking a common code-injection exploitation technique." },
+      { "text": "A louder system beep on errors", "correct": false, "rationale": "Audible alerts do not prevent code execution in data memory." },
+      { "text": "Disabling the firewall", "correct": false, "rationale": "Disabling the firewall weakens security and does not address in-memory code execution." },
+      { "text": "Increasing screen brightness", "correct": false, "rationale": "Display settings are irrelevant to memory execution controls." }
+    ]
+  },
+  {
+    "id": "d3-t4-a9",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "ASLR",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A system randomizes the memory addresses used by processes each time they run, making it harder for exploits to predict where to jump. This capability is MOST accurately called what?",
+    "options": [
+      { "text": "Address Space Layout Randomization (ASLR)", "correct": true, "rationale": "ASLR randomizes memory layout so attackers cannot reliably predict addresses, hindering memory-corruption exploits." },
+      { "text": "Round-robin scheduling", "correct": false, "rationale": "Round-robin scheduling allocates CPU time; it does not randomize memory layout." },
+      { "text": "Disk defragmentation", "correct": false, "rationale": "Defragmentation reorganizes disk storage, not process memory layout." },
+      { "text": "Load balancing", "correct": false, "rationale": "Load balancing distributes traffic across servers, unrelated to memory randomization." }
+    ]
+  },
+  {
+    "id": "d3-t4-a10",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Virtualization Isolation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Running each risky workload in its own isolated virtual machine MOST directly provides which security benefit?",
+    "options": [
+      { "text": "Isolation, so a compromise in one VM is contained from others", "correct": true, "rationale": "Virtualization isolates workloads so that compromise of one guest is contained and does not directly affect others (subject to hypervisor security)." },
+      { "text": "Guaranteed immunity from all attacks", "correct": false, "rationale": "Isolation reduces blast radius but does not make workloads immune to attack." },
+      { "text": "Elimination of the need for patching", "correct": false, "rationale": "VMs still require patching; isolation does not remove that need." },
+      { "text": "Automatic encryption of all data", "correct": false, "rationale": "Virtualization provides isolation, not automatic data encryption." }
+    ]
+  },
+  {
+    "id": "d3-t4-b1",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Always Invoked Property",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An access-control mechanism can sometimes be bypassed under certain conditions. Which reference-monitor property does this MOST directly violate?",
+    "options": [
+      { "text": "Always invoked (non-bypassable)", "correct": true, "rationale": "If access can bypass the mechanism, it is not 'always invoked,' violating a core reference-monitor requirement." },
+      { "text": "Colorful user interface", "correct": false, "rationale": "UI aesthetics are not a reference-monitor property." },
+      { "text": "Cloud hosting", "correct": false, "rationale": "Hosting location is not a reference-monitor property." },
+      { "text": "Large and complex", "correct": false, "rationale": "Reference monitors should be small/simple; largeness is not a required property and is not what a bypass violates." }
+    ]
+  },
+  {
+    "id": "d3-t4-b2",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "TCB Minimization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is keeping the Trusted Computing Base as small as possible MOST desirable?",
+    "options": [
+      { "text": "A smaller TCB is easier to verify and has less code that could contain exploitable flaws", "correct": true, "rationale": "Minimizing the TCB reduces the amount of trusted code, making it more analyzable and less likely to harbor vulnerabilities." },
+      { "text": "A smaller TCB automatically encrypts all data", "correct": false, "rationale": "TCB size is unrelated to automatic encryption." },
+      { "text": "A larger TCB is always more secure", "correct": false, "rationale": "A larger trusted base means more code to trust and more potential flaws — less desirable." },
+      { "text": "TCB size has no security relevance", "correct": false, "rationale": "TCB size directly affects verifiability and attack surface of the trusted core." }
+    ]
+  },
+  {
+    "id": "d3-t4-b3",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "User vs Kernel Mode",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A compromised user-mode application cannot directly execute privileged kernel instructions. Which capability MOST directly enforces this separation?",
+    "options": [
+      { "text": "Processor privilege levels (protection rings) separating kernel and user mode", "correct": true, "rationale": "Privilege levels/rings keep kernel operations (ring 0) separate from user-mode code, preventing direct privileged execution by user apps." },
+      { "text": "A screensaver timeout", "correct": false, "rationale": "Screensavers do not enforce kernel/user separation." },
+      { "text": "Email spam filtering", "correct": false, "rationale": "Spam filtering is unrelated to CPU privilege separation." },
+      { "text": "A larger monitor", "correct": false, "rationale": "Display size has no role in privilege separation." }
+    ]
+  },
+  {
+    "id": "d3-t4-b4",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "TPM Measured Boot",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A laptop's TPM refuses to release the disk-encryption key after boot files are tampered with. This behavior MOST directly demonstrates which capability?",
+    "options": [
+      { "text": "Boot integrity measurement (measured/secure boot) tied to key release", "correct": true, "rationale": "A TPM can measure boot components and release keys only if integrity checks pass, so tampering prevents key release." },
+      { "text": "Faster CPU performance", "correct": false, "rationale": "Performance is unrelated to integrity-gated key release." },
+      { "text": "Automatic data compression", "correct": false, "rationale": "Compression is unrelated to boot integrity measurement." },
+      { "text": "Network load balancing", "correct": false, "rationale": "Load balancing is unrelated to TPM boot integrity functions." }
+    ]
+  },
+  {
+    "id": "d3-t4-b5",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Reference Monitor Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which statement best defines the reference monitor?",
+    "options": [
+      { "text": "An abstract machine that mediates all access between subjects and objects", "correct": true, "rationale": "The reference monitor is the abstract concept mediating every subject-object access according to the security policy." },
+      { "text": "A tool that cracks password hashes", "correct": false, "rationale": "That describes a cracking tool, not the reference monitor." },
+      { "text": "A backup rotation schedule", "correct": false, "rationale": "Backup scheduling is unrelated to access mediation." },
+      { "text": "A physical door lock", "correct": false, "rationale": "The reference monitor is a logical access-mediation concept, not a physical lock." }
+    ]
+  },
+  {
+    "id": "d3-t4-b6",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Process Isolation Benefit",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security benefit of process isolation provided by the operating system?",
+    "options": [
+      { "text": "One process cannot read or corrupt another process's memory", "correct": true, "rationale": "Process isolation confines each process to its own memory, preventing cross-process reading or tampering." },
+      { "text": "Processes run faster", "correct": false, "rationale": "Isolation is a protection mechanism, not primarily a performance feature." },
+      { "text": "Data is automatically backed up", "correct": false, "rationale": "Isolation does not perform backups." },
+      { "text": "The network becomes encrypted", "correct": false, "rationale": "Process isolation does not encrypt network traffic." }
+    ]
+  },
+  {
+    "id": "d3-t4-b7",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Trusted vs Untrusted Components",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When analyzing a system's security, which component would MOST likely be considered part of the TCB?",
+    "options": [
+      { "text": "The operating system kernel enforcing access control", "correct": true, "rationale": "The kernel enforcing security policy is a core part of the trusted computing base." },
+      { "text": "A user's downloaded game", "correct": false, "rationale": "A user application like a game is untrusted code, outside the TCB." },
+      { "text": "A marketing spreadsheet", "correct": false, "rationale": "A spreadsheet is data/application content, not a trusted protection mechanism." },
+      { "text": "A promotional email", "correct": false, "rationale": "An email is not a system protection component." }
+    ]
+  },
+  {
+    "id": "d3-t4-b8",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "TPM vs Software Key Store",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why is storing an encryption key in a TPM MOST preferable to storing it in a plaintext OS file?",
+    "options": [
+      { "text": "The TPM keeps the key in tamper-resistant hardware, not exposed in the file system", "correct": true, "rationale": "A TPM protects keys in hardware, unlike a plaintext file that any file-system access could read." },
+      { "text": "The TPM makes the key run faster", "correct": false, "rationale": "The benefit is protection, not key speed." },
+      { "text": "A plaintext file is more secure than a TPM", "correct": false, "rationale": "A plaintext key file is far less secure than TPM-protected storage." },
+      { "text": "The TPM publishes the key for transparency", "correct": false, "rationale": "A TPM protects keys from exposure; it does not publish them." }
+    ]
+  },
+  {
+    "id": "d3-t4-b9",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Layered Hardware Defenses",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "To harden endpoints against memory-corruption exploits, which combination of system capabilities is BEST?",
+    "options": [
+      { "text": "ASLR and DEP/NX together", "correct": true, "rationale": "Combining address-space randomization (ASLR) with non-executable data memory (DEP/NX) raises the difficulty of memory-corruption exploitation." },
+      { "text": "Disabling ASLR and DEP for compatibility", "correct": false, "rationale": "Disabling these protections makes exploitation easier, the opposite of hardening." },
+      { "text": "Only changing the desktop wallpaper", "correct": false, "rationale": "Wallpaper has no security effect on memory exploits." },
+      { "text": "Turning off memory protection entirely", "correct": false, "rationale": "Removing memory protection removes a key defense." }
+    ]
+  },
+  {
+    "id": "d3-t4-b10",
+    "domainId": "d3",
+    "topicId": "d3-t4",
+    "subtopicTag": "Capability Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant as a built-in security capability of an information system?",
+    "options": [
+      { "text": "The desktop background image chosen by the user", "correct": true, "rationale": "The wallpaper image is cosmetic and provides no security capability, making it least relevant." },
+      { "text": "Memory protection / process isolation", "correct": false, "rationale": "Process isolation is a core security capability." },
+      { "text": "Protection rings / privilege levels", "correct": false, "rationale": "Privilege separation via rings is a fundamental security capability." },
+      { "text": "A TPM for key storage and boot integrity", "correct": false, "rationale": "A TPM provides real hardware security capabilities." }
+    ]
+  }
+]

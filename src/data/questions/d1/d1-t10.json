@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t10-a1",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "ALE Calculation",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An asset is valued at $200,000. A threat has an exposure factor of 25% and is expected to occur twice per year. What is the Annualized Loss Expectancy (ALE)?",
+    "options": [
+      { "text": "$100,000", "correct": true, "rationale": "SLE = AV × EF = $200,000 × 0.25 = $50,000; ALE = SLE × ARO = $50,000 × 2 = $100,000." },
+      { "text": "$50,000", "correct": false, "rationale": "$50,000 is the SLE (single loss), not the ALE; you must still multiply by the ARO of 2." },
+      { "text": "$400,000", "correct": false, "rationale": "This incorrectly multiplies asset value by ARO without applying the exposure factor." },
+      { "text": "$25,000", "correct": false, "rationale": "This misapplies the percentage; SLE alone is $50,000, and ALE is higher after multiplying by ARO." }
+    ]
+  },
+  {
+    "id": "d1-t10-a2",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Control Cost Justification",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A risk has an ALE of $40,000. A vendor proposes a control costing $60,000 per year that would eliminate the risk. What is the BEST recommendation?",
+    "options": [
+      { "text": "Do not implement this control as proposed; its annual cost exceeds the annual expected loss it prevents", "correct": true, "rationale": "Spending $60,000/year to prevent a $40,000/year expected loss is not cost-justified; a cheaper control or partial mitigation should be sought." },
+      { "text": "Implement it immediately because eliminating risk is always worth any price", "correct": false, "rationale": "Eliminating risk at any price violates cost-benefit principles; you should not spend more than the loss is worth." },
+      { "text": "Ignore the risk entirely with no analysis", "correct": false, "rationale": "Ignoring the risk without a documented decision is negligent; the point is that this specific control is overpriced, not that the risk is irrelevant." },
+      { "text": "Double the control's budget to be safe", "correct": false, "rationale": "Increasing spend further worsens the cost-benefit imbalance." }
+    ]
+  },
+  {
+    "id": "d1-t10-a3",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Treatment - Transfer",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company purchases cyber-insurance to cover potential breach costs. This is MOST accurately which risk treatment?",
+    "options": [
+      { "text": "Risk transfer (sharing)", "correct": true, "rationale": "Insurance shifts the financial impact of the risk to a third party, which is risk transfer." },
+      { "text": "Risk avoidance", "correct": false, "rationale": "Avoidance means stopping the risky activity; the company continues operating and buys coverage instead." },
+      { "text": "Risk acceptance", "correct": false, "rationale": "Acceptance retains the risk with no offsetting action; purchasing insurance is an active transfer." },
+      { "text": "Risk mitigation", "correct": false, "rationale": "Mitigation reduces likelihood/impact via controls; insurance does not reduce the chance of a breach, only its financial impact on the insured." }
+    ]
+  },
+  {
+    "id": "d1-t10-a4",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Residual Risk Ownership",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After controls are applied, some risk remains. Who should BEST formally accept this residual risk?",
+    "options": [
+      { "text": "The business/data owner (senior management) accountable for the asset", "correct": true, "rationale": "Formal risk acceptance is a management decision made by the accountable business/data owner, not the security team." },
+      { "text": "The junior security analyst who found the risk", "correct": false, "rationale": "Analysts identify and advise on risk but lack authority to accept it on the organization's behalf." },
+      { "text": "The external penetration tester", "correct": false, "rationale": "A third-party tester has no authority to accept the organization's residual risk." },
+      { "text": "No one; residual risk requires no decision", "correct": false, "rationale": "Residual risk must be explicitly and formally accepted by an appropriate authority, not left undecided." }
+    ]
+  },
+  {
+    "id": "d1-t10-a5",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Quantitative vs Qualitative",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization lacks reliable loss data but needs to prioritize many risks quickly. Which assessment approach is MOST appropriate?",
+    "options": [
+      { "text": "Qualitative assessment using relative high/medium/low ratings", "correct": true, "rationale": "When precise monetary data is unavailable, qualitative rating is faster and practical for prioritization." },
+      { "text": "Purely quantitative assessment requiring exact dollar figures", "correct": false, "rationale": "Quantitative analysis depends on reliable data the organization admits it lacks, making it impractical here." },
+      { "text": "No assessment at all", "correct": false, "rationale": "Skipping assessment leaves risks unprioritized and unmanaged." },
+      { "text": "Waiting until a breach provides real numbers", "correct": false, "rationale": "Waiting for a breach to gather data is reactive and negligent." }
+    ]
+  },
+  {
+    "id": "d1-t10-a6",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "SLE Formula",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Single Loss Expectancy (SLE) is calculated using which formula?",
+    "options": [
+      { "text": "Asset Value × Exposure Factor", "correct": true, "rationale": "SLE = AV × EF, the expected loss from one occurrence of the risk." },
+      { "text": "SLE × Annualized Rate of Occurrence", "correct": false, "rationale": "That formula (SLE × ARO) yields ALE, not SLE." },
+      { "text": "Asset Value ÷ Exposure Factor", "correct": false, "rationale": "SLE is a product, not a quotient, of AV and EF." },
+      { "text": "Threat × Vulnerability", "correct": false, "rationale": "That conceptual expression describes risk generally, not the SLE monetary formula." }
+    ]
+  },
+  {
+    "id": "d1-t10-a7",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Avoidance",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After analysis, a company decides not to launch a new product feature because it would introduce unacceptable regulatory risk. This decision MOST closely reflects which treatment?",
+    "options": [
+      { "text": "Risk avoidance", "correct": true, "rationale": "Choosing not to undertake the risky activity altogether is risk avoidance." },
+      { "text": "Risk acceptance", "correct": false, "rationale": "Acceptance would mean proceeding while retaining the risk; here the activity is abandoned." },
+      { "text": "Risk transfer", "correct": false, "rationale": "No third party is assuming the impact; the activity is simply not pursued." },
+      { "text": "Risk mitigation", "correct": false, "rationale": "Mitigation would reduce the risk while still launching; instead the feature is dropped." }
+    ]
+  },
+  {
+    "id": "d1-t10-a8",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Appetite",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two similar firms treat the same risk differently — one accepts it, the other mitigates heavily. Which concept BEST explains the difference?",
+    "options": [
+      { "text": "Differing risk appetite/tolerance", "correct": true, "rationale": "Organizations with different risk appetites make different, both-valid treatment choices for the same risk." },
+      { "text": "One firm miscalculated the ALE by definition", "correct": false, "rationale": "Different treatment does not imply a calculation error; appetite legitimately drives divergent choices." },
+      { "text": "Risk appetite has no effect on treatment decisions", "correct": false, "rationale": "Risk appetite is a primary driver of how much risk an organization chooses to retain versus treat." },
+      { "text": "Regulations forbid mitigation", "correct": false, "rationale": "No regulation forbids mitigation; the difference stems from appetite, not prohibition." }
+    ]
+  },
+  {
+    "id": "d1-t10-a9",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Identification First",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization is starting a risk management program. What must occur FIRST before risk can be assessed or treated?",
+    "options": [
+      { "text": "Identify assets, threats, and vulnerabilities (risk identification)", "correct": true, "rationale": "You cannot assess or treat what you have not identified; asset/threat/vulnerability identification is the first stage." },
+      { "text": "Purchase insurance for every possible risk", "correct": false, "rationale": "Transfer decisions come after identification and assessment, not before." },
+      { "text": "Accept all risks by default", "correct": false, "rationale": "Blanket acceptance without identification/assessment is not risk management." },
+      { "text": "Deploy every available security control", "correct": false, "rationale": "Deploying controls before identifying/assessing risk wastes resources and may miss real exposures." }
+    ]
+  },
+  {
+    "id": "d1-t10-a10",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Total vs Residual Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A CISO reports that after applying controls, exposure dropped from a 'total risk' level to a lower remaining level. The remaining level is MOST accurately called what?",
+    "options": [
+      { "text": "Residual risk", "correct": true, "rationale": "Residual risk is what remains after controls are applied to total risk." },
+      { "text": "Inherent risk", "correct": false, "rationale": "Inherent/total risk is the exposure before controls, i.e., the starting level, not the remaining level." },
+      { "text": "Zero risk", "correct": false, "rationale": "Controls reduce but do not eliminate risk; some residual always remains." },
+      { "text": "Transferred risk", "correct": false, "rationale": "Transfer moves financial impact to a third party; the scenario describes reduction via controls, leaving residual risk." }
+    ]
+  },
+  {
+    "id": "d1-t10-b1",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "ALE Comparison for Decision",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A risk currently has an ALE of $90,000. A proposed control costs $30,000/year and would reduce the ALE to $20,000. What is the BEST way to express the value of this control?",
+    "options": [
+      { "text": "It provides a net annual benefit of $40,000 (ALE reduced by $70,000 for a $30,000 cost)", "correct": true, "rationale": "ALE drops from $90,000 to $20,000 (a $70,000 reduction) at a $30,000 cost, yielding a $40,000 net annual benefit — clearly justified." },
+      { "text": "It provides no benefit because risk still remains", "correct": false, "rationale": "Remaining residual risk does not negate the substantial $70,000 reduction the control achieves." },
+      { "text": "It costs more than it saves", "correct": false, "rationale": "The $30,000 cost is far less than the $70,000 loss reduction, so it saves more than it costs." },
+      { "text": "The control's value cannot be estimated", "correct": false, "rationale": "The value is directly estimable by comparing ALE reduction to control cost." }
+    ]
+  },
+  {
+    "id": "d1-t10-b2",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Acceptance Documentation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Management decides to accept a moderate residual risk rather than fund a control. What should be done FIRST to make this a defensible decision?",
+    "options": [
+      { "text": "Formally document the accepted risk with sign-off from the accountable owner", "correct": true, "rationale": "A documented, signed acceptance by the accountable owner makes the decision defensible and auditable." },
+      { "text": "Verbally agree and record nothing", "correct": false, "rationale": "An undocumented acceptance leaves no accountability trail and is indefensible later." },
+      { "text": "Delete the risk from the risk register", "correct": false, "rationale": "Removing the risk from the register hides it; accepted risks should remain tracked and monitored." },
+      { "text": "Announce the accepted risk to customers", "correct": false, "rationale": "Publicizing accepted internal risks to customers is unnecessary and potentially harmful, and is not the first governance step." }
+    ]
+  },
+  {
+    "id": "d1-t10-b3",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Exposure Factor Meaning",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In quantitative risk analysis, the exposure factor (EF) represents which of the following?",
+    "options": [
+      { "text": "The percentage of an asset's value lost when a specific threat occurs", "correct": true, "rationale": "EF is the proportion of asset value lost in a single realization of the threat." },
+      { "text": "The number of times a threat occurs per year", "correct": false, "rationale": "That describes ARO, not EF." },
+      { "text": "The total monetary value of the asset", "correct": false, "rationale": "That is asset value (AV), not the exposure factor." },
+      { "text": "The cost of the mitigating control", "correct": false, "rationale": "Control cost is separate from EF." }
+    ]
+  },
+  {
+    "id": "d1-t10-b4",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Insurance Does Not Remove Ownership",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After buying cyber-insurance, an executive claims the organization no longer 'owns' the breach risk. Which correction is MOST accurate?",
+    "options": [
+      { "text": "The organization still owns the risk and its operational/reputational impact; insurance only transfers part of the financial impact", "correct": true, "rationale": "Transfer shares financial loss but does not eliminate the organization's ownership of the risk or its non-financial (reputational, operational) consequences." },
+      { "text": "Insurance fully eliminates all forms of the risk", "correct": false, "rationale": "Insurance covers financial loss, not reputational harm, downtime, or the underlying likelihood of a breach." },
+      { "text": "The insurer now performs all of the organization's security", "correct": false, "rationale": "Insurers indemnify losses; they do not operate the insured's security program." },
+      { "text": "Risk ownership automatically passes to customers", "correct": false, "rationale": "Customers do not assume the organization's risk ownership through an insurance purchase." }
+    ]
+  },
+  {
+    "id": "d1-t10-b5",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Register",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization wants a single authoritative place to track identified risks, their owners, treatments, and status. What is the BEST artifact?",
+    "options": [
+      { "text": "A risk register", "correct": true, "rationale": "A risk register centrally records identified risks with owners, assessments, treatments, and status for ongoing management." },
+      { "text": "A marketing calendar", "correct": false, "rationale": "A marketing calendar tracks campaigns, not risks." },
+      { "text": "A network topology diagram", "correct": false, "rationale": "A topology diagram maps infrastructure, not risk treatment status." },
+      { "text": "An employee org chart", "correct": false, "rationale": "An org chart shows reporting lines, not tracked risks." }
+    ]
+  },
+  {
+    "id": "d1-t10-b6",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Control Categories",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company installs CCTV cameras primarily so that potential wrongdoers, seeing them, choose not to act. This control functions MOST as which type?",
+    "options": [
+      { "text": "Deterrent", "correct": true, "rationale": "A control whose primary aim is to discourage would-be actors by its visible presence is a deterrent control." },
+      { "text": "Corrective", "correct": false, "rationale": "Corrective controls restore systems after an incident; discouraging action beforehand is not correction." },
+      { "text": "Recovery", "correct": false, "rationale": "Recovery controls restore operations post-incident, not discourage acts beforehand." },
+      { "text": "Compensating", "correct": false, "rationale": "A compensating control substitutes for a primary control that can't be used; that is not the described intent here." }
+    ]
+  },
+  {
+    "id": "d1-t10-b7",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Monitoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After treating risks, what is the BEST practice to keep the risk picture accurate over time?",
+    "options": [
+      { "text": "Continuously monitor and periodically reassess risks as the environment changes", "correct": true, "rationale": "Risk is dynamic; ongoing monitoring and periodic reassessment keep treatments aligned with current threats and assets." },
+      { "text": "Treat the initial assessment as permanent", "correct": false, "rationale": "A one-time assessment becomes stale as threats, assets, and controls change." },
+      { "text": "Only reassess after the company is acquired", "correct": false, "rationale": "Reassessment tied to a rare corporate event ignores continuous change in the risk landscape." },
+      { "text": "Discard the risk register after treatment", "correct": false, "rationale": "The register must be maintained for ongoing monitoring, not discarded." }
+    ]
+  },
+  {
+    "id": "d1-t10-b8",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Safeguard Value",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "The value of a specific safeguard to the company is MOST accurately calculated as which of the following?",
+    "options": [
+      { "text": "(ALE before the safeguard) − (ALE after the safeguard) − (annual cost of the safeguard)", "correct": true, "rationale": "The safeguard's value equals the reduction in ALE it produces minus its annual cost — the standard CISSP cost-benefit formula." },
+      { "text": "The asset value multiplied by two", "correct": false, "rationale": "This has no basis in cost-benefit analysis and ignores ALE reduction and control cost." },
+      { "text": "The number of employees times the ARO", "correct": false, "rationale": "This combination is meaningless for computing a safeguard's financial value." },
+      { "text": "The purchase price alone with no reference to loss reduction", "correct": false, "rationale": "Cost alone ignores the benefit (ALE reduction) the safeguard provides." }
+    ]
+  },
+  {
+    "id": "d1-t10-b9",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Qualitative Technique",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A team gathers expert opinions anonymously across multiple rounds to reach consensus on risk ratings without dominant voices skewing results. This technique is BEST known as what?",
+    "options": [
+      { "text": "The Delphi technique", "correct": true, "rationale": "The Delphi technique uses anonymous, iterative expert input to reach consensus while reducing peer-pressure bias." },
+      { "text": "Brute-force analysis", "correct": false, "rationale": "Brute force is an attack method, not a consensus-gathering technique." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing probes technical weaknesses; it is not a qualitative consensus method." },
+      { "text": "Regression testing", "correct": false, "rationale": "Regression testing verifies software after changes, unrelated to risk consensus." }
+    ]
+  },
+  {
+    "id": "d1-t10-b10",
+    "domainId": "d1",
+    "topicId": "d1-t10",
+    "subtopicTag": "Risk Cannot Be Zero",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which statement about risk is LEAST accurate and should be rejected on a CISSP exam?",
+    "options": [
+      { "text": "With enough controls, risk can be reduced to absolute zero", "correct": true, "rationale": "Risk can be reduced but never eliminated entirely; claims of zero risk are false and should be rejected." },
+      { "text": "Residual risk should be formally accepted by an owner", "correct": false, "rationale": "This is accurate: residual risk requires formal acceptance, so it is not the statement to reject." },
+      { "text": "Controls should not cost more than the expected loss they prevent", "correct": false, "rationale": "This is a valid cost-benefit principle, not the false statement." },
+      { "text": "Risk is a function of likelihood and impact", "correct": false, "rationale": "This is an accurate definition of risk and should not be rejected." }
+    ]
+  }
+]

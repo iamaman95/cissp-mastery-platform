@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t11-a1",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO vs RPO",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A business states it can lose at most 15 minutes of transaction data in a disaster. Which recovery metric does this statement BEST define?",
+    "options": [
+      { "text": "Recovery Point Objective (RPO)", "correct": true, "rationale": "RPO measures the maximum acceptable data loss, expressed as how far back in time to the last good recovery point, which matches the 15-minute limit." },
+      { "text": "Recovery Time Objective (RTO)", "correct": false, "rationale": "RTO measures time to restore systems, not the amount of data loss tolerated." },
+      { "text": "Maximum Tolerable Downtime (MTD)", "correct": false, "rationale": "MTD is the maximum outage duration, not the data-loss tolerance." },
+      { "text": "Work Recovery Time (WRT)", "correct": false, "rationale": "WRT is the post-restore validation/reintegration time, unrelated to data-loss tolerance." }
+    ]
+  },
+  {
+    "id": "d7-t11-a2",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO vs RPO",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team commits to having a downed system technically restored within 4 hours of an outage. Which metric does this target BEST define?",
+    "options": [
+      { "text": "Recovery Time Objective (RTO)", "correct": true, "rationale": "RTO is the target time to restore a system after disruption, which the 4-hour commitment describes." },
+      { "text": "Recovery Point Objective (RPO)", "correct": false, "rationale": "RPO measures acceptable data loss, not the time to restore the system." },
+      { "text": "Mean Time Between Failures (MTBF)", "correct": false, "rationale": "MTBF is a reliability metric for expected time between failures, not a recovery target." },
+      { "text": "Annualized Loss Expectancy (ALE)", "correct": false, "rationale": "ALE is a quantitative risk metric for expected yearly loss, not a recovery time." }
+    ]
+  },
+  {
+    "id": "d7-t11-a3",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "MTD Relationship",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A function has an MTD of 8 hours. The proposed RTO is 4 hours and WRT is 3 hours. Which conclusion is MOST accurate?",
+    "options": [
+      { "text": "The plan is viable because RTO + WRT (7 hours) is within the 8-hour MTD", "correct": true, "rationale": "RTO plus WRT must not exceed MTD; 7 hours fits within 8 hours, leaving a margin." },
+      { "text": "The plan fails because RTO alone exceeds MTD", "correct": false, "rationale": "RTO is 4 hours, well under the 8-hour MTD, so RTO alone does not exceed it." },
+      { "text": "MTD is irrelevant to RTO and WRT", "correct": false, "rationale": "MTD is the outer bound that RTO + WRT must fit within, so it is directly relevant." },
+      { "text": "WRT should be ignored when checking against MTD", "correct": false, "rationale": "WRT must be added to RTO when comparing to MTD; ignoring it can hide an overrun." }
+    ]
+  },
+  {
+    "id": "d7-t11-a4",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RPO Drives Backup Frequency",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A system has an RPO of only a few minutes. Which backup/replication approach BEST satisfies this?",
+    "options": [
+      { "text": "Near-continuous replication or transaction-log journaling", "correct": true, "rationale": "A minutes-level RPO cannot tolerate gaps, so continuous replication/journaling is required to limit data loss to minutes." },
+      { "text": "Nightly full backups to tape", "correct": false, "rationale": "Nightly backups can lose up to a day of data, far exceeding a few-minute RPO." },
+      { "text": "Weekly backups", "correct": false, "rationale": "Weekly backups could lose up to a week of data, grossly violating the RPO." },
+      { "text": "Monthly manual exports", "correct": false, "rationale": "Monthly exports provide an extremely poor RPO, unacceptable here." }
+    ]
+  },
+  {
+    "id": "d7-t11-a5",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "DR vs BC",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement BEST describes the relationship between disaster recovery (DR) and business continuity (BC)?",
+    "options": [
+      { "text": "DR focuses on restoring IT systems and is a subset of the broader BC effort to sustain the business", "correct": true, "rationale": "DR is the tactical, technology-focused recovery of systems within the wider strategic BC framework." },
+      { "text": "BC is a subset of DR", "correct": false, "rationale": "This reverses the relationship; DR is the subset, BC is the broader effort." },
+      { "text": "DR and BC are entirely unrelated", "correct": false, "rationale": "They are closely related; DR executes within BC." },
+      { "text": "DR replaces the need for BC", "correct": false, "rationale": "DR restores systems but does not sustain the entire business, so it does not replace BC." }
+    ]
+  },
+  {
+    "id": "d7-t11-a6",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "Life Safety Priority",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A fire strikes the data center during business hours. In executing the DR plan, what must be prioritized FIRST?",
+    "options": [
+      { "text": "The safety and evacuation of personnel", "correct": true, "rationale": "Life safety always takes precedence over any asset or system recovery in DR." },
+      { "text": "Restoring the production database", "correct": false, "rationale": "System recovery is important but never comes before protecting human life." },
+      { "text": "Salvaging the server hardware", "correct": false, "rationale": "Hardware salvage is secondary to protecting people." },
+      { "text": "Notifying the marketing department", "correct": false, "rationale": "Communications matter but do not take priority over immediate life safety." }
+    ]
+  },
+  {
+    "id": "d7-t11-a7",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "WRT",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After systems are technically restored, the team still needs time to validate data, reconfigure integrations, and reconnect users before real work resumes. Which metric BEST captures this period?",
+    "options": [
+      { "text": "Work Recovery Time (WRT)", "correct": true, "rationale": "WRT is the time after technical restore needed to validate and reintegrate systems so business work can resume." },
+      { "text": "Recovery Point Objective (RPO)", "correct": false, "rationale": "RPO concerns data-loss tolerance, not post-restore validation time." },
+      { "text": "Maximum Tolerable Downtime (MTD)", "correct": false, "rationale": "MTD is the overall outage limit, not the specific post-restore work period." },
+      { "text": "Mean Time To Repair (MTTR)", "correct": false, "rationale": "MTTR is an average repair-time reliability metric, not the DR reintegration window." }
+    ]
+  },
+  {
+    "id": "d7-t11-a8",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "DR Phase Order",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In the DR process, when does restoration to the primary site BEST occur?",
+    "options": [
+      { "text": "After critical operations are stable at the alternate site and the primary is validated as safe", "correct": true, "rationale": "Restoration returns operations to the primary environment only once it is safe and validated and critical operations are already stable." },
+      { "text": "Before assessing the damage to the primary site", "correct": false, "rationale": "Moving back before damage assessment risks returning to an unsafe or nonfunctional site." },
+      { "text": "Immediately, before recovering any systems", "correct": false, "rationale": "Recovery of critical systems precedes restoration to the primary; jumping to restoration first is out of order." },
+      { "text": "Never, once at an alternate site the primary is abandoned", "correct": false, "rationale": "Restoration to a permanent/primary environment is the intended end state, not permanent alternate operation." }
+    ]
+  },
+  {
+    "id": "d7-t11-a9",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "MTD Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "What does Maximum Tolerable Downtime (MTD) represent?",
+    "options": [
+      { "text": "The longest a function can be unavailable before causing unacceptable harm", "correct": true, "rationale": "MTD is the outer limit of downtime a business function can endure before serious or irreparable harm results." },
+      { "text": "The amount of data that can be lost", "correct": false, "rationale": "That describes RPO, not MTD." },
+      { "text": "The time to validate systems after restore", "correct": false, "rationale": "That describes WRT, not MTD." },
+      { "text": "The frequency of vulnerability scans", "correct": false, "rationale": "Scan frequency is unrelated to MTD." }
+    ]
+  },
+  {
+    "id": "d7-t11-a10",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO Less Than MTD",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A proposed RTO for a function is longer than its MTD. Which conclusion is MOST accurate?",
+    "options": [
+      { "text": "The RTO is invalid because it must be shorter than the MTD", "correct": true, "rationale": "RTO must fit within MTD; an RTO exceeding MTD means the function would be down past its tolerable limit." },
+      { "text": "The RTO is fine because RTO can exceed MTD", "correct": false, "rationale": "RTO exceeding MTD violates the required relationship and leaves the business exposed beyond tolerance." },
+      { "text": "MTD should be lowered to match the RTO", "correct": false, "rationale": "MTD is set by business impact, not adjusted to accommodate an overlong RTO." },
+      { "text": "RPO should be ignored to fix the problem", "correct": false, "rationale": "RPO is a separate data-loss metric and ignoring it does not resolve the RTO-versus-MTD conflict." }
+    ]
+  },
+  {
+    "id": "d7-t11-b1",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO vs RPO",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An executive asks, 'How much recent data are we willing to lose if we fail over?' Which metric MOST directly answers this question?",
+    "options": [
+      { "text": "Recovery Point Objective (RPO)", "correct": true, "rationale": "RPO defines the maximum acceptable data loss, exactly what the executive is asking about." },
+      { "text": "Recovery Time Objective (RTO)", "correct": false, "rationale": "RTO answers how quickly systems are restored, not how much data may be lost." },
+      { "text": "Work Recovery Time (WRT)", "correct": false, "rationale": "WRT is post-restore validation time, not a data-loss measure." },
+      { "text": "Maximum Tolerable Downtime (MTD)", "correct": false, "rationale": "MTD is the outage limit, not the data-loss tolerance." }
+    ]
+  },
+  {
+    "id": "d7-t11-b2",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO vs RPO",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An executive asks, 'How fast can we get the system running again after it goes down?' Which metric MOST directly answers this?",
+    "options": [
+      { "text": "Recovery Time Objective (RTO)", "correct": true, "rationale": "RTO is the target time to restore a system after a disruption, which answers how fast recovery occurs." },
+      { "text": "Recovery Point Objective (RPO)", "correct": false, "rationale": "RPO concerns data-loss tolerance, not the speed of restoring the system." },
+      { "text": "Annualized Rate of Occurrence (ARO)", "correct": false, "rationale": "ARO is a risk frequency metric, not a recovery timing measure." },
+      { "text": "Exposure Factor (EF)", "correct": false, "rationale": "EF is a percentage-of-loss risk metric, unrelated to recovery time." }
+    ]
+  },
+  {
+    "id": "d7-t11-b3",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "MTD Relationship",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A function's MTD is 6 hours. The team's RTO is 5 hours and WRT is 3 hours. What does this BEST indicate about the plan?",
+    "options": [
+      { "text": "The plan fails because RTO + WRT (8 hours) exceeds the 6-hour MTD", "correct": true, "rationale": "Since RTO plus WRT must fit within MTD, 8 hours exceeding 6 hours means the business would be down beyond tolerance." },
+      { "text": "The plan succeeds because RTO alone is under MTD", "correct": false, "rationale": "RTO alone is not the test; RTO + WRT must be within MTD, and here it is not." },
+      { "text": "WRT does not count toward downtime", "correct": false, "rationale": "WRT is part of the downtime before work resumes and must be included." },
+      { "text": "MTD should be increased to 8 hours to fit", "correct": false, "rationale": "MTD is dictated by business impact, not raised to accommodate a plan that overruns." }
+    ]
+  },
+  {
+    "id": "d7-t11-b4",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RPO Drives Replication",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A business sets an RPO of zero (no acceptable data loss). Which approach is MOST consistent with meeting it?",
+    "options": [
+      { "text": "Synchronous replication that commits data to a second location before acknowledging writes", "correct": true, "rationale": "A zero RPO requires that no committed transaction be lost, which synchronous replication provides by writing to two locations together." },
+      { "text": "Daily incremental backups", "correct": false, "rationale": "Daily backups can lose up to a day of data, incompatible with a zero RPO." },
+      { "text": "Weekly full backups", "correct": false, "rationale": "Weekly backups could lose a week of data, far from zero." },
+      { "text": "No data protection at all", "correct": false, "rationale": "No protection guarantees data loss, the opposite of a zero RPO." }
+    ]
+  },
+  {
+    "id": "d7-t11-b5",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "DR vs BC",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which activity is MOST characteristic of disaster recovery specifically rather than the broader business continuity effort?",
+    "options": [
+      { "text": "Restoring failed servers and databases at an alternate site", "correct": true, "rationale": "Restoring IT systems and infrastructure is the tactical, technology-focused work that defines disaster recovery." },
+      { "text": "Determining overall business criticality and strategy for the whole enterprise", "correct": false, "rationale": "Enterprise-wide criticality and strategy are business continuity concerns, broader than DR." },
+      { "text": "Setting the organization's long-term mission", "correct": false, "rationale": "Long-term mission-setting is a governance/strategic activity, not DR." },
+      { "text": "Approving the annual marketing budget", "correct": false, "rationale": "Budget approval is unrelated to disaster recovery of systems." }
+    ]
+  },
+  {
+    "id": "d7-t11-b6",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "Communications Phase",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During a disaster, keeping employees, customers, and regulators informed through predefined channels is handled by which DR consideration?",
+    "options": [
+      { "text": "The communications component of the DR plan", "correct": true, "rationale": "Predefined communications keep internal and external stakeholders informed during and after a disaster." },
+      { "text": "The RPO calculation", "correct": false, "rationale": "RPO measures data-loss tolerance, not stakeholder communication." },
+      { "text": "The RAID configuration", "correct": false, "rationale": "RAID is disk fault tolerance, unrelated to communications." },
+      { "text": "The change advisory board", "correct": false, "rationale": "The CAB governs planned changes, not disaster communications." }
+    ]
+  },
+  {
+    "id": "d7-t11-b7",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "Assessment Phase",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After the immediate response and ensuring personnel are safe, what should the DR team do FIRST to guide the recovery effort?",
+    "options": [
+      { "text": "Assess the scope and severity of the damage and what must be recovered", "correct": true, "rationale": "Damage assessment determines what is affected and drives the recovery priorities and actions." },
+      { "text": "Immediately restore all systems to the primary site", "correct": false, "rationale": "Restoring to the primary before assessing damage risks returning to an unsafe or broken environment." },
+      { "text": "Cancel the DR plan to save money", "correct": false, "rationale": "Abandoning the plan during a disaster leaves recovery unmanaged." },
+      { "text": "Delete all backups to start fresh", "correct": false, "rationale": "Deleting backups destroys the means of recovery." }
+    ]
+  },
+  {
+    "id": "d7-t11-b8",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "Metric Relationships",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which relationship among the recovery metrics is correctly stated?",
+    "options": [
+      { "text": "RTO + WRT must not exceed MTD", "correct": true, "rationale": "Total time to restore systems (RTO) plus validate/reintegrate them (WRT) must fit within the maximum tolerable downtime." },
+      { "text": "MTD must be shorter than RTO", "correct": false, "rationale": "This reverses the relationship; RTO must be shorter than MTD, not the other way around." },
+      { "text": "RPO equals RTO by definition", "correct": false, "rationale": "RPO (data loss) and RTO (recovery time) measure different things and are not equal by definition." },
+      { "text": "WRT must be longer than MTD", "correct": false, "rationale": "WRT is only part of the recovery time and must fit within MTD, not exceed it." }
+    ]
+  },
+  {
+    "id": "d7-t11-b9",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "Life Safety Priority",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In any disaster recovery scenario, which consideration MOST consistently takes precedence over all others?",
+    "options": [
+      { "text": "Protecting human life and safety", "correct": true, "rationale": "Life safety is always the top priority, ahead of any asset or system recovery." },
+      { "text": "Restoring the highest-revenue application first", "correct": false, "rationale": "Revenue systems matter but never come before human safety." },
+      { "text": "Preserving marketing materials", "correct": false, "rationale": "Marketing materials are low priority relative to life safety." },
+      { "text": "Meeting the RPO exactly", "correct": false, "rationale": "Data-loss goals are important but subordinate to protecting people." }
+    ]
+  },
+  {
+    "id": "d7-t11-b10",
+    "domainId": "d7",
+    "topicId": "d7-t11",
+    "subtopicTag": "RTO vs RPO",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement about RTO and RPO is LEAST accurate?",
+    "options": [
+      { "text": "RTO measures acceptable data loss while RPO measures time to restore systems", "correct": true, "rationale": "This is the reversed (incorrect) definition; RTO is recovery time and RPO is data-loss tolerance, so the statement is least accurate." },
+      { "text": "RTO is the target time to restore a system after disruption", "correct": false, "rationale": "This correctly defines RTO, so it is accurate." },
+      { "text": "RPO is the maximum acceptable amount of data loss", "correct": false, "rationale": "This correctly defines RPO, so it is accurate." },
+      { "text": "RPO influences how frequently data must be backed up or replicated", "correct": false, "rationale": "This is an accurate implication of RPO, so it is not the least accurate statement." }
+    ]
+  }
+]

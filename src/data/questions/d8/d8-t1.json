@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d8-t1-a1",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Shift Left / Early Integration",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A development team using a strict waterfall model discovers a critical authentication flaw during the final pre-release penetration test, forcing a costly eight-week redesign. Which change would BEST prevent this pattern from recurring?",
+    "options": [
+      { "text": "Add a second, more thorough penetration test just before release", "correct": false, "rationale": "Adding more late-stage testing keeps the discovery point at the end of the lifecycle, where remediation is most expensive; it does not address the root cause of finding flaws too late." },
+      { "text": "Integrate threat modeling during design and SAST during development so flaws are caught earlier", "correct": true, "rationale": "Shifting security activities left — threat modeling in design and static analysis during development — catches defects when they are cheapest to fix, which is the core lesson CISSP tests here." },
+      { "text": "Increase the penetration testing budget and hire a larger red team", "correct": false, "rationale": "More resources spent at the same late phase does not change the fundamental problem that flaws are discovered after they are expensive to remediate." },
+      { "text": "Switch to a longer release cycle to allow more time for end-stage testing", "correct": false, "rationale": "Lengthening the cycle delays feedback further and does nothing to move security discovery earlier in the lifecycle." }
+    ]
+  },
+  {
+    "id": "d8-t1-a2",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "SDLC Phase Identification",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During a post-incident review, a team realizes a data-exposure flaw existed because no one ever documented that the application must encrypt PII at rest. In which SDLC phase should this security expectation FIRST have been captured?",
+    "options": [
+      { "text": "Requirements", "correct": true, "rationale": "Security needs such as 'PII must be encrypted at rest' are functional/non-functional requirements that belong in the requirements phase, before design and coding begin." },
+      { "text": "Testing", "correct": false, "rationale": "Testing verifies that requirements were met; it cannot substitute for capturing a requirement that was never defined in the first place." },
+      { "text": "Deployment", "correct": false, "rationale": "Deployment is far too late to first define a core data-protection requirement; the flaw would already be built into the product." },
+      { "text": "Maintenance", "correct": false, "rationale": "Maintenance addresses changes after release; the encryption expectation should have existed from the requirements phase, not been discovered in maintenance." }
+    ]
+  },
+  {
+    "id": "d8-t1-a3",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "BSIMM vs SAMM",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement MOST accurately distinguishes BSIMM from OWASP SAMM?",
+    "options": [
+      { "text": "BSIMM is descriptive, built from practices observed across real organizations, while SAMM is a prescriptive maturity framework organizations assess themselves against", "correct": true, "rationale": "BSIMM is observational/descriptive (a benchmark of what firms actually do), whereas SAMM is prescriptive, defining maturity levels an organization works toward — the exam tests this exact distinction." },
+      { "text": "SAMM is descriptive and observational, while BSIMM prescribes required activities", "correct": false, "rationale": "This reverses the two models; SAMM is prescriptive and BSIMM is descriptive." },
+      { "text": "Both are purely descriptive models with no maturity levels", "correct": false, "rationale": "SAMM defines explicit maturity levels, so calling both purely descriptive is incorrect." },
+      { "text": "Both are legally mandated compliance standards", "correct": false, "rationale": "Neither BSIMM nor SAMM is a legal mandate; they are voluntary software-security models." }
+    ]
+  },
+  {
+    "id": "d8-t1-a4",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "DevSecOps Pipeline",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization moving to CI/CD wants security testing to happen automatically on every code commit rather than as a single end-of-project gate. Which approach BEST achieves this?",
+    "options": [
+      { "text": "Embed automated SAST and software composition analysis as gates within the CI/CD pipeline", "correct": true, "rationale": "Automating static analysis and dependency scanning as pipeline gates makes security continuous and triggered per commit, which is the defining practice of DevSecOps." },
+      { "text": "Schedule a quarterly manual security audit of the codebase", "correct": false, "rationale": "A quarterly manual audit is periodic and terminal, not per-commit and continuous, so it does not meet the stated goal." },
+      { "text": "Require developers to email the security team before each merge", "correct": false, "rationale": "Manual email approval is a bottleneck that does not scale to every commit and is not automated pipeline testing." },
+      { "text": "Perform a single penetration test after the release candidate is built", "correct": false, "rationale": "A single post-build test is exactly the end-of-project gate the organization is trying to move away from." }
+    ]
+  },
+  {
+    "id": "d8-t1-a5",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "SDLC vs Methodology",
+    "qualifier": "MOST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement MOST accurately describes the relationship between the SDLC and a development methodology such as Agile or waterfall?",
+    "options": [
+      { "text": "The SDLC is the overarching lifecycle framework, while a methodology is how the work within it is organized", "correct": true, "rationale": "The SDLC is the container spanning requirements through disposal; methodologies like waterfall or agile define how work is structured inside that lifecycle." },
+      { "text": "A methodology and the SDLC are identical terms used interchangeably", "correct": false, "rationale": "They are distinct: one is the full lifecycle framework, the other is the organizing approach within it." },
+      { "text": "The methodology includes disposal and retirement, which the SDLC does not", "correct": false, "rationale": "This is reversed; the SDLC includes maintenance and disposal, not the methodology." },
+      { "text": "The SDLC applies only to waterfall projects", "correct": false, "rationale": "The SDLC framework applies regardless of methodology, including agile and DevOps projects." }
+    ]
+  },
+  {
+    "id": "d8-t1-a6",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Change Management",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A developer pushes an urgent hotfix directly to production over a weekend without any review, inadvertently disabling an input-validation routine. What is the PRIMARY control that would have prevented this?",
+    "options": [
+      { "text": "A formal change management process requiring review and approval before production changes", "correct": true, "rationale": "Change management ensures changes are requested, reviewed, and approved before deployment, which would have caught the removal of a security control." },
+      { "text": "Full-disk encryption on the production servers", "correct": false, "rationale": "Encryption protects data confidentiality at rest and has nothing to do with preventing an unreviewed code change." },
+      { "text": "A stronger password policy for developer accounts", "correct": false, "rationale": "Password strength does not govern whether authorized code changes are reviewed before reaching production." },
+      { "text": "A network intrusion detection system", "correct": false, "rationale": "An IDS detects malicious network activity, not the procedural gap of an unreviewed internal deployment." }
+    ]
+  },
+  {
+    "id": "d8-t1-a7",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Cost of Late Defects",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A project manager argues that deferring all security review until just before launch saves money by batching the work. Which principle MOST directly refutes this argument?",
+    "options": [
+      { "text": "Defects are exponentially more expensive to remediate the later in the SDLC they are discovered", "correct": true, "rationale": "The cost-of-defect curve shows remediation cost rising sharply the later a flaw is found, so batching security to the end increases total cost rather than saving it." },
+      { "text": "Encryption is stronger when applied at the network layer", "correct": false, "rationale": "This is unrelated to the timing-of-defect-discovery economics that refute the manager's claim." },
+      { "text": "Availability is the most important leg of the CIA triad", "correct": false, "rationale": "No fixed priority among CIA legs exists, and this does not address defect remediation cost timing." },
+      { "text": "Manual testing is always superior to automated testing", "correct": false, "rationale": "This is both false and irrelevant to why late security review is more costly." }
+    ]
+  },
+  {
+    "id": "d8-t1-a8",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Threat Modeling in Design",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "During the design phase of a new payments API, an architect wants to systematically identify how an attacker might abuse the system before any code is written. Which activity BEST fits this goal at this phase?",
+    "options": [
+      { "text": "Threat modeling to enumerate attack surfaces and abuse cases against the proposed design", "correct": true, "rationale": "Threat modeling during design systematically identifies threats and attack surfaces before implementation, which is precisely the design-phase security activity described." },
+      { "text": "Dynamic application security testing (DAST) against the running application", "correct": false, "rationale": "DAST requires a running application, which does not exist at the design phase before code is written." },
+      { "text": "Load testing to measure transactions per second", "correct": false, "rationale": "Load testing measures performance, not attacker abuse cases or security threats." },
+      { "text": "User acceptance testing with business stakeholders", "correct": false, "rationale": "UAT validates business functionality of built software, not attacker-focused threat identification during design." }
+    ]
+  },
+  {
+    "id": "d8-t1-a9",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Microsoft SDL",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "The Microsoft Security Development Lifecycle (SDL) is BEST characterized as which of the following?",
+    "options": [
+      { "text": "A prescriptive, phase-based process defining specific security activities from training through response", "correct": true, "rationale": "The Microsoft SDL prescribes concrete phase-by-phase security activities (training, requirements, design, implementation, verification, release, response)." },
+      { "text": "A network firewall configuration standard", "correct": false, "rationale": "The SDL is a software development security process, not a firewall configuration standard." },
+      { "text": "A descriptive benchmark built from observing other companies", "correct": false, "rationale": "That describes BSIMM; the Microsoft SDL is prescriptive, defining what activities to perform." },
+      { "text": "A legally mandated compliance regulation", "correct": false, "rationale": "The SDL is a voluntary methodology, not a legal regulation." }
+    ]
+  },
+  {
+    "id": "d8-t1-a10",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Agile Security Pitfalls",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A team adopts Scrum but consistently drops security tasks from sprints because they are treated as optional 'stretch goals.' Insecure code ships repeatedly. What change would MOST effectively address the root cause?",
+    "options": [
+      { "text": "Add security acceptance criteria to the Definition of Done so stories cannot be completed without them", "correct": true, "rationale": "Embedding security into the Definition of Done makes it a non-optional completion criterion, directly addressing the cause of security tasks being dropped under time pressure." },
+      { "text": "Abandon Scrum and return to a waterfall model", "correct": false, "rationale": "Waterfall is not inherently more secure; the problem is that security is not enforced as mandatory, which can occur in any methodology." },
+      { "text": "Lengthen each sprint to give more slack time", "correct": false, "rationale": "More time does not compel the team to prioritize security if it remains an optional stretch goal." },
+      { "text": "Move all security work to a single sprint at the end of the project", "correct": false, "rationale": "Deferring security to a terminal sprint reintroduces the late-discovery anti-pattern and abandons the shift-left principle." }
+    ]
+  },
+  {
+    "id": "d8-t1-b1",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Shift Left / Early Integration",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A CISO reports that most security defects in the last release were introduced in design but not found until production. What is the PRIMARY benefit of moving security activities earlier in the SDLC to address this?",
+    "options": [
+      { "text": "Lower remediation cost because defects are corrected before they propagate into built and deployed code", "correct": true, "rationale": "Catching design-introduced flaws during design or development avoids the far higher cost of fixing them once they reach production, which is the primary benefit of shifting left." },
+      { "text": "It eliminates the need for any production monitoring", "correct": false, "rationale": "Shifting left supplements but does not replace production monitoring; flaws can still emerge later." },
+      { "text": "It guarantees zero vulnerabilities in the released product", "correct": false, "rationale": "No practice guarantees zero vulnerabilities; shift-left reduces cost and likelihood, not to an absolute zero." },
+      { "text": "It removes the requirement for a change management process", "correct": false, "rationale": "Change management remains necessary regardless of when security testing occurs." }
+    ]
+  },
+  {
+    "id": "d8-t1-b2",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "SDLC Phase Identification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A retired application continued to store live customer data on decommissioned servers that were sold without wiping. Which SDLC phase was MOST clearly mishandled?",
+    "options": [
+      { "text": "Disposal / retirement", "correct": true, "rationale": "Secure data destruction and media sanitization are activities of the disposal/retirement phase, which was skipped when the servers were sold without wiping." },
+      { "text": "Requirements", "correct": false, "rationale": "The failure occurred at end-of-life data handling, not at the point of defining requirements." },
+      { "text": "Design", "correct": false, "rationale": "The flaw was in how the system was decommissioned, not in its architectural design." },
+      { "text": "Development", "correct": false, "rationale": "No coding-phase defect is described; the issue is unsanitized media at retirement." }
+    ]
+  },
+  {
+    "id": "d8-t1-b3",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Configuration Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After a bad release, an operations team needs to quickly return the application to the last known-good state. Which practice BEST enables this?",
+    "options": [
+      { "text": "Configuration management with versioning and rollback capability", "correct": true, "rationale": "Configuration management tracks versioned configurations and supports rolling back to a known-good baseline, which is exactly what the team needs." },
+      { "text": "A stronger web application firewall ruleset", "correct": false, "rationale": "A WAF filters malicious traffic but does not restore an application to a prior known-good version." },
+      { "text": "Multi-factor authentication for administrators", "correct": false, "rationale": "MFA controls access; it does not provide version rollback for a bad release." },
+      { "text": "Increasing the frequency of vulnerability scans", "correct": false, "rationale": "More scanning detects issues but does not provide the ability to revert to a known-good state." }
+    ]
+  },
+  {
+    "id": "d8-t1-b4",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "DevSecOps Pipeline",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization claims its CI/CD pipeline embodies DevSecOps. Which of the following practices would be LEAST consistent with that claim?",
+    "options": [
+      { "text": "Requiring a manual, weeks-long security sign-off gate at the very end before any release", "correct": true, "rationale": "A slow terminal manual gate contradicts DevSecOps, which emphasizes continuous, automated security checks integrated throughout the pipeline rather than a single end-stage bottleneck." },
+      { "text": "Running SAST automatically on every pull request", "correct": false, "rationale": "Automated per-PR static analysis is a hallmark DevSecOps practice, consistent with the claim." },
+      { "text": "Scanning third-party dependencies for known CVEs during builds", "correct": false, "rationale": "Automated software composition analysis during builds is a core DevSecOps activity, consistent with the claim." },
+      { "text": "Scanning infrastructure-as-code templates for misconfigurations before deployment", "correct": false, "rationale": "IaC scanning is a standard shift-left DevSecOps control and is consistent with the claim." }
+    ]
+  },
+  {
+    "id": "d8-t1-b5",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Security Champions",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A central security team of five cannot review every change across forty agile teams. Which approach BEST scales security governance without becoming a bottleneck?",
+    "options": [
+      { "text": "Embed trained security champions within each development team and provide automated pipeline gates", "correct": true, "rationale": "Security champions distribute security expertise into teams while automation enforces baseline checks, scaling governance without a central bottleneck — the modern DevSecOps governance pattern." },
+      { "text": "Require all forty teams to route every change through the five-person central team", "correct": false, "rationale": "Centralizing all reviews through five people recreates the exact bottleneck the question asks to avoid." },
+      { "text": "Stop reviewing changes entirely and rely on post-incident response", "correct": false, "rationale": "Abandoning proactive governance in favor of reacting to incidents increases risk and is not a governance approach." },
+      { "text": "Reduce the number of development teams to match the security team's capacity", "correct": false, "rationale": "Shrinking delivery capacity to fit the security team is impractical and does not scale security itself." }
+    ]
+  },
+  {
+    "id": "d8-t1-b6",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "NIST SP 800-64",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "NIST SP 800-64 is BEST described as which of the following?",
+    "options": [
+      { "text": "Guidance on incorporating security considerations throughout the SDLC", "correct": true, "rationale": "NIST SP 800-64 provides guidance for integrating security considerations across the phases of the system development life cycle." },
+      { "text": "A cryptographic algorithm specification", "correct": false, "rationale": "It is SDLC security guidance, not a cryptographic algorithm standard." },
+      { "text": "A descriptive maturity benchmark of observed industry practices", "correct": false, "rationale": "That describes BSIMM; SP 800-64 is guidance on embedding security in the SDLC." },
+      { "text": "A physical data center design standard", "correct": false, "rationale": "SP 800-64 addresses software/system development security, not physical facility design." }
+    ]
+  },
+  {
+    "id": "d8-t1-b7",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Spiral Model",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A large, high-risk defense project repeats cycles of planning, risk analysis, prototyping, and evaluation, with a formal risk assessment at the start of each iteration. Which development model does this MOST closely describe?",
+    "options": [
+      { "text": "Spiral model", "correct": true, "rationale": "The spiral model is defined by iterative cycles that each begin with explicit risk analysis and prototyping, making it well suited to large, high-risk projects." },
+      { "text": "Pure waterfall", "correct": false, "rationale": "Waterfall is strictly sequential with no repeated risk-analysis cycles per iteration." },
+      { "text": "Big-bang model", "correct": false, "rationale": "The big-bang model lacks the structured, repeated risk analysis described here." },
+      { "text": "Kanban", "correct": false, "rationale": "Kanban is a flow-based workflow method, not a risk-driven iterative model with per-cycle formal risk assessment." }
+    ]
+  },
+  {
+    "id": "d8-t1-b8",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Cost of Late Defects",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Two identical logic flaws are introduced during design. Flaw A is caught in a design review; Flaw B is caught by a customer in production a year later. Which statement is MOST accurate about their remediation?",
+    "options": [
+      { "text": "Flaw B will typically cost substantially more to remediate than Flaw A", "correct": true, "rationale": "A defect discovered in production generally costs far more to fix than the same defect caught in design, due to rework, deployed dependencies, and potential incident impact." },
+      { "text": "Both flaws cost the same to fix because they are identical in nature", "correct": false, "rationale": "Remediation cost depends heavily on when a defect is found, not just its technical nature; later discovery is more expensive." },
+      { "text": "Flaw A costs more because design reviews are labor-intensive", "correct": false, "rationale": "Early-caught defects are cheaper overall despite review effort, because they avoid downstream rework and production impact." },
+      { "text": "Neither flaw needs remediation if the software already shipped", "correct": false, "rationale": "Shipping does not remove the need to fix a real flaw; the production flaw in particular demands remediation." }
+    ]
+  },
+  {
+    "id": "d8-t1-b9",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Maturity Model Purpose",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization adopts OWASP SAMM. What is the PRIMARY purpose it serves for their software security program?",
+    "options": [
+      { "text": "To assess current software assurance maturity and provide a roadmap for improvement", "correct": true, "rationale": "SAMM's core purpose is to let an organization evaluate its software assurance maturity across practice areas and define a path to raise it." },
+      { "text": "To automatically block malicious network packets in real time", "correct": false, "rationale": "SAMM is a maturity model, not a network-layer packet-filtering control." },
+      { "text": "To encrypt data in transit between microservices", "correct": false, "rationale": "SAMM does not perform encryption; it assesses and guides program maturity." },
+      { "text": "To serve as a legally binding compliance certification", "correct": false, "rationale": "SAMM is a voluntary self-assessment model, not a legal certification." }
+    ]
+  },
+  {
+    "id": "d8-t1-b10",
+    "domainId": "d8",
+    "topicId": "d8-t1",
+    "subtopicTag": "Threat Modeling in Design",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team is beginning the design of a new multi-tenant SaaS platform and wants to reduce architectural security risk as early as possible. Which activity should they perform FIRST?",
+    "options": [
+      { "text": "Conduct threat modeling on the proposed architecture to identify design-level risks", "correct": true, "rationale": "Threat modeling at the start of design surfaces architectural risks (e.g., tenant isolation weaknesses) before implementation, when they are cheapest to address." },
+      { "text": "Run a penetration test against the production environment", "correct": false, "rationale": "No production environment exists yet at the design phase, so a penetration test cannot be run first." },
+      { "text": "Perform user acceptance testing on the finished product", "correct": false, "rationale": "UAT occurs after the product is built, not at the beginning of design." },
+      { "text": "Purchase a cyber-insurance policy", "correct": false, "rationale": "Insurance transfers residual risk but does not reduce the architectural security risk the team wants to address early in design." }
+    ]
+  }
+]

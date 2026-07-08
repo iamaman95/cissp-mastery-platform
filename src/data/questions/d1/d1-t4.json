@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t4-a1",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Contractual vs Regulatory Compliance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A retailer processes credit card payments and is contractually bound by PCI-DSS, while also being subject to state breach-notification laws. Leadership asks which obligation takes precedence. What is the BEST characterization for the security manager to give?",
+    "options": [
+      { "text": "PCI-DSS is a legal requirement that overrides state law", "correct": false, "rationale": "PCI-DSS is a contractual (industry) obligation enforced by the card brands, not a statute; it does not override law." },
+      { "text": "Both must be satisfied; contractual and regulatory obligations are cumulative, not mutually exclusive", "correct": true, "rationale": "Compliance obligations stack — the organization must meet PCI-DSS (contract) and applicable breach-notification statutes (law) simultaneously; neither supersedes the other." },
+      { "text": "State law can be ignored if PCI-DSS is met", "correct": false, "rationale": "Statutory obligations cannot be waived by meeting a contractual standard; this would expose the firm to legal penalties." },
+      { "text": "Neither applies until a breach actually occurs", "correct": false, "rationale": "Both PCI-DSS controls and many statutory safeguards are ongoing obligations, not triggered only by a breach." }
+    ]
+  },
+  {
+    "id": "d1-t4-a2",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Jurisdictional Scope",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A US-based SaaS company signs up EU-resident users. Which factor MOST directly determines whether GDPR applies to the company?",
+    "options": [
+      { "text": "Whether the company has an office physically located in the EU", "correct": false, "rationale": "GDPR's territorial scope is not limited to establishments in the EU; it also reaches organizations targeting or monitoring EU data subjects from abroad." },
+      { "text": "Whether the company offers goods/services to, or monitors the behavior of, data subjects in the EU", "correct": true, "rationale": "Article 3 extends GDPR extraterritorially based on offering goods/services to or monitoring EU data subjects, regardless of where the processor sits." },
+      { "text": "Whether the company's servers are hosted in the EU", "correct": false, "rationale": "Server location is not the determining factor for GDPR applicability; the behavior toward EU data subjects is." },
+      { "text": "Whether the company earns more than €10 million in the EU", "correct": false, "rationale": "GDPR applicability has no such revenue threshold; any qualifying processing brings the organization into scope." }
+    ]
+  },
+  {
+    "id": "d1-t4-a3",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Due Diligence vs Due Care",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization researches applicable privacy laws, documents its obligations, and builds a compliance roadmap, but has not yet implemented any controls. Which term BEST describes what it has done so far?",
+    "options": [
+      { "text": "Due care", "correct": false, "rationale": "Due care is the ongoing act of implementing and operating reasonable controls — that step has not happened yet." },
+      { "text": "Due diligence", "correct": true, "rationale": "Due diligence is the investigative, planning, and understanding phase — researching obligations and building the roadmap — that precedes acting on them." },
+      { "text": "Negligence", "correct": false, "rationale": "Negligence is the failure to exercise reasonable care; researching and planning is the opposite of negligence." },
+      { "text": "Liability transfer", "correct": false, "rationale": "Liability transfer (e.g., insurance/contract) is unrelated to researching and planning compliance obligations." }
+    ]
+  },
+  {
+    "id": "d1-t4-a4",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Privacy Impact Assessment",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before launching a new system that will process large volumes of sensitive personal data, a privacy officer wants to systematically identify privacy risks. What should be conducted FIRST?",
+    "options": [
+      { "text": "A penetration test of the new system", "correct": false, "rationale": "A pen test evaluates technical exploitability, not privacy risk to data subjects, and comes far later than the planning stage." },
+      { "text": "A Privacy Impact Assessment (PIA/DPIA)", "correct": true, "rationale": "A PIA/DPIA is the structured process for identifying and mitigating privacy risks before high-risk processing begins, and is required under GDPR for such processing." },
+      { "text": "A SOC 2 audit", "correct": false, "rationale": "A SOC 2 audit assesses a service organization's controls over time; it is not the first step for identifying privacy risk in a new system." },
+      { "text": "A business impact analysis", "correct": false, "rationale": "A BIA prioritizes assets for continuity/recovery, not the identification of privacy risks to personal data." }
+    ]
+  },
+  {
+    "id": "d1-t4-a5",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Data Subject Rights",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Under GDPR, the 'right to erasure' is also commonly known as which of the following?",
+    "options": [
+      { "text": "The right to be forgotten", "correct": true, "rationale": "Article 17's right to erasure is popularly called the 'right to be forgotten.'" },
+      { "text": "The right to portability", "correct": false, "rationale": "Portability (Article 20) is the right to receive/transfer one's data, a distinct right." },
+      { "text": "The right of rectification", "correct": false, "rationale": "Rectification (Article 16) is the right to correct inaccurate data, not to have it erased." },
+      { "text": "The right to restriction", "correct": false, "rationale": "Restriction (Article 18) limits processing but does not delete the data." }
+    ]
+  },
+  {
+    "id": "d1-t4-a6",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Compliance Frameworks vs Regulations",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A CISO wants to adopt a control framework to help demonstrate compliance across multiple regulations at once. Which choice is MOST appropriate?",
+    "options": [
+      { "text": "Adopt a control framework such as NIST CSF or ISO/IEC 27001 and map it to each regulation", "correct": true, "rationale": "A recognized control framework provides a common control set that can be mapped to multiple regulatory requirements, reducing duplicated effort." },
+      { "text": "Write a unique control set from scratch for each regulation", "correct": false, "rationale": "Building separate control sets per regulation is inefficient and creates gaps/overlaps; frameworks exist precisely to avoid this." },
+      { "text": "Rely solely on the legal team's interpretation with no documented controls", "correct": false, "rationale": "Without a documented control framework there is no verifiable basis to demonstrate compliance to auditors or regulators." },
+      { "text": "Use PCI-DSS as the universal framework for all regulations", "correct": false, "rationale": "PCI-DSS is narrowly scoped to cardholder data; it is not a general-purpose framework for mapping across unrelated regulations." }
+    ]
+  },
+  {
+    "id": "d1-t4-a7",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Cross-Border Data Transfer",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An EU subsidiary needs to transfer employee personal data to its US parent company. Absent an adequacy decision, what is the BEST mechanism to lawfully enable the transfer under GDPR?",
+    "options": [
+      { "text": "Standard Contractual Clauses (SCCs) approved by the European Commission", "correct": true, "rationale": "SCCs are a recognized transfer mechanism providing appropriate safeguards for transfers to countries lacking an adequacy decision." },
+      { "text": "A verbal agreement between the two entities' managers", "correct": false, "rationale": "An informal verbal agreement provides none of the enforceable safeguards GDPR requires for international transfers." },
+      { "text": "Simply anonymizing all fields including the employee names only", "correct": false, "rationale": "Removing names alone typically leaves re-identifiable data, so it is not true anonymization and does not by itself legitimize the transfer." },
+      { "text": "Relying on the fact that the parent company is US-based", "correct": false, "rationale": "The parent's location does not by itself provide a lawful transfer basis; a recognized safeguard mechanism is required." }
+    ]
+  },
+  {
+    "id": "d1-t4-a8",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Sarbanes-Oxley Scope",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A publicly traded US company must ensure the integrity of its financial reporting systems. Which regulation is the PRIMARY driver of these IT controls?",
+    "options": [
+      { "text": "Sarbanes-Oxley Act (SOX)", "correct": true, "rationale": "SOX section 404 requires management and auditors to attest to internal controls over financial reporting, driving IT controls for financial systems." },
+      { "text": "HIPAA", "correct": false, "rationale": "HIPAA governs protected health information, not financial reporting integrity." },
+      { "text": "GLBA", "correct": false, "rationale": "GLBA governs privacy/safeguarding of consumer financial information at financial institutions, not public-company financial-reporting controls." },
+      { "text": "FERPA", "correct": false, "rationale": "FERPA governs student education records, wholly unrelated to corporate financial reporting." }
+    ]
+  },
+  {
+    "id": "d1-t4-a9",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Compliance Monitoring",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After achieving compliance with a regulation, what is the BEST way to ensure the organization remains compliant over time?",
+    "options": [
+      { "text": "Establish continuous monitoring and periodic compliance audits", "correct": true, "rationale": "Compliance is a continuous state; ongoing monitoring and periodic audits detect drift and demonstrate sustained adherence." },
+      { "text": "Treat the initial certification as permanent", "correct": false, "rationale": "Regulations, systems, and threats change; a one-time certification does not guarantee ongoing compliance." },
+      { "text": "Re-assess only after a breach occurs", "correct": false, "rationale": "Waiting for a breach is reactive and may leave the firm non-compliant and exposed for long periods." },
+      { "text": "Delegate all responsibility to an external auditor year-round", "correct": false, "rationale": "External auditors assess periodically; the organization itself retains ongoing responsibility for maintaining compliance." }
+    ]
+  },
+  {
+    "id": "d1-t4-a10",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "PII Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following is the best example of Personally Identifiable Information (PII)?",
+    "options": [
+      { "text": "A social security number linked to a named individual", "correct": true, "rationale": "An SSN tied to a person is a canonical direct identifier and clearly constitutes PII." },
+      { "text": "Aggregated, anonymized regional sales totals", "correct": false, "rationale": "Aggregated anonymized statistics do not identify an individual and are not PII." },
+      { "text": "A company's public stock ticker symbol", "correct": false, "rationale": "A ticker symbol identifies a company, not a natural person." },
+      { "text": "A generic marketing email template", "correct": false, "rationale": "A template contains no personal data about an identifiable individual." }
+    ]
+  },
+  {
+    "id": "d1-t4-b1",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Legal vs Regulatory vs Contractual",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A hospital handling payment cards is subject to HIPAA, PCI-DSS, and state law. Which statement MOST accurately describes its obligations?",
+    "options": [
+      { "text": "It must comply with the statutory (HIPAA, state law) and contractual (PCI-DSS) requirements together", "correct": true, "rationale": "Statutory and contractual obligations are cumulative; the hospital must satisfy all of them concurrently." },
+      { "text": "HIPAA automatically satisfies PCI-DSS", "correct": false, "rationale": "HIPAA and PCI-DSS protect different data types with different control requirements; one does not satisfy the other." },
+      { "text": "Only the strictest single regulation needs to be followed", "correct": false, "rationale": "Regulations address different scopes; following only the 'strictest' can leave other specific obligations unmet." },
+      { "text": "State law is preempted by federal HIPAA in all cases", "correct": false, "rationale": "HIPAA sets a floor; more stringent state privacy laws are generally not preempted." }
+    ]
+  },
+  {
+    "id": "d1-t4-b2",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Data Controller vs Processor",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A marketing firm processes customer data strictly according to the documented instructions of its client, who decides why and how the data is used. Under GDPR, the marketing firm is BEST classified as which role?",
+    "options": [
+      { "text": "Data processor", "correct": true, "rationale": "A processor acts on behalf of and under the instructions of the controller, which is exactly the firm's role here." },
+      { "text": "Data controller", "correct": false, "rationale": "The controller determines the purposes and means of processing; that is the client, not the marketing firm." },
+      { "text": "Data subject", "correct": false, "rationale": "The data subject is the individual whose data is processed, not the firm." },
+      { "text": "Supervisory authority", "correct": false, "rationale": "A supervisory authority is the regulator (e.g., a DPA), not a company processing data." }
+    ]
+  },
+  {
+    "id": "d1-t4-b3",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Breach Notification Timeline",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A GDPR-covered organization confirms a personal data breach likely to risk individuals' rights. Regarding the supervisory authority, what must it do FIRST within the required timeframe?",
+    "options": [
+      { "text": "Notify the supervisory authority without undue delay, and where feasible within 72 hours", "correct": true, "rationale": "GDPR Article 33 requires notifying the supervisory authority without undue delay and, where feasible, within 72 hours of becoming aware." },
+      { "text": "Wait until the full forensic investigation is complete before any notification", "correct": false, "rationale": "GDPR does not permit delaying notification until the investigation concludes; initial notice must be prompt and can be supplemented later." },
+      { "text": "Notify only the affected individuals and skip the regulator", "correct": false, "rationale": "The regulator must be notified for qualifying breaches; individual notice is a separate obligation triggered by high risk." },
+      { "text": "Issue a public press release before contacting anyone", "correct": false, "rationale": "A press release is not the required first regulatory step and could complicate the response." }
+    ]
+  },
+  {
+    "id": "d1-t4-b4",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Compliance Gap Analysis",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization must comply with a new regulation but is unsure how its current controls measure up. What is the BEST first activity?",
+    "options": [
+      { "text": "Perform a gap analysis comparing current controls against the regulation's requirements", "correct": true, "rationale": "A gap analysis identifies exactly where current controls fall short of the requirement, focusing remediation effort." },
+      { "text": "Immediately purchase a new security product", "correct": false, "rationale": "Buying tools before understanding the gaps risks spending on the wrong controls." },
+      { "text": "Assume full non-compliance and rebuild everything", "correct": false, "rationale": "Rebuilding wholesale ignores controls that may already satisfy requirements and wastes resources." },
+      { "text": "Declare compliance and wait for an audit finding", "correct": false, "rationale": "Declaring compliance without assessment is negligent and likely false." }
+    ]
+  },
+  {
+    "id": "d1-t4-b5",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "HIPAA Scope",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "HIPAA primarily governs the protection of which category of information?",
+    "options": [
+      { "text": "Protected health information (PHI)", "correct": true, "rationale": "HIPAA governs the privacy and security of protected health information held by covered entities and business associates." },
+      { "text": "Cardholder payment data", "correct": false, "rationale": "Cardholder data is governed by PCI-DSS, not HIPAA." },
+      { "text": "Publicly traded financial statements", "correct": false, "rationale": "Financial reporting is governed by SOX, not HIPAA." },
+      { "text": "Student academic records", "correct": false, "rationale": "Student records are governed by FERPA, not HIPAA." }
+    ]
+  },
+  {
+    "id": "d1-t4-b6",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Regulatory Penalties",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "When advising leadership on the business case for a compliance program, which is the PRIMARY security-relevant justification, beyond avoiding fines?",
+    "options": [
+      { "text": "Reducing the likelihood and impact of security incidents that regulations are designed to prevent", "correct": true, "rationale": "Compliance requirements typically codify baseline safeguards; meeting them genuinely reduces incident likelihood/impact, which is the primary security value." },
+      { "text": "Eliminating the need for any risk assessment", "correct": false, "rationale": "Compliance does not remove the need for risk assessment; risk-based decisions still apply above the compliance floor." },
+      { "text": "Guaranteeing the organization can never be breached", "correct": false, "rationale": "No compliance program guarantees immunity from breaches; it reduces, not eliminates, risk." },
+      { "text": "Allowing the organization to skip security awareness training", "correct": false, "rationale": "Many regulations explicitly require awareness training, so compliance would mandate rather than remove it." }
+    ]
+  },
+  {
+    "id": "d1-t4-b7",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Consent as Legal Basis",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company relies on user consent as its GDPR lawful basis for marketing emails. Which practice MOST undermines the validity of that consent?",
+    "options": [
+      { "text": "Pre-ticked opt-in boxes bundled into the terms of service", "correct": true, "rationale": "GDPR requires freely given, specific, informed, unambiguous consent via a clear affirmative action; pre-ticked/bundled boxes fail this test and invalidate consent." },
+      { "text": "Providing a clear, separate opt-in checkbox left unchecked by default", "correct": false, "rationale": "An unchecked, clearly-labeled opt-in is a valid affirmative action, so it supports rather than undermines consent." },
+      { "text": "Offering an easy unsubscribe mechanism", "correct": false, "rationale": "Easy withdrawal of consent strengthens validity; GDPR requires it be as easy to withdraw as to give." },
+      { "text": "Keeping records of when and how consent was obtained", "correct": false, "rationale": "Maintaining consent records supports demonstrability and does not undermine consent." }
+    ]
+  },
+  {
+    "id": "d1-t4-b8",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Scoping Cardholder Environment",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To reduce PCI-DSS compliance burden, what is the BEST architectural strategy?",
+    "options": [
+      { "text": "Segment the network to isolate systems that store, process, or transmit cardholder data", "correct": true, "rationale": "Network segmentation reduces the cardholder data environment scope, so fewer systems fall under PCI-DSS requirements." },
+      { "text": "Store all cardholder data on every server for redundancy", "correct": false, "rationale": "Spreading cardholder data everywhere expands the scope and dramatically increases compliance burden and risk." },
+      { "text": "Disable all logging to reduce audit evidence", "correct": false, "rationale": "PCI-DSS requires logging; disabling it violates the standard and hinders detection." },
+      { "text": "Grant all employees access to the cardholder environment", "correct": false, "rationale": "Broad access violates least privilege and expands both scope and risk." }
+    ]
+  },
+  {
+    "id": "d1-t4-b9",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Records of Processing",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A regulator asks an organization to demonstrate accountability for its data processing. Which artifact BEST supports this?",
+    "options": [
+      { "text": "A maintained record/inventory of processing activities", "correct": true, "rationale": "A records-of-processing inventory (e.g., GDPR Article 30) directly evidences what data is processed, why, and under what safeguards — core to demonstrating accountability." },
+      { "text": "A marketing brochure describing the company's values", "correct": false, "rationale": "Marketing material is not evidence of actual processing practices or controls." },
+      { "text": "The CEO's verbal assurance of compliance", "correct": false, "rationale": "Verbal assurance is not documented, verifiable evidence of accountability." },
+      { "text": "A list of the company's competitors", "correct": false, "rationale": "Competitor information is irrelevant to demonstrating processing accountability." }
+    ]
+  },
+  {
+    "id": "d1-t4-b10",
+    "domainId": "d1",
+    "topicId": "d1-t4",
+    "subtopicTag": "Liability and Reasonableness",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In evaluating whether an organization met its duty of care after an incident, which factor would a court be LEAST likely to weigh?",
+    "options": [
+      { "text": "Whether the organization implemented controls comparable to accepted industry standards", "correct": false, "rationale": "Alignment with prevailing standards (the 'prudent person' benchmark) is central to assessing duty of care, so it is heavily weighed." },
+      { "text": "Whether the organization performed and acted on risk assessments", "correct": false, "rationale": "Evidence of risk assessment and remediation is a key indicator of due care and is strongly considered." },
+      { "text": "The stock price of the organization on the day of the incident", "correct": true, "rationale": "Daily stock price has no bearing on whether reasonable security care was exercised, so a court is least likely to weigh it in a duty-of-care analysis." },
+      { "text": "Whether known vulnerabilities were remediated in a timely manner", "correct": false, "rationale": "Timely remediation of known issues is direct evidence of (or failure of) due care and is closely examined." }
+    ]
+  }
+]

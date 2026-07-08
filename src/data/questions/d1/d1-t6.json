@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t6-a1",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Criminal Investigation Standard of Proof",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization is supporting a criminal case against an attacker. Which standard of proof BEST applies to a criminal investigation?",
+    "options": [
+      { "text": "Beyond a reasonable doubt", "correct": true, "rationale": "Criminal cases require the highest standard — beyond a reasonable doubt — because liberty is at stake." },
+      { "text": "Preponderance of the evidence", "correct": false, "rationale": "Preponderance (more likely than not) is the civil standard, which is lower than the criminal standard." },
+      { "text": "Clear and convincing evidence", "correct": false, "rationale": "Clear and convincing is an intermediate standard used in some civil matters, not the criminal standard." },
+      { "text": "Reasonable suspicion", "correct": false, "rationale": "Reasonable suspicion may justify investigation but is far below the standard needed for a criminal conviction." }
+    ]
+  },
+  {
+    "id": "d1-t6-a2",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Civil vs Criminal Investigation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Two companies dispute contract performance and one sues the other for damages. Which investigation type MOST applies?",
+    "options": [
+      { "text": "Civil investigation", "correct": true, "rationale": "Disputes between private parties seeking damages/remedies are civil matters, using the preponderance-of-evidence standard." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "No crime/prosecution by the state is described; this is a private dispute." },
+      { "text": "Regulatory investigation", "correct": false, "rationale": "No regulator enforcing a rule is involved; it is a contract dispute between companies." },
+      { "text": "Administrative investigation", "correct": false, "rationale": "Administrative (internal) investigations address internal policy matters, not a lawsuit between two companies." }
+    ]
+  },
+  {
+    "id": "d1-t6-a3",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Administrative Investigation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "HR asks security to investigate whether an employee violated the acceptable use policy by running a side business on company systems. This is BEST classified as which investigation type?",
+    "options": [
+      { "text": "Administrative (internal) investigation", "correct": true, "rationale": "An internal inquiry into policy violations for HR/management action is an administrative investigation, with the lowest formal evidentiary bar." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "A policy violation, absent a crime, is handled internally rather than through criminal prosecution." },
+      { "text": "Civil investigation", "correct": false, "rationale": "No lawsuit between parties is described; this is an internal HR matter." },
+      { "text": "Regulatory investigation", "correct": false, "rationale": "No external regulator is enforcing a rule here." }
+    ]
+  },
+  {
+    "id": "d1-t6-a4",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Regulatory Investigation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A financial regulator opens an inquiry into a bank's handling of customer data after a complaint. Which investigation type MOST applies?",
+    "options": [
+      { "text": "Regulatory investigation", "correct": true, "rationale": "An inquiry initiated by a government regulator enforcing industry rules is a regulatory investigation." },
+      { "text": "Administrative investigation", "correct": false, "rationale": "Administrative here would imply an internal HR/policy inquiry, not an external regulator's action." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "Unless the regulator refers criminal charges, this is a regulatory enforcement inquiry, not a criminal case." },
+      { "text": "Civil investigation", "correct": false, "rationale": "No private lawsuit for damages is described; a regulator is involved." }
+    ]
+  },
+  {
+    "id": "d1-t6-a5",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Chain of Custody",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An analyst seizes a suspect's laptop that may be used as evidence. To preserve admissibility, what must be established and maintained FIRST?",
+    "options": [
+      { "text": "Chain of custody documentation", "correct": true, "rationale": "Establishing and maintaining chain of custody from the moment of seizure is essential to prove the evidence was not altered and to preserve admissibility." },
+      { "text": "A press statement about the seizure", "correct": false, "rationale": "Public statements are irrelevant to evidence integrity and could harm the case." },
+      { "text": "The suspect's written confession", "correct": false, "rationale": "A confession is separate from and cannot substitute for proper evidence handling of the device." },
+      { "text": "A backup of the analyst's own workstation", "correct": false, "rationale": "Backing up the analyst's workstation does not preserve the seized evidence's integrity." }
+    ]
+  },
+  {
+    "id": "d1-t6-a6",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Standards of Proof Comparison",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which standard of proof is typically required in a civil case?",
+    "options": [
+      { "text": "Preponderance of the evidence", "correct": true, "rationale": "Civil cases generally use the 'preponderance of the evidence' (more likely than not) standard." },
+      { "text": "Beyond a reasonable doubt", "correct": false, "rationale": "That is the criminal standard, higher than what civil cases require." },
+      { "text": "Absolute certainty", "correct": false, "rationale": "No legal standard requires absolute certainty." },
+      { "text": "Mere allegation", "correct": false, "rationale": "An allegation alone is not a standard of proof and cannot decide a case." }
+    ]
+  },
+  {
+    "id": "d1-t6-a7",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Evidence Admissibility",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "For digital evidence to be admissible in court, which characteristic is MOST critical?",
+    "options": [
+      { "text": "It must be relevant, reliable, and legally/properly obtained with preserved integrity", "correct": true, "rationale": "Admissible evidence must be relevant, reliable, and lawfully obtained with its integrity preserved (proper handling and chain of custody)." },
+      { "text": "It must be gathered as quickly as possible regardless of method", "correct": false, "rationale": "Speed does not confer admissibility; improperly obtained evidence can be excluded." },
+      { "text": "It must be interpreted only by executives", "correct": false, "rationale": "Who interprets it does not determine admissibility; proper handling and expert analysis do." },
+      { "text": "It must be publicly disclosed before trial", "correct": false, "rationale": "Public disclosure is not a requirement for admissibility and may harm the case." }
+    ]
+  },
+  {
+    "id": "d1-t6-a8",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "eDiscovery",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During litigation, a company is required to identify and produce relevant electronically stored information. This process is BEST known as what?",
+    "options": [
+      { "text": "Electronic discovery (eDiscovery)", "correct": true, "rationale": "eDiscovery is the identification, preservation, collection, and production of electronically stored information relevant to litigation." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing evaluates security exploitability, not litigation data production." },
+      { "text": "Data classification", "correct": false, "rationale": "Classification labels data sensitivity; it is not the litigation production process." },
+      { "text": "Threat modeling", "correct": false, "rationale": "Threat modeling identifies design-stage threats, unrelated to litigation discovery." }
+    ]
+  },
+  {
+    "id": "d1-t6-a9",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Legal Hold",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company reasonably anticipates litigation involving certain records. To avoid spoliation, what should it do FIRST regarding those records?",
+    "options": [
+      { "text": "Issue a legal hold to suspend routine destruction of potentially relevant records", "correct": true, "rationale": "A legal hold must be issued promptly once litigation is reasonably anticipated to prevent spoliation (destruction) of relevant evidence." },
+      { "text": "Accelerate the normal retention schedule to purge old records", "correct": false, "rationale": "Purging potentially relevant records after anticipating litigation is spoliation and can bring sanctions." },
+      { "text": "Encrypt all records and discard the keys", "correct": false, "rationale": "Rendering records inaccessible is effectively destruction and constitutes spoliation." },
+      { "text": "Wait until formally served before doing anything", "correct": false, "rationale": "The duty to preserve arises when litigation is reasonably anticipated, not only upon formal service." }
+    ]
+  },
+  {
+    "id": "d1-t6-a10",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Interviewing vs Interrogation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An internal investigator gathers facts from a cooperative witness who is not a suspect. This activity is MOST accurately described as which of the following?",
+    "options": [
+      { "text": "An interview", "correct": true, "rationale": "Fact-gathering from a cooperative, non-suspect individual is an interview; interrogation implies a suspect and an accusatory posture." },
+      { "text": "An interrogation", "correct": false, "rationale": "Interrogation targets a suspect to obtain a confession/admission, which does not fit a cooperative witness." },
+      { "text": "A deposition", "correct": false, "rationale": "A deposition is sworn testimony taken under formal legal procedure, not an informal internal interview." },
+      { "text": "A polygraph examination", "correct": false, "rationale": "A polygraph is a specific deception-detection test, not general fact-gathering from a witness." }
+    ]
+  },
+  {
+    "id": "d1-t6-b1",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Investigation Type Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An employee is suspected of embezzlement via manipulated invoices. Law enforcement may become involved. Which approach BEST protects future options?",
+    "options": [
+      { "text": "Conduct the internal investigation to criminal-evidence standards (chain of custody, forensic integrity) in case it escalates", "correct": true, "rationale": "Handling evidence to the higher criminal standard from the start preserves the option to pursue criminal charges later; downgrading is easy, upgrading mishandled evidence is not." },
+      { "text": "Handle it casually since it is only internal for now", "correct": false, "rationale": "Casual handling can spoil evidence, foreclosing criminal or civil options if the matter escalates." },
+      { "text": "Immediately terminate the employee and delete their accounts", "correct": false, "rationale": "Deleting accounts destroys evidence and premature termination can complicate the investigation." },
+      { "text": "Announce the suspicion company-wide", "correct": false, "rationale": "Publicizing suspicion risks defamation and tips off the suspect to destroy evidence." }
+    ]
+  },
+  {
+    "id": "d1-t6-b2",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Regulatory Cooperation",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A regulator issues a formal request for records as part of an investigation. What should the organization do FIRST?",
+    "options": [
+      { "text": "Engage legal counsel and preserve the requested records before responding", "correct": true, "rationale": "Legal counsel should guide the response and records must be preserved immediately to avoid spoliation and ensure a compliant, defensible reply." },
+      { "text": "Delete anything potentially embarrassing before responding", "correct": false, "rationale": "Destroying requested records is obstruction/spoliation and can bring severe penalties." },
+      { "text": "Ignore the request unless a court order is issued", "correct": false, "rationale": "Regulatory requests carry legal authority; ignoring them invites enforcement action." },
+      { "text": "Respond immediately without reviewing scope or counsel", "correct": false, "rationale": "Responding without scoping or legal review risks over-disclosure and errors." }
+    ]
+  },
+  {
+    "id": "d1-t6-b3",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Order of Volatility",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "During live forensic collection on a running system, which data should generally be collected FIRST based on the order of volatility?",
+    "options": [
+      { "text": "CPU registers, cache, and RAM contents", "correct": true, "rationale": "The most volatile data (registers, cache, memory) is lost first when a system powers down, so it is collected first under the order of volatility." },
+      { "text": "Data on backup tapes in offsite storage", "correct": false, "rationale": "Archived backups are the least volatile and can be collected last." },
+      { "text": "Printed documents in a filing cabinet", "correct": false, "rationale": "Physical documents are non-volatile and unaffected by power state." },
+      { "text": "Data on a powered-off spare hard drive", "correct": false, "rationale": "Non-volatile disk data persists and is collected after volatile memory." }
+    ]
+  },
+  {
+    "id": "d1-t6-b4",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Forensic Imaging",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Before analyzing a seized drive, what is the BEST practice to protect the original evidence?",
+    "options": [
+      { "text": "Create a bit-for-bit forensic image and analyze the copy, verifying with hashes", "correct": true, "rationale": "Analysts work on a verified bit-for-bit image (validated by hash) so the original remains untouched and admissible." },
+      { "text": "Analyze the original drive directly to save time", "correct": false, "rationale": "Working on the original risks altering it and jeopardizing admissibility." },
+      { "text": "Reformat the drive and reinstall the OS first", "correct": false, "rationale": "Reformatting destroys the evidence entirely." },
+      { "text": "Boot the drive normally and browse the files", "correct": false, "rationale": "Booting the evidence drive modifies timestamps and data, compromising integrity." }
+    ]
+  },
+  {
+    "id": "d1-t6-b5",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Best Evidence Rule",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The 'best evidence rule' generally requires which of the following?",
+    "options": [
+      { "text": "The original evidence (or a verified duplicate) rather than a description or copy of uncertain fidelity", "correct": true, "rationale": "The best evidence rule favors original documents/evidence (or a reliably verified duplicate) over secondary descriptions." },
+      { "text": "Only oral testimony from witnesses", "correct": false, "rationale": "The rule prefers original documentary evidence, not solely oral accounts." },
+      { "text": "The most recent copy regardless of integrity", "correct": false, "rationale": "Recency without verified integrity is not what the rule requires." },
+      { "text": "Evidence gathered by the most senior investigator", "correct": false, "rationale": "Seniority of the collector is irrelevant to the best evidence rule." }
+    ]
+  },
+  {
+    "id": "d1-t6-b6",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Types of Evidence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An investigator presents server logs that indirectly suggest an attacker's activity but do not directly prove identity. This is BEST categorized as which type of evidence?",
+    "options": [
+      { "text": "Circumstantial evidence", "correct": true, "rationale": "Circumstantial evidence supports an inference (suggests) rather than directly proving a fact, which fits logs implying activity without proving identity." },
+      { "text": "Direct evidence", "correct": false, "rationale": "Direct evidence proves a fact without inference (e.g., an eyewitness); the logs require inference." },
+      { "text": "Hearsay with no exception", "correct": false, "rationale": "Business-record logs often fall under a hearsay exception; more importantly, the question concerns their inferential nature, not hearsay." },
+      { "text": "Demonstrative evidence", "correct": false, "rationale": "Demonstrative evidence (charts, models) illustrates other evidence; raw logs suggesting activity are circumstantial, not demonstrative aids." }
+    ]
+  },
+  {
+    "id": "d1-t6-b7",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Entrapment vs Enticement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Investigators set up a honeypot that logs attackers who choose to break in on their own. A suspect argues this is entrapment. Which statement is MOST accurate?",
+    "options": [
+      { "text": "This is generally enticement, not entrapment, because the attacker acted of their own volition", "correct": true, "rationale": "Entrapment involves inducing someone to commit a crime they otherwise would not; a honeypot that merely offers opportunity to already-willing attackers is enticement, which is typically lawful." },
+      { "text": "Any honeypot is automatically entrapment", "correct": false, "rationale": "Merely providing an opportunity is not entrapment; inducement of an unwilling party is required for entrapment." },
+      { "text": "Entrapment applies because the system existed at all", "correct": false, "rationale": "The existence of a target system does not constitute inducement to commit a crime." },
+      { "text": "Enticement and entrapment are legally identical", "correct": false, "rationale": "They are distinct: enticement offers opportunity to the willing; entrapment induces the unwilling." }
+    ]
+  },
+  {
+    "id": "d1-t6-b8",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Administrative Standard of Proof",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which investigation type generally has the LEAST demanding standard of proof?",
+    "options": [
+      { "text": "Administrative (internal policy) investigation", "correct": true, "rationale": "Internal administrative matters typically use the lowest bar (e.g., 'more likely than not' or even mere policy judgment), less demanding than civil or criminal standards." },
+      { "text": "Criminal investigation", "correct": false, "rationale": "Criminal has the highest standard (beyond a reasonable doubt), the most demanding." },
+      { "text": "Civil investigation", "correct": false, "rationale": "Civil uses preponderance, more demanding than an internal administrative judgment." },
+      { "text": "Regulatory investigation", "correct": false, "rationale": "Regulatory standards vary but are generally more formal than an internal administrative inquiry." }
+    ]
+  },
+  {
+    "id": "d1-t6-b9",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Evidence Preservation in Cloud",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An incident spans a SaaS provider's environment where the customer lacks physical access to hardware. What is the BEST way to obtain forensic evidence?",
+    "options": [
+      { "text": "Invoke contractual/SLA provisions and coordinate with the provider for lawful evidence collection", "correct": true, "rationale": "In shared-responsibility cloud models, the customer must rely on contractual terms and provider cooperation (and legal process if needed) to lawfully collect evidence it cannot physically access." },
+      { "text": "Attempt to hack into the provider's backend to grab logs", "correct": false, "rationale": "Unauthorized access to the provider is itself illegal and would taint any evidence." },
+      { "text": "Assume no evidence can ever be obtained from SaaS", "correct": false, "rationale": "Providers commonly furnish logs/artifacts through proper channels; evidence is obtainable." },
+      { "text": "Seize a random other tenant's data for comparison", "correct": false, "rationale": "Accessing another tenant's data is unlawful and irrelevant to the case." }
+    ]
+  },
+  {
+    "id": "d1-t6-b10",
+    "domainId": "d1",
+    "topicId": "d1-t6",
+    "subtopicTag": "Investigation Governance",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is it PRIMARY that an organization define investigation procedures and evidence-handling policies in advance?",
+    "options": [
+      { "text": "So evidence is collected consistently and defensibly, preserving admissibility and legal options when an incident occurs", "correct": true, "rationale": "Predefined procedures ensure consistent, defensible handling under pressure, protecting admissibility and the organization's legal options." },
+      { "text": "So the marketing team can publicize incidents faster", "correct": false, "rationale": "Investigation procedures are not designed for marketing/publicity purposes." },
+      { "text": "So investigations can bypass legal review entirely", "correct": false, "rationale": "Good procedures incorporate legal review; they do not bypass it." },
+      { "text": "So the organization can avoid ever reporting to regulators", "correct": false, "rationale": "Procedures do not exempt an organization from mandatory reporting obligations." }
+    ]
+  }
+]

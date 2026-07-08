@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t5-a1",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Driven by Requirements",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "How should an organization BEST determine how long to retain a given type of record?",
+    "options": [
+      { "text": "Base retention periods on legal, regulatory, and business requirements", "correct": true, "rationale": "Retention periods should be driven by applicable laws, regulations, and legitimate business needs — not arbitrary choices." },
+      { "text": "Keep every record forever regardless of need", "correct": false, "rationale": "Indefinite retention increases risk and cost and can violate minimization principles." },
+      { "text": "Delete every record after one week uniformly", "correct": false, "rationale": "A uniform short period could violate legal retention requirements for many record types." },
+      { "text": "Let each employee decide personally", "correct": false, "rationale": "Ad hoc individual decisions produce inconsistent, non-compliant retention." }
+    ]
+  },
+  {
+    "id": "d2-t5-a2",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Over-Retention Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company keeps customer records far longer than any law requires. What is the MOST significant risk of this over-retention?",
+    "options": [
+      { "text": "A larger volume of sensitive data increases breach exposure and potential liability/e-discovery burden", "correct": true, "rationale": "Retaining data beyond need enlarges the attack surface and increases breach impact, liability, and discovery costs." },
+      { "text": "It automatically improves security", "correct": false, "rationale": "Holding more sensitive data longer worsens, not improves, security exposure." },
+      { "text": "It guarantees regulatory compliance", "correct": false, "rationale": "Over-retention can itself breach data-minimization and privacy requirements." },
+      { "text": "It has no downside at all", "correct": false, "rationale": "Over-retention has clear downsides in risk, cost, and compliance." }
+    ]
+  },
+  {
+    "id": "d2-t5-a3",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Schedule",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To operationalize consistent retention across the organization, what is the BEST tool?",
+    "options": [
+      { "text": "A documented records retention schedule specifying how long each record type is kept and when it is destroyed", "correct": true, "rationale": "A retention schedule defines per-record-type retention and disposition, ensuring consistent, defensible handling." },
+      { "text": "Individual memory of what to keep", "correct": false, "rationale": "Memory is inconsistent and unauditable for retention decisions." },
+      { "text": "Keeping no records of retention rules", "correct": false, "rationale": "Without documented rules, retention is inconsistent and indefensible." },
+      { "text": "A rule to delete everything at year-end", "correct": false, "rationale": "Blanket year-end deletion ignores differing legal retention requirements." }
+    ]
+  },
+  {
+    "id": "d2-t5-a4",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Legal Hold Overrides Retention",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Records are scheduled for routine destruction, but litigation involving them is now reasonably anticipated. What MOST appropriately happens?",
+    "options": [
+      { "text": "A legal hold suspends the scheduled destruction until the matter is resolved", "correct": true, "rationale": "A legal hold overrides the retention schedule, preserving relevant records to avoid spoliation during litigation." },
+      { "text": "Destruction proceeds on schedule regardless of litigation", "correct": false, "rationale": "Destroying records relevant to anticipated litigation is spoliation and can bring sanctions." },
+      { "text": "The records are deleted faster to avoid discovery", "correct": false, "rationale": "Accelerating destruction to avoid discovery is obstruction/spoliation." },
+      { "text": "Retention rules are ignored entirely for all data", "correct": false, "rationale": "Only relevant records are held; other retention rules still apply, and the point is preservation, not blanket abandonment." }
+    ]
+  },
+  {
+    "id": "d2-t5-a5",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention vs Destruction Link",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When a record's retention period expires and no hold applies, what should happen FIRST?",
+    "options": [
+      { "text": "Securely dispose of/destroy the record per policy", "correct": true, "rationale": "Once retention lapses and no hold applies, secure disposal reduces risk from retaining unneeded sensitive data." },
+      { "text": "Keep it indefinitely beyond the schedule", "correct": false, "rationale": "Retaining data past its required period increases exposure and may violate minimization." },
+      { "text": "Move it to a public folder", "correct": false, "rationale": "Public exposure of expired sensitive records is a breach, not proper disposition." },
+      { "text": "Email it to all staff", "correct": false, "rationale": "Broad distribution increases exposure and is not a disposition step." }
+    ]
+  },
+  {
+    "id": "d2-t5-a6",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Asset/data retention policy primarily specifies which of the following?",
+    "options": [
+      { "text": "How long different types of data/assets are kept before disposal", "correct": true, "rationale": "A retention policy defines the duration each data/asset type is retained before appropriate disposal." },
+      { "text": "The color scheme of storage systems", "correct": false, "rationale": "Storage aesthetics are unrelated to retention." },
+      { "text": "The brand of backup tapes to buy", "correct": false, "rationale": "Media brand is not what a retention policy specifies." },
+      { "text": "The office's operating hours", "correct": false, "rationale": "Business hours are unrelated to data retention." }
+    ]
+  },
+  {
+    "id": "d2-t5-a7",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Backup Retention",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A retention policy says customer data is destroyed after 3 years, but backups are kept for 7 years. What is the MOST accurate observation?",
+    "options": [
+      { "text": "Backup retention must be reconciled with the policy, or 'destroyed' data persists in backups beyond its allowed period", "correct": true, "rationale": "If backups retain data longer than the policy allows, the data is not truly disposed of; retention rules must cover backups too." },
+      { "text": "Backups are exempt from all retention rules", "correct": false, "rationale": "Backups contain the same data and are subject to retention/disposition governance." },
+      { "text": "The discrepancy is irrelevant", "correct": false, "rationale": "The discrepancy means supposedly-destroyed data still exists, a real compliance/risk gap." },
+      { "text": "Production deletion automatically purges backups", "correct": false, "rationale": "Deleting production data does not remove independent backup copies." }
+    ]
+  },
+  {
+    "id": "d2-t5-a8",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention and Privacy Law",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Under privacy regulations like GDPR's storage limitation principle, personal data should be retained for how long?",
+    "options": [
+      { "text": "No longer than necessary for the purposes for which it was collected", "correct": true, "rationale": "Storage limitation requires personal data to be kept only as long as needed for its stated purpose, then disposed of." },
+      { "text": "Forever, to maximize analytics value", "correct": false, "rationale": "Indefinite retention of personal data violates the storage limitation principle." },
+      { "text": "Exactly 100 years in all cases", "correct": false, "rationale": "There is no universal fixed period; retention must match purpose and applicable law." },
+      { "text": "Until the data subject dies, always", "correct": false, "rationale": "Retention is tied to purpose necessity, not a blanket lifetime rule." }
+    ]
+  },
+  {
+    "id": "d2-t5-a9",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Media Longevity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Records must be retained and readable for 20 years. Which retention concern is MOST important to address?",
+    "options": [
+      { "text": "Media and format longevity — ensuring the data remains readable as media degrade and formats become obsolete", "correct": true, "rationale": "Long retention requires managing media degradation and format obsolescence so archived data stays retrievable and readable." },
+      { "text": "The font size of printed labels", "correct": false, "rationale": "Label font is trivial compared to long-term readability of the media." },
+      { "text": "The color of the storage boxes", "correct": false, "rationale": "Box color has no effect on long-term data readability." },
+      { "text": "The brand of the label printer", "correct": false, "rationale": "Printer brand is irrelevant to media/format longevity." }
+    ]
+  },
+  {
+    "id": "d2-t5-a10",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Defensible Disposition",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure record destruction is legally defensible, what is BEST maintained?",
+    "options": [
+      { "text": "Documentation showing destruction followed an approved schedule and process", "correct": true, "rationale": "Documented, policy-driven destruction demonstrates it was routine and defensible, not selective evidence-tampering." },
+      { "text": "No records of what was destroyed", "correct": false, "rationale": "Undocumented destruction is indefensible if later questioned." },
+      { "text": "Selective, undocumented deletion of inconvenient records", "correct": false, "rationale": "Selective, undocumented deletion looks like spoliation and is legally risky." },
+      { "text": "Deleting records only when someone complains", "correct": false, "rationale": "Reactive, unscheduled deletion is not a defensible, consistent process." }
+    ]
+  },
+  {
+    "id": "d2-t5-b1",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Minimization vs Retention",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A privacy officer argues the company should shorten default retention periods. Which principle MOST supports this?",
+    "options": [
+      { "text": "Data minimization / storage limitation — retain only as long as needed", "correct": true, "rationale": "Shorter retention aligns with minimization/storage-limitation, reducing risk from holding unneeded data." },
+      { "text": "Maximize retention for potential future value", "correct": false, "rationale": "This opposes minimization and increases exposure." },
+      { "text": "Availability requires infinite retention", "correct": false, "rationale": "Availability concerns access to needed data, not keeping everything forever." },
+      { "text": "Non-repudiation mandates permanent storage", "correct": false, "rationale": "Non-repudiation concerns proving actions, not indefinite retention of all data." }
+    ]
+  },
+  {
+    "id": "d2-t5-b2",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Ownership",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Who should BEST be involved in setting retention periods for a given record type?",
+    "options": [
+      { "text": "Data owners together with legal/compliance to reflect business and regulatory needs", "correct": true, "rationale": "Retention decisions require the data owner's business knowledge and legal/compliance input on regulatory obligations." },
+      { "text": "Only the newest intern", "correct": false, "rationale": "An intern typically lacks the legal and business context to set defensible retention." },
+      { "text": "A random external vendor", "correct": false, "rationale": "External vendors do not own the organization's retention decisions." },
+      { "text": "No one; retention is decided by chance", "correct": false, "rationale": "Retention must be deliberately set based on requirements, not left to chance." }
+    ]
+  },
+  {
+    "id": "d2-t5-b3",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Under-Retention Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company destroys financial records after one year, but regulations require seven. What is the MOST significant consequence?",
+    "options": [
+      { "text": "Regulatory non-compliance and inability to produce legally required records", "correct": true, "rationale": "Destroying records before the mandated retention period breaches regulations and leaves the company unable to meet legal production demands." },
+      { "text": "Improved compliance posture", "correct": false, "rationale": "Premature destruction violates, rather than improves, compliance." },
+      { "text": "No consequence whatsoever", "correct": false, "rationale": "There are serious legal/regulatory consequences to destroying records early." },
+      { "text": "Automatic legal immunity", "correct": false, "rationale": "Early destruction creates liability, not immunity." }
+    ]
+  },
+  {
+    "id": "d2-t5-b4",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Automation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Manual enforcement of retention is inconsistent. What is the BEST way to enforce retention and disposition reliably at scale?",
+    "options": [
+      { "text": "Automate retention/disposition using records or information lifecycle management tooling", "correct": true, "rationale": "Automated lifecycle/records management enforces retention and timely disposition consistently across large data volumes." },
+      { "text": "Rely on staff to remember to delete things", "correct": false, "rationale": "Human memory yields inconsistent enforcement, the stated problem." },
+      { "text": "Never delete anything to avoid mistakes", "correct": false, "rationale": "Never deleting causes over-retention risk and violates minimization." },
+      { "text": "Delete data randomly", "correct": false, "rationale": "Random deletion risks destroying records still under retention requirements." }
+    ]
+  },
+  {
+    "id": "d2-t5-b5",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Schedule Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "A records retention schedule primarily documents which of the following?",
+    "options": [
+      { "text": "How long each record type is retained and how/when it is disposed of", "correct": true, "rationale": "A retention schedule specifies retention duration and disposition for each record type." },
+      { "text": "Which employees get parking spaces", "correct": false, "rationale": "Parking assignments are unrelated to records retention." },
+      { "text": "The company's advertising budget", "correct": false, "rationale": "Advertising budgets are unrelated to retention scheduling." },
+      { "text": "The cafeteria menu rotation", "correct": false, "rationale": "This has no connection to record retention." }
+    ]
+  },
+  {
+    "id": "d2-t5-b6",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Email Retention",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization has no email retention policy, so mailboxes grow indefinitely with sensitive content. What is the MOST appropriate improvement?",
+    "options": [
+      { "text": "Define and enforce an email retention/disposition policy aligned to legal and business needs", "correct": true, "rationale": "A defined email retention policy limits indefinite accumulation of sensitive content while meeting legal obligations." },
+      { "text": "Keep all email forever with no policy", "correct": false, "rationale": "Unbounded email retention increases exposure and e-discovery burden." },
+      { "text": "Delete all email nightly regardless of need", "correct": false, "rationale": "Blanket nightly deletion could destroy records needed for legal/business reasons." },
+      { "text": "Let each user set their own random rules", "correct": false, "rationale": "Inconsistent per-user rules undermine compliance and defensibility." }
+    ]
+  },
+  {
+    "id": "d2-t5-b7",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention and Cost",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Besides risk, which additional benefit does disposing of data at the end of its required retention MOST directly provide?",
+    "options": [
+      { "text": "Reduced storage costs and smaller e-discovery/data-management burden", "correct": true, "rationale": "Timely disposition lowers storage costs and reduces the volume subject to discovery and management." },
+      { "text": "Higher risk of breaches", "correct": false, "rationale": "Disposing of unneeded data lowers, not raises, breach risk." },
+      { "text": "Guaranteed data loss of active records", "correct": false, "rationale": "Proper disposition targets expired records, not active ones." },
+      { "text": "Automatic revenue growth", "correct": false, "rationale": "Retention disposition does not directly generate revenue." }
+    ]
+  },
+  {
+    "id": "d2-t5-b8",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Hold vs Schedule Precedence",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A record is subject to both a routine 2-year retention schedule and an active legal hold. Which takes precedence?",
+    "options": [
+      { "text": "The legal hold — the record must be preserved despite the schedule until the hold is lifted", "correct": true, "rationale": "A legal hold overrides routine retention/disposition; the record is preserved until the hold is released." },
+      { "text": "The retention schedule, so destroy it at 2 years anyway", "correct": false, "rationale": "Destroying held records is spoliation regardless of the schedule." },
+      { "text": "Neither; delete it immediately", "correct": false, "rationale": "Immediate deletion of held records is spoliation." },
+      { "text": "Whichever the newest employee prefers", "correct": false, "rationale": "Preference does not govern; the legal hold controls." }
+    ]
+  },
+  {
+    "id": "d2-t5-b9",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Review Cadence",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Regulations governing retention periods change over time. What is the BEST practice for the retention schedule?",
+    "options": [
+      { "text": "Review and update the retention schedule periodically to reflect current legal requirements", "correct": true, "rationale": "Periodic review keeps retention periods aligned with evolving legal and regulatory obligations." },
+      { "text": "Write it once and never revisit it", "correct": false, "rationale": "A static schedule becomes non-compliant as laws change." },
+      { "text": "Delete the schedule to avoid maintenance", "correct": false, "rationale": "Removing the schedule eliminates consistent, defensible retention." },
+      { "text": "Only update after a lawsuit is lost", "correct": false, "rationale": "Reactive-only updates leave the organization non-compliant in the meantime." }
+    ]
+  },
+  {
+    "id": "d2-t5-b10",
+    "domainId": "d2",
+    "topicId": "d2-t5",
+    "subtopicTag": "Retention Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when setting a data retention period?",
+    "options": [
+      { "text": "The personal music preferences of the IT team", "correct": true, "rationale": "IT staff music tastes have no bearing on how long data should be retained, making it least relevant." },
+      { "text": "Applicable legal/regulatory retention requirements", "correct": false, "rationale": "Legal requirements are a primary driver of retention periods." },
+      { "text": "Legitimate business need for the data", "correct": false, "rationale": "Business need is a core factor in setting retention." },
+      { "text": "Data minimization/privacy obligations", "correct": false, "rationale": "Privacy/minimization obligations directly influence retention limits." }
+    ]
+  }
+]

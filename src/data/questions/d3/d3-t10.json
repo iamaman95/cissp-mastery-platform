@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t10-a1",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Kerckhoffs Principle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A vendor claims its cipher is secure mainly because the algorithm is kept secret. Which principle MOST directly challenges this claim?",
+    "options": [
+      { "text": "Kerckhoffs's principle — security should rest on the secrecy of the key, not the algorithm", "correct": true, "rationale": "Kerckhoffs's principle holds that a cryptosystem must remain secure even if the algorithm is public; relying on a secret algorithm is 'security through obscurity.'" },
+      { "text": "The principle of least privilege", "correct": false, "rationale": "Least privilege concerns access rights, not the secrecy basis of a cipher." },
+      { "text": "The Biba integrity model", "correct": false, "rationale": "Biba is an access-control integrity model, unrelated to algorithm secrecy." },
+      { "text": "Perfect forward secrecy", "correct": false, "rationale": "PFS concerns protecting past sessions if a key is later compromised, not the secret-algorithm claim." }
+    ]
+  },
+  {
+    "id": "d3-t10-a2",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "HSM for Key Storage",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization needs to generate and use high-value keys such that the keys are never exposed in plaintext outside tamper-resistant hardware. Which solution is BEST?",
+    "options": [
+      { "text": "A Hardware Security Module (HSM)", "correct": true, "rationale": "An HSM generates, stores, and uses keys inside tamper-resistant hardware without exposing the key material." },
+      { "text": "A plaintext key file on a shared drive", "correct": false, "rationale": "Storing keys in plaintext on a shared drive exposes them broadly, the opposite of the requirement." },
+      { "text": "Hard-coding the key in application source", "correct": false, "rationale": "Hard-coded keys are easily extracted and are a classic key-management failure." },
+      { "text": "Emailing the key to administrators", "correct": false, "rationale": "Emailing keys exposes them in transit and in mailboxes." }
+    ]
+  },
+  {
+    "id": "d3-t10-a3",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Split Knowledge M of N",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company wants to ensure no single administrator can unilaterally use its root CA key. Which control BEST enforces this?",
+    "options": [
+      { "text": "Split knowledge / dual control using an M of N scheme", "correct": true, "rationale": "Requiring several custodians (M of N) to combine key shares prevents any one person from using the critical key alone." },
+      { "text": "Giving one trusted administrator sole custody", "correct": false, "rationale": "Sole custody is exactly the single-person control the company wants to avoid." },
+      { "text": "Posting the key on the intranet for transparency", "correct": false, "rationale": "Publishing the key destroys its secrecy entirely." },
+      { "text": "Storing the key with no controls for convenience", "correct": false, "rationale": "No controls leaves the critical key open to unilateral or unauthorized use." }
+    ]
+  },
+  {
+    "id": "d3-t10-a4",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Rotation Purpose",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "What is the PRIMARY security reason to rotate cryptographic keys periodically?",
+    "options": [
+      { "text": "To limit the amount of data exposed and the window of risk if a key is compromised", "correct": true, "rationale": "Rotation caps how much data one key protects and shortens the exposure window if a key is ever compromised." },
+      { "text": "To make encryption run faster", "correct": false, "rationale": "Rotation does not improve performance; it manages exposure risk." },
+      { "text": "To eliminate the need for access controls", "correct": false, "rationale": "Rotation does not replace access controls." },
+      { "text": "To make the algorithm secret", "correct": false, "rationale": "Rotation changes keys, not the algorithm, and algorithm secrecy is not the goal." }
+    ]
+  },
+  {
+    "id": "d3-t10-a5",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Hard-Coded Key Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A developer hard-codes an AES key directly in the application's source code, which is stored in a shared repository. What is the MOST significant risk?",
+    "options": [
+      { "text": "Anyone with repository access can extract the key, compromising all data it protects", "correct": true, "rationale": "A hard-coded key in shared source is exposed to everyone with repo access, undermining the confidentiality of all data encrypted with it." },
+      { "text": "The key will encrypt data too quickly", "correct": false, "rationale": "Performance is not the concern; the key exposure is." },
+      { "text": "The algorithm becomes unbreakable", "correct": false, "rationale": "Exposing the key weakens security; it does not strengthen the algorithm." },
+      { "text": "It improves key secrecy", "correct": false, "rationale": "Embedding a key in shared code reduces, not improves, secrecy." }
+    ]
+  },
+  {
+    "id": "d3-t10-a6",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Escrow Tradeoff",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An organization implements key escrow so it can recover encrypted data if an employee leaves. What is the MOST important trade-off to manage?",
+    "options": [
+      { "text": "The escrow becomes a high-value target whose compromise could expose many keys", "correct": true, "rationale": "Escrow enables recovery but concentrates key copies, so protecting the escrow is critical since its compromise could unlock much data." },
+      { "text": "Escrow makes encryption impossible", "correct": false, "rationale": "Escrow stores key copies for recovery; it does not prevent encryption." },
+      { "text": "Escrow removes the need to encrypt at all", "correct": false, "rationale": "Escrow supports recovery of encrypted data; it does not eliminate encryption." },
+      { "text": "Escrow guarantees keys can never be misused", "correct": false, "rationale": "Escrow itself can be misused if compromised, which is the trade-off to manage." }
+    ]
+  },
+  {
+    "id": "d3-t10-a7",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Generation Randomness",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Keys generated from a weak, predictable random source are found to be guessable. Which control MOST directly prevents this?",
+    "options": [
+      { "text": "Use a cryptographically secure random number generator (CSPRNG) for key generation", "correct": true, "rationale": "Strong keys require high-quality randomness; a CSPRNG ensures keys are unpredictable." },
+      { "text": "Use a longer but still predictable seed", "correct": false, "rationale": "Predictability, not just length, is the problem; a predictable source remains guessable." },
+      { "text": "Reuse the same key everywhere", "correct": false, "rationale": "Key reuse worsens exposure and does not address weak randomness." },
+      { "text": "Publish the keys for review", "correct": false, "rationale": "Publishing keys destroys their secrecy." }
+    ]
+  },
+  {
+    "id": "d3-t10-a8",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Compromise Response",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A private key is confirmed compromised. What should be done FIRST?",
+    "options": [
+      { "text": "Revoke the associated certificate/key and re-key affected systems", "correct": true, "rationale": "A confirmed key compromise requires prompt revocation and re-keying so the compromised key can no longer be trusted or used." },
+      { "text": "Keep using the key until it expires", "correct": false, "rationale": "Continuing to use a compromised key leaves data and trust exposed." },
+      { "text": "Only change the algorithm and keep the key", "correct": false, "rationale": "The key, not the algorithm, is compromised; the key must be revoked/replaced." },
+      { "text": "Ignore it if no breach is visible yet", "correct": false, "rationale": "A confirmed compromise must be acted on immediately, not ignored pending visible damage." }
+    ]
+  },
+  {
+    "id": "d3-t10-a9",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Destruction",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When an encryption key reaches end of life, what is the BEST practice?",
+    "options": [
+      { "text": "Securely destroy the key and all its copies so encrypted data cannot be recovered with it", "correct": true, "rationale": "Secure destruction of the key (and copies) at end of life prevents later misuse; note this also renders data encrypted solely with it unrecoverable, which must be intended." },
+      { "text": "Leave old keys stored indefinitely with no controls", "correct": false, "rationale": "Retaining retired keys carelessly leaves exploitable key material." },
+      { "text": "Email the retired key to all staff", "correct": false, "rationale": "Distributing a key broadly is a serious exposure, not proper destruction." },
+      { "text": "Post it publicly since it is retired", "correct": false, "rationale": "A retired key may still decrypt old data; publishing it exposes that data." }
+    ]
+  },
+  {
+    "id": "d3-t10-a10",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Crypto Failure Point",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An audit finds strong AES-256 encryption but keys stored in plaintext config files. What is the MOST accurate assessment?",
+    "options": [
+      { "text": "The strong algorithm is undermined by weak key management; the keys' exposure is the real vulnerability", "correct": true, "rationale": "Cryptographic strength depends on protecting the key; a strong cipher with exposed keys is effectively broken — key management is the weak link." },
+      { "text": "The system is fully secure because AES-256 is used", "correct": false, "rationale": "Exposed keys negate the algorithm's strength; the system is not secure." },
+      { "text": "The algorithm should be kept secret to compensate", "correct": false, "rationale": "Algorithm secrecy is not the fix; protecting the keys is." },
+      { "text": "Key storage is irrelevant to security", "correct": false, "rationale": "Key storage is central to cryptographic security; plaintext keys are a critical flaw." }
+    ]
+  },
+  {
+    "id": "d3-t10-b1",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Dual Control Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Dual control in key management means which of the following?",
+    "options": [
+      { "text": "Two (or more) authorized people are required to perform a sensitive key operation", "correct": true, "rationale": "Dual control requires multiple people to jointly perform a sensitive operation, preventing unilateral action." },
+      { "text": "One person controls two keys", "correct": false, "rationale": "Dual control is about requiring multiple people, not one person holding multiple keys." },
+      { "text": "Keys are stored in two file formats", "correct": false, "rationale": "File format count is unrelated to dual control." },
+      { "text": "Encryption is done twice", "correct": false, "rationale": "Dual control concerns authorization for key operations, not double encryption." }
+    ]
+  },
+  {
+    "id": "d3-t10-b2",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Exchange Method",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Two parties need to establish a shared symmetric key over an insecure channel without pre-sharing a secret. Which approach is BEST?",
+    "options": [
+      { "text": "Use an asymmetric key-exchange method such as Diffie-Hellman", "correct": true, "rationale": "Diffie-Hellman lets two parties derive a shared secret over an insecure channel without transmitting the key itself." },
+      { "text": "Send the symmetric key in plaintext email", "correct": false, "rationale": "Sending the key in the clear exposes it to interception." },
+      { "text": "Post the key on a public website", "correct": false, "rationale": "Publishing the key destroys its secrecy." },
+      { "text": "Reuse a key found in old documentation", "correct": false, "rationale": "Reusing a possibly-exposed key is insecure and not a proper exchange." }
+    ]
+  },
+  {
+    "id": "d3-t10-b3",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "HSM Benefit",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security benefit of performing cryptographic operations inside an HSM rather than in general-purpose software?",
+    "options": [
+      { "text": "Keys remain within tamper-resistant hardware and are not exposed to the host system", "correct": true, "rationale": "HSMs keep key material protected inside tamper-resistant hardware, so keys are never exposed in the host's memory or storage." },
+      { "text": "It makes the algorithm secret", "correct": false, "rationale": "HSMs protect keys, not the secrecy of the (public) algorithm." },
+      { "text": "It removes the need for any key rotation", "correct": false, "rationale": "Rotation is still good practice; HSMs do not eliminate it." },
+      { "text": "It publishes keys for auditing", "correct": false, "rationale": "HSMs protect keys from exposure; they do not publish them." }
+    ]
+  },
+  {
+    "id": "d3-t10-b4",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Reuse Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "The same symmetric key is reused across many systems and applications. What is the MOST significant consequence?",
+    "options": [
+      { "text": "Compromise of the single key exposes all systems and data that rely on it", "correct": true, "rationale": "Widespread reuse means one key compromise cascades to every system using it, maximizing blast radius." },
+      { "text": "Each system becomes independently secure", "correct": false, "rationale": "Shared keys create dependency, not independence; one compromise affects all." },
+      { "text": "Encryption becomes impossible", "correct": false, "rationale": "Reuse does not prevent encryption; it increases risk concentration." },
+      { "text": "The key becomes unbreakable", "correct": false, "rationale": "Reuse weakens the security posture; it does not strengthen the key." }
+    ]
+  },
+  {
+    "id": "d3-t10-b5",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Private Key Handling",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which practice is LEAST appropriate for handling a private key?",
+    "options": [
+      { "text": "Emailing the private key to colleagues so they can also use it", "correct": true, "rationale": "Private keys must never be shared or transmitted in the clear; emailing one is the least appropriate, most dangerous practice." },
+      { "text": "Storing it in an HSM", "correct": false, "rationale": "HSM storage is a strong, appropriate practice for private keys." },
+      { "text": "Restricting access to it via strict controls", "correct": false, "rationale": "Restricting access is appropriate and protective." },
+      { "text": "Backing it up securely with encryption", "correct": false, "rationale": "Securely encrypted backup is a reasonable, appropriate practice." }
+    ]
+  },
+  {
+    "id": "d3-t10-b6",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Escrow Purpose",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An organization keeps recoverable copies of employees' data-encryption keys with a controlled trusted party. This practice MOST directly enables what?",
+    "options": [
+      { "text": "Recovery of encrypted data if the original key is lost or the employee is unavailable", "correct": true, "rationale": "Key escrow provides a controlled means to recover encrypted data when the original key cannot be used." },
+      { "text": "Faster encryption performance", "correct": false, "rationale": "Escrow is about recovery, not performance." },
+      { "text": "Making the algorithm secret", "correct": false, "rationale": "Escrow concerns key copies for recovery, not algorithm secrecy." },
+      { "text": "Eliminating the need for encryption", "correct": false, "rationale": "Escrow supports encrypted-data recovery; it does not remove the need to encrypt." }
+    ]
+  },
+  {
+    "id": "d3-t10-b7",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Perfect Forward Secrecy",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A protocol generates a unique ephemeral session key per session so that compromise of a long-term key does not expose past sessions. This property is MOST accurately called what?",
+    "options": [
+      { "text": "Perfect forward secrecy (PFS)", "correct": true, "rationale": "PFS uses ephemeral per-session keys so that compromising a long-term key does not retroactively decrypt earlier sessions." },
+      { "text": "Key escrow", "correct": false, "rationale": "Escrow stores recoverable key copies, which is unrelated to (and can conflict with) forward secrecy." },
+      { "text": "Split knowledge", "correct": false, "rationale": "Split knowledge divides key control among custodians; it does not describe ephemeral session keys." },
+      { "text": "Kerckhoffs's principle", "correct": false, "rationale": "Kerckhoffs's principle concerns algorithm publicity, not ephemeral session keys." }
+    ]
+  },
+  {
+    "id": "d3-t10-b8",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Length Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "When selecting a key length, what is the BEST guiding principle?",
+    "options": [
+      { "text": "Choose a length appropriate to the algorithm and current recommendations to resist foreseeable attacks", "correct": true, "rationale": "Key length should follow current guidance and the algorithm's design to withstand brute-force given foreseeable computing power." },
+      { "text": "Always pick the shortest length for speed", "correct": false, "rationale": "Shortest lengths weaken security against brute force." },
+      { "text": "Pick an arbitrary length unrelated to the algorithm", "correct": false, "rationale": "Key length must match the algorithm's supported sizes, not be arbitrary." },
+      { "text": "Keep the algorithm secret instead of choosing a length", "correct": false, "rationale": "Algorithm secrecy is not a substitute for adequate key length." }
+    ]
+  },
+  {
+    "id": "d3-t10-b9",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Custodian Separation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A '3 of 5' custodian scheme protects a master key. If two custodians collude, what is the MOST accurate outcome?",
+    "options": [
+      { "text": "They still cannot reconstruct the key, because at least three shares are required", "correct": true, "rationale": "An M of N (3 of 5) scheme requires the threshold number of shares; two colluders fall short and cannot recover the key." },
+      { "text": "Two custodians can always reconstruct the key", "correct": false, "rationale": "The threshold is three; two is insufficient by design." },
+      { "text": "The key is automatically destroyed", "correct": false, "rationale": "Falling short of the threshold does not destroy the key; it simply cannot be reconstructed by them." },
+      { "text": "One custodian alone can override the scheme", "correct": false, "rationale": "A single custodian cannot meet the threshold either; that is the point of split knowledge." }
+    ]
+  },
+  {
+    "id": "d3-t10-b10",
+    "domainId": "d3",
+    "topicId": "d3-t10",
+    "subtopicTag": "Key Management Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant to secure key management?",
+    "options": [
+      { "text": "The font used in the key management console UI", "correct": true, "rationale": "The console's font has no bearing on the security of key generation, storage, rotation, or destruction, making it least relevant." },
+      { "text": "Secure key storage (e.g., HSM)", "correct": false, "rationale": "Secure storage is central to key management." },
+      { "text": "Key rotation schedules", "correct": false, "rationale": "Rotation is a core key-management practice." },
+      { "text": "Access controls over key custodians", "correct": false, "rationale": "Controlling who can use keys is essential to key management." }
+    ]
+  }
+]

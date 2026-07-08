@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t11-a1",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE Model",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A design team wants a structured way to enumerate threats such as spoofing, tampering, and information disclosure against a new application. Which threat modeling methodology BEST fits?",
+    "options": [
+      { "text": "STRIDE", "correct": true, "rationale": "STRIDE categorizes threats as Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, and Elevation of privilege — exactly the enumeration described." },
+      { "text": "RAID", "correct": false, "rationale": "RAID refers to redundant disk arrays, not a threat modeling methodology." },
+      { "text": "OSI", "correct": false, "rationale": "OSI is a networking reference model, not a threat modeling framework." },
+      { "text": "COBIT", "correct": false, "rationale": "COBIT is an IT governance framework, not a per-threat enumeration model." }
+    ]
+  },
+  {
+    "id": "d1-t11-a2",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE Repudiation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In STRIDE, a user performs a harmful transaction and later denies doing it, and the system lacks reliable logs. This maps MOST directly to which STRIDE category, and which property does it violate?",
+    "options": [
+      { "text": "Repudiation, violating non-repudiation", "correct": true, "rationale": "The inability to prove who performed an action is the Repudiation threat, which undermines the non-repudiation property." },
+      { "text": "Spoofing, violating confidentiality", "correct": false, "rationale": "Spoofing is impersonation and maps to authentication, not to denying one's own action." },
+      { "text": "Tampering, violating availability", "correct": false, "rationale": "Tampering is unauthorized modification affecting integrity, not the denial of an action." },
+      { "text": "Denial of service, violating integrity", "correct": false, "rationale": "DoS affects availability by disrupting service, unrelated to denying an action was performed." }
+    ]
+  },
+  {
+    "id": "d1-t11-a3",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Attack Surface Reduction",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After threat modeling reveals many exposed, unused services on a server, what is the BEST mitigation?",
+    "options": [
+      { "text": "Reduce the attack surface by disabling/removing unnecessary services and interfaces", "correct": true, "rationale": "Removing unneeded services and interfaces directly reduces the attack surface exposed to threats." },
+      { "text": "Add more unused services for redundancy", "correct": false, "rationale": "Adding more services increases, not reduces, the attack surface." },
+      { "text": "Publish the full service list publicly", "correct": false, "rationale": "Publishing exposed services aids attackers and does not mitigate risk." },
+      { "text": "Ignore the finding since it is only theoretical", "correct": false, "rationale": "Unused exposed services are real, exploitable exposure, not merely theoretical." }
+    ]
+  },
+  {
+    "id": "d1-t11-a4",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Data Flow Diagram",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team begins threat modeling a system. To understand where threats could arise, what should they typically create FIRST?",
+    "options": [
+      { "text": "A data flow diagram identifying components, data flows, and trust boundaries", "correct": true, "rationale": "Mapping the system with a DFD (components, flows, trust boundaries) is the foundational first step that reveals where threats can occur." },
+      { "text": "A marketing launch plan", "correct": false, "rationale": "Marketing plans are irrelevant to identifying technical threats." },
+      { "text": "The final penetration test report", "correct": false, "rationale": "A pen test occurs later against a built system; it cannot precede design-stage modeling." },
+      { "text": "The employee vacation schedule", "correct": false, "rationale": "Staff scheduling has nothing to do with mapping system threats." }
+    ]
+  },
+  {
+    "id": "d1-t11-a5",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Trust Boundary",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "In a data flow diagram, where should a threat modeler MOST focus attention for potential attacks?",
+    "options": [
+      { "text": "At trust boundaries where data crosses between components of differing trust levels", "correct": true, "rationale": "Trust boundaries — where data moves between differently-trusted zones — are the highest-value focus for identifying threats like tampering and spoofing." },
+      { "text": "Only on the application's color scheme", "correct": false, "rationale": "Visual styling is irrelevant to threat analysis." },
+      { "text": "Only inside a single trusted component where no data crosses", "correct": false, "rationale": "Threats concentrate where trust levels change; a single fully-trusted internal component is lower priority." },
+      { "text": "On the physical weight of the server hardware", "correct": false, "rationale": "Hardware weight has no relevance to threat modeling." }
+    ]
+  },
+  {
+    "id": "d1-t11-a6",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "PASTA Methodology",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "PASTA is a threat modeling methodology characterized by which of the following?",
+    "options": [
+      { "text": "A risk-centric, seven-stage process aligning threats to business objectives", "correct": true, "rationale": "PASTA (Process for Attack Simulation and Threat Analysis) is a seven-stage, risk-centric methodology that ties technical threats to business impact." },
+      { "text": "A hardware RAID configuration standard", "correct": false, "rationale": "PASTA is not a storage/RAID standard." },
+      { "text": "A password complexity policy", "correct": false, "rationale": "PASTA is a threat modeling process, not a password policy." },
+      { "text": "A wireless encryption protocol", "correct": false, "rationale": "PASTA has nothing to do with wireless encryption." }
+    ]
+  },
+  {
+    "id": "d1-t11-a7",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Threat Intelligence Input",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To make threat models reflect real-world adversaries, what input is BEST incorporated?",
+    "options": [
+      { "text": "Current threat intelligence about relevant adversaries and their tactics", "correct": true, "rationale": "Feeding real threat intelligence (adversary TTPs) grounds the model in realistic, current threats rather than guesswork." },
+      { "text": "The organization's dividend history", "correct": false, "rationale": "Financial dividend data is irrelevant to modeling adversary behavior." },
+      { "text": "The CEO's favorite programming language", "correct": false, "rationale": "Personal preferences do not inform realistic threat modeling." },
+      { "text": "The office coffee budget", "correct": false, "rationale": "Operational trivia has no bearing on adversary modeling." }
+    ]
+  },
+  {
+    "id": "d1-t11-a8",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Threat Modeling Timing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "When is threat modeling MOST cost-effective to perform in the system development lifecycle?",
+    "options": [
+      { "text": "Early, during design, so issues are addressed before they are built and costly to fix", "correct": true, "rationale": "Identifying threats at design time is far cheaper than remediating them after implementation or in production." },
+      { "text": "Only after the system is fully deployed to production", "correct": false, "rationale": "Post-deployment fixes are the most expensive and disruptive; modeling should start earlier." },
+      { "text": "Only after a breach has already occurred", "correct": false, "rationale": "Waiting for a breach is reactive and defeats the preventive value of modeling." },
+      { "text": "Never, since design will change anyway", "correct": false, "rationale": "Design evolution is a reason to model iteratively, not to skip modeling entirely." }
+    ]
+  },
+  {
+    "id": "d1-t11-a9",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "DREAD Prioritization",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "After enumerating threats, a team wants to rank them by factors like damage, reproducibility, and affected users. Which model BEST supports this ranking?",
+    "options": [
+      { "text": "DREAD", "correct": true, "rationale": "DREAD scores threats by Damage, Reproducibility, Exploitability, Affected users, and Discoverability to prioritize them." },
+      { "text": "STRIDE", "correct": false, "rationale": "STRIDE categorizes threat types but is not primarily a numeric prioritization/ranking scheme." },
+      { "text": "RAID", "correct": false, "rationale": "RAID is a disk redundancy scheme, unrelated to threat ranking." },
+      { "text": "OWASP ZAP", "correct": false, "rationale": "ZAP is a scanning tool, not a threat prioritization model." }
+    ]
+  },
+  {
+    "id": "d1-t11-a10",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Attack Tree",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An analyst wants to model the various paths an attacker could take to reach a goal, with the goal at the root and methods as branches. This technique is MOST accurately called what?",
+    "options": [
+      { "text": "An attack tree", "correct": true, "rationale": "An attack tree places the attacker's goal at the root and decomposes possible attack paths as branches/subgoals." },
+      { "text": "A Gantt chart", "correct": false, "rationale": "A Gantt chart schedules project tasks over time, unrelated to attack paths." },
+      { "text": "An org chart", "correct": false, "rationale": "An org chart shows reporting structure, not attack methods." },
+      { "text": "A network cable diagram", "correct": false, "rationale": "A cabling diagram shows physical wiring, not adversary attack paths." }
+    ]
+  },
+  {
+    "id": "d1-t11-b1",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE Elevation of Privilege",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A low-privileged user exploits a flaw to gain administrative rights. In STRIDE, this maps MOST directly to which category?",
+    "options": [
+      { "text": "Elevation of Privilege", "correct": true, "rationale": "Gaining higher privileges than authorized is the Elevation of Privilege threat in STRIDE." },
+      { "text": "Information Disclosure", "correct": false, "rationale": "Information Disclosure is unauthorized data exposure, not gaining elevated rights." },
+      { "text": "Denial of Service", "correct": false, "rationale": "DoS disrupts availability; it does not describe privilege gain." },
+      { "text": "Spoofing", "correct": false, "rationale": "Spoofing is impersonating another identity, distinct from escalating one's own privileges." }
+    ]
+  },
+  {
+    "id": "d1-t11-b2",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE to Property Mapping",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "In STRIDE, the 'Tampering' threat most directly threatens which security property?",
+    "options": [
+      { "text": "Integrity", "correct": true, "rationale": "Tampering is unauthorized modification of data or code, which directly threatens integrity." },
+      { "text": "Availability", "correct": false, "rationale": "Availability is threatened by Denial of Service, not by tampering specifically." },
+      { "text": "Authentication", "correct": false, "rationale": "Authentication is threatened by Spoofing, not by tampering." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Non-repudiation is threatened by Repudiation, not by tampering." }
+    ]
+  },
+  {
+    "id": "d1-t11-b3",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Threat Modeling Ownership",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "For threat modeling to be effective on a software project, who should BEST be involved?",
+    "options": [
+      { "text": "A cross-functional group including developers, architects, and security personnel", "correct": true, "rationale": "Effective threat modeling needs diverse perspectives — those who design, build, and secure the system — to surface realistic threats." },
+      { "text": "Only the marketing department", "correct": false, "rationale": "Marketing lacks the technical/security knowledge to identify system threats." },
+      { "text": "A single junior developer working alone", "correct": false, "rationale": "One person in isolation is likely to miss threats a cross-functional review would catch." },
+      { "text": "Only external customers", "correct": false, "rationale": "Customers cannot analyze internal design and trust boundaries." }
+    ]
+  },
+  {
+    "id": "d1-t11-b4",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Reduction Analysis",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "During threat modeling, a large complex system is broken into smaller components to analyze each more thoroughly. This decomposition step is MOST accurately known as what?",
+    "options": [
+      { "text": "Reduction analysis (decomposition)", "correct": true, "rationale": "Reduction analysis decomposes the system into manageable components/data flows so threats can be examined systematically at each part." },
+      { "text": "Risk acceptance", "correct": false, "rationale": "Risk acceptance is a treatment decision, not a decomposition activity." },
+      { "text": "Penetration testing", "correct": false, "rationale": "Pen testing actively probes a built system; it is not the analytic decomposition of a model." },
+      { "text": "Business impact analysis", "correct": false, "rationale": "A BIA assesses impact of lost functions, not the structural decomposition for threat analysis." }
+    ]
+  },
+  {
+    "id": "d1-t11-b5",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Mitigation Strategy",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A high-severity spoofing threat is identified. Which mitigation BEST addresses it?",
+    "options": [
+      { "text": "Strong authentication (e.g., MFA, mutual TLS) to verify identities", "correct": true, "rationale": "Spoofing (impersonation) is countered by robust authentication that reliably verifies the identity of parties." },
+      { "text": "Increasing screen brightness on the server", "correct": false, "rationale": "This has no security effect on spoofing." },
+      { "text": "Removing all logging", "correct": false, "rationale": "Removing logging reduces detection capability and does nothing to prevent spoofing." },
+      { "text": "Widening network access to everyone", "correct": false, "rationale": "Broadening access increases exposure and does not counter identity spoofing." }
+    ]
+  },
+  {
+    "id": "d1-t11-b6",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Threat vs Vulnerability vs Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A modeler distinguishes core terms. Which statement is MOST accurate?",
+    "options": [
+      { "text": "A threat is a potential cause of harm, a vulnerability is a weakness it can exploit, and risk is the likelihood and impact of that occurring", "correct": true, "rationale": "This correctly separates threat (potential danger), vulnerability (exploitable weakness), and risk (likelihood × impact of exploitation)." },
+      { "text": "Threat, vulnerability, and risk are identical terms", "correct": false, "rationale": "They are distinct concepts; conflating them is a common error." },
+      { "text": "A vulnerability is an attacker and a threat is a patch", "correct": false, "rationale": "These definitions are wrong; a vulnerability is a weakness, not an attacker." },
+      { "text": "Risk exists only after a breach happens", "correct": false, "rationale": "Risk is a forward-looking likelihood/impact measure that exists before any breach." }
+    ]
+  },
+  {
+    "id": "d1-t11-b7",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE Information Disclosure",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An API accidentally returns other users' records in responses. In STRIDE, this is MOST directly which category?",
+    "options": [
+      { "text": "Information Disclosure", "correct": true, "rationale": "Exposing data to parties not authorized to see it is the Information Disclosure threat, undermining confidentiality." },
+      { "text": "Elevation of Privilege", "correct": false, "rationale": "No privilege escalation is described; data is simply being disclosed improperly." },
+      { "text": "Denial of Service", "correct": false, "rationale": "The service is functioning (over-returning data), so this is not a DoS." },
+      { "text": "Repudiation", "correct": false, "rationale": "Repudiation concerns denying actions; it does not describe leaking others' data." }
+    ]
+  },
+  {
+    "id": "d1-t11-b8",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Residual Threats",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After applying mitigations, some threats cannot be fully eliminated within budget. What is the BEST way to handle these remaining threats?",
+    "options": [
+      { "text": "Document them, assess residual risk, and obtain a risk-acceptance decision from an appropriate authority", "correct": true, "rationale": "Threats that can't be fully mitigated should be documented with residual risk assessed and formally accepted by an authorized owner." },
+      { "text": "Delete the threat model so they are not visible", "correct": false, "rationale": "Hiding the analysis does not remove the risk and undermines accountability." },
+      { "text": "Assume they will never be exploited", "correct": false, "rationale": "Unfounded assumptions of non-exploitation are not a valid treatment." },
+      { "text": "Grant attackers access to test them", "correct": false, "rationale": "Deliberately exposing the system to attackers is reckless, not a treatment." }
+    ]
+  },
+  {
+    "id": "d1-t11-b9",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "STRIDE vs DREAD Roles",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "How do STRIDE and DREAD MOST accurately relate in a threat modeling process?",
+    "options": [
+      { "text": "STRIDE helps identify/categorize threats; DREAD helps rate/prioritize them", "correct": true, "rationale": "STRIDE is for enumerating threat types while DREAD scores/prioritizes identified threats — they serve complementary stages." },
+      { "text": "They are competing tools that cannot be used together", "correct": false, "rationale": "They are complementary and are frequently used together." },
+      { "text": "Both are encryption algorithms", "correct": false, "rationale": "Neither is an encryption algorithm; both are threat modeling aids." },
+      { "text": "DREAD identifies threats and STRIDE ranks them", "correct": false, "rationale": "This reverses their roles; STRIDE identifies, DREAD ranks." }
+    ]
+  },
+  {
+    "id": "d1-t11-b10",
+    "domainId": "d1",
+    "topicId": "d1-t11",
+    "subtopicTag": "Threat Modeling Output Use",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY value of the output produced by a threat modeling exercise?",
+    "options": [
+      { "text": "It drives prioritized security requirements and controls to mitigate the most significant threats", "correct": true, "rationale": "The core value is translating identified threats into prioritized, actionable security requirements and mitigations." },
+      { "text": "It replaces the need for any coding standards", "correct": false, "rationale": "Threat modeling complements, not replaces, secure coding standards." },
+      { "text": "It guarantees the product will have zero vulnerabilities", "correct": false, "rationale": "No exercise guarantees zero vulnerabilities; it reduces and prioritizes risk." },
+      { "text": "It serves mainly as a marketing document", "correct": false, "rationale": "Threat models are technical security artifacts, not marketing collateral." }
+    ]
+  }
+]

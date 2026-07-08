@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t5-a1",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Intellectual Property - Trade Secret",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company's secret sauce recipe gives it a market edge and is protected by keeping it confidential rather than registering it. Which form of intellectual property protection BEST describes this?",
+    "options": [
+      { "text": "Trade secret", "correct": true, "rationale": "A trade secret is protected by keeping proprietary information confidential and deriving value from its secrecy; no registration is required." },
+      { "text": "Patent", "correct": false, "rationale": "A patent requires public disclosure of the invention in exchange for a time-limited monopoly — the opposite of keeping it secret." },
+      { "text": "Copyright", "correct": false, "rationale": "Copyright protects original expression (works of authorship), not a confidential formula used as a business secret." },
+      { "text": "Trademark", "correct": false, "rationale": "A trademark protects brand identifiers like names/logos, not a secret recipe." }
+    ]
+  },
+  {
+    "id": "d1-t5-a2",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Patent vs Copyright",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which intellectual property protection covers an original invention or process and typically requires public disclosure?",
+    "options": [
+      { "text": "Patent", "correct": true, "rationale": "Patents protect novel, useful, non-obvious inventions/processes and require public disclosure for a limited exclusivity period." },
+      { "text": "Copyright", "correct": false, "rationale": "Copyright protects expression of ideas (e.g., software code, writing), not inventions/processes." },
+      { "text": "Trademark", "correct": false, "rationale": "Trademarks protect brand identifiers, not inventions." },
+      { "text": "Trade secret", "correct": false, "rationale": "Trade secrets rely on secrecy, not public disclosure." }
+    ]
+  },
+  {
+    "id": "d1-t5-a3",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "GDPR Lawful Basis",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An online retailer wants to process a customer's shipping address to fulfill an order the customer placed. Which GDPR lawful basis is MOST appropriate?",
+    "options": [
+      { "text": "Performance of a contract", "correct": true, "rationale": "Processing the address is necessary to fulfill the purchase contract the customer entered, making 'performance of a contract' the most fitting basis." },
+      { "text": "Explicit consent for special-category data", "correct": false, "rationale": "A shipping address is not special-category data, and consent is unnecessary when the processing is required to fulfill the contract." },
+      { "text": "Legal obligation", "correct": false, "rationale": "No specific law compels shipping-address processing here; the driver is the contract, not a legal mandate." },
+      { "text": "Vital interests", "correct": false, "rationale": "Vital interests applies to life-or-death situations, which is not the case for order fulfillment." }
+    ]
+  },
+  {
+    "id": "d1-t5-a4",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "India DPDP Act",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company operating in India must comply with the Digital Personal Data Protection (DPDP) Act. Under the Act, the entity that determines the purpose and means of processing personal data is BEST termed what?",
+    "options": [
+      { "text": "Data Fiduciary", "correct": true, "rationale": "Under India's DPDP Act, the 'Data Fiduciary' determines the purpose and means of processing — the analogue to a GDPR controller." },
+      { "text": "Data Principal", "correct": false, "rationale": "The 'Data Principal' is the individual to whom the data relates (the data subject), not the processing decision-maker." },
+      { "text": "Data Processor", "correct": false, "rationale": "A processor acts on behalf of the fiduciary; it does not determine purpose and means." },
+      { "text": "Consent Manager", "correct": false, "rationale": "A Consent Manager facilitates consent under DPDP but does not determine processing purposes." }
+    ]
+  },
+  {
+    "id": "d1-t5-a5",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Software Licensing",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "During an audit, a security manager finds the company deployed 500 copies of software but purchased only 300 licenses. This is MOST accurately described as what?",
+    "options": [
+      { "text": "A license violation exposing the company to legal and financial liability", "correct": true, "rationale": "Exceeding purchased license counts breaches the licensing agreement and copyright, creating legal and financial exposure." },
+      { "text": "A permitted practice under fair use", "correct": false, "rationale": "Fair use does not authorize deploying more commercial software copies than licensed." },
+      { "text": "An acceptable trade-secret exception", "correct": false, "rationale": "Trade-secret law is irrelevant to over-deployment of licensed software." },
+      { "text": "A patent infringement", "correct": false, "rationale": "Over-use of licensed copies is a licensing/copyright issue, not patent infringement." }
+    ]
+  },
+  {
+    "id": "d1-t5-a6",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "PCI-DSS Nature",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A merchant's legal counsel asks what kind of requirement PCI-DSS is. What is the PRIMARY correct characterization?",
+    "options": [
+      { "text": "A contractual industry standard enforced by the payment card brands", "correct": true, "rationale": "PCI-DSS is an industry standard imposed contractually by the card brands/acquirers, not a government statute." },
+      { "text": "A federal law passed by the US Congress", "correct": false, "rationale": "PCI-DSS is not legislation; it is a private-sector standard." },
+      { "text": "An international treaty", "correct": false, "rationale": "PCI-DSS is not a treaty between nations." },
+      { "text": "A voluntary framework with no consequences for non-compliance", "correct": false, "rationale": "Non-compliance can bring fines, higher fees, or loss of card-processing privileges, so it is not consequence-free." }
+    ]
+  },
+  {
+    "id": "d1-t5-a7",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Computer Crime Law",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An employee accesses a company system beyond their authorized privileges to view data they should not see. In the US, which law is BEST associated with prosecuting unauthorized access to protected computers?",
+    "options": [
+      { "text": "Computer Fraud and Abuse Act (CFAA)", "correct": true, "rationale": "The CFAA addresses unauthorized access or exceeding authorized access to protected computers, fitting this scenario." },
+      { "text": "Digital Millennium Copyright Act (DMCA)", "correct": false, "rationale": "The DMCA addresses copyright and circumvention of protection measures, not general unauthorized access." },
+      { "text": "Gramm-Leach-Bliley Act (GLBA)", "correct": false, "rationale": "GLBA governs safeguarding of consumer financial data, not unauthorized-access prosecution." },
+      { "text": "Fair Credit Reporting Act (FCRA)", "correct": false, "rationale": "FCRA governs consumer credit reporting, unrelated to unauthorized computer access." }
+    ]
+  },
+  {
+    "id": "d1-t5-a8",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Import/Export Controls",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company plans to ship products containing strong encryption to customers in multiple countries. Which legal consideration is MOST relevant?",
+    "options": [
+      { "text": "Encryption export controls and applicable international regulations (e.g., Wassenaar Arrangement)", "correct": true, "rationale": "Strong cryptography is subject to export-control regimes; distributing it internationally requires compliance with these controls." },
+      { "text": "Trademark registration in each country", "correct": false, "rationale": "Trademark concerns branding, not the legality of exporting cryptographic technology." },
+      { "text": "Copyright deposit requirements", "correct": false, "rationale": "Copyright deposit is unrelated to cross-border encryption export restrictions." },
+      { "text": "Patent maintenance fees", "correct": false, "rationale": "Patent fees have no bearing on the legality of exporting encryption." }
+    ]
+  },
+  {
+    "id": "d1-t5-a9",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "GDPR Penalties",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The maximum administrative fine tier under GDPR for the most serious infringements is which of the following?",
+    "options": [
+      { "text": "Up to €20 million or 4% of total worldwide annual turnover, whichever is higher", "correct": true, "rationale": "GDPR's top fine tier is the greater of €20 million or 4% of global annual turnover." },
+      { "text": "Up to €1 million flat, regardless of turnover", "correct": false, "rationale": "GDPR fines scale with turnover and far exceed a €1 million flat cap for serious violations." },
+      { "text": "Up to 1% of national (not worldwide) turnover", "correct": false, "rationale": "The percentage is based on worldwide annual turnover and the top tier is 4%, not 1%." },
+      { "text": "There are no monetary fines under GDPR", "correct": false, "rationale": "GDPR explicitly authorizes substantial administrative fines." }
+    ]
+  },
+  {
+    "id": "d1-t5-a10",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Privacy by Design",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A development team wants to embed privacy protections from the earliest design stage of a new product rather than bolting them on later. This principle is BEST known as what?",
+    "options": [
+      { "text": "Privacy by design and by default", "correct": true, "rationale": "Privacy by design (and by default) requires embedding privacy protections proactively into systems from the outset, as codified in GDPR Article 25." },
+      { "text": "Defense in depth", "correct": false, "rationale": "Defense in depth is a layered-security concept, not specifically about embedding privacy from design onward." },
+      { "text": "Separation of duties", "correct": false, "rationale": "Separation of duties splits critical tasks among people; it is not about proactive privacy design." },
+      { "text": "Fail-secure design", "correct": false, "rationale": "Fail-secure concerns system behavior on failure, not proactive privacy engineering." }
+    ]
+  },
+  {
+    "id": "d1-t5-b1",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Copyright Scope",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A developer writes original source code for an application. Absent any other agreement, which IP protection automatically applies to that code as a work of authorship?",
+    "options": [
+      { "text": "Copyright", "correct": true, "rationale": "Software source code is a copyrightable work of authorship, and copyright attaches automatically upon fixation in a tangible form." },
+      { "text": "Patent", "correct": false, "rationale": "Patents require application and grant; they do not attach automatically and cover inventions, not the expression of code." },
+      { "text": "Trademark", "correct": false, "rationale": "Trademarks protect brand identifiers, not source code." },
+      { "text": "Trade secret", "correct": false, "rationale": "Trade-secret status depends on maintaining secrecy and reasonable protective measures, not automatic attachment on authorship." }
+    ]
+  },
+  {
+    "id": "d1-t5-b2",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Trademark Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which intellectual property protection is intended to protect brand names, logos, and slogans that identify the source of goods or services?",
+    "options": [
+      { "text": "Trademark", "correct": true, "rationale": "Trademarks protect source-identifying marks such as names, logos, and slogans." },
+      { "text": "Patent", "correct": false, "rationale": "Patents protect inventions, not brand identifiers." },
+      { "text": "Copyright", "correct": false, "rationale": "Copyright protects creative expression, not brand identifiers." },
+      { "text": "Trade secret", "correct": false, "rationale": "Trade secrets protect confidential business information, not public brand marks." }
+    ]
+  },
+  {
+    "id": "d1-t5-b3",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Data Localization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A multinational stores citizen data on cloud servers. A country enacts a law requiring that its citizens' personal data be stored within national borders. This requirement is MOST accurately called what?",
+    "options": [
+      { "text": "Data localization (data residency)", "correct": true, "rationale": "Requiring data to remain within national borders is a data localization/residency requirement." },
+      { "text": "Data minimization", "correct": false, "rationale": "Data minimization limits how much data is collected, not where it is stored." },
+      { "text": "Data portability", "correct": false, "rationale": "Portability concerns transferring data to the subject or another controller, not storage location." },
+      { "text": "Data masking", "correct": false, "rationale": "Masking obscures data values; it does not address storage geography." }
+    ]
+  },
+  {
+    "id": "d1-t5-b4",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "GDPR vs DPDP Terminology",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A privacy analyst maps roles between GDPR and India's DPDP Act. The GDPR 'data subject' BEST corresponds to which DPDP term?",
+    "options": [
+      { "text": "Data Principal", "correct": true, "rationale": "Under DPDP, the individual whose data is processed is the 'Data Principal,' corresponding to GDPR's 'data subject.'" },
+      { "text": "Data Fiduciary", "correct": false, "rationale": "The Data Fiduciary corresponds to the GDPR controller, not the data subject." },
+      { "text": "Supervisory Authority", "correct": false, "rationale": "This is the regulator role, not the individual." },
+      { "text": "Data Processor", "correct": false, "rationale": "The processor handles data on the fiduciary's behalf and is not the individual." }
+    ]
+  },
+  {
+    "id": "d1-t5-b5",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Liability for Third Parties",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A controller engages a cloud processor that suffers a breach due to the processor's negligence. Under GDPR, which statement MOST accurately reflects liability?",
+    "options": [
+      { "text": "The controller remains accountable and both controller and processor can face liability depending on their roles", "correct": true, "rationale": "GDPR holds controllers accountable for choosing/overseeing processors, while processors also bear direct obligations; liability can attach to both based on responsibility." },
+      { "text": "Only the processor can ever be liable once engaged", "correct": false, "rationale": "The controller does not shed accountability by outsourcing; it retains oversight obligations." },
+      { "text": "Liability disappears entirely once a contract is signed", "correct": false, "rationale": "A contract allocates responsibilities but does not eliminate GDPR liability." },
+      { "text": "The data subjects are liable for choosing to share data", "correct": false, "rationale": "Data subjects are the protected parties, not the liable ones." }
+    ]
+  },
+  {
+    "id": "d1-t5-b6",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Digital Signature Legal Validity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company wants electronically signed contracts to carry legal weight in the US. Which law BEST supports the legal enforceability of electronic signatures?",
+    "options": [
+      { "text": "The ESIGN Act (and UETA)", "correct": true, "rationale": "The federal ESIGN Act and state-adopted UETA give electronic signatures/records the same legal validity as handwritten ones under stated conditions." },
+      { "text": "The Computer Fraud and Abuse Act", "correct": false, "rationale": "CFAA addresses unauthorized computer access, not electronic-signature validity." },
+      { "text": "HIPAA", "correct": false, "rationale": "HIPAA concerns health information, not general e-signature enforceability." },
+      { "text": "The Sarbanes-Oxley Act", "correct": false, "rationale": "SOX addresses financial reporting controls, not e-signature validity." }
+    ]
+  },
+  {
+    "id": "d1-t5-b7",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Purpose Limitation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company collected email addresses solely for order confirmations, then begins using them for unrelated third-party advertising without notice. Which GDPR principle is MOST directly violated?",
+    "options": [
+      { "text": "Purpose limitation", "correct": true, "rationale": "Purpose limitation requires that data collected for a specified purpose not be further processed in an incompatible manner without a valid basis; reusing it for unrelated ads violates this." },
+      { "text": "Integrity and confidentiality", "correct": false, "rationale": "That principle concerns securing the data against unauthorized access/loss, not repurposing it." },
+      { "text": "Accuracy", "correct": false, "rationale": "Accuracy concerns keeping data correct and up to date, not the purpose of use." },
+      { "text": "Storage limitation", "correct": false, "rationale": "Storage limitation concerns retention duration, not repurposing." }
+    ]
+  },
+  {
+    "id": "d1-t5-b8",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Breach of Trade Secret",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A departing engineer is suspected of emailing proprietary trade-secret designs to a personal account. What should the organization do FIRST?",
+    "options": [
+      { "text": "Preserve relevant evidence (logs, email records) and engage legal/HR before confronting the individual", "correct": true, "rationale": "Preserving evidence and involving legal/HR first protects the ability to pursue remedies and avoids tipping off or mishandling the case." },
+      { "text": "Immediately delete the engineer's mailbox to stop further leakage", "correct": false, "rationale": "Deleting the mailbox destroys the very evidence needed to prove misappropriation." },
+      { "text": "Publicly accuse the engineer to deter others", "correct": false, "rationale": "Public accusation before investigation risks defamation liability and undermines the case." },
+      { "text": "Ignore it since the person is leaving anyway", "correct": false, "rationale": "Ignoring likely trade-secret theft abandons legal protections and invites material harm." }
+    ]
+  },
+  {
+    "id": "d1-t5-b9",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Sectoral vs Comprehensive Law",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A compliance officer contrasts the EU and US approaches to privacy regulation. Which statement BEST captures the difference?",
+    "options": [
+      { "text": "The EU uses a comprehensive omnibus law (GDPR), while the US relies largely on sectoral laws (e.g., HIPAA, GLBA, COPPA)", "correct": true, "rationale": "GDPR is a single comprehensive regime, whereas US privacy law is a patchwork of sector-specific statutes — a key exam distinction." },
+      { "text": "Both the EU and US use a single unified federal privacy law", "correct": false, "rationale": "The US lacks a single comprehensive federal privacy law; it regulates by sector." },
+      { "text": "Neither the EU nor the US regulates privacy at all", "correct": false, "rationale": "Both regulate privacy extensively; this is plainly false." },
+      { "text": "The US has GDPR and the EU has sectoral laws", "correct": false, "rationale": "This reverses reality; GDPR is the EU's comprehensive law." }
+    ]
+  },
+  {
+    "id": "d1-t5-b10",
+    "domainId": "d1",
+    "topicId": "d1-t5",
+    "subtopicTag": "Anonymization vs Pseudonymization",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A dataset replaces direct identifiers with reversible tokens held in a separate key. Under GDPR, this data is MOST accurately described as what — and what is the consequence?",
+    "options": [
+      { "text": "Pseudonymized data, which remains personal data and stays within GDPR scope", "correct": true, "rationale": "Because the tokenization is reversible via a separately held key, re-identification is possible, so the data is pseudonymized and still regulated as personal data." },
+      { "text": "Anonymized data, which falls entirely outside GDPR", "correct": false, "rationale": "True anonymization must be irreversible; reversible tokens do not qualify, so GDPR still applies." },
+      { "text": "Public data with no restrictions", "correct": false, "rationale": "Pseudonymized personal data is not public and remains protected." },
+      { "text": "Aggregated data that cannot identify anyone", "correct": false, "rationale": "The data still relates to identifiable individuals via the key, so it is not aggregated/anonymous." }
+    ]
+  }
+]

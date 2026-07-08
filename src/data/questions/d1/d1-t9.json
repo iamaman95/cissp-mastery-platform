@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t9-a1",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A finance clerk can both create a new vendor and approve payments to that vendor. Which control BEST addresses the fraud risk this creates?",
+    "options": [
+      { "text": "Separation of duties", "correct": true, "rationale": "Separation of duties splits conflicting responsibilities (creating vendors vs approving payments) so no single person can commit and conceal fraud." },
+      { "text": "Mandatory vacation only", "correct": false, "rationale": "Mandatory vacation helps detect ongoing fraud but does not prevent one person from holding both conflicting duties." },
+      { "text": "Longer passwords", "correct": false, "rationale": "Password strength is unrelated to the conflict-of-duties problem described." },
+      { "text": "Full-disk encryption", "correct": false, "rationale": "Encryption protects data at rest, not the separation of conflicting job functions." }
+    ]
+  },
+  {
+    "id": "d1-t9-a2",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Job Rotation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which personnel control MOST helps detect fraud and reduce dependence on a single individual by periodically moving staff between roles?",
+    "options": [
+      { "text": "Job rotation", "correct": true, "rationale": "Rotating employees exposes irregularities left by predecessors and reduces single-person dependency and collusion opportunity." },
+      { "text": "Non-disclosure agreement", "correct": false, "rationale": "An NDA restricts information sharing; it does not rotate duties or detect fraud." },
+      { "text": "Security awareness poster", "correct": false, "rationale": "Awareness posters educate but do not provide the detective/deterrent effect of rotating roles." },
+      { "text": "Clean desk policy", "correct": false, "rationale": "A clean desk policy protects physical information exposure, not role dependency or fraud detection." }
+    ]
+  },
+  {
+    "id": "d1-t9-a3",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Mandatory Vacation",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A bank requires employees in sensitive roles to take at least one continuous week of vacation each year. What is the PRIMARY security purpose?",
+    "options": [
+      { "text": "To detect fraud or irregularities that surface when someone else covers the role", "correct": true, "rationale": "Mandatory vacation forces another person to perform the duties, exposing hidden fraud that requires the perpetrator's continuous presence to conceal." },
+      { "text": "To improve employee morale exclusively", "correct": false, "rationale": "Morale is a side benefit; the security purpose is fraud detection." },
+      { "text": "To reduce payroll costs", "correct": false, "rationale": "Mandatory paid vacation does not reduce payroll costs and that is not its security aim." },
+      { "text": "To comply with encryption standards", "correct": false, "rationale": "Vacation policy has nothing to do with encryption standards." }
+    ]
+  },
+  {
+    "id": "d1-t9-a4",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Onboarding Screening",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Before granting a new hire access to sensitive systems, what should generally occur FIRST as part of personnel security?",
+    "options": [
+      { "text": "Complete background screening appropriate to the role's sensitivity", "correct": true, "rationale": "Pre-employment/background screening proportional to role sensitivity should precede granting access to sensitive systems." },
+      { "text": "Give full administrative access on day one to speed onboarding", "correct": false, "rationale": "Granting broad access before screening violates least privilege and personnel-security practice." },
+      { "text": "Schedule the employee's exit interview", "correct": false, "rationale": "Exit interviews occur at termination, not before onboarding access." },
+      { "text": "Assign the employee to lead the audit committee", "correct": false, "rationale": "Role assignment of that nature is irrelevant to pre-access screening." }
+    ]
+  },
+  {
+    "id": "d1-t9-a5",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Termination Process",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An employee is being involuntarily terminated for cause. Regarding system access, what should happen FIRST/at the moment of termination?",
+    "options": [
+      { "text": "Disable the employee's accounts and revoke access promptly, coordinated with the termination meeting", "correct": true, "rationale": "For involuntary terminations, access should be revoked at (or just before) the termination notification to prevent retaliatory misuse." },
+      { "text": "Leave access active for two weeks as a courtesy", "correct": false, "rationale": "Leaving a for-cause terminee's access active invites sabotage or data theft." },
+      { "text": "Announce the termination publicly before revoking access", "correct": false, "rationale": "Publicizing before revoking access gives the individual time and motive to misuse still-active accounts." },
+      { "text": "Wait until the next quarterly access review", "correct": false, "rationale": "Delaying revocation to a periodic review leaves a dangerous window open." }
+    ]
+  },
+  {
+    "id": "d1-t9-a6",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "NDA Purpose",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A non-disclosure agreement (NDA) is primarily used to accomplish which of the following?",
+    "options": [
+      { "text": "Legally bind an individual to protect confidential information", "correct": true, "rationale": "An NDA contractually obligates the signer to keep specified confidential information private." },
+      { "text": "Grant the employee unlimited system privileges", "correct": false, "rationale": "An NDA restricts disclosure; it does not grant access privileges." },
+      { "text": "Replace the need for access controls", "correct": false, "rationale": "An NDA is a legal control, not a substitute for technical access controls." },
+      { "text": "Serve as a data backup mechanism", "correct": false, "rationale": "An NDA has nothing to do with data backup." }
+    ]
+  },
+  {
+    "id": "d1-t9-a7",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Least Privilege in HR",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When an employee changes departments, their old access is never removed, accumulating over years. This problem is MOST accurately called what, and which principle is violated?",
+    "options": [
+      { "text": "Privilege creep, violating least privilege", "correct": true, "rationale": "Accumulating unneeded access across role changes is 'privilege creep,' which violates least privilege." },
+      { "text": "Separation of duties, which is strengthened", "correct": false, "rationale": "Accumulated access weakens, not strengthens, control and is unrelated to separation of duties being improved." },
+      { "text": "Defense in depth, which is satisfied", "correct": false, "rationale": "Excess access does not satisfy defense in depth; it increases attack surface." },
+      { "text": "Mandatory vacation, which is enforced", "correct": false, "rationale": "This scenario concerns access accumulation, not vacation policy." }
+    ]
+  },
+  {
+    "id": "d1-t9-a8",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Collusion",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Separation of duties is in place, but two employees could still commit fraud by working together. Which additional control BEST reduces this collusion risk?",
+    "options": [
+      { "text": "Job rotation and mandatory vacation to disrupt sustained collusion", "correct": true, "rationale": "Rotating roles and forcing absences make sustained collusion harder to maintain and easier to detect, complementing separation of duties." },
+      { "text": "Removing all separation of duties", "correct": false, "rationale": "Removing separation of duties makes single-person fraud easier and worsens the situation." },
+      { "text": "Giving both employees identical unrestricted access", "correct": false, "rationale": "Identical unrestricted access removes controls and increases fraud opportunity." },
+      { "text": "Disabling all logging", "correct": false, "rationale": "Disabling logging eliminates detection capability, aiding rather than reducing collusion." }
+    ]
+  },
+  {
+    "id": "d1-t9-a9",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Third-Party Personnel",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A vendor's contractors will access internal systems. Which personnel-security measure is MOST important to apply to them?",
+    "options": [
+      { "text": "Contractually require screening, NDAs, and access aligned to least privilege for the contractors", "correct": true, "rationale": "Third-party staff should be held to equivalent personnel-security controls (screening, NDAs, least-privilege access) via contract to manage the risk they introduce." },
+      { "text": "Assume the vendor handled everything and apply no controls", "correct": false, "rationale": "Blind trust in the vendor leaves the organization exposed to unvetted access." },
+      { "text": "Grant contractors domain administrator rights for convenience", "correct": false, "rationale": "Excessive privilege to external contractors dramatically increases risk." },
+      { "text": "Skip NDAs because they are external", "correct": false, "rationale": "External parties especially need NDAs to bind them to confidentiality." }
+    ]
+  },
+  {
+    "id": "d1-t9-a10",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Onboarding Agreements",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "During onboarding, which document BEST sets expectations for how an employee may use company systems?",
+    "options": [
+      { "text": "An acceptable use policy (AUP) acknowledgment", "correct": true, "rationale": "The AUP defines acceptable/prohibited use of company systems, and acknowledging it sets clear expectations at onboarding." },
+      { "text": "The company's product roadmap", "correct": false, "rationale": "A product roadmap does not govern acceptable system use." },
+      { "text": "A vendor purchase order", "correct": false, "rationale": "A purchase order is a procurement document, unrelated to use expectations." },
+      { "text": "The office floor plan", "correct": false, "rationale": "A floor plan does not set system-use expectations." }
+    ]
+  },
+  {
+    "id": "d1-t9-b1",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Least Privilege vs Need to Know",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An analyst has clearance to a classification level but is denied access to a specific project's data at that level. Which principle MOST directly justifies the denial?",
+    "options": [
+      { "text": "Need to know", "correct": true, "rationale": "Clearance grants eligibility, but need-to-know restricts access to only the specific information required for one's duties, justifying the denial." },
+      { "text": "Mandatory vacation", "correct": false, "rationale": "Mandatory vacation is a fraud-detection control, irrelevant to information access scope." },
+      { "text": "Job rotation", "correct": false, "rationale": "Job rotation concerns moving staff between roles, not access scoping by need-to-know." },
+      { "text": "Defense in depth", "correct": false, "rationale": "Defense in depth is a layered-control concept, not the specific principle limiting access to what one needs." }
+    ]
+  },
+  {
+    "id": "d1-t9-b2",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Offboarding Checklist",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "To ensure consistent, complete removal of access and assets when employees leave, what is the BEST practice?",
+    "options": [
+      { "text": "Use a standardized offboarding checklist covering access revocation, asset return, and knowledge transfer", "correct": true, "rationale": "A standardized checklist ensures every departure consistently revokes access, recovers assets, and transfers knowledge, closing gaps." },
+      { "text": "Handle each departure ad hoc based on who remembers what", "correct": false, "rationale": "Ad hoc offboarding leads to missed accounts and unreturned assets." },
+      { "text": "Only revoke email but leave other systems active", "correct": false, "rationale": "Partial revocation leaves exploitable residual access." },
+      { "text": "Do nothing until the annual audit finds leftover accounts", "correct": false, "rationale": "Waiting for an annual audit leaves dangerous orphaned access for months." }
+    ]
+  },
+  {
+    "id": "d1-t9-b3",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Background Check Proportionality",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor MOST appropriately determines the depth of a pre-employment background check?",
+    "options": [
+      { "text": "The sensitivity and privileges of the role being filled", "correct": true, "rationale": "Screening depth should be proportional to role sensitivity/access — higher-privilege roles warrant deeper checks." },
+      { "text": "The candidate's astrological sign", "correct": false, "rationale": "This is irrelevant and discriminatory, not a valid basis." },
+      { "text": "The color of the candidate's résumé paper", "correct": false, "rationale": "Superficial factors have no bearing on screening depth." },
+      { "text": "How quickly the manager wants to fill the seat", "correct": false, "rationale": "Urgency should not compromise appropriate screening for sensitive roles." }
+    ]
+  },
+  {
+    "id": "d1-t9-b4",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Two-Person Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A highly sensitive operation (e.g., issuing a root cryptographic key) must require two authorized individuals acting together. This control is BEST known as what?",
+    "options": [
+      { "text": "Dual control / two-person integrity", "correct": true, "rationale": "Dual control (two-person integrity) requires two authorized people to jointly perform a highly sensitive action, preventing unilateral misuse." },
+      { "text": "Job rotation", "correct": false, "rationale": "Job rotation moves people between roles over time; it does not require two people to act simultaneously." },
+      { "text": "Mandatory vacation", "correct": false, "rationale": "Mandatory vacation is a periodic fraud-detection control, not a simultaneous two-person requirement." },
+      { "text": "Single sign-on", "correct": false, "rationale": "SSO is an authentication convenience, unrelated to requiring two people for one action." }
+    ]
+  },
+  {
+    "id": "d1-t9-b5",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Transfer Access Review",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An employee transfers from finance to marketing. To uphold least privilege, what should happen FIRST regarding their access?",
+    "options": [
+      { "text": "Review and remove access no longer needed for the new role before granting new access", "correct": true, "rationale": "On transfer, obsolete access should be reviewed and revoked (preventing privilege creep) as new role-appropriate access is provisioned." },
+      { "text": "Keep all finance access and simply add marketing access", "correct": false, "rationale": "Retaining old access while adding new causes privilege creep, violating least privilege." },
+      { "text": "Remove all access permanently and never restore any", "correct": false, "rationale": "The employee still needs role-appropriate access; removing everything without provisioning the new role blocks their work." },
+      { "text": "Do nothing since they are still an employee", "correct": false, "rationale": "Role change requires access review; inaction leaves inappropriate finance access in place." }
+    ]
+  },
+  {
+    "id": "d1-t9-b6",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Separation of Duties Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Separation of duties is best defined as which of the following?",
+    "options": [
+      { "text": "Dividing a critical task so that no single person can complete it alone", "correct": true, "rationale": "Separation of duties splits a sensitive process among multiple people so no individual controls it end to end." },
+      { "text": "Requiring employees to take annual vacations", "correct": false, "rationale": "That describes mandatory vacation, a distinct control." },
+      { "text": "Rotating employees through different jobs", "correct": false, "rationale": "That describes job rotation, not separation of duties." },
+      { "text": "Encrypting all sensitive data at rest", "correct": false, "rationale": "That is a data-protection control unrelated to dividing duties." }
+    ]
+  },
+  {
+    "id": "d1-t9-b7",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Insider Threat Indicators",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A privileged employee suddenly downloads massive volumes of data unrelated to their job just before resigning. What is the BEST personnel-security-informed response?",
+    "options": [
+      { "text": "Treat it as a potential insider threat: preserve evidence, restrict access, and involve HR/legal/security", "correct": true, "rationale": "Anomalous bulk access before departure is a classic insider-threat indicator warranting evidence preservation and coordinated HR/legal/security response." },
+      { "text": "Ignore it because the person is leaving anyway", "correct": false, "rationale": "Departure increases, not decreases, insider-exfiltration risk; ignoring it invites data theft." },
+      { "text": "Publicly accuse the employee immediately", "correct": false, "rationale": "Premature public accusation risks defamation and may tip off the individual to destroy evidence." },
+      { "text": "Grant additional access to observe what else they take", "correct": false, "rationale": "Expanding access to a suspected insider is reckless and increases potential damage." }
+    ]
+  },
+  {
+    "id": "d1-t9-b8",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Security in Job Descriptions",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Embedding security responsibilities directly into job descriptions MOST directly supports which outcome?",
+    "options": [
+      { "text": "Clear accountability, so employees know their security obligations as part of their role", "correct": true, "rationale": "Documenting security duties in job descriptions establishes accountability and sets expectations from the outset." },
+      { "text": "Elimination of the need for any technical controls", "correct": false, "rationale": "Documenting responsibilities complements, not replaces, technical controls." },
+      { "text": "Guaranteed prevention of all insider threats", "correct": false, "rationale": "No single measure guarantees prevention of insider threats." },
+      { "text": "Reduced need to pay employees", "correct": false, "rationale": "This has no relationship to compensation." }
+    ]
+  },
+  {
+    "id": "d1-t9-b9",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Vendor Offboarding",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A contract with a third-party service provider ends. Regarding the provider's access to your systems and data, what should happen FIRST?",
+    "options": [
+      { "text": "Revoke the provider's access and confirm return/destruction of your data per contract", "correct": true, "rationale": "At contract end, promptly revoke provider access and ensure data is returned or securely destroyed as the agreement requires." },
+      { "text": "Leave the provider's credentials active indefinitely", "correct": false, "rationale": "Leaving former-vendor credentials active is a serious unmanaged access risk." },
+      { "text": "Assume the provider will delete data without any verification", "correct": false, "rationale": "Unverified assumptions about data destruction leave the organization exposed and non-compliant." },
+      { "text": "Publicly post the provider's remaining credentials", "correct": false, "rationale": "Exposing credentials publicly is grossly insecure and nonsensical." }
+    ]
+  },
+  {
+    "id": "d1-t9-b10",
+    "domainId": "d1",
+    "topicId": "d1-t9",
+    "subtopicTag": "Onboarding vs Termination Controls",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant as a personnel-security control during the employee termination process?",
+    "options": [
+      { "text": "Selecting the new marketing campaign slogan", "correct": true, "rationale": "Choosing a marketing slogan has nothing to do with securely terminating an employee's access and recovering assets, making it least relevant." },
+      { "text": "Revoking system access and credentials", "correct": false, "rationale": "Access revocation is a core, highly relevant termination control." },
+      { "text": "Recovering company assets (badge, laptop, tokens)", "correct": false, "rationale": "Asset recovery is a standard and relevant part of termination." },
+      { "text": "Reminding the employee of ongoing NDA obligations", "correct": false, "rationale": "Reinforcing continuing confidentiality obligations is a relevant termination step." }
+    ]
+  }
+]

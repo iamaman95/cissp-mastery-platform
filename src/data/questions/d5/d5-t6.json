@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d5-t6-a1",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "TACACS+ Granular Admin",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A network team needs per-command authorization for administrators on routers, with full encryption of the management traffic and detailed accounting. Which AAA protocol is BEST?",
+    "options": [
+      { "text": "TACACS+", "correct": true, "rationale": "TACACS+ separates authentication, authorization, and accounting (enabling per-command control), encrypts the entire payload, and is designed for granular device administration." },
+      { "text": "RADIUS", "correct": false, "rationale": "RADIUS combines authN/authZ and encrypts only the password, making granular per-command control and full encryption weaker than TACACS+." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is a broken wireless encryption standard, not an AAA protocol." },
+      { "text": "FTP", "correct": false, "rationale": "FTP is a file-transfer protocol, unrelated to AAA." }
+    ]
+  },
+  {
+    "id": "d5-t6-a2",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "RADIUS Transport/Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement about classic RADIUS is MOST accurate?",
+    "options": [
+      { "text": "It uses UDP and encrypts only the password in the access-request", "correct": true, "rationale": "Classic RADIUS runs over UDP and encrypts only the user password, leaving other attributes in the clear." },
+      { "text": "It uses TCP and encrypts the entire payload", "correct": false, "rationale": "That describes TACACS+, not RADIUS." },
+      { "text": "It is a wireless encryption cipher", "correct": false, "rationale": "RADIUS is an AAA protocol, not a cipher." },
+      { "text": "It provides no authentication at all", "correct": false, "rationale": "RADIUS is fundamentally an authentication (and authorization/accounting) protocol." }
+    ]
+  },
+  {
+    "id": "d5-t6-a3",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "RADIUS for 802.1X",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company deploys 802.1X so each user authenticates before getting network access. Which back-end AAA protocol is MOST commonly used to support this?",
+    "options": [
+      { "text": "RADIUS", "correct": true, "rationale": "802.1X typically uses RADIUS as the back-end AAA server to authenticate users/devices onto the network." },
+      { "text": "SMTP", "correct": false, "rationale": "SMTP is an email protocol, not an AAA back end." },
+      { "text": "HTTP", "correct": false, "rationale": "HTTP is a web protocol, not an 802.1X AAA back end." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is an insecure remote-terminal protocol, not an AAA service." }
+    ]
+  },
+  {
+    "id": "d5-t6-a4",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "TACACS+ AAA Separation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which capability MOST distinguishes TACACS+ from RADIUS?",
+    "options": [
+      { "text": "TACACS+ separates authentication, authorization, and accounting into independent functions", "correct": true, "rationale": "TACACS+ decouples AAA functions (allowing, e.g., separate per-command authorization), whereas RADIUS combines authentication and authorization." },
+      { "text": "TACACS+ cannot authenticate users", "correct": false, "rationale": "TACACS+ absolutely authenticates users; it also separates authZ and accounting." },
+      { "text": "TACACS+ uses UDP only", "correct": false, "rationale": "TACACS+ uses TCP, not UDP; RADIUS uses UDP." },
+      { "text": "TACACS+ encrypts nothing", "correct": false, "rationale": "TACACS+ encrypts the entire payload, more than RADIUS does." }
+    ]
+  },
+  {
+    "id": "d5-t6-a5",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "AAA Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In the context of RADIUS and TACACS+, 'AAA' stands for which of the following?",
+    "options": [
+      { "text": "Authentication, Authorization, and Accounting", "correct": true, "rationale": "AAA denotes Authentication, Authorization, and Accounting — the core services these protocols provide." },
+      { "text": "Access, Availability, and Auditing", "correct": false, "rationale": "This is not the standard AAA expansion." },
+      { "text": "Antivirus, Alerting, and Analytics", "correct": false, "rationale": "These are unrelated security functions, not the AAA acronym." },
+      { "text": "Allocation, Assignment, and Approval", "correct": false, "rationale": "This is not what AAA stands for in this context." }
+    ]
+  },
+  {
+    "id": "d5-t6-a6",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Centralized Authentication",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Managing separate local admin accounts on hundreds of network devices is error-prone and inconsistent. What is the BEST improvement?",
+    "options": [
+      { "text": "Centralize authentication using an AAA server (e.g., TACACS+/RADIUS) so credentials and policy are managed in one place", "correct": true, "rationale": "Centralized AAA replaces per-device local accounts with consistent, centrally managed authentication, authorization, and accounting." },
+      { "text": "Configure a different password scheme on each device manually", "correct": false, "rationale": "Per-device manual management is exactly the inconsistent, error-prone situation to fix." },
+      { "text": "Remove all authentication from the devices", "correct": false, "rationale": "Removing authentication is a severe security failure." },
+      { "text": "Use the same shared password everywhere with no server", "correct": false, "rationale": "A universal shared password destroys accountability and is easily leaked." }
+    ]
+  },
+  {
+    "id": "d5-t6-a7",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Diameter Successor",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which protocol is MOST accurately described as a modern successor to RADIUS with enhanced capabilities?",
+    "options": [
+      { "text": "Diameter", "correct": true, "rationale": "Diameter was designed as an evolution of RADIUS, offering improved reliability and features." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is an insecure terminal protocol, not a RADIUS successor." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is a broken wireless standard, unrelated to AAA succession." },
+      { "text": "SFTP", "correct": false, "rationale": "SFTP is a secure file-transfer protocol, not an AAA protocol." }
+    ]
+  },
+  {
+    "id": "d5-t6-a8",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Protect AAA Server",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why is hardening and protecting the central AAA server MOST critical?",
+    "options": [
+      { "text": "Its compromise could grant an attacker control over authentication/authorization for many systems", "correct": true, "rationale": "A central AAA server is a high-value target; compromising it can undermine access control across everything that relies on it." },
+      { "text": "Because it stores the office thermostat settings", "correct": false, "rationale": "AAA servers manage authentication, not building climate." },
+      { "text": "Because it prints ID badges", "correct": false, "rationale": "Badge printing is unrelated to the AAA server's function." },
+      { "text": "Because it hosts the company website", "correct": false, "rationale": "An AAA server's criticality is its control over access, not web hosting." }
+    ]
+  },
+  {
+    "id": "d5-t6-a9",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Directory Service Store",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An authentication system needs a central store to look up user accounts and attributes. Which technology MOST commonly serves this role?",
+    "options": [
+      { "text": "A directory service such as LDAP / Active Directory", "correct": true, "rationale": "Directory services (LDAP/AD) are the standard central identity store queried by authentication systems." },
+      { "text": "A spreadsheet emailed weekly", "correct": false, "rationale": "An emailed spreadsheet is not a scalable, secure directory store." },
+      { "text": "A printer queue", "correct": false, "rationale": "A print queue does not store identities." },
+      { "text": "A DNS zone file", "correct": false, "rationale": "DNS resolves names; it is not an identity/attribute store for authentication." }
+    ]
+  },
+  {
+    "id": "d5-t6-a10",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "PAM for Privileged",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To control and audit the use of shared administrative credentials, which solution is BEST?",
+    "options": [
+      { "text": "A Privileged Access Management (PAM) system that vaults credentials and records sessions", "correct": true, "rationale": "PAM brokers and vaults privileged credentials, enforces check-out, and records sessions, providing control and accountability over admin access." },
+      { "text": "Writing the admin password on a whiteboard", "correct": false, "rationale": "Exposing credentials on a whiteboard is grossly insecure." },
+      { "text": "Emailing the admin password to the whole team", "correct": false, "rationale": "Broadly sharing credentials destroys accountability and control." },
+      { "text": "Disabling logging on admin actions", "correct": false, "rationale": "Disabling logging removes the accountability PAM is meant to provide." }
+    ]
+  },
+  {
+    "id": "d5-t6-b1",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "RADIUS vs TACACS+ Transport",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which pairing of transport protocols is MOST correct for these AAA protocols?",
+    "options": [
+      { "text": "RADIUS uses UDP; TACACS+ uses TCP", "correct": true, "rationale": "RADIUS runs over UDP while TACACS+ runs over TCP — a standard exam distinction." },
+      { "text": "RADIUS uses TCP; TACACS+ uses UDP", "correct": false, "rationale": "This reverses reality; RADIUS is UDP and TACACS+ is TCP." },
+      { "text": "Both use only ICMP", "correct": false, "rationale": "Neither uses ICMP for AAA transport." },
+      { "text": "Both are transport-agnostic and use no protocol", "correct": false, "rationale": "Both use specific transports (UDP and TCP respectively)." }
+    ]
+  },
+  {
+    "id": "d5-t6-b2",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Full-Payload Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A security requirement mandates that AAA management traffic be fully encrypted, not just the password. Which protocol MOST directly meets this?",
+    "options": [
+      { "text": "TACACS+", "correct": true, "rationale": "TACACS+ encrypts the entire payload, satisfying full-encryption requirements, unlike RADIUS which encrypts only the password." },
+      { "text": "RADIUS", "correct": false, "rationale": "Classic RADIUS encrypts only the password, leaving other attributes exposed." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is cleartext and not an AAA protocol." },
+      { "text": "HTTP", "correct": false, "rationale": "HTTP is unencrypted and not an AAA protocol." }
+    ]
+  },
+  {
+    "id": "d5-t6-b3",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Shared Secret Protection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A switch authenticates to a RADIUS server using a shared secret. What is the BEST practice for that secret?",
+    "options": [
+      { "text": "Use a strong, unique shared secret and protect it, rotating it periodically", "correct": true, "rationale": "Strong, unique, protected, and rotated shared secrets secure the client-server AAA channel against compromise." },
+      { "text": "Use 'secret' as the shared secret everywhere", "correct": false, "rationale": "A weak, reused secret is trivially guessed and compromises all devices using it." },
+      { "text": "Post the shared secret publicly", "correct": false, "rationale": "Publishing the secret defeats its purpose." },
+      { "text": "Never set a shared secret at all", "correct": false, "rationale": "Omitting the shared secret leaves the AAA channel unauthenticated/unprotected." }
+    ]
+  },
+  {
+    "id": "d5-t6-b4",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "AAA vs Federation Confusion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A colleague suggests using RADIUS to provide web single sign-on across external SaaS applications. Which correction is MOST accurate?",
+    "options": [
+      { "text": "RADIUS is a network-access AAA protocol; web SSO/federation across SaaS uses SAML or OIDC", "correct": true, "rationale": "RADIUS handles network-access AAA (e.g., 802.1X/VPN), whereas cross-application web SSO/federation is done with SAML or OIDC." },
+      { "text": "RADIUS is the standard for SaaS web federation", "correct": false, "rationale": "SaaS web federation uses SAML/OIDC, not RADIUS." },
+      { "text": "RADIUS and SAML are identical", "correct": false, "rationale": "They serve different purposes: AAA network access vs. web federation." },
+      { "text": "Web SSO cannot be done with any protocol", "correct": false, "rationale": "Web SSO is readily achieved with SAML/OIDC." }
+    ]
+  },
+  {
+    "id": "d5-t6-b5",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Protocol Origin Recall",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "TACACS+ is most closely associated with which origin?",
+    "options": [
+      { "text": "A Cisco-developed AAA protocol", "correct": true, "rationale": "TACACS+ is a Cisco protocol commonly used for device administration AAA." },
+      { "text": "A wireless encryption standard from IEEE", "correct": false, "rationale": "TACACS+ is an AAA protocol, not a wireless encryption standard." },
+      { "text": "An email transport standard", "correct": false, "rationale": "TACACS+ is unrelated to email transport." },
+      { "text": "A public-key certificate format", "correct": false, "rationale": "TACACS+ is not a certificate format." }
+    ]
+  },
+  {
+    "id": "d5-t6-b6",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Accounting Value",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "The 'accounting' function in AAA MOST directly supports which security goal?",
+    "options": [
+      { "text": "Accountability — recording what authenticated users did for auditing", "correct": true, "rationale": "AAA accounting logs user activity/sessions, supporting accountability and audit trails." },
+      { "text": "Encrypting all data at rest", "correct": false, "rationale": "Accounting logs actions; it does not encrypt stored data." },
+      { "text": "Physically locking server rooms", "correct": false, "rationale": "Accounting is a logging function, not physical security." },
+      { "text": "Increasing network bandwidth", "correct": false, "rationale": "Accounting has no effect on bandwidth." }
+    ]
+  },
+  {
+    "id": "d5-t6-b7",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "RADIUS Combined AuthN/AuthZ",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A limitation cited for classic RADIUS in granular device administration is MOST accurately which of the following?",
+    "options": [
+      { "text": "It combines authentication and authorization, making fine-grained per-command control harder", "correct": true, "rationale": "Because RADIUS couples authN and authZ, it is less suited to the per-command authorization granularity that TACACS+'s separation enables." },
+      { "text": "It cannot authenticate any users", "correct": false, "rationale": "RADIUS authenticates users; the limitation is coupling of authN/authZ, not inability to authenticate." },
+      { "text": "It encrypts too much data", "correct": false, "rationale": "RADIUS actually encrypts less (only the password), not too much." },
+      { "text": "It only works over TCP", "correct": false, "rationale": "RADIUS uses UDP, not TCP." }
+    ]
+  },
+  {
+    "id": "d5-t6-b8",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Redundant AAA",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "If the single AAA server fails, no one can authenticate to network devices. What is the BEST design improvement?",
+    "options": [
+      { "text": "Deploy redundant AAA servers so authentication continues if one fails", "correct": true, "rationale": "Redundant/highly available AAA servers remove the single point of failure so authentication remains available during an outage." },
+      { "text": "Remove authentication so failures never block access", "correct": false, "rationale": "Removing authentication eliminates access control entirely — an unacceptable trade." },
+      { "text": "Use one server with no backup to keep it simple", "correct": false, "rationale": "A single server is exactly the single point of failure described." },
+      { "text": "Disable the network during outages", "correct": false, "rationale": "Shutting down the network is not a viable availability solution." }
+    ]
+  },
+  {
+    "id": "d5-t6-b9",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Protocol Selection by Need",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "For authenticating remote VPN users against a central identity store across mixed-vendor equipment, which AAA protocol is BEST suited?",
+    "options": [
+      { "text": "RADIUS, which is widely supported across vendors for network-access AAA", "correct": true, "rationale": "RADIUS's broad cross-vendor support makes it well suited to VPN/network-access authentication in mixed environments." },
+      { "text": "A Cisco-only protocol that other vendors cannot use", "correct": false, "rationale": "A single-vendor protocol is a poor fit for mixed-vendor equipment; RADIUS's interoperability is the advantage." },
+      { "text": "Telnet", "correct": false, "rationale": "Telnet is not an AAA protocol." },
+      { "text": "SMTP", "correct": false, "rationale": "SMTP is an email protocol, not an AAA service." }
+    ]
+  },
+  {
+    "id": "d5-t6-b10",
+    "domainId": "d5",
+    "topicId": "d5-t6",
+    "subtopicTag": "Implementation Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which factor is LEAST relevant when implementing a centralized authentication system?",
+    "options": [
+      { "text": "The wall color of the server room", "correct": true, "rationale": "Server-room wall color has no bearing on the authentication system's implementation or security, making it least relevant." },
+      { "text": "Protecting the AAA server and its shared secrets", "correct": false, "rationale": "Securing the AAA server and secrets is critical to the implementation." },
+      { "text": "Choosing RADIUS vs TACACS+ based on requirements", "correct": false, "rationale": "Selecting the right protocol for the use case is a key implementation decision." },
+      { "text": "Providing redundancy/high availability", "correct": false, "rationale": "Redundancy is important to avoid a single point of authentication failure." }
+    ]
+  }
+]

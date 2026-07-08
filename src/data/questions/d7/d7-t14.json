@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t14-a1",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Mantrap Defeats Tailgating",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Unauthorized people keep following badged employees through a secure door. Which control BEST prevents this tailgating?",
+    "options": [
+      { "text": "An access-control vestibule (mantrap) admitting one person at a time", "correct": true, "rationale": "A mantrap uses interlocking doors to allow only one person through at a time, directly defeating tailgating/piggybacking." },
+      { "text": "A brighter hallway light", "correct": false, "rationale": "Lighting improves visibility but does not physically stop someone from following through the door." },
+      { "text": "A louder door chime", "correct": false, "rationale": "A chime does not prevent an unauthorized person from entering behind an employee." },
+      { "text": "A taller ceiling", "correct": false, "rationale": "Ceiling height has no effect on tailgating." }
+    ]
+  },
+  {
+    "id": "d7-t14-a2",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Departed Staff Badge",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A physical access audit shows a contractor who left last week still has an active building badge. What should be done FIRST?",
+    "options": [
+      { "text": "Revoke the badge/door access immediately", "correct": true, "rationale": "Departed personnel must have physical access revoked promptly — the physical equivalent of deprovisioning — to prevent unauthorized entry." },
+      { "text": "Leave it active in case the contractor returns", "correct": false, "rationale": "Leaving a former contractor's access active is an unmanaged physical-access risk." },
+      { "text": "Give the badge additional door permissions", "correct": false, "rationale": "Expanding a departed person's access increases risk." },
+      { "text": "Ignore it since they already left", "correct": false, "rationale": "An active badge still opens doors; it must be revoked, not ignored." }
+    ]
+  },
+  {
+    "id": "d7-t14-a3",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Physical Bypasses Logical",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why is physical security considered foundational to information security?",
+    "options": [
+      { "text": "Physical access to systems can bypass many logical controls", "correct": true, "rationale": "An attacker with physical access to a console or hardware can often circumvent logical protections, making physical security foundational." },
+      { "text": "Physical controls encrypt all data automatically", "correct": false, "rationale": "Physical controls do not perform encryption." },
+      { "text": "Logical controls are unnecessary if doors are locked", "correct": false, "rationale": "Both physical and logical controls are needed; one does not replace the other." },
+      { "text": "Physical security has no effect on data protection", "correct": false, "rationale": "Physical security strongly affects data protection, which is the point." }
+    ]
+  },
+  {
+    "id": "d7-t14-a4",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "CCTV Function",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Monitored CCTV throughout a facility MOST directly supports which combination of objectives?",
+    "options": [
+      { "text": "Detection and deterrence, plus evidence for investigation", "correct": true, "rationale": "Visible CCTV deters, monitored footage detects incidents, and recordings provide investigative evidence." },
+      { "text": "Fire suppression", "correct": false, "rationale": "CCTV monitors; it does not suppress fires." },
+      { "text": "Power conditioning", "correct": false, "rationale": "CCTV is unrelated to power conditioning." },
+      { "text": "Data encryption at rest", "correct": false, "rationale": "CCTV is a physical monitoring control, not data encryption." }
+    ]
+  },
+  {
+    "id": "d7-t14-a5",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Visitor Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To control non-employees on site and maintain accountability for their movements, what is BEST?",
+    "options": [
+      { "text": "A visitor management process with sign-in, temporary badges, and escorts", "correct": true, "rationale": "Sign-in, temporary badging, and escorting control where visitors go and record their presence for accountability." },
+      { "text": "Letting visitors roam freely without records", "correct": false, "rationale": "Unrecorded, unescorted visitors are an accountability and security gap." },
+      { "text": "Giving visitors permanent employee badges", "correct": false, "rationale": "Permanent employee badges grant excessive, unaccountable access to visitors." },
+      { "text": "Posting the alarm codes at reception", "correct": false, "rationale": "Exposing alarm codes undermines security and does not manage visitors." }
+    ]
+  },
+  {
+    "id": "d7-t14-a6",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Guard Judgment",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Compared with purely automated access controls, what is the MOST distinctive advantage of security guards?",
+    "options": [
+      { "text": "Discretionary judgment to assess unusual situations and respond flexibly", "correct": true, "rationale": "Guards can reason about novel or ambiguous situations and respond in ways fixed automated controls cannot." },
+      { "text": "They never require training or rest", "correct": false, "rationale": "Guards need training and rest; this is a limitation, not an advantage." },
+      { "text": "They are always cheaper than technology", "correct": false, "rationale": "Guards are often more costly; cost is not their distinctive advantage." },
+      { "text": "They encrypt data automatically", "correct": false, "rationale": "Guards are a physical control and do not encrypt data." }
+    ]
+  },
+  {
+    "id": "d7-t14-a7",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Life Safety Priority",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A proposal would lock all exits during a security lockdown to protect equipment, but this could trap staff during a fire. What is the MOST correct guidance?",
+    "options": [
+      { "text": "Life safety takes precedence; exits must allow safe emergency egress", "correct": true, "rationale": "Protecting human life outweighs protecting assets; designs must permit safe egress even at some cost to asset security." },
+      { "text": "Asset protection outweighs life safety", "correct": false, "rationale": "This inverts the fundamental principle; life safety comes first." },
+      { "text": "Trapping people is acceptable to stop theft", "correct": false, "rationale": "Endangering people to prevent theft is never acceptable." },
+      { "text": "Emergency egress is optional in secure facilities", "correct": false, "rationale": "Safe egress is required by life-safety principles and codes." }
+    ]
+  },
+  {
+    "id": "d7-t14-a8",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Layered Physical Controls",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To protect a high-value server room, what physical implementation approach is BEST?",
+    "options": [
+      { "text": "Layer controls from the perimeter inward, with the strongest controls closest to the server room", "correct": true, "rationale": "Defense in depth concentrates the strongest controls around the most sensitive area while outer layers deter and delay." },
+      { "text": "Rely on a single locked door and nothing else", "correct": false, "rationale": "A single barrier is a single point of failure; layering is stronger." },
+      { "text": "Leave the perimeter open to cut costs", "correct": false, "rationale": "An open perimeter removes an important protective layer." },
+      { "text": "Place the servers in the public lobby", "correct": false, "rationale": "Putting sensitive assets in a public area removes protection entirely." }
+    ]
+  },
+  {
+    "id": "d7-t14-a9",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Access Logging",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Logging every badge swipe at sensitive doors MOST directly supports which goal?",
+    "options": [
+      { "text": "Accountability — attributing physical access to specific individuals", "correct": true, "rationale": "Physical access logs tie entries to identities, supporting accountability and investigations." },
+      { "text": "Faster network speeds", "correct": false, "rationale": "Access logs do not affect network performance." },
+      { "text": "Automatic fire suppression", "correct": false, "rationale": "Access logging is unrelated to fire suppression." },
+      { "text": "Encryption of stored data", "correct": false, "rationale": "Logging badge swipes does not encrypt data." }
+    ]
+  },
+  {
+    "id": "d7-t14-a10",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Control Maintenance",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To keep physical security controls effective over time, what operational practice is BEST?",
+    "options": [
+      { "text": "Regularly test locks/alarms, review CCTV coverage, and audit access lists", "correct": true, "rationale": "Ongoing testing, coverage review, and access audits keep physical controls functioning and current." },
+      { "text": "Install controls once and never inspect them again", "correct": false, "rationale": "Unmaintained controls degrade and drift out of alignment with need." },
+      { "text": "Disable alarms to reduce false alerts", "correct": false, "rationale": "Disabling alarms removes detection capability." },
+      { "text": "Remove all badge records to save storage", "correct": false, "rationale": "Deleting access records eliminates accountability and audit capability." }
+    ]
+  },
+  {
+    "id": "d7-t14-b1",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Piggybacking Awareness",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Beyond a mantrap, which additional measure BEST reduces tailgating by well-meaning-but-unaware employees holding doors open?",
+    "options": [
+      { "text": "Security awareness training to not let others in without proper badging", "correct": true, "rationale": "Awareness training changes the behavior (holding doors for strangers) that enables piggybacking, complementing physical controls." },
+      { "text": "Making the door heavier so it is hard to hold", "correct": false, "rationale": "A heavier door does not address the human tendency to hold it open for others." },
+      { "text": "Removing all doors for convenience", "correct": false, "rationale": "Removing doors eliminates access control entirely." },
+      { "text": "Turning off the lights near the door", "correct": false, "rationale": "Darkness does not prevent piggybacking and hampers legitimate use." }
+    ]
+  },
+  {
+    "id": "d7-t14-b2",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Biometric Entry",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A facility wants entry authorization tied to an individual's unique physical trait rather than only a card that could be lost or shared. Which control MOST directly provides this?",
+    "options": [
+      { "text": "A biometric reader (e.g., fingerprint or iris)", "correct": true, "rationale": "Biometrics authenticate the individual's unique trait, harder to lose or share than a card alone." },
+      { "text": "A brighter entrance sign", "correct": false, "rationale": "Signage does not authenticate individuals." },
+      { "text": "A suggestion box", "correct": false, "rationale": "A suggestion box has no access-control function." },
+      { "text": "A decorative fountain", "correct": false, "rationale": "A fountain provides no entry authorization." }
+    ]
+  },
+  {
+    "id": "d7-t14-b3",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "CCTV Not Prevention",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A manager believes cameras alone will stop intruders from entering. Which correction is MOST accurate?",
+    "options": [
+      { "text": "CCTV mainly detects and provides evidence (and can deter); it does not physically prevent entry", "correct": true, "rationale": "Cameras record and may deter, but preventing entry requires barriers and access controls; CCTV is detective, not preventive." },
+      { "text": "CCTV physically blocks all intruders", "correct": false, "rationale": "Cameras do not create a physical barrier to entry." },
+      { "text": "CCTV eliminates the need for any locks", "correct": false, "rationale": "Locks and barriers are still needed to prevent entry; CCTV complements them." },
+      { "text": "CCTV encrypts the building", "correct": false, "rationale": "CCTV is surveillance, not encryption." }
+    ]
+  },
+  {
+    "id": "d7-t14-b4",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Access List Review",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which practice BEST ensures physical door access stays aligned with who actually needs it?",
+    "options": [
+      { "text": "Periodic review of badge access lists reconciled with current staffing", "correct": true, "rationale": "Regular reconciliation with HR/staffing removes access for departed or reassigned people, keeping physical access appropriate." },
+      { "text": "Granting all employees access to every door", "correct": false, "rationale": "Universal access violates least privilege and expands risk." },
+      { "text": "Never reviewing access after issuing badges", "correct": false, "rationale": "Unreviewed access drifts and leaves stale, excessive permissions." },
+      { "text": "Letting employees edit their own access", "correct": false, "rationale": "Self-editing access undermines control and least privilege." }
+    ]
+  },
+  {
+    "id": "d7-t14-b5",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Tailgating Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In physical security, 'tailgating' (piggybacking) refers to which of the following?",
+    "options": [
+      { "text": "An unauthorized person following an authorized person through a controlled door", "correct": true, "rationale": "Tailgating is slipping in behind someone with legitimate access, bypassing the entry control." },
+      { "text": "Encrypting network traffic between offices", "correct": false, "rationale": "That is a logical/network concept, not tailgating." },
+      { "text": "Backing up data to an offsite location", "correct": false, "rationale": "Backup is unrelated to tailgating." },
+      { "text": "Overheating of server equipment", "correct": false, "rationale": "Overheating is an environmental issue, not tailgating." }
+    ]
+  },
+  {
+    "id": "d7-t14-b6",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Escort Requirement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A vendor technician needs to work in a sensitive area for a day. Which control MOST appropriately manages their physical access?",
+    "options": [
+      { "text": "Issue a temporary badge and require an escort in sensitive areas", "correct": true, "rationale": "Temporary badging plus escorting limits and supervises the vendor's movement in sensitive zones." },
+      { "text": "Give them a permanent all-access badge", "correct": false, "rationale": "Permanent all-access for a one-day vendor grossly over-grants access." },
+      { "text": "Let them wander unescorted", "correct": false, "rationale": "Unescorted access to sensitive areas is a significant risk." },
+      { "text": "Share the master key with them", "correct": false, "rationale": "Handing over a master key is a severe access-control failure." }
+    ]
+  },
+  {
+    "id": "d7-t14-b7",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Fail-Safe Egress",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Electronically locked doors in an occupied area must satisfy life-safety codes. During a fire alarm or power loss, they MOST importantly should do what?",
+    "options": [
+      { "text": "Fail safe — unlock to allow occupants to exit", "correct": true, "rationale": "Egress doors should fail safe (unlock) so people can escape during emergencies or power loss, prioritizing life safety." },
+      { "text": "Fail secure and lock people inside", "correct": false, "rationale": "Locking occupants in during a fire endangers life." },
+      { "text": "Stay locked to protect assets regardless of occupants", "correct": false, "rationale": "Asset protection cannot override human safety in an emergency." },
+      { "text": "Randomly lock and unlock", "correct": false, "rationale": "Unpredictable behavior does not ensure safe egress." }
+    ]
+  },
+  {
+    "id": "d7-t14-b8",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Deterrent Control",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Prominent 'Restricted Area — Monitored' signage and visible cameras primarily serve which objective?",
+    "options": [
+      { "text": "Deter — discouraging intrusion attempts", "correct": true, "rationale": "Visible controls and warning signage primarily deter would-be intruders by signaling that attempts will be seen and opposed." },
+      { "text": "Delay — physically slowing an attacker", "correct": false, "rationale": "Signs and visible cameras discourage rather than physically delay; barriers/locks delay." },
+      { "text": "Encrypt — protecting data", "correct": false, "rationale": "Signage is not a data-protection control." },
+      { "text": "Backup — copying data", "correct": false, "rationale": "Backups relate to data recovery, not physical deterrence." }
+    ]
+  },
+  {
+    "id": "d7-t14-b9",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Console Access Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An attacker gains unsupervised physical access to a server's console. Why is this MOST serious?",
+    "options": [
+      { "text": "Physical console access can enable bypassing logical controls (e.g., booting to recovery, resetting credentials)", "correct": true, "rationale": "With hands-on hardware access, attackers can often circumvent OS/logical protections, which is why physical access to consoles must be tightly controlled." },
+      { "text": "It improves the server's performance", "correct": false, "rationale": "Unauthorized physical access is a threat, not a performance benefit." },
+      { "text": "It automatically encrypts the disks", "correct": false, "rationale": "Physical access does not encrypt data; it can undermine protections." },
+      { "text": "It has no security impact", "correct": false, "rationale": "Console access is among the most serious physical exposures." }
+    ]
+  },
+  {
+    "id": "d7-t14-b10",
+    "domainId": "d7",
+    "topicId": "d7-t14",
+    "subtopicTag": "Physical Control Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following is LEAST relevant to implementing physical security at a facility?",
+    "options": [
+      { "text": "The brand of coffee served in the break room", "correct": true, "rationale": "Break-room coffee has no bearing on physical security implementation, making it least relevant." },
+      { "text": "Access-control readers at sensitive entrances", "correct": false, "rationale": "Entry access control is a core physical security implementation." },
+      { "text": "CCTV coverage and monitoring", "correct": false, "rationale": "Surveillance is a key physical control." },
+      { "text": "Prompt revocation of badges for departed staff", "correct": false, "rationale": "Revoking physical access is essential to maintaining security." }
+    ]
+  }
+]

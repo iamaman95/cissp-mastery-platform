@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t4-a1",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A single accounts-payable clerk can create a vendor, approve the invoice, and release payment with no second party involved. Which control BEST addresses this risk?",
+    "options": [
+      { "text": "Separation of duties, so no one person can complete the payment process alone", "correct": true, "rationale": "Splitting the steps among different people prevents a single actor from committing fraud end-to-end and forces collusion to bypass it." },
+      { "text": "Increasing the clerk's password complexity", "correct": false, "rationale": "A stronger password does nothing to stop the authorized clerk from abusing an end-to-end process." },
+      { "text": "Encrypting the payment database", "correct": false, "rationale": "Encryption protects data confidentiality at rest but does not prevent one authorized person from controlling the whole workflow." },
+      { "text": "Adding more antivirus scanning to the workstation", "correct": false, "rationale": "Antivirus addresses malware, not the process-control weakness of one person owning the full transaction." }
+    ]
+  },
+  {
+    "id": "d7-t4-a2",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A help-desk technician still holds domain administrator rights granted for a project that ended a year ago. Which principle is BEST applied to correct this?",
+    "options": [
+      { "text": "Least privilege — remove rights beyond what the current role requires", "correct": true, "rationale": "Least privilege dictates that a subject retain only the minimum permissions needed for current duties; stale admin rights must be revoked." },
+      { "text": "Need-to-know — the technician should not see the data", "correct": false, "rationale": "Need-to-know concerns information access, but the issue here is excessive system rights, which is least privilege." },
+      { "text": "Job rotation — move the technician to a new team", "correct": false, "rationale": "Job rotation is a detective/deterrent HR control, not the fix for excessive standing privileges." },
+      { "text": "Mandatory vacation — force the technician to take leave", "correct": false, "rationale": "Mandatory vacation surfaces hidden fraud; it does not remove the unnecessary admin rights." }
+    ]
+  },
+  {
+    "id": "d7-t4-a3",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Need-to-Know vs Clearance",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An analyst holds a Top Secret clearance but is browsing a Top Secret project file that has nothing to do with any task assigned to them. This MOST directly violates which principle?",
+    "options": [
+      { "text": "Need-to-know", "correct": true, "rationale": "Having the clearance level is insufficient; access also requires a task-based need to know the specific information, which is absent here." },
+      { "text": "Least privilege of system rights", "correct": false, "rationale": "This scenario is about information access without a task reason, which is need-to-know, not the breadth of system rights." },
+      { "text": "Separation of duties", "correct": false, "rationale": "SoD concerns splitting a process among people; it does not describe accessing information without a task need." },
+      { "text": "Job rotation", "correct": false, "rationale": "Job rotation is a fraud-detection HR control, unrelated to accessing data without a need to know." }
+    ]
+  },
+  {
+    "id": "d7-t4-a4",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Job Rotation",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Beyond cross-training, what is a PRIMARY security benefit of job rotation?",
+    "options": [
+      { "text": "It deters and helps detect fraud, since a scheme is exposed when a new person takes over the role", "correct": true, "rationale": "Rotating personnel makes long-running fraud hard to sustain because a successor is likely to notice irregularities." },
+      { "text": "It permanently increases each employee's access rights", "correct": false, "rationale": "Rotation should not accumulate rights; unused prior-role access must be revoked, not retained." },
+      { "text": "It eliminates the need for separation of duties", "correct": false, "rationale": "Rotation complements but does not replace SoD; both address different aspects of fraud risk." },
+      { "text": "It reduces the number of employees needed", "correct": false, "rationale": "Rotation is about coverage and fraud detection, not headcount reduction." }
+    ]
+  },
+  {
+    "id": "d7-t4-a5",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Privileged Account Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Three admins share one local administrator password to manage servers, making individual actions untraceable. Which solution BEST restores accountability and control?",
+    "options": [
+      { "text": "A privileged account management system with credential vaulting, individual just-in-time access, MFA, and session recording", "correct": true, "rationale": "PAM eliminates anonymous shared credentials, grants individual time-limited access, and records sessions, restoring accountability and control." },
+      { "text": "Simply changing the shared password each month", "correct": false, "rationale": "Rotating a still-shared password preserves the anonymity problem; actions remain untraceable to an individual." },
+      { "text": "Writing the shared password on a sticky note in the server room", "correct": false, "rationale": "This worsens security and accountability rather than solving the shared-credential problem." },
+      { "text": "Emailing the shared password to all three admins", "correct": false, "rationale": "Distributing the shared secret does nothing to make actions individually attributable and increases exposure." }
+    ]
+  },
+  {
+    "id": "d7-t4-a6",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Least Privilege vs Need-to-Know",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes least privilege from need-to-know?",
+    "options": [
+      { "text": "Least privilege limits the breadth of rights/actions granted; need-to-know limits access to specific information based on task", "correct": true, "rationale": "Least privilege is about the scope of permissions, while need-to-know is about task-based access to particular information." },
+      { "text": "They are identical principles with different names", "correct": false, "rationale": "They are complementary but distinct; conflating them is a common exam trap." },
+      { "text": "Need-to-know governs system rights and least privilege governs data access", "correct": false, "rationale": "This reverses the two concepts." },
+      { "text": "Least privilege applies only to executives", "correct": false, "rationale": "Least privilege applies to all subjects, not a single group." }
+    ]
+  },
+  {
+    "id": "d7-t4-a7",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Collusion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "After implementing separation of duties on a sensitive process, what is now required for fraud to occur that was not required before?",
+    "options": [
+      { "text": "Collusion among multiple individuals", "correct": true, "rationale": "SoD raises the bar so that fraud requires two or more people to conspire, which is harder to arrange and easier to detect." },
+      { "text": "A single privileged account", "correct": false, "rationale": "SoD specifically prevents a single account/person from completing the fraud alone, so one account is no longer sufficient." },
+      { "text": "Physical access to the server room", "correct": false, "rationale": "The control is about process division among people, not physical access to hardware." },
+      { "text": "A zero-day exploit", "correct": false, "rationale": "SoD addresses process abuse by insiders, not the need for a technical exploit." }
+    ]
+  },
+  {
+    "id": "d7-t4-a8",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Mandatory Vacation",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A bank requires employees in sensitive positions to take at least one continuous week of vacation each year. What is the PRIMARY security purpose of this policy?",
+    "options": [
+      { "text": "To surface hidden fraud that depends on the employee continuously performing the role", "correct": true, "rationale": "Forcing a replacement to cover the role can expose ongoing schemes that rely on the perpetrator’s uninterrupted presence." },
+      { "text": "To reduce the organization's payroll costs", "correct": false, "rationale": "Mandatory vacation is a detective control, not a cost-saving measure." },
+      { "text": "To grant the employee additional system privileges", "correct": false, "rationale": "Vacation policy does not increase access; that would contradict its control purpose." },
+      { "text": "To satisfy antivirus licensing requirements", "correct": false, "rationale": "There is no connection between vacation policy and antivirus licensing." }
+    ]
+  },
+  {
+    "id": "d7-t4-a9",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following BEST defines the principle of least privilege?",
+    "options": [
+      { "text": "Granting a subject only the minimum permissions needed to perform assigned duties", "correct": true, "rationale": "Least privilege restricts rights to the minimum necessary for the job and nothing more." },
+      { "text": "Granting all users administrative rights for convenience", "correct": false, "rationale": "Broad admin rights are the opposite of least privilege." },
+      { "text": "Requiring two people to approve every action", "correct": false, "rationale": "That describes dual control/separation of duties, not least privilege." },
+      { "text": "Rotating employees through different jobs annually", "correct": false, "rationale": "That describes job rotation, not least privilege." }
+    ]
+  },
+  {
+    "id": "d7-t4-a10",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Dual Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Opening a vault containing master encryption keys should require two authorized custodians to act together. Which control does this BEST describe?",
+    "options": [
+      { "text": "Dual control (two-person integrity)", "correct": true, "rationale": "Requiring two authorized people to be present to perform one highly sensitive action is dual control / two-person integrity." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege limits an individual's rights; it does not require two people to act together for one action." },
+      { "text": "Job rotation", "correct": false, "rationale": "Job rotation moves people through roles over time; it does not require simultaneous two-person action." },
+      { "text": "Need-to-know", "correct": false, "rationale": "Need-to-know restricts information access by task, not the requirement for two custodians to co-act." }
+    ]
+  },
+  {
+    "id": "d7-t4-b1",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A developer can write code, approve their own merge, and deploy directly to production. From a fraud-prevention standpoint, which principle is MOST clearly violated?",
+    "options": [
+      { "text": "Separation of duties", "correct": true, "rationale": "One person controlling development, approval, and deployment end-to-end is a direct separation-of-duties violation." },
+      { "text": "Mandatory vacation", "correct": false, "rationale": "Mandatory vacation is a detective control; it is not the principle violated by one person owning the full pipeline." },
+      { "text": "Need-to-know", "correct": false, "rationale": "Need-to-know concerns information access, not the concentration of process control in one person." },
+      { "text": "Data classification", "correct": false, "rationale": "Data classification labels information sensitivity and is unrelated to who controls the deployment process." }
+    ]
+  },
+  {
+    "id": "d7-t4-b2",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Need-to-Know",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A new HR analyst is given access only to the specific employee records for the cases assigned to them, not the entire HR database. Which principle does this BEST reflect?",
+    "options": [
+      { "text": "Need-to-know", "correct": true, "rationale": "Limiting access to only the specific information required for assigned tasks is the essence of need-to-know." },
+      { "text": "Separation of duties", "correct": false, "rationale": "SoD divides a process among people; here a single person is simply scoped to task-relevant records." },
+      { "text": "Job rotation", "correct": false, "rationale": "Job rotation moves people between roles; it is not about scoping information to the current task." },
+      { "text": "Dual control", "correct": false, "rationale": "Dual control requires two people for one action; the scenario is about scoped information access." }
+    ]
+  },
+  {
+    "id": "d7-t4-b3",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Privileged Account Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization wants administrators to receive elevated rights only for the duration of a specific task, with the access automatically expiring afterward. Which PAM capability BEST provides this?",
+    "options": [
+      { "text": "Just-in-time (time-limited) privilege elevation", "correct": true, "rationale": "Just-in-time access grants elevated rights only when needed and revokes them automatically, minimizing standing privilege." },
+      { "text": "Permanent membership in the administrators group", "correct": false, "rationale": "Standing permanent admin rights are exactly what just-in-time access is designed to avoid." },
+      { "text": "A single shared admin account for all tasks", "correct": false, "rationale": "A shared account removes accountability and provides no time-limited, task-scoped elevation." },
+      { "text": "Disabling MFA to speed up admin logins", "correct": false, "rationale": "Removing MFA weakens security on the highest-value accounts and does not provide time-limited elevation." }
+    ]
+  },
+  {
+    "id": "d7-t4-b4",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Least Privilege",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During an access review, auditors find users have accumulated permissions from every role they have ever held ('privilege creep'). Which principle should MOST directly guide remediation?",
+    "options": [
+      { "text": "Least privilege", "correct": true, "rationale": "Trimming accumulated permissions down to what current duties require is a direct application of least privilege." },
+      { "text": "Mandatory vacation", "correct": false, "rationale": "Mandatory vacation detects fraud; it does not remove accumulated excess permissions." },
+      { "text": "Separation of duties", "correct": false, "rationale": "SoD divides a process among people; it does not by itself trim an individual's accumulated rights." },
+      { "text": "Need-to-know", "correct": false, "rationale": "Need-to-know limits information access; privilege creep is broadly about excess system rights, which is least privilege." }
+    ]
+  },
+  {
+    "id": "d7-t4-b5",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Job Rotation",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which control involves periodically moving employees through different roles to deter fraud and cross-train staff?",
+    "options": [
+      { "text": "Job rotation", "correct": true, "rationale": "Job rotation moves personnel through roles to deter/detect fraud and build redundancy in skills." },
+      { "text": "Least privilege", "correct": false, "rationale": "Least privilege limits permissions; it does not involve moving employees through roles." },
+      { "text": "Data remanence", "correct": false, "rationale": "Data remanence concerns residual data on media, not personnel practices." },
+      { "text": "Egress filtering", "correct": false, "rationale": "Egress filtering controls outbound network traffic, unrelated to rotating staff." }
+    ]
+  },
+  {
+    "id": "d7-t4-b6",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Separation of Duties",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A security team wants to ensure the person who requests a firewall rule change cannot also be the one who approves and implements it. Which control BEST enforces this?",
+    "options": [
+      { "text": "Separation of duties across request, approval, and implementation", "correct": true, "rationale": "Assigning request, approval, and implementation to different people prevents unilateral, unchecked changes, the core of SoD." },
+      { "text": "Least privilege on the requester's account only", "correct": false, "rationale": "Limiting one account's rights does not guarantee the same person cannot approve and implement; SoD across roles is required." },
+      { "text": "Mandatory vacation for the requester", "correct": false, "rationale": "Vacation policy is a detective control and does not enforce role separation on a specific change." },
+      { "text": "Encrypting the firewall configuration file", "correct": false, "rationale": "Encryption protects the config's confidentiality but does not separate the request/approve/implement roles." }
+    ]
+  },
+  {
+    "id": "d7-t4-b7",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Need-to-Know vs Clearance",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Why is a valid security clearance by itself insufficient to grant a user access to a specific classified document?",
+    "options": [
+      { "text": "Because the user must also have a task-based need-to-know for that specific information", "correct": true, "rationale": "Clearance establishes trust at a level, but access still requires a demonstrated need-to-know for the particular data." },
+      { "text": "Because clearances expire after one day", "correct": false, "rationale": "Clearances do not expire daily; this is not the reason access is restricted." },
+      { "text": "Because all documents are unclassified", "correct": false, "rationale": "This contradicts the premise of a classified document." },
+      { "text": "Because clearances only apply to physical access", "correct": false, "rationale": "Clearances apply to information access, not solely physical access; the missing element is need-to-know." }
+    ]
+  },
+  {
+    "id": "d7-t4-b8",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Privileged Account Management",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "After a breach, investigators could not determine which of several administrators executed a destructive command because all used the same root account. Which PAM practice would MOST have improved attribution?",
+    "options": [
+      { "text": "Recording individual privileged sessions tied to named users via check-out of vaulted credentials", "correct": true, "rationale": "Individual accountability through vaulted, checked-out credentials and session recording ties each privileged action to a specific person." },
+      { "text": "Keeping the shared root account but adding a longer password", "correct": false, "rationale": "A longer shared password still leaves actions unattributable to an individual." },
+      { "text": "Disabling logging on the servers to reduce noise", "correct": false, "rationale": "Disabling logging removes the very evidence needed for attribution." },
+      { "text": "Allowing anonymous administrative logins", "correct": false, "rationale": "Anonymous logins are the opposite of accountability and would worsen the problem." }
+    ]
+  },
+  {
+    "id": "d7-t4-b9",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Least Privilege / PAM",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which practice is LEAST consistent with the principle of least privilege for administrators?",
+    "options": [
+      { "text": "Granting all IT staff permanent domain administrator rights for convenience", "correct": true, "rationale": "Blanket permanent admin rights maximize standing privilege and blast radius, directly opposing least privilege." },
+      { "text": "Using just-in-time elevation for admin tasks", "correct": false, "rationale": "Time-limited elevation minimizes standing privilege and aligns with least privilege." },
+      { "text": "Removing local admin rights from standard user accounts", "correct": false, "rationale": "Removing unneeded admin rights supports least privilege." },
+      { "text": "Assigning role-scoped permissions matched to job duties", "correct": false, "rationale": "Scoping permissions to duties is a core least-privilege practice." }
+    ]
+  },
+  {
+    "id": "d7-t4-b10",
+    "domainId": "d7",
+    "topicId": "d7-t4",
+    "subtopicTag": "Defense in Depth of Access",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization applies least privilege, separation of duties, job rotation, and PAM together for its finance systems. What does combining these controls BEST achieve?",
+    "options": [
+      { "text": "Layered reduction of both the likelihood and impact of insider misuse, with fraud harder to commit and easier to detect", "correct": true, "rationale": "These complementary controls implement defense in depth around human access, shrinking blast radius and improving detection of fraud." },
+      { "text": "Elimination of the need for any monitoring or auditing", "correct": false, "rationale": "These controls complement, not replace, monitoring and auditing; detection still depends on logging and review." },
+      { "text": "A guarantee that no insider incident can ever occur", "correct": false, "rationale": "No control set guarantees zero incidents; they reduce likelihood and impact, not eliminate risk entirely." },
+      { "text": "Faster performance of financial transactions", "correct": false, "rationale": "These are security controls, not performance optimizations." }
+    ]
+  }
+]

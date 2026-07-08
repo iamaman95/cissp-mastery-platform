@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d7-t3-a1",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Secure Baseline",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company's servers were each built by hand and no two are configured alike, leaving unknown security gaps. Which action would BEST create a consistent, secure starting point across the fleet?",
+    "options": [
+      { "text": "Define a hardened baseline configuration and deploy all servers from it", "correct": true, "rationale": "A standardized hardened baseline gives every system a known-good, consistent, reduced-attack-surface starting state, directly addressing the inconsistency." },
+      { "text": "Patch each server whenever a vulnerability is announced", "correct": false, "rationale": "Reactive patching addresses individual flaws but does not create a consistent secure configuration across systems." },
+      { "text": "Increase the frequency of vulnerability scans", "correct": false, "rationale": "Scanning finds issues but does not establish or enforce a consistent secure baseline." },
+      { "text": "Require longer passwords on all servers", "correct": false, "rationale": "Stronger passwords are one setting; they do not standardize the overall configuration or reduce broad attack surface." }
+    ]
+  },
+  {
+    "id": "d7-t3-a2",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Hardening",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A newly imaged server ships with several default services enabled, unused open ports, and a default administrator account. Which activity BEST describes remediating these to reduce attack surface?",
+    "options": [
+      { "text": "System hardening", "correct": true, "rationale": "Removing unneeded services, closing unused ports, and disabling default accounts to reduce attack surface is the definition of hardening." },
+      { "text": "Load balancing", "correct": false, "rationale": "Load balancing distributes traffic and is unrelated to reducing a single system's attack surface." },
+      { "text": "Data classification", "correct": false, "rationale": "Data classification labels information by sensitivity; it does not reduce a system's exposed services." },
+      { "text": "Capacity planning", "correct": false, "rationale": "Capacity planning sizes resources for demand; it has nothing to do with removing insecure defaults." }
+    ]
+  },
+  {
+    "id": "d7-t3-a3",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Configuration Drift",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Six months after deployment, several servers no longer match their approved configuration due to undocumented ad-hoc changes by various admins. This condition is MOST accurately called what?",
+    "options": [
+      { "text": "Configuration drift", "correct": true, "rationale": "Undocumented, gradual deviation from the approved baseline over time is precisely configuration drift." },
+      { "text": "A denial-of-service condition", "correct": false, "rationale": "A DoS is a loss of availability from attack or overload, not a deviation from a configuration baseline." },
+      { "text": "A zero-day vulnerability", "correct": false, "rationale": "A zero-day is an unknown, unpatched flaw, not the divergence of systems from their baseline." },
+      { "text": "Data remanence", "correct": false, "rationale": "Data remanence is residual data left on media after deletion, unrelated to configuration deviation." }
+    ]
+  },
+  {
+    "id": "d7-t3-a4",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "CM vs Change Management",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which statement BEST distinguishes configuration management from change management?",
+    "options": [
+      { "text": "Configuration management maintains the authoritative baseline of deployed state; change management governs how modifications to it are approved", "correct": true, "rationale": "CM defines and preserves what is deployed (the baseline), while change management controls the process for altering it — complementary but distinct disciplines." },
+      { "text": "They are two names for the same process", "correct": false, "rationale": "They are related but not identical; conflating them is a classic exam trap." },
+      { "text": "Change management defines the baseline and configuration management approves changes", "correct": false, "rationale": "This reverses the two roles; it is configuration management that owns the baseline." },
+      { "text": "Configuration management applies only to network devices", "correct": false, "rationale": "CM applies broadly to hardware, software, and settings, not just network gear." }
+    ]
+  },
+  {
+    "id": "d7-t3-a5",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Gold Image / Imaging",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To ensure every new workstation is deployed in an identical, known-good secure state, which approach is BEST?",
+    "options": [
+      { "text": "Build a hardened master image and deploy all workstations from it", "correct": true, "rationale": "A gold image captures a hardened baseline and reproduces it exactly across systems, ensuring consistency and known security posture." },
+      { "text": "Let each technician configure each machine manually from a checklist", "correct": false, "rationale": "Manual builds reintroduce human error and inconsistency, the very problem imaging solves." },
+      { "text": "Deploy machines with vendor defaults and fix issues as users report them", "correct": false, "rationale": "Shipping insecure defaults and reacting to complaints leaves systems exposed and inconsistent." },
+      { "text": "Ship machines unconfigured and let users self-install software", "correct": false, "rationale": "User self-configuration produces uncontrolled, inconsistent, and likely insecure states." }
+    ]
+  },
+  {
+    "id": "d7-t3-a6",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Baseline Standards",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following is a widely recognized standard used to define secure configuration baselines?",
+    "options": [
+      { "text": "CIS Benchmarks", "correct": true, "rationale": "CIS Benchmarks (like DISA STIGs) provide consensus secure-configuration guidance used to build hardened baselines." },
+      { "text": "OSI model", "correct": false, "rationale": "The OSI model is a conceptual networking layer model, not a configuration hardening standard." },
+      { "text": "RAID levels", "correct": false, "rationale": "RAID levels describe disk redundancy schemes, not configuration hardening baselines." },
+      { "text": "TCP three-way handshake", "correct": false, "rationale": "The three-way handshake is a connection-establishment mechanism, unrelated to hardening standards." }
+    ]
+  },
+  {
+    "id": "d7-t3-a7",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Provisioning",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization frequently spins up new cloud servers and finds manual setup slow and error-prone, sometimes leaving systems misconfigured. Which practice would MOST improve consistency and security?",
+    "options": [
+      { "text": "Automated provisioning from a defined, hardened baseline", "correct": true, "rationale": "Automated provisioning reproduces the approved secure configuration reliably, eliminating manual error and drift at deployment time." },
+      { "text": "Assigning setup to whichever admin is available", "correct": false, "rationale": "Ad-hoc manual setup is exactly the source of the inconsistency and errors described." },
+      { "text": "Documenting a longer manual runbook", "correct": false, "rationale": "A longer manual process still relies on error-prone human steps and does not guarantee consistency." },
+      { "text": "Waiting to configure servers until users complain", "correct": false, "rationale": "Reactive configuration leaves systems misconfigured and insecure in the interim." }
+    ]
+  },
+  {
+    "id": "d7-t3-a8",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "CMDB / Inventory",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A critical vulnerability is announced for a specific software version. The security team cannot determine which of thousands of systems run that version. What should the organization address FIRST to solve this recurring problem?",
+    "options": [
+      { "text": "Establish an accurate configuration inventory (CMDB) of deployed configuration items", "correct": true, "rationale": "Without an authoritative inventory of what is deployed, the team cannot identify affected systems; building that inventory is the foundational fix." },
+      { "text": "Buy a more expensive antivirus product", "correct": false, "rationale": "Antivirus does not tell you which software versions are installed across the fleet." },
+      { "text": "Increase the firewall's throughput", "correct": false, "rationale": "Firewall performance is irrelevant to knowing which systems run a vulnerable version." },
+      { "text": "Rotate all administrative passwords", "correct": false, "rationale": "Rotating passwords is unrelated to identifying which systems are affected by the vulnerability." }
+    ]
+  },
+  {
+    "id": "d7-t3-a9",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Baseline Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In configuration management, what is a baseline?",
+    "options": [
+      { "text": "A formally agreed reference configuration against which changes and drift are measured", "correct": true, "rationale": "A baseline is the documented, approved reference state used as the point of comparison for changes and drift." },
+      { "text": "The minimum bandwidth a network link must provide", "correct": false, "rationale": "That describes a network performance floor, not a configuration baseline." },
+      { "text": "The lowest privilege a user can be granted", "correct": false, "rationale": "That relates to least privilege, not a configuration baseline." },
+      { "text": "The maximum acceptable downtime for a system", "correct": false, "rationale": "That is closer to an availability metric, not a configuration baseline." }
+    ]
+  },
+  {
+    "id": "d7-t3-a10",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Drift Remediation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "Continuous monitoring detects that a production server has drifted from its approved baseline. What is the BEST response?",
+    "options": [
+      { "text": "Remediate the server back to the approved baseline (or re-image it) through the change process", "correct": true, "rationale": "Restoring the system to its known-good baseline, via controlled change, corrects the drift and returns it to a secure, documented state." },
+      { "text": "Update the baseline to match whatever the server now is", "correct": false, "rationale": "Blindly adopting drifted, unreviewed settings as the new baseline legitimizes potentially insecure ad-hoc changes." },
+      { "text": "Ignore it because the server is still running", "correct": false, "rationale": "Running does not mean secure; unmanaged drift can conceal vulnerabilities and must be addressed." },
+      { "text": "Immediately decommission the server", "correct": false, "rationale": "Decommissioning a production server for drift is disproportionate; remediation to baseline is the appropriate response." }
+    ]
+  },
+  {
+    "id": "d7-t3-b1",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Hardening",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the PRIMARY security objective of hardening a system before deployment?",
+    "options": [
+      { "text": "To reduce the attack surface by removing unnecessary functionality and insecure defaults", "correct": true, "rationale": "Hardening's core aim is minimizing exposure — fewer running services, closed ports, and no default accounts mean fewer avenues to attack." },
+      { "text": "To increase raw processing speed", "correct": false, "rationale": "Hardening targets security, not performance optimization." },
+      { "text": "To add as many features as possible", "correct": false, "rationale": "Adding features increases attack surface, the opposite of hardening." },
+      { "text": "To make the system easier for anyone to access", "correct": false, "rationale": "Broadening access conflicts with hardening, which restricts unnecessary access." }
+    ]
+  },
+  {
+    "id": "d7-t3-b2",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Configuration Drift",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which capability BEST allows an organization to detect when systems have quietly diverged from their approved configurations?",
+    "options": [
+      { "text": "Continuous configuration monitoring against the baseline", "correct": true, "rationale": "Ongoing comparison of live configurations to the baseline is what surfaces drift so it can be remediated." },
+      { "text": "An annual physical inventory count", "correct": false, "rationale": "A yearly count of assets does not reveal configuration-level deviations that occur throughout the year." },
+      { "text": "A stronger perimeter firewall", "correct": false, "rationale": "A firewall filters traffic; it does not detect internal configuration drift." },
+      { "text": "More frequent password changes", "correct": false, "rationale": "Password rotation is unrelated to detecting configuration deviations from baseline." }
+    ]
+  },
+  {
+    "id": "d7-t3-b3",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Gold Image / Imaging",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A hospital must deploy 500 identical, securely configured clinical workstations quickly. Which method BEST ensures they all start in the same hardened state?",
+    "options": [
+      { "text": "Deploy from a single hardened gold image", "correct": true, "rationale": "A master hardened image reproduces the identical secure configuration across all 500 machines efficiently and consistently." },
+      { "text": "Have each department configure its own machines its own way", "correct": false, "rationale": "Decentralized manual configuration guarantees inconsistency and varying security postures." },
+      { "text": "Install the operating system defaults and skip hardening to save time", "correct": false, "rationale": "Skipping hardening leaves insecure defaults across all machines, a poor security outcome." },
+      { "text": "Let end users install whatever software they prefer", "correct": false, "rationale": "User self-configuration produces uncontrolled, non-uniform, and likely insecure builds." }
+    ]
+  },
+  {
+    "id": "d7-t3-b4",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "CM vs Change Management",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An auditor asks which process is responsible for maintaining the authoritative record of exactly what hardware, software, and settings are currently deployed. This is MOST directly the responsibility of which process?",
+    "options": [
+      { "text": "Configuration management", "correct": true, "rationale": "Maintaining the authoritative deployed-state record (baselines, configuration items, inventory) is the defining role of configuration management." },
+      { "text": "Incident management", "correct": false, "rationale": "Incident management handles detection and response to events, not maintaining the deployed-state record." },
+      { "text": "Change management", "correct": false, "rationale": "Change management approves modifications; it relies on, but does not itself maintain, the authoritative configuration record." },
+      { "text": "Vulnerability management", "correct": false, "rationale": "Vulnerability management identifies and remediates weaknesses; it does not own the deployed-state baseline record." }
+    ]
+  },
+  {
+    "id": "d7-t3-b5",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Provisioning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A DevOps team wants new environments to be created identically every time with no manual steps. Which practice BEST supports this goal from a configuration standpoint?",
+    "options": [
+      { "text": "Automated provisioning that deploys systems from a defined configuration", "correct": true, "rationale": "Automated, repeatable provisioning reproduces the exact intended configuration each time, eliminating manual variance." },
+      { "text": "A shared document listing setup steps for admins to follow by hand", "correct": false, "rationale": "Manual steps from a document still allow human error and inconsistency between environments." },
+      { "text": "Configuring the first environment and copying files ad hoc afterward", "correct": false, "rationale": "Ad-hoc copying is unreliable and does not guarantee identical, complete configurations." },
+      { "text": "Letting each engineer improvise the setup", "correct": false, "rationale": "Improvised setup produces divergent environments, the opposite of the stated goal." }
+    ]
+  },
+  {
+    "id": "d7-t3-b6",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Configuration Item",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In configuration management, what is a configuration item (CI)?",
+    "options": [
+      { "text": "Any hardware, software, or setting tracked under configuration management", "correct": true, "rationale": "A CI is any component whose configuration is managed and recorded, typically in a CMDB." },
+      { "text": "A ticket requesting a password reset", "correct": false, "rationale": "A password-reset request is a service request, not a tracked configuration component." },
+      { "text": "A firewall log entry", "correct": false, "rationale": "A log entry is a record of an event, not a managed configuration component." },
+      { "text": "An employee's job title", "correct": false, "rationale": "A job title is HR data, not a hardware/software/setting under configuration control." }
+    ]
+  },
+  {
+    "id": "d7-t3-b7",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Drift Remediation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A monitoring tool reports that many workstations have insecure settings not present in the approved image, apparently applied piecemeal by local admins. What is the MOST effective long-term fix?",
+    "options": [
+      { "text": "Re-image or remediate systems back to the hardened baseline and restrict who can alter configurations", "correct": true, "rationale": "Restoring systems to the approved baseline and controlling change prevents recurring unauthorized drift, addressing root cause." },
+      { "text": "Manually undo each individual setting on each machine and hope it stays fixed", "correct": false, "rationale": "One-off manual fixes without controlling who can change configurations will drift again; it does not address the root cause." },
+      { "text": "Accept the current settings as the new normal", "correct": false, "rationale": "Accepting unreviewed insecure changes institutionalizes the risk rather than correcting it." },
+      { "text": "Turn off the monitoring tool to stop the alerts", "correct": false, "rationale": "Silencing the detection hides the problem instead of remediating the insecure drift." }
+    ]
+  },
+  {
+    "id": "d7-t3-b8",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Baseline Standards",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A team building its first secure server baseline wants an authoritative, consensus reference rather than inventing settings themselves. Which source is BEST to build from?",
+    "options": [
+      { "text": "An established hardening standard such as CIS Benchmarks or DISA STIGs", "correct": true, "rationale": "Recognized hardening standards provide vetted, consensus configuration guidance that is stronger than ad-hoc, self-invented settings." },
+      { "text": "Whatever settings the loudest team member prefers", "correct": false, "rationale": "Personal preference is not an authoritative, vetted hardening reference." },
+      { "text": "The vendor's default out-of-box configuration", "correct": false, "rationale": "Vendor defaults are typically insecure and are what hardening is meant to correct, not a secure reference." },
+      { "text": "A random configuration copied from a public forum post", "correct": false, "rationale": "Unvetted forum configurations lack authority and may introduce insecure or incorrect settings." }
+    ]
+  },
+  {
+    "id": "d7-t3-b9",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Deprovisioning",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "As part of the configuration lifecycle, a server is being retired. From a security perspective, what is MOST important during deprovisioning?",
+    "options": [
+      { "text": "Securely sanitize its storage and remove it from the inventory before disposal", "correct": true, "rationale": "Sanitizing media prevents data remanence exposure and updating inventory keeps the CMDB accurate as the system leaves the lifecycle." },
+      { "text": "Leave the system powered on in case it is needed later", "correct": false, "rationale": "Leaving a retired system running maintains attack surface and does not securely close out the asset." },
+      { "text": "Simply unplug it and leave the disks intact in storage", "correct": false, "rationale": "Intact disks risk data remanence if the media is later reused or stolen; sanitization is required." },
+      { "text": "Delete the inventory record but keep the disk untouched", "correct": false, "rationale": "Removing the record without sanitizing leaves sensitive data recoverable and the disposal untracked." }
+    ]
+  },
+  {
+    "id": "d7-t3-b10",
+    "domainId": "d7",
+    "topicId": "d7-t3",
+    "subtopicTag": "Foundation for Security",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Why does CISSP treat a well-maintained configuration baseline as foundational to operational security?",
+    "options": [
+      { "text": "Because you cannot reliably secure, patch, or audit systems whose actual state you do not accurately know", "correct": true, "rationale": "An authoritative baseline provides the known state on which patching, auditing, and anomaly detection all depend." },
+      { "text": "Because baselines eliminate the need for any firewalls", "correct": false, "rationale": "Baselines complement, but do not replace, network controls like firewalls." },
+      { "text": "Because a baseline guarantees no vulnerabilities will ever exist", "correct": false, "rationale": "Baselines reduce and standardize risk but cannot guarantee the absence of all vulnerabilities." },
+      { "text": "Because baselines make user training unnecessary", "correct": false, "rationale": "Configuration baselines address system state, not the human factors that training covers." }
+    ]
+  }
+]

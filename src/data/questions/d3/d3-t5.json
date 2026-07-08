@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t5-a1",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Inference Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A user with access to unclassified salary ranges and department sizes deduces an individual executive's confidential salary. This is MOST accurately which database threat?",
+    "options": [
+      { "text": "Inference", "correct": true, "rationale": "Deducing sensitive information from data one is authorized to see is inference." },
+      { "text": "Polyinstantiation", "correct": false, "rationale": "Polyinstantiation is a mitigation technique, not an attack." },
+      { "text": "Normalization", "correct": false, "rationale": "Normalization is a database design process, not a confidentiality threat." },
+      { "text": "Sharding", "correct": false, "rationale": "Sharding partitions data for scale; it is not the act of deducing sensitive facts." }
+    ]
+  },
+  {
+    "id": "d3-t5-a2",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Aggregation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An analyst combines many individually non-sensitive records to assemble a sensitive overall picture (e.g., troop movements from separate logistics facts). This is MOST accurately which database threat?",
+    "options": [
+      { "text": "Aggregation", "correct": true, "rationale": "Aggregation is combining lower-sensitivity items to derive higher-sensitivity information." },
+      { "text": "Inference", "correct": false, "rationale": "Inference deduces facts logically; aggregation specifically assembles pieces into a sensitive whole (a subtle but tested distinction)." },
+      { "text": "Polyinstantiation", "correct": false, "rationale": "Polyinstantiation is a defensive technique, not this threat." },
+      { "text": "Encryption", "correct": false, "rationale": "Encryption is a control, not a description of assembling data into sensitive information." }
+    ]
+  },
+  {
+    "id": "d3-t5-a3",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Polyinstantiation Mitigation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To prevent lower-cleared users from inferring the existence of classified records, a multilevel database stores different versions of a record at different classifications. This mitigation is BEST called what?",
+    "options": [
+      { "text": "Polyinstantiation", "correct": true, "rationale": "Polyinstantiation maintains multiple record versions per classification level so lower-level users cannot infer higher-level data." },
+      { "text": "Aggregation", "correct": false, "rationale": "Aggregation is a threat of combining data, not a mitigation." },
+      { "text": "Inference", "correct": false, "rationale": "Inference is the threat being mitigated, not the mitigation." },
+      { "text": "Denormalization", "correct": false, "rationale": "Denormalization is a performance/design choice, not a multilevel security control." }
+    ]
+  },
+  {
+    "id": "d3-t5-a4",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Legacy ICS Mitigation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A factory's SCADA controllers run a legacy OS the vendor no longer patches, but they control critical physical machinery and cannot be replaced soon. What is the BEST mitigation?",
+    "options": [
+      { "text": "Isolate/segment the SCADA network from other networks and tightly restrict and monitor access", "correct": true, "rationale": "When patching is impossible, network segmentation/isolation and strict monitored access reduce exposure of the unpatchable ICS." },
+      { "text": "Connect the SCADA systems directly to the internet for remote management", "correct": false, "rationale": "Direct internet exposure of unpatched ICS is extremely dangerous." },
+      { "text": "Ignore the risk because they are 'just machines'", "correct": false, "rationale": "ICS compromise can cause physical harm; the risk cannot be ignored." },
+      { "text": "Assume the vendor will eventually patch", "correct": false, "rationale": "Relying on a patch that will not come leaves the systems exposed indefinitely." }
+    ]
+  },
+  {
+    "id": "d3-t5-a5",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "IoT Default Credentials",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company deploys hundreds of IoT sensors that ship with a common default password. What should be done FIRST to reduce risk?",
+    "options": [
+      { "text": "Change the default credentials on every device before deployment", "correct": true, "rationale": "Default credentials on IoT devices are a top attack vector; changing them first is a critical hardening step." },
+      { "text": "Leave defaults so support can log in easily", "correct": false, "rationale": "Leaving default passwords is exactly the weakness attackers exploit." },
+      { "text": "Publish the default password internally", "correct": false, "rationale": "Publishing credentials broadens exposure." },
+      { "text": "Connect all sensors directly to the public internet", "correct": false, "rationale": "Public exposure of weakly secured IoT devices dramatically increases risk." }
+    ]
+  },
+  {
+    "id": "d3-t5-a6",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Cloud Shared Responsibility",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company assumes that moving to a managed cloud service means the provider secures everything, including the company's data configuration. Which statement is MOST accurate?",
+    "options": [
+      { "text": "Under the shared responsibility model, the customer remains responsible for securing its data and configurations", "correct": true, "rationale": "Cloud security is shared; the customer must still protect its data, access, and configuration even on managed platforms." },
+      { "text": "The provider is responsible for absolutely everything", "correct": false, "rationale": "The shared responsibility model leaves data/configuration duties with the customer." },
+      { "text": "Security is no longer needed after cloud migration", "correct": false, "rationale": "Migration does not eliminate the customer's security obligations." },
+      { "text": "The customer has no security responsibilities at all", "correct": false, "rationale": "Customers retain significant responsibilities for their own data and settings." }
+    ]
+  },
+  {
+    "id": "d3-t5-a7",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Database View Control",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To limit which columns and rows a user can see in a sensitive database, which control is BEST?",
+    "options": [
+      { "text": "Database views combined with access controls restricting the user to authorized data", "correct": true, "rationale": "Views plus access controls expose only the data a user is authorized to see, reducing inference/aggregation risk." },
+      { "text": "Granting all users full table access", "correct": false, "rationale": "Full access removes restrictions and increases inference/aggregation exposure." },
+      { "text": "Disabling authentication", "correct": false, "rationale": "Removing authentication lets anyone access the data." },
+      { "text": "Publishing the entire table publicly", "correct": false, "rationale": "Public exposure of a sensitive table is a breach, not a control." }
+    ]
+  },
+  {
+    "id": "d3-t5-a8",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Client-Side Caching",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A web app leaves sensitive data cached on shared kiosk browsers after logout. Which mitigation MOST directly addresses this client-based weakness?",
+    "options": [
+      { "text": "Prevent caching of sensitive content and clear session data on logout", "correct": true, "rationale": "Disabling caching of sensitive pages and clearing data at logout stops the next kiosk user from viewing residual data." },
+      { "text": "Increase the server's RAM", "correct": false, "rationale": "Server memory does not address client-side cached data on the kiosk." },
+      { "text": "Use a brighter kiosk screen", "correct": false, "rationale": "Display brightness has no effect on cached sensitive data." },
+      { "text": "Add more kiosks", "correct": false, "rationale": "More kiosks would multiply, not solve, the caching exposure." }
+    ]
+  },
+  {
+    "id": "d3-t5-a9",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Cyber-Physical Impact",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Why are vulnerabilities in cyber-physical systems (like ICS or medical devices) MOST concerning compared to typical IT systems?",
+    "options": [
+      { "text": "Compromise can cause physical, real-world harm or safety impact, not just data loss", "correct": true, "rationale": "Cyber-physical systems control physical processes, so exploitation can lead to safety and physical consequences beyond data breaches." },
+      { "text": "They are always easier to patch than IT systems", "correct": false, "rationale": "Cyber-physical/ICS systems are often harder, not easier, to patch." },
+      { "text": "They never connect to any network", "correct": false, "rationale": "Many are networked, which contributes to their exposure." },
+      { "text": "They store no data at all", "correct": false, "rationale": "Data is not the point; the concern is physical/safety impact, and they do process data." }
+    ]
+  },
+  {
+    "id": "d3-t5-a10",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Containers Isolation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Compared with full virtual machines, which security consideration is MOST distinctive for containers?",
+    "options": [
+      { "text": "Containers share the host OS kernel, so kernel isolation and image security are key concerns", "correct": true, "rationale": "Because containers share the host kernel, a kernel escape or vulnerable image affects isolation, unlike VMs with separate kernels." },
+      { "text": "Containers each run a fully separate hardware server", "correct": false, "rationale": "Containers do not each get separate hardware; they share the host." },
+      { "text": "Containers cannot run any application", "correct": false, "rationale": "Containers are designed to run applications; that is their purpose." },
+      { "text": "Containers eliminate the need for image scanning", "correct": false, "rationale": "Image scanning is important precisely because vulnerable images undermine container security." }
+    ]
+  },
+  {
+    "id": "d3-t5-b1",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Inference vs Aggregation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST correctly distinguishes inference from aggregation in database security?",
+    "options": [
+      { "text": "Inference deduces sensitive facts from authorized data; aggregation combines many items to reveal a sensitive whole", "correct": true, "rationale": "Inference is logical deduction, while aggregation assembles multiple pieces into sensitive information — the exam tests this nuance." },
+      { "text": "They are identical concepts", "correct": false, "rationale": "They are distinct database threats with different mechanisms." },
+      { "text": "Aggregation is a mitigation for inference", "correct": false, "rationale": "Aggregation is a threat, not a mitigation." },
+      { "text": "Inference only applies to network traffic", "correct": false, "rationale": "Inference is a database/confidentiality concern, not limited to network traffic." }
+    ]
+  },
+  {
+    "id": "d3-t5-b2",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "IoT Update Weakness",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Beyond weak default credentials, which weakness is MOST characteristic of many IoT devices?",
+    "options": [
+      { "text": "Poor or absent secure update mechanisms, leaving vulnerabilities unpatched", "correct": true, "rationale": "Many IoT devices lack robust update mechanisms, so known vulnerabilities persist unpatched." },
+      { "text": "Excessively strong, unbreakable security by default", "correct": false, "rationale": "IoT devices are generally weakly secured by default, not excessively strong." },
+      { "text": "Too much available memory and CPU", "correct": false, "rationale": "IoT devices are typically resource-constrained, not over-provisioned; and that is not the key security weakness." },
+      { "text": "Guaranteed vendor patching for decades", "correct": false, "rationale": "IoT vendors often provide little or no long-term patching, which is the problem." }
+    ]
+  },
+  {
+    "id": "d3-t5-b3",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Segmentation for Legacy",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A hospital has legacy medical devices that cannot be patched or replaced immediately. What is the BEST compensating control?",
+    "options": [
+      { "text": "Place the devices on an isolated, segmented network with strict access controls and monitoring", "correct": true, "rationale": "Segmentation and monitored, restricted access limit exposure of unpatchable devices, serving as a compensating control." },
+      { "text": "Expose the devices directly to the internet", "correct": false, "rationale": "Internet exposure of unpatchable medical devices is dangerous." },
+      { "text": "Remove all security controls to simplify care", "correct": false, "rationale": "Removing controls increases risk to safety-critical devices." },
+      { "text": "Assume they are safe because they are medical", "correct": false, "rationale": "Being medical does not make them safe; they can be attacked with physical consequences." }
+    ]
+  },
+  {
+    "id": "d3-t5-b4",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Polyinstantiation Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Polyinstantiation in a multilevel secure database refers to which of the following?",
+    "options": [
+      { "text": "Maintaining multiple versions of a record at different classification levels to prevent inference", "correct": true, "rationale": "Polyinstantiation stores level-specific record versions so lower-cleared users cannot infer the existence of higher-classified data." },
+      { "text": "Combining records to reveal sensitive information", "correct": false, "rationale": "That describes aggregation, a threat, not polyinstantiation." },
+      { "text": "Encrypting the entire database with one key", "correct": false, "rationale": "That is encryption, not polyinstantiation." },
+      { "text": "Deleting all classified records", "correct": false, "rationale": "Deletion is not polyinstantiation and would remove needed data." }
+    ]
+  },
+  {
+    "id": "d3-t5-b5",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Cloud Data Location",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A regulated firm moves data to a global cloud provider. Which architectural concern is MOST important to clarify?",
+    "options": [
+      { "text": "Where the data is physically stored/processed and whether that meets data-residency requirements", "correct": true, "rationale": "Cloud multi-region storage can conflict with data-residency/sovereignty laws, so data location must be clarified for compliance." },
+      { "text": "The provider's office snack selection", "correct": false, "rationale": "Snacks are irrelevant to architectural/compliance risk." },
+      { "text": "The color of the provider's dashboard", "correct": false, "rationale": "UI color has no bearing on data residency." },
+      { "text": "The provider's marketing slogans", "correct": false, "rationale": "Marketing is unrelated to where regulated data resides." }
+    ]
+  },
+  {
+    "id": "d3-t5-b6",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Serverless Trust Boundary",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In a serverless (functions-as-a-service) architecture, which security consideration is MOST distinctive compared with traditional servers?",
+    "options": [
+      { "text": "The customer secures code and configuration/permissions while the provider manages the underlying runtime/host", "correct": true, "rationale": "Serverless shifts host management to the provider, so the customer focuses on securing function code, dependencies, and least-privilege permissions." },
+      { "text": "The customer must physically rack the servers", "correct": false, "rationale": "Serverless removes host management from the customer; there is no physical racking to do." },
+      { "text": "Security is entirely irrelevant in serverless", "correct": false, "rationale": "Security remains essential; the responsibilities simply shift." },
+      { "text": "Functions cannot have any permissions", "correct": false, "rationale": "Functions do have permissions/roles, which must be scoped with least privilege." }
+    ]
+  },
+  {
+    "id": "d3-t5-b7",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "SCADA Direct Exposure",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which action is the LEAST appropriate for a critical, unpatchable SCADA environment?",
+    "options": [
+      { "text": "Connecting the SCADA controllers directly to the public internet for convenience", "correct": true, "rationale": "Directly exposing unpatchable ICS to the internet is the least appropriate action, drastically increasing risk of physical-impact compromise." },
+      { "text": "Segmenting the SCADA network from corporate IT", "correct": false, "rationale": "Segmentation is an appropriate, protective control." },
+      { "text": "Monitoring SCADA network traffic for anomalies", "correct": false, "rationale": "Monitoring is appropriate and valuable for detecting attacks." },
+      { "text": "Restricting access to authorized personnel only", "correct": false, "rationale": "Restricting access is an appropriate least-privilege control." }
+    ]
+  },
+  {
+    "id": "d3-t5-b8",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Multitenancy Isolation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "In a multitenant cloud platform, which risk is MOST distinctive and must be mitigated by strong isolation?",
+    "options": [
+      { "text": "One tenant potentially accessing or affecting another tenant's data due to shared infrastructure", "correct": true, "rationale": "Multitenancy shares underlying infrastructure, so weak isolation could let one tenant reach another's data — the core multitenant risk." },
+      { "text": "Tenants running on entirely separate physical planets", "correct": false, "rationale": "Tenants share infrastructure; they are not physically separated in that way." },
+      { "text": "Each tenant automatically getting the others' passwords", "correct": false, "rationale": "Proper isolation prevents credential sharing; this is not an inherent design feature." },
+      { "text": "The impossibility of running more than one tenant", "correct": false, "rationale": "Multitenancy is designed to run many tenants; that is its purpose." }
+    ]
+  },
+  {
+    "id": "d3-t5-b9",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Embedded System Patching",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Embedded systems in field equipment are difficult to update. Which mitigation approach is MOST appropriate given this constraint?",
+    "options": [
+      { "text": "Reduce exposure through network segmentation, hardening, and monitoring since frequent patching is impractical", "correct": true, "rationale": "When patching is hard, minimizing exposure via segmentation/hardening/monitoring is the pragmatic mitigation." },
+      { "text": "Rely solely on frequent over-the-air patches that the devices cannot receive", "correct": false, "rationale": "If the devices cannot be readily patched, relying on frequent patching is unrealistic." },
+      { "text": "Expose them broadly to simplify management", "correct": false, "rationale": "Broad exposure increases risk for hard-to-patch devices." },
+      { "text": "Ignore them because they are small", "correct": false, "rationale": "Size does not reduce risk; embedded devices can be attack entry points." }
+    ]
+  },
+  {
+    "id": "d3-t5-b10",
+    "domainId": "d3",
+    "topicId": "d3-t5",
+    "subtopicTag": "Control Matching",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which control is BEST matched to the architecture weakness it addresses?",
+    "options": [
+      { "text": "Database views/access controls to reduce inference and aggregation risk", "correct": true, "rationale": "Views and access controls limit what data users can see, directly addressing inference/aggregation in databases." },
+      { "text": "Antivirus signatures to fix ICS legacy-patching problems", "correct": false, "rationale": "Antivirus does not resolve unpatchable-ICS risk; segmentation/isolation does." },
+      { "text": "A brighter monitor to prevent IoT default-credential abuse", "correct": false, "rationale": "Display brightness has nothing to do with IoT credentials." },
+      { "text": "More RAM to fix cloud shared-responsibility gaps", "correct": false, "rationale": "Adding RAM does not address responsibility/configuration gaps in the cloud." }
+    ]
+  }
+]

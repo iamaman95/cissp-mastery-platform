@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t6-a1",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "AES Key Lengths",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "AES supports which of the following key lengths?",
+    "options": [
+      { "text": "128, 192, and 256 bits", "correct": true, "rationale": "AES is defined for 128-, 192-, and 256-bit keys, all operating on a 128-bit block." },
+      { "text": "40, 56, and 64 bits", "correct": false, "rationale": "These are legacy/weak lengths (e.g., DES-era); AES uses 128/192/256-bit keys." },
+      { "text": "512, 1024, and 2048 bits", "correct": false, "rationale": "These sizes describe asymmetric (RSA) keys, not AES symmetric keys." },
+      { "text": "8 and 16 bits only", "correct": false, "rationale": "Such tiny keys would be trivially broken and are not AES key sizes." }
+    ]
+  },
+  {
+    "id": "d3-t6-a2",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Symmetric Speed Advantage",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A team must encrypt terabytes of nightly backups efficiently. Which type of encryption is BEST suited for this bulk workload?",
+    "options": [
+      { "text": "Symmetric encryption (e.g., AES)", "correct": true, "rationale": "Symmetric algorithms like AES are fast and efficient, making them ideal for encrypting large volumes of data." },
+      { "text": "Asymmetric encryption (e.g., RSA) for all the data", "correct": false, "rationale": "Asymmetric encryption is far too slow for bulk data; it is used for small payloads like key exchange." },
+      { "text": "Hashing the backups", "correct": false, "rationale": "Hashing is one-way and does not encrypt data for later decryption." },
+      { "text": "Base64 encoding", "correct": false, "rationale": "Base64 is encoding, not encryption, and provides no confidentiality." }
+    ]
+  },
+  {
+    "id": "d3-t6-a3",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Key Distribution Problem",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "What is the MOST significant challenge inherent to symmetric encryption?",
+    "options": [
+      { "text": "Securely distributing the shared secret key to both parties", "correct": true, "rationale": "Symmetric encryption's core challenge is getting the same secret key securely to both parties without interception." },
+      { "text": "That it is too slow for any practical use", "correct": false, "rationale": "Symmetric encryption is fast; speed is its advantage, not its challenge." },
+      { "text": "That it cannot encrypt data at all", "correct": false, "rationale": "Symmetric encryption absolutely encrypts data; that is its purpose." },
+      { "text": "That it requires no keys", "correct": false, "rationale": "Symmetric encryption requires a shared key; the challenge is distributing it." }
+    ]
+  },
+  {
+    "id": "d3-t6-a4",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Key Count Formula",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "For 10 people to communicate pairwise using symmetric encryption, how many unique keys are required?",
+    "options": [
+      { "text": "45", "correct": true, "rationale": "Using n(n-1)/2 = 10×9/2 = 45 unique keys are needed for pairwise symmetric communication among 10 people." },
+      { "text": "10", "correct": false, "rationale": "10 would be one key per person, which does not account for unique pairwise keys." },
+      { "text": "20", "correct": false, "rationale": "This corresponds to 2n (asymmetric pairs), not the symmetric pairwise count." },
+      { "text": "100", "correct": false, "rationale": "100 is n², which double-counts pairs; the correct formula is n(n-1)/2." }
+    ]
+  },
+  {
+    "id": "d3-t6-a5",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "DES Insecurity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An auditor finds a legacy system still using single DES. Why is this MOST concerning?",
+    "options": [
+      { "text": "DES's 56-bit key is too short and can be brute-forced with modern computing", "correct": true, "rationale": "DES's 56-bit key space is small enough to be brute-forced quickly today, making it insecure." },
+      { "text": "DES is an asymmetric algorithm and cannot encrypt data", "correct": false, "rationale": "DES is a symmetric block cipher that does encrypt data; the issue is its short key." },
+      { "text": "DES has a 4096-bit key that is too large to manage", "correct": false, "rationale": "DES uses a 56-bit key, not a 4096-bit key; the problem is that it is too small, not too large." },
+      { "text": "DES cannot be implemented in software", "correct": false, "rationale": "DES is readily implemented in software; the concern is its cryptographic weakness." }
+    ]
+  },
+  {
+    "id": "d3-t6-a6",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "ECB Mode Weakness",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An engineer encrypts an image with AES in ECB mode and is surprised the outline of the image is still visible in the ciphertext. What is the MOST accurate explanation?",
+    "options": [
+      { "text": "ECB encrypts identical plaintext blocks to identical ciphertext blocks, leaking patterns", "correct": true, "rationale": "ECB mode lacks diffusion across blocks, so repeating plaintext produces repeating ciphertext, revealing structure — which is why ECB is insecure." },
+      { "text": "AES is fundamentally broken", "correct": false, "rationale": "AES itself is secure; the problem is the insecure ECB mode of operation, not the cipher." },
+      { "text": "The image was not actually encrypted", "correct": false, "rationale": "It was encrypted, but ECB's pattern leakage revealed structure; the encryption did occur." },
+      { "text": "ECB uses a 4-bit key", "correct": false, "rationale": "ECB is a mode, not a key length; its weakness is pattern leakage, unrelated to a tiny key." }
+    ]
+  },
+  {
+    "id": "d3-t6-a7",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Symmetric and Non-repudiation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two parties share one symmetric key. One later claims the other forged a message. Why can symmetric encryption alone NOT resolve this dispute?",
+    "options": [
+      { "text": "Because both parties hold the same key, either could have produced the message — so it provides no non-repudiation", "correct": true, "rationale": "A shared symmetric key means neither party can prove the other created a message; non-repudiation requires asymmetric signatures where only one party holds the private key." },
+      { "text": "Because symmetric encryption is one-way like hashing", "correct": false, "rationale": "Symmetric encryption is reversible, not one-way; the issue is the shared key, not one-wayness." },
+      { "text": "Because symmetric keys are always public", "correct": false, "rationale": "Symmetric keys are secret, not public; the problem is that both parties share the same secret." },
+      { "text": "Because AES cannot encrypt text messages", "correct": false, "rationale": "AES readily encrypts messages; the limitation is about proving authorship, not capability." }
+    ]
+  },
+  {
+    "id": "d3-t6-a8",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Block vs Stream Cipher",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A protocol needs to encrypt a continuous real-time audio stream with minimal buffering. Which cipher type is MOST naturally suited?",
+    "options": [
+      { "text": "A stream cipher (e.g., ChaCha20)", "correct": true, "rationale": "Stream ciphers encrypt data bit/byte at a time, fitting continuous real-time streams without waiting to fill blocks." },
+      { "text": "An asymmetric cipher like RSA for the whole stream", "correct": false, "rationale": "RSA is too slow and unsuited for continuous bulk streaming." },
+      { "text": "A hash function", "correct": false, "rationale": "Hashing does not encrypt; it cannot protect the stream's confidentiality." },
+      { "text": "ECB-mode block encryption specifically for its pattern leakage", "correct": false, "rationale": "ECB's pattern leakage is a weakness, not a benefit, and block-by-block buffering is less natural for streams." }
+    ]
+  },
+  {
+    "id": "d3-t6-a9",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Authenticated Encryption",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A designer wants a symmetric mode that provides both confidentiality and integrity/authentication in one operation. Which is the BEST choice?",
+    "options": [
+      { "text": "AES-GCM (an authenticated encryption mode)", "correct": true, "rationale": "GCM provides authenticated encryption — confidentiality plus integrity/authentication — in a single mode." },
+      { "text": "AES-ECB", "correct": false, "rationale": "ECB provides neither integrity nor good confidentiality (it leaks patterns)." },
+      { "text": "Plain CBC with no MAC", "correct": false, "rationale": "CBC alone provides confidentiality but not integrity/authentication without an added MAC." },
+      { "text": "RC4 stream cipher", "correct": false, "rationale": "RC4 is insecure and does not provide built-in authentication." }
+    ]
+  },
+  {
+    "id": "d3-t6-a10",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Hybrid Cryptosystem",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "TLS encrypts the bulk of a session with a symmetric key but uses asymmetric crypto during the handshake. Why is this hybrid approach BEST?",
+    "options": [
+      { "text": "Asymmetric solves key distribution while symmetric provides fast bulk encryption — combining each one's strength", "correct": true, "rationale": "The hybrid model uses asymmetric crypto to securely exchange a symmetric session key, then symmetric crypto for speed on the bulk data." },
+      { "text": "Because asymmetric encryption is faster than symmetric for bulk data", "correct": false, "rationale": "Asymmetric is slower, not faster, for bulk data; symmetric handles the bulk precisely because it is fast." },
+      { "text": "Because symmetric keys never need to be exchanged", "correct": false, "rationale": "The symmetric session key does need to be exchanged — that is exactly what the asymmetric handshake accomplishes." },
+      { "text": "Because hashing replaces both", "correct": false, "rationale": "Hashing does not encrypt and cannot replace the encryption roles here." }
+    ]
+  },
+  {
+    "id": "d3-t6-b1",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "AES Block Size",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "What is the block size of the AES algorithm?",
+    "options": [
+      { "text": "128 bits", "correct": true, "rationale": "AES has a fixed 128-bit block size regardless of whether the key is 128, 192, or 256 bits." },
+      { "text": "56 bits", "correct": false, "rationale": "56 bits is DES's key length, not AES's block size." },
+      { "text": "256 bits", "correct": false, "rationale": "256 bits is one of AES's key options, not its block size, which is fixed at 128 bits." },
+      { "text": "2048 bits", "correct": false, "rationale": "2048 bits is a typical RSA key size, unrelated to AES's block size." }
+    ]
+  },
+  {
+    "id": "d3-t6-b2",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Symmetric Provides Confidentiality",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Symmetric encryption of stored files PRIMARILY provides which security service?",
+    "options": [
+      { "text": "Confidentiality", "correct": true, "rationale": "Encrypting data with a symmetric key primarily protects its confidentiality by making it unreadable without the key." },
+      { "text": "Availability", "correct": false, "rationale": "Encryption does not increase availability; it protects secrecy." },
+      { "text": "Non-repudiation", "correct": false, "rationale": "Symmetric encryption does not provide non-repudiation because both parties share the key." },
+      { "text": "Physical safety", "correct": false, "rationale": "Encryption is a logical control unrelated to physical safety." }
+    ]
+  },
+  {
+    "id": "d3-t6-b3",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "3DES Status",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A team proposes using 3DES for a new system. What is the MOST appropriate guidance?",
+    "options": [
+      { "text": "Avoid 3DES for new systems; it is deprecated — use AES instead", "correct": true, "rationale": "3DES is deprecated due to performance and security concerns; AES is the recommended modern symmetric standard." },
+      { "text": "3DES is the strongest available cipher and should always be preferred", "correct": false, "rationale": "3DES is not the strongest; it is deprecated, and AES is preferred." },
+      { "text": "3DES is asymmetric and solves key distribution", "correct": false, "rationale": "3DES is symmetric and does not solve key distribution." },
+      { "text": "3DES requires no key at all", "correct": false, "rationale": "3DES uses symmetric keys; it does not operate keyless." }
+    ]
+  },
+  {
+    "id": "d3-t6-b4",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Key Length vs Strength",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "All else equal, why is AES-256 generally considered to offer more brute-force resistance than AES-128?",
+    "options": [
+      { "text": "A larger key space (2^256 vs 2^128) requires vastly more effort to exhaustively search", "correct": true, "rationale": "More key bits exponentially enlarge the key space, making brute-force search dramatically harder for AES-256." },
+      { "text": "AES-256 uses a larger block size than AES-128", "correct": false, "rationale": "Both use a 128-bit block; only the key length differs." },
+      { "text": "AES-256 is asymmetric while AES-128 is symmetric", "correct": false, "rationale": "Both are symmetric; the difference is key length, not cipher family." },
+      { "text": "AES-256 does not require a key", "correct": false, "rationale": "AES-256 uses a 256-bit key; it is not keyless." }
+    ]
+  },
+  {
+    "id": "d3-t6-b5",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "RC4 Insecurity",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A legacy protocol negotiates the RC4 stream cipher. What is the BEST recommendation?",
+    "options": [
+      { "text": "Disable RC4; it has known weaknesses and should no longer be used", "correct": true, "rationale": "RC4 has significant known vulnerabilities and is deprecated; modern ciphers (e.g., AES-GCM, ChaCha20) should replace it." },
+      { "text": "Keep RC4 because stream ciphers are always the most secure", "correct": false, "rationale": "Stream ciphers are not inherently most secure, and RC4 specifically is broken." },
+      { "text": "RC4 is asymmetric and thus safe", "correct": false, "rationale": "RC4 is a symmetric stream cipher, not asymmetric, and it is not safe." },
+      { "text": "Increase RC4's block size to fix it", "correct": false, "rationale": "RC4 is a stream cipher with no block size to adjust; its weaknesses are not fixed that way." }
+    ]
+  },
+  {
+    "id": "d3-t6-b6",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Same Key Both Directions",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In symmetric encryption, the relationship between the encryption key and the decryption key is which of the following?",
+    "options": [
+      { "text": "They are the same (single shared secret key)", "correct": true, "rationale": "Symmetric encryption uses one shared key for both encryption and decryption." },
+      { "text": "They are a public/private pair", "correct": false, "rationale": "Public/private key pairs are a feature of asymmetric encryption, not symmetric." },
+      { "text": "There is no decryption key", "correct": false, "rationale": "Symmetric decryption requires the same key used to encrypt." },
+      { "text": "The decryption key is always public", "correct": false, "rationale": "The symmetric key is secret and shared, never public." }
+    ]
+  },
+  {
+    "id": "d3-t6-b7",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Mode Selection",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "For encrypting structured data where confidentiality matters, which block cipher mode is LEAST appropriate?",
+    "options": [
+      { "text": "ECB", "correct": true, "rationale": "ECB is least appropriate because identical plaintext blocks yield identical ciphertext, leaking patterns in structured data." },
+      { "text": "CBC", "correct": false, "rationale": "CBC chains blocks so identical plaintext does not produce identical ciphertext, making it more appropriate than ECB." },
+      { "text": "CTR", "correct": false, "rationale": "CTR mode avoids ECB's pattern leakage and is appropriate for confidentiality." },
+      { "text": "GCM", "correct": false, "rationale": "GCM provides confidentiality plus integrity and is appropriate, not least appropriate." }
+    ]
+  },
+  {
+    "id": "d3-t6-b8",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Scaling Comparison",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization with thousands of users finds pure symmetric key management unmanageable. Which observation MOST accurately explains why?",
+    "options": [
+      { "text": "Symmetric key count grows as n(n-1)/2, which explodes as user count rises", "correct": true, "rationale": "Pairwise symmetric keys scale quadratically (n(n-1)/2), so thousands of users require an enormous, unmanageable number of keys." },
+      { "text": "Symmetric encryption requires one global public key only", "correct": false, "rationale": "Symmetric encryption uses secret keys, not a global public key, and scales poorly pairwise." },
+      { "text": "Symmetric keys never need to be stored", "correct": false, "rationale": "Symmetric keys must be stored/managed securely, which is part of the burden." },
+      { "text": "Symmetric encryption uses only two keys total for any size org", "correct": false, "rationale": "Pairwise symmetric communication requires many keys, not two." }
+    ]
+  },
+  {
+    "id": "d3-t6-b9",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Confusion and Diffusion",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A cipher designer wants each ciphertext bit to depend on many plaintext and key bits, obscuring statistical relationships. These goals MOST directly correspond to which cryptographic principles?",
+    "options": [
+      { "text": "Confusion and diffusion", "correct": true, "rationale": "Confusion obscures the key-ciphertext relationship and diffusion spreads plaintext influence across the ciphertext — foundational block-cipher design goals." },
+      { "text": "Non-repudiation and availability", "correct": false, "rationale": "These are security services, not cipher-design principles about statistical obscuring." },
+      { "text": "Latency and throughput", "correct": false, "rationale": "These are performance metrics, not cryptographic design principles." },
+      { "text": "Authentication and authorization", "correct": false, "rationale": "These are access-control concepts, not the confusion/diffusion cipher-design principles." }
+    ]
+  },
+  {
+    "id": "d3-t6-b10",
+    "domainId": "d3",
+    "topicId": "d3-t6",
+    "subtopicTag": "Algorithm Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "For a new application requiring a secure, widely vetted symmetric cipher, which is the BEST choice?",
+    "options": [
+      { "text": "AES", "correct": true, "rationale": "AES is the current, widely vetted symmetric standard and the best default choice for new applications." },
+      { "text": "DES", "correct": false, "rationale": "DES is broken due to its 56-bit key and should not be used." },
+      { "text": "RC4", "correct": false, "rationale": "RC4 has known weaknesses and is deprecated." },
+      { "text": "ROT13", "correct": false, "rationale": "ROT13 is a trivial substitution with no security value." }
+    ]
+  }
+]

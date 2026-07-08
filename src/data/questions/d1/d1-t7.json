@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d1-t7-a1",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy vs Procedure",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A document titled 'Data Protection Policy' contains the sentence: 'To classify a new dataset, open the classification tool, select the data owner from the dropdown, choose a sensitivity tier, and submit for approval within 3 business days.' What is the BEST classification of this specific sentence, regardless of the document's title?",
+    "options": [
+      { "text": "Policy statement, because it appears inside a document called a policy", "correct": false, "rationale": "Governance classification is based on content and function, not the document's title — this is the exact trap CISSP tests: a 'policy' document can contain procedure-level content." },
+      { "text": "Procedure, because it provides mandatory, step-by-step instructions for performing a task", "correct": true, "rationale": "The sentence lists sequential, granular steps (open tool, select owner, choose tier, submit) — this is procedural content regardless of where it is physically located in the document set." },
+      { "text": "Guideline, because it describes a recommended best practice", "correct": false, "rationale": "The language ('within 3 business days,' explicit steps) is mandatory and directive, not discretionary advice, so it does not fit the guideline definition." },
+      { "text": "Baseline, because it defines a minimum configuration", "correct": false, "rationale": "A baseline defines a minimum security configuration for a system, not a workflow for classifying data; this sentence describes a process, not a configuration floor." }
+    ]
+  },
+  {
+    "id": "d1-t7-a2",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Standards",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization's policy states that 'all remote access must be strongly authenticated.' A separate document then states: 'Remote access MFA must use FIDO2 hardware tokens or TOTP with a minimum 8-digit code; SMS-based OTP is prohibited.' Which type of document does the second statement MOST closely represent?",
+    "options": [
+      { "text": "A guideline, since it offers advice on authentication options", "correct": false, "rationale": "The statement uses mandatory language ('must use,' 'is prohibited') and names specific approved/disallowed technologies, which is not discretionary advice." },
+      { "text": "A standard, since it mandates a specific, uniform technical requirement that fulfills the policy's intent", "correct": true, "rationale": "This is a textbook standard: it takes the policy's general intent (strong authentication) and mandates specific, uniform technologies and parameters organization-wide." },
+      { "text": "A procedure, since it lists sequential steps for logging in remotely", "correct": false, "rationale": "The statement specifies which authentication technologies are approved, not the step-by-step actions a user takes to log in — that would be a procedure." },
+      { "text": "A policy, since it expresses senior management's overall security intent", "correct": false, "rationale": "The overall strategic intent ('strongly authenticated') was already stated in the policy; this second statement is the specific, mandatory implementation detail beneath it." }
+    ]
+  },
+  {
+    "id": "d1-t7-a3",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Guidelines",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following BEST describes the nature of a security guideline?",
+    "options": [
+      { "text": "A mandatory, enforceable rule with disciplinary consequences for noncompliance", "correct": false, "rationale": "This describes a policy, standard, or procedure, all of which are mandatory; guidelines are not enforced this way." },
+      { "text": "A discretionary, recommended practice offered as advice when no single mandatory approach is required", "correct": true, "rationale": "This is the standard CISSP definition of a guideline — advisory in nature, not compulsory." },
+      { "text": "A minimum required configuration that every system of a given type must meet", "correct": false, "rationale": "This describes a baseline, which is mandatory, not a guideline." },
+      { "text": "A step-by-step set of instructions that must be followed exactly to comply with policy", "correct": false, "rationale": "This describes a procedure, which is mandatory and detailed, unlike a discretionary guideline." }
+    ]
+  },
+  {
+    "id": "d1-t7-a4",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Governance hierarchy",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A newly hired CISO discovers that the organization has detailed, well-written procedures for patch management and account provisioning, but no formally approved security policy exists anywhere. What should the CISO identify FIRST as the governance gap?",
+    "options": [
+      { "text": "The procedures lack an underlying, senior-management-approved policy that gives them organizational authority and justifies their existence", "correct": true, "rationale": "Procedures exist to implement policy; without an approved policy stating management's intent, procedures have no formal authority to compel compliance and may not align with actual risk appetite." },
+      { "text": "The procedures are too detailed and should be simplified into guidelines", "correct": false, "rationale": "Detail level is not the identified problem; the issue is the missing foundational policy, not that procedures are over-specified." },
+      { "text": "The organization needs more guidelines rather than procedures", "correct": false, "rationale": "Guidelines are discretionary and would not solve the core problem of missing mandatory, management-endorsed direction." },
+      { "text": "The procedures should be deleted since no policy exists", "correct": false, "rationale": "Deleting functioning procedures is not the appropriate response; the correct fix is to establish the missing policy above them, not discard the procedures." }
+    ]
+  },
+  {
+    "id": "d1-t7-a5",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Baselines",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "The security team requires that every Linux server, regardless of function, be hardened to at minimum the CIS Benchmark Level 1 configuration before being placed into production. Which term BEST describes this requirement?",
+    "options": [
+      { "text": "Guideline, because CIS Benchmarks are optional recommendations", "correct": false, "rationale": "The scenario explicitly states this is a requirement ('must... at minimum'), not an optional recommendation, so it is not a guideline in this context." },
+      { "text": "Baseline, because it defines a mandatory minimum security configuration that every system of a given type must meet", "correct": true, "rationale": "A baseline is precisely a mandatory minimum configuration floor applied uniformly to a class of systems, which matches 'every Linux server... at minimum.'" },
+      { "text": "Policy, because it expresses overall management intent", "correct": false, "rationale": "This statement is a specific, technical configuration floor, not a high-level statement of intent; the policy would be a higher-level statement like 'all servers must be hardened.'" },
+      { "text": "Procedure, because it describes the exact commands to harden a server", "correct": false, "rationale": "No step-by-step commands are described here; only the required minimum standard/configuration level is specified." }
+    ]
+  },
+  {
+    "id": "d1-t7-a6",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Approval authority",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "The IT department, without executive sign-off, publishes and begins enforcing a 'password policy' on its own initiative. Employees who violate it are not consistently disciplined because HR and legal were never consulted. What is the PRIMARY governance weakness in this situation?",
+    "options": [
+      { "text": "The policy is too technical for employees to understand", "correct": false, "rationale": "Technical clarity is not the issue described; the described problem is inconsistent enforcement due to lack of formal authority, not comprehension." },
+      { "text": "The policy lacks senior management approval and cross-functional buy-in, undermining its organizational authority and enforceability", "correct": true, "rationale": "A policy derives its authority from formal executive sponsorship; without it, disciplinary action is inconsistent and legally unsupported, exactly as described." },
+      { "text": "The policy should have been written as a guideline instead", "correct": false, "rationale": "Downgrading to a guideline would not fix the problem; a password policy is appropriately mandatory, so the fix is proper approval, not reclassification." },
+      { "text": "The policy needs more technical detail on encryption algorithms", "correct": false, "rationale": "Encryption algorithm detail is unrelated to the described enforcement and authority problem." }
+    ]
+  },
+  {
+    "id": "d1-t7-a7",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Guidelines vs Standards",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A security awareness document states: 'Users are encouraged, but not required, to enable a password manager's auto-generated passphrase feature, as it tends to produce stronger, easier-to-remember credentials than manually chosen ones.' Which document type would this statement be LEAST likely to belong to?",
+    "options": [
+      { "text": "Guideline", "correct": false, "rationale": "The advisory, non-mandatory ('encouraged, but not required') language is a textbook fit for a guideline, so it is highly likely, not unlikely, to belong here." },
+      { "text": "Standard", "correct": true, "rationale": "A standard is mandatory and specifies a uniform required technology or configuration; language explicitly stating something is optional and merely encouraged directly contradicts the compulsory nature of a standard, making this the least likely fit." },
+      { "text": "Security awareness training material", "correct": false, "rationale": "Advisory tips like this are commonly included in awareness training content, making it a reasonably likely home for this statement." },
+      { "text": "An appendix of best-practice recommendations attached to a policy", "correct": false, "rationale": "Optional best-practice recommendations are frequently attached as supplementary guidance to policies, so this is a plausible location." }
+    ]
+  },
+  {
+    "id": "d1-t7-a8",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy review cycle",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization's acceptable use policy was last reviewed six years ago and still references a since-deprecated VPN client and an outdated regulatory citation. What is the BEST recommendation for this finding?",
+    "options": [
+      { "text": "Leave the policy as-is since policies rarely need to change once approved", "correct": false, "rationale": "This contradicts the CISSP expectation that governance documents require periodic review to remain aligned with current technology, risk, and regulation." },
+      { "text": "Establish and follow a periodic review cycle to update the policy for current technology, risk appetite, and regulatory requirements", "correct": true, "rationale": "Policies, standards, and procedures must be reviewed and updated on a defined cadence to remain accurate and enforceable as the environment and regulatory landscape change." },
+      { "text": "Delete the outdated policy entirely and rely solely on procedures going forward", "correct": false, "rationale": "Removing the foundational policy would eliminate the mandatory intent statement that procedures depend on for authority; the correct fix is updating, not eliminating, the policy." },
+      { "text": "Convert the policy into a guideline so it no longer requires maintenance", "correct": false, "rationale": "Downgrading to a discretionary guideline does not solve the underlying currency problem and inappropriately weakens what should remain a mandatory control area." }
+    ]
+  },
+  {
+    "id": "d1-t7-a9",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Procedures",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which of the following best characterizes a security procedure?",
+    "options": [
+      { "text": "A high-level statement of why security matters to the organization", "correct": false, "rationale": "This describes a policy's purpose, not a procedure." },
+      { "text": "A discretionary recommendation for handling ambiguous situations", "correct": false, "rationale": "This describes a guideline, which is discretionary, whereas a procedure is mandatory." },
+      { "text": "A detailed, mandatory, step-by-step set of instructions for performing a specific security-related task", "correct": true, "rationale": "This is the standard definition of a procedure — granular, sequential, and mandatory." },
+      { "text": "A minimum configuration benchmark applied uniformly across a system type", "correct": false, "rationale": "This describes a baseline, not a procedure." }
+    ]
+  },
+  {
+    "id": "d1-t7-a10",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy vs Standard",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company's Information Security Policy reads: 'The organization shall maintain the confidentiality, integrity, and availability of information assets in a manner commensurate with risk, and shall comply with applicable law and regulation.' An auditor notes this language is vague and asks what document should exist beneath it to make it actionable. What is the BEST answer?",
+    "options": [
+      { "text": "Nothing further is needed; the policy is sufficient on its own", "correct": false, "rationale": "A policy is intentionally high-level and strategic; without more specific supporting documents, staff have no concrete, uniform requirements to follow, which is exactly the gap the auditor is pointing out." },
+      { "text": "Standards and procedures that translate the policy's intent into specific, mandatory requirements and step-by-step tasks", "correct": true, "rationale": "This is the correct governance flow: a high-level policy is operationalized through mandatory standards (specific requirements) and procedures (specific tasks), which is what the vague policy is missing." },
+      { "text": "Only guidelines, since the policy is already mandatory and doesn't need further mandatory support", "correct": false, "rationale": "Guidelines alone would not make the policy enforceable in a consistent, uniform way, since guidelines are discretionary rather than mandatory." },
+      { "text": "A press release communicating the policy to customers", "correct": false, "rationale": "External communication does not address the internal governance gap between a high-level policy and actionable, mandatory implementation requirements." }
+    ]
+  },
+  {
+    "id": "d1-t7-b1",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy vs Procedure",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A document titled 'Incident Response Procedure' opens with the sentence: 'The organization is committed to protecting its information assets and will respond promptly and effectively to any security incident.' What is the BEST classification of this opening sentence, independent of the document's title?",
+    "options": [
+      { "text": "Procedure, because it appears in a document labeled 'Procedure'", "correct": false, "rationale": "A document's title does not determine the classification of its content; this sentence must be judged on its own characteristics, not the file name." },
+      { "text": "Policy statement, because it expresses high-level management intent rather than specific steps", "correct": true, "rationale": "The sentence is a general commitment/intent statement with no specific steps or technical detail — the hallmark of policy-level content, regardless of which document it physically resides in." },
+      { "text": "Guideline, because commitment language is always discretionary", "correct": false, "rationale": "The language ('is committed to,' 'will respond') expresses organizational intent and expectation, not optional advice, so it is not a guideline." },
+      { "text": "Baseline, because it sets a minimum standard for incident response speed", "correct": false, "rationale": "No specific, measurable minimum (e.g., response time SLA) is defined here; this is a general intent statement, not a configuration or performance floor." }
+    ]
+  },
+  {
+    "id": "d1-t7-b2",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Standards",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Beneath a policy stating 'all laptops must be protected against unauthorized data access if lost or stolen,' a follow-on document states: 'All company laptops must use BitLocker with a 256-bit AES key and TPM-backed key storage; no exceptions without CISO written approval.' Which document type does this MOST closely represent?",
+    "options": [
+      { "text": "Guideline, since it recommends a specific encryption tool", "correct": false, "rationale": "The mandatory phrasing ('must use,' 'no exceptions without... approval') rules out a guideline, which would be advisory rather than compulsory." },
+      { "text": "Standard, since it mandates a specific, uniform technical control that operationalizes the policy's intent", "correct": true, "rationale": "This document takes the policy's general goal (protect lost/stolen laptop data) and mandates a specific, uniform technology and configuration — the defining characteristic of a standard." },
+      { "text": "Procedure, since it lists the exact click-by-click steps to enable BitLocker", "correct": false, "rationale": "No sequential setup steps are given; only the required technology and key parameters are specified, which is standard-level, not procedure-level, content." },
+      { "text": "Policy, since it states the organization's overall security philosophy", "correct": false, "rationale": "The overall philosophy was already established in the referenced policy; this document is the specific mandatory requirement beneath it." }
+    ]
+  },
+  {
+    "id": "d1-t7-b3",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Guidelines",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which characteristic distinguishes a guideline from a policy, standard, or procedure?",
+    "options": [
+      { "text": "A guideline is discretionary and advisory rather than mandatory and enforced", "correct": true, "rationale": "This is the defining distinction: policies, standards, and procedures are all mandatory, while a guideline is recommended but not compulsory." },
+      { "text": "A guideline always contains more technical detail than a procedure", "correct": false, "rationale": "Guidelines are not defined by having more technical detail; procedures are typically the most granular, step-by-step documents." },
+      { "text": "A guideline must be approved by senior management before publication", "correct": false, "rationale": "While good governance practice may still involve review, the defining trait tested on the exam is that guidelines are non-mandatory, not a stricter approval requirement." },
+      { "text": "A guideline replaces the need for a policy", "correct": false, "rationale": "Guidelines supplement, rather than replace, the mandatory governance documents like policy." }
+    ]
+  },
+  {
+    "id": "d1-t7-b4",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Governance hierarchy",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A security architect is asked to design a set of governance documents for a new cloud data classification program from scratch. What should be drafted and approved FIRST, before standards or procedures are written?",
+    "options": [
+      { "text": "The detailed step-by-step tagging procedure for engineers", "correct": false, "rationale": "Procedures implement policy and standards; writing procedures before the governing policy exists leaves them without a foundation or mandate to follow." },
+      { "text": "A senior-management-approved policy establishing the organization's intent and requirement to classify and protect cloud data", "correct": true, "rationale": "Governance flows top-down: the policy establishing management's mandatory intent must exist first, so that standards and procedures beneath it have proper authority and direction." },
+      { "text": "A set of optional guidelines for classifying edge-case data", "correct": false, "rationale": "Guidelines are supplementary and discretionary; they should not be the starting point of a governance framework that needs mandatory direction first." },
+      { "text": "A vendor-specific configuration baseline for the cloud storage platform", "correct": false, "rationale": "A baseline is a mandatory technical floor that should be derived from an established policy/standard, not created before the governing policy exists." }
+    ]
+  },
+  {
+    "id": "d1-t7-b5",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Baselines",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Security requires that every externally facing web server, regardless of application, be configured to disable TLS 1.0/1.1, enforce HSTS, and expose only ports 443 and 80 redirecting to 443. Which term BEST fits this requirement?",
+    "options": [
+      { "text": "Baseline, because it establishes a mandatory minimum secure configuration applied uniformly to a class of systems", "correct": true, "rationale": "This is a configuration floor applied to every system of a given type (externally facing web servers) — the defining trait of a baseline." },
+      { "text": "Guideline, because TLS configuration is a matter of preference", "correct": false, "rationale": "The requirement is stated as mandatory ('every... server... be configured'), not as optional preference, which rules out a guideline." },
+      { "text": "Policy, because it reflects the organization's overall risk philosophy", "correct": false, "rationale": "This statement is a specific technical configuration requirement, not a high-level statement of intent; the policy would be the broader statement that data in transit must be protected." },
+      { "text": "Procedure, because it lists commands to configure the web server software", "correct": false, "rationale": "No sequential configuration commands are provided; only the required end-state configuration is specified, which is baseline-level, not procedure-level, content." }
+    ]
+  },
+  {
+    "id": "d1-t7-b6",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Approval authority",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A regional office independently drafts and enforces its own data retention rules that conflict with the corporate-approved retention policy, citing local preference. Legal later discovers the discrepancy during a litigation hold. What is the PRIMARY governance failure illustrated here?",
+    "options": [
+      { "text": "The regional office's rules were written in a different language than the corporate policy", "correct": false, "rationale": "Language is not the issue described; the issue is a conflicting, unauthorized local policy undermining centralized governance authority." },
+      { "text": "A subordinate unit created and enforced governance documents that conflict with, and were not authorized to override, the properly approved corporate policy", "correct": true, "rationale": "Effective governance requires that policy originate from and be sanctioned by proper organizational authority; a regional office unilaterally overriding an approved corporate policy creates legal and compliance exposure, exactly as demonstrated by the litigation hold conflict." },
+      { "text": "The corporate policy should have been written as a guideline to allow regional flexibility", "correct": false, "rationale": "Data retention obligations tied to legal/regulatory requirements are appropriately mandatory policy, not discretionary guidance; downgrading it would increase legal risk, not reduce it." },
+      { "text": "The regional office needed a more detailed procedure, not a policy exception", "correct": false, "rationale": "The core problem is unauthorized deviation from approved policy, not a lack of procedural detail at the regional level." }
+    ]
+  },
+  {
+    "id": "d1-t7-b7",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Guidelines vs Standards",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A document states: 'When selecting a project management tool for a new team, consider tools with SSO integration where practical; multiple options are acceptable based on team preference.' Which document type is this statement LEAST likely to represent?",
+    "options": [
+      { "text": "Guideline", "correct": false, "rationale": "Advisory, flexible language ('consider... where practical,' 'multiple options are acceptable') is a strong fit for a guideline, making this a likely, not unlikely, classification." },
+      { "text": "Standard", "correct": true, "rationale": "A standard mandates a specific, uniform requirement; language explicitly allowing multiple acceptable options based on preference is the opposite of a standard's compulsory, single-answer nature, making this the least likely fit." },
+      { "text": "Best-practice recommendation in a technology adoption handbook", "correct": false, "rationale": "This type of discretionary tooling advice commonly appears in adoption handbooks, making it a plausible source document." },
+      { "text": "An appendix of suggestions supplementing a broader IT governance policy", "correct": false, "rationale": "Optional suggestions are commonly attached as supplementary, non-mandatory appendices to policy documents, making this a reasonably likely location." }
+    ]
+  },
+  {
+    "id": "d1-t7-b8",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy review cycle",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After a new data privacy law takes effect, an internal audit finds that the organization's data retention and third-party sharing standards still reference the previous, now-superseded regulatory framework. What is the BEST corrective action?",
+    "options": [
+      { "text": "Wait until the next scheduled multi-year review to update the standards", "correct": false, "rationale": "Waiting until a distant scheduled review leaves the organization non-compliant with current law in the interim, which is an unacceptable risk given a known regulatory change has already occurred." },
+      { "text": "Trigger an out-of-cycle review and update of the affected standards to reflect the new regulatory requirements as soon as practicable", "correct": true, "rationale": "Governance documents must be updated promptly when a material change in law or regulation occurs, rather than strictly adhering to a fixed periodic schedule when compliance is at stake." },
+      { "text": "Instruct staff to informally follow the new law without updating any documents", "correct": false, "rationale": "Undocumented, informal compliance is not defensible or auditable and does not fix the outdated formal governance documents that staff and auditors rely on." },
+      { "text": "Remove the retention and sharing standards entirely until the next full policy rewrite", "correct": false, "rationale": "Removing mandatory standards would leave a governance vacuum and greater compliance risk; updating them promptly is the correct response." }
+    ]
+  },
+  {
+    "id": "d1-t7-b9",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Procedures",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In the policy-standard-procedure-guideline hierarchy, which document is generally the most granular and operational in nature?",
+    "options": [
+      { "text": "Policy", "correct": false, "rationale": "Policy is the highest-level, most strategic document, not the most granular." },
+      { "text": "Standard", "correct": false, "rationale": "A standard is more specific than a policy but still expresses a required outcome or technology, not the exact operational steps." },
+      { "text": "Procedure", "correct": true, "rationale": "A procedure provides the most granular, step-by-step operational instructions for carrying out a task in compliance with policy and standards." },
+      { "text": "Guideline", "correct": false, "rationale": "A guideline offers discretionary advice and is not necessarily the most granular or operational document; procedures are more detailed and, unlike guidelines, mandatory." }
+    ]
+  },
+  {
+    "id": "d1-t7-b10",
+    "domainId": "d1",
+    "topicId": "d1-t7",
+    "subtopicTag": "Policy vs Standard",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A CISO tells the board: 'Our policy says we must classify and protect sensitive data appropriately, but we have no document specifying what counts as \"sensitive\" or which specific controls apply to each classification tier.' What is the BEST description of the missing piece?",
+    "options": [
+      { "text": "A mandatory data classification standard defining the specific tiers, criteria, and required controls that operationalize the policy's general requirement", "correct": true, "rationale": "The policy states the general intent (classify and protect appropriately); what is missing is the mandatory, specific standard defining exact tiers and controls — precisely the standard's role beneath a policy." },
+      { "text": "A guideline suggesting optional ways employees might think about data sensitivity", "correct": false, "rationale": "Leaving classification criteria as purely optional advice would not give the organization a consistent, enforceable basis for classifying and protecting data, which the policy requires." },
+      { "text": "Nothing further is required since the policy already covers the requirement", "correct": false, "rationale": "The CISO's own statement identifies a concrete gap — the policy alone is too vague to be actionable without a specific supporting document." },
+      { "text": "A press release explaining the classification policy to external stakeholders", "correct": false, "rationale": "External communication does not resolve the internal governance gap of undefined classification tiers and controls." }
+    ]
+  }
+]

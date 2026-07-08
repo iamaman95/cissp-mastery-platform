@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t8-a1",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Signing With Private Key",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Alice wants to digitally sign a document so recipients can verify it came from her. Which key does Alice use to create the signature?",
+    "options": [
+      { "text": "Alice's private key", "correct": true, "rationale": "Digital signatures are created by encrypting the message hash with the signer's private key; only Alice holds it, which is what proves origin." },
+      { "text": "Alice's public key", "correct": false, "rationale": "The public key is used to verify, not to sign; signing with a public key would let anyone forge signatures." },
+      { "text": "The recipient's public key", "correct": false, "rationale": "The recipient's public key is used for confidentiality encryption to that recipient, not for Alice's signature." },
+      { "text": "A shared symmetric key", "correct": false, "rationale": "A shared symmetric key cannot provide non-repudiation and is not used for digital signatures." }
+    ]
+  },
+  {
+    "id": "d3-t8-a2",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Verifying With Public Key",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Bob receives a document digitally signed by Alice. Which key does Bob use to verify the signature?",
+    "options": [
+      { "text": "Alice's public key", "correct": true, "rationale": "The signature is verified by decrypting it with the signer's public key and comparing to a fresh hash; Alice's public key verifies her private-key signature." },
+      { "text": "Alice's private key", "correct": false, "rationale": "Only Alice holds her private key; Bob cannot and should not use it to verify." },
+      { "text": "Bob's private key", "correct": false, "rationale": "Bob's private key relates to messages encrypted to Bob, not to verifying Alice's signature." },
+      { "text": "A shared secret password", "correct": false, "rationale": "Signature verification uses asymmetric keys, not a shared password." }
+    ]
+  },
+  {
+    "id": "d3-t8-a3",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Hash Provides Integrity",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "A file download page publishes a SHA-256 value alongside the file. What security service does comparing the hash PRIMARILY provide?",
+    "options": [
+      { "text": "Integrity — confirming the file was not altered or corrupted", "correct": true, "rationale": "Matching the computed hash to the published one verifies the file's integrity (it was not changed in transit)." },
+      { "text": "Confidentiality of the file", "correct": false, "rationale": "Hashing does not hide the file's contents; it verifies integrity, not secrecy." },
+      { "text": "Availability of the download server", "correct": false, "rationale": "Hashing does not affect whether the server is reachable." },
+      { "text": "Non-repudiation of the author", "correct": false, "rationale": "A bare hash does not prove who produced the file; that requires a signature." }
+    ]
+  },
+  {
+    "id": "d3-t8-a4",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Digital Signature Services",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Which set of security services does a properly implemented digital signature MOST completely provide?",
+    "options": [
+      { "text": "Integrity, authenticity, and non-repudiation", "correct": true, "rationale": "A digital signature proves the message is unaltered (integrity), came from the signer (authenticity), and cannot be denied (non-repudiation)." },
+      { "text": "Confidentiality only", "correct": false, "rationale": "Signatures authenticate but do not encrypt/hide the message; confidentiality requires separate encryption." },
+      { "text": "Availability and redundancy", "correct": false, "rationale": "Signatures do not address availability or redundancy." },
+      { "text": "Anonymity of the signer", "correct": false, "rationale": "Signatures identify the signer; they do not provide anonymity." }
+    ]
+  },
+  {
+    "id": "d3-t8-a5",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "MD5/SHA-1 Broken",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A system uses MD5 to verify the integrity of security-critical files. What is the BEST recommendation?",
+    "options": [
+      { "text": "Replace MD5 with a secure hash such as SHA-256, since MD5 is vulnerable to collisions", "correct": true, "rationale": "MD5 is broken by practical collision attacks and should be replaced with a secure hash like SHA-256 for security purposes." },
+      { "text": "Keep MD5 because it is the most secure hash available", "correct": false, "rationale": "MD5 is not secure; it is broken and unsuitable for security-critical integrity checks." },
+      { "text": "Switch to SHA-1, which is collision-free", "correct": false, "rationale": "SHA-1 is also broken by collision attacks and is not a safe replacement." },
+      { "text": "Stop verifying integrity entirely", "correct": false, "rationale": "Abandoning integrity verification is worse; the fix is a stronger hash, not no hash." }
+    ]
+  },
+  {
+    "id": "d3-t8-a6",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Hash One-Way Property",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which statement correctly describes a cryptographic hash function?",
+    "options": [
+      { "text": "It is a one-way function producing a fixed-length digest that cannot be feasibly reversed", "correct": true, "rationale": "Cryptographic hashes are one-way and produce fixed-length digests; recovering the input from the digest is computationally infeasible." },
+      { "text": "It encrypts data so it can be decrypted with a key", "correct": false, "rationale": "Hashing is not encryption; there is no key to reverse it back to the input." },
+      { "text": "It always produces variable-length output", "correct": false, "rationale": "Hash output is fixed-length for a given algorithm, regardless of input size." },
+      { "text": "It requires the recipient's public key", "correct": false, "rationale": "Hashing uses no keys at all; it is unkeyed." }
+    ]
+  },
+  {
+    "id": "d3-t8-a7",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "HMAC vs Signature Non-repudiation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Two parties use HMAC with a shared key to protect messages. Why does this NOT provide non-repudiation?",
+    "options": [
+      { "text": "Both parties share the same secret key, so either could have produced the MAC", "correct": true, "rationale": "Because the HMAC key is shared, neither party can prove the other created a given MAC, so non-repudiation is not achieved — only asymmetric signatures provide it." },
+      { "text": "Because HMAC does not provide integrity", "correct": false, "rationale": "HMAC does provide integrity and authenticity; the missing property is specifically non-repudiation." },
+      { "text": "Because HMAC uses the recipient's private key", "correct": false, "rationale": "HMAC uses a shared symmetric key, not asymmetric keys." },
+      { "text": "Because HMAC output is not fixed length", "correct": false, "rationale": "HMAC output length is fixed; that is unrelated to non-repudiation." }
+    ]
+  },
+  {
+    "id": "d3-t8-a8",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Signature Detects Tampering",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An attacker alters one word in a digitally signed contract before it reaches the recipient. What MOST likely happens during verification?",
+    "options": [
+      { "text": "Verification fails because the recomputed hash no longer matches the signed hash", "correct": true, "rationale": "Any change to the message changes its hash, so it will not match the value recovered from the signature, and verification fails — revealing tampering." },
+      { "text": "Verification succeeds and the change is hidden", "correct": false, "rationale": "A signature is tamper-evident; altering the message breaks the hash match and verification fails." },
+      { "text": "The signature automatically corrects the change", "correct": false, "rationale": "Signatures detect changes; they do not correct or repair altered content." },
+      { "text": "The recipient's private key is exposed", "correct": false, "rationale": "Tampering with the message does not expose any private key." }
+    ]
+  },
+  {
+    "id": "d3-t8-a9",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Sign Then Encrypt for Both",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Alice wants Bob to receive a message that is both confidential and provably from her. Which combination BEST achieves this?",
+    "options": [
+      { "text": "Sign with Alice's private key and encrypt with Bob's public key", "correct": true, "rationale": "Signing with her private key gives authenticity/non-repudiation; encrypting with Bob's public key gives confidentiality only Bob can undo — together they achieve both goals." },
+      { "text": "Encrypt with Alice's private key and sign with Bob's public key", "correct": false, "rationale": "This misuses the keys; encrypting with Alice's private key does not provide confidentiality, and signing with Bob's public key is not how signatures work." },
+      { "text": "Use a shared password for everything", "correct": false, "rationale": "A shared password cannot provide non-repudiation and is weaker than asymmetric methods." },
+      { "text": "Hash the message and send only the hash", "correct": false, "rationale": "Sending only a hash provides neither confidentiality of the message nor proof of origin." }
+    ]
+  },
+  {
+    "id": "d3-t8-a10",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Birthday Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker tries to find any two different documents that produce the same hash, exploiting probability to reduce effort. This attack is MOST accurately called what?",
+    "options": [
+      { "text": "A birthday attack (collision attack)", "correct": true, "rationale": "The birthday attack exploits the birthday-paradox math so that finding any colliding pair takes far less effort than finding a specific preimage." },
+      { "text": "A brute-force preimage of a specific hash", "correct": false, "rationale": "Finding a specific preimage is harder; the described attack seeks any collision, which is the birthday attack." },
+      { "text": "A dictionary attack on passwords", "correct": false, "rationale": "A dictionary attack guesses passwords, not hash collisions between two documents." },
+      { "text": "A man-in-the-middle attack", "correct": false, "rationale": "MITM intercepts communications; it is not about finding hash collisions." }
+    ]
+  },
+  {
+    "id": "d3-t8-b1",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Key Direction Summary",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which statement MOST correctly summarizes key usage for signing versus confidentiality?",
+    "options": [
+      { "text": "Sign with the sender's private key; encrypt for confidentiality with the recipient's public key", "correct": true, "rationale": "Signatures use the sender's private key; confidentiality encryption uses the recipient's public key — opposite directions." },
+      { "text": "Sign with the sender's public key; encrypt with the recipient's private key", "correct": false, "rationale": "This reverses both operations; signing uses the private key and encrypting uses the recipient's public key." },
+      { "text": "Both signing and encrypting use the same shared symmetric key", "correct": false, "rationale": "Signatures require asymmetric keys, not a shared symmetric key." },
+      { "text": "Signing requires no keys at all", "correct": false, "rationale": "Digital signing requires the signer's private key." }
+    ]
+  },
+  {
+    "id": "d3-t8-b2",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Collision Resistance",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Collision resistance in a hash function means which of the following?",
+    "options": [
+      { "text": "It is infeasible to find two different inputs producing the same hash output", "correct": true, "rationale": "Collision resistance means an attacker cannot feasibly find two distinct inputs that hash to the same digest." },
+      { "text": "The hash can be easily reversed to the input", "correct": false, "rationale": "That contradicts the one-way property; collision resistance is about avoiding duplicate outputs, not reversibility." },
+      { "text": "The output length changes with each input", "correct": false, "rationale": "Hash output length is fixed; this does not describe collision resistance." },
+      { "text": "The hash requires a secret key", "correct": false, "rationale": "Plain hashes are unkeyed; collision resistance is a property independent of keys." }
+    ]
+  },
+  {
+    "id": "d3-t8-b3",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Hash Not Encryption",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A developer stores a SHA-256 'hash' of a document expecting to recover the document later by 'decrypting' the hash. What is the MOST accurate correction?",
+    "options": [
+      { "text": "Hashing is one-way; the original cannot be recovered from a hash", "correct": true, "rationale": "Hashes are irreversible fingerprints; you cannot decrypt a hash back to the source data — encryption, not hashing, is reversible." },
+      { "text": "The developer just needs the right decryption key for the hash", "correct": false, "rationale": "There is no key that reverses a hash; hashing is not encryption." },
+      { "text": "SHA-256 is reversible with enough CPU", "correct": false, "rationale": "SHA-256 is designed to be one-way; it is not reversible by brute compute for arbitrary inputs." },
+      { "text": "Hashes store the full document internally", "correct": false, "rationale": "A fixed-length digest cannot contain the full arbitrary-size document." }
+    ]
+  },
+  {
+    "id": "d3-t8-b4",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Choosing a Secure Hash",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which hashing algorithm is the BEST choice for new security-sensitive integrity checks?",
+    "options": [
+      { "text": "SHA-256 (SHA-2 family)", "correct": true, "rationale": "SHA-256 is a current, secure hash suitable for integrity verification; MD5 and SHA-1 are broken." },
+      { "text": "MD5", "correct": false, "rationale": "MD5 is broken by collision attacks and unsuitable for security use." },
+      { "text": "SHA-1", "correct": false, "rationale": "SHA-1 is also broken by collision attacks and deprecated." },
+      { "text": "CRC32", "correct": false, "rationale": "CRC32 is an error-detection checksum, not a cryptographically secure hash." }
+    ]
+  },
+  {
+    "id": "d3-t8-b5",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Signature vs MAC Choice",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A legal e-contract must let a third party (a court) independently verify the signer and prevent the signer from denying it. Which mechanism is BEST?",
+    "options": [
+      { "text": "A digital signature using the signer's private key", "correct": true, "rationale": "Only asymmetric digital signatures let an independent third party verify with the signer's public key and provide non-repudiation." },
+      { "text": "An HMAC with a key shared only between the two contracting parties", "correct": false, "rationale": "A shared-key MAC cannot prove to a third party which party produced it, so it lacks non-repudiation." },
+      { "text": "A plain SHA-256 hash appended to the document", "correct": false, "rationale": "A bare hash proves integrity but not who signed, so it cannot prevent denial." },
+      { "text": "Symmetric encryption of the document", "correct": false, "rationale": "Symmetric encryption provides confidentiality, not signer verification or non-repudiation." }
+    ]
+  },
+  {
+    "id": "d3-t8-b6",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Signature Does Not Encrypt",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A user digitally signs an email but is surprised anyone can still read its contents. What is the MOST accurate explanation?",
+    "options": [
+      { "text": "A digital signature authenticates the message but does not encrypt it; confidentiality requires separate encryption", "correct": true, "rationale": "Signing provides integrity/authenticity/non-repudiation, not secrecy; to hide contents the message must also be encrypted." },
+      { "text": "Signing should have hidden the contents automatically", "correct": false, "rationale": "Signatures do not conceal content; that is a common misconception." },
+      { "text": "The signature was applied with the wrong hash length", "correct": false, "rationale": "Hash length does not determine confidentiality; signatures simply do not encrypt." },
+      { "text": "Only encryption keys can create signatures", "correct": false, "rationale": "Signatures use the signer's private key; the point is that signing is not encrypting the content." }
+    ]
+  },
+  {
+    "id": "d3-t8-b7",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "MAC Provides Authenticity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Two services share a secret key and attach an HMAC to each API request. Beyond integrity, what does the HMAC MOST directly provide?",
+    "options": [
+      { "text": "Authenticity — assurance the request came from a party holding the shared key", "correct": true, "rationale": "A valid HMAC shows the sender knows the shared secret, providing message authenticity/integrity between the two parties." },
+      { "text": "Non-repudiation to any third party", "correct": false, "rationale": "Because the key is shared, HMAC cannot prove to a third party which party sent it; it lacks non-repudiation." },
+      { "text": "Confidentiality of the request body", "correct": false, "rationale": "HMAC does not encrypt/hide content; it authenticates and verifies integrity." },
+      { "text": "Availability of the API", "correct": false, "rationale": "HMAC has no effect on service availability." }
+    ]
+  },
+  {
+    "id": "d3-t8-b8",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Deterministic Hashing",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "If the same input is hashed twice with the same algorithm, the outputs will be which of the following?",
+    "options": [
+      { "text": "Identical", "correct": true, "rationale": "Hash functions are deterministic: the same input always yields the same digest under the same algorithm." },
+      { "text": "Always different", "correct": false, "rationale": "Different outputs for the same input would break the deterministic property; that is not how hashes work." },
+      { "text": "Randomly varying each time", "correct": false, "rationale": "Hashes are not random per call; they are deterministic for a given input." },
+      { "text": "Longer each time", "correct": false, "rationale": "Output length is fixed and constant, not growing per call." }
+    ]
+  },
+  {
+    "id": "d3-t8-b9",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Salting Context",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "When storing password hashes, adding a unique random 'salt' to each password before hashing MOST directly defends against what?",
+    "options": [
+      { "text": "Precomputed hash (rainbow table) attacks and identical hashes for equal passwords", "correct": true, "rationale": "Unique salts make precomputed rainbow tables ineffective and ensure two users with the same password get different stored hashes." },
+      { "text": "Network eavesdropping in transit", "correct": false, "rationale": "Salting protects stored hashes; transit protection is provided by TLS, not salting." },
+      { "text": "Denial-of-service attacks", "correct": false, "rationale": "Salting does not address availability/DoS." },
+      { "text": "Physical theft of the server", "correct": false, "rationale": "Salting complicates cracking stolen hashes but is aimed at rainbow tables, not physical theft prevention itself." }
+    ]
+  },
+  {
+    "id": "d3-t8-b10",
+    "domainId": "d3",
+    "topicId": "d3-t8",
+    "subtopicTag": "Service Mapping",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which security service is a plain (unkeyed) hash function LEAST able to provide on its own?",
+    "options": [
+      { "text": "Non-repudiation", "correct": true, "rationale": "A bare hash cannot bind a message to a specific signer, so it cannot provide non-repudiation on its own — that needs a digital signature." },
+      { "text": "Integrity verification", "correct": false, "rationale": "Integrity is exactly what a hash provides by detecting changes." },
+      { "text": "A fixed-length fingerprint of data", "correct": false, "rationale": "Producing a fixed-length digest is a core function of a hash." },
+      { "text": "Detecting accidental corruption", "correct": false, "rationale": "Hashes readily detect accidental corruption via digest mismatch." }
+    ]
+  }
+]

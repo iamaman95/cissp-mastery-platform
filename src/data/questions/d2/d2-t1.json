@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d2-t1-a1",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Owner vs Custodian",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A marketing team exports patient appointment data from a clinical system into an unlabeled spreadsheet on an open shared drive. The CISO asks who is accountable for deciding how this data should be classified and protected. Which role is MOST appropriate?",
+    "options": [
+      { "text": "The IT team that administers the shared drive", "correct": false, "rationale": "IT acts as data custodian, implementing the controls the owner specifies; it does not hold accountability for the classification decision." },
+      { "text": "The business data owner accountable for that patient data", "correct": true, "rationale": "Classification is a business decision belonging to the accountable data owner, who determines the sensitivity tier and required protections." },
+      { "text": "The security team that discovered the finding", "correct": false, "rationale": "The security team may advise and enforce, but classification authority rests with the data owner, not with whoever raised the audit finding." },
+      { "text": "The marketing analyst who created the export", "correct": false, "rationale": "A user who handles data does not have authority to set its classification; that authority belongs to the accountable owner." }
+    ]
+  },
+  {
+    "id": "d2-t1-a2",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Classification Criteria",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A dataset contains customers' full names combined with Social Security numbers and account balances. Using classification criteria, what BEST justifies assigning it the organization's highest commercial sensitivity tier?",
+    "options": [
+      { "text": "The file is large and consumes significant storage", "correct": false, "rationale": "Storage size is irrelevant to classification, which is based on sensitivity and impact of disclosure, not volume." },
+      { "text": "Disclosure would cause serious legal, regulatory, and reputational harm due to the regulated PII it contains", "correct": true, "rationale": "Classification criteria weigh the impact of disclosure; regulated PII with high harm potential drives a high sensitivity tier." },
+      { "text": "The marketing team requested access to it", "correct": false, "rationale": "Demand for access does not determine classification; the sensitivity and disclosure impact do." },
+      { "text": "It was created recently", "correct": false, "rationale": "Recency alone is not a classification criterion; sensitivity and disclosure impact are what matter." }
+    ]
+  },
+  {
+    "id": "d2-t1-a3",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Government Classification Scheme",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In the U.S. government/military classification scheme, which level denotes information whose unauthorized disclosure would cause 'exceptionally grave damage' to national security?",
+    "options": [
+      { "text": "Confidential", "correct": false, "rationale": "Confidential corresponds to damage, the lowest classified tier, not exceptionally grave damage." },
+      { "text": "Secret", "correct": false, "rationale": "Secret corresponds to serious damage, which is below the exceptionally grave threshold." },
+      { "text": "Top Secret", "correct": true, "rationale": "Top Secret is defined as information whose disclosure would cause exceptionally grave damage to national security." },
+      { "text": "Unclassified", "correct": false, "rationale": "Unclassified information causes no damage from disclosure and is not a classified tier." }
+    ]
+  },
+  {
+    "id": "d2-t1-a4",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Asset Inventory",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A new CISO finds that no authoritative list exists of what data the company holds or where it resides. Before classification, handling, or destruction policies can be effective, what should be established FIRST?",
+    "options": [
+      { "text": "A data loss prevention deployment", "correct": false, "rationale": "DLP enforces policy but cannot be scoped effectively without first knowing what assets exist and where they live." },
+      { "text": "An accurate, current asset inventory", "correct": true, "rationale": "Inventory is the precondition for all downstream protection; you cannot classify or protect assets you do not know you have." },
+      { "text": "A full-disk encryption standard", "correct": false, "rationale": "Encryption is a control applied after assets are identified and classified, not the first foundational step." },
+      { "text": "A destruction/sanitization schedule", "correct": false, "rationale": "Destruction scheduling depends on knowing what assets exist and their classification, which requires an inventory first." }
+    ]
+  },
+  {
+    "id": "d2-t1-a5",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Steward",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A data governance program needs someone responsible for ensuring a customer dataset uses consistent field definitions, accurate context, and correct labeling across departments. Which role BEST fits this responsibility?",
+    "options": [
+      { "text": "Data custodian", "correct": false, "rationale": "The custodian implements technical controls like backups and encryption, not the definition, quality, and context of the data." },
+      { "text": "Data steward", "correct": true, "rationale": "The data steward focuses on data quality, context, definitions, and proper labeling, bridging business and technical concerns in governance." },
+      { "text": "System owner", "correct": false, "rationale": "The system owner is accountable for the platform hosting the data, not for the data's quality and definitions." },
+      { "text": "End user", "correct": false, "rationale": "Users consume data per policy; they do not own responsibility for data quality and definitions across departments." }
+    ]
+  },
+  {
+    "id": "d2-t1-a6",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Reclassification / Declassification",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A product launch plan classified 'Confidential' was publicly announced last quarter and the product is now on the market. An analyst asks how it should be treated going forward. What is the MOST accurate response?",
+    "options": [
+      { "text": "It must retain its original Confidential classification permanently", "correct": false, "rationale": "Classification is not permanent; data can be reclassified as its sensitivity changes over time." },
+      { "text": "It can be reclassified downward because the information is now public and its disclosure impact has diminished", "correct": true, "rationale": "Because the sensitivity that justified the original label has expired, the owner can downgrade/declassify it based on current criteria." },
+      { "text": "It should be immediately destroyed since it is now public", "correct": false, "rationale": "Public availability of information does not mandate destruction; retention obligations and reclassification apply, not automatic destruction." },
+      { "text": "IT should decide its new classification since IT manages the file", "correct": false, "rationale": "Reclassification is still the data owner's decision, not a technical decision made by IT." }
+    ]
+  },
+  {
+    "id": "d2-t1-a7",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "System Owner vs Data Owner",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An HR analytics platform is administered by the IT infrastructure director, while the sensitive employee compensation data on it belongs to the head of HR. Who should approve which specific employees may access the compensation records?",
+    "options": [
+      { "text": "The IT infrastructure director, as system owner", "correct": false, "rationale": "The system owner is accountable for the platform, not for authorizing access to the specific data residing on it." },
+      { "text": "The head of HR, as data owner", "correct": true, "rationale": "Access approval for a specific data asset belongs to the data owner accountable for that data, not the system owner." },
+      { "text": "The database administrator", "correct": false, "rationale": "The DBA is a custodian who provisions access technically but does not decide who is authorized." },
+      { "text": "Any manager who requests it", "correct": false, "rationale": "Access decisions require owner approval based on need, not self-service by requesting managers." }
+    ]
+  },
+  {
+    "id": "d2-t1-a8",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Baseline",
+    "qualifier": "BEST",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "In asset security, what does a security 'baseline' for a classification level BEST represent?",
+    "options": [
+      { "text": "The maximum controls that may ever be applied to the asset", "correct": false, "rationale": "A baseline is a minimum starting set of controls, not a ceiling on what can be applied." },
+      { "text": "The documented minimum set of required controls for assets at that classification level", "correct": true, "rationale": "A baseline defines the minimum required controls for a given classification, providing a consistent starting point before tailoring." },
+      { "text": "A list of employees authorized to access the asset", "correct": false, "rationale": "That describes an access authorization list, not a control baseline." },
+      { "text": "The schedule for destroying the asset", "correct": false, "rationale": "Destruction timing is a retention/disposal matter, not what a control baseline represents." }
+    ]
+  },
+  {
+    "id": "d2-t1-a9",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Commercial Classification Scheme",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "A",
+    "stem": "Which sequence lists a common commercial/private-sector classification scheme from least to most sensitive?",
+    "options": [
+      { "text": "Public, Sensitive, Private, Confidential", "correct": true, "rationale": "This is a standard commercial ordering from least to most sensitive taught in CISSP materials." },
+      { "text": "Unclassified, Confidential, Secret, Top Secret", "correct": false, "rationale": "That is the government/military scheme, not the commercial scheme the question asks for." },
+      { "text": "Confidential, Private, Sensitive, Public", "correct": false, "rationale": "This reverses the order; it runs from most to least sensitive, not least to most." },
+      { "text": "Low, Medium, High, Critical", "correct": false, "rationale": "These are generic severity labels, not the standard commercial classification tiers." }
+    ]
+  },
+  {
+    "id": "d2-t1-a10",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Classification Criteria",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "When deciding the classification of a dataset, which of the following is the LEAST relevant criterion?",
+    "options": [
+      { "text": "The harm to the organization if the data were disclosed", "correct": false, "rationale": "Impact of disclosure is a core classification criterion, making it highly relevant, not least." },
+      { "text": "Legal or regulatory sensitivity attached to the data (e.g., PII, PHI)", "correct": false, "rationale": "Regulatory sensitivity is a central classification criterion and is highly relevant." },
+      { "text": "The file format the data is stored in (e.g., CSV vs. XLSX)", "correct": true, "rationale": "The storage file format has no bearing on the data's sensitivity or disclosure impact, making it the least relevant criterion." },
+      { "text": "The value of the data to a competitor", "correct": false, "rationale": "Competitive value is a recognized classification criterion and is relevant to the decision." }
+    ]
+  },
+  {
+    "id": "d2-t1-b1",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Owner vs Custodian",
+    "qualifier": "PRIMARY",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "After the data owner classifies a dataset as Confidential and specifies that it must be encrypted and access-logged, who has PRIMARY responsibility for actually implementing those controls?",
+    "options": [
+      { "text": "The data owner", "correct": false, "rationale": "The owner decides classification and required protections but does not perform the hands-on technical implementation." },
+      { "text": "The data custodian", "correct": true, "rationale": "The custodian implements the technical controls, such as encryption and logging, that the owner has specified." },
+      { "text": "The data steward", "correct": false, "rationale": "The steward focuses on data quality and definitions, not on implementing security controls." },
+      { "text": "The compliance officer", "correct": false, "rationale": "Compliance verifies adherence to requirements but does not implement the technical controls." }
+    ]
+  },
+  {
+    "id": "d2-t1-b2",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Classification Level Selection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A hospital exports a spreadsheet of patient records for a churn-analysis project. Given HIPAA exposure, which classification level BEST fits under a commercial scheme?",
+    "options": [
+      { "text": "Public", "correct": false, "rationale": "PHI is far from freely releasable; classifying it Public would ignore its regulatory sensitivity and disclosure impact." },
+      { "text": "Confidential/Private", "correct": true, "rationale": "PHI carries serious regulatory and disclosure risk under HIPAA, warranting the most protective commercial tier." },
+      { "text": "Internal Use Only", "correct": false, "rationale": "Internal Use understates the harm and regulatory exposure of PHI, which demands stronger protection." },
+      { "text": "Sensitive but the lowest protection level", "correct": false, "rationale": "Assigning the lowest protection ignores HIPAA obligations and the high disclosure impact of PHI." }
+    ]
+  },
+  {
+    "id": "d2-t1-b3",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Controller vs Processor",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Under GDPR, a retailer decides why and how customer personal data will be processed, then hires a cloud vendor to store and process it strictly on the retailer's instructions. Which roles BEST describe the retailer and the vendor, respectively?",
+    "options": [
+      { "text": "Data processor and data controller", "correct": false, "rationale": "This reverses the roles; the party deciding purposes and means is the controller, not the processor." },
+      { "text": "Data controller and data processor", "correct": true, "rationale": "The controller determines purposes and means (the retailer); the processor acts on the controller's instructions (the vendor)." },
+      { "text": "Data custodian and data owner", "correct": false, "rationale": "Custodian/owner are general asset roles, but GDPR specifically uses controller/processor for this relationship." },
+      { "text": "Data steward and data subject", "correct": false, "rationale": "Neither party is a steward or the individual whose data it is; the correct GDPR terms are controller and processor." }
+    ]
+  },
+  {
+    "id": "d2-t1-b4",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Asset Inventory",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "During an audit, several servers holding regulated data are found that appear in no inventory and are excluded from patching and monitoring. What does this MOST directly demonstrate?",
+    "options": [
+      { "text": "The encryption standard is too weak", "correct": false, "rationale": "The problem is not encryption strength; the assets were entirely unknown to the organization." },
+      { "text": "Assets absent from the inventory are effectively invisible to security processes and cannot be protected", "correct": true, "rationale": "Uninventoried assets escape patching, monitoring, and incident response, illustrating why inventory underpins all protection." },
+      { "text": "The data owner classified the data incorrectly", "correct": false, "rationale": "The issue is that the assets were never inventoried, not that a classification was assigned incorrectly." },
+      { "text": "The retention schedule was too short", "correct": false, "rationale": "Retention timing is unrelated to the finding that assets were missing from inventory and monitoring." }
+    ]
+  },
+  {
+    "id": "d2-t1-b5",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Owner vs Custodian",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which of the following activities is LEAST appropriate for a data custodian to perform on their own authority?",
+    "options": [
+      { "text": "Configuring encryption on the storage volume", "correct": false, "rationale": "Configuring encryption is a routine custodian implementation task, entirely appropriate to their role." },
+      { "text": "Deciding the classification level of the data", "correct": true, "rationale": "Classification is the data owner's business decision; a custodian setting it on their own authority oversteps their role." },
+      { "text": "Performing scheduled backups of the data", "correct": false, "rationale": "Backups are a core custodian responsibility and appropriate to perform." },
+      { "text": "Provisioning access accounts as directed by the owner", "correct": false, "rationale": "Provisioning access per the owner's decisions is a proper custodian function." }
+    ]
+  },
+  {
+    "id": "d2-t1-b6",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Classification Drives Controls",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An organization labels data as Confidential but then applies identical, minimal handling to it as to Public data. What principle does this BEST violate?",
+    "options": [
+      { "text": "That classification exists to drive proportional, tier-appropriate controls", "correct": true, "rationale": "Classification is meaningful only if higher tiers receive stricter controls; applying Public-level handling to Confidential data defeats its purpose." },
+      { "text": "That all data must receive maximum-security handling", "correct": false, "rationale": "CISSP does not require maximum handling for everything; controls should be proportional to classification, not maximal." },
+      { "text": "That data owners must be technical staff", "correct": false, "rationale": "Data owners are business roles, not necessarily technical; this is unrelated to the handling mismatch described." },
+      { "text": "That classification must never change", "correct": false, "rationale": "Classification can change over time; the violation here is failing to apply tier-appropriate controls, not reclassification." }
+    ]
+  },
+  {
+    "id": "d2-t1-b7",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Asset Definition",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "In the context of asset security, which of the following is the BEST definition of an 'asset'?",
+    "options": [
+      { "text": "Only physical hardware owned by the organization", "correct": false, "rationale": "Assets include far more than hardware; data, software, IP, people, and reputation all qualify." },
+      { "text": "Anything of value to the organization, including data, hardware, software, IP, people, and reputation", "correct": true, "rationale": "An asset is anything of value to the organization, a broad definition spanning tangible and intangible items." },
+      { "text": "Only data classified as Confidential or higher", "correct": false, "rationale": "Assets are not limited by classification tier; even Public data and non-data resources are assets." },
+      { "text": "Only items recorded in the financial ledger", "correct": false, "rationale": "Security assets extend well beyond accounting entries to any item of value, such as reputation and data." }
+    ]
+  },
+  {
+    "id": "d2-t1-b8",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Data Owner Accountability",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A newly acquired dataset has no assigned owner and no classification. What should the governance team do FIRST?",
+    "options": [
+      { "text": "Encrypt it at the highest available strength immediately", "correct": false, "rationale": "Applying controls before assigning ownership and classification skips the decisions that determine which controls are appropriate." },
+      { "text": "Assign an accountable data owner who can then determine its classification", "correct": true, "rationale": "Establishing an accountable owner is the first step, since the owner drives classification and every downstream protection decision." },
+      { "text": "Delete the dataset to avoid liability", "correct": false, "rationale": "Deleting a newly acquired dataset destroys potentially valuable, possibly retention-bound data instead of managing it properly." },
+      { "text": "Share it broadly so all teams can use it", "correct": false, "rationale": "Broad sharing before classification risks exposing sensitive data and inverts the correct sequence." }
+    ]
+  },
+  {
+    "id": "d2-t1-b9",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Government Classification Scheme",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "easy",
+    "setGroup": "B",
+    "stem": "Which government/military classification level corresponds to information whose disclosure would cause 'serious damage' to national security?",
+    "options": [
+      { "text": "Confidential", "correct": false, "rationale": "Confidential corresponds to damage, a lower threshold than serious damage." },
+      { "text": "Secret", "correct": true, "rationale": "Secret is defined as information whose unauthorized disclosure would cause serious damage to national security." },
+      { "text": "Top Secret", "correct": false, "rationale": "Top Secret corresponds to exceptionally grave damage, a higher threshold than serious damage." },
+      { "text": "Unclassified", "correct": false, "rationale": "Unclassified information causes no damage from disclosure and is not a classified tier." }
+    ]
+  },
+  {
+    "id": "d2-t1-b10",
+    "domainId": "d2",
+    "topicId": "d2-t1",
+    "subtopicTag": "Roles Separation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An exam-style question describes a breach of Confidential data and asks which single role was ultimately accountable for having set its protection requirements. Which answer is MOST defensible?",
+    "options": [
+      { "text": "The data custodian who ran the backups", "correct": false, "rationale": "The custodian implements controls but is not ultimately accountable for defining the protection requirements." },
+      { "text": "The data owner who was accountable for classifying the data and defining protections", "correct": true, "rationale": "Ultimate accountability for setting classification and protection requirements rests with the data owner." },
+      { "text": "The end users who accessed the data", "correct": false, "rationale": "Users must handle data per policy but do not set the protection requirements or hold that accountability." },
+      { "text": "The help desk technician who reset passwords", "correct": false, "rationale": "Help desk operations are unrelated to accountability for defining data protection requirements." }
+    ]
+  }
+]

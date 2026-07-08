@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d3-t11-a1",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Chosen-Plaintext Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker can submit any plaintext to a system and observe the corresponding ciphertext, using this to analyze the cipher. This is MOST accurately which attack?",
+    "options": [
+      { "text": "Chosen-plaintext attack", "correct": true, "rationale": "Being able to encrypt attacker-chosen plaintexts and observe the ciphertext defines a chosen-plaintext attack." },
+      { "text": "Ciphertext-only attack", "correct": false, "rationale": "In a ciphertext-only attack the attacker has no chosen plaintexts, only ciphertext." },
+      { "text": "Chosen-ciphertext attack", "correct": false, "rationale": "Chosen-ciphertext means the attacker submits ciphertexts for decryption, the opposite direction." },
+      { "text": "Brute-force attack", "correct": false, "rationale": "Brute force tries all keys; it does not rely on submitting chosen plaintexts." }
+    ]
+  },
+  {
+    "id": "d3-t11-a2",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Ciphertext-Only Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An attacker intercepts only encrypted messages with no knowledge of the plaintext and tries to break the cipher. This weakest-position attack is MOST accurately called what?",
+    "options": [
+      { "text": "Ciphertext-only attack", "correct": true, "rationale": "Having only ciphertext with no plaintext knowledge is the ciphertext-only attack, the hardest position for the attacker." },
+      { "text": "Known-plaintext attack", "correct": false, "rationale": "Known-plaintext requires the attacker to have some plaintext-ciphertext pairs, which they lack here." },
+      { "text": "Chosen-plaintext attack", "correct": false, "rationale": "Chosen-plaintext requires the ability to encrypt chosen inputs, not present here." },
+      { "text": "Side-channel attack", "correct": false, "rationale": "Side-channel exploits physical leakage, not analysis of intercepted ciphertext alone." }
+    ]
+  },
+  {
+    "id": "d3-t11-a3",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Side-Channel Timing/Power",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker recovers a smart card's private key by measuring how long operations take and how much power the chip draws, without attacking the algorithm's math. This is MOST accurately which attack?",
+    "options": [
+      { "text": "Side-channel attack (timing/power analysis)", "correct": true, "rationale": "Extracting secrets from physical leakage like timing and power consumption is a side-channel attack, bypassing the algorithm's mathematical strength." },
+      { "text": "Brute-force attack", "correct": false, "rationale": "Brute force tries all keys; this attack instead measures physical emanations." },
+      { "text": "Chosen-plaintext attack", "correct": false, "rationale": "No chosen plaintexts are used; the attack exploits hardware behavior." },
+      { "text": "Dictionary attack", "correct": false, "rationale": "A dictionary attack guesses passwords; this recovers a key via physical measurement." }
+    ]
+  },
+  {
+    "id": "d3-t11-a4",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Brute-Force Defense",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A cipher is threatened by exhaustive key search. Which defense BEST mitigates a brute-force attack?",
+    "options": [
+      { "text": "Use a sufficiently long key so the key space is infeasible to search", "correct": true, "rationale": "Adequate key length makes exhaustive search computationally infeasible, defeating brute force." },
+      { "text": "Keep the algorithm secret", "correct": false, "rationale": "Algorithm secrecy is not a reliable defense (Kerckhoffs's principle); key length is what defeats brute force." },
+      { "text": "Use a shorter key for speed", "correct": false, "rationale": "Shorter keys make brute force easier, not harder." },
+      { "text": "Reuse the same key everywhere", "correct": false, "rationale": "Key reuse increases exposure and does not address brute-force feasibility." }
+    ]
+  },
+  {
+    "id": "d3-t11-a5",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Rainbow Table Defense",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Attackers use precomputed hash tables to crack stored password hashes. Which defense BEST defeats this?",
+    "options": [
+      { "text": "Add a unique random salt to each password before hashing (and use slow hashing)", "correct": true, "rationale": "Unique salts make precomputed rainbow tables useless because each password's hash is unique; slow hashing further raises cost." },
+      { "text": "Use a faster hash so cracking is harder", "correct": false, "rationale": "Faster hashing actually helps attackers; slow, salted hashing is the defense." },
+      { "text": "Store passwords in plaintext for speed", "correct": false, "rationale": "Plaintext storage is catastrophic and provides no protection." },
+      { "text": "Use the same salt for every password", "correct": false, "rationale": "A shared salt still allows one precomputed table to target all hashes; salts must be unique." }
+    ]
+  },
+  {
+    "id": "d3-t11-a6",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Known-Plaintext Attack",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "In a known-plaintext attack, what does the attacker possess?",
+    "options": [
+      { "text": "One or more matching plaintext-ciphertext pairs", "correct": true, "rationale": "Known-plaintext means the attacker has plaintext and its corresponding ciphertext to analyze the cipher." },
+      { "text": "Only ciphertext with no plaintext", "correct": false, "rationale": "That describes a ciphertext-only attack, not known-plaintext." },
+      { "text": "The ability to choose plaintexts to encrypt", "correct": false, "rationale": "Choosing inputs to encrypt is a chosen-plaintext attack, a stronger capability." },
+      { "text": "Physical access to power measurements", "correct": false, "rationale": "That is a side-channel scenario, not known-plaintext." }
+    ]
+  },
+  {
+    "id": "d3-t11-a7",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Meet-in-the-Middle",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Doubling DES to '2DES' provides far less added strength than expected. Which attack MOST directly explains this?",
+    "options": [
+      { "text": "A meet-in-the-middle attack", "correct": true, "rationale": "Meet-in-the-middle attacks double-encryption schemes so 2DES offers little more effective strength than single DES, which is why 3DES (not 2DES) was used." },
+      { "text": "A rainbow table attack", "correct": false, "rationale": "Rainbow tables target password hashes, not double-encryption strength." },
+      { "text": "A birthday attack", "correct": false, "rationale": "Birthday attacks exploit hash collisions, not double-encryption key strength." },
+      { "text": "A social engineering attack", "correct": false, "rationale": "Social engineering targets people, not the mathematics of double encryption." }
+    ]
+  },
+  {
+    "id": "d3-t11-a8",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Chosen-Ciphertext Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "An attacker can submit ciphertexts of their choosing to a decryption oracle and observe the results to learn about the key. This is MOST accurately which attack?",
+    "options": [
+      { "text": "Chosen-ciphertext attack", "correct": true, "rationale": "Submitting chosen ciphertexts for decryption and observing outputs defines a chosen-ciphertext attack." },
+      { "text": "Chosen-plaintext attack", "correct": false, "rationale": "Chosen-plaintext involves encrypting chosen inputs, the opposite direction." },
+      { "text": "Ciphertext-only attack", "correct": false, "rationale": "Ciphertext-only gives no ability to submit chosen ciphertexts for decryption." },
+      { "text": "Brute-force attack", "correct": false, "rationale": "Brute force tries keys exhaustively; it does not use a decryption oracle." }
+    ]
+  },
+  {
+    "id": "d3-t11-a9",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Implementation vs Algorithm",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A cryptographic library uses a strong algorithm but has a bug that leaks key bits through error messages. The resulting break is MOST accurately attributed to what?",
+    "options": [
+      { "text": "An implementation flaw, not a weakness in the algorithm itself", "correct": true, "rationale": "The algorithm is sound; the break comes from a coding/implementation defect (e.g., an oracle via error messages), a common real-world failure mode." },
+      { "text": "A weakness in the mathematics of the cipher", "correct": false, "rationale": "The math is strong; the flaw is in the implementation, not the algorithm." },
+      { "text": "Excessive key length", "correct": false, "rationale": "Key length is not the issue; the leak is an implementation bug." },
+      { "text": "The use of salting", "correct": false, "rationale": "Salting is a defense for password hashes, unrelated to this implementation leak." }
+    ]
+  },
+  {
+    "id": "d3-t11-a10",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Side-Channel Defense",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "To defend a cryptographic device against timing side-channel attacks, which measure is BEST?",
+    "options": [
+      { "text": "Implement constant-time operations so execution time does not depend on secret values", "correct": true, "rationale": "Constant-time implementations prevent timing variations from leaking key-dependent information, directly countering timing side-channels." },
+      { "text": "Make the algorithm run at variable speeds based on the key", "correct": false, "rationale": "Variable, key-dependent timing is exactly what timing attacks exploit; this worsens the problem." },
+      { "text": "Publish the key to remove its secrecy", "correct": false, "rationale": "Publishing the key defeats the purpose of encryption entirely." },
+      { "text": "Use a shorter key", "correct": false, "rationale": "Key length does not address timing leakage from the implementation." }
+    ]
+  },
+  {
+    "id": "d3-t11-b1",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Attack Recognition",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An attacker feeds specific plaintexts into an encryption service and studies the outputs to deduce the key. Which attack does this MOST clearly represent?",
+    "options": [
+      { "text": "Chosen-plaintext attack", "correct": true, "rationale": "The attacker controls the plaintext inputs and observes ciphertext — the defining feature of a chosen-plaintext attack." },
+      { "text": "Ciphertext-only attack", "correct": false, "rationale": "Here the attacker chooses plaintexts, so it is not ciphertext-only." },
+      { "text": "Rainbow table attack", "correct": false, "rationale": "Rainbow tables target password hashes, not chosen-plaintext encryption analysis." },
+      { "text": "Meet-in-the-middle attack", "correct": false, "rationale": "Meet-in-the-middle targets double encryption, not chosen-plaintext analysis." }
+    ]
+  },
+  {
+    "id": "d3-t11-b2",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Birthday Attack Target",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "Which cryptographic component is the birthday attack MOST directly used against?",
+    "options": [
+      { "text": "Hash functions (finding collisions)", "correct": true, "rationale": "The birthday attack exploits collision probability, making it a threat to hash functions where two inputs yield the same digest." },
+      { "text": "Symmetric key exchange", "correct": false, "rationale": "Key exchange is not the birthday attack's target; hash collisions are." },
+      { "text": "Physical power measurement", "correct": false, "rationale": "That is a side-channel concern, not the birthday attack." },
+      { "text": "Firewall rule ordering", "correct": false, "rationale": "Firewalls are unrelated to hash collision attacks." }
+    ]
+  },
+  {
+    "id": "d3-t11-b3",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Dictionary Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An attacker cracks user passwords by hashing a list of common words and comparing to stored hashes. This is MOST accurately which attack?",
+    "options": [
+      { "text": "Dictionary attack", "correct": true, "rationale": "Hashing a wordlist of likely passwords and comparing to stored hashes is a dictionary attack." },
+      { "text": "Side-channel attack", "correct": false, "rationale": "Side-channel uses physical leakage, not a wordlist of guesses." },
+      { "text": "Chosen-ciphertext attack", "correct": false, "rationale": "Chosen-ciphertext submits ciphertexts to a decryption oracle, unrelated to password guessing." },
+      { "text": "Meet-in-the-middle attack", "correct": false, "rationale": "Meet-in-the-middle targets double encryption, not password wordlists." }
+    ]
+  },
+  {
+    "id": "d3-t11-b4",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Frequency Analysis",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An analyst breaks a simple substitution cipher by counting how often each symbol appears and matching to common letter frequencies. This classic technique is MOST accurately called what?",
+    "options": [
+      { "text": "Frequency analysis", "correct": true, "rationale": "Frequency analysis exploits the statistical distribution of symbols to break substitution ciphers." },
+      { "text": "Rainbow table attack", "correct": false, "rationale": "Rainbow tables target password hashes, not substitution-cipher letter frequencies." },
+      { "text": "Side-channel attack", "correct": false, "rationale": "No physical leakage is used; this is statistical analysis of ciphertext." },
+      { "text": "Brute-force key search", "correct": false, "rationale": "Frequency analysis is smarter than exhaustive search; it uses statistical patterns, not trying all keys." }
+    ]
+  },
+  {
+    "id": "d3-t11-b5",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Attack Strength Ranking",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "From the attacker's perspective, which position generally provides the LEAST information to work with?",
+    "options": [
+      { "text": "Ciphertext-only", "correct": true, "rationale": "Ciphertext-only gives the attacker the least — no plaintext, no ability to choose inputs — making it the hardest, least-informed position." },
+      { "text": "Known-plaintext", "correct": false, "rationale": "Known-plaintext provides plaintext-ciphertext pairs, more information than ciphertext-only." },
+      { "text": "Chosen-plaintext", "correct": false, "rationale": "Chosen-plaintext gives the attacker the powerful ability to encrypt chosen inputs." },
+      { "text": "Chosen-ciphertext", "correct": false, "rationale": "Chosen-ciphertext gives the attacker a decryption oracle, more capability than ciphertext-only." }
+    ]
+  },
+  {
+    "id": "d3-t11-b6",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Emanations / TEMPEST",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An adversary captures electromagnetic emanations leaking from a monitor and cabling to reconstruct displayed data. Countermeasures for this are MOST associated with which concept?",
+    "options": [
+      { "text": "TEMPEST / emanation security (a form of side-channel defense)", "correct": true, "rationale": "TEMPEST addresses shielding against compromising electromagnetic emanations, a physical side-channel leakage." },
+      { "text": "Rainbow tables", "correct": false, "rationale": "Rainbow tables concern password hashes, not electromagnetic emanations." },
+      { "text": "Salting", "correct": false, "rationale": "Salting protects password hashes, unrelated to EM emanation leakage." },
+      { "text": "Chosen-plaintext attacks", "correct": false, "rationale": "Chosen-plaintext is a mathematical cryptanalysis approach, not emanation capture." }
+    ]
+  },
+  {
+    "id": "d3-t11-b7",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Math Strong But Broken",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A system uses an unbroken algorithm yet is compromised. Which statement is MOST accurate about why strong crypto can still fail?",
+    "options": [
+      { "text": "Weak keys, poor implementation, or side channels can defeat even a mathematically sound algorithm", "correct": true, "rationale": "Cryptographic security depends on more than the algorithm; keys, implementation, and physical protections must also be sound." },
+      { "text": "A strong algorithm guarantees the whole system is secure", "correct": false, "rationale": "Algorithm strength is necessary but not sufficient; other factors can break the system." },
+      { "text": "Only the algorithm's math ever matters", "correct": false, "rationale": "Keys, implementation, and side channels also determine real-world security." },
+      { "text": "Side channels are impossible against strong algorithms", "correct": false, "rationale": "Side channels specifically bypass algorithmic strength by attacking implementation/hardware." }
+    ]
+  },
+  {
+    "id": "d3-t11-b8",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Replay Attack",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "An attacker captures a valid encrypted authentication message and resends it later to impersonate the user, without decrypting it. Which attack is this MOST accurately, and what defends against it?",
+    "options": [
+      { "text": "A replay attack, defended by nonces/timestamps/session tokens", "correct": true, "rationale": "Reusing a captured valid message is a replay attack; freshness values like nonces or timestamps prevent reuse." },
+      { "text": "A brute-force attack, defended by longer keys", "correct": false, "rationale": "No key search occurs; the attacker reuses a captured message, which key length does not prevent." },
+      { "text": "A chosen-plaintext attack, defended by salting", "correct": false, "rationale": "This is not chosen-plaintext, and salting protects password hashes, not against replay." },
+      { "text": "A rainbow table attack, defended by encryption", "correct": false, "rationale": "Rainbow tables target hashes; the described attack is replaying a valid message." }
+    ]
+  },
+  {
+    "id": "d3-t11-b9",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Rubber-Hose / Social",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Rather than attacking the cipher, an adversary coerces or tricks a key holder into revealing the key. This bypass is MOST accurately categorized as what?",
+    "options": [
+      { "text": "An attack on people (social engineering / coercion), bypassing the cryptography entirely", "correct": true, "rationale": "Targeting the human key holder sidesteps the math; strong crypto offers no defense if a person hands over the key." },
+      { "text": "A meet-in-the-middle attack", "correct": false, "rationale": "Meet-in-the-middle is a mathematical attack on double encryption, not coercing a person." },
+      { "text": "A ciphertext-only attack", "correct": false, "rationale": "This does not analyze ciphertext; it targets the person holding the key." },
+      { "text": "A birthday attack", "correct": false, "rationale": "Birthday attacks exploit hash collisions, unrelated to coercing a key holder." }
+    ]
+  },
+  {
+    "id": "d3-t11-b10",
+    "domainId": "d3",
+    "topicId": "d3-t11",
+    "subtopicTag": "Defense Mapping",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which defense is BEST matched to the attack it counters?",
+    "options": [
+      { "text": "Salting counters rainbow-table attacks on password hashes", "correct": true, "rationale": "Unique salts defeat precomputed rainbow tables, correctly pairing the defense with the attack." },
+      { "text": "Longer keys counter social engineering", "correct": false, "rationale": "Key length does nothing against a person being tricked into revealing the key." },
+      { "text": "Salting counters brute-force key search of a cipher", "correct": false, "rationale": "Brute force is countered by key length; salting protects password hashes." },
+      { "text": "Constant-time code counters rainbow tables", "correct": false, "rationale": "Constant-time code counters timing side-channels, not rainbow tables." }
+    ]
+  }
+]

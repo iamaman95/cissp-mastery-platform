@@ -1,0 +1,342 @@
+[
+  {
+    "id": "d4-t2-a1",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Stateful vs Packet-Filter Firewall",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A firewall tracks the state of active connections and permits return traffic only for sessions it has seen initiated. This is MOST accurately which type of firewall?",
+    "options": [
+      { "text": "Stateful inspection firewall", "correct": true, "rationale": "Stateful firewalls track connection state so they allow return traffic only for legitimately established sessions, unlike simple packet filters." },
+      { "text": "Static packet-filtering firewall", "correct": false, "rationale": "A static packet filter evaluates each packet independently against rules without tracking connection state." },
+      { "text": "A hub", "correct": false, "rationale": "A hub is a dumb repeater with no filtering capability at all." },
+      { "text": "A DNS server", "correct": false, "rationale": "A DNS server resolves names; it is not a firewall." }
+    ]
+  },
+  {
+    "id": "d4-t2-a2",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "IDS vs IPS",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A device detects malicious traffic and automatically blocks it inline before it reaches the target. This is MOST accurately which of the following?",
+    "options": [
+      { "text": "An intrusion prevention system (IPS)", "correct": true, "rationale": "An IPS sits inline and can actively block malicious traffic, whereas an IDS only detects and alerts." },
+      { "text": "An intrusion detection system (IDS)", "correct": false, "rationale": "An IDS detects and alerts but does not, by itself, block traffic inline." },
+      { "text": "A network hub", "correct": false, "rationale": "A hub forwards traffic without any inspection or blocking." },
+      { "text": "A patch panel", "correct": false, "rationale": "A patch panel is passive cabling hardware with no security function." }
+    ]
+  },
+  {
+    "id": "d4-t2-a3",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Signature vs Anomaly Detection",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A security team wants their IDS to catch novel, previously unseen attacks that have no known signature. Which detection method is BEST suited?",
+    "options": [
+      { "text": "Anomaly (behavior) based detection", "correct": true, "rationale": "Anomaly-based detection flags deviations from a learned baseline, allowing it to catch novel attacks with no existing signature." },
+      { "text": "Signature-based detection only", "correct": false, "rationale": "Signature-based detection can only catch attacks matching known signatures, missing truly novel ones." },
+      { "text": "Disabling the IDS", "correct": false, "rationale": "Disabling the IDS removes detection entirely." },
+      { "text": "A static firewall rule", "correct": false, "rationale": "A static rule does not perform behavioral anomaly detection of novel attacks." }
+    ]
+  },
+  {
+    "id": "d4-t2-a4",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "WPA3 vs WPA2",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An organization is deploying new wireless access points and wants the strongest available Wi-Fi security. Which standard is BEST?",
+    "options": [
+      { "text": "WPA3", "correct": true, "rationale": "WPA3 is the current strongest Wi-Fi security standard, improving on WPA2 with stronger handshake protection (SAE)." },
+      { "text": "WEP", "correct": false, "rationale": "WEP is thoroughly broken and must not be used." },
+      { "text": "Open (no encryption)", "correct": false, "rationale": "An open network provides no confidentiality at all." },
+      { "text": "WPA (original)", "correct": false, "rationale": "The original WPA is outdated; WPA3 (or at least WPA2) is far stronger." }
+    ]
+  },
+  {
+    "id": "d4-t2-a5",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "WEP Insecurity",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "An audit finds an office still using WEP for its wireless network. Why is this MOST concerning?",
+    "options": [
+      { "text": "WEP is cryptographically broken and its keys can be recovered quickly", "correct": true, "rationale": "WEP has well-known flaws allowing rapid key recovery, so it provides essentially no meaningful protection." },
+      { "text": "WEP is too strong and slows the network", "correct": false, "rationale": "WEP is weak, not too strong; the concern is its insecurity." },
+      { "text": "WEP requires fiber optics", "correct": false, "rationale": "WEP is a wireless encryption scheme, unrelated to fiber cabling." },
+      { "text": "WEP encrypts too many packets", "correct": false, "rationale": "The problem is weak encryption, not encrypting too much." }
+    ]
+  },
+  {
+    "id": "d4-t2-a6",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Firewall Generations",
+    "qualifier": "NONE",
+    "style": "recall",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A 'next-generation firewall' (NGFW) is distinguished by which capability beyond traditional firewalls?",
+    "options": [
+      { "text": "Application-layer awareness and integrated features like IPS and deep packet inspection", "correct": true, "rationale": "NGFWs add application awareness, deep packet inspection, and often integrated IPS/identity features beyond port/protocol filtering." },
+      { "text": "Only filtering by source IP address", "correct": false, "rationale": "Source-IP filtering is a basic packet-filter capability, not what distinguishes an NGFW." },
+      { "text": "Acting purely as a network hub", "correct": false, "rationale": "A hub has no filtering; that is the opposite of an NGFW." },
+      { "text": "Providing electrical power to devices", "correct": false, "rationale": "That describes PoE, unrelated to firewall generations." }
+    ]
+  },
+  {
+    "id": "d4-t2-a7",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "VoIP Security",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "A company worries that its VoIP calls could be intercepted and eavesdropped on the network. Which control BEST protects call confidentiality?",
+    "options": [
+      { "text": "Encrypt the media/signaling (e.g., SRTP for media, TLS for SIP signaling)", "correct": true, "rationale": "Encrypting VoIP media with SRTP and signaling with TLS protects call confidentiality against eavesdropping." },
+      { "text": "Turn up the call volume", "correct": false, "rationale": "Volume has no effect on interception risk." },
+      { "text": "Use longer phone numbers", "correct": false, "rationale": "Phone number length does not protect call confidentiality." },
+      { "text": "Disable all logging", "correct": false, "rationale": "Disabling logging reduces visibility and does not encrypt calls." }
+    ]
+  },
+  {
+    "id": "d4-t2-a8",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Network Segmentation",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "To contain the spread of malware and limit lateral movement, which network design approach is MOST effective?",
+    "options": [
+      { "text": "Segmenting the network into zones with controlled traffic between them", "correct": true, "rationale": "Segmentation restricts lateral movement so a compromise in one segment is contained from others." },
+      { "text": "Placing all devices on one flat network", "correct": false, "rationale": "A flat network lets malware spread freely with no containment." },
+      { "text": "Removing all firewalls", "correct": false, "rationale": "Removing firewalls eliminates the controls needed to enforce segmentation." },
+      { "text": "Giving every device a public IP", "correct": false, "rationale": "Public exposure of all devices increases attack surface, not containment." }
+    ]
+  },
+  {
+    "id": "d4-t2-a9",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "DMZ Purpose",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "A",
+    "stem": "A company hosts a public web server that must be reachable from the internet but must not have direct access to the internal network. Where is it BEST placed?",
+    "options": [
+      { "text": "In a DMZ (screened subnet) between the internet and the internal network", "correct": true, "rationale": "A DMZ isolates internet-facing services so a compromise there does not grant direct access to the internal network." },
+      { "text": "Directly on the internal LAN", "correct": false, "rationale": "Placing a public server on the internal LAN exposes internal systems if it is compromised." },
+      { "text": "Outside all firewalls with no protection", "correct": false, "rationale": "An unprotected server is highly exposed; a DMZ still applies controls." },
+      { "text": "On the CEO's personal laptop", "correct": false, "rationale": "This is not a valid hosting location and provides no isolation." }
+    ]
+  },
+  {
+    "id": "d4-t2-a10",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Rogue Access Point",
+    "qualifier": "FIRST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "A",
+    "stem": "Security discovers an unauthorized wireless access point plugged into the corporate network. What should be done FIRST?",
+    "options": [
+      { "text": "Locate and disconnect/isolate the rogue access point to stop the exposure", "correct": true, "rationale": "A rogue AP is an open backdoor into the network; isolating/removing it promptly stops the immediate exposure." },
+      { "text": "Advertise the access point to all employees", "correct": false, "rationale": "Publicizing a rogue AP encourages its use and worsens exposure." },
+      { "text": "Increase its broadcast power", "correct": false, "rationale": "Boosting the rogue AP extends the unauthorized coverage, increasing risk." },
+      { "text": "Ignore it since wireless is convenient", "correct": false, "rationale": "Ignoring an unauthorized AP leaves an unmonitored entry point open." }
+    ]
+  },
+  {
+    "id": "d4-t2-b1",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "IDS Placement",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A team wants to monitor traffic to and from a single critical server for host-specific attacks. Which sensor type is MOST appropriate?",
+    "options": [
+      { "text": "A host-based IDS (HIDS) on that server", "correct": true, "rationale": "A HIDS monitors activity on a specific host, well suited to watching a single critical server's traffic and behavior." },
+      { "text": "A network hub", "correct": false, "rationale": "A hub does not detect intrusions." },
+      { "text": "A power distribution unit", "correct": false, "rationale": "A PDU supplies power and has no detection capability." },
+      { "text": "A label printer", "correct": false, "rationale": "A printer is unrelated to intrusion detection." }
+    ]
+  },
+  {
+    "id": "d4-t2-b2",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "False Positive Tuning",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "An IDS generates so many false alarms that analysts start ignoring alerts. What is the BEST response?",
+    "options": [
+      { "text": "Tune the IDS rules/thresholds to reduce false positives while preserving detection", "correct": true, "rationale": "Tuning reduces alert fatigue so genuine alerts are not lost among false positives, without disabling detection." },
+      { "text": "Turn the IDS off entirely", "correct": false, "rationale": "Disabling the IDS removes detection; tuning is the correct fix." },
+      { "text": "Ignore all alerts permanently", "correct": false, "rationale": "Ignoring alerts defeats the purpose and misses real attacks." },
+      { "text": "Route all alerts to a disabled mailbox", "correct": false, "rationale": "Discarding alerts is equivalent to not monitoring at all." }
+    ]
+  },
+  {
+    "id": "d4-t2-b3",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Proxy/Application Firewall",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A firewall terminates client connections and makes requests on their behalf, inspecting full application-layer content. This is MOST accurately which type?",
+    "options": [
+      { "text": "A proxy (application-layer) firewall", "correct": true, "rationale": "A proxy firewall brokers connections and inspects application-layer content, providing deeper inspection than packet filtering." },
+      { "text": "A static packet filter", "correct": false, "rationale": "A packet filter examines headers, not full application content, and does not proxy connections." },
+      { "text": "A network hub", "correct": false, "rationale": "A hub performs no inspection or proxying." },
+      { "text": "A DHCP server", "correct": false, "rationale": "DHCP assigns IP addresses; it is not a proxy firewall." }
+    ]
+  },
+  {
+    "id": "d4-t2-b4",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Wireless Enterprise Auth",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A large enterprise wants each wireless user authenticated with individual credentials via a central server rather than a shared passphrase. Which approach is BEST?",
+    "options": [
+      { "text": "WPA2/WPA3-Enterprise with 802.1X/RADIUS authentication", "correct": true, "rationale": "Enterprise mode with 802.1X and a RADIUS server authenticates users individually, avoiding a shared pre-shared key." },
+      { "text": "A single shared WPA2-Personal passphrase for everyone", "correct": false, "rationale": "A shared PSK does not provide individual accountability and is harder to revoke per user." },
+      { "text": "Open Wi-Fi with a hidden SSID", "correct": false, "rationale": "Hiding the SSID is not authentication and open Wi-Fi has no encryption." },
+      { "text": "WEP with a shared key", "correct": false, "rationale": "WEP is broken and uses a shared key, failing the requirement." }
+    ]
+  },
+  {
+    "id": "d4-t2-b5",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "IPS Inline Risk",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "What is the MOST important operational trade-off to consider before deploying an IPS inline in blocking mode?",
+    "options": [
+      { "text": "A false positive can block legitimate traffic, potentially causing an outage", "correct": true, "rationale": "Because an IPS actively blocks inline, a false positive can drop legitimate traffic and disrupt business, so tuning is critical." },
+      { "text": "It will encrypt all traffic automatically", "correct": false, "rationale": "An IPS inspects/blocks traffic; it does not automatically encrypt it." },
+      { "text": "It removes the need for any firewall", "correct": false, "rationale": "An IPS complements, not replaces, firewalls." },
+      { "text": "It makes the network faster with no downside", "correct": false, "rationale": "Inline inspection can add latency and carries the false-positive blocking risk." }
+    ]
+  },
+  {
+    "id": "d4-t2-b6",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "NAC",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "hard",
+    "setGroup": "B",
+    "stem": "A company wants to ensure only compliant, authenticated devices (correct patches, AV running) can connect to the LAN. Which technology is BEST?",
+    "options": [
+      { "text": "Network Access Control (NAC)", "correct": true, "rationale": "NAC checks device identity and posture/compliance before granting network access, quarantining non-compliant devices." },
+      { "text": "A network hub", "correct": false, "rationale": "A hub grants access to anything plugged in with no posture checks." },
+      { "text": "A patch panel", "correct": false, "rationale": "A patch panel is passive cabling with no access control." },
+      { "text": "A DNS resolver", "correct": false, "rationale": "DNS resolves names and does not enforce device compliance for access." }
+    ]
+  },
+  {
+    "id": "d4-t2-b7",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Honeypot",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A security team deploys a decoy system with no production value to attract and study attackers. This is MOST accurately called what?",
+    "options": [
+      { "text": "A honeypot", "correct": true, "rationale": "A honeypot is a decoy designed to attract attackers so their activity can be observed and studied without risking production systems." },
+      { "text": "A production database", "correct": false, "rationale": "A production database has real business value; a honeypot deliberately has none." },
+      { "text": "A load balancer", "correct": false, "rationale": "A load balancer distributes traffic; it is not a decoy." },
+      { "text": "A backup server", "correct": false, "rationale": "A backup server stores copies of data; it is not an attacker decoy." }
+    ]
+  },
+  {
+    "id": "d4-t2-b8",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Switch vs Hub Security",
+    "qualifier": "MOST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Replacing a network hub with a switch MOST directly improves security in which way?",
+    "options": [
+      { "text": "A switch forwards frames only to the intended port, reducing casual sniffing of others' traffic", "correct": true, "rationale": "Switches direct traffic to specific ports rather than broadcasting to all, limiting trivial eavesdropping that hubs allow." },
+      { "text": "A switch encrypts all traffic end to end", "correct": false, "rationale": "Switches do not provide encryption; they direct frames by MAC address." },
+      { "text": "A switch blocks all malware automatically", "correct": false, "rationale": "Switches forward traffic; they do not inherently block malware." },
+      { "text": "A switch removes the need for a firewall", "correct": false, "rationale": "A switch is not a substitute for a firewall." }
+    ]
+  },
+  {
+    "id": "d4-t2-b9",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Wireless Isolation",
+    "qualifier": "BEST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "A company offers guest Wi-Fi and wants to keep guest devices off the corporate network. What is the BEST approach?",
+    "options": [
+      { "text": "Place guest Wi-Fi on a separate, isolated network/VLAN with no access to internal resources", "correct": true, "rationale": "Isolating guest wireless on its own segment prevents guest devices from reaching internal corporate systems." },
+      { "text": "Put guests on the same VLAN as finance", "correct": false, "rationale": "Sharing a VLAN with finance exposes sensitive internal systems to guests." },
+      { "text": "Give guests domain admin credentials", "correct": false, "rationale": "Granting admin credentials to guests is a severe security violation." },
+      { "text": "Disable all encryption for guest convenience", "correct": false, "rationale": "Disabling encryption exposes guest traffic and does not address isolation." }
+    ]
+  },
+  {
+    "id": "d4-t2-b10",
+    "domainId": "d4",
+    "topicId": "d4-t2",
+    "subtopicTag": "Component Relevance",
+    "qualifier": "LEAST",
+    "style": "scenario",
+    "difficulty": "medium",
+    "setGroup": "B",
+    "stem": "Which device is LEAST relevant as a network security control?",
+    "options": [
+      { "text": "A decorative desk plant", "correct": true, "rationale": "A desk plant provides no network security function, making it least relevant among these options." },
+      { "text": "A firewall", "correct": false, "rationale": "A firewall is a core network security control." },
+      { "text": "An IPS", "correct": false, "rationale": "An IPS actively detects and blocks malicious traffic, a key control." },
+      { "text": "A NAC solution", "correct": false, "rationale": "NAC enforces device compliance for network access, a relevant control." }
+    ]
+  }
+]

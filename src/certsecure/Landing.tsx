@@ -45,6 +45,36 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
 export default function Landing() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [reviewOpen, setReviewOpen] = useState(false);
+  // when true, a successful login should continue into the CISSP course
+  const [pendingCourse, setPendingCourse] = useState(false);
+  const navigate = useNavigate();
+  const { isAuthed, enroll } = useAuth();
+
+  // Gate the course CTAs: signed-in users go straight in; everyone else is
+  // prompted to log in, and we continue into the course on success.
+  function startCourse() {
+    if (isAuthed) {
+      enroll('cissp');
+      navigate('/cissp');
+    } else {
+      setPendingCourse(true);
+      setLoginOpen(true);
+    }
+  }
+
+  // login triggered from navbar / review flow — no course redirect
+  function openLogin() {
+    setPendingCourse(false);
+    setLoginOpen(true);
+  }
+
+  function afterLogin() {
+    if (pendingCourse) {
+      enroll('cissp');
+      navigate('/cissp');
+      setPendingCourse(false);
+    }
+  }
 
   return (
     <div id="home" className="relative min-h-screen overflow-x-hidden bg-abyss text-white">
@@ -54,36 +84,28 @@ export default function Landing() {
       <div className="pointer-events-none fixed -left-40 top-0 -z-10 h-[520px] w-[520px] rounded-full bg-cyber-cyan/10 blur-[120px]" />
       <div className="pointer-events-none fixed -right-40 top-[40%] -z-10 h-[520px] w-[520px] rounded-full bg-cyber-purple/10 blur-[120px]" />
 
-      <Navbar onLogin={() => setLoginOpen(true)} />
+      <Navbar onLogin={openLogin} />
 
       <main>
-        <Hero onLogin={() => setLoginOpen(true)} />
+        <Hero onStart={startCourse} onLogin={openLogin} />
         <Stats />
-        <Featured onLogin={() => setLoginOpen(true)} />
+        <Featured onStart={startCourse} onLogin={openLogin} />
         <ComingSoonSection />
-        <Reviews onWriteReview={() => setReviewOpen(true)} onLogin={() => setLoginOpen(true)} />
+        <Reviews onWriteReview={() => setReviewOpen(true)} onLogin={openLogin} />
         <Faq />
-        <FinalCta onLogin={() => setLoginOpen(true)} />
+        <FinalCta onStart={startCourse} onLogin={openLogin} />
       </main>
 
       <Footer />
 
-      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
+      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} onSuccess={afterLogin} />
       <ReviewModal open={reviewOpen} onClose={() => setReviewOpen(false)} />
     </div>
   );
 }
 
 /* ---------------- Hero ---------------- */
-function Hero({ onLogin }: { onLogin: () => void }) {
-  const navigate = useNavigate();
-  const { isAuthed, enroll } = useAuth();
-
-  function startCissp() {
-    if (isAuthed) enroll('cissp');
-    navigate('/cissp');
-  }
-
+function Hero({ onStart, onLogin }: { onStart: () => void; onLogin: () => void }) {
   return (
     <section className="relative flex min-h-screen items-center justify-center px-5 pt-24">
       <div className="mx-auto max-w-4xl text-center">
@@ -125,7 +147,7 @@ function Hero({ onLogin }: { onLogin: () => void }) {
           className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <button
-            onClick={startCissp}
+            onClick={onStart}
             className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyber-cyan to-tech-blue px-7 py-3.5 font-display text-sm font-bold text-abyss animate-pulse-glow"
           >
             <Rocket size={18} />
@@ -191,15 +213,9 @@ function Stats() {
 }
 
 /* ---------------- Featured course ---------------- */
-function Featured({ onLogin }: { onLogin: () => void }) {
-  const navigate = useNavigate();
-  const { isAuthed, isEnrolled, enroll } = useAuth();
+function Featured({ onStart, onLogin }: { onStart: () => void; onLogin: () => void }) {
+  const { isAuthed, isEnrolled } = useAuth();
   const enrolled = isEnrolled('cissp');
-
-  function cta() {
-    if (isAuthed) enroll('cissp');
-    navigate('/cissp');
-  }
 
   const benefits = [
     { icon: BrainCircuit, title: 'Personalized Learning Paths', text: 'Adaptive remediation targets exactly the sub-topics you miss.' },
@@ -253,10 +269,10 @@ function Featured({ onLogin }: { onLogin: () => void }) {
 
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   <button
-                    onClick={cta}
+                    onClick={onStart}
                     className="group/btn flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyber-cyan to-tech-blue px-6 py-3 font-display text-sm font-bold text-abyss transition hover:shadow-[0_0_28px_-4px_rgba(0,217,255,0.85)]"
                   >
-                    {enrolled ? 'Continue Learning' : isAuthed ? 'Enroll Now' : 'Start CISSP Mastery'}
+                    {enrolled ? 'Continue Learning' : isAuthed ? 'Enroll Now' : 'Sign In to Start'}
                     <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
                   </button>
                   <div className="flex items-center gap-2 text-xs text-silver/60">
@@ -506,9 +522,8 @@ function Faq() {
 }
 
 /* ---------------- Final CTA ---------------- */
-function FinalCta({ onLogin }: { onLogin: () => void }) {
-  const navigate = useNavigate();
-  const { isAuthed, enroll } = useAuth();
+function FinalCta({ onStart, onLogin }: { onStart: () => void; onLogin: () => void }) {
+  const { isAuthed } = useAuth();
   return (
     <section className="relative px-5 py-24">
       <Reveal className="mx-auto max-w-4xl">
@@ -524,13 +539,10 @@ function FinalCta({ onLogin }: { onLogin: () => void }) {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <button
-                onClick={() => {
-                  if (isAuthed) enroll('cissp');
-                  navigate('/cissp');
-                }}
+                onClick={onStart}
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyber-cyan to-cyber-purple px-8 py-3.5 font-display text-sm font-bold text-abyss animate-pulse-glow"
               >
-                <Rocket size={18} /> Start Your Journey
+                <Rocket size={18} /> {isAuthed ? 'Start Your Journey' : 'Sign In to Begin'}
               </button>
               {!isAuthed && (
                 <button

@@ -4,7 +4,15 @@ import { Lock, Mail, ShieldCheck, User, X } from 'lucide-react';
 import { DEMO_OTP, DEMO_PASSWORD, DEMO_USERNAME, useAuth } from './AuthContext';
 import { useToast } from './Toast';
 
-export default function LoginModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+export default function LoginModal({
+  open,
+  onClose,
+  onSuccess,
+}: {
+  open: boolean;
+  onClose: () => void;
+  onSuccess?: () => void;
+}) {
   const { verifyCredentials, verifyOtp } = useAuth();
   const toast = useToast();
   const [step, setStep] = useState<'creds' | 'otp'>('creds');
@@ -39,6 +47,7 @@ export default function LoginModal({ open, onClose }: { open: boolean; onClose: 
     if (verifyOtp(otp)) {
       toast('Access granted. Welcome back, operator.', 'success');
       onClose();
+      onSuccess?.();
     } else {
       setError('Incorrect OTP code.');
     }

@@ -54,7 +54,7 @@ export default function ExamPage() {
       results,
     };
     recordExamAttempt(attempt);
-    navigate(`/exam/${examSlot}/results`);
+    navigate(`/cissp/exam/${examSlot}/results`);
   };
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function ExamPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (!examSlot) return <Navigate to="/exams" replace />;
+  if (!examSlot) return <Navigate to="/cissp/exams" replace />;
   if (questions.length === 0) {
     return <p className="text-slate-600">No questions available yet — populate the question bank first.</p>;
   }

@@ -1,53 +1,46 @@
-# CISSP Mastery Platform
+# CERTsecure
 
-A self-paced CISSP exam-prep web app covering all 8 (ISC)² 2024 domains, topic by topic, with a **learn → quiz → remediate → next** loop, five full-length simulation exams, and a cross-exam analytics report.
+A premium, cybersecurity-focused **certification prep platform** with an immersive sci-fi aesthetic. CERTsecure is the umbrella brand; its first live course is **CISSP Mastery**, with AWS Security Specialty, CISM, PMP and more on the roadmap.
 
-## What's inside
+## The platform
 
-- **8 domains, 66 topics, 1,320 questions** — every topic has a learn page and a 20-question bank (two non-overlapping 10-question sets so remediation retakes never repeat).
-- Questions mirror real CISSP style: ~80% scenario-based, deliberate use of MOST/BEST/FIRST/LEAST/PRIMARY qualifiers, four plausible options, and a documented rationale for **every** option.
-- A dedicated 6-page **cryptography cluster** (symmetric, asymmetric/key exchange, hashing & digital signatures, PKI, key management, cryptanalysis).
-- **Topic quiz engine** — pass threshold 8/10; on fail, a remediation screen surfaces missed questions with rationale, a "what to re-review" summary, and curated resource links, then a fresh question set on retake.
-- **Progress tracking** — per-topic status, attempts, and remediation counts persisted to the browser (`localStorage`); domains unlock the final exams only when every topic is complete.
-- **Final exams** — five independent 125-question exams, selected proportionally to the official domain weights, timed (~3h), with per-domain score breakdown.
-- **Cross-exam analytics** — domain trend lines, consistently weak/strong domains, qualifier-word accuracy, recall-vs-scenario split, and a prioritized study list.
+- **Landing page (`/`)** — animated sci-fi hero, live stats, featured course, coming-soon course grid, customer reviews with star ratings, FAQ, and CTAs. Built with Framer Motion, a custom canvas cyber-background (digital rain + particle mesh), Orbitron/Inter fonts, and a neon/glass design system.
+- **Auth (MVP)** — username + password with a simulated OTP second factor; session stored in the browser. Reviews require sign-in.
+  - Demo login → user `student` · pass `CERTsecure@2026` · OTP `123456`
+- **Reviews** — visitors can submit a star-rated testimonial (after login); it persists locally and appears instantly.
+- **CISSP Mastery course (`/cissp`)** — the full course is integrated as the platform's first offering: all 8 (ISC)² domains, 66 topics, 1,320 questions, a learn → quiz → remediate loop, five weight-proportioned simulation exams, and cross-exam analytics. Lazy-loaded so the landing page stays fast.
 
 ## Tech stack
 
-React + Vite + TypeScript, Tailwind CSS v4, React Router, Recharts. No backend — the question bank ships as versioned JSON/TS data files and all learner progress lives in `localStorage`.
+React + Vite + TypeScript, Tailwind CSS v4, React Router, Framer Motion, lucide-react, Recharts. No backend — course content ships as versioned JSON/TS data files and all state (progress, session, reviews) lives in `localStorage`.
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev      # dev server on http://localhost:5175
+npm run dev      # http://localhost:5175
 npm run build    # production build to dist/
-npm run preview  # preview the production build
 ```
 
 ## Project structure
 
 ```
 src/
-  content/{dN}/{dN-tM}.ts        # topic learn-page content (exports `content: TopicContent`)
-  data/questions/{dN}/{dN-tM}.json  # 20-question bank per topic (sets A & B)
-  data/domains.ts               # domain taxonomy + official exam weights
-  lib/registry.ts               # auto-discovers content & questions via import.meta.glob
-  lib/progressStore.ts          # localStorage learner profile
-  lib/examEngine.ts             # weight-proportioned exam generation
-  lib/analytics.ts              # cross-exam analytics
-  pages/                        # dashboard, domain, learn, quiz, remediation, exam, analytics
-scripts/validate-bank.mjs       # validates all content + question banks against the schema
+  certsecure/          # CERTsecure landing, auth, reviews, animated UI
+    Landing.tsx        # all landing sections
+    Navbar.tsx  LoginModal.tsx  ReviewModal.tsx  Toast.tsx  CyberBackground.tsx
+    AuthContext.tsx  reviewsStore.ts  data.ts  ui.tsx
+  App.tsx              # router: "/" = landing, "/cissp/*" = course (lazy)
+  CisspApp.tsx         # CISSP course shell + nested routes
+  pages/               # CISSP course pages (dashboard, domain, quiz, exam, analytics)
+  content/ data/ lib/  # CISSP topic content, question banks, engines
+scripts/validate-bank.mjs   # validates all CISSP content + question banks
 ```
 
-## Adding content
+## Adding a course later
 
-New topics register themselves automatically — drop a `{topicId}.ts` in `src/content/{domain}/` and a matching `{topicId}.json` in `src/data/questions/{domain}/` following the existing schema. No app-logic changes needed. Validate with:
-
-```bash
-node scripts/validate-bank.mjs
-```
+Add a card to `src/certsecure/data.ts` (`comingSoon` for a placeholder, or a new `live` course with a `route`), then mount its route in `App.tsx` — the same pattern used to integrate CISSP Mastery.
 
 ## Deployment & access
 
-See [DEPLOY.md](DEPLOY.md) for hosting options and how to restrict access to a link with a password/login gate.
+Auto-deploys to GitHub Pages on every push to `main` (`.github/workflows/deploy.yml`). See [DEPLOY.md](DEPLOY.md) for hosting and how to add a real password/login gate. Future roadmap: real database + auth, payments, email OTP, admin dashboard, certificate generation.

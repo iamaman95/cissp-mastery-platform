@@ -22,11 +22,11 @@ export default function TopicQuizPage() {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
-  if (!domain || !topic) return <Navigate to="/" replace />;
+  if (!domain || !topic) return <Navigate to="/cissp" replace />;
   if (questions.length === 0) {
     return (
       <div className="space-y-3">
-        <Link to={`/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500">
+        <Link to={`/cissp/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500">
           ← {topic.title}
         </Link>
         <p className="text-slate-600">No quiz questions available for this topic yet.</p>
@@ -60,12 +60,12 @@ export default function TopicQuizPage() {
           </p>
           <div className="mt-4 flex gap-3">
             {passed ? (
-              <Link to={`/domain/${domain.id}`} className="bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
+              <Link to={`/cissp/domain/${domain.id}`} className="bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
                 Back to {domain.title}
               </Link>
             ) : (
               <Link
-                to={`/domain/${domain.id}/topic/${topic.id}/remediation`}
+                to={`/cissp/domain/${domain.id}/topic/${topic.id}/remediation`}
                 className="bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium"
               >
                 Go to Remediation
@@ -79,7 +79,7 @@ export default function TopicQuizPage() {
 
   return (
     <div className="max-w-2xl space-y-4">
-      <Link to={`/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500 hover:text-slate-700">
+      <Link to={`/cissp/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500 hover:text-slate-700">
         ← {topic.title}
       </Link>
       <h1 className="text-2xl font-bold text-slate-900">Quiz: {topic.title}</h1>

@@ -11,10 +11,10 @@ export default function RemediationPage() {
   const content = topicId ? getTopicContent(topicId) : undefined;
   const progress = topicId ? getTopicProgress(topicId) : undefined;
 
-  if (!domain || !topic) return <Navigate to="/" replace />;
+  if (!domain || !topic) return <Navigate to="/cissp" replace />;
 
   const lastAttempt = progress?.attempts[progress.attempts.length - 1];
-  if (!lastAttempt) return <Navigate to={`/domain/${domain.id}/topic/${topic.id}/quiz`} replace />;
+  if (!lastAttempt) return <Navigate to={`/cissp/domain/${domain.id}/topic/${topic.id}/quiz`} replace />;
 
   const allQuestions = getTopicQuestions(topic.id);
   const missedQuestions = allQuestions.filter((q) => lastAttempt.missedIds.includes(q.id));
@@ -22,7 +22,7 @@ export default function RemediationPage() {
 
   return (
     <div className="max-w-2xl space-y-6">
-      <Link to={`/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500 hover:text-slate-700">
+      <Link to={`/cissp/domain/${domain.id}/topic/${topic.id}/learn`} className="text-sm text-slate-500 hover:text-slate-700">
         ← {topic.title}
       </Link>
       <div>
@@ -72,13 +72,13 @@ export default function RemediationPage() {
       </section>
 
       <Link
-        to={`/domain/${domain.id}/topic/${topic.id}/learn`}
+        to={`/cissp/domain/${domain.id}/topic/${topic.id}/learn`}
         className="inline-block bg-slate-100 text-slate-700 px-4 py-2 rounded-md text-sm font-medium mr-3"
       >
         Re-Study Topic
       </Link>
       <Link
-        to={`/domain/${domain.id}/topic/${topic.id}/quiz`}
+        to={`/cissp/domain/${domain.id}/topic/${topic.id}/quiz`}
         className="inline-block bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium"
       >
         Retake Quiz (fresh set)

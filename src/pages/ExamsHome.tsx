@@ -19,7 +19,7 @@ export default function ExamsHome() {
           Complete every topic across all 8 domains (learn → quiz → pass) to unlock the 5 full-length simulation
           exams.
         </p>
-        <Link to="/" className="text-indigo-700 underline text-sm mt-3 inline-block">
+        <Link to="/cissp" className="text-indigo-700 underline text-sm mt-3 inline-block">
           Back to dashboard
         </Link>
       </div>
@@ -52,11 +52,11 @@ export default function ExamsHome() {
                 )}
               </div>
               {attempt ? (
-                <Link to={`/exam/${i + 1}/results`} className="text-sm font-medium text-slate-900 hover:underline">
+                <Link to={`/cissp/exam/${i + 1}/results`} className="text-sm font-medium text-slate-900 hover:underline">
                   View Results →
                 </Link>
               ) : i === exams.length ? (
-                <Link to={`/exam/${i + 1}`} className="bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
+                <Link to={`/cissp/exam/${i + 1}`} className="bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
                   Start Exam
                 </Link>
               ) : (
@@ -68,7 +68,7 @@ export default function ExamsHome() {
       </ol>
 
       {allExamsDone && (
-        <Link to="/analytics" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+        <Link to="/cissp/analytics" className="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">
           View Cross-Exam Analytics →
         </Link>
       )}

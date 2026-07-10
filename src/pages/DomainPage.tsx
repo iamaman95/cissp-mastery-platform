@@ -22,14 +22,14 @@ export default function DomainPage() {
   useProgress();
   const { domainId } = useParams();
   const domain = domainId ? getDomain(domainId) : undefined;
-  if (!domain) return <Navigate to="/" replace />;
+  if (!domain) return <Navigate to="/cissp" replace />;
 
   const orderedIds = domain.topics.map((t) => t.id);
 
   return (
     <div className="space-y-6">
       <div>
-        <Link to="/" className="text-sm text-slate-500 hover:text-slate-700">
+        <Link to="/cissp" className="text-sm text-slate-500 hover:text-slate-700">
           ← Dashboard
         </Link>
         <h1 className="text-2xl font-bold text-slate-900 mt-1">
@@ -43,7 +43,7 @@ export default function DomainPage() {
           const progress = getTopicProgress(topic.id);
           const unlocked = isTopicUnlocked(domain.id, idx, orderedIds);
           const contentReady = hasTopicContent(topic.id);
-          const target = `/domain/${domain.id}/topic/${topic.id}/learn`;
+          const target = `/cissp/domain/${domain.id}/topic/${topic.id}/learn`;
           return (
             <li
               key={topic.id}

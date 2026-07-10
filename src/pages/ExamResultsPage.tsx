@@ -9,13 +9,13 @@ export default function ExamResultsPage() {
   const attempt = exams[idx];
   const passTarget = loadProfile().settings.examPassTarget;
 
-  if (!examSlot || !attempt) return <Navigate to="/exams" replace />;
+  if (!examSlot || !attempt) return <Navigate to="/cissp/exams" replace />;
 
   const passed = attempt.score >= passTarget;
 
   return (
     <div className="max-w-2xl space-y-6">
-      <Link to="/exams" className="text-sm text-slate-500 hover:text-slate-700">
+      <Link to="/cissp/exams" className="text-sm text-slate-500 hover:text-slate-700">
         ← All Exams
       </Link>
       <div className={`rounded-lg p-6 border ${passed ? 'bg-emerald-50 border-emerald-200' : 'bg-rose-50 border-rose-200'}`}>
@@ -46,7 +46,7 @@ export default function ExamResultsPage() {
         </div>
       </section>
 
-      <Link to="/exams" className="inline-block bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
+      <Link to="/cissp/exams" className="inline-block bg-slate-900 text-white px-4 py-2 rounded-md text-sm font-medium">
         Back to Exams
       </Link>
     </div>

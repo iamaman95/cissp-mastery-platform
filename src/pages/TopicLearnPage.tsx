@@ -12,11 +12,11 @@ export default function TopicLearnPage() {
   const topic = domainId && topicId ? getTopic(domainId, topicId) : undefined;
   const content = topicId ? getTopicContent(topicId) : undefined;
 
-  if (!domain || !topic) return <Navigate to="/" replace />;
+  if (!domain || !topic) return <Navigate to="/cissp" replace />;
   if (!content) {
     return (
       <div className="space-y-4">
-        <Link to={`/domain/${domain.id}`} className="text-sm text-slate-500 hover:text-slate-700">
+        <Link to={`/cissp/domain/${domain.id}`} className="text-sm text-slate-500 hover:text-slate-700">
           ← {domain.title}
         </Link>
         <h1 className="text-2xl font-bold text-slate-900">{topic.title}</h1>
@@ -27,7 +27,7 @@ export default function TopicLearnPage() {
 
   return (
     <div className="max-w-3xl space-y-6">
-      <Link to={`/domain/${domain.id}`} className="text-sm text-slate-500 hover:text-slate-700">
+      <Link to={`/cissp/domain/${domain.id}`} className="text-sm text-slate-500 hover:text-slate-700">
         ← {domain.title}
       </Link>
       <h1 className="text-2xl font-bold text-slate-900">{topic.title}</h1>
@@ -111,7 +111,7 @@ export default function TopicLearnPage() {
       <button
         onClick={() => {
           markStudied(topic.id);
-          navigate(`/domain/${domain.id}/topic/${topic.id}/quiz`);
+          navigate(`/cissp/domain/${domain.id}/topic/${topic.id}/quiz`);
         }}
         className="bg-slate-900 text-white px-5 py-2.5 rounded-md font-medium hover:bg-slate-700"
       >

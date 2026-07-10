@@ -13,7 +13,7 @@ export default function AnalyticsPage() {
       <div className="max-w-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-2">Cross-Exam Analytics</h1>
         <p className="text-slate-600">Complete at least one simulation exam to see analytics.</p>
-        <Link to="/exams" className="text-indigo-700 underline text-sm mt-3 inline-block">
+        <Link to="/cissp/exams" className="text-indigo-700 underline text-sm mt-3 inline-block">
           Go to exams
         </Link>
       </div>

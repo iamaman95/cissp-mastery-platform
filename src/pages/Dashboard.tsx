@@ -33,7 +33,7 @@ export default function Dashboard() {
           return (
             <Link
               key={d.id}
-              to={`/domain/${d.id}`}
+              to={`/cissp/domain/${d.id}`}
               className="block bg-white border border-slate-200 rounded-lg p-4 hover:shadow-md transition-shadow"
             >
               <div className="flex justify-between items-baseline">
@@ -61,7 +61,7 @@ export default function Dashboard() {
             : 'Unlocks once every domain reaches 100% completion.'}
         </p>
         <Link
-          to="/exams"
+          to="/cissp/exams"
           className={`inline-block px-4 py-2 rounded-md text-sm font-medium ${
             examsUnlocked ? 'bg-slate-900 text-white hover:bg-slate-700' : 'bg-slate-100 text-slate-400 pointer-events-none'
           }`}

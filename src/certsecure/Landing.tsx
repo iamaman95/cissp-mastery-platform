@@ -45,36 +45,17 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; className?: s
 export default function Landing() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [reviewOpen, setReviewOpen] = useState(false);
-  // when true, a successful login should continue into the CISSP course
-  const [pendingCourse, setPendingCourse] = useState(false);
   const navigate = useNavigate();
   const { isAuthed, enroll } = useAuth();
 
-  // Gate the course CTAs: signed-in users go straight in; everyone else is
-  // prompted to log in, and we continue into the course on success.
+  // Course is publicly accessible: anyone can start it. Signed-in users also
+  // get it tracked as an enrollment.
   function startCourse() {
-    if (isAuthed) {
-      enroll('cissp');
-      navigate('/cissp');
-    } else {
-      setPendingCourse(true);
-      setLoginOpen(true);
-    }
+    if (isAuthed) enroll('cissp');
+    navigate('/cissp');
   }
 
-  // login triggered from navbar / review flow — no course redirect
-  function openLogin() {
-    setPendingCourse(false);
-    setLoginOpen(true);
-  }
-
-  function afterLogin() {
-    if (pendingCourse) {
-      enroll('cissp');
-      navigate('/cissp');
-      setPendingCourse(false);
-    }
-  }
+  const openLogin = () => setLoginOpen(true);
 
   return (
     <div id="home" className="relative min-h-screen overflow-x-hidden bg-abyss text-white">
@@ -98,7 +79,7 @@ export default function Landing() {
 
       <Footer />
 
-      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} onSuccess={afterLogin} />
+      <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
       <ReviewModal open={reviewOpen} onClose={() => setReviewOpen(false)} />
     </div>
   );
@@ -272,7 +253,7 @@ function Featured({ onStart, onLogin }: { onStart: () => void; onLogin: () => vo
                     onClick={onStart}
                     className="group/btn flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyber-cyan to-tech-blue px-6 py-3 font-display text-sm font-bold text-abyss transition hover:shadow-[0_0_28px_-4px_rgba(0,217,255,0.85)]"
                   >
-                    {enrolled ? 'Continue Learning' : isAuthed ? 'Enroll Now' : 'Sign In to Start'}
+                    {enrolled ? 'Continue Learning' : isAuthed ? 'Enroll Now' : 'Start CISSP Mastery'}
                     <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
                   </button>
                   <div className="flex items-center gap-2 text-xs text-silver/60">
@@ -542,7 +523,7 @@ function FinalCta({ onStart, onLogin }: { onStart: () => void; onLogin: () => vo
                 onClick={onStart}
                 className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyber-cyan to-cyber-purple px-8 py-3.5 font-display text-sm font-bold text-abyss animate-pulse-glow"
               >
-                <Rocket size={18} /> {isAuthed ? 'Start Your Journey' : 'Sign In to Begin'}
+                <Rocket size={18} /> Start Your Journey
               </button>
               {!isAuthed && (
                 <button

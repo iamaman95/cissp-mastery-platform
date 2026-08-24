@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Landing from './certsecure/Landing';
-import CourseGate from './certsecure/CourseGate';
 
 // The CISSP course (and its ~1,300-question bank) is lazy-loaded so the
 // CERTsecure landing page stays lightweight and fast.
@@ -25,11 +24,9 @@ export default function App() {
       <Route
         path="/cissp/*"
         element={
-          <CourseGate>
-            <Suspense fallback={<CourseLoader />}>
-              <CisspApp />
-            </Suspense>
-          </CourseGate>
+          <Suspense fallback={<CourseLoader />}>
+            <CisspApp />
+          </Suspense>
         }
       />
     </Routes>
